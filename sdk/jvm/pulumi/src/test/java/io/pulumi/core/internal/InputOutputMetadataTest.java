@@ -3,8 +3,8 @@ package io.pulumi.core.internal;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.TypeShape;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.Import;
-import io.pulumi.core.annotations.OutputExport;
 import io.pulumi.core.internal.annotations.InputMetadata;
 import io.pulumi.core.internal.annotations.OutputMetadata;
 import org.junit.jupiter.api.Test;
@@ -20,22 +20,22 @@ class InputOutputMetadataTest {
     @SuppressWarnings("unused")
     public static class Tester {
 
-        @OutputExport(name = "complex1", type = Either.class, parameters = {Integer.class, String.class})
+        @Export(name = "complex1", type = Either.class, parameters = {Integer.class, String.class})
         public final Output<Either<Integer, String>> complex1 = Output.of(Either.ofLeft(1));
 
-        @OutputExport(name = "complex2", type = Either.class, parameters = {Integer.class, String.class})
+        @Export(name = "complex2", type = Either.class, parameters = {Integer.class, String.class})
         public final Output<Either<Integer, String>> complex2 = Output.of(Either.ofRight("1"));
 
-        @OutputExport(name = "foo", type = String.class)
+        @Export(name = "foo", type = String.class)
         final Output<String> explicitFoo = Output.of("");
 
-        @OutputExport(type = String.class)
+        @Export(type = String.class)
         private final Output<String> implicitFoo = Output.of("");
 
-        @OutputExport(type = Map.class, parameters = {String.class, Integer.class})
+        @Export(type = Map.class, parameters = {String.class, Integer.class})
         public final Output<Map<String, Integer>> implicitBaz = Output.of(Map.of());
 
-        @OutputExport(type = Double.class)
+        @Export(type = Double.class)
         private Output<Double> incomplete;
 
         @Import(name = "bar")

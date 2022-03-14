@@ -1,7 +1,7 @@
 package io.pulumi.resources;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Constants;
 
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
  */
 public class CustomResource extends Resource {
 
-    @OutputExport(name = Constants.IdPropertyName, type = String.class)
+    @Export(name = Constants.IdPropertyName, type = String.class)
     private /* final-ish */ Output<String> id; // this can be set only once with the setter or reflection
 
     /**

@@ -1056,7 +1056,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             //
             // IMPORTANT! We have to make sure we run 'OutputCompletionSource#initializeOutputs'
             // synchronously directly when `resource`'s constructor runs since this will set all of
-            // the `@OutputExport(...) Output<T>` properties. We need those properties assigned by the
+            // the `@Export(...) Output<T>` properties. We need those properties assigned by the
             // time the base 'Resource' constructor finishes so that both derived classes and
             // external consumers can use the Output properties of `resource`.
             var completionSources = OutputCompletionSource.from(resource);

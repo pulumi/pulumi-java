@@ -1555,7 +1555,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 		printObsoleteAttribute(ctx, prop.DeprecationMessage, "    ")
 		fprintf(w,
 			"    @%s(name=\"%s\", type=%s, parameters={%s})\n",
-			ctx.ref(names.OutputExport), wireName, outputExportType, outputExportParameters)
+			ctx.ref(names.Export), wireName, outputExportType, outputExportParameters)
 		fprintf(w,
 			"    private %s<%s> %s;\n", ctx.imports.Ref(names.Output), outputParameterType, propertyName)
 		fprintf(w, "\n")

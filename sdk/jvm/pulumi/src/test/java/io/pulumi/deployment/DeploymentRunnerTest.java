@@ -2,9 +2,8 @@ package io.pulumi.deployment;
 
 import io.pulumi.Stack;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.Internal;
-import io.pulumi.deployment.MocksTest;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.InMemoryLogger;
 import io.pulumi.exceptions.RunException;
@@ -54,7 +53,7 @@ public class DeploymentRunnerTest {
     }
 
     public static class TerminatesEarlyOnExceptionStack extends Stack {
-        @OutputExport(type = Integer.class)
+        @Export(type = Integer.class)
         public final Output<Integer> slowOutput;
 
         public TerminatesEarlyOnExceptionStack() {

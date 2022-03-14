@@ -50,7 +50,7 @@ var OutputCustomType = PulumiAnnotations.Dot("OutputCustomType")
 
 var Import = PulumiAnnotations.Dot("Import")
 
-var OutputExport = PulumiAnnotations.Dot("OutputExport")
+var Export = PulumiAnnotations.Dot("Export")
 
 var EnumType = PulumiAnnotations.Dot("EnumType")
 

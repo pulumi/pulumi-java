@@ -19,7 +19,7 @@ import java.lang.annotation.Target;
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
-public @interface OutputExport {
+public @interface Export {
 
     /**
      * @return the exported output name of the annotated @see {@link io.pulumi.core.Output}

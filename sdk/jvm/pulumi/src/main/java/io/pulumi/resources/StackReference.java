@@ -4,7 +4,7 @@ import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.internal.InputOutputData;
 import io.pulumi.core.internal.Maps;
 import io.pulumi.core.internal.annotations.InternalUse;
@@ -24,19 +24,19 @@ public class StackReference extends CustomResource {
     /**
      * The name of the referenced stack.
      */
-    @OutputExport(name = "name", type = String.class)
+    @Export(name = "name", type = String.class)
     private Output<String> name;
 
     /**
      * The outputs of the referenced stack.
      */
-    @OutputExport(name = "outputs", type = ImmutableMap.class, parameters = {String.class, Object.class})
+    @Export(name = "outputs", type = ImmutableMap.class, parameters = {String.class, Object.class})
     public Output<ImmutableMap<String, Object>> outputs;
 
     /**
      * The names of any stack outputs which contain secrets.
      */
-    @OutputExport(name = "secretOutputNames", type = ImmutableList.class, parameters = String.class)
+    @Export(name = "secretOutputNames", type = ImmutableList.class, parameters = String.class)
     public Output<ImmutableList<String>> secretOutputNames;
 
     /**
