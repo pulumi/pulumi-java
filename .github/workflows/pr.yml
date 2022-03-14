@@ -126,8 +126,7 @@ jobs:
             pulumi stack rm dev --yes;
             pulumi stack init dev;
             pulumi plugin install &&
-            pulumi preview
-            pulumi stack rm dev --yes"
+            pulumi preview"
   example3:
     runs-on: ubuntu-latest
     steps:
@@ -184,8 +183,7 @@ jobs:
             pulumi stack init dev;
             pulumi config set azure-java-appservice-sql:sqlPassword not-a-real-password
             pulumi plugin install &&
-            pulumi preview &&
-            pulumi stack rm dev --yes"
+            pulumi preview"
   example4:
     runs-on: ubuntu-latest
     steps:
@@ -239,8 +237,7 @@ jobs:
             pulumi stack rm dev --yes;
             pulumi stack init dev;
             pulumi plugin install &&
-            pulumi preview &&
-            pulumi stack rm dev --yes"
+            pulumi preview"
   example5:
     runs-on: ubuntu-latest
     steps:
@@ -294,8 +291,7 @@ jobs:
             pulumi config set minimal:name foo &&
             pulumi config set minimal:secret bar &&
             pulumi plugin install &&
-            pulumi preview &&
-            pulumi stack rm dev --yes"
+            pulumi preview"
   example6:
     runs-on: ubuntu-latest
     steps:
@@ -358,8 +354,7 @@ jobs:
             pulumi stack rm dev --yes;
             pulumi stack init dev;
             pulumi plugin install &&
-            pulumi preview &&
-            pulumi stack rm dev --yes"
+            pulumi preview"
   example7:
     runs-on: ubuntu-latest
     steps:
@@ -412,8 +407,7 @@ jobs:
             pulumi stack rm dev --yes;
             pulumi stack init dev;
             pulumi plugin install &&
-            pulumi preview &&
-            pulumi stack rm dev --yes"
+            pulumi preview"
   example8:
     runs-on: ubuntu-latest
     steps:
@@ -466,8 +460,7 @@ jobs:
             pulumi stack rm dev --yes;
             pulumi stack init dev;
             pulumi plugin install &&
-            pulumi preview &&
-            pulumi stack rm dev --yes"
+            pulumi preview"
       - name: Integration tests
         run: make integration_tests
     strategy:
