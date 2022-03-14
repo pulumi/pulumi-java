@@ -4,7 +4,7 @@
 package io.pulumi.example;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.example.Resource;
 import java.lang.String;
 import java.util.List;
@@ -17,14 +17,14 @@ public final class OtherResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OtherResourceArgs Empty = new OtherResourceArgs();
 
-    @InputImport(name="bar")
+    @Import(name="bar")
       private final @Nullable List<String> bar;
 
     public List<String> getBar() {
         return this.bar == null ? List.of() : this.bar;
     }
 
-    @InputImport(name="foo")
+    @Import(name="foo")
       private final @Nullable Output<Resource> foo;
 
     public Output<Resource> getFoo() {

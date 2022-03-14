@@ -4,7 +4,7 @@
 package io.pulumi.foobar.submodule1;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.foobar.Utilities;
 import io.pulumi.foobar.outputs.TopLevel;
@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="foo-bar:submodule1:ModuleResource")
 public class ModuleResource extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="thing", type=TopLevel.class, parameters={})
+    @Export(name="thing", type=TopLevel.class, parameters={})
     private Output</* @Nullable */ TopLevel> thing;
 
     public Output</* @Nullable */ TopLevel> getThing() {

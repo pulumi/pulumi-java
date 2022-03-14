@@ -5,7 +5,7 @@ package io.pulumi.plant.inputs;
 
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.plant.enums.ContainerBrightness;
 import io.pulumi.plant.enums.ContainerColor;
 import io.pulumi.plant.enums.ContainerSize;
@@ -18,28 +18,28 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final ContainerArgs Empty = new ContainerArgs();
 
-    @InputImport(name="brightness")
+    @Import(name="brightness")
       private final @Nullable Output<ContainerBrightness> brightness;
 
     public Output<ContainerBrightness> getBrightness() {
         return this.brightness == null ? Output.empty() : this.brightness;
     }
 
-    @InputImport(name="color")
+    @Import(name="color")
       private final @Nullable Output<Either<ContainerColor,String>> color;
 
     public Output<Either<ContainerColor,String>> getColor() {
         return this.color == null ? Output.empty() : this.color;
     }
 
-    @InputImport(name="material")
+    @Import(name="material")
       private final @Nullable Output<String> material;
 
     public Output<String> getMaterial() {
         return this.material == null ? Output.empty() : this.material;
     }
 
-    @InputImport(name="size", required=true)
+    @Import(name="size", required=true)
       private final Output<ContainerSize> size;
 
     public Output<ContainerSize> getSize() {

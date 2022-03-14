@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * The identifier for the Batch inference deployment.
      * 
      */
-    @InputImport(name="deploymentName")
+    @Import(name="deploymentName")
       private final @Nullable Output<String> deploymentName;
 
     public Output<String> getDeploymentName() {
@@ -30,7 +30,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * Inference endpoint name
      * 
      */
-    @InputImport(name="endpointName", required=true)
+    @Import(name="endpointName", required=true)
       private final Output<String> endpointName;
 
     public Output<String> getEndpointName() {
@@ -41,7 +41,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -52,7 +52,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * The geo-location where the resource lives
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -63,7 +63,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * Additional attributes of the entity.
      * 
      */
-    @InputImport(name="properties", required=true)
+    @Import(name="properties", required=true)
       private final Output<io.pulumi.azurenative.machinelearningservices.inputs.BatchDeploymentArgs> properties;
 
     public Output<io.pulumi.azurenative.machinelearningservices.inputs.BatchDeploymentArgs> getProperties() {
@@ -74,7 +74,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the resource group. The name is case insensitive.
      * 
      */
-    @InputImport(name="resourceGroupName", required=true)
+    @Import(name="resourceGroupName", required=true)
       private final Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
@@ -85,7 +85,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * Resource tags.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -96,7 +96,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * Name of Azure Machine Learning workspace.
      * 
      */
-    @InputImport(name="workspaceName", required=true)
+    @Import(name="workspaceName", required=true)
       private final Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {

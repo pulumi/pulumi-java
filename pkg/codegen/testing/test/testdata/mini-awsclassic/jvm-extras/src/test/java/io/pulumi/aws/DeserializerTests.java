@@ -7,7 +7,7 @@ import com.google.protobuf.util.JsonFormat;
 import io.pulumi.Log;
 import io.pulumi.aws.ec2_getAmi.outputs.GetAmiResult;
 import io.pulumi.core.TypeShape;
-import io.pulumi.core.internal.InputOutputData;
+import io.pulumi.core.internal.OutputData;
 import io.pulumi.serialization.internal.Converter;
 import org.junit.jupiter.api.Test;
 
@@ -21,7 +21,7 @@ class DeserializerTests {
         var json = "{}";
         TypeShape<GetAmiResult> typeShape = TypeShape.builder(GetAmiResult.class).build();
         var converter = new Converter(Log.ignore());
-        InputOutputData<GetAmiResult> responseOutput = converter.convertValue(
+        OutputData<GetAmiResult> responseOutput = converter.convertValue(
                 "testContext",
                 parseJsonValue(json),
                 typeShape,

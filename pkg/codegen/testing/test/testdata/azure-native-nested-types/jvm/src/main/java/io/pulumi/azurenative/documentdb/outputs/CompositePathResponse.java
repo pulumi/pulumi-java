@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CompositePathResponse {
     /**
      * Sort order for composite paths.
@@ -22,10 +22,10 @@ public final class CompositePathResponse {
      */
     private final @Nullable String path;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CompositePathResponse(
-        @OutputCustomType.Parameter("order") @Nullable String order,
-        @OutputCustomType.Parameter("path") @Nullable String path) {
+        @CustomType.Parameter("order") @Nullable String order,
+        @CustomType.Parameter("path") @Nullable String path) {
         this.order = order;
         this.path = path;
     }

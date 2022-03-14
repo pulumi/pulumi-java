@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * Description of the endpoint deployment.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -37,7 +37,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * ARM resource ID of the environment specification for the endpoint deployment.
      * 
      */
-    @InputImport(name="environmentId")
+    @Import(name="environmentId")
       private final @Nullable Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
@@ -48,7 +48,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * Environment variables configuration for the deployment.
      * 
      */
-    @InputImport(name="environmentVariables")
+    @Import(name="environmentVariables")
       private final @Nullable Output<Map<String,String>> environmentVariables;
 
     public Output<Map<String,String>> getEnvironmentVariables() {
@@ -63,7 +63,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * If set to -1 (the lower bound), all failures during batch inference will be ignored.
      * 
      */
-    @InputImport(name="errorThreshold")
+    @Import(name="errorThreshold")
       private final @Nullable Output<Integer> errorThreshold;
 
     public Output<Integer> getErrorThreshold() {
@@ -76,7 +76,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * For TabularDataset, this is the size of the records in bytes, per mini-batch.
      * 
      */
-    @InputImport(name="miniBatchSize")
+    @Import(name="miniBatchSize")
       private final @Nullable Output<Double> miniBatchSize;
 
     public Output<Double> getMiniBatchSize() {
@@ -87,7 +87,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * Partition keys list used for Named partitioning.
      * 
      */
-    @InputImport(name="partitionKeys")
+    @Import(name="partitionKeys")
       private final @Nullable Output<List<String>> partitionKeys;
 
     public Output<List<String>> getPartitionKeys() {
@@ -98,7 +98,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * Property dictionary. Properties can be added, but not removed or altered.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {

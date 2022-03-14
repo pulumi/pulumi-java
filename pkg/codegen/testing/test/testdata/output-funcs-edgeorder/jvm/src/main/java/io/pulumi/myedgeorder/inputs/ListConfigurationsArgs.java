@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.myedgeorder.inputs.ConfigurationFilters;
 import io.pulumi.myedgeorder.inputs.CustomerSubscriptionDetails;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ListConfigurationsArgs extends io.pulumi.resources.InvokeArgs
      * Holds details about product hierarchy information and filterable property.
      * 
      */
-    @InputImport(name="configurationFilters", required=true)
+    @Import(name="configurationFilters", required=true)
       private final List<ConfigurationFilters> configurationFilters;
 
     public List<ConfigurationFilters> getConfigurationFilters() {
@@ -32,7 +32,7 @@ public final class ListConfigurationsArgs extends io.pulumi.resources.InvokeArgs
      * Customer subscription properties. Clients can display available products to unregistered customers by explicitly passing subscription details
      * 
      */
-    @InputImport(name="customerSubscriptionDetails")
+    @Import(name="customerSubscriptionDetails")
       private final @Nullable CustomerSubscriptionDetails customerSubscriptionDetails;
 
     public Optional<CustomerSubscriptionDetails> getCustomerSubscriptionDetails() {
@@ -43,7 +43,7 @@ public final class ListConfigurationsArgs extends io.pulumi.resources.InvokeArgs
      * $skipToken is supported on list of configurations, which provides the next page in the list of configurations.
      * 
      */
-    @InputImport(name="skipToken")
+    @Import(name="skipToken")
       private final @Nullable String skipToken;
 
     public Optional<String> getSkipToken() {

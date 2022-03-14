@@ -3,22 +3,22 @@
 
 package io.pulumi.example.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ObjectWithNodeOptionalInputs {
     private final @Nullable Integer bar;
     private final String foo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ObjectWithNodeOptionalInputs(
-        @OutputCustomType.Parameter("bar") @Nullable Integer bar,
-        @OutputCustomType.Parameter("foo") String foo) {
+        @CustomType.Parameter("bar") @Nullable Integer bar,
+        @CustomType.Parameter("foo") String foo) {
         this.bar = bar;
         this.foo = foo;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.plant.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.plant.enums.ContainerBrightness;
 import io.pulumi.plant.enums.ContainerSize;
 import java.lang.String;
@@ -11,19 +11,19 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Container {
     private final @Nullable ContainerBrightness brightness;
     private final @Nullable String color;
     private final @Nullable String material;
     private final ContainerSize size;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Container(
-        @OutputCustomType.Parameter("brightness") @Nullable ContainerBrightness brightness,
-        @OutputCustomType.Parameter("color") @Nullable String color,
-        @OutputCustomType.Parameter("material") @Nullable String material,
-        @OutputCustomType.Parameter("size") ContainerSize size) {
+        @CustomType.Parameter("brightness") @Nullable ContainerBrightness brightness,
+        @CustomType.Parameter("color") @Nullable String color,
+        @CustomType.Parameter("material") @Nullable String material,
+        @CustomType.Parameter("size") ContainerSize size) {
         this.brightness = brightness;
         this.color = color;
         this.material = material;

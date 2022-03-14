@@ -10,8 +10,8 @@ import io.pulumi.core.Output;
 import io.pulumi.core.Either;
 import io.pulumi.plant.inputs.*;
 import io.pulumi.plant.enums.*;
-import io.pulumi.core.InputOutput;
-import io.pulumi.core.internal.InputOutputData;
+import io.pulumi.core.Output;
+import io.pulumi.core.internal.OutputData;
 import io.pulumi.core.internal.Internal;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -19,7 +19,7 @@ import static org.mockito.Mockito.mock;
 
 class InputTests {
 
-    static <T, IO extends InputOutput<T, IO>> InputOutputData<T> waitFor(IO io) {
+    static <T> OutputData<T> waitFor(Output<T> io) {
         return Internal.of(io).getDataAsync().join();
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.example;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.example.RecArgs;
 import io.pulumi.example.Utilities;
@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="example::Rec")
 public class Rec extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="rec", type=Rec.class, parameters={})
+    @Export(name="rec", type=Rec.class, parameters={})
     private Output</* @Nullable */ Rec> rec;
 
     public Output</* @Nullable */ Rec> getRec() {

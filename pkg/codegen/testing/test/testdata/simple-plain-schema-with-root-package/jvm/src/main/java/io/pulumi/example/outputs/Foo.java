@@ -3,7 +3,7 @@
 
 package io.pulumi.example.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class Foo {
     private final Boolean a;
     private final @Nullable Boolean b;
@@ -20,14 +20,14 @@ public final class Foo {
     private final String e;
     private final @Nullable String f;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private Foo(
-        @OutputCustomType.Parameter("a") Boolean a,
-        @OutputCustomType.Parameter("b") @Nullable Boolean b,
-        @OutputCustomType.Parameter("c") Integer c,
-        @OutputCustomType.Parameter("d") @Nullable Integer d,
-        @OutputCustomType.Parameter("e") String e,
-        @OutputCustomType.Parameter("f") @Nullable String f) {
+        @CustomType.Parameter("a") Boolean a,
+        @CustomType.Parameter("b") @Nullable Boolean b,
+        @CustomType.Parameter("c") Integer c,
+        @CustomType.Parameter("d") @Nullable Integer d,
+        @CustomType.Parameter("e") String e,
+        @CustomType.Parameter("f") @Nullable String f) {
         this.a = a;
         this.b = b;
         this.c = c;

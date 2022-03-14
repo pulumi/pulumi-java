@@ -3,13 +3,13 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ListIntegrationAccountKeyVaultKeysResult {
     /**
      * The skip token.
@@ -17,8 +17,8 @@ public final class ListIntegrationAccountKeyVaultKeysResult {
      */
     private final @Nullable String skipToken;
 
-    @OutputCustomType.Constructor
-    private ListIntegrationAccountKeyVaultKeysResult(@OutputCustomType.Parameter("skipToken") @Nullable String skipToken) {
+    @CustomType.Constructor
+    private ListIntegrationAccountKeyVaultKeysResult(@CustomType.Parameter("skipToken") @Nullable String skipToken) {
         this.skipToken = skipToken;
     }
 

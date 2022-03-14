@@ -4,7 +4,7 @@
 package io.pulumi.example;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.example.Resource;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class OtherResourceArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final OtherResourceArgs Empty = new OtherResourceArgs();
 
-    @InputImport(name="foo")
+    @Import(name="foo")
       private final @Nullable Output<Resource> foo;
 
     public Output<Resource> getFoo() {

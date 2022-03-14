@@ -4,7 +4,7 @@
 package io.pulumi.example;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.example.ComponentArgs;
 import io.pulumi.example.Utilities;
@@ -17,55 +17,55 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="example::Component")
 public class Component extends io.pulumi.resources.ComponentResource {
-    @OutputExport(name="a", type=Boolean.class, parameters={})
+    @Export(name="a", type=Boolean.class, parameters={})
     private Output<Boolean> a;
 
     public Output<Boolean> getA() {
         return this.a;
     }
-    @OutputExport(name="b", type=Boolean.class, parameters={})
+    @Export(name="b", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> b;
 
     public Output</* @Nullable */ Boolean> getB() {
         return this.b;
     }
-    @OutputExport(name="bar", type=Foo.class, parameters={})
+    @Export(name="bar", type=Foo.class, parameters={})
     private Output</* @Nullable */ Foo> bar;
 
     public Output</* @Nullable */ Foo> getBar() {
         return this.bar;
     }
-    @OutputExport(name="baz", type=List.class, parameters={Foo.class})
+    @Export(name="baz", type=List.class, parameters={Foo.class})
     private Output</* @Nullable */ List<Foo>> baz;
 
     public Output</* @Nullable */ List<Foo>> getBaz() {
         return this.baz;
     }
-    @OutputExport(name="c", type=Integer.class, parameters={})
+    @Export(name="c", type=Integer.class, parameters={})
     private Output<Integer> c;
 
     public Output<Integer> getC() {
         return this.c;
     }
-    @OutputExport(name="d", type=Integer.class, parameters={})
+    @Export(name="d", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> d;
 
     public Output</* @Nullable */ Integer> getD() {
         return this.d;
     }
-    @OutputExport(name="e", type=String.class, parameters={})
+    @Export(name="e", type=String.class, parameters={})
     private Output<String> e;
 
     public Output<String> getE() {
         return this.e;
     }
-    @OutputExport(name="f", type=String.class, parameters={})
+    @Export(name="f", type=String.class, parameters={})
     private Output</* @Nullable */ String> f;
 
     public Output</* @Nullable */ String> getF() {
         return this.f;
     }
-    @OutputExport(name="foo", type=Foo.class, parameters={})
+    @Export(name="foo", type=Foo.class, parameters={})
     private Output</* @Nullable */ Foo> foo;
 
     public Output</* @Nullable */ Foo> getFoo() {
