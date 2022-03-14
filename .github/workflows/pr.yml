@@ -99,11 +99,6 @@ jobs:
           key: go-cache-${{ hashFiles('**/go.sum') }}
       - name: Ensure dependencies
         run: make ensure
-      - name: Build and unit-test Pulumi Java SDK
-        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
-        with:
-          arguments: build
-          build-root-directory: sdk/jvm
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
       - name: Configure AWS Credentials
@@ -130,7 +125,7 @@ jobs:
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/aws-java-webserver &&
             ./gradlew install &&
-            pulumi stack rm dev --yes;
+            pulumi stack rm dev --yes || true
             pulumi stack init dev;
             pulumi plugin install &&
             pulumi preview"
@@ -165,11 +160,6 @@ jobs:
           key: go-cache-${{ hashFiles('**/go.sum') }}
       - name: Ensure dependencies
         run: make ensure
-      - name: Build and unit-test Pulumi Java SDK
-        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
-        with:
-          arguments: build
-          build-root-directory: sdk/jvm
       - name: Publish Pulumi Java SDK to a local Maven repo
         run: make install_sdk
       - name: Install Pulumi CLI
@@ -197,7 +187,7 @@ jobs:
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/azure-java-appservice-sql &&
             ./gradlew install &&
-            pulumi stack rm dev --yes;
+            pulumi stack rm dev --yes || true
             pulumi stack init dev;
             pulumi config set azure-java-appservice-sql:sqlPassword not-a-real-password
             pulumi plugin install &&
@@ -233,11 +223,6 @@ jobs:
           key: go-cache-${{ hashFiles('**/go.sum') }}
       - name: Ensure dependencies
         run: make ensure
-      - name: Build and unit-test Pulumi Java SDK
-        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
-        with:
-          arguments: build
-          build-root-directory: sdk/jvm
       ###
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
@@ -257,12 +242,12 @@ jobs:
         run: |
           make install_sdk
           make provider.gcp.build provider.gcp.install
-          make provider.kubernetes.build make provider.kubernetes.install
+          make provider.kubernetes.build provider.kubernetes.install
           make bin/pulumi-language-jvm
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/gcp-java-gke-hello-world &&
             ./gradlew install &&
-            pulumi stack rm dev --yes;
+            pulumi stack rm dev --yes || true
             pulumi stack init dev;
             pulumi plugin install &&
             pulumi preview"
@@ -297,11 +282,6 @@ jobs:
           key: go-cache-${{ hashFiles('**/go.sum') }}
       - name: Ensure dependencies
         run: make ensure
-      - name: Build and unit-test Pulumi Java SDK
-        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
-        with:
-          arguments: build
-          build-root-directory: sdk/jvm
       ###
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
@@ -319,7 +299,7 @@ jobs:
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/minimal &&
             ./gradlew install &&
-            pulumi stack rm dev --yes;
+            pulumi stack rm dev --yes || true
             pulumi stack init dev;
             pulumi config set minimal:name foo &&
             pulumi config set minimal:secret bar &&
@@ -356,11 +336,6 @@ jobs:
           key: go-cache-${{ hashFiles('**/go.sum') }}
       - name: Ensure dependencies
         run: make ensure
-      - name: Build and unit-test Pulumi Java SDK
-        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
-        with:
-          arguments: build
-          build-root-directory: sdk/jvm
       ###
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
@@ -389,7 +364,7 @@ jobs:
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/aws-native-java-s3-folder &&
             ./gradlew install &&
-            pulumi stack rm dev --yes;
+            pulumi stack rm dev --yes || true
             pulumi stack init dev;
             pulumi plugin install &&
             pulumi preview"
@@ -424,11 +399,6 @@ jobs:
           key: go-cache-${{ hashFiles('**/go.sum') }}
       - name: Ensure dependencies
         run: make ensure
-      - name: Build and unit-test Pulumi Java SDK
-        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
-        with:
-          arguments: build
-          build-root-directory: sdk/jvm
       ###
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
@@ -454,7 +424,7 @@ jobs:
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/azure-java-static-website &&
             ./gradlew install &&
-            pulumi stack rm dev --yes;
+            pulumi stack rm dev --yes || true
             pulumi stack init dev;
             pulumi plugin install &&
             pulumi preview"
@@ -489,11 +459,6 @@ jobs:
           key: go-cache-${{ hashFiles('**/go.sum') }}
       - name: Ensure dependencies
         run: make ensure
-      - name: Build and unit-test Pulumi Java SDK
-        uses: gradle/gradle-build-action@4137be6a8bf7d7133955359dbd952c0ca73b1021
-        with:
-          arguments: build
-          build-root-directory: sdk/jvm
       ###
       - name: Install Pulumi CLI
         uses: pulumi/action-install-pulumi-cli@v2
@@ -512,7 +477,7 @@ jobs:
           bash -c  "export PATH=\"$PATH:$(pwd)/bin/\" &&
             cd tests/examples/random &&
             ./gradlew install &&
-            pulumi stack rm dev --yes;
+            pulumi stack rm dev --yes || true
             pulumi stack init dev;
             pulumi preview"
       - name: Integration tests
