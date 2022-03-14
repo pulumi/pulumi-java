@@ -22,10 +22,10 @@ public class OutputCompletionSource<T> {
 
     protected final ImmutableSet<Resource> resources;
     protected final TypeShape<T> dataTypeShape;
-    protected CompletableFuture<InputOutputData<T>> mutableData;
+    protected CompletableFuture<OutputData<T>> mutableData;
 
     public OutputCompletionSource(
-            CompletableFuture<InputOutputData<T>> data,
+            CompletableFuture<OutputData<T>> data,
             ImmutableSet<Resource> resources,
             TypeShape<T> dataTypeShape
     ) {
@@ -39,7 +39,7 @@ public class OutputCompletionSource<T> {
     }
 
     public void trySetDefaultResult(boolean isKnown) {
-        mutableData.complete(InputOutputData.ofNullable(
+        mutableData.complete(OutputData.ofNullable(
                 ImmutableSet.of(), null, isKnown, false) // TODO: check if this does not break things later on
         );
     }
@@ -62,7 +62,7 @@ public class OutputCompletionSource<T> {
             );
         }
         //noinspection unchecked
-        mutableData.complete(InputOutputData.ofNullable(
+        mutableData.complete(OutputData.ofNullable(
                 this.resources,
                 (T) value,
                 isKnown,
@@ -70,8 +70,8 @@ public class OutputCompletionSource<T> {
         ));
     }
 
-    public void setValue(InputOutputData<T> data) {
-        mutableData.complete(InputOutputData.ofNullable(
+    public void setValue(OutputData<T> data) {
+        mutableData.complete(OutputData.ofNullable(
                 Sets.union(this.resources, data.getResources()).immutableCopy(),
                 data.getValueNullable(),
                 data.isKnown(),

@@ -431,7 +431,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             return OutputDefault.of(rawInvoke(token, targetType, args, options));
         }
 
-        private <T> CompletableFuture<InputOutputData<T>> rawInvoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
+        private <T> CompletableFuture<OutputData<T>> rawInvoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
             Objects.requireNonNull(token);
             Objects.requireNonNull(targetType);
             Objects.requireNonNull(args);
@@ -504,7 +504,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
                                     .build(),
                             targetType
                     ))
-                    .thenApply(InputOutputData::getValueNullable);
+                    .thenApply(OutputData::getValueNullable);
         }
 
         private CompletableFuture<PropertiesSerializer.SerializationResult> invokeRawAsync(String token, InvokeArgs args, InvokeOptions options) {
@@ -640,7 +640,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
             return OutputDefault.of(callAsync(token, targetType, args, self, options));
         }
 
-        private <T> CompletableFuture<InputOutputData<T>> callAsync(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self, CallOptions options) {
+        private <T> CompletableFuture<OutputData<T>> callAsync(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self, CallOptions options) {
             Objects.requireNonNull(token);
             Objects.requireNonNull(targetType);
             Objects.requireNonNull(args);

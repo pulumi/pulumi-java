@@ -9,8 +9,8 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonNull;
 import io.pulumi.core.internal.CompletableFutures;
 import io.pulumi.core.internal.Copyable;
-import io.pulumi.core.internal.InputOutputData;
 import io.pulumi.core.internal.Internal;
+import io.pulumi.core.internal.OutputData;
 
 import javax.annotation.Nullable;
 import java.util.*;
@@ -22,8 +22,8 @@ import java.util.stream.Stream;
 
 import static com.google.common.collect.ImmutableList.toImmutableList;
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
-import static io.pulumi.core.internal.InputOutputData.allHelperAsync;
 import static io.pulumi.core.internal.InputOutputInternal.TupleZeroOut;
+import static io.pulumi.core.internal.OutputData.allHelperAsync;
 
 public interface Output<T> extends Copyable<Output<T>> {
 
@@ -124,7 +124,7 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     static <T> Output<T> empty() {
-        return new OutputDefault<>(InputOutputData.empty());
+        return new OutputDefault<>(OutputData.empty());
     }
 
     static <T, O extends Output<T>> Output<T> ofNullable(@Nullable O value) {
@@ -193,7 +193,7 @@ public interface Output<T> extends Copyable<Output<T>> {
      */
     static Output<String> format(String formattableString, @SuppressWarnings("rawtypes") Output... arguments) {
         var data = Lists.newArrayList(arguments).stream()
-                .map(InputOutputData::copyInputOutputData)
+                .map(OutputData::copyInputOutputData)
                 .collect(Collectors.toList());
 
         return new OutputDefault<>(
@@ -438,11 +438,11 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     final class ListBuilder<E> {
-        private final CompletableFutures.Builder<InputOutputData.Builder<ImmutableList.Builder<E>>> builder;
+        private final CompletableFutures.Builder<OutputData.Builder<ImmutableList.Builder<E>>> builder;
 
         public ListBuilder() {
             builder = CompletableFutures.builder(
-                    CompletableFuture.completedFuture(InputOutputData.builder(ImmutableList.builder()))
+                    CompletableFuture.completedFuture(OutputData.builder(ImmutableList.builder()))
             );
         }
 
@@ -458,7 +458,7 @@ public interface Output<T> extends Copyable<Output<T>> {
         @CanIgnoreReturnValue
         public Output.ListBuilder<E> add(E value) {
             this.builder.accumulate(
-                    CompletableFuture.completedFuture(InputOutputData.of(value)),
+                    CompletableFuture.completedFuture(OutputData.of(value)),
                     (dataBuilder, data) -> dataBuilder.accumulate(data, ImmutableList.Builder::add)
             );
             return this;
@@ -474,7 +474,7 @@ public interface Output<T> extends Copyable<Output<T>> {
         @CanIgnoreReturnValue
         public Output.ListBuilder<E> addAll(Iterable<? extends E> elements) {
             this.builder.accumulate(
-                    CompletableFuture.completedFuture(InputOutputData.of(elements)),
+                    CompletableFuture.completedFuture(OutputData.of(elements)),
                     (dataBuilder, data) -> dataBuilder.accumulate(data, ImmutableList.Builder::addAll)
             );
             return this;
@@ -483,7 +483,7 @@ public interface Output<T> extends Copyable<Output<T>> {
         @CanIgnoreReturnValue
         public Output.ListBuilder<E> addAll(Iterator<? extends E> elements) {
             this.builder.accumulate(
-                    CompletableFuture.completedFuture(InputOutputData.of(elements)),
+                    CompletableFuture.completedFuture(OutputData.of(elements)),
                     (dataBuilder, data) -> dataBuilder.accumulate(data, ImmutableList.Builder::addAll)
             );
             return this;
@@ -652,11 +652,11 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     final class MapBuilder<V> {
-        private final CompletableFutures.Builder<InputOutputData.Builder<ImmutableMap.Builder<String, V>>> builder;
+        private final CompletableFutures.Builder<OutputData.Builder<ImmutableMap.Builder<String, V>>> builder;
 
         public MapBuilder() {
             builder = CompletableFutures.builder(
-                    CompletableFuture.completedFuture(InputOutputData.builder(ImmutableMap.builder()))
+                    CompletableFuture.completedFuture(OutputData.builder(ImmutableMap.builder()))
             );
         }
 
@@ -673,7 +673,7 @@ public interface Output<T> extends Copyable<Output<T>> {
         @CanIgnoreReturnValue
         public Output.MapBuilder<V> put(String key, V value) {
             this.builder.accumulate(
-                    CompletableFuture.completedFuture(InputOutputData.of(value)),
+                    CompletableFuture.completedFuture(OutputData.of(value)),
                     (dataBuilder, data) -> dataBuilder.accumulate(data,
                             (mapBuilder, v) -> mapBuilder.put(key, v))
             );
@@ -683,7 +683,7 @@ public interface Output<T> extends Copyable<Output<T>> {
         @CanIgnoreReturnValue
         public Output.MapBuilder<V> put(Map.Entry<? extends String, ? extends V> entry) {
             this.builder.accumulate(
-                    CompletableFuture.completedFuture(InputOutputData.of(entry)),
+                    CompletableFuture.completedFuture(OutputData.of(entry)),
                     (dataBuilder, data) -> dataBuilder.accumulate(data, ImmutableMap.Builder::put)
             );
             return this;
@@ -692,7 +692,7 @@ public interface Output<T> extends Copyable<Output<T>> {
         @CanIgnoreReturnValue
         public Output.MapBuilder<V> putAll(Map<? extends String, ? extends V> map) {
             this.builder.accumulate(
-                    CompletableFuture.completedFuture(InputOutputData.of(map)),
+                    CompletableFuture.completedFuture(OutputData.of(map)),
                     (dataBuilder, data) -> dataBuilder.accumulate(data, ImmutableMap.Builder::putAll)
             );
             return this;
@@ -702,7 +702,7 @@ public interface Output<T> extends Copyable<Output<T>> {
         @CanIgnoreReturnValue
         public Output.MapBuilder<V> putAll(Iterable<? extends Map.Entry<? extends String, ? extends V>> entries) {
             this.builder.accumulate(
-                    CompletableFuture.completedFuture(InputOutputData.of(entries)),
+                    CompletableFuture.completedFuture(OutputData.of(entries)),
                     (dataBuilder, data) -> dataBuilder.accumulate(data, ImmutableMap.Builder::putAll)
             );
             return this;
@@ -786,6 +786,6 @@ public interface Output<T> extends Copyable<Output<T>> {
             Output<T1> item1, Output<T2> item2, Output<T3> item3, Output<T4> item4,
             Output<T5> item5, Output<T6> item6, Output<T7> item7, Output<T8> item8
     ) {
-        return new OutputDefault<>(InputOutputData.tuple(item1, item2, item3, item4, item5, item6, item7, item8));
+        return new OutputDefault<>(OutputData.tuple(item1, item2, item3, item4, item5, item6, item7, item8));
     }
 }

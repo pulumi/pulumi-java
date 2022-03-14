@@ -5,8 +5,8 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
-import io.pulumi.core.internal.InputOutputData;
 import io.pulumi.core.internal.Maps;
+import io.pulumi.core.internal.OutputData;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.exceptions.RunException;
 
@@ -149,8 +149,8 @@ public class StackReference extends CustomResource {
 
     private CompletableFuture<Boolean> isSecretOutputName(Output<String> name) {
         return io.pulumi.core.internal.Internal.of(name).getDataAsync().thenCompose(
-                (InputOutputData<String> nameOutput) -> io.pulumi.core.internal.Internal.of(this.secretOutputNames).getDataAsync().thenCompose(
-                        (InputOutputData<ImmutableList<String>> secretOutputNamesData) -> {
+                (OutputData<String> nameOutput) -> io.pulumi.core.internal.Internal.of(this.secretOutputNames).getDataAsync().thenCompose(
+                        (OutputData<ImmutableList<String>> secretOutputNamesData) -> {
                             // If either the name or set of secret outputs is unknown, we can't do anything smart,
                             // so we just copy the secret-ness from the entire outputs value.
                             if (!(nameOutput.isKnown() && secretOutputNamesData.isKnown())) {

@@ -17,8 +17,8 @@ import io.pulumi.core.Either;
 import io.pulumi.core.TypeShape;
 import io.pulumi.core.annotations.CustomType;
 import io.pulumi.core.annotations.EnumType;
-import io.pulumi.core.internal.InputOutputData;
 import io.pulumi.core.internal.Maps;
+import io.pulumi.core.internal.OutputData;
 import io.pulumi.resources.Resource;
 
 import javax.annotation.Nullable;
@@ -46,15 +46,15 @@ public class Converter {
         this.log = requireNonNull(log);
     }
 
-    public <T> InputOutputData<T> convertValue(String context, Value value, Class<T> targetType) {
+    public <T> OutputData<T> convertValue(String context, Value value, Class<T> targetType) {
         return convertValue(context, value, TypeShape.of(targetType));
     }
 
-    public <T> InputOutputData<T> convertValue(String context, Value value, TypeShape<T> targetType) {
+    public <T> OutputData<T> convertValue(String context, Value value, TypeShape<T> targetType) {
         return convertValue(context, value, targetType, ImmutableSet.of());
     }
 
-    public <T> InputOutputData<T> convertValue(
+    public <T> OutputData<T> convertValue(
             String context, Value value, TypeShape<T> targetType, ImmutableSet<Resource> resources
     ) {
         requireNonNull(context);
@@ -67,7 +67,7 @@ public class Converter {
         var deserializer = new Deserializer();
         var data = deserializer.deserialize(value);
         // Note: nulls can enter the system as the representation of an 'unknown' value,
-        //       but the Deserializer will wrap it in an InputOutputData, and we get them as a null here
+        //       but the Deserializer will wrap it in an OutputData, and we get them as a null here
         @Nullable
         var converted = data.isKnown()
                 ? convertObjectUntyped(context, data.getValueNullable(), targetType)
@@ -89,7 +89,7 @@ public class Converter {
                 .build();
 
         //noinspection unchecked
-        return InputOutputData.ofNullable(mergedResources, (T) converted, data.isKnown(), data.isSecret());
+        return OutputData.ofNullable(mergedResources, (T) converted, data.isKnown(), data.isSecret());
     }
 
     @Nullable

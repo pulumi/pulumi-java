@@ -21,7 +21,7 @@ public abstract class InputOutputInternal<T>
     @InternalUse
     public static final Output<Tuples.Tuple0> TupleZeroOut = Output.of(Tuples.Tuple0.Empty);
 
-    protected final CompletableFuture<InputOutputData<T>> dataFuture;
+    protected final CompletableFuture<OutputData<T>> dataFuture;
 
     protected InputOutputInternal(T value) {
         this(value, false);
@@ -32,14 +32,14 @@ public abstract class InputOutputInternal<T>
     }
 
     protected InputOutputInternal(CompletableFuture<T> value, boolean isSecret) {
-        this(InputOutputData.ofAsync(Objects.requireNonNull(value), isSecret));
+        this(OutputData.ofAsync(Objects.requireNonNull(value), isSecret));
     }
 
-    protected InputOutputInternal(InputOutputData<T> dataFuture) {
+    protected InputOutputInternal(OutputData<T> dataFuture) {
         this(CompletableFuture.completedFuture(Objects.requireNonNull(dataFuture)));
     }
 
-    protected InputOutputInternal(CompletableFuture<InputOutputData<T>> dataFuture) {
+    protected InputOutputInternal(CompletableFuture<OutputData<T>> dataFuture) {
         this.dataFuture = Objects.requireNonNull(dataFuture);
 
         var deployment = DeploymentInternal.getInstanceOptional();
@@ -48,7 +48,7 @@ public abstract class InputOutputInternal<T>
         ));
     }
 
-    protected abstract Output<T> newInstance(CompletableFuture<InputOutputData<T>> dataFuture);
+    protected abstract Output<T> newInstance(CompletableFuture<OutputData<T>> dataFuture);
 
     public Output<T> copy() {
         // we do not copy the OutputData, because it should be immutable
@@ -75,7 +75,7 @@ public abstract class InputOutputInternal<T>
     }
 
     @InternalUse
-    public CompletableFuture<InputOutputData<T>> getDataAsync() {
+    public CompletableFuture<OutputData<T>> getDataAsync() {
         return this.dataFuture;
     }
 
@@ -86,37 +86,37 @@ public abstract class InputOutputInternal<T>
 
     @InternalUse
     public CompletableFuture</* @Nullable */ T> getValueNullable() {
-        return this.dataFuture.thenApply(InputOutputData::getValueNullable);
+        return this.dataFuture.thenApply(OutputData::getValueNullable);
     }
 
     @InternalUse
     public CompletableFuture<Optional<T>> getValueOptional() {
-        return this.dataFuture.thenApply(InputOutputData::getValueOptional);
+        return this.dataFuture.thenApply(OutputData::getValueOptional);
     }
 
     @InternalUse
     public CompletableFuture<ImmutableSet<Resource>> getResources() {
-        return this.dataFuture.thenApply(InputOutputData::getResources);
+        return this.dataFuture.thenApply(OutputData::getResources);
     }
 
     @InternalUse
     public CompletableFuture<Boolean> isKnown() {
-        return this.dataFuture.thenApply(InputOutputData::isKnown);
+        return this.dataFuture.thenApply(OutputData::isKnown);
     }
 
     @InternalUse
     public CompletableFuture<Boolean> isSecret() {
-        return this.dataFuture.thenApply(InputOutputData::isSecret);
+        return this.dataFuture.thenApply(OutputData::isSecret);
     }
 
     @InternalUse
     public CompletableFuture<Boolean> isEmpty() {
-        return this.dataFuture.thenApply(InputOutputData::isEmpty);
+        return this.dataFuture.thenApply(OutputData::isEmpty);
     }
 
     @InternalUse
     public CompletableFuture<Boolean> isPresent() {
-        return this.dataFuture.thenApply(InputOutputData::isPresent);
+        return this.dataFuture.thenApply(OutputData::isPresent);
     }
 
     static <T> InputOutputInternal<T> cast(

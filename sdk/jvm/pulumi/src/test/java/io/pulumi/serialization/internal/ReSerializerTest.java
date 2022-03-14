@@ -2,7 +2,7 @@ package io.pulumi.serialization.internal;
 
 import com.google.gson.JsonParser;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.InputOutputData;
+import io.pulumi.core.internal.OutputData;
 import io.pulumi.deployment.MocksTest;
 import org.junit.jupiter.api.*;
 
@@ -44,7 +44,7 @@ class ReSerializerTest {
         return serialized
                 .thenApply(Serializer::createValue)
                 .thenApply(new Deserializer()::deserialize)
-                .thenApply(InputOutputData::getValueNullable)
+                .thenApply(OutputData::getValueNullable)
                 .join();
     }
 

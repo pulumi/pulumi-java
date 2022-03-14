@@ -1,9 +1,9 @@
 package io.pulumi.core;
 
 import com.google.common.collect.ImmutableSet;
-import io.pulumi.core.internal.InputOutputData;
 import io.pulumi.core.internal.InputOutputInternal;
 import io.pulumi.core.internal.Internal;
+import io.pulumi.core.internal.OutputData;
 import io.pulumi.core.internal.annotations.InternalUse;
 import io.pulumi.resources.Resource;
 
@@ -29,22 +29,22 @@ public final class OutputDefault<T> extends InputOutputInternal<T> implements Ou
         super(value, isSecret);
     }
 
-    OutputDefault(InputOutputData<T> dataFuture) {
+    OutputDefault(OutputData<T> dataFuture) {
         super(dataFuture);
     }
 
-    OutputDefault(CompletableFuture<InputOutputData<T>> dataFuture) {
+    OutputDefault(CompletableFuture<OutputData<T>> dataFuture) {
         super(dataFuture);
     }
 
     @Override
-    protected Output<T> newInstance(CompletableFuture<InputOutputData<T>> dataFuture) {
+    protected Output<T> newInstance(CompletableFuture<OutputData<T>> dataFuture) {
         return new OutputDefault<>(dataFuture);
     }
 
     @Override
     public <U> Output<U> apply(Function<T, Output<U>> func) {
-        return new OutputDefault<>(InputOutputData.apply(
+        return new OutputDefault<>(OutputData.apply(
                 dataFuture,
                 func.andThen(o -> Internal.of(o).getDataAsync())
         ));
@@ -56,11 +56,11 @@ public final class OutputDefault<T> extends InputOutputInternal<T> implements Ou
     public static <T> Output<T> of(Set<Resource> resources, T value) {
         Objects.requireNonNull(value);
         return new OutputDefault<>(CompletableFuture.completedFuture(
-                InputOutputData.of(ImmutableSet.copyOf(resources), value)));
+                OutputData.of(ImmutableSet.copyOf(resources), value)));
     }
 
     @InternalUse
-    public static <T> Output<T> of(CompletableFuture<InputOutputData<T>> dataFuture) {
+    public static <T> Output<T> of(CompletableFuture<OutputData<T>> dataFuture) {
         return new OutputDefault<>(dataFuture);
     }
 }
