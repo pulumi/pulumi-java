@@ -46,7 +46,7 @@ var Nullable = Ident("javax").FQN().Dot("annotation").Dot("Nullable")
 
 var Objects = JavaUtil.Dot("Objects")
 
-var OutputCustomType = PulumiAnnotations.Dot("OutputCustomType")
+var CustomType = PulumiAnnotations.Dot("CustomType")
 
 var Import = PulumiAnnotations.Dot("Import")
 

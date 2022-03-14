@@ -13,11 +13,11 @@ import io.pulumi.Log;
 import io.pulumi.core.Output;
 import io.pulumi.core.OutputTests;
 import io.pulumi.core.TypeShape;
+import io.pulumi.core.annotations.CustomType;
+import io.pulumi.core.annotations.CustomType.Constructor;
+import io.pulumi.core.annotations.CustomType.Parameter;
 import io.pulumi.core.annotations.EnumType;
 import io.pulumi.core.annotations.Import;
-import io.pulumi.core.annotations.OutputCustomType;
-import io.pulumi.core.annotations.OutputCustomType.Constructor;
-import io.pulumi.core.annotations.OutputCustomType.Parameter;
 import io.pulumi.core.internal.Constants;
 import io.pulumi.deployment.MocksTest;
 import io.pulumi.deployment.internal.DeploymentTests;
@@ -697,7 +697,7 @@ class ConverterTests {
         }
     }
 
-    @OutputCustomType
+    @CustomType
     public static class RecursiveType {
         public final String ref;
         public final ImmutableList<RecursiveType> additionalItems;

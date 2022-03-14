@@ -10,11 +10,11 @@ import java.lang.annotation.Target;
  * output property.
  * <p/>
  * A complex type must have a single constructor
- * marked with the @see {@link OutputCustomType.Constructor} annotation.
+ * marked with the @see {@link CustomType.Constructor} annotation.
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-public @interface OutputCustomType {
+public @interface CustomType {
 
     /**
      * Annotation used by a Pulumi Cloud Provider Package to marks the constructor for a complex

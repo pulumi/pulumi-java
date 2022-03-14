@@ -929,7 +929,7 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 	props := pt.properties
 
 	// Open the class and annotate it appropriately.
-	fprintf(w, "@%s\n", ctx.ref(names.OutputCustomType))
+	fprintf(w, "@%s\n", ctx.ref(names.CustomType))
 	fprintf(w, "public final class %s {\n", pt.name)
 
 	// Generate each output field.
@@ -977,7 +977,7 @@ func (pt *plainType) genJumboOutputType(ctx *classFileContext) error {
 	paramNamesStringBuilder.WriteString("}")
 
 	// Generate an appropriately-attributed constructor that will set this types' fields.
-	fprintf(w, "    @%s.Constructor\n", ctx.ref(names.OutputCustomType))
+	fprintf(w, "    @%s.Constructor\n", ctx.ref(names.CustomType))
 	// Generate empty constructor, not that the instance created
 	// with this constructor may not be valid if there are 'required' fields.
 	if len(props) > 0 {
@@ -1128,7 +1128,7 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 	props := pt.properties
 
 	// Open the class and annotate it appropriately.
-	fprintf(w, "@%s\n", ctx.ref(names.OutputCustomType))
+	fprintf(w, "@%s\n", ctx.ref(names.CustomType))
 	fprintf(w, "public final class %s {\n", pt.name)
 
 	// Generate each output field.
@@ -1164,7 +1164,7 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 	}
 
 	// Generate an appropriately-attributed constructor that will set this types' fields.
-	fprintf(w, "    @%s.Constructor\n", ctx.ref(names.OutputCustomType))
+	fprintf(w, "    @%s.Constructor\n", ctx.ref(names.CustomType))
 	fprintf(w, "    private %s(", pt.name)
 
 	// Generate the constructor parameters.
@@ -1192,7 +1192,7 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 		}
 
 		paramDef := fmt.Sprintf("%s %s %s%s",
-			fmt.Sprintf("@%s.Parameter(\"%s\")", ctx.ref(names.OutputCustomType), prop.Name),
+			fmt.Sprintf("@%s.Parameter(\"%s\")", ctx.ref(names.CustomType), prop.Name),
 			paramType.ToCode(ctx.imports), paramName, terminator)
 		if len(props) > 1 {
 			paramDef = fmt.Sprintf("        %s", paramDef)

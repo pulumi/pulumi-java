@@ -6,11 +6,11 @@ import io.pulumi.Stack;
 import io.pulumi.core.Output;
 import io.pulumi.core.OutputTests;
 import io.pulumi.core.Tuples;
+import io.pulumi.core.annotations.CustomType;
+import io.pulumi.core.annotations.CustomType.Constructor;
+import io.pulumi.core.annotations.CustomType.Parameter;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.Import;
-import io.pulumi.core.annotations.OutputCustomType;
-import io.pulumi.core.annotations.OutputCustomType.Constructor;
-import io.pulumi.core.annotations.OutputCustomType.Parameter;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.core.internal.Internal;
 import io.pulumi.deployment.internal.DeploymentTests;
@@ -226,7 +226,7 @@ public class MocksTest {
         }
     }
 
-    @OutputCustomType
+    @CustomType
     public static final class GetRoleResult {
         /**
          * The Amazon Resource Name (ARN) specifying the role.

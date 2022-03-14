@@ -3,9 +3,9 @@ package io.pulumi.serialization.internal;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import io.pulumi.Log;
-import io.pulumi.core.annotations.OutputCustomType;
-import io.pulumi.core.annotations.OutputCustomType.Constructor;
-import io.pulumi.core.annotations.OutputCustomType.Parameter;
+import io.pulumi.core.annotations.CustomType;
+import io.pulumi.core.annotations.CustomType.Constructor;
+import io.pulumi.core.annotations.CustomType.Parameter;
 import io.pulumi.deployment.internal.DeploymentTests;
 import io.pulumi.deployment.internal.InMemoryLogger;
 import io.pulumi.serialization.internal.ConverterTests.ContainerSize;
@@ -28,7 +28,7 @@ class ComplexTypeConverterTest {
 
     private final static Log log = DeploymentTests.mockLog();
 
-    @OutputCustomType
+    @CustomType
     public static class ComplexType1 {
         public final String s;
         public final boolean b;
@@ -97,7 +97,7 @@ class ComplexTypeConverterTest {
         assertThat(data.isKnown()).isTrue();
     }
 
-    @OutputCustomType
+    @CustomType
     public static class ComplexType2 {
         public final ComplexType1 c;
         public final ImmutableList<ComplexType1> c2List;
@@ -206,7 +206,7 @@ class ComplexTypeConverterTest {
         assertThat(value.color).isEqualTo(ContainerColor.Blue);
     }
 
-    @OutputCustomType
+    @CustomType
     public static class UnexpectedNullableComplexType {
         public final String s;
 
@@ -241,7 +241,7 @@ class ComplexTypeConverterTest {
         ));
     }
 
-    @OutputCustomType
+    @CustomType
     public static class EscapedComplexType {
         public final String $private;
 
