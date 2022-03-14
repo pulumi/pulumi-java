@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceNetworkInterfaceIpv6AccessConfig {
     private final @Nullable String externalIpv6;
     private final @Nullable String externalIpv6PrefixLength;
@@ -26,12 +26,12 @@ public final class InstanceNetworkInterfaceIpv6AccessConfig {
      */
     private final @Nullable String publicPtrDomainName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceNetworkInterfaceIpv6AccessConfig(
-        @OutputCustomType.Parameter("externalIpv6") @Nullable String externalIpv6,
-        @OutputCustomType.Parameter("externalIpv6PrefixLength") @Nullable String externalIpv6PrefixLength,
-        @OutputCustomType.Parameter("networkTier") String networkTier,
-        @OutputCustomType.Parameter("publicPtrDomainName") @Nullable String publicPtrDomainName) {
+        @CustomType.Parameter("externalIpv6") @Nullable String externalIpv6,
+        @CustomType.Parameter("externalIpv6PrefixLength") @Nullable String externalIpv6PrefixLength,
+        @CustomType.Parameter("networkTier") String networkTier,
+        @CustomType.Parameter("publicPtrDomainName") @Nullable String publicPtrDomainName) {
         this.externalIpv6 = externalIpv6;
         this.externalIpv6PrefixLength = externalIpv6PrefixLength;
         this.networkTier = networkTier;

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.networkconnectivity.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.networkconnectivity.outputs.SpokeLinkedRouterApplianceInstancesInstance;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SpokeLinkedRouterApplianceInstances {
     /**
      * The list of router appliance instances
@@ -22,10 +22,10 @@ public final class SpokeLinkedRouterApplianceInstances {
      */
     private final Boolean siteToSiteDataTransfer;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SpokeLinkedRouterApplianceInstances(
-        @OutputCustomType.Parameter("instances") List<SpokeLinkedRouterApplianceInstancesInstance> instances,
-        @OutputCustomType.Parameter("siteToSiteDataTransfer") Boolean siteToSiteDataTransfer) {
+        @CustomType.Parameter("instances") List<SpokeLinkedRouterApplianceInstancesInstance> instances,
+        @CustomType.Parameter("siteToSiteDataTransfer") Boolean siteToSiteDataTransfer) {
         this.instances = instances;
         this.siteToSiteDataTransfer = siteToSiteDataTransfer;
     }

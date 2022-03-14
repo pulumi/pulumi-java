@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CaPoolIssuancePolicyIdentityConstraintsCelExpression;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CaPoolIssuancePolicyIdentityConstraints {
     /**
      * If this is set, the SubjectAltNames extension may be copied from a certificate request into the signed certificate.
@@ -33,11 +33,11 @@ public final class CaPoolIssuancePolicyIdentityConstraints {
      */
     private final @Nullable CaPoolIssuancePolicyIdentityConstraintsCelExpression celExpression;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CaPoolIssuancePolicyIdentityConstraints(
-        @OutputCustomType.Parameter("allowSubjectAltNamesPassthrough") Boolean allowSubjectAltNamesPassthrough,
-        @OutputCustomType.Parameter("allowSubjectPassthrough") Boolean allowSubjectPassthrough,
-        @OutputCustomType.Parameter("celExpression") @Nullable CaPoolIssuancePolicyIdentityConstraintsCelExpression celExpression) {
+        @CustomType.Parameter("allowSubjectAltNamesPassthrough") Boolean allowSubjectAltNamesPassthrough,
+        @CustomType.Parameter("allowSubjectPassthrough") Boolean allowSubjectPassthrough,
+        @CustomType.Parameter("celExpression") @Nullable CaPoolIssuancePolicyIdentityConstraintsCelExpression celExpression) {
         this.allowSubjectAltNamesPassthrough = allowSubjectAltNamesPassthrough;
         this.allowSubjectPassthrough = allowSubjectPassthrough;
         this.celExpression = celExpression;

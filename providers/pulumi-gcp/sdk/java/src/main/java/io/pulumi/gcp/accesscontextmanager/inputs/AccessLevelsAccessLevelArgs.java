@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsAccessLevelBasicArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsAccessLevelCustomArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class AccessLevelsAccessLevelArgs extends io.pulumi.resources.Resou
      * Structure is documented below.
      * 
      */
-    @InputImport(name="basic")
+    @Import(name="basic")
       private final @Nullable Output<AccessLevelsAccessLevelBasicArgs> basic;
 
     public Output<AccessLevelsAccessLevelBasicArgs> getBasic() {
@@ -34,7 +34,7 @@ public final class AccessLevelsAccessLevelArgs extends io.pulumi.resources.Resou
      * Structure is documented below.
      * 
      */
-    @InputImport(name="custom")
+    @Import(name="custom")
       private final @Nullable Output<AccessLevelsAccessLevelCustomArgs> custom;
 
     public Output<AccessLevelsAccessLevelCustomArgs> getCustom() {
@@ -45,7 +45,7 @@ public final class AccessLevelsAccessLevelArgs extends io.pulumi.resources.Resou
      * Description of the expression
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -58,7 +58,7 @@ public final class AccessLevelsAccessLevelArgs extends io.pulumi.resources.Resou
      * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -69,7 +69,7 @@ public final class AccessLevelsAccessLevelArgs extends io.pulumi.resources.Resou
      * Title for the expression, i.e. a short string describing its purpose.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final Output<String> title;
 
     public Output<String> getTitle() {

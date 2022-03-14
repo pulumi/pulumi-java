@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.projects.OrganizationPolicyArgs;
@@ -52,7 +52,7 @@ public class OrganizationPolicy extends io.pulumi.resources.CustomResource {
      * A boolean policy is a constraint that is either enforced or not. Structure is documented below.
      * 
      */
-    @OutputExport(name="booleanPolicy", type=OrganizationPolicyBooleanPolicy.class, parameters={})
+    @Export(name="booleanPolicy", type=OrganizationPolicyBooleanPolicy.class, parameters={})
     private Output</* @Nullable */ OrganizationPolicyBooleanPolicy> booleanPolicy;
 
     /**
@@ -66,7 +66,7 @@ public class OrganizationPolicy extends io.pulumi.resources.CustomResource {
      * The name of the Constraint the Policy is configuring, for example, `serviceuser.services`. Check out the [complete list of available constraints](https://cloud.google.com/resource-manager/docs/organization-policy/understanding-constraints#available_constraints).
      * 
      */
-    @OutputExport(name="constraint", type=String.class, parameters={})
+    @Export(name="constraint", type=String.class, parameters={})
     private Output<String> constraint;
 
     /**
@@ -80,7 +80,7 @@ public class OrganizationPolicy extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the organization policy. `etag` is used for optimistic concurrency control as a way to help prevent simultaneous updates of a policy from overwriting each other.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -94,7 +94,7 @@ public class OrganizationPolicy extends io.pulumi.resources.CustomResource {
      * A policy that can define specific values that are allowed or denied for the given constraint. It can also be used to allow or deny all values. Structure is documented below.
      * 
      */
-    @OutputExport(name="listPolicy", type=OrganizationPolicyListPolicy.class, parameters={})
+    @Export(name="listPolicy", type=OrganizationPolicyListPolicy.class, parameters={})
     private Output</* @Nullable */ OrganizationPolicyListPolicy> listPolicy;
 
     /**
@@ -108,7 +108,7 @@ public class OrganizationPolicy extends io.pulumi.resources.CustomResource {
      * The project id of the project to set the policy for.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -122,7 +122,7 @@ public class OrganizationPolicy extends io.pulumi.resources.CustomResource {
      * A restore policy is a constraint to restore the default policy. Structure is documented below.
      * 
      */
-    @OutputExport(name="restorePolicy", type=OrganizationPolicyRestorePolicy.class, parameters={})
+    @Export(name="restorePolicy", type=OrganizationPolicyRestorePolicy.class, parameters={})
     private Output</* @Nullable */ OrganizationPolicyRestorePolicy> restorePolicy;
 
     /**
@@ -136,7 +136,7 @@ public class OrganizationPolicy extends io.pulumi.resources.CustomResource {
      * (Computed) The timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds, representing when the variable was last updated. Example: "2016-10-09T12:33:37.578138407Z".
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -150,7 +150,7 @@ public class OrganizationPolicy extends io.pulumi.resources.CustomResource {
      * Version of the Policy. Default version is 0.
      * 
      */
-    @OutputExport(name="version", type=Integer.class, parameters={})
+    @Export(name="version", type=Integer.class, parameters={})
     private Output<Integer> version;
 
     /**

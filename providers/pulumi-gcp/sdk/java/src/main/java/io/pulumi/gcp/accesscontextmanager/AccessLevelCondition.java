@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.accesscontextmanager.AccessLevelConditionArgs;
@@ -50,7 +50,7 @@ public class AccessLevelCondition extends io.pulumi.resources.CustomResource {
      * The name of the Access Level to add this condition to.
      * 
      */
-    @OutputExport(name="accessLevel", type=String.class, parameters={})
+    @Export(name="accessLevel", type=String.class, parameters={})
     private Output<String> accessLevel;
 
     /**
@@ -67,7 +67,7 @@ public class AccessLevelCondition extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="devicePolicy", type=AccessLevelConditionDevicePolicy.class, parameters={})
+    @Export(name="devicePolicy", type=AccessLevelConditionDevicePolicy.class, parameters={})
     private Output</* @Nullable */ AccessLevelConditionDevicePolicy> devicePolicy;
 
     /**
@@ -93,7 +93,7 @@ public class AccessLevelCondition extends io.pulumi.resources.CustomResource {
      * If empty, all IP addresses are allowed.
      * 
      */
-    @OutputExport(name="ipSubnetworks", type=List.class, parameters={String.class})
+    @Export(name="ipSubnetworks", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> ipSubnetworks;
 
     /**
@@ -122,7 +122,7 @@ public class AccessLevelCondition extends io.pulumi.resources.CustomResource {
      * Formats: `user:{emailid}`, `serviceAccount:{emailid}`
      * 
      */
-    @OutputExport(name="members", type=List.class, parameters={String.class})
+    @Export(name="members", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> members;
 
     /**
@@ -144,7 +144,7 @@ public class AccessLevelCondition extends io.pulumi.resources.CustomResource {
      * the Condition overall to be satisfied. Defaults to false.
      * 
      */
-    @OutputExport(name="negate", type=Boolean.class, parameters={})
+    @Export(name="negate", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> negate;
 
     /**
@@ -162,7 +162,7 @@ public class AccessLevelCondition extends io.pulumi.resources.CustomResource {
      * Format: A valid ISO 3166-1 alpha-2 code.
      * 
      */
-    @OutputExport(name="regions", type=List.class, parameters={String.class})
+    @Export(name="regions", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> regions;
 
     /**
@@ -182,7 +182,7 @@ public class AccessLevelCondition extends io.pulumi.resources.CustomResource {
      * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
      * 
      */
-    @OutputExport(name="requiredAccessLevels", type=List.class, parameters={String.class})
+    @Export(name="requiredAccessLevels", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> requiredAccessLevels;
 
     /**

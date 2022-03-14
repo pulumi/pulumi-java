@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PacketMirroringFilterGetArgs extends io.pulumi.resources.Reso
      * destination (egress) IP in the IP header. Only IPv4 is supported.
      * 
      */
-    @InputImport(name="cidrRanges")
+    @Import(name="cidrRanges")
       private final @Nullable Output<List<String>> cidrRanges;
 
     public Output<List<String>> getCidrRanges() {
@@ -33,7 +33,7 @@ public final class PacketMirroringFilterGetArgs extends io.pulumi.resources.Reso
      * Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
      * 
      */
-    @InputImport(name="direction")
+    @Import(name="direction")
       private final @Nullable Output<String> direction;
 
     public Output<String> getDirection() {
@@ -45,7 +45,7 @@ public final class PacketMirroringFilterGetArgs extends io.pulumi.resources.Reso
      * Each value may be one of `tcp`, `udp`, and `icmp`.
      * 
      */
-    @InputImport(name="ipProtocols")
+    @Import(name="ipProtocols")
       private final @Nullable Output<List<String>> ipProtocols;
 
     public Output<List<String>> getIpProtocols() {

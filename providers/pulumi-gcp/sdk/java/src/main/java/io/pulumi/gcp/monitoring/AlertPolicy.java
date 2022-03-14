@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.monitoring.AlertPolicyArgs;
@@ -48,7 +48,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="alertStrategy", type=AlertPolicyAlertStrategy.class, parameters={})
+    @Export(name="alertStrategy", type=AlertPolicyAlertStrategy.class, parameters={})
     private Output</* @Nullable */ AlertPolicyAlertStrategy> alertStrategy;
 
     /**
@@ -65,7 +65,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
      * Possible values are `AND`, `OR`, and `AND_WITH_MATCHING_RESOURCE`.
      * 
      */
-    @OutputExport(name="combiner", type=String.class, parameters={})
+    @Export(name="combiner", type=String.class, parameters={})
     private Output<String> combiner;
 
     /**
@@ -85,7 +85,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="conditions", type=List.class, parameters={AlertPolicyCondition.class})
+    @Export(name="conditions", type=List.class, parameters={AlertPolicyCondition.class})
     private Output<List<AlertPolicyCondition>> conditions;
 
     /**
@@ -104,7 +104,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
      * ignored.
      * 
      */
-    @OutputExport(name="creationRecords", type=List.class, parameters={AlertPolicyCreationRecord.class})
+    @Export(name="creationRecords", type=List.class, parameters={AlertPolicyCreationRecord.class})
     private Output<List<AlertPolicyCreationRecord>> creationRecords;
 
     /**
@@ -123,7 +123,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
      * policy.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -146,7 +146,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="documentation", type=AlertPolicyDocumentation.class, parameters={})
+    @Export(name="documentation", type=AlertPolicyDocumentation.class, parameters={})
     private Output</* @Nullable */ AlertPolicyDocumentation> documentation;
 
     /**
@@ -165,7 +165,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
      * Whether or not the policy is enabled. The default is true.
      * 
      */
-    @OutputExport(name="enabled", type=Boolean.class, parameters={})
+    @Export(name="enabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enabled;
 
     /**
@@ -185,7 +185,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
      * policy.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -211,7 +211,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
      * `projects/[PROJECT_ID]/notificationChannels/[CHANNEL_ID]`
      * 
      */
-    @OutputExport(name="notificationChannels", type=List.class, parameters={String.class})
+    @Export(name="notificationChannels", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> notificationChannels;
 
     /**
@@ -232,7 +232,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -251,7 +251,7 @@ public class AlertPolicy extends io.pulumi.resources.CustomResource {
      * must begin with a letter.
      * 
      */
-    @OutputExport(name="userLabels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="userLabels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> userLabels;
 
     /**

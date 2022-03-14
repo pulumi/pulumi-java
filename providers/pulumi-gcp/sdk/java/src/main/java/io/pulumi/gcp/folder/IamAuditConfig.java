@@ -4,7 +4,7 @@
 package io.pulumi.gcp.folder;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.folder.IamAuditConfigArgs;
@@ -20,7 +20,7 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
      * The configuration for logging of each type of permission. This can be specified multiple times.
      * 
      */
-    @OutputExport(name="auditLogConfigs", type=List.class, parameters={IamAuditConfigAuditLogConfig.class})
+    @Export(name="auditLogConfigs", type=List.class, parameters={IamAuditConfigAuditLogConfig.class})
     private Output<List<IamAuditConfigAuditLogConfig>> auditLogConfigs;
 
     /**
@@ -34,7 +34,7 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
      * The etag of iam policy
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -44,7 +44,7 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="folder", type=String.class, parameters={})
+    @Export(name="folder", type=String.class, parameters={})
     private Output<String> folder;
 
     public Output<String> getFolder() {
@@ -54,7 +54,7 @@ public class IamAuditConfig extends io.pulumi.resources.CustomResource {
      * Service which will be enabled for audit logging. The special value allServices covers all services.
      * 
      */
-    @OutputExport(name="service", type=String.class, parameters={})
+    @Export(name="service", type=String.class, parameters={})
     private Output<String> service;
 
     /**

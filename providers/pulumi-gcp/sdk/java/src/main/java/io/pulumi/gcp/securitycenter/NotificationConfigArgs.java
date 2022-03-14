@@ -4,7 +4,7 @@
 package io.pulumi.gcp.securitycenter;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.securitycenter.inputs.NotificationConfigStreamingConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * This must be unique within the organization.
      * 
      */
-    @InputImport(name="configId", required=true)
+    @Import(name="configId", required=true)
       private final Output<String> configId;
 
     public Output<String> getConfigId() {
@@ -30,7 +30,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * The description of the notification config (max of 1024 characters).
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * Config lives in.
      * 
      */
-    @InputImport(name="organization", required=true)
+    @Import(name="organization", required=true)
       private final Output<String> organization;
 
     public Output<String> getOrganization() {
@@ -54,7 +54,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * "projects/[project_id]/topics/[topic]".
      * 
      */
-    @InputImport(name="pubsubTopic", required=true)
+    @Import(name="pubsubTopic", required=true)
       private final Output<String> pubsubTopic;
 
     public Output<String> getPubsubTopic() {
@@ -66,7 +66,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    @InputImport(name="streamingConfig", required=true)
+    @Import(name="streamingConfig", required=true)
       private final Output<NotificationConfigStreamingConfigArgs> streamingConfig;
 
     public Output<NotificationConfigStreamingConfigArgs> getStreamingConfig() {

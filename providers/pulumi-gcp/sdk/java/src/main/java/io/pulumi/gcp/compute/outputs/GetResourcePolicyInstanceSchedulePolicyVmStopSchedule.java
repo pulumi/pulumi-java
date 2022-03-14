@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetResourcePolicyInstanceSchedulePolicyVmStopSchedule {
     private final String schedule;
 
-    @OutputCustomType.Constructor
-    private GetResourcePolicyInstanceSchedulePolicyVmStopSchedule(@OutputCustomType.Parameter("schedule") String schedule) {
+    @CustomType.Constructor
+    private GetResourcePolicyInstanceSchedulePolicyVmStopSchedule(@CustomType.Parameter("schedule") String schedule) {
         this.schedule = schedule;
     }
 

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ImageRawDisk {
     /**
      * The format used to encode and transmit the block device, which
@@ -35,11 +35,11 @@ public final class ImageRawDisk {
      */
     private final String source;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ImageRawDisk(
-        @OutputCustomType.Parameter("containerType") @Nullable String containerType,
-        @OutputCustomType.Parameter("sha1") @Nullable String sha1,
-        @OutputCustomType.Parameter("source") String source) {
+        @CustomType.Parameter("containerType") @Nullable String containerType,
+        @CustomType.Parameter("sha1") @Nullable String sha1,
+        @CustomType.Parameter("source") String source) {
         this.containerType = containerType;
         this.sha1 = sha1;
         this.source = source;

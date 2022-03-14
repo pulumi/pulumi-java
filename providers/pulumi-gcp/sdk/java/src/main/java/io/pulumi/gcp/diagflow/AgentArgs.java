@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      *   Possible values are `API_VERSION_V1`, `API_VERSION_V2`, and `API_VERSION_V2_BETA_1`.
      * 
      */
-    @InputImport(name="apiVersion")
+    @Import(name="apiVersion")
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
@@ -40,7 +40,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * from the API will be shown in the [avatarUriBackend] field.
      * 
      */
-    @InputImport(name="avatarUri")
+    @Import(name="avatarUri")
       private final @Nullable Output<String> avatarUri;
 
     public Output<String> getAvatarUri() {
@@ -55,7 +55,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * default of 0.3 is used.
      * 
      */
-    @InputImport(name="classificationThreshold")
+    @Import(name="classificationThreshold")
       private final @Nullable Output<Double> classificationThreshold;
 
     public Output<Double> getClassificationThreshold() {
@@ -67,7 +67,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * for a list of the currently supported language codes. This field cannot be updated after creation.
      * 
      */
-    @InputImport(name="defaultLanguageCode", required=true)
+    @Import(name="defaultLanguageCode", required=true)
       private final Output<String> defaultLanguageCode;
 
     public Output<String> getDefaultLanguageCode() {
@@ -78,7 +78,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * The description of this agent. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -89,7 +89,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * The name of this agent.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -100,7 +100,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * Determines whether this agent should log conversation queries.
      * 
      */
-    @InputImport(name="enableLogging")
+    @Import(name="enableLogging")
       private final @Nullable Output<Boolean> enableLogging;
 
     public Output<Boolean> getEnableLogging() {
@@ -116,7 +116,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      *   Possible values are `MATCH_MODE_HYBRID` and `MATCH_MODE_ML_ONLY`.
      * 
      */
-    @InputImport(name="matchMode")
+    @Import(name="matchMode")
       private final @Nullable Output<String> matchMode;
 
     public Output<String> getMatchMode() {
@@ -128,7 +128,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -139,7 +139,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * The list of all languages supported by this agent (except for the defaultLanguageCode).
      * 
      */
-    @InputImport(name="supportedLanguageCodes")
+    @Import(name="supportedLanguageCodes")
       private final @Nullable Output<List<String>> supportedLanguageCodes;
 
     public Output<List<String>> getSupportedLanguageCodes() {
@@ -155,7 +155,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      *   the the provider state and Dialogflow if the agent tier is changed outside of the provider.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<String> tier;
 
     public Output<String> getTier() {
@@ -167,7 +167,7 @@ public final class AgentArgs extends io.pulumi.resources.ResourceArgs {
      * Europe/Paris.
      * 
      */
-    @InputImport(name="timeZone", required=true)
+    @Import(name="timeZone", required=true)
       private final Output<String> timeZone;
 
     public Output<String> getTimeZone() {

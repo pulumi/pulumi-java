@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
      * be based on the time of the execution of the last run of the JobTrigger.
      * 
      */
-    @InputImport(name="enableAutoPopulationOfTimespanConfig")
+    @Import(name="enableAutoPopulationOfTimespanConfig")
       private final @Nullable Output<Boolean> enableAutoPopulationOfTimespanConfig;
 
     public Output<Boolean> getEnableAutoPopulationOfTimespanConfig() {
@@ -33,7 +33,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
      * Exclude files or rows newer than this value. If set to zero, no upper time limit is applied.
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
@@ -44,7 +44,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
      * Exclude files or rows older than this value.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
@@ -56,7 +56,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="timestampField", required=true)
+    @Import(name="timestampField", required=true)
       private final Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs> timestampField;
 
     public Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldArgs> getTimestampField() {

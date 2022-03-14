@@ -3,23 +3,23 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceTraffic {
     private final Boolean latestRevision;
     private final Integer percent;
     private final String revisionName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceTraffic(
-        @OutputCustomType.Parameter("latestRevision") Boolean latestRevision,
-        @OutputCustomType.Parameter("percent") Integer percent,
-        @OutputCustomType.Parameter("revisionName") String revisionName) {
+        @CustomType.Parameter("latestRevision") Boolean latestRevision,
+        @CustomType.Parameter("percent") Integer percent,
+        @CustomType.Parameter("revisionName") String revisionName) {
         this.latestRevision = latestRevision;
         this.percent = percent;
         this.revisionName = revisionName;

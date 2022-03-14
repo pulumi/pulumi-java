@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerGithubPush {
     /**
      * Regex of branches to match.  Specify only one of branch or tag.
@@ -28,11 +28,11 @@ public final class TriggerGithubPush {
      */
     private final @Nullable String tag;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerGithubPush(
-        @OutputCustomType.Parameter("branch") @Nullable String branch,
-        @OutputCustomType.Parameter("invertRegex") @Nullable Boolean invertRegex,
-        @OutputCustomType.Parameter("tag") @Nullable String tag) {
+        @CustomType.Parameter("branch") @Nullable String branch,
+        @CustomType.Parameter("invertRegex") @Nullable Boolean invertRegex,
+        @CustomType.Parameter("tag") @Nullable String tag) {
         this.branch = branch;
         this.invertRegex = invertRegex;
         this.tag = tag;

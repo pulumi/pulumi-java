@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateSpecVolumeSecret;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTemplateSpecVolume {
     /**
      * Volume's name.
@@ -24,10 +24,10 @@ public final class ServiceTemplateSpecVolume {
      */
     private final ServiceTemplateSpecVolumeSecret secret;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTemplateSpecVolume(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("secret") ServiceTemplateSpecVolumeSecret secret) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("secret") ServiceTemplateSpecVolumeSecret secret) {
         this.name = name;
         this.secret = secret;
     }

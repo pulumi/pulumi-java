@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegionAutoscalerAutoscalingPolicyScalingSchedule {
     /**
      * An optional description of this resource.
@@ -49,15 +49,15 @@ public final class RegionAutoscalerAutoscalingPolicyScalingSchedule {
      */
     private final @Nullable String timeZone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionAutoscalerAutoscalingPolicyScalingSchedule(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("disabled") @Nullable Boolean disabled,
-        @OutputCustomType.Parameter("durationSec") Integer durationSec,
-        @OutputCustomType.Parameter("minRequiredReplicas") Integer minRequiredReplicas,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("schedule") String schedule,
-        @OutputCustomType.Parameter("timeZone") @Nullable String timeZone) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("disabled") @Nullable Boolean disabled,
+        @CustomType.Parameter("durationSec") Integer durationSec,
+        @CustomType.Parameter("minRequiredReplicas") Integer minRequiredReplicas,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("schedule") String schedule,
+        @CustomType.Parameter("timeZone") @Nullable String timeZone) {
         this.description = description;
         this.disabled = disabled;
         this.durationSec = durationSec;

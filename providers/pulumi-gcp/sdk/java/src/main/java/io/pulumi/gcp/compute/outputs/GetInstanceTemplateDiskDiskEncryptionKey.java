@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceTemplateDiskDiskEncryptionKey {
     /**
      * The self link of the encryption key that is stored in Google Cloud KMS
@@ -15,8 +15,8 @@ public final class GetInstanceTemplateDiskDiskEncryptionKey {
      */
     private final String kmsKeySelfLink;
 
-    @OutputCustomType.Constructor
-    private GetInstanceTemplateDiskDiskEncryptionKey(@OutputCustomType.Parameter("kmsKeySelfLink") String kmsKeySelfLink) {
+    @CustomType.Constructor
+    private GetInstanceTemplateDiskDiskEncryptionKey(@CustomType.Parameter("kmsKeySelfLink") String kmsKeySelfLink) {
         this.kmsKeySelfLink = kmsKeySelfLink;
     }
 

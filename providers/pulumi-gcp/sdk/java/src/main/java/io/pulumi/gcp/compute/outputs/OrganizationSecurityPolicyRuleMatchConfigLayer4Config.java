@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OrganizationSecurityPolicyRuleMatchConfigLayer4Config {
     /**
      * The IP protocol to which this rule applies. The protocol
@@ -31,10 +31,10 @@ public final class OrganizationSecurityPolicyRuleMatchConfigLayer4Config {
      */
     private final @Nullable List<String> ports;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OrganizationSecurityPolicyRuleMatchConfigLayer4Config(
-        @OutputCustomType.Parameter("ipProtocol") String ipProtocol,
-        @OutputCustomType.Parameter("ports") @Nullable List<String> ports) {
+        @CustomType.Parameter("ipProtocol") String ipProtocol,
+        @CustomType.Parameter("ports") @Nullable List<String> ports) {
         this.ipProtocol = ipProtocol;
         this.ports = ports;
     }

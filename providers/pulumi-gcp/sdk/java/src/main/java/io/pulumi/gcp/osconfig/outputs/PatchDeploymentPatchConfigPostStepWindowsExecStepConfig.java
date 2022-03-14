@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PatchDeploymentPatchConfigPostStepWindowsExecStepConfig {
     /**
      * Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
@@ -38,12 +38,12 @@ public final class PatchDeploymentPatchConfigPostStepWindowsExecStepConfig {
      */
     private final @Nullable String localPath;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PatchDeploymentPatchConfigPostStepWindowsExecStepConfig(
-        @OutputCustomType.Parameter("allowedSuccessCodes") @Nullable List<Integer> allowedSuccessCodes,
-        @OutputCustomType.Parameter("gcsObject") @Nullable PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject gcsObject,
-        @OutputCustomType.Parameter("interpreter") @Nullable String interpreter,
-        @OutputCustomType.Parameter("localPath") @Nullable String localPath) {
+        @CustomType.Parameter("allowedSuccessCodes") @Nullable List<Integer> allowedSuccessCodes,
+        @CustomType.Parameter("gcsObject") @Nullable PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject gcsObject,
+        @CustomType.Parameter("interpreter") @Nullable String interpreter,
+        @CustomType.Parameter("localPath") @Nullable String localPath) {
         this.allowedSuccessCodes = allowedSuccessCodes;
         this.gcsObject = gcsObject;
         this.interpreter = interpreter;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.container.RegistryArgs;
@@ -30,7 +30,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="bucketSelfLink", type=String.class, parameters={})
+    @Export(name="bucketSelfLink", type=String.class, parameters={})
     private Output<String> bucketSelfLink;
 
     /**
@@ -44,7 +44,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The location of the registry. One of `ASIA`, `EU`, `US` or not specified. See [the official documentation](https://cloud.google.com/container-registry/docs/pushing-and-pulling#pushing_an_image_to_a_registry) for more information on registry locations.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -58,7 +58,7 @@ public class Registry extends io.pulumi.resources.CustomResource {
      * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

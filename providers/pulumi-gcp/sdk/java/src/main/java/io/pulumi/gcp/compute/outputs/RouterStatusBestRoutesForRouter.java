@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RouterStatusBestRoutesForRouter {
     private final String description;
     private final String destRange;
@@ -41,23 +41,23 @@ public final class RouterStatusBestRoutesForRouter {
     private final String selfLink;
     private final List<String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RouterStatusBestRoutesForRouter(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("destRange") String destRange,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("nextHopGateway") String nextHopGateway,
-        @OutputCustomType.Parameter("nextHopIlb") String nextHopIlb,
-        @OutputCustomType.Parameter("nextHopInstance") String nextHopInstance,
-        @OutputCustomType.Parameter("nextHopInstanceZone") String nextHopInstanceZone,
-        @OutputCustomType.Parameter("nextHopIp") String nextHopIp,
-        @OutputCustomType.Parameter("nextHopNetwork") String nextHopNetwork,
-        @OutputCustomType.Parameter("nextHopVpnTunnel") String nextHopVpnTunnel,
-        @OutputCustomType.Parameter("priority") Integer priority,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("tags") List<String> tags) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("destRange") String destRange,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("nextHopGateway") String nextHopGateway,
+        @CustomType.Parameter("nextHopIlb") String nextHopIlb,
+        @CustomType.Parameter("nextHopInstance") String nextHopInstance,
+        @CustomType.Parameter("nextHopInstanceZone") String nextHopInstanceZone,
+        @CustomType.Parameter("nextHopIp") String nextHopIp,
+        @CustomType.Parameter("nextHopNetwork") String nextHopNetwork,
+        @CustomType.Parameter("nextHopVpnTunnel") String nextHopVpnTunnel,
+        @CustomType.Parameter("priority") Integer priority,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("tags") List<String> tags) {
         this.description = description;
         this.destRange = destRange;
         this.name = name;

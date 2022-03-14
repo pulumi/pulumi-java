@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigquery.inputs.TableExternalDataConfigurationCsvOptionsGetArgs;
 import io.pulumi.gcp.bigquery.inputs.TableExternalDataConfigurationGoogleSheetsOptionsGetArgs;
 import io.pulumi.gcp.bigquery.inputs.TableExternalDataConfigurationHivePartitioningOptionsGetArgs;
@@ -25,7 +25,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
      *   and format of the table.
      * 
      */
-    @InputImport(name="autodetect", required=true)
+    @Import(name="autodetect", required=true)
       private final Output<Boolean> autodetect;
 
     public Output<Boolean> getAutodetect() {
@@ -37,7 +37,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
      * Valid values are "NONE" or "GZIP".
      * 
      */
-    @InputImport(name="compression")
+    @Import(name="compression")
       private final @Nullable Output<String> compression;
 
     public Output<String> getCompression() {
@@ -49,7 +49,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
      * `source_format` is set to "CSV". Structure is documented below.
      * 
      */
-    @InputImport(name="csvOptions")
+    @Import(name="csvOptions")
       private final @Nullable Output<TableExternalDataConfigurationCsvOptionsGetArgs> csvOptions;
 
     public Output<TableExternalDataConfigurationCsvOptionsGetArgs> getCsvOptions() {
@@ -62,7 +62,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
      * documented below.
      * 
      */
-    @InputImport(name="googleSheetsOptions")
+    @Import(name="googleSheetsOptions")
       private final @Nullable Output<TableExternalDataConfigurationGoogleSheetsOptionsGetArgs> googleSheetsOptions;
 
     public Output<TableExternalDataConfigurationGoogleSheetsOptionsGetArgs> getGoogleSheetsOptions() {
@@ -76,7 +76,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
      * an invalid specification. Structure is documented below.
      * 
      */
-    @InputImport(name="hivePartitioningOptions")
+    @Import(name="hivePartitioningOptions")
       private final @Nullable Output<TableExternalDataConfigurationHivePartitioningOptionsGetArgs> hivePartitioningOptions;
 
     public Output<TableExternalDataConfigurationHivePartitioningOptionsGetArgs> getHivePartitioningOptions() {
@@ -92,7 +92,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
      * The default value is false.
      * 
      */
-    @InputImport(name="ignoreUnknownValues")
+    @Import(name="ignoreUnknownValues")
       private final @Nullable Output<Boolean> ignoreUnknownValues;
 
     public Output<Boolean> getIgnoreUnknownValues() {
@@ -104,7 +104,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
      * BigQuery can ignore when reading data.
      * 
      */
-    @InputImport(name="maxBadRecords")
+    @Import(name="maxBadRecords")
       private final @Nullable Output<Integer> maxBadRecords;
 
     public Output<Integer> getMaxBadRecords() {
@@ -125,7 +125,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
      * `google_bigquery_table.schema`
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Output<String> schema;
 
     public Output<String> getSchema() {
@@ -140,7 +140,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
      * "https://www.googleapis.com/auth/drive.readonly".
      * 
      */
-    @InputImport(name="sourceFormat", required=true)
+    @Import(name="sourceFormat", required=true)
       private final Output<String> sourceFormat;
 
     public Output<String> getSourceFormat() {
@@ -152,7 +152,7 @@ public final class TableExternalDataConfigurationGetArgs extends io.pulumi.resou
      * your data in Google Cloud.
      * 
      */
-    @InputImport(name="sourceUris", required=true)
+    @Import(name="sourceUris", required=true)
       private final Output<List<String>> sourceUris;
 
     public Output<List<String>> getSourceUris() {

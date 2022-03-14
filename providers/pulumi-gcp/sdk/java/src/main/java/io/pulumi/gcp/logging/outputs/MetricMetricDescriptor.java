@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.logging.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.logging.outputs.MetricMetricDescriptorLabel;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetricMetricDescriptor {
     /**
      * A concise name for the metric, which can be displayed in user interfaces. Use sentence case
@@ -52,13 +52,13 @@ public final class MetricMetricDescriptor {
      */
     private final String valueType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricMetricDescriptor(
-        @OutputCustomType.Parameter("displayName") @Nullable String displayName,
-        @OutputCustomType.Parameter("labels") @Nullable List<MetricMetricDescriptorLabel> labels,
-        @OutputCustomType.Parameter("metricKind") String metricKind,
-        @OutputCustomType.Parameter("unit") @Nullable String unit,
-        @OutputCustomType.Parameter("valueType") String valueType) {
+        @CustomType.Parameter("displayName") @Nullable String displayName,
+        @CustomType.Parameter("labels") @Nullable List<MetricMetricDescriptorLabel> labels,
+        @CustomType.Parameter("metricKind") String metricKind,
+        @CustomType.Parameter("unit") @Nullable String unit,
+        @CustomType.Parameter("valueType") String valueType) {
         this.displayName = displayName;
         this.labels = labels;
         this.metricKind = metricKind;

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.PacketMirroringMirroredResourcesInstance;
 import io.pulumi.gcp.compute.outputs.PacketMirroringMirroredResourcesSubnetwork;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PacketMirroringMirroredResources {
     /**
      * All the listed instances will be mirrored.  Specify at most 50.
@@ -31,11 +31,11 @@ public final class PacketMirroringMirroredResources {
      */
     private final @Nullable List<String> tags;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PacketMirroringMirroredResources(
-        @OutputCustomType.Parameter("instances") @Nullable List<PacketMirroringMirroredResourcesInstance> instances,
-        @OutputCustomType.Parameter("subnetworks") @Nullable List<PacketMirroringMirroredResourcesSubnetwork> subnetworks,
-        @OutputCustomType.Parameter("tags") @Nullable List<String> tags) {
+        @CustomType.Parameter("instances") @Nullable List<PacketMirroringMirroredResourcesInstance> instances,
+        @CustomType.Parameter("subnetworks") @Nullable List<PacketMirroringMirroredResourcesSubnetwork> subnetworks,
+        @CustomType.Parameter("tags") @Nullable List<String> tags) {
         this.instances = instances;
         this.subnetworks = subnetworks;
         this.tags = tags;

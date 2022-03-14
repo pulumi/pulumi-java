@@ -4,7 +4,7 @@
 package io.pulumi.gcp.billing.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class AccountIamPolicyState extends io.pulumi.resources.ResourceArg
 
     public static final AccountIamPolicyState Empty = new AccountIamPolicyState();
 
-    @InputImport(name="billingAccountId")
+    @Import(name="billingAccountId")
       private final @Nullable Output<String> billingAccountId;
 
     public Output<String> getBillingAccountId() {
         return this.billingAccountId == null ? Output.empty() : this.billingAccountId;
     }
 
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="policyData")
+    @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
     public Output<String> getPolicyData() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.containeranalysis;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.containeranalysis.inputs.NoteAttestationAuthorityArgs;
 import io.pulumi.gcp.containeranalysis.inputs.NoteRelatedUrlArgs;
 import java.lang.String;
@@ -30,7 +30,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="attestationAuthority", required=true)
+    @Import(name="attestationAuthority", required=true)
       private final Output<NoteAttestationAuthorityArgs> attestationAuthority;
 
     public Output<NoteAttestationAuthorityArgs> getAttestationAuthority() {
@@ -41,7 +41,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * Time of expiration for this note. Leave empty if note does not expire.
      * 
      */
-    @InputImport(name="expirationTime")
+    @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
     public Output<String> getExpirationTime() {
@@ -52,7 +52,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A detailed description of the note
      * 
      */
-    @InputImport(name="longDescription")
+    @Import(name="longDescription")
       private final @Nullable Output<String> longDescription;
 
     public Output<String> getLongDescription() {
@@ -63,7 +63,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the note.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -75,7 +75,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -86,7 +86,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * Names of other notes related to this note.
      * 
      */
-    @InputImport(name="relatedNoteNames")
+    @Import(name="relatedNoteNames")
       private final @Nullable Output<List<String>> relatedNoteNames;
 
     public Output<List<String>> getRelatedNoteNames() {
@@ -98,7 +98,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="relatedUrls")
+    @Import(name="relatedUrls")
       private final @Nullable Output<List<NoteRelatedUrlArgs>> relatedUrls;
 
     public Output<List<NoteRelatedUrlArgs>> getRelatedUrls() {
@@ -109,7 +109,7 @@ public final class NoteArgs extends io.pulumi.resources.ResourceArgs {
      * A one sentence description of the note.
      * 
      */
-    @InputImport(name="shortDescription")
+    @Import(name="shortDescription")
       private final @Nullable Output<String> shortDescription;
 
     public Output<String> getShortDescription() {

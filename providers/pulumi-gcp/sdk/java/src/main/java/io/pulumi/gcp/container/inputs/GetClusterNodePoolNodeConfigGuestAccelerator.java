@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,21 +13,21 @@ public final class GetClusterNodePoolNodeConfigGuestAccelerator extends io.pulum
 
     public static final GetClusterNodePoolNodeConfigGuestAccelerator Empty = new GetClusterNodePoolNodeConfigGuestAccelerator();
 
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final Integer count;
 
     public Integer getCount() {
         return this.count;
     }
 
-    @InputImport(name="gpuPartitionSize", required=true)
+    @Import(name="gpuPartitionSize", required=true)
       private final String gpuPartitionSize;
 
     public String getGpuPartitionSize() {
         return this.gpuPartitionSize;
     }
 
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

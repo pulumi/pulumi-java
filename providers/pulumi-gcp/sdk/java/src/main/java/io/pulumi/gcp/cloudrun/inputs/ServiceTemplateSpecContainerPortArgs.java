@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ServiceTemplateSpecContainerPortArgs extends io.pulumi.resour
      * Port number.
      * 
      */
-    @InputImport(name="containerPort", required=true)
+    @Import(name="containerPort", required=true)
       private final Output<Integer> containerPort;
 
     public Output<Integer> getContainerPort() {
@@ -30,7 +30,7 @@ public final class ServiceTemplateSpecContainerPortArgs extends io.pulumi.resour
      * Volume's name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -41,7 +41,7 @@ public final class ServiceTemplateSpecContainerPortArgs extends io.pulumi.resour
      * Protocol used on port. Defaults to TCP.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {

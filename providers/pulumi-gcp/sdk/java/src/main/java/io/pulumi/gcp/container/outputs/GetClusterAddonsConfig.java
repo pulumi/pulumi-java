@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.container.outputs.GetClusterAddonsConfigCloudrunConfig;
 import io.pulumi.gcp.container.outputs.GetClusterAddonsConfigConfigConnectorConfig;
 import io.pulumi.gcp.container.outputs.GetClusterAddonsConfigDnsCacheConfig;
@@ -17,7 +17,7 @@ import io.pulumi.gcp.container.outputs.GetClusterAddonsConfigNetworkPolicyConfig
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterAddonsConfig {
     private final List<GetClusterAddonsConfigCloudrunConfig> cloudrunConfigs;
     private final List<GetClusterAddonsConfigConfigConnectorConfig> configConnectorConfigs;
@@ -30,18 +30,18 @@ public final class GetClusterAddonsConfig {
     private final List<GetClusterAddonsConfigKalmConfig> kalmConfigs;
     private final List<GetClusterAddonsConfigNetworkPolicyConfig> networkPolicyConfigs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterAddonsConfig(
-        @OutputCustomType.Parameter("cloudrunConfigs") List<GetClusterAddonsConfigCloudrunConfig> cloudrunConfigs,
-        @OutputCustomType.Parameter("configConnectorConfigs") List<GetClusterAddonsConfigConfigConnectorConfig> configConnectorConfigs,
-        @OutputCustomType.Parameter("dnsCacheConfigs") List<GetClusterAddonsConfigDnsCacheConfig> dnsCacheConfigs,
-        @OutputCustomType.Parameter("gcePersistentDiskCsiDriverConfigs") List<GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig> gcePersistentDiskCsiDriverConfigs,
-        @OutputCustomType.Parameter("gcpFilestoreCsiDriverConfigs") List<GetClusterAddonsConfigGcpFilestoreCsiDriverConfig> gcpFilestoreCsiDriverConfigs,
-        @OutputCustomType.Parameter("horizontalPodAutoscalings") List<GetClusterAddonsConfigHorizontalPodAutoscaling> horizontalPodAutoscalings,
-        @OutputCustomType.Parameter("httpLoadBalancings") List<GetClusterAddonsConfigHttpLoadBalancing> httpLoadBalancings,
-        @OutputCustomType.Parameter("istioConfigs") List<GetClusterAddonsConfigIstioConfig> istioConfigs,
-        @OutputCustomType.Parameter("kalmConfigs") List<GetClusterAddonsConfigKalmConfig> kalmConfigs,
-        @OutputCustomType.Parameter("networkPolicyConfigs") List<GetClusterAddonsConfigNetworkPolicyConfig> networkPolicyConfigs) {
+        @CustomType.Parameter("cloudrunConfigs") List<GetClusterAddonsConfigCloudrunConfig> cloudrunConfigs,
+        @CustomType.Parameter("configConnectorConfigs") List<GetClusterAddonsConfigConfigConnectorConfig> configConnectorConfigs,
+        @CustomType.Parameter("dnsCacheConfigs") List<GetClusterAddonsConfigDnsCacheConfig> dnsCacheConfigs,
+        @CustomType.Parameter("gcePersistentDiskCsiDriverConfigs") List<GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig> gcePersistentDiskCsiDriverConfigs,
+        @CustomType.Parameter("gcpFilestoreCsiDriverConfigs") List<GetClusterAddonsConfigGcpFilestoreCsiDriverConfig> gcpFilestoreCsiDriverConfigs,
+        @CustomType.Parameter("horizontalPodAutoscalings") List<GetClusterAddonsConfigHorizontalPodAutoscaling> horizontalPodAutoscalings,
+        @CustomType.Parameter("httpLoadBalancings") List<GetClusterAddonsConfigHttpLoadBalancing> httpLoadBalancings,
+        @CustomType.Parameter("istioConfigs") List<GetClusterAddonsConfigIstioConfig> istioConfigs,
+        @CustomType.Parameter("kalmConfigs") List<GetClusterAddonsConfigKalmConfig> kalmConfigs,
+        @CustomType.Parameter("networkPolicyConfigs") List<GetClusterAddonsConfigNetworkPolicyConfig> networkPolicyConfigs) {
         this.cloudrunConfigs = cloudrunConfigs;
         this.configConnectorConfigs = configConnectorConfigs;
         this.dnsCacheConfigs = dnsCacheConfigs;

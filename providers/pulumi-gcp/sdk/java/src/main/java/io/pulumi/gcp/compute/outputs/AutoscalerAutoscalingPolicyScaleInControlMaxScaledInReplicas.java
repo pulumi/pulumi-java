@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas {
     /**
      * Specifies a fixed number of VM instances. This must be a positive
@@ -24,10 +24,10 @@ public final class AutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas 
      */
     private final @Nullable Integer percent;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas(
-        @OutputCustomType.Parameter("fixed") @Nullable Integer fixed,
-        @OutputCustomType.Parameter("percent") @Nullable Integer percent) {
+        @CustomType.Parameter("fixed") @Nullable Integer fixed,
+        @CustomType.Parameter("percent") @Nullable Integer percent) {
         this.fixed = fixed;
         this.percent = percent;
     }

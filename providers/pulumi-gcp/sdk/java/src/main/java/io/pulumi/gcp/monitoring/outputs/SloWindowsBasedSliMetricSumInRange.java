@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliMetricSumInRangeRange;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SloWindowsBasedSliMetricSumInRange {
     /**
      * Range of numerical values. The computed good_service
@@ -33,10 +33,10 @@ public final class SloWindowsBasedSliMetricSumInRange {
      */
     private final String timeSeries;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SloWindowsBasedSliMetricSumInRange(
-        @OutputCustomType.Parameter("range") SloWindowsBasedSliMetricSumInRangeRange range,
-        @OutputCustomType.Parameter("timeSeries") String timeSeries) {
+        @CustomType.Parameter("range") SloWindowsBasedSliMetricSumInRangeRange range,
+        @CustomType.Parameter("timeSeries") String timeSeries) {
         this.range = range;
         this.timeSeries = timeSeries;
     }

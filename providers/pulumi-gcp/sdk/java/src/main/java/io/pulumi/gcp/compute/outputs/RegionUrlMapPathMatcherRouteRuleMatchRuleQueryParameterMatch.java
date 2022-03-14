@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatch {
     /**
      * The queryParameterMatch matches if the value of the parameter exactly matches
@@ -41,12 +41,12 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatch 
      */
     private final @Nullable String regexMatch;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatch(
-        @OutputCustomType.Parameter("exactMatch") @Nullable String exactMatch,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("presentMatch") @Nullable Boolean presentMatch,
-        @OutputCustomType.Parameter("regexMatch") @Nullable String regexMatch) {
+        @CustomType.Parameter("exactMatch") @Nullable String exactMatch,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("presentMatch") @Nullable Boolean presentMatch,
+        @CustomType.Parameter("regexMatch") @Nullable String regexMatch) {
         this.exactMatch = exactMatch;
         this.name = name;
         this.presentMatch = presentMatch;

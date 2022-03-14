@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SloBasicSliAvailability {
     /**
      * Whether an availability SLI is enabled or not. Must be set to ` true. Defaults to  `true`.
@@ -17,8 +17,8 @@ public final class SloBasicSliAvailability {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private SloBasicSliAvailability(@OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
+    @CustomType.Constructor
+    private SloBasicSliAvailability(@CustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enabled = enabled;
     }
 

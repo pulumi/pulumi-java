@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class URLMapPathMatcherDefaultRouteActionRequestMirrorPolicyGetArgs
      * The full or partial URL to the BackendService resource being mirrored to.
      * 
      */
-    @InputImport(name="backendService", required=true)
+    @Import(name="backendService", required=true)
       private final Output<String> backendService;
 
     public Output<String> getBackendService() {

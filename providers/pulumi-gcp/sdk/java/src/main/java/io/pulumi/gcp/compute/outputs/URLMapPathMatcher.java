@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherDefaultRouteAction;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherDefaultUrlRedirect;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherHeaderAction;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class URLMapPathMatcher {
     /**
      * defaultRouteAction takes effect when none of the pathRules or routeRules match. The load balancer performs
@@ -83,16 +83,16 @@ public final class URLMapPathMatcher {
      */
     private final @Nullable List<URLMapPathMatcherRouteRule> routeRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private URLMapPathMatcher(
-        @OutputCustomType.Parameter("defaultRouteAction") @Nullable URLMapPathMatcherDefaultRouteAction defaultRouteAction,
-        @OutputCustomType.Parameter("defaultService") @Nullable String defaultService,
-        @OutputCustomType.Parameter("defaultUrlRedirect") @Nullable URLMapPathMatcherDefaultUrlRedirect defaultUrlRedirect,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("headerAction") @Nullable URLMapPathMatcherHeaderAction headerAction,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pathRules") @Nullable List<URLMapPathMatcherPathRule> pathRules,
-        @OutputCustomType.Parameter("routeRules") @Nullable List<URLMapPathMatcherRouteRule> routeRules) {
+        @CustomType.Parameter("defaultRouteAction") @Nullable URLMapPathMatcherDefaultRouteAction defaultRouteAction,
+        @CustomType.Parameter("defaultService") @Nullable String defaultService,
+        @CustomType.Parameter("defaultUrlRedirect") @Nullable URLMapPathMatcherDefaultUrlRedirect defaultUrlRedirect,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("headerAction") @Nullable URLMapPathMatcherHeaderAction headerAction,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pathRules") @Nullable List<URLMapPathMatcherPathRule> pathRules,
+        @CustomType.Parameter("routeRules") @Nullable List<URLMapPathMatcherRouteRule> routeRules) {
         this.defaultRouteAction = defaultRouteAction;
         this.defaultService = defaultService;
         this.defaultUrlRedirect = defaultUrlRedirect;

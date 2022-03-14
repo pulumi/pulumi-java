@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dns;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dns.inputs.ManagedZoneDnssecConfigArgs;
 import io.pulumi.gcp.dns.inputs.ManagedZoneForwardingConfigArgs;
 import io.pulumi.gcp.dns.inputs.ManagedZonePeeringConfigArgs;
@@ -25,7 +25,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * A textual description field. Defaults to 'Managed by Pulumi'.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -36,7 +36,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * The DNS name of this managed zone, for instance "example.com.".
      * 
      */
-    @InputImport(name="dnsName", required=true)
+    @Import(name="dnsName", required=true)
       private final Output<String> dnsName;
 
     public Output<String> getDnsName() {
@@ -48,7 +48,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="dnssecConfig")
+    @Import(name="dnssecConfig")
       private final @Nullable Output<ManagedZoneDnssecConfigArgs> dnssecConfig;
 
     public Output<ManagedZoneDnssecConfigArgs> getDnssecConfig() {
@@ -59,7 +59,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * Set this true to delete all records in the zone.
      * 
      */
-    @InputImport(name="forceDestroy")
+    @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
     public Output<Boolean> getForceDestroy() {
@@ -73,7 +73,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="forwardingConfig")
+    @Import(name="forwardingConfig")
       private final @Nullable Output<ManagedZoneForwardingConfigArgs> forwardingConfig;
 
     public Output<ManagedZoneForwardingConfigArgs> getForwardingConfig() {
@@ -84,7 +84,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * A set of key/value label pairs to assign to this ManagedZone.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -96,7 +96,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * Must be unique within the project.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -109,7 +109,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="peeringConfig")
+    @Import(name="peeringConfig")
       private final @Nullable Output<ManagedZonePeeringConfigArgs> peeringConfig;
 
     public Output<ManagedZonePeeringConfigArgs> getPeeringConfig() {
@@ -122,7 +122,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="privateVisibilityConfig")
+    @Import(name="privateVisibilityConfig")
       private final @Nullable Output<ManagedZonePrivateVisibilityConfigArgs> privateVisibilityConfig;
 
     public Output<ManagedZonePrivateVisibilityConfigArgs> getPrivateVisibilityConfig() {
@@ -134,7 +134,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -147,7 +147,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * to networks listed under `private_visibility_config`.
      * 
      */
-    @InputImport(name="reverseLookup")
+    @Import(name="reverseLookup")
       private final @Nullable Output<Boolean> reverseLookup;
 
     public Output<Boolean> getReverseLookup() {
@@ -159,7 +159,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="serviceDirectoryConfig")
+    @Import(name="serviceDirectoryConfig")
       private final @Nullable Output<ManagedZoneServiceDirectoryConfigArgs> serviceDirectoryConfig;
 
     public Output<ManagedZoneServiceDirectoryConfigArgs> getServiceDirectoryConfig() {
@@ -173,7 +173,7 @@ public final class ManagedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `private` and `public`.
      * 
      */
-    @InputImport(name="visibility")
+    @Import(name="visibility")
       private final @Nullable Output<String> visibility;
 
     public Output<String> getVisibility() {

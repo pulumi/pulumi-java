@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class AccessLevelConditionDevicePolicyOsConstraintGetArgs extends i
      * Format: "major.minor.patch" such as "10.5.301", "9.2.1".
      * 
      */
-    @InputImport(name="minimumVersion")
+    @Import(name="minimumVersion")
       private final @Nullable Output<String> minimumVersion;
 
     public Output<String> getMinimumVersion() {
@@ -32,7 +32,7 @@ public final class AccessLevelConditionDevicePolicyOsConstraintGetArgs extends i
      * Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, `DESKTOP_CHROME_OS`, `ANDROID`, and `IOS`.
      * 
      */
-    @InputImport(name="osType", required=true)
+    @Import(name="osType", required=true)
       private final Output<String> osType;
 
     public Output<String> getOsType() {

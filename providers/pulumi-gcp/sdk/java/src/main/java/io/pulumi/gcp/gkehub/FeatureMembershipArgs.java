@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
      * Config Management-specific spec. Structure is documented below.
      * 
      */
-    @InputImport(name="configmanagement", required=true)
+    @Import(name="configmanagement", required=true)
       private final Output<FeatureMembershipConfigmanagementArgs> configmanagement;
 
     public Output<FeatureMembershipConfigmanagementArgs> getConfigmanagement() {
@@ -30,7 +30,7 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
      * The name of the feature
      * 
      */
-    @InputImport(name="feature", required=true)
+    @Import(name="feature", required=true)
       private final Output<String> feature;
 
     public Output<String> getFeature() {
@@ -41,7 +41,7 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
      * The location of the feature
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -52,7 +52,7 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
      * The name of the membership
      * 
      */
-    @InputImport(name="membership", required=true)
+    @Import(name="membership", required=true)
       private final Output<String> membership;
 
     public Output<String> getMembership() {
@@ -63,7 +63,7 @@ public final class FeatureMembershipArgs extends io.pulumi.resources.ResourceArg
      * The project of the feature
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

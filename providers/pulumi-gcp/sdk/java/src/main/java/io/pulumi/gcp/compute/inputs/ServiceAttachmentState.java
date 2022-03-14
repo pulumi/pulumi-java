@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.ServiceAttachmentConnectedEndpointGetArgs;
 import io.pulumi.gcp.compute.inputs.ServiceAttachmentConsumerAcceptListGetArgs;
 import java.lang.Boolean;
@@ -22,7 +22,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * An array of the consumer forwarding rules connected to this service attachment.
      * 
      */
-    @InputImport(name="connectedEndpoints")
+    @Import(name="connectedEndpoints")
       private final @Nullable Output<List<ServiceAttachmentConnectedEndpointGetArgs>> connectedEndpoints;
 
     public Output<List<ServiceAttachmentConnectedEndpointGetArgs>> getConnectedEndpoints() {
@@ -34,7 +34,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * values include "ACCEPT_AUTOMATIC", "ACCEPT_MANUAL".
      * 
      */
-    @InputImport(name="connectionPreference")
+    @Import(name="connectionPreference")
       private final @Nullable Output<String> connectionPreference;
 
     public Output<String> getConnectionPreference() {
@@ -47,7 +47,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    @InputImport(name="consumerAcceptLists")
+    @Import(name="consumerAcceptLists")
       private final @Nullable Output<List<ServiceAttachmentConsumerAcceptListGetArgs>> consumerAcceptLists;
 
     public Output<List<ServiceAttachmentConsumerAcceptListGetArgs>> getConsumerAcceptLists() {
@@ -59,7 +59,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * attachment.
      * 
      */
-    @InputImport(name="consumerRejectLists")
+    @Import(name="consumerRejectLists")
       private final @Nullable Output<List<String>> consumerRejectLists;
 
     public Output<List<String>> getConsumerRejectLists() {
@@ -70,7 +70,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -83,7 +83,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * destination servers.
      * 
      */
-    @InputImport(name="enableProxyProtocol")
+    @Import(name="enableProxyProtocol")
       private final @Nullable Output<Boolean> enableProxyProtocol;
 
     public Output<Boolean> getEnableProxyProtocol() {
@@ -94,7 +94,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * Fingerprint of this resource. This field is used internally during updates of this resource.
      * 
      */
-    @InputImport(name="fingerprint")
+    @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
     public Output<String> getFingerprint() {
@@ -110,7 +110,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -121,7 +121,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * An array of subnets that is provided for NAT in this service attachment.
      * 
      */
-    @InputImport(name="natSubnets")
+    @Import(name="natSubnets")
       private final @Nullable Output<List<String>> natSubnets;
 
     public Output<List<String>> getNatSubnets() {
@@ -133,7 +133,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -144,7 +144,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * URL of the region where the resource resides.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -155,7 +155,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * The URI of the created resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -167,7 +167,7 @@ public final class ServiceAttachmentState extends io.pulumi.resources.ResourceAr
      * this service attachment.
      * 
      */
-    @InputImport(name="targetService")
+    @Import(name="targetService")
       private final @Nullable Output<String> targetService;
 
     public Output<String> getTargetService() {

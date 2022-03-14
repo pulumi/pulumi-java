@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig {
     /**
      * Count of cores of this accelerator.
@@ -25,10 +25,10 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig(
-        @OutputCustomType.Parameter("coreCount") @Nullable Integer coreCount,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("coreCount") @Nullable Integer coreCount,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.coreCount = coreCount;
         this.type = type;
     }

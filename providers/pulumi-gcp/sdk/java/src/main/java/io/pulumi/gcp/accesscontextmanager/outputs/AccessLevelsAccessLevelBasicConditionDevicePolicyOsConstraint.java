@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint {
     /**
      * The minimum allowed OS version. If not set, any version
@@ -25,10 +25,10 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint
      */
     private final String osType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint(
-        @OutputCustomType.Parameter("minimumVersion") @Nullable String minimumVersion,
-        @OutputCustomType.Parameter("osType") String osType) {
+        @CustomType.Parameter("minimumVersion") @Nullable String minimumVersion,
+        @CustomType.Parameter("osType") String osType) {
         this.minimumVersion = minimumVersion;
         this.osType = osType;
     }

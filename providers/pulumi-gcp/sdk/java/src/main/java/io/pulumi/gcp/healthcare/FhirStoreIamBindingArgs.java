@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.healthcare.inputs.FhirStoreIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
 
     public static final FhirStoreIamBindingArgs Empty = new FhirStoreIamBindingArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<FhirStoreIamBindingConditionArgs> condition;
 
     public Output<FhirStoreIamBindingConditionArgs> getCondition() {
@@ -30,14 +30,14 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
      * project setting will be used as a fallback.
      * 
      */
-    @InputImport(name="fhirStoreId", required=true)
+    @Import(name="fhirStoreId", required=true)
       private final Output<String> fhirStoreId;
 
     public Output<String> getFhirStoreId() {
         return this.fhirStoreId;
     }
 
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -50,7 +50,7 @@ public final class FhirStoreIamBindingArgs extends io.pulumi.resources.ResourceA
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class BucketObjectCustomerEncryptionArgs extends io.pulumi.resource
      * Encryption algorithm. Default: AES256
      * 
      */
-    @InputImport(name="encryptionAlgorithm")
+    @Import(name="encryptionAlgorithm")
       private final @Nullable Output<String> encryptionAlgorithm;
 
     public Output<String> getEncryptionAlgorithm() {
@@ -29,7 +29,7 @@ public final class BucketObjectCustomerEncryptionArgs extends io.pulumi.resource
      * Base64 encoded Customer-Supplied Encryption Key.
      * 
      */
-    @InputImport(name="encryptionKey", required=true)
+    @Import(name="encryptionKey", required=true)
       private final Output<String> encryptionKey;
 
     public Output<String> getEncryptionKey() {

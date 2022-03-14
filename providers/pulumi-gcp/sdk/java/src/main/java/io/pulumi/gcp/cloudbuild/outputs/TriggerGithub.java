@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerGithubPullRequest;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerGithubPush;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerGithub {
     /**
      * Name of the volume to mount.
@@ -39,12 +39,12 @@ public final class TriggerGithub {
      */
     private final @Nullable TriggerGithubPush push;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerGithub(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("owner") @Nullable String owner,
-        @OutputCustomType.Parameter("pullRequest") @Nullable TriggerGithubPullRequest pullRequest,
-        @OutputCustomType.Parameter("push") @Nullable TriggerGithubPush push) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("owner") @Nullable String owner,
+        @CustomType.Parameter("pullRequest") @Nullable TriggerGithubPullRequest pullRequest,
+        @CustomType.Parameter("push") @Nullable TriggerGithubPush push) {
         this.name = name;
         this.owner = owner;
         this.pullRequest = pullRequest;

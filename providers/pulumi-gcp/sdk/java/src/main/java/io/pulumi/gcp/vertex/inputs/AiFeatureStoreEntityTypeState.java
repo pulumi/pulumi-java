@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.vertex.inputs.AiFeatureStoreEntityTypeMonitoringConfigGetArgs;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
      * nine fractional digits.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -32,7 +32,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
      * Used to perform consistent read-modify-write updates.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -43,7 +43,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
      * The name of the Featurestore to use, in the format projects/{project}/locations/{location}/featurestores/{featurestore}.
      * 
      */
-    @InputImport(name="featurestore")
+    @Import(name="featurestore")
       private final @Nullable Output<String> featurestore;
 
     public Output<String> getFeaturestore() {
@@ -54,7 +54,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
      * A set of key/value label pairs to assign to this EntityType.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -67,7 +67,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="monitoringConfig")
+    @Import(name="monitoringConfig")
       private final @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig;
 
     public Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> getMonitoringConfig() {
@@ -78,7 +78,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
      * The name of the EntityType. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -90,7 +90,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
      * to nine fractional digits.
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

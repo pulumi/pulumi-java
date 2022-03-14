@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GuestPoliciesRecipeUpdateStepFileCopy {
     /**
      * The id of the relevant artifact in the recipe.
@@ -39,12 +39,12 @@ public final class GuestPoliciesRecipeUpdateStepFileCopy {
      */
     private final @Nullable String permissions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GuestPoliciesRecipeUpdateStepFileCopy(
-        @OutputCustomType.Parameter("artifactId") String artifactId,
-        @OutputCustomType.Parameter("destination") String destination,
-        @OutputCustomType.Parameter("overwrite") @Nullable Boolean overwrite,
-        @OutputCustomType.Parameter("permissions") @Nullable String permissions) {
+        @CustomType.Parameter("artifactId") String artifactId,
+        @CustomType.Parameter("destination") String destination,
+        @CustomType.Parameter("overwrite") @Nullable Boolean overwrite,
+        @CustomType.Parameter("permissions") @Nullable String permissions) {
         this.artifactId = artifactId;
         this.destination = destination;
         this.overwrite = overwrite;

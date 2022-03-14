@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetInstanceNetworkInterfaceIpv6AccessConfig extends io.pulumi
 
     public static final GetInstanceNetworkInterfaceIpv6AccessConfig Empty = new GetInstanceNetworkInterfaceIpv6AccessConfig();
 
-    @InputImport(name="externalIpv6", required=true)
+    @Import(name="externalIpv6", required=true)
       private final String externalIpv6;
 
     public String getExternalIpv6() {
         return this.externalIpv6;
     }
 
-    @InputImport(name="externalIpv6PrefixLength", required=true)
+    @Import(name="externalIpv6PrefixLength", required=true)
       private final String externalIpv6PrefixLength;
 
     public String getExternalIpv6PrefixLength() {
@@ -30,7 +30,7 @@ public final class GetInstanceNetworkInterfaceIpv6AccessConfig extends io.pulumi
      * The [networking tier][network-tier] used for configuring this instance. One of `PREMIUM` or `STANDARD`.
      * 
      */
-    @InputImport(name="networkTier", required=true)
+    @Import(name="networkTier", required=true)
       private final String networkTier;
 
     public String getNetworkTier() {
@@ -41,7 +41,7 @@ public final class GetInstanceNetworkInterfaceIpv6AccessConfig extends io.pulumi
      * The DNS domain name for the public PTR record.
      * 
      */
-    @InputImport(name="publicPtrDomainName", required=true)
+    @Import(name="publicPtrDomainName", required=true)
       private final String publicPtrDomainName;
 
     public String getPublicPtrDomainName() {

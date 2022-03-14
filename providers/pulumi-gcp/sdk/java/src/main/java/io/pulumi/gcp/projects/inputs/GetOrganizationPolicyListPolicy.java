@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.projects.inputs.GetOrganizationPolicyListPolicyAllow;
 import io.pulumi.gcp.projects.inputs.GetOrganizationPolicyListPolicyDeny;
 import java.lang.Boolean;
@@ -16,28 +16,28 @@ public final class GetOrganizationPolicyListPolicy extends io.pulumi.resources.I
 
     public static final GetOrganizationPolicyListPolicy Empty = new GetOrganizationPolicyListPolicy();
 
-    @InputImport(name="allows", required=true)
+    @Import(name="allows", required=true)
       private final List<GetOrganizationPolicyListPolicyAllow> allows;
 
     public List<GetOrganizationPolicyListPolicyAllow> getAllows() {
         return this.allows;
     }
 
-    @InputImport(name="denies", required=true)
+    @Import(name="denies", required=true)
       private final List<GetOrganizationPolicyListPolicyDeny> denies;
 
     public List<GetOrganizationPolicyListPolicyDeny> getDenies() {
         return this.denies;
     }
 
-    @InputImport(name="inheritFromParent", required=true)
+    @Import(name="inheritFromParent", required=true)
       private final Boolean inheritFromParent;
 
     public Boolean getInheritFromParent() {
         return this.inheritFromParent;
     }
 
-    @InputImport(name="suggestedValue", required=true)
+    @Import(name="suggestedValue", required=true)
       private final String suggestedValue;
 
     public String getSuggestedValue() {

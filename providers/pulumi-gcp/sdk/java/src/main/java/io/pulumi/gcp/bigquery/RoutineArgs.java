@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigquery.inputs.RoutineArgumentArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="arguments")
+    @Import(name="arguments")
       private final @Nullable Output<List<RoutineArgumentArgs>> arguments;
 
     public Output<List<RoutineArgumentArgs>> getArguments() {
@@ -32,7 +32,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the dataset containing this routine
      * 
      */
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
     public Output<String> getDatasetId() {
@@ -44,7 +44,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * If language=SQL, it is the substring inside (but excluding) the parentheses.
      * 
      */
-    @InputImport(name="definitionBody", required=true)
+    @Import(name="definitionBody", required=true)
       private final Output<String> definitionBody;
 
     public Output<String> getDefinitionBody() {
@@ -55,7 +55,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * The description of the routine if defined.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -67,7 +67,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `DETERMINISM_LEVEL_UNSPECIFIED`, `DETERMINISTIC`, and `NOT_DETERMINISTIC`.
      * 
      */
-    @InputImport(name="determinismLevel")
+    @Import(name="determinismLevel")
       private final @Nullable Output<String> determinismLevel;
 
     public Output<String> getDeterminismLevel() {
@@ -79,7 +79,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * imported JAVASCRIPT libraries.
      * 
      */
-    @InputImport(name="importedLibraries")
+    @Import(name="importedLibraries")
       private final @Nullable Output<List<String>> importedLibraries;
 
     public Output<List<String>> getImportedLibraries() {
@@ -91,7 +91,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `SQL` and `JAVASCRIPT`.
      * 
      */
-    @InputImport(name="language")
+    @Import(name="language")
       private final @Nullable Output<String> language;
 
     public Output<String> getLanguage() {
@@ -103,7 +103,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -117,7 +117,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * be cast to match the column types specificed in return table type, at query time.
      * 
      */
-    @InputImport(name="returnTableType")
+    @Import(name="returnTableType")
       private final @Nullable Output<String> returnTableType;
 
     public Output<String> getReturnTableType() {
@@ -136,7 +136,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * the schema as returned by the API.
      * 
      */
-    @InputImport(name="returnType")
+    @Import(name="returnType")
       private final @Nullable Output<String> returnType;
 
     public Output<String> getReturnType() {
@@ -147,7 +147,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * The ID of the the routine. The ID must contain only letters (a-z, A-Z), numbers (0-9), or underscores (_). The maximum length is 256 characters.
      * 
      */
-    @InputImport(name="routineId", required=true)
+    @Import(name="routineId", required=true)
       private final Output<String> routineId;
 
     public Output<String> getRoutineId() {
@@ -159,7 +159,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `SCALAR_FUNCTION`, `PROCEDURE`, and `TABLE_VALUED_FUNCTION`.
      * 
      */
-    @InputImport(name="routineType")
+    @Import(name="routineType")
       private final @Nullable Output<String> routineType;
 
     public Output<String> getRoutineType() {

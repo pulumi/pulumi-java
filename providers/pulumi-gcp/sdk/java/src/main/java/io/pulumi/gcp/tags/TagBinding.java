@@ -4,7 +4,7 @@
 package io.pulumi.gcp.tags;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.tags.TagBindingArgs;
@@ -42,7 +42,7 @@ public class TagBinding extends io.pulumi.resources.CustomResource {
      * The generated id for the TagBinding. This is a string of the form: 'tagBindings/{full-resource-name}/{tag-value-name}'
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -56,7 +56,7 @@ public class TagBinding extends io.pulumi.resources.CustomResource {
      * The full resource name of the resource the TagValue is bound to. E.g. //cloudresourcemanager.googleapis.com/projects/123
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**
@@ -70,7 +70,7 @@ public class TagBinding extends io.pulumi.resources.CustomResource {
      * The TagValue of the TagBinding. Must be of the form tagValues/456.
      * 
      */
-    @OutputExport(name="tagValue", type=String.class, parameters={})
+    @Export(name="tagValue", type=String.class, parameters={})
     private Output<String> tagValue;
 
     /**

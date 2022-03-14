@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.bigquery.outputs.JobQueryDefaultDataset;
 import io.pulumi.gcp.bigquery.outputs.JobQueryDestinationEncryptionConfiguration;
 import io.pulumi.gcp.bigquery.outputs.JobQueryDestinationTable;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobQuery {
     /**
      * If true and query uses legacy SQL dialect, allows the query to produce arbitrarily large result tables at a slight cost in performance.
@@ -138,25 +138,25 @@ public final class JobQuery {
      */
     private final @Nullable String writeDisposition;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobQuery(
-        @OutputCustomType.Parameter("allowLargeResults") @Nullable Boolean allowLargeResults,
-        @OutputCustomType.Parameter("createDisposition") @Nullable String createDisposition,
-        @OutputCustomType.Parameter("defaultDataset") @Nullable JobQueryDefaultDataset defaultDataset,
-        @OutputCustomType.Parameter("destinationEncryptionConfiguration") @Nullable JobQueryDestinationEncryptionConfiguration destinationEncryptionConfiguration,
-        @OutputCustomType.Parameter("destinationTable") @Nullable JobQueryDestinationTable destinationTable,
-        @OutputCustomType.Parameter("flattenResults") @Nullable Boolean flattenResults,
-        @OutputCustomType.Parameter("maximumBillingTier") @Nullable Integer maximumBillingTier,
-        @OutputCustomType.Parameter("maximumBytesBilled") @Nullable String maximumBytesBilled,
-        @OutputCustomType.Parameter("parameterMode") @Nullable String parameterMode,
-        @OutputCustomType.Parameter("priority") @Nullable String priority,
-        @OutputCustomType.Parameter("query") String query,
-        @OutputCustomType.Parameter("schemaUpdateOptions") @Nullable List<String> schemaUpdateOptions,
-        @OutputCustomType.Parameter("scriptOptions") @Nullable JobQueryScriptOptions scriptOptions,
-        @OutputCustomType.Parameter("useLegacySql") @Nullable Boolean useLegacySql,
-        @OutputCustomType.Parameter("useQueryCache") @Nullable Boolean useQueryCache,
-        @OutputCustomType.Parameter("userDefinedFunctionResources") @Nullable List<JobQueryUserDefinedFunctionResource> userDefinedFunctionResources,
-        @OutputCustomType.Parameter("writeDisposition") @Nullable String writeDisposition) {
+        @CustomType.Parameter("allowLargeResults") @Nullable Boolean allowLargeResults,
+        @CustomType.Parameter("createDisposition") @Nullable String createDisposition,
+        @CustomType.Parameter("defaultDataset") @Nullable JobQueryDefaultDataset defaultDataset,
+        @CustomType.Parameter("destinationEncryptionConfiguration") @Nullable JobQueryDestinationEncryptionConfiguration destinationEncryptionConfiguration,
+        @CustomType.Parameter("destinationTable") @Nullable JobQueryDestinationTable destinationTable,
+        @CustomType.Parameter("flattenResults") @Nullable Boolean flattenResults,
+        @CustomType.Parameter("maximumBillingTier") @Nullable Integer maximumBillingTier,
+        @CustomType.Parameter("maximumBytesBilled") @Nullable String maximumBytesBilled,
+        @CustomType.Parameter("parameterMode") @Nullable String parameterMode,
+        @CustomType.Parameter("priority") @Nullable String priority,
+        @CustomType.Parameter("query") String query,
+        @CustomType.Parameter("schemaUpdateOptions") @Nullable List<String> schemaUpdateOptions,
+        @CustomType.Parameter("scriptOptions") @Nullable JobQueryScriptOptions scriptOptions,
+        @CustomType.Parameter("useLegacySql") @Nullable Boolean useLegacySql,
+        @CustomType.Parameter("useQueryCache") @Nullable Boolean useQueryCache,
+        @CustomType.Parameter("userDefinedFunctionResources") @Nullable List<JobQueryUserDefinedFunctionResource> userDefinedFunctionResources,
+        @CustomType.Parameter("writeDisposition") @Nullable String writeDisposition) {
         this.allowLargeResults = allowLargeResults;
         this.createDisposition = createDisposition;
         this.defaultDataset = defaultDataset;

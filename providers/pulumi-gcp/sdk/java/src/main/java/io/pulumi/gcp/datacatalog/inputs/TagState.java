@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.datacatalog.inputs.TagFieldGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * `outer_column.inner_column`
      * 
      */
-    @InputImport(name="column")
+    @Import(name="column")
       private final @Nullable Output<String> column;
 
     public Output<String> getColumn() {
@@ -36,7 +36,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="fields")
+    @Import(name="fields")
       private final @Nullable Output<List<TagFieldGetArgs>> fields;
 
     public Output<List<TagFieldGetArgs>> getFields() {
@@ -50,7 +50,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * identifier. Note that this Tag may not actually be stored in the location in this name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -62,7 +62,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * all entries in that group.
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -75,7 +75,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * This field cannot be modified after creation.
      * 
      */
-    @InputImport(name="template")
+    @Import(name="template")
       private final @Nullable Output<String> template;
 
     public Output<String> getTemplate() {
@@ -86,7 +86,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
      * The display name of the tag template.
      * 
      */
-    @InputImport(name="templateDisplayname")
+    @Import(name="templateDisplayname")
       private final @Nullable Output<String> templateDisplayname;
 
     public Output<String> getTemplateDisplayname() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,21 +14,21 @@ public final class InstanceFromTemplateNetworkInterfaceAccessConfigArgs extends 
 
     public static final InstanceFromTemplateNetworkInterfaceAccessConfigArgs Empty = new InstanceFromTemplateNetworkInterfaceAccessConfigArgs();
 
-    @InputImport(name="natIp")
+    @Import(name="natIp")
       private final @Nullable Output<String> natIp;
 
     public Output<String> getNatIp() {
         return this.natIp == null ? Output.empty() : this.natIp;
     }
 
-    @InputImport(name="networkTier")
+    @Import(name="networkTier")
       private final @Nullable Output<String> networkTier;
 
     public Output<String> getNetworkTier() {
         return this.networkTier == null ? Output.empty() : this.networkTier;
     }
 
-    @InputImport(name="publicPtrDomainName")
+    @Import(name="publicPtrDomainName")
       private final @Nullable Output<String> publicPtrDomainName;
 
     public Output<String> getPublicPtrDomainName() {

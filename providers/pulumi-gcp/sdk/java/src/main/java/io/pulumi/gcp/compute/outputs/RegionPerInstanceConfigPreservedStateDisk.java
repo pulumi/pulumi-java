@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegionPerInstanceConfigPreservedStateDisk {
     /**
      * A value that prescribes what should happen to the stateful disk when the VM instance is deleted.
@@ -41,12 +41,12 @@ public final class RegionPerInstanceConfigPreservedStateDisk {
      */
     private final String source;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionPerInstanceConfigPreservedStateDisk(
-        @OutputCustomType.Parameter("deleteRule") @Nullable String deleteRule,
-        @OutputCustomType.Parameter("deviceName") String deviceName,
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("source") String source) {
+        @CustomType.Parameter("deleteRule") @Nullable String deleteRule,
+        @CustomType.Parameter("deviceName") String deviceName,
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("source") String source) {
         this.deleteRule = deleteRule;
         this.deviceName = deviceName;
         this.mode = mode;

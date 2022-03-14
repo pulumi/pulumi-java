@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudscheduler;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudscheduler.JobArgs;
@@ -62,7 +62,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="appEngineHttpTarget", type=JobAppEngineHttpTarget.class, parameters={})
+    @Export(name="appEngineHttpTarget", type=JobAppEngineHttpTarget.class, parameters={})
     private Output</* @Nullable */ JobAppEngineHttpTarget> appEngineHttpTarget;
 
     /**
@@ -86,7 +86,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      *   A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s"
      * 
      */
-    @OutputExport(name="attemptDeadline", type=String.class, parameters={})
+    @Export(name="attemptDeadline", type=String.class, parameters={})
     private Output</* @Nullable */ String> attemptDeadline;
 
     /**
@@ -108,7 +108,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * This string must not contain more than 500 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -126,7 +126,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="httpTarget", type=JobHttpTarget.class, parameters={})
+    @Export(name="httpTarget", type=JobHttpTarget.class, parameters={})
     private Output</* @Nullable */ JobHttpTarget> httpTarget;
 
     /**
@@ -143,7 +143,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The name of the job.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -158,7 +158,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -176,7 +176,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="pubsubTarget", type=JobPubsubTarget.class, parameters={})
+    @Export(name="pubsubTarget", type=JobPubsubTarget.class, parameters={})
     private Output</* @Nullable */ JobPubsubTarget> pubsubTarget;
 
     /**
@@ -193,7 +193,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Region where the scheduler job resides. If it is not provided, this provider will use the provider default.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -210,7 +210,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="retryConfig", type=JobRetryConfig.class, parameters={})
+    @Export(name="retryConfig", type=JobRetryConfig.class, parameters={})
     private Output</* @Nullable */ JobRetryConfig> retryConfig;
 
     /**
@@ -227,7 +227,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * Describes the schedule on which the job will be executed.
      * 
      */
-    @OutputExport(name="schedule", type=String.class, parameters={})
+    @Export(name="schedule", type=String.class, parameters={})
     private Output</* @Nullable */ String> schedule;
 
     /**
@@ -242,7 +242,7 @@ public class Job extends io.pulumi.resources.CustomResource {
      * The value of this field must be a time zone name from the tz database.
      * 
      */
-    @OutputExport(name="timeZone", type=String.class, parameters={})
+    @Export(name="timeZone", type=String.class, parameters={})
     private Output</* @Nullable */ String> timeZone;
 
     /**

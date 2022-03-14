@@ -4,7 +4,7 @@
 package io.pulumi.gcp.resourcemanager;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.resourcemanager.LienArgs;
@@ -33,7 +33,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * Time of creation
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -47,7 +47,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * A system-generated unique identifier for this Lien.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -63,7 +63,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * 200 characters.
      * 
      */
-    @OutputExport(name="origin", type=String.class, parameters={})
+    @Export(name="origin", type=String.class, parameters={})
     private Output<String> origin;
 
     /**
@@ -82,7 +82,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * prefix (e.g. "projects/my-project-name").
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**
@@ -100,7 +100,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * on a resource. Maximum length of 200 characters.
      * 
      */
-    @OutputExport(name="reason", type=String.class, parameters={})
+    @Export(name="reason", type=String.class, parameters={})
     private Output<String> reason;
 
     /**
@@ -119,7 +119,7 @@ public class Lien extends io.pulumi.resources.CustomResource {
      * e.g. ['resourcemanager.projects.delete']
      * 
      */
-    @OutputExport(name="restrictions", type=List.class, parameters={String.class})
+    @Export(name="restrictions", type=List.class, parameters={String.class})
     private Output<List<String>> restrictions;
 
     /**

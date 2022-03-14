@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.monitoring.outputs.UptimeCheckConfigHttpCheckAuthInfo;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UptimeCheckConfigHttpCheck {
     /**
      * The authentication information. Optional when creating an HTTP check; defaults to empty.
@@ -70,18 +70,18 @@ public final class UptimeCheckConfigHttpCheck {
      */
     private final @Nullable Boolean validateSsl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UptimeCheckConfigHttpCheck(
-        @OutputCustomType.Parameter("authInfo") @Nullable UptimeCheckConfigHttpCheckAuthInfo authInfo,
-        @OutputCustomType.Parameter("body") @Nullable String body,
-        @OutputCustomType.Parameter("contentType") @Nullable String contentType,
-        @OutputCustomType.Parameter("headers") @Nullable Map<String,String> headers,
-        @OutputCustomType.Parameter("maskHeaders") @Nullable Boolean maskHeaders,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("port") @Nullable Integer port,
-        @OutputCustomType.Parameter("requestMethod") @Nullable String requestMethod,
-        @OutputCustomType.Parameter("useSsl") @Nullable Boolean useSsl,
-        @OutputCustomType.Parameter("validateSsl") @Nullable Boolean validateSsl) {
+        @CustomType.Parameter("authInfo") @Nullable UptimeCheckConfigHttpCheckAuthInfo authInfo,
+        @CustomType.Parameter("body") @Nullable String body,
+        @CustomType.Parameter("contentType") @Nullable String contentType,
+        @CustomType.Parameter("headers") @Nullable Map<String,String> headers,
+        @CustomType.Parameter("maskHeaders") @Nullable Boolean maskHeaders,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("port") @Nullable Integer port,
+        @CustomType.Parameter("requestMethod") @Nullable String requestMethod,
+        @CustomType.Parameter("useSsl") @Nullable Boolean useSsl,
+        @CustomType.Parameter("validateSsl") @Nullable Boolean validateSsl) {
         this.authInfo = authInfo;
         this.body = body;
         this.contentType = contentType;

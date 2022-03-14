@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsdGetAr
      * The size of the disk in base-2 GB.
      * 
      */
-    @InputImport(name="diskSizeGb", required=true)
+    @Import(name="diskSizeGb", required=true)
       private final Output<Integer> diskSizeGb;
 
     public Output<Integer> getDiskSizeGb() {
@@ -32,7 +32,7 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsdGetAr
      * Possible values are `SCSI` and `NVME`.
      * 
      */
-    @InputImport(name="interface")
+    @Import(name="interface")
       private final @Nullable Output<String> $interface;
 
     public Output<String> get$interface() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vertex;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.vertex.inputs.AiMetadataStoreEncryptionSpecArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AiMetadataStoreArgs extends io.pulumi.resources.ResourceArgs 
      * Description of the MetadataStore.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class AiMetadataStoreArgs extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="encryptionSpec")
+    @Import(name="encryptionSpec")
       private final @Nullable Output<AiMetadataStoreEncryptionSpecArgs> encryptionSpec;
 
     public Output<AiMetadataStoreEncryptionSpecArgs> getEncryptionSpec() {
@@ -42,7 +42,7 @@ public final class AiMetadataStoreArgs extends io.pulumi.resources.ResourceArgs 
      * The name of the MetadataStore. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class AiMetadataStoreArgs extends io.pulumi.resources.ResourceArgs 
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -65,7 +65,7 @@ public final class AiMetadataStoreArgs extends io.pulumi.resources.ResourceArgs 
      * The region of the Metadata Store. eg us-central1
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {

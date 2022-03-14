@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RouterNatArgs;
@@ -56,7 +56,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * valid static external IPs that have been assigned to the NAT.
      * 
      */
-    @OutputExport(name="drainNatIps", type=List.class, parameters={String.class})
+    @Export(name="drainNatIps", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> drainNatIps;
 
     /**
@@ -72,7 +72,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * see the [official documentation](https://cloud.google.com/nat/docs/overview#specs-rfcs).
      * 
      */
-    @OutputExport(name="enableEndpointIndependentMapping", type=Boolean.class, parameters={})
+    @Export(name="enableEndpointIndependentMapping", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableEndpointIndependentMapping;
 
     /**
@@ -87,7 +87,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * Timeout (in seconds) for ICMP connections. Defaults to 30s if not set.
      * 
      */
-    @OutputExport(name="icmpIdleTimeoutSec", type=Integer.class, parameters={})
+    @Export(name="icmpIdleTimeoutSec", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> icmpIdleTimeoutSec;
 
     /**
@@ -102,7 +102,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="logConfig", type=RouterNatLogConfig.class, parameters={})
+    @Export(name="logConfig", type=RouterNatLogConfig.class, parameters={})
     private Output</* @Nullable */ RouterNatLogConfig> logConfig;
 
     /**
@@ -117,7 +117,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * Minimum number of ports allocated to a VM from this NAT.
      * 
      */
-    @OutputExport(name="minPortsPerVm", type=Integer.class, parameters={})
+    @Export(name="minPortsPerVm", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> minPortsPerVm;
 
     /**
@@ -131,7 +131,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * Self-link of subnetwork to NAT
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -148,7 +148,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * Possible values are `MANUAL_ONLY` and `AUTO_ONLY`.
      * 
      */
-    @OutputExport(name="natIpAllocateOption", type=String.class, parameters={})
+    @Export(name="natIpAllocateOption", type=String.class, parameters={})
     private Output<String> natIpAllocateOption;
 
     /**
@@ -166,7 +166,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * is set to MANUAL_ONLY.
      * 
      */
-    @OutputExport(name="natIps", type=List.class, parameters={String.class})
+    @Export(name="natIps", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> natIps;
 
     /**
@@ -182,7 +182,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -197,7 +197,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * Region where the router and NAT reside.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -211,7 +211,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * The name of the Cloud Router in which this NAT will be configured.
      * 
      */
-    @OutputExport(name="router", type=String.class, parameters={})
+    @Export(name="router", type=String.class, parameters={})
     private Output<String> router;
 
     /**
@@ -235,7 +235,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * Possible values are `ALL_SUBNETWORKS_ALL_IP_RANGES`, `ALL_SUBNETWORKS_ALL_PRIMARY_IP_RANGES`, and `LIST_OF_SUBNETWORKS`.
      * 
      */
-    @OutputExport(name="sourceSubnetworkIpRangesToNat", type=String.class, parameters={})
+    @Export(name="sourceSubnetworkIpRangesToNat", type=String.class, parameters={})
     private Output<String> sourceSubnetworkIpRangesToNat;
 
     /**
@@ -261,7 +261,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="subnetworks", type=List.class, parameters={RouterNatSubnetwork.class})
+    @Export(name="subnetworks", type=List.class, parameters={RouterNatSubnetwork.class})
     private Output</* @Nullable */ List<RouterNatSubnetwork>> subnetworks;
 
     /**
@@ -278,7 +278,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * Defaults to 1200s if not set.
      * 
      */
-    @OutputExport(name="tcpEstablishedIdleTimeoutSec", type=Integer.class, parameters={})
+    @Export(name="tcpEstablishedIdleTimeoutSec", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> tcpEstablishedIdleTimeoutSec;
 
     /**
@@ -294,7 +294,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * Defaults to 30s if not set.
      * 
      */
-    @OutputExport(name="tcpTransitoryIdleTimeoutSec", type=Integer.class, parameters={})
+    @Export(name="tcpTransitoryIdleTimeoutSec", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> tcpTransitoryIdleTimeoutSec;
 
     /**
@@ -309,7 +309,7 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
      * Timeout (in seconds) for UDP connections. Defaults to 30s if not set.
      * 
      */
-    @OutputExport(name="udpIdleTimeoutSec", type=Integer.class, parameters={})
+    @Export(name="udpIdleTimeoutSec", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> udpIdleTimeoutSec;
 
     /**

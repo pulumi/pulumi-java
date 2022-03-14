@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,42 +13,42 @@ public final class GetHealthCheckSslHealthCheck extends io.pulumi.resources.Invo
 
     public static final GetHealthCheckSslHealthCheck Empty = new GetHealthCheckSslHealthCheck();
 
-    @InputImport(name="port", required=true)
+    @Import(name="port", required=true)
       private final Integer port;
 
     public Integer getPort() {
         return this.port;
     }
 
-    @InputImport(name="portName", required=true)
+    @Import(name="portName", required=true)
       private final String portName;
 
     public String getPortName() {
         return this.portName;
     }
 
-    @InputImport(name="portSpecification", required=true)
+    @Import(name="portSpecification", required=true)
       private final String portSpecification;
 
     public String getPortSpecification() {
         return this.portSpecification;
     }
 
-    @InputImport(name="proxyHeader", required=true)
+    @Import(name="proxyHeader", required=true)
       private final String proxyHeader;
 
     public String getProxyHeader() {
         return this.proxyHeader;
     }
 
-    @InputImport(name="request", required=true)
+    @Import(name="request", required=true)
       private final String request;
 
     public String getRequest() {
         return this.request;
     }
 
-    @InputImport(name="response", required=true)
+    @Import(name="response", required=true)
       private final String response;
 
     public String getResponse() {

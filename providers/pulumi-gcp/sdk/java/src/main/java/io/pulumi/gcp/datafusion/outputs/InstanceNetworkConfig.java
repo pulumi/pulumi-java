@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.datafusion.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceNetworkConfig {
     /**
      * The IP range in CIDR notation to use for the managed Data Fusion instance
@@ -23,10 +23,10 @@ public final class InstanceNetworkConfig {
      */
     private final String network;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceNetworkConfig(
-        @OutputCustomType.Parameter("ipAllocation") String ipAllocation,
-        @OutputCustomType.Parameter("network") String network) {
+        @CustomType.Parameter("ipAllocation") String ipAllocation,
+        @CustomType.Parameter("network") String network) {
         this.ipAllocation = ipAllocation;
         this.network = network;
     }

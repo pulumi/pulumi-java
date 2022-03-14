@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesAdditionalExtensionArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesCaOptionsArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesKeyUsageArgs;
@@ -23,7 +23,7 @@ public final class CertificateTemplatePredefinedValuesArgs extends io.pulumi.res
      * Optional. Describes custom X.509 extensions.
      * 
      */
-    @InputImport(name="additionalExtensions")
+    @Import(name="additionalExtensions")
       private final @Nullable Output<List<CertificateTemplatePredefinedValuesAdditionalExtensionArgs>> additionalExtensions;
 
     public Output<List<CertificateTemplatePredefinedValuesAdditionalExtensionArgs>> getAdditionalExtensions() {
@@ -34,7 +34,7 @@ public final class CertificateTemplatePredefinedValuesArgs extends io.pulumi.res
      * Optional. Describes Online Certificate Status Protocol (OCSP) endpoint addresses that appear in the "Authority Information Access" extension in the certificate.
      * 
      */
-    @InputImport(name="aiaOcspServers")
+    @Import(name="aiaOcspServers")
       private final @Nullable Output<List<String>> aiaOcspServers;
 
     public Output<List<String>> getAiaOcspServers() {
@@ -45,7 +45,7 @@ public final class CertificateTemplatePredefinedValuesArgs extends io.pulumi.res
      * Optional. Describes options in this X509Parameters that are relevant in a CA certificate.
      * 
      */
-    @InputImport(name="caOptions")
+    @Import(name="caOptions")
       private final @Nullable Output<CertificateTemplatePredefinedValuesCaOptionsArgs> caOptions;
 
     public Output<CertificateTemplatePredefinedValuesCaOptionsArgs> getCaOptions() {
@@ -56,7 +56,7 @@ public final class CertificateTemplatePredefinedValuesArgs extends io.pulumi.res
      * Optional. Indicates the intended use for keys that correspond to a certificate.
      * 
      */
-    @InputImport(name="keyUsage")
+    @Import(name="keyUsage")
       private final @Nullable Output<CertificateTemplatePredefinedValuesKeyUsageArgs> keyUsage;
 
     public Output<CertificateTemplatePredefinedValuesKeyUsageArgs> getKeyUsage() {
@@ -67,7 +67,7 @@ public final class CertificateTemplatePredefinedValuesArgs extends io.pulumi.res
      * Optional. Describes the X.509 certificate policy object identifiers, per https://tools.ietf.org/html/rfc5280#section-4.2.1.4.
      * 
      */
-    @InputImport(name="policyIds")
+    @Import(name="policyIds")
       private final @Nullable Output<List<CertificateTemplatePredefinedValuesPolicyIdArgs>> policyIds;
 
     public Output<List<CertificateTemplatePredefinedValuesPolicyIdArgs>> getPolicyIds() {

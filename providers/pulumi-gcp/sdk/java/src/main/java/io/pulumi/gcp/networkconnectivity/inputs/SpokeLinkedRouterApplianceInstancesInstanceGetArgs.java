@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkconnectivity.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SpokeLinkedRouterApplianceInstancesInstanceGetArgs extends io
      * The IP address on the VM to use for peering.
      * 
      */
-    @InputImport(name="ipAddress")
+    @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
@@ -29,7 +29,7 @@ public final class SpokeLinkedRouterApplianceInstancesInstanceGetArgs extends io
      * The URI of the virtual machine resource
      * 
      */
-    @InputImport(name="virtualMachine")
+    @Import(name="virtualMachine")
       private final @Nullable Output<String> virtualMachine;
 
     public Output<String> getVirtualMachine() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AzureClusterControlPlaneProxyConfig {
     /**
      * The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as `/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>`
@@ -20,10 +20,10 @@ public final class AzureClusterControlPlaneProxyConfig {
      */
     private final String secretId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureClusterControlPlaneProxyConfig(
-        @OutputCustomType.Parameter("resourceGroupId") String resourceGroupId,
-        @OutputCustomType.Parameter("secretId") String secretId) {
+        @CustomType.Parameter("resourceGroupId") String resourceGroupId,
+        @CustomType.Parameter("secretId") String secretId) {
         this.resourceGroupId = resourceGroupId;
         this.secretId = secretId;
     }

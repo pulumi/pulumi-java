@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentInstanceFilterArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentRolloutArgs;
@@ -22,7 +22,7 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * OS policy assignment description. Length of the description is limited to 1024 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * Required. Filter to select VMs.
      * 
      */
-    @InputImport(name="instanceFilter", required=true)
+    @Import(name="instanceFilter", required=true)
       private final Output<OsPolicyAssignmentInstanceFilterArgs> instanceFilter;
 
     public Output<OsPolicyAssignmentInstanceFilterArgs> getInstanceFilter() {
@@ -44,7 +44,7 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * The location for the resource
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -55,7 +55,7 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * Required. The name of the repository.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -66,7 +66,7 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * Required. List of OS policies to be applied to the VMs.
      * 
      */
-    @InputImport(name="osPolicies", required=true)
+    @Import(name="osPolicies", required=true)
       private final Output<List<OsPolicyAssignmentOsPolicyArgs>> osPolicies;
 
     public Output<List<OsPolicyAssignmentOsPolicyArgs>> getOsPolicies() {
@@ -77,7 +77,7 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * The project for the resource
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -88,7 +88,7 @@ public final class OsPolicyAssignmentArgs extends io.pulumi.resources.ResourceAr
      * Required. Rollout to deploy the OS policy assignment. A rollout is triggered in the following situations: 1) OSPolicyAssignment is created. 2) OSPolicyAssignment is updated and the update contains changes to one of the following fields: - instance_filter - os_policies 3) OSPolicyAssignment is deleted.
      * 
      */
-    @InputImport(name="rollout", required=true)
+    @Import(name="rollout", required=true)
       private final Output<OsPolicyAssignmentRolloutArgs> rollout;
 
     public Output<OsPolicyAssignmentRolloutArgs> getRollout() {

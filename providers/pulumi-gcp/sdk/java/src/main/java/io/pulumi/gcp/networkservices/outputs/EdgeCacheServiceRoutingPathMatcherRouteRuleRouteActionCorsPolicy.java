@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy {
     /**
      * In response to a preflight request, setting this to true indicates that the actual request can include user credentials.
@@ -55,15 +55,15 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPol
      */
     private final String maxAge;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcherRouteRuleRouteActionCorsPolicy(
-        @OutputCustomType.Parameter("allowCredentials") @Nullable Boolean allowCredentials,
-        @OutputCustomType.Parameter("allowHeaders") @Nullable List<String> allowHeaders,
-        @OutputCustomType.Parameter("allowMethods") @Nullable List<String> allowMethods,
-        @OutputCustomType.Parameter("allowOrigins") @Nullable List<String> allowOrigins,
-        @OutputCustomType.Parameter("disabled") @Nullable Boolean disabled,
-        @OutputCustomType.Parameter("exposeHeaders") @Nullable List<String> exposeHeaders,
-        @OutputCustomType.Parameter("maxAge") String maxAge) {
+        @CustomType.Parameter("allowCredentials") @Nullable Boolean allowCredentials,
+        @CustomType.Parameter("allowHeaders") @Nullable List<String> allowHeaders,
+        @CustomType.Parameter("allowMethods") @Nullable List<String> allowMethods,
+        @CustomType.Parameter("allowOrigins") @Nullable List<String> allowOrigins,
+        @CustomType.Parameter("disabled") @Nullable Boolean disabled,
+        @CustomType.Parameter("exposeHeaders") @Nullable List<String> exposeHeaders,
+        @CustomType.Parameter("maxAge") String maxAge) {
         this.allowCredentials = allowCredentials;
         this.allowHeaders = allowHeaders;
         this.allowMethods = allowMethods;

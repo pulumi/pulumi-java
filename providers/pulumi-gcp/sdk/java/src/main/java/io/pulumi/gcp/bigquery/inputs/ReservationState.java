@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * capacity specified above at most.
      * 
      */
-    @InputImport(name="ignoreIdleSlots")
+    @Import(name="ignoreIdleSlots")
       private final @Nullable Output<Boolean> ignoreIdleSlots;
 
     public Output<Boolean> getIgnoreIdleSlots() {
@@ -34,7 +34,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * Examples: US, EU, asia-northeast1. The default value is US.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -45,7 +45,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * The name of the reservation. This field must only contain alphanumeric characters or dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -69,7 +69,7 @@ public final class ReservationState extends io.pulumi.resources.ResourceArgs {
      * unit of parallelism. Queries using this reservation might use more slots during runtime if ignoreIdleSlots is set to false.
      * 
      */
-    @InputImport(name="slotCapacity")
+    @Import(name="slotCapacity")
       private final @Nullable Output<Integer> slotCapacity;
 
     public Output<Integer> getSlotCapacity() {

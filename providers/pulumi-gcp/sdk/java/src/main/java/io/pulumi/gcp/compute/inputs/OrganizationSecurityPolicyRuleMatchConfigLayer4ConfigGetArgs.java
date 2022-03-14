@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs 
      * or the IP protocol number.
      * 
      */
-    @InputImport(name="ipProtocol", required=true)
+    @Import(name="ipProtocol", required=true)
       private final Output<String> ipProtocol;
 
     public Output<String> getIpProtocol() {
@@ -39,7 +39,7 @@ public final class OrganizationSecurityPolicyRuleMatchConfigLayer4ConfigGetArgs 
      * ["12345-12349"].
      * 
      */
-    @InputImport(name="ports")
+    @Import(name="ports")
       private final @Nullable Output<List<String>> ports;
 
     public Output<List<String>> getPorts() {

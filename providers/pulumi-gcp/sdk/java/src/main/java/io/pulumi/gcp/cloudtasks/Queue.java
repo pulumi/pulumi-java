@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudtasks;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudtasks.QueueArgs;
@@ -51,7 +51,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="appEngineRoutingOverride", type=QueueAppEngineRoutingOverride.class, parameters={})
+    @Export(name="appEngineRoutingOverride", type=QueueAppEngineRoutingOverride.class, parameters={})
     private Output</* @Nullable */ QueueAppEngineRoutingOverride> appEngineRoutingOverride;
 
     /**
@@ -67,7 +67,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * The location of the queue
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -81,7 +81,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * The queue name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -96,7 +96,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -118,7 +118,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      *   Structure is documented below.
      * 
      */
-    @OutputExport(name="rateLimits", type=QueueRateLimits.class, parameters={})
+    @Export(name="rateLimits", type=QueueRateLimits.class, parameters={})
     private Output<QueueRateLimits> rateLimits;
 
     /**
@@ -140,7 +140,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="retryConfig", type=QueueRetryConfig.class, parameters={})
+    @Export(name="retryConfig", type=QueueRetryConfig.class, parameters={})
     private Output<QueueRetryConfig> retryConfig;
 
     /**
@@ -156,7 +156,7 @@ public class Queue extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="stackdriverLoggingConfig", type=QueueStackdriverLoggingConfig.class, parameters={})
+    @Export(name="stackdriverLoggingConfig", type=QueueStackdriverLoggingConfig.class, parameters={})
     private Output</* @Nullable */ QueueStackdriverLoggingConfig> stackdriverLoggingConfig;
 
     /**

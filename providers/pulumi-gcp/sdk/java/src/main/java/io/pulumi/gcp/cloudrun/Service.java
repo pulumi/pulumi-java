@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudrun.ServiceArgs;
@@ -72,7 +72,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * this field is set to false, the revision name will still autogenerate.)
      * 
      */
-    @OutputExport(name="autogenerateRevisionName", type=Boolean.class, parameters={})
+    @Export(name="autogenerateRevisionName", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autogenerateRevisionName;
 
     /**
@@ -90,7 +90,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The location of the cloud run instance. eg us-central1
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -106,7 +106,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="metadata", type=ServiceMetadata.class, parameters={})
+    @Export(name="metadata", type=ServiceMetadata.class, parameters={})
     private Output<ServiceMetadata> metadata;
 
     /**
@@ -122,7 +122,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Volume's name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -137,7 +137,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -152,7 +152,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * The current status of the Service.
      * 
      */
-    @OutputExport(name="statuses", type=List.class, parameters={ServiceStatus.class})
+    @Export(name="statuses", type=List.class, parameters={ServiceStatus.class})
     private Output<List<ServiceStatus>> statuses;
 
     /**
@@ -175,7 +175,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="template", type=ServiceTemplate.class, parameters={})
+    @Export(name="template", type=ServiceTemplate.class, parameters={})
     private Output</* @Nullable */ ServiceTemplate> template;
 
     /**
@@ -200,7 +200,7 @@ public class Service extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="traffics", type=List.class, parameters={ServiceTraffic.class})
+    @Export(name="traffics", type=List.class, parameters={ServiceTraffic.class})
     private Output<List<ServiceTraffic>> traffics;
 
     /**

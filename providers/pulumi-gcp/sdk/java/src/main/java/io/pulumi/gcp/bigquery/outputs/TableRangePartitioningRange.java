@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TableRangePartitioningRange {
     /**
      * End of the range partitioning, exclusive.
@@ -25,11 +25,11 @@ public final class TableRangePartitioningRange {
      */
     private final Integer start;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableRangePartitioningRange(
-        @OutputCustomType.Parameter("end") Integer end,
-        @OutputCustomType.Parameter("interval") Integer interval,
-        @OutputCustomType.Parameter("start") Integer start) {
+        @CustomType.Parameter("end") Integer end,
+        @CustomType.Parameter("interval") Integer interval,
+        @CustomType.Parameter("start") Integer start) {
         this.end = end;
         this.interval = interval;
         this.start = start;

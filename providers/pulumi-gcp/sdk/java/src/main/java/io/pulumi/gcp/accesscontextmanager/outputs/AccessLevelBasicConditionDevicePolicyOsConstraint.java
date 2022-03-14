@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccessLevelBasicConditionDevicePolicyOsConstraint {
     /**
      * The minimum allowed OS version. If not set, any version
@@ -31,11 +31,11 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraint {
      */
     private final @Nullable Boolean requireVerifiedChromeOs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessLevelBasicConditionDevicePolicyOsConstraint(
-        @OutputCustomType.Parameter("minimumVersion") @Nullable String minimumVersion,
-        @OutputCustomType.Parameter("osType") String osType,
-        @OutputCustomType.Parameter("requireVerifiedChromeOs") @Nullable Boolean requireVerifiedChromeOs) {
+        @CustomType.Parameter("minimumVersion") @Nullable String minimumVersion,
+        @CustomType.Parameter("osType") String osType,
+        @CustomType.Parameter("requireVerifiedChromeOs") @Nullable Boolean requireVerifiedChromeOs) {
         this.minimumVersion = minimumVersion;
         this.osType = osType;
         this.requireVerifiedChromeOs = requireVerifiedChromeOs;

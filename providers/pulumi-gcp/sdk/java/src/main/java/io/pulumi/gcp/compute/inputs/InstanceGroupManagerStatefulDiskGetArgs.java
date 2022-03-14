@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class InstanceGroupManagerStatefulDiskGetArgs extends io.pulumi.res
      * , A value that prescribes what should happen to the stateful disk when the VM instance is deleted. The available options are `NEVER` and `ON_PERMANENT_INSTANCE_DELETION`. `NEVER` - detach the disk when the VM is deleted, but do not delete the disk. `ON_PERMANENT_INSTANCE_DELETION` will delete the stateful disk when the VM is permanently deleted from the instance group. The default is `NEVER`.
      * 
      */
-    @InputImport(name="deleteRule")
+    @Import(name="deleteRule")
       private final @Nullable Output<String> deleteRule;
 
     public Output<String> getDeleteRule() {
@@ -29,7 +29,7 @@ public final class InstanceGroupManagerStatefulDiskGetArgs extends io.pulumi.res
      * , The device name of the disk to be attached.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final Output<String> deviceName;
 
     public Output<String> getDeviceName() {

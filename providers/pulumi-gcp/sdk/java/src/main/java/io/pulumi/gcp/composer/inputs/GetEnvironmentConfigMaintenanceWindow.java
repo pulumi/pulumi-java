@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,21 +12,21 @@ public final class GetEnvironmentConfigMaintenanceWindow extends io.pulumi.resou
 
     public static final GetEnvironmentConfigMaintenanceWindow Empty = new GetEnvironmentConfigMaintenanceWindow();
 
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
     }
 
-    @InputImport(name="recurrence", required=true)
+    @Import(name="recurrence", required=true)
       private final String recurrence;
 
     public String getRecurrence() {
         return this.recurrence;
     }
 
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {

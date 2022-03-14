@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceAdvancedMachineFeatures {
     /**
      * Defines whether the instance should have nested virtualization  enabled. Defaults to false.
@@ -23,10 +23,10 @@ public final class InstanceAdvancedMachineFeatures {
      */
     private final @Nullable Integer threadsPerCore;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceAdvancedMachineFeatures(
-        @OutputCustomType.Parameter("enableNestedVirtualization") @Nullable Boolean enableNestedVirtualization,
-        @OutputCustomType.Parameter("threadsPerCore") @Nullable Integer threadsPerCore) {
+        @CustomType.Parameter("enableNestedVirtualization") @Nullable Boolean enableNestedVirtualization,
+        @CustomType.Parameter("threadsPerCore") @Nullable Integer threadsPerCore) {
         this.enableNestedVirtualization = enableNestedVirtualization;
         this.threadsPerCore = threadsPerCore;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs;
@@ -27,7 +27,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="acceleratorConfig")
+    @Import(name="acceleratorConfig")
       private final @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs> acceleratorConfig;
 
     public Output<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs> getAcceleratorConfig() {
@@ -39,7 +39,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="containerImages")
+    @Import(name="containerImages")
       private final @Nullable Output<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs>> containerImages;
 
     public Output<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs>> getContainerImages() {
@@ -51,7 +51,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="dataDisk", required=true)
+    @Import(name="dataDisk", required=true)
       private final Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs> dataDisk;
 
     public Output<RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs> getDataDisk() {
@@ -63,7 +63,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="encryptionConfig")
+    @Import(name="encryptionConfig")
       private final @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs> encryptionConfig;
 
     public Output<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs> getEncryptionConfig() {
@@ -77,7 +77,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * storing-retrieving-metadata#guest_attributes)).
      * 
      */
-    @InputImport(name="guestAttributes")
+    @Import(name="guestAttributes")
       private final @Nullable Output<Map<String,String>> guestAttributes;
 
     public Output<Map<String,String>> getGuestAttributes() {
@@ -93,7 +93,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * accessible without external IP addresses.
      * 
      */
-    @InputImport(name="internalIpOnly")
+    @Import(name="internalIpOnly")
       private final @Nullable Output<Boolean> internalIpOnly;
 
     public Output<Boolean> getInternalIpOnly() {
@@ -106,7 +106,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * applicable for persistent disks.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -117,7 +117,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * The Compute Engine machine type used for runtimes.
      * 
      */
-    @InputImport(name="machineType", required=true)
+    @Import(name="machineType", required=true)
       private final Output<String> machineType;
 
     public Output<String> getMachineType() {
@@ -131,7 +131,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * _metadata)).
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -155,7 +155,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      *   configuring Private Service Access.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -168,7 +168,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * Possible values are `UNSPECIFIED_NIC_TYPE`, `VIRTIO_NET`, and `GVNIC`.
      * 
      */
-    @InputImport(name="nicType")
+    @Import(name="nicType")
       private final @Nullable Output<String> nicType;
 
     public Output<String> getNicType() {
@@ -180,7 +180,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="shieldedInstanceConfig")
+    @Import(name="shieldedInstanceConfig")
       private final @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     public Output<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
@@ -196,7 +196,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * * `projects/[project_id]/regions/us-east1/subnetworks/sub0`
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable Output<String> subnet;
 
     public Output<String> getSubnet() {
@@ -209,7 +209,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * label-or-tag-resources#tags)).
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
@@ -221,7 +221,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * The zone where the virtual machine is located.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

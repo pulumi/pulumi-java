@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobStatusErrorResult {
     /**
      * The geographic location of the job. The default value is US.
@@ -19,11 +19,11 @@ public final class JobStatusErrorResult {
     private final @Nullable String message;
     private final @Nullable String reason;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobStatusErrorResult(
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("message") @Nullable String message,
-        @OutputCustomType.Parameter("reason") @Nullable String reason) {
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("message") @Nullable String message,
+        @CustomType.Parameter("reason") @Nullable String reason) {
         this.location = location;
         this.message = message;
         this.reason = reason;

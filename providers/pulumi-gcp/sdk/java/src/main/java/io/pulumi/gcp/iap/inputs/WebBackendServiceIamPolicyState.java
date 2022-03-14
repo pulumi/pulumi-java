@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class WebBackendServiceIamPolicyState extends io.pulumi.resources.R
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -30,7 +30,7 @@ public final class WebBackendServiceIamPolicyState extends io.pulumi.resources.R
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @InputImport(name="policyData")
+    @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
     public Output<String> getPolicyData() {
@@ -42,7 +42,7 @@ public final class WebBackendServiceIamPolicyState extends io.pulumi.resources.R
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -53,7 +53,7 @@ public final class WebBackendServiceIamPolicyState extends io.pulumi.resources.R
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="webBackendService")
+    @Import(name="webBackendService")
       private final @Nullable Output<String> webBackendService;
 
     public Output<String> getWebBackendService() {

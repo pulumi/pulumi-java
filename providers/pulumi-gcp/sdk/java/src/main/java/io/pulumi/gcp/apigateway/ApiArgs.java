@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * Identifier to assign to the API. Must be unique within scope of the parent resource(project)
      * 
      */
-    @InputImport(name="apiId", required=true)
+    @Import(name="apiId", required=true)
       private final Output<String> apiId;
 
     public Output<String> getApiId() {
@@ -30,7 +30,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * A user-visible name for the API.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -41,7 +41,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * Resource labels to represent user-provided metadata.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -53,7 +53,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * If not specified, a new Service will automatically be created in the same project as this API.
      * 
      */
-    @InputImport(name="managedService")
+    @Import(name="managedService")
       private final @Nullable Output<String> managedService;
 
     public Output<String> getManagedService() {
@@ -65,7 +65,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

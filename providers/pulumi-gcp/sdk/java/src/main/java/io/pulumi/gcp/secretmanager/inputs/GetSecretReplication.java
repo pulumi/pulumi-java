@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.secretmanager.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.secretmanager.inputs.GetSecretReplicationUserManaged;
 import java.lang.Boolean;
 import java.util.List;
@@ -14,14 +14,14 @@ public final class GetSecretReplication extends io.pulumi.resources.InvokeArgs {
 
     public static final GetSecretReplication Empty = new GetSecretReplication();
 
-    @InputImport(name="automatic", required=true)
+    @Import(name="automatic", required=true)
       private final Boolean automatic;
 
     public Boolean getAutomatic() {
         return this.automatic;
     }
 
-    @InputImport(name="userManageds", required=true)
+    @Import(name="userManageds", required=true)
       private final List<GetSecretReplicationUserManaged> userManageds;
 
     public List<GetSecretReplicationUserManaged> getUserManageds() {

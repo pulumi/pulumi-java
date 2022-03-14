@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecVolumeSecretItemGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ServiceTemplateSpecVolumeSecretGetArgs extends io.pulumi.reso
      * file mode, like fsGroup, and the result can be other mode bits set.
      * 
      */
-    @InputImport(name="defaultMode")
+    @Import(name="defaultMode")
       private final @Nullable Output<Integer> defaultMode;
 
     public Output<Integer> getDefaultMode() {
@@ -40,7 +40,7 @@ public final class ServiceTemplateSpecVolumeSecretGetArgs extends io.pulumi.reso
      * Structure is documented below.
      * 
      */
-    @InputImport(name="items")
+    @Import(name="items")
       private final @Nullable Output<List<ServiceTemplateSpecVolumeSecretItemGetArgs>> items;
 
     public Output<List<ServiceTemplateSpecVolumeSecretItemGetArgs>> getItems() {
@@ -59,7 +59,7 @@ public final class ServiceTemplateSpecVolumeSecretGetArgs extends io.pulumi.reso
      * annotation.
      * 
      */
-    @InputImport(name="secretName", required=true)
+    @Import(name="secretName", required=true)
       private final Output<String> secretName;
 
     public Output<String> getSecretName() {

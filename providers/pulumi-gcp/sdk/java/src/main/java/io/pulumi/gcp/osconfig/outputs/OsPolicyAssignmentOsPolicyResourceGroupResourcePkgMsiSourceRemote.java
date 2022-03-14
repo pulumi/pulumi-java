@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemote {
     /**
      * SHA256 checksum of the remote file.
@@ -22,10 +22,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRe
      */
     private final String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemote(
-        @OutputCustomType.Parameter("sha256Checksum") @Nullable String sha256Checksum,
-        @OutputCustomType.Parameter("uri") String uri) {
+        @CustomType.Parameter("sha256Checksum") @Nullable String sha256Checksum,
+        @CustomType.Parameter("uri") String uri) {
         this.sha256Checksum = sha256Checksum;
         this.uri = uri;
     }

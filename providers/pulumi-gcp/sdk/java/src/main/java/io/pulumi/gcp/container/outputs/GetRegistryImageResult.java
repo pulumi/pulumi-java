@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetRegistryImageResult {
     private final @Nullable String digest;
     /**
@@ -23,15 +23,15 @@ public final class GetRegistryImageResult {
     private final @Nullable String region;
     private final @Nullable String tag;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetRegistryImageResult(
-        @OutputCustomType.Parameter("digest") @Nullable String digest,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("imageUrl") String imageUrl,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("tag") @Nullable String tag) {
+        @CustomType.Parameter("digest") @Nullable String digest,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("imageUrl") String imageUrl,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("tag") @Nullable String tag) {
         this.digest = digest;
         this.id = id;
         this.imageUrl = imageUrl;

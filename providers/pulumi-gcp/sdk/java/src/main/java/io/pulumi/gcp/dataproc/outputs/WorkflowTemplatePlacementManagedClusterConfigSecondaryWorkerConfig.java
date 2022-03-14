@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerator;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig {
     /**
      * Optional. The Compute Engine accelerator configuration for these instances.
@@ -71,18 +71,18 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
      */
     private final @Nullable String preemptibility;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfig(
-        @OutputCustomType.Parameter("accelerators") @Nullable List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerator> accelerators,
-        @OutputCustomType.Parameter("diskConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig diskConfig,
-        @OutputCustomType.Parameter("image") @Nullable String image,
-        @OutputCustomType.Parameter("instanceNames") @Nullable List<String> instanceNames,
-        @OutputCustomType.Parameter("isPreemptible") @Nullable Boolean isPreemptible,
-        @OutputCustomType.Parameter("machineType") @Nullable String machineType,
-        @OutputCustomType.Parameter("managedGroupConfigs") @Nullable List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig> managedGroupConfigs,
-        @OutputCustomType.Parameter("minCpuPlatform") @Nullable String minCpuPlatform,
-        @OutputCustomType.Parameter("numInstances") @Nullable Integer numInstances,
-        @OutputCustomType.Parameter("preemptibility") @Nullable String preemptibility) {
+        @CustomType.Parameter("accelerators") @Nullable List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAccelerator> accelerators,
+        @CustomType.Parameter("diskConfig") @Nullable WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfig diskConfig,
+        @CustomType.Parameter("image") @Nullable String image,
+        @CustomType.Parameter("instanceNames") @Nullable List<String> instanceNames,
+        @CustomType.Parameter("isPreemptible") @Nullable Boolean isPreemptible,
+        @CustomType.Parameter("machineType") @Nullable String machineType,
+        @CustomType.Parameter("managedGroupConfigs") @Nullable List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig> managedGroupConfigs,
+        @CustomType.Parameter("minCpuPlatform") @Nullable String minCpuPlatform,
+        @CustomType.Parameter("numInstances") @Nullable Integer numInstances,
+        @CustomType.Parameter("preemptibility") @Nullable String preemptibility) {
         this.accelerators = accelerators;
         this.diskConfig = diskConfig;
         this.image = image;

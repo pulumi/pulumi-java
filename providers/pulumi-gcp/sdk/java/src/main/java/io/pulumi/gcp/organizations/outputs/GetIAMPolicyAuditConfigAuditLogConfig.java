@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIAMPolicyAuditConfigAuditLogConfig {
     /**
      * Specifies the identities that are exempt from these types of logging operations. Follows the same format of the `members` array for `binding`.
@@ -22,10 +22,10 @@ public final class GetIAMPolicyAuditConfigAuditLogConfig {
      */
     private final String logType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIAMPolicyAuditConfigAuditLogConfig(
-        @OutputCustomType.Parameter("exemptedMembers") @Nullable List<String> exemptedMembers,
-        @OutputCustomType.Parameter("logType") String logType) {
+        @CustomType.Parameter("exemptedMembers") @Nullable List<String> exemptedMembers,
+        @CustomType.Parameter("logType") String logType) {
         this.exemptedMembers = exemptedMembers;
         this.logType = logType;
     }

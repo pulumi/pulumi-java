@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class URLMapDefaultRouteActionUrlRewriteGetArgs extends io.pulumi.r
      * The value must be between 1 and 255 characters.
      * 
      */
-    @InputImport(name="hostRewrite")
+    @Import(name="hostRewrite")
       private final @Nullable Output<String> hostRewrite;
 
     public Output<String> getHostRewrite() {
@@ -33,7 +33,7 @@ public final class URLMapDefaultRouteActionUrlRewriteGetArgs extends io.pulumi.r
      * The value must be between 1 and 1024 characters.
      * 
      */
-    @InputImport(name="pathPrefixRewrite")
+    @Import(name="pathPrefixRewrite")
       private final @Nullable Output<String> pathPrefixRewrite;
 
     public Output<String> getPathPrefixRewrite() {

@@ -3,25 +3,25 @@
 
 package io.pulumi.gcp.endpoints.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceApiMethod {
     private final @Nullable String name;
     private final @Nullable String requestType;
     private final @Nullable String responseType;
     private final @Nullable String syntax;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceApiMethod(
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("requestType") @Nullable String requestType,
-        @OutputCustomType.Parameter("responseType") @Nullable String responseType,
-        @OutputCustomType.Parameter("syntax") @Nullable String syntax) {
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("requestType") @Nullable String requestType,
+        @CustomType.Parameter("responseType") @Nullable String responseType,
+        @CustomType.Parameter("syntax") @Nullable String syntax) {
         this.name = name;
         this.requestType = requestType;
         this.responseType = responseType;

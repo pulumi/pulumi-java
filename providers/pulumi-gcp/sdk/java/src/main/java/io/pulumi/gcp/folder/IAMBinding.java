@@ -4,7 +4,7 @@
 package io.pulumi.gcp.folder;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.folder.IAMBindingArgs;
@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:folder/iAMBinding:IAMBinding")
 public class IAMBinding extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=IAMBindingCondition.class, parameters={})
+    @Export(name="condition", type=IAMBindingCondition.class, parameters={})
     private Output</* @Nullable */ IAMBindingCondition> condition;
 
     public Output</* @Nullable */ IAMBindingCondition> getCondition() {
@@ -55,7 +55,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the folder's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -69,7 +69,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
      * 
      */
-    @OutputExport(name="folder", type=String.class, parameters={})
+    @Export(name="folder", type=String.class, parameters={})
     private Output<String> folder;
 
     /**
@@ -89,7 +89,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * * For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
      * 
      */
-    @OutputExport(name="members", type=List.class, parameters={String.class})
+    @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
     /**
@@ -111,7 +111,7 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

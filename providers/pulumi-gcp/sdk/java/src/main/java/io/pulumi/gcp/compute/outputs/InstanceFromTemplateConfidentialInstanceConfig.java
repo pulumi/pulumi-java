@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceFromTemplateConfidentialInstanceConfig {
     private final Boolean enableConfidentialCompute;
 
-    @OutputCustomType.Constructor
-    private InstanceFromTemplateConfidentialInstanceConfig(@OutputCustomType.Parameter("enableConfidentialCompute") Boolean enableConfidentialCompute) {
+    @CustomType.Constructor
+    private InstanceFromTemplateConfidentialInstanceConfig(@CustomType.Parameter("enableConfidentialCompute") Boolean enableConfidentialCompute) {
         this.enableConfidentialCompute = enableConfidentialCompute;
     }
 

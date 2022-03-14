@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentConfigWorkloadsConfigWorker {
     private final @Nullable Double cpu;
     private final @Nullable Integer maxCount;
@@ -18,13 +18,13 @@ public final class EnvironmentConfigWorkloadsConfigWorker {
     private final @Nullable Integer minCount;
     private final @Nullable Double storageGb;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentConfigWorkloadsConfigWorker(
-        @OutputCustomType.Parameter("cpu") @Nullable Double cpu,
-        @OutputCustomType.Parameter("maxCount") @Nullable Integer maxCount,
-        @OutputCustomType.Parameter("memoryGb") @Nullable Double memoryGb,
-        @OutputCustomType.Parameter("minCount") @Nullable Integer minCount,
-        @OutputCustomType.Parameter("storageGb") @Nullable Double storageGb) {
+        @CustomType.Parameter("cpu") @Nullable Double cpu,
+        @CustomType.Parameter("maxCount") @Nullable Integer maxCount,
+        @CustomType.Parameter("memoryGb") @Nullable Double memoryGb,
+        @CustomType.Parameter("minCount") @Nullable Integer minCount,
+        @CustomType.Parameter("storageGb") @Nullable Double storageGb) {
         this.cpu = cpu;
         this.maxCount = maxCount;
         this.memoryGb = memoryGb;

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigCustomInfoTypeInfoType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigCustomInfoTypeRegex;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionInspectTemplateInspectConfigCustomInfoType {
     /**
      * Dictionary which defines the rule.
@@ -57,14 +57,14 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoType {
      */
     private final @Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeStoredType storedType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionInspectTemplateInspectConfigCustomInfoType(
-        @OutputCustomType.Parameter("dictionary") @Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary dictionary,
-        @OutputCustomType.Parameter("exclusionType") @Nullable String exclusionType,
-        @OutputCustomType.Parameter("infoType") PreventionInspectTemplateInspectConfigCustomInfoTypeInfoType infoType,
-        @OutputCustomType.Parameter("likelihood") @Nullable String likelihood,
-        @OutputCustomType.Parameter("regex") @Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeRegex regex,
-        @OutputCustomType.Parameter("storedType") @Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeStoredType storedType) {
+        @CustomType.Parameter("dictionary") @Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary dictionary,
+        @CustomType.Parameter("exclusionType") @Nullable String exclusionType,
+        @CustomType.Parameter("infoType") PreventionInspectTemplateInspectConfigCustomInfoTypeInfoType infoType,
+        @CustomType.Parameter("likelihood") @Nullable String likelihood,
+        @CustomType.Parameter("regex") @Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeRegex regex,
+        @CustomType.Parameter("storedType") @Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeStoredType storedType) {
         this.dictionary = dictionary;
         this.exclusionType = exclusionType;
         this.infoType = infoType;

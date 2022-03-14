@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datastore;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datastore.DataStoreIndexArgs;
@@ -56,7 +56,7 @@ public class DataStoreIndex extends io.pulumi.resources.CustomResource {
      * Possible values are `NONE` and `ALL_ANCESTORS`.
      * 
      */
-    @OutputExport(name="ancestor", type=String.class, parameters={})
+    @Export(name="ancestor", type=String.class, parameters={})
     private Output</* @Nullable */ String> ancestor;
 
     /**
@@ -72,7 +72,7 @@ public class DataStoreIndex extends io.pulumi.resources.CustomResource {
      * The index id.
      * 
      */
-    @OutputExport(name="indexId", type=String.class, parameters={})
+    @Export(name="indexId", type=String.class, parameters={})
     private Output<String> indexId;
 
     /**
@@ -86,7 +86,7 @@ public class DataStoreIndex extends io.pulumi.resources.CustomResource {
      * The entity kind which the index applies to.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -101,7 +101,7 @@ public class DataStoreIndex extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -117,7 +117,7 @@ public class DataStoreIndex extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="properties", type=List.class, parameters={DataStoreIndexProperty.class})
+    @Export(name="properties", type=List.class, parameters={DataStoreIndexProperty.class})
     private Output</* @Nullable */ List<DataStoreIndexProperty>> properties;
 
     /**

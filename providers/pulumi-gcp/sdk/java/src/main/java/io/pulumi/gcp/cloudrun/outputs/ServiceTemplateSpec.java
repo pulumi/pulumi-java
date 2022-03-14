@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateSpecContainer;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateSpecVolume;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTemplateSpec {
     /**
      * ContainerConcurrency specifies the maximum allowed in-flight (concurrent)
@@ -64,14 +64,14 @@ public final class ServiceTemplateSpec {
      */
     private final @Nullable List<ServiceTemplateSpecVolume> volumes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTemplateSpec(
-        @OutputCustomType.Parameter("containerConcurrency") @Nullable Integer containerConcurrency,
-        @OutputCustomType.Parameter("containers") @Nullable List<ServiceTemplateSpecContainer> containers,
-        @OutputCustomType.Parameter("serviceAccountName") @Nullable String serviceAccountName,
-        @OutputCustomType.Parameter("servingState") @Nullable String servingState,
-        @OutputCustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds,
-        @OutputCustomType.Parameter("volumes") @Nullable List<ServiceTemplateSpecVolume> volumes) {
+        @CustomType.Parameter("containerConcurrency") @Nullable Integer containerConcurrency,
+        @CustomType.Parameter("containers") @Nullable List<ServiceTemplateSpecContainer> containers,
+        @CustomType.Parameter("serviceAccountName") @Nullable String serviceAccountName,
+        @CustomType.Parameter("servingState") @Nullable String servingState,
+        @CustomType.Parameter("timeoutSeconds") @Nullable Integer timeoutSeconds,
+        @CustomType.Parameter("volumes") @Nullable List<ServiceTemplateSpecVolume> volumes) {
         this.containerConcurrency = containerConcurrency;
         this.containers = containers;
         this.serviceAccountName = serviceAccountName;

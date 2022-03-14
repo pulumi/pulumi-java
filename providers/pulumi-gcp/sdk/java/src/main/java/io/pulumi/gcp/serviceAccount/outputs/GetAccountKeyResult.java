@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.serviceAccount.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAccountKeyResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -26,14 +26,14 @@ public final class GetAccountKeyResult {
     private final String publicKey;
     private final @Nullable String publicKeyType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccountKeyResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("keyAlgorithm") String keyAlgorithm,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("publicKey") String publicKey,
-        @OutputCustomType.Parameter("publicKeyType") @Nullable String publicKeyType) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("keyAlgorithm") String keyAlgorithm,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("publicKey") String publicKey,
+        @CustomType.Parameter("publicKeyType") @Nullable String publicKeyType) {
         this.id = id;
         this.keyAlgorithm = keyAlgorithm;
         this.name = name;

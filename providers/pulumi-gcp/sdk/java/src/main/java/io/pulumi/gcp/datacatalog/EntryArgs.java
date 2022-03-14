@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.datacatalog.inputs.EntryGcsFilesetSpecArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * Entry description, which can consist of several sentences or paragraphs that describe entry contents.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * for example, "Analytics Data - Jan 2011".
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -42,7 +42,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the entry group this entry is in.
      * 
      */
-    @InputImport(name="entryGroup", required=true)
+    @Import(name="entryGroup", required=true)
       private final Output<String> entryGroup;
 
     public Output<String> getEntryGroup() {
@@ -53,7 +53,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * The id of the entry to create.
      * 
      */
-    @InputImport(name="entryId", required=true)
+    @Import(name="entryId", required=true)
       private final Output<String> entryId;
 
     public Output<String> getEntryId() {
@@ -65,7 +65,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="gcsFilesetSpec")
+    @Import(name="gcsFilesetSpec")
       private final @Nullable Output<EntryGcsFilesetSpecArgs> gcsFilesetSpec;
 
     public Output<EntryGcsFilesetSpecArgs> getGcsFilesetSpec() {
@@ -81,7 +81,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * this field is optional and defaults to an empty string.
      * 
      */
-    @InputImport(name="linkedResource")
+    @Import(name="linkedResource")
       private final @Nullable Output<String> linkedResource;
 
     public Output<String> getLinkedResource() {
@@ -95,7 +95,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * for what fields this schema can contain.
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Output<String> schema;
 
     public Output<String> getSchema() {
@@ -108,7 +108,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `FILESET`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -121,7 +121,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
      * 
      */
-    @InputImport(name="userSpecifiedSystem")
+    @Import(name="userSpecifiedSystem")
       private final @Nullable Output<String> userSpecifiedSystem;
 
     public Output<String> getUserSpecifiedSystem() {
@@ -136,7 +136,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
      * numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
      * 
      */
-    @InputImport(name="userSpecifiedType")
+    @Import(name="userSpecifiedType")
       private final @Nullable Output<String> userSpecifiedType;
 
     public Output<String> getUserSpecifiedType() {

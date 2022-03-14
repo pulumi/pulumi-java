@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobQueryUserDefinedFunctionResource {
     /**
      * An inline resource that contains code for a user-defined function (UDF).
@@ -23,10 +23,10 @@ public final class JobQueryUserDefinedFunctionResource {
      */
     private final @Nullable String resourceUri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobQueryUserDefinedFunctionResource(
-        @OutputCustomType.Parameter("inlineCode") @Nullable String inlineCode,
-        @OutputCustomType.Parameter("resourceUri") @Nullable String resourceUri) {
+        @CustomType.Parameter("inlineCode") @Nullable String inlineCode,
+        @CustomType.Parameter("resourceUri") @Nullable String resourceUri) {
         this.inlineCode = inlineCode;
         this.resourceUri = resourceUri;
     }

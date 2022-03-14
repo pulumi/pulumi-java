@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GuestPoliciesRecipeArtifactRemote {
     /**
      * Must be provided if allowInsecure is false. SHA256 checksum in hex format, to compare to the checksum of the artifact.
@@ -24,10 +24,10 @@ public final class GuestPoliciesRecipeArtifactRemote {
      */
     private final @Nullable String uri;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GuestPoliciesRecipeArtifactRemote(
-        @OutputCustomType.Parameter("checkSum") @Nullable String checkSum,
-        @OutputCustomType.Parameter("uri") @Nullable String uri) {
+        @CustomType.Parameter("checkSum") @Nullable String checkSum,
+        @CustomType.Parameter("uri") @Nullable String uri) {
         this.checkSum = checkSum;
         this.uri = uri;
     }

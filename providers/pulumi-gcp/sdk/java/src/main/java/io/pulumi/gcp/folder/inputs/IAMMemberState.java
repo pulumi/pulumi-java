@@ -4,7 +4,7 @@
 package io.pulumi.gcp.folder.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.folder.inputs.IAMMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,35 +15,35 @@ public final class IAMMemberState extends io.pulumi.resources.ResourceArgs {
 
     public static final IAMMemberState Empty = new IAMMemberState();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<IAMMemberConditionGetArgs> condition;
 
     public Output<IAMMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Output.empty() : this.condition;
     }
 
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="folder")
+    @Import(name="folder")
       private final @Nullable Output<String> folder;
 
     public Output<String> getFolder() {
         return this.folder == null ? Output.empty() : this.folder;
     }
 
-    @InputImport(name="member")
+    @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
         return this.member == null ? Output.empty() : this.member;
     }
 
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

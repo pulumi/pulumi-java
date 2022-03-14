@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.datacatalog.outputs.EntryBigqueryTableSpecTableSpec;
 import io.pulumi.gcp.datacatalog.outputs.EntryBigqueryTableSpecViewSpec;
 import java.lang.String;
@@ -12,17 +12,17 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EntryBigqueryTableSpec {
     private final @Nullable String tableSourceType;
     private final @Nullable List<EntryBigqueryTableSpecTableSpec> tableSpecs;
     private final @Nullable List<EntryBigqueryTableSpecViewSpec> viewSpecs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EntryBigqueryTableSpec(
-        @OutputCustomType.Parameter("tableSourceType") @Nullable String tableSourceType,
-        @OutputCustomType.Parameter("tableSpecs") @Nullable List<EntryBigqueryTableSpecTableSpec> tableSpecs,
-        @OutputCustomType.Parameter("viewSpecs") @Nullable List<EntryBigqueryTableSpecViewSpec> viewSpecs) {
+        @CustomType.Parameter("tableSourceType") @Nullable String tableSourceType,
+        @CustomType.Parameter("tableSpecs") @Nullable List<EntryBigqueryTableSpecTableSpec> tableSpecs,
+        @CustomType.Parameter("viewSpecs") @Nullable List<EntryBigqueryTableSpecViewSpec> viewSpecs) {
         this.tableSourceType = tableSourceType;
         this.tableSpecs = tableSpecs;
         this.viewSpecs = viewSpecs;

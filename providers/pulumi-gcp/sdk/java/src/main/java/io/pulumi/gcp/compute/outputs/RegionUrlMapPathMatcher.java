@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherDefaultUrlRedirect;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherPathRule;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherRouteRule;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegionUrlMapPathMatcher {
     /**
      * A reference to a RegionBackendService resource. This will be used if
@@ -64,14 +64,14 @@ public final class RegionUrlMapPathMatcher {
      */
     private final @Nullable List<RegionUrlMapPathMatcherRouteRule> routeRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionUrlMapPathMatcher(
-        @OutputCustomType.Parameter("defaultService") @Nullable String defaultService,
-        @OutputCustomType.Parameter("defaultUrlRedirect") @Nullable RegionUrlMapPathMatcherDefaultUrlRedirect defaultUrlRedirect,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("pathRules") @Nullable List<RegionUrlMapPathMatcherPathRule> pathRules,
-        @OutputCustomType.Parameter("routeRules") @Nullable List<RegionUrlMapPathMatcherRouteRule> routeRules) {
+        @CustomType.Parameter("defaultService") @Nullable String defaultService,
+        @CustomType.Parameter("defaultUrlRedirect") @Nullable RegionUrlMapPathMatcherDefaultUrlRedirect defaultUrlRedirect,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("pathRules") @Nullable List<RegionUrlMapPathMatcherPathRule> pathRules,
+        @CustomType.Parameter("routeRules") @Nullable List<RegionUrlMapPathMatcherRouteRule> routeRules) {
         this.defaultService = defaultService;
         this.defaultUrlRedirect = defaultUrlRedirect;
         this.description = description;

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.sql.inputs.GetDatabaseInstanceSettingBackupConfiguration;
 import io.pulumi.gcp.sql.inputs.GetDatabaseInstanceSettingDatabaseFlag;
 import io.pulumi.gcp.sql.inputs.GetDatabaseInstanceSettingInsightsConfig;
@@ -22,119 +22,119 @@ public final class GetDatabaseInstanceSetting extends io.pulumi.resources.Invoke
 
     public static final GetDatabaseInstanceSetting Empty = new GetDatabaseInstanceSetting();
 
-    @InputImport(name="activationPolicy", required=true)
+    @Import(name="activationPolicy", required=true)
       private final String activationPolicy;
 
     public String getActivationPolicy() {
         return this.activationPolicy;
     }
 
-    @InputImport(name="availabilityType", required=true)
+    @Import(name="availabilityType", required=true)
       private final String availabilityType;
 
     public String getAvailabilityType() {
         return this.availabilityType;
     }
 
-    @InputImport(name="backupConfigurations", required=true)
+    @Import(name="backupConfigurations", required=true)
       private final List<GetDatabaseInstanceSettingBackupConfiguration> backupConfigurations;
 
     public List<GetDatabaseInstanceSettingBackupConfiguration> getBackupConfigurations() {
         return this.backupConfigurations;
     }
 
-    @InputImport(name="collation", required=true)
+    @Import(name="collation", required=true)
       private final String collation;
 
     public String getCollation() {
         return this.collation;
     }
 
-    @InputImport(name="databaseFlags", required=true)
+    @Import(name="databaseFlags", required=true)
       private final List<GetDatabaseInstanceSettingDatabaseFlag> databaseFlags;
 
     public List<GetDatabaseInstanceSettingDatabaseFlag> getDatabaseFlags() {
         return this.databaseFlags;
     }
 
-    @InputImport(name="diskAutoresize", required=true)
+    @Import(name="diskAutoresize", required=true)
       private final Boolean diskAutoresize;
 
     public Boolean getDiskAutoresize() {
         return this.diskAutoresize;
     }
 
-    @InputImport(name="diskAutoresizeLimit", required=true)
+    @Import(name="diskAutoresizeLimit", required=true)
       private final Integer diskAutoresizeLimit;
 
     public Integer getDiskAutoresizeLimit() {
         return this.diskAutoresizeLimit;
     }
 
-    @InputImport(name="diskSize", required=true)
+    @Import(name="diskSize", required=true)
       private final Integer diskSize;
 
     public Integer getDiskSize() {
         return this.diskSize;
     }
 
-    @InputImport(name="diskType", required=true)
+    @Import(name="diskType", required=true)
       private final String diskType;
 
     public String getDiskType() {
         return this.diskType;
     }
 
-    @InputImport(name="insightsConfigs", required=true)
+    @Import(name="insightsConfigs", required=true)
       private final List<GetDatabaseInstanceSettingInsightsConfig> insightsConfigs;
 
     public List<GetDatabaseInstanceSettingInsightsConfig> getInsightsConfigs() {
         return this.insightsConfigs;
     }
 
-    @InputImport(name="ipConfigurations", required=true)
+    @Import(name="ipConfigurations", required=true)
       private final List<GetDatabaseInstanceSettingIpConfiguration> ipConfigurations;
 
     public List<GetDatabaseInstanceSettingIpConfiguration> getIpConfigurations() {
         return this.ipConfigurations;
     }
 
-    @InputImport(name="locationPreferences", required=true)
+    @Import(name="locationPreferences", required=true)
       private final List<GetDatabaseInstanceSettingLocationPreference> locationPreferences;
 
     public List<GetDatabaseInstanceSettingLocationPreference> getLocationPreferences() {
         return this.locationPreferences;
     }
 
-    @InputImport(name="maintenanceWindows", required=true)
+    @Import(name="maintenanceWindows", required=true)
       private final List<GetDatabaseInstanceSettingMaintenanceWindow> maintenanceWindows;
 
     public List<GetDatabaseInstanceSettingMaintenanceWindow> getMaintenanceWindows() {
         return this.maintenanceWindows;
     }
 
-    @InputImport(name="pricingPlan", required=true)
+    @Import(name="pricingPlan", required=true)
       private final String pricingPlan;
 
     public String getPricingPlan() {
         return this.pricingPlan;
     }
 
-    @InputImport(name="tier", required=true)
+    @Import(name="tier", required=true)
       private final String tier;
 
     public String getTier() {
         return this.tier;
     }
 
-    @InputImport(name="userLabels", required=true)
+    @Import(name="userLabels", required=true)
       private final Map<String,String> userLabels;
 
     public Map<String,String> getUserLabels() {
         return this.userLabels;
     }
 
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final Integer version;
 
     public Integer getVersion() {

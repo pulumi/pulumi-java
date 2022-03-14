@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UptimeCheckConfigContentMatcher {
     /**
      * String or regex content to match (max 1024 bytes)
@@ -24,10 +24,10 @@ public final class UptimeCheckConfigContentMatcher {
      */
     private final @Nullable String matcher;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UptimeCheckConfigContentMatcher(
-        @OutputCustomType.Parameter("content") String content,
-        @OutputCustomType.Parameter("matcher") @Nullable String matcher) {
+        @CustomType.Parameter("content") String content,
+        @CustomType.Parameter("matcher") @Nullable String matcher) {
         this.content = content;
         this.matcher = matcher;
     }

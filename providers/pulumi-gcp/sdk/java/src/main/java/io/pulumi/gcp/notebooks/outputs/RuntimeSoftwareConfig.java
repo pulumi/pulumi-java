@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuntimeSoftwareConfig {
     /**
      * Specify a custom Cloud Storage path where the GPU driver is stored.
@@ -55,15 +55,15 @@ public final class RuntimeSoftwareConfig {
      */
     private final @Nullable String postStartupScript;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RuntimeSoftwareConfig(
-        @OutputCustomType.Parameter("customGpuDriverPath") @Nullable String customGpuDriverPath,
-        @OutputCustomType.Parameter("enableHealthMonitoring") @Nullable Boolean enableHealthMonitoring,
-        @OutputCustomType.Parameter("idleShutdown") @Nullable Boolean idleShutdown,
-        @OutputCustomType.Parameter("idleShutdownTimeout") @Nullable Integer idleShutdownTimeout,
-        @OutputCustomType.Parameter("installGpuDriver") @Nullable Boolean installGpuDriver,
-        @OutputCustomType.Parameter("notebookUpgradeSchedule") @Nullable String notebookUpgradeSchedule,
-        @OutputCustomType.Parameter("postStartupScript") @Nullable String postStartupScript) {
+        @CustomType.Parameter("customGpuDriverPath") @Nullable String customGpuDriverPath,
+        @CustomType.Parameter("enableHealthMonitoring") @Nullable Boolean enableHealthMonitoring,
+        @CustomType.Parameter("idleShutdown") @Nullable Boolean idleShutdown,
+        @CustomType.Parameter("idleShutdownTimeout") @Nullable Integer idleShutdownTimeout,
+        @CustomType.Parameter("installGpuDriver") @Nullable Boolean installGpuDriver,
+        @CustomType.Parameter("notebookUpgradeSchedule") @Nullable String notebookUpgradeSchedule,
+        @CustomType.Parameter("postStartupScript") @Nullable String postStartupScript) {
         this.customGpuDriverPath = customGpuDriverPath;
         this.enableHealthMonitoring = enableHealthMonitoring;
         this.idleShutdown = idleShutdown;

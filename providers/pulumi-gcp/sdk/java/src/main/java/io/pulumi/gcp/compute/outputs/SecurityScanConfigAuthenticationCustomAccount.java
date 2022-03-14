@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecurityScanConfigAuthenticationCustomAccount {
     /**
      * The login form URL of the website.
@@ -27,11 +27,11 @@ public final class SecurityScanConfigAuthenticationCustomAccount {
      */
     private final String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityScanConfigAuthenticationCustomAccount(
-        @OutputCustomType.Parameter("loginUrl") String loginUrl,
-        @OutputCustomType.Parameter("password") String password,
-        @OutputCustomType.Parameter("username") String username) {
+        @CustomType.Parameter("loginUrl") String loginUrl,
+        @CustomType.Parameter("password") String password,
+        @CustomType.Parameter("username") String username) {
         this.loginUrl = loginUrl;
         this.password = password;
         this.username = username;

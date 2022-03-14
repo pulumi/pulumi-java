@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetGlobalForwardingRuleMetadataFilterFilterLabel;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGlobalForwardingRuleMetadataFilter {
     private final List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels;
     private final String filterMatchCriteria;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGlobalForwardingRuleMetadataFilter(
-        @OutputCustomType.Parameter("filterLabels") List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels,
-        @OutputCustomType.Parameter("filterMatchCriteria") String filterMatchCriteria) {
+        @CustomType.Parameter("filterLabels") List<GetGlobalForwardingRuleMetadataFilterFilterLabel> filterLabels,
+        @CustomType.Parameter("filterMatchCriteria") String filterMatchCriteria) {
         this.filterLabels = filterLabels;
         this.filterMatchCriteria = filterMatchCriteria;
     }

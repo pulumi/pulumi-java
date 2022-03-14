@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigquery.inputs.JobStatusErrorArgs;
 import io.pulumi.gcp.bigquery.inputs.JobStatusErrorResultArgs;
 import java.lang.String;
@@ -17,21 +17,21 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobStatusArgs Empty = new JobStatusArgs();
 
-    @InputImport(name="errorResults")
+    @Import(name="errorResults")
       private final @Nullable Output<List<JobStatusErrorResultArgs>> errorResults;
 
     public Output<List<JobStatusErrorResultArgs>> getErrorResults() {
         return this.errorResults == null ? Output.empty() : this.errorResults;
     }
 
-    @InputImport(name="errors")
+    @Import(name="errors")
       private final @Nullable Output<List<JobStatusErrorArgs>> errors;
 
     public Output<List<JobStatusErrorArgs>> getErrors() {
         return this.errors == null ? Output.empty() : this.errors;
     }
 
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {

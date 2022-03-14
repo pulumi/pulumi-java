@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceScratchDisk {
     /**
      * The disk interface used for attaching this disk. One of `SCSI` or `NVME`.
@@ -15,8 +15,8 @@ public final class GetInstanceScratchDisk {
      */
     private final String $interface;
 
-    @OutputCustomType.Constructor
-    private GetInstanceScratchDisk(@OutputCustomType.Parameter("interface") String $interface) {
+    @CustomType.Constructor
+    private GetInstanceScratchDisk(@CustomType.Parameter("interface") String $interface) {
         this.$interface = $interface;
     }
 

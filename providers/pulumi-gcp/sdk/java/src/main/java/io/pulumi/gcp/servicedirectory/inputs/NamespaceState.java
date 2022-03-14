@@ -4,7 +4,7 @@
 package io.pulumi.gcp.servicedirectory.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class NamespaceState extends io.pulumi.resources.ResourceArgs {
      * be no longer than 63 characters.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -34,7 +34,7 @@ public final class NamespaceState extends io.pulumi.resources.ResourceArgs {
      * `gcloud beta service-directory locations list`.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -45,7 +45,7 @@ public final class NamespaceState extends io.pulumi.resources.ResourceArgs {
      * The resource name for the namespace in the format 'projects/*{@literal /}locations/*{@literal /}namespaces/*'.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class NamespaceState extends io.pulumi.resources.ResourceArgs {
      * lowercase letters or the hyphen character.
      * 
      */
-    @InputImport(name="namespaceId")
+    @Import(name="namespaceId")
       private final @Nullable Output<String> namespaceId;
 
     public Output<String> getNamespaceId() {
@@ -69,7 +69,7 @@ public final class NamespaceState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

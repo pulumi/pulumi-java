@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.logging.ProjectSinkArgs;
@@ -32,7 +32,7 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
      * Options that affect sinks exporting data to BigQuery. Structure documented below.
      * 
      */
-    @OutputExport(name="bigqueryOptions", type=ProjectSinkBigqueryOptions.class, parameters={})
+    @Export(name="bigqueryOptions", type=ProjectSinkBigqueryOptions.class, parameters={})
     private Output<ProjectSinkBigqueryOptions> bigqueryOptions;
 
     /**
@@ -46,7 +46,7 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
      * A description of this exclusion.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -63,7 +63,7 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
      * The writer associated with the sink must have access to write to the above resource.
      * 
      */
-    @OutputExport(name="destination", type=String.class, parameters={})
+    @Export(name="destination", type=String.class, parameters={})
     private Output<String> destination;
 
     /**
@@ -80,7 +80,7 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
      * If set to True, then this exclusion is disabled and it does not exclude any log entries.
      * 
      */
-    @OutputExport(name="disabled", type=Boolean.class, parameters={})
+    @Export(name="disabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disabled;
 
     /**
@@ -94,7 +94,7 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
      * Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion_filters it will not be exported.  Can be repeated multiple times for multiple exclusions. Structure is documented below.
      * 
      */
-    @OutputExport(name="exclusions", type=List.class, parameters={ProjectSinkExclusion.class})
+    @Export(name="exclusions", type=List.class, parameters={ProjectSinkExclusion.class})
     private Output</* @Nullable */ List<ProjectSinkExclusion>> exclusions;
 
     /**
@@ -109,7 +109,7 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
      * write a filter.
      * 
      */
-    @OutputExport(name="filter", type=String.class, parameters={})
+    @Export(name="filter", type=String.class, parameters={})
     private Output</* @Nullable */ String> filter;
 
     /**
@@ -124,7 +124,7 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
      * A client-assigned identifier, such as `load-balancer-exclusion`. Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -139,7 +139,7 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
      * used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -157,7 +157,7 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
      * `bigquery_options`, you must set `unique_writer_identity` to true.
      * 
      */
-    @OutputExport(name="uniqueWriterIdentity", type=Boolean.class, parameters={})
+    @Export(name="uniqueWriterIdentity", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> uniqueWriterIdentity;
 
     /**
@@ -175,7 +175,7 @@ public class ProjectSink extends io.pulumi.resources.CustomResource {
      * configured `destination`.
      * 
      */
-    @OutputExport(name="writerIdentity", type=String.class, parameters={})
+    @Export(name="writerIdentity", type=String.class, parameters={})
     private Output<String> writerIdentity;
 
     /**

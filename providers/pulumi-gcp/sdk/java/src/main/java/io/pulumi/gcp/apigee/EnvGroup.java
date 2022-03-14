@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigee.EnvGroupArgs;
@@ -43,7 +43,7 @@ public class EnvGroup extends io.pulumi.resources.CustomResource {
      * Hostnames of the environment group.
      * 
      */
-    @OutputExport(name="hostnames", type=List.class, parameters={String.class})
+    @Export(name="hostnames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> hostnames;
 
     /**
@@ -57,7 +57,7 @@ public class EnvGroup extends io.pulumi.resources.CustomResource {
      * The resource ID of the environment group.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -72,7 +72,7 @@ public class EnvGroup extends io.pulumi.resources.CustomResource {
      * in the format `organizations/{{org_name}}`.
      * 
      */
-    @OutputExport(name="orgId", type=String.class, parameters={})
+    @Export(name="orgId", type=String.class, parameters={})
     private Output<String> orgId;
 
     /**

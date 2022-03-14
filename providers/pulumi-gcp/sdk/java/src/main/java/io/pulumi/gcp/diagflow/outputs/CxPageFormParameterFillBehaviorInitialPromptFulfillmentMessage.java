@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.diagflow.outputs.CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageText;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessage {
     /**
      * A collection of text responses.
@@ -17,8 +17,8 @@ public final class CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessag
      */
     private final @Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageText text;
 
-    @OutputCustomType.Constructor
-    private CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessage(@OutputCustomType.Parameter("text") @Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageText text) {
+    @CustomType.Constructor
+    private CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessage(@CustomType.Parameter("text") @Nullable CxPageFormParameterFillBehaviorInitialPromptFulfillmentMessageText text) {
         this.text = text;
     }
 

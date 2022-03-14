@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptionsArgs extends io.
      * Path to the yaml file used in deployment, used to determine runtime configuration details.
      * 
      */
-    @InputImport(name="appYamlPath", required=true)
+    @Import(name="appYamlPath", required=true)
       private final Output<String> appYamlPath;
 
     public Output<String> getAppYamlPath() {
@@ -30,7 +30,7 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptionsArgs extends io.
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @InputImport(name="cloudBuildTimeout")
+    @Import(name="cloudBuildTimeout")
       private final @Nullable Output<String> cloudBuildTimeout;
 
     public Output<String> getCloudBuildTimeout() {

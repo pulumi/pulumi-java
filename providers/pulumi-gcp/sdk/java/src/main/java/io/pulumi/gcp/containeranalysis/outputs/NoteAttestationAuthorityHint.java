@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.containeranalysis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class NoteAttestationAuthorityHint {
     /**
      * The human readable name of this Attestation Authority, for
@@ -16,8 +16,8 @@ public final class NoteAttestationAuthorityHint {
      */
     private final String humanReadableName;
 
-    @OutputCustomType.Constructor
-    private NoteAttestationAuthorityHint(@OutputCustomType.Parameter("humanReadableName") String humanReadableName) {
+    @CustomType.Constructor
+    private NoteAttestationAuthorityHint(@CustomType.Parameter("humanReadableName") String humanReadableName) {
         this.humanReadableName = humanReadableName;
     }
 

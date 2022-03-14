@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs e
      * Target bytes received per second.
      * 
      */
-    @InputImport(name="targetReceivedBytesPerSecond")
+    @Import(name="targetReceivedBytesPerSecond")
       private final @Nullable Output<Integer> targetReceivedBytesPerSecond;
 
     public Output<Integer> getTargetReceivedBytesPerSecond() {
@@ -29,7 +29,7 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs e
      * Target packets received per second.
      * 
      */
-    @InputImport(name="targetReceivedPacketsPerSecond")
+    @Import(name="targetReceivedPacketsPerSecond")
       private final @Nullable Output<Integer> targetReceivedPacketsPerSecond;
 
     public Output<Integer> getTargetReceivedPacketsPerSecond() {
@@ -40,7 +40,7 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs e
      * Target bytes sent per second.
      * 
      */
-    @InputImport(name="targetSentBytesPerSecond")
+    @Import(name="targetSentBytesPerSecond")
       private final @Nullable Output<Integer> targetSentBytesPerSecond;
 
     public Output<Integer> getTargetSentBytesPerSecond() {
@@ -51,7 +51,7 @@ public final class FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs e
      * Target packets sent per second.
      * 
      */
-    @InputImport(name="targetSentPacketsPerSecond")
+    @Import(name="targetSentPacketsPerSecond")
       private final @Nullable Output<Integer> targetSentPacketsPerSecond;
 
     public Output<Integer> getTargetSentPacketsPerSecond() {

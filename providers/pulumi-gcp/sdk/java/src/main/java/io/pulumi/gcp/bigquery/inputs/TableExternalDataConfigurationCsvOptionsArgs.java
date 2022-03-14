@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
      * that are missing trailing optional columns.
      * 
      */
-    @InputImport(name="allowJaggedRows")
+    @Import(name="allowJaggedRows")
       private final @Nullable Output<Boolean> allowJaggedRows;
 
     public Output<Boolean> getAllowJaggedRows() {
@@ -34,7 +34,7 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
      * The default value is false.
      * 
      */
-    @InputImport(name="allowQuotedNewlines")
+    @Import(name="allowQuotedNewlines")
       private final @Nullable Output<Boolean> allowQuotedNewlines;
 
     public Output<Boolean> getAllowQuotedNewlines() {
@@ -46,7 +46,7 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
      * values are UTF-8 or ISO-8859-1.
      * 
      */
-    @InputImport(name="encoding")
+    @Import(name="encoding")
       private final @Nullable Output<String> encoding;
 
     public Output<String> getEncoding() {
@@ -57,7 +57,7 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
      * The separator for fields in a CSV file.
      * 
      */
-    @InputImport(name="fieldDelimiter")
+    @Import(name="fieldDelimiter")
       private final @Nullable Output<String> fieldDelimiter;
 
     public Output<String> getFieldDelimiter() {
@@ -74,7 +74,7 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
      * explicitly set.
      * 
      */
-    @InputImport(name="quote", required=true)
+    @Import(name="quote", required=true)
       private final Output<String> quote;
 
     public Output<String> getQuote() {
@@ -87,7 +87,7 @@ public final class TableExternalDataConfigurationCsvOptionsArgs extends io.pulum
      * `skip_leading_rows` must be set.
      * 
      */
-    @InputImport(name="skipLeadingRows")
+    @Import(name="skipLeadingRows")
       private final @Nullable Output<Integer> skipLeadingRows;
 
     public Output<Integer> getSkipLeadingRows() {

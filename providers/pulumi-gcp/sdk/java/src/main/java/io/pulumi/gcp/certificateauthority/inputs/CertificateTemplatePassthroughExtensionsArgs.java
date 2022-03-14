@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class CertificateTemplatePassthroughExtensionsArgs extends io.pulum
      * Optional. Describes custom X.509 extensions.
      * 
      */
-    @InputImport(name="additionalExtensions")
+    @Import(name="additionalExtensions")
       private final @Nullable Output<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs>> additionalExtensions;
 
     public Output<List<CertificateTemplatePassthroughExtensionsAdditionalExtensionArgs>> getAdditionalExtensions() {
@@ -31,7 +31,7 @@ public final class CertificateTemplatePassthroughExtensionsArgs extends io.pulum
      * Optional. A set of named X.509 extensions. Will be combined with additional_extensions to determine the full set of X.509 extensions.
      * 
      */
-    @InputImport(name="knownExtensions")
+    @Import(name="knownExtensions")
       private final @Nullable Output<List<String>> knownExtensions;
 
     public Output<List<String>> getKnownExtensions() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataproc.outputs.ClusterClusterConfigGceClusterConfigShieldedInstanceConfig;
 import java.lang.Boolean;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterClusterConfigGceClusterConfig {
     /**
      * By default, clusters are not restricted to internal IP addresses,
@@ -81,17 +81,17 @@ public final class ClusterClusterConfigGceClusterConfig {
      */
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterClusterConfigGceClusterConfig(
-        @OutputCustomType.Parameter("internalIpOnly") @Nullable Boolean internalIpOnly,
-        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
-        @OutputCustomType.Parameter("network") @Nullable String network,
-        @OutputCustomType.Parameter("serviceAccount") @Nullable String serviceAccount,
-        @OutputCustomType.Parameter("serviceAccountScopes") @Nullable List<String> serviceAccountScopes,
-        @OutputCustomType.Parameter("shieldedInstanceConfig") @Nullable ClusterClusterConfigGceClusterConfigShieldedInstanceConfig shieldedInstanceConfig,
-        @OutputCustomType.Parameter("subnetwork") @Nullable String subnetwork,
-        @OutputCustomType.Parameter("tags") @Nullable List<String> tags,
-        @OutputCustomType.Parameter("zone") @Nullable String zone) {
+        @CustomType.Parameter("internalIpOnly") @Nullable Boolean internalIpOnly,
+        @CustomType.Parameter("metadata") @Nullable Map<String,String> metadata,
+        @CustomType.Parameter("network") @Nullable String network,
+        @CustomType.Parameter("serviceAccount") @Nullable String serviceAccount,
+        @CustomType.Parameter("serviceAccountScopes") @Nullable List<String> serviceAccountScopes,
+        @CustomType.Parameter("shieldedInstanceConfig") @Nullable ClusterClusterConfigGceClusterConfigShieldedInstanceConfig shieldedInstanceConfig,
+        @CustomType.Parameter("subnetwork") @Nullable String subnetwork,
+        @CustomType.Parameter("tags") @Nullable List<String> tags,
+        @CustomType.Parameter("zone") @Nullable String zone) {
         this.internalIpOnly = internalIpOnly;
         this.metadata = metadata;
         this.network = network;

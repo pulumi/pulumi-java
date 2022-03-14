@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.deploymentmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DeploymentTargetConfig {
     /**
      * The full contents of the template that you want to import.
@@ -15,8 +15,8 @@ public final class DeploymentTargetConfig {
      */
     private final String content;
 
-    @OutputCustomType.Constructor
-    private DeploymentTargetConfig(@OutputCustomType.Parameter("content") String content) {
+    @CustomType.Constructor
+    private DeploymentTargetConfig(@CustomType.Parameter("content") String content) {
         this.content = content;
     }
 

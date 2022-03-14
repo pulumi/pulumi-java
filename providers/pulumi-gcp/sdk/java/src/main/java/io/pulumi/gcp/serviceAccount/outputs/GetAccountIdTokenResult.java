@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.serviceAccount.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAccountIdTokenResult {
     private final @Nullable List<String> delegates;
     /**
@@ -28,14 +28,14 @@ public final class GetAccountIdTokenResult {
     private final String targetAudience;
     private final @Nullable String targetServiceAccount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccountIdTokenResult(
-        @OutputCustomType.Parameter("delegates") @Nullable List<String> delegates,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("idToken") String idToken,
-        @OutputCustomType.Parameter("includeEmail") @Nullable Boolean includeEmail,
-        @OutputCustomType.Parameter("targetAudience") String targetAudience,
-        @OutputCustomType.Parameter("targetServiceAccount") @Nullable String targetServiceAccount) {
+        @CustomType.Parameter("delegates") @Nullable List<String> delegates,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("idToken") String idToken,
+        @CustomType.Parameter("includeEmail") @Nullable Boolean includeEmail,
+        @CustomType.Parameter("targetAudience") String targetAudience,
+        @CustomType.Parameter("targetServiceAccount") @Nullable String targetServiceAccount) {
         this.delegates = delegates;
         this.id = id;
         this.idToken = idToken;

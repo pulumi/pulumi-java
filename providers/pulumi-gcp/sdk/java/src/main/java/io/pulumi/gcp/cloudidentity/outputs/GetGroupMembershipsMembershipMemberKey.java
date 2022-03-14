@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.cloudidentity.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetGroupMembershipsMembershipMemberKey {
     /**
      * The ID of the entity. For Google-managed entities, the id is the email address of an existing
@@ -25,10 +25,10 @@ public final class GetGroupMembershipsMembershipMemberKey {
      */
     private final String namespace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGroupMembershipsMembershipMemberKey(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("namespace") String namespace) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("namespace") String namespace) {
         this.id = id;
         this.namespace = namespace;
     }

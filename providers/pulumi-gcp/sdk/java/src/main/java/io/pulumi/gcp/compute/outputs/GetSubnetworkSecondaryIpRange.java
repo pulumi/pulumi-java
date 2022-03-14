@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSubnetworkSecondaryIpRange {
     /**
      * The range of IP addresses belonging to this subnetwork
@@ -22,10 +22,10 @@ public final class GetSubnetworkSecondaryIpRange {
      */
     private final String rangeName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSubnetworkSecondaryIpRange(
-        @OutputCustomType.Parameter("ipCidrRange") String ipCidrRange,
-        @OutputCustomType.Parameter("rangeName") String rangeName) {
+        @CustomType.Parameter("ipCidrRange") String ipCidrRange,
+        @CustomType.Parameter("rangeName") String rangeName) {
         this.ipCidrRange = ipCidrRange;
         this.rangeName = rangeName;
     }

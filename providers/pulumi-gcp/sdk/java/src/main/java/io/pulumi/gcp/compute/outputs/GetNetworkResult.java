@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNetworkResult {
     /**
      * Description of this network.
@@ -40,15 +40,15 @@ public final class GetNetworkResult {
      */
     private final List<String> subnetworksSelfLinks;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNetworkResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("gatewayIpv4") String gatewayIpv4,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("subnetworksSelfLinks") List<String> subnetworksSelfLinks) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("gatewayIpv4") String gatewayIpv4,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("subnetworksSelfLinks") List<String> subnetworksSelfLinks) {
         this.description = description;
         this.gatewayIpv4 = gatewayIpv4;
         this.id = id;

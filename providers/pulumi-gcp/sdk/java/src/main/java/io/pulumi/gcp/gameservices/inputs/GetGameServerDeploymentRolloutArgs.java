@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gameservices.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class GetGameServerDeploymentRolloutArgs extends io.pulumi.resource
      * The deployment to get the rollout state from. Only 1 rollout must be associated with each deployment.
      * 
      */
-    @InputImport(name="deploymentId", required=true)
+    @Import(name="deploymentId", required=true)
       private final String deploymentId;
 
     public String getDeploymentId() {

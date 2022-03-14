@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DataTransferConfigScheduleOptions {
     /**
      * If true, automatic scheduling of data transfer runs for this
@@ -39,11 +39,11 @@ public final class DataTransferConfigScheduleOptions {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DataTransferConfigScheduleOptions(
-        @OutputCustomType.Parameter("disableAutoScheduling") @Nullable Boolean disableAutoScheduling,
-        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
+        @CustomType.Parameter("disableAutoScheduling") @Nullable Boolean disableAutoScheduling,
+        @CustomType.Parameter("endTime") @Nullable String endTime,
+        @CustomType.Parameter("startTime") @Nullable String startTime) {
         this.disableAutoScheduling = disableAutoScheduling;
         this.endTime = endTime;
         this.startTime = startTime;

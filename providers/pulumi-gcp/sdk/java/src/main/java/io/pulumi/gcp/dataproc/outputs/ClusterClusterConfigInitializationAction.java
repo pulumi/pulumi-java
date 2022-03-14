@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterClusterConfigInitializationAction {
     /**
      * The script to be executed during initialization of the cluster.
@@ -26,10 +26,10 @@ public final class ClusterClusterConfigInitializationAction {
      */
     private final @Nullable Integer timeoutSec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterClusterConfigInitializationAction(
-        @OutputCustomType.Parameter("script") String script,
-        @OutputCustomType.Parameter("timeoutSec") @Nullable Integer timeoutSec) {
+        @CustomType.Parameter("script") String script,
+        @CustomType.Parameter("timeoutSec") @Nullable Integer timeoutSec) {
         this.script = script;
         this.timeoutSec = timeoutSec;
     }

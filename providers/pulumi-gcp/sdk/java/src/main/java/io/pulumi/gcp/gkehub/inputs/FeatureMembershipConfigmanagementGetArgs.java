@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementBinauthzGetArgs;
 import io.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementConfigSyncGetArgs;
 import io.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementHierarchyControllerGetArgs;
@@ -22,7 +22,7 @@ public final class FeatureMembershipConfigmanagementGetArgs extends io.pulumi.re
      * Binauthz configuration for the cluster. Structure is documented below.
      * 
      */
-    @InputImport(name="binauthz")
+    @Import(name="binauthz")
       private final @Nullable Output<FeatureMembershipConfigmanagementBinauthzGetArgs> binauthz;
 
     public Output<FeatureMembershipConfigmanagementBinauthzGetArgs> getBinauthz() {
@@ -33,7 +33,7 @@ public final class FeatureMembershipConfigmanagementGetArgs extends io.pulumi.re
      * Config Sync configuration for the cluster. Structure is documented below.
      * 
      */
-    @InputImport(name="configSync")
+    @Import(name="configSync")
       private final @Nullable Output<FeatureMembershipConfigmanagementConfigSyncGetArgs> configSync;
 
     public Output<FeatureMembershipConfigmanagementConfigSyncGetArgs> getConfigSync() {
@@ -44,7 +44,7 @@ public final class FeatureMembershipConfigmanagementGetArgs extends io.pulumi.re
      * Hierarchy Controller configuration for the cluster. Structure is documented below.
      * 
      */
-    @InputImport(name="hierarchyController")
+    @Import(name="hierarchyController")
       private final @Nullable Output<FeatureMembershipConfigmanagementHierarchyControllerGetArgs> hierarchyController;
 
     public Output<FeatureMembershipConfigmanagementHierarchyControllerGetArgs> getHierarchyController() {
@@ -55,7 +55,7 @@ public final class FeatureMembershipConfigmanagementGetArgs extends io.pulumi.re
      * Policy Controller configuration for the cluster. Structure is documented below.
      * 
      */
-    @InputImport(name="policyController")
+    @Import(name="policyController")
       private final @Nullable Output<FeatureMembershipConfigmanagementPolicyControllerGetArgs> policyController;
 
     public Output<FeatureMembershipConfigmanagementPolicyControllerGetArgs> getPolicyController() {
@@ -66,7 +66,7 @@ public final class FeatureMembershipConfigmanagementGetArgs extends io.pulumi.re
      * Version of ACM installed.
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

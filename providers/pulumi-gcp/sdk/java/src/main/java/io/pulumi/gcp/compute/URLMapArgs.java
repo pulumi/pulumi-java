@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionArgs;
 import io.pulumi.gcp.compute.inputs.URLMapDefaultUrlRedirectArgs;
 import io.pulumi.gcp.compute.inputs.URLMapHeaderActionArgs;
@@ -30,7 +30,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="defaultRouteAction")
+    @Import(name="defaultRouteAction")
       private final @Nullable Output<URLMapDefaultRouteActionArgs> defaultRouteAction;
 
     public Output<URLMapDefaultRouteActionArgs> getDefaultRouteAction() {
@@ -41,7 +41,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
      * The backend service or backend bucket to use when none of the given paths match.
      * 
      */
-    @InputImport(name="defaultService")
+    @Import(name="defaultService")
       private final @Nullable Output<String> defaultService;
 
     public Output<String> getDefaultService() {
@@ -55,7 +55,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="defaultUrlRedirect")
+    @Import(name="defaultUrlRedirect")
       private final @Nullable Output<URLMapDefaultUrlRedirectArgs> defaultUrlRedirect;
 
     public Output<URLMapDefaultUrlRedirectArgs> getDefaultUrlRedirect() {
@@ -66,7 +66,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
      * Description of this test case.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -81,7 +81,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="headerAction")
+    @Import(name="headerAction")
       private final @Nullable Output<URLMapHeaderActionArgs> headerAction;
 
     public Output<URLMapHeaderActionArgs> getHeaderAction() {
@@ -93,7 +93,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="hostRules")
+    @Import(name="hostRules")
       private final @Nullable Output<List<URLMapHostRuleArgs>> hostRules;
 
     public Output<List<URLMapHostRuleArgs>> getHostRules() {
@@ -105,7 +105,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
      * request, in the absence of which the request match fails.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -117,7 +117,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
      * hostRule matches the URL's host portion.
      * 
      */
-    @InputImport(name="pathMatchers")
+    @Import(name="pathMatchers")
       private final @Nullable Output<List<URLMapPathMatcherArgs>> pathMatchers;
 
     public Output<List<URLMapPathMatcherArgs>> getPathMatchers() {
@@ -129,7 +129,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -143,7 +143,7 @@ public final class URLMapArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="tests")
+    @Import(name="tests")
       private final @Nullable Output<List<URLMapTestArgs>> tests;
 
     public Output<List<URLMapTestArgs>> getTests() {

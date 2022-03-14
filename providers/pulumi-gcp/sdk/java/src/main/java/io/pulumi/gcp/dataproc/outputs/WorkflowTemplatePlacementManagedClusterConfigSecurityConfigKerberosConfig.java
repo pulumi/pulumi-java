@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig {
     /**
      * Optional. The admin server (IP or hostname) for the remote trusted realm in a cross realm trust relationship.
@@ -89,23 +89,23 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
      */
     private final @Nullable String truststorePassword;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig(
-        @OutputCustomType.Parameter("crossRealmTrustAdminServer") @Nullable String crossRealmTrustAdminServer,
-        @OutputCustomType.Parameter("crossRealmTrustKdc") @Nullable String crossRealmTrustKdc,
-        @OutputCustomType.Parameter("crossRealmTrustRealm") @Nullable String crossRealmTrustRealm,
-        @OutputCustomType.Parameter("crossRealmTrustSharedPassword") @Nullable String crossRealmTrustSharedPassword,
-        @OutputCustomType.Parameter("enableKerberos") @Nullable Boolean enableKerberos,
-        @OutputCustomType.Parameter("kdcDbKey") @Nullable String kdcDbKey,
-        @OutputCustomType.Parameter("keyPassword") @Nullable String keyPassword,
-        @OutputCustomType.Parameter("keystore") @Nullable String keystore,
-        @OutputCustomType.Parameter("keystorePassword") @Nullable String keystorePassword,
-        @OutputCustomType.Parameter("kmsKey") @Nullable String kmsKey,
-        @OutputCustomType.Parameter("realm") @Nullable String realm,
-        @OutputCustomType.Parameter("rootPrincipalPassword") @Nullable String rootPrincipalPassword,
-        @OutputCustomType.Parameter("tgtLifetimeHours") @Nullable Integer tgtLifetimeHours,
-        @OutputCustomType.Parameter("truststore") @Nullable String truststore,
-        @OutputCustomType.Parameter("truststorePassword") @Nullable String truststorePassword) {
+        @CustomType.Parameter("crossRealmTrustAdminServer") @Nullable String crossRealmTrustAdminServer,
+        @CustomType.Parameter("crossRealmTrustKdc") @Nullable String crossRealmTrustKdc,
+        @CustomType.Parameter("crossRealmTrustRealm") @Nullable String crossRealmTrustRealm,
+        @CustomType.Parameter("crossRealmTrustSharedPassword") @Nullable String crossRealmTrustSharedPassword,
+        @CustomType.Parameter("enableKerberos") @Nullable Boolean enableKerberos,
+        @CustomType.Parameter("kdcDbKey") @Nullable String kdcDbKey,
+        @CustomType.Parameter("keyPassword") @Nullable String keyPassword,
+        @CustomType.Parameter("keystore") @Nullable String keystore,
+        @CustomType.Parameter("keystorePassword") @Nullable String keystorePassword,
+        @CustomType.Parameter("kmsKey") @Nullable String kmsKey,
+        @CustomType.Parameter("realm") @Nullable String realm,
+        @CustomType.Parameter("rootPrincipalPassword") @Nullable String rootPrincipalPassword,
+        @CustomType.Parameter("tgtLifetimeHours") @Nullable Integer tgtLifetimeHours,
+        @CustomType.Parameter("truststore") @Nullable String truststore,
+        @CustomType.Parameter("truststorePassword") @Nullable String truststorePassword) {
         this.crossRealmTrustAdminServer = crossRealmTrustAdminServer;
         this.crossRealmTrustKdc = crossRealmTrustKdc;
         this.crossRealmTrustRealm = crossRealmTrustRealm;

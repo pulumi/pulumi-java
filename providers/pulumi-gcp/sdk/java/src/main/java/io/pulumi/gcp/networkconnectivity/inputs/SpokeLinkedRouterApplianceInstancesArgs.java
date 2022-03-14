@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkconnectivity.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedRouterApplianceInstancesInstanceArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -19,7 +19,7 @@ public final class SpokeLinkedRouterApplianceInstancesArgs extends io.pulumi.res
      * The list of router appliance instances
      * 
      */
-    @InputImport(name="instances", required=true)
+    @Import(name="instances", required=true)
       private final Output<List<SpokeLinkedRouterApplianceInstancesInstanceArgs>> instances;
 
     public Output<List<SpokeLinkedRouterApplianceInstancesInstanceArgs>> getInstances() {
@@ -30,7 +30,7 @@ public final class SpokeLinkedRouterApplianceInstancesArgs extends io.pulumi.res
      * A value that controls whether site-to-site data transfer is enabled for these resources. Note that data transfer is available only in supported locations.
      * 
      */
-    @InputImport(name="siteToSiteDataTransfer", required=true)
+    @Import(name="siteToSiteDataTransfer", required=true)
       private final Output<Boolean> siteToSiteDataTransfer;
 
     public Output<Boolean> getSiteToSiteDataTransfer() {

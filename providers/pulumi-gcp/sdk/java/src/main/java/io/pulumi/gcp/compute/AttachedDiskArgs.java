@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * the instance.
      * 
      */
-    @InputImport(name="deviceName")
+    @Import(name="deviceName")
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
@@ -33,7 +33,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * `name` or `self_link` of the disk that will be attached.
      * 
      */
-    @InputImport(name="disk", required=true)
+    @Import(name="disk", required=true)
       private final Output<String> disk;
 
     public Output<String> getDisk() {
@@ -47,7 +47,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * as properties on the resource or provider.
      * 
      */
-    @InputImport(name="instance", required=true)
+    @Import(name="instance", required=true)
       private final Output<String> instance;
 
     public Output<String> getInstance() {
@@ -60,7 +60,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * READ_WRITE mode.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
@@ -72,7 +72,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * `self_link` the project defined in the link will take precedence.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -84,7 +84,7 @@ public final class AttachedDiskArgs extends io.pulumi.resources.ResourceArgs {
      * `self_link` the zone defined in the link will take precedence.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.serviceAccount;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @InputImport(name="policyData", required=true)
+    @Import(name="policyData", required=true)
       private final Output<String> policyData;
 
     public Output<String> getPolicyData() {
@@ -29,7 +29,7 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The fully-qualified name of the service account to apply policy to.
      * 
      */
-    @InputImport(name="serviceAccountId", required=true)
+    @Import(name="serviceAccountId", required=true)
       private final Output<String> serviceAccountId;
 
     public Output<String> getServiceAccountId() {

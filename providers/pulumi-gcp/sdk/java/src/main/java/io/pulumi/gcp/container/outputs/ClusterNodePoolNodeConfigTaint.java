@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterNodePoolNodeConfigTaint {
     /**
      * Effect for taint. Accepted values are `NO_SCHEDULE`, `PREFER_NO_SCHEDULE`, and `NO_EXECUTE`.
@@ -25,11 +25,11 @@ public final class ClusterNodePoolNodeConfigTaint {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterNodePoolNodeConfigTaint(
-        @OutputCustomType.Parameter("effect") String effect,
-        @OutputCustomType.Parameter("key") String key,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("effect") String effect,
+        @CustomType.Parameter("key") String key,
+        @CustomType.Parameter("value") String value) {
         this.effect = effect;
         this.key = key;
         this.value = value;

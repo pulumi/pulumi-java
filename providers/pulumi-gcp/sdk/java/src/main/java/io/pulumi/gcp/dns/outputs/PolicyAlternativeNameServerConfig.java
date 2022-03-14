@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dns.outputs.PolicyAlternativeNameServerConfigTargetNameServer;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PolicyAlternativeNameServerConfig {
     /**
      * Sets an alternative name server for the associated networks. When specified,
@@ -19,8 +19,8 @@ public final class PolicyAlternativeNameServerConfig {
      */
     private final List<PolicyAlternativeNameServerConfigTargetNameServer> targetNameServers;
 
-    @OutputCustomType.Constructor
-    private PolicyAlternativeNameServerConfig(@OutputCustomType.Parameter("targetNameServers") List<PolicyAlternativeNameServerConfigTargetNameServer> targetNameServers) {
+    @CustomType.Constructor
+    private PolicyAlternativeNameServerConfig(@CustomType.Parameter("targetNameServers") List<PolicyAlternativeNameServerConfigTargetNameServer> targetNameServers) {
         this.targetNameServers = targetNameServers;
     }
 

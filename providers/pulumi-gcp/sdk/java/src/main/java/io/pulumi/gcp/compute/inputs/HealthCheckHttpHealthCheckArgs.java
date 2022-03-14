@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class HealthCheckHttpHealthCheckArgs extends io.pulumi.resources.Re
      * check is performed will be used.
      * 
      */
-    @InputImport(name="host")
+    @Import(name="host")
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
@@ -34,7 +34,7 @@ public final class HealthCheckHttpHealthCheckArgs extends io.pulumi.resources.Re
      * or if port_specification is USE_FIXED_PORT. Valid values are 1 through 65535.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -46,7 +46,7 @@ public final class HealthCheckHttpHealthCheckArgs extends io.pulumi.resources.Re
      * port_name are defined, port takes precedence.
      * 
      */
-    @InputImport(name="portName")
+    @Import(name="portName")
       private final @Nullable Output<String> portName;
 
     public Output<String> getPortName() {
@@ -67,7 +67,7 @@ public final class HealthCheckHttpHealthCheckArgs extends io.pulumi.resources.Re
      *   Possible values are `USE_FIXED_PORT`, `USE_NAMED_PORT`, and `USE_SERVING_PORT`.
      * 
      */
-    @InputImport(name="portSpecification")
+    @Import(name="portSpecification")
       private final @Nullable Output<String> portSpecification;
 
     public Output<String> getPortSpecification() {
@@ -81,7 +81,7 @@ public final class HealthCheckHttpHealthCheckArgs extends io.pulumi.resources.Re
      * Possible values are `NONE` and `PROXY_V1`.
      * 
      */
-    @InputImport(name="proxyHeader")
+    @Import(name="proxyHeader")
       private final @Nullable Output<String> proxyHeader;
 
     public Output<String> getProxyHeader() {
@@ -93,7 +93,7 @@ public final class HealthCheckHttpHealthCheckArgs extends io.pulumi.resources.Re
      * The default value is /.
      * 
      */
-    @InputImport(name="requestPath")
+    @Import(name="requestPath")
       private final @Nullable Output<String> requestPath;
 
     public Output<String> getRequestPath() {
@@ -106,7 +106,7 @@ public final class HealthCheckHttpHealthCheckArgs extends io.pulumi.resources.Re
      * can only be ASCII.
      * 
      */
-    @InputImport(name="response")
+    @Import(name="response")
       private final @Nullable Output<String> response;
 
     public Output<String> getResponse() {

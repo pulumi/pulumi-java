@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
      * in the format `organizations/{{org_name}}/envgroups/{{envgroup_name}}`.
      * 
      */
-    @InputImport(name="envgroupId")
+    @Import(name="envgroupId")
       private final @Nullable Output<String> envgroupId;
 
     public Output<String> getEnvgroupId() {
@@ -30,7 +30,7 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
      * The resource ID of the environment.
      * 
      */
-    @InputImport(name="environment")
+    @Import(name="environment")
       private final @Nullable Output<String> environment;
 
     public Output<String> getEnvironment() {
@@ -41,7 +41,7 @@ public final class EnvGroupAttachmentState extends io.pulumi.resources.ResourceA
      * The name of the newly created attachment (output parameter).
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

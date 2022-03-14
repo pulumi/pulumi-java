@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage {
     /**
      * Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as "TLS WWW client authentication", though regularly used for non-WWW TLS.
@@ -42,14 +42,14 @@ public final class CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage {
      */
     private final @Nullable Boolean timeStamping;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateTemplatePredefinedValuesKeyUsageExtendedKeyUsage(
-        @OutputCustomType.Parameter("clientAuth") @Nullable Boolean clientAuth,
-        @OutputCustomType.Parameter("codeSigning") @Nullable Boolean codeSigning,
-        @OutputCustomType.Parameter("emailProtection") @Nullable Boolean emailProtection,
-        @OutputCustomType.Parameter("ocspSigning") @Nullable Boolean ocspSigning,
-        @OutputCustomType.Parameter("serverAuth") @Nullable Boolean serverAuth,
-        @OutputCustomType.Parameter("timeStamping") @Nullable Boolean timeStamping) {
+        @CustomType.Parameter("clientAuth") @Nullable Boolean clientAuth,
+        @CustomType.Parameter("codeSigning") @Nullable Boolean codeSigning,
+        @CustomType.Parameter("emailProtection") @Nullable Boolean emailProtection,
+        @CustomType.Parameter("ocspSigning") @Nullable Boolean ocspSigning,
+        @CustomType.Parameter("serverAuth") @Nullable Boolean serverAuth,
+        @CustomType.Parameter("timeStamping") @Nullable Boolean timeStamping) {
         this.clientAuth = clientAuth;
         this.codeSigning = codeSigning;
         this.emailProtection = emailProtection;

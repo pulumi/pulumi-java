@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.binaryauthorization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.binaryauthorization.outputs.AttestorAttestationAuthorityNotePublicKey;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AttestorAttestationAuthorityNote {
     /**
      * - 
@@ -51,11 +51,11 @@ public final class AttestorAttestationAuthorityNote {
      */
     private final @Nullable List<AttestorAttestationAuthorityNotePublicKey> publicKeys;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AttestorAttestationAuthorityNote(
-        @OutputCustomType.Parameter("delegationServiceAccountEmail") @Nullable String delegationServiceAccountEmail,
-        @OutputCustomType.Parameter("noteReference") String noteReference,
-        @OutputCustomType.Parameter("publicKeys") @Nullable List<AttestorAttestationAuthorityNotePublicKey> publicKeys) {
+        @CustomType.Parameter("delegationServiceAccountEmail") @Nullable String delegationServiceAccountEmail,
+        @CustomType.Parameter("noteReference") String noteReference,
+        @CustomType.Parameter("publicKeys") @Nullable List<AttestorAttestationAuthorityNotePublicKey> publicKeys) {
         this.delegationServiceAccountEmail = delegationServiceAccountEmail;
         this.noteReference = noteReference;
         this.publicKeys = publicKeys;

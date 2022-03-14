@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs;
 import io.pulumi.gcp.container.inputs.ClusterMaintenancePolicyMaintenanceExclusionGetArgs;
 import io.pulumi.gcp.container.inputs.ClusterMaintenancePolicyRecurringWindowGetArgs;
@@ -23,7 +23,7 @@ public final class ClusterMaintenancePolicyGetArgs extends io.pulumi.resources.R
      * where HH : \[00-23\] and MM : \[00-59\] GMT. For example:
      * 
      */
-    @InputImport(name="dailyMaintenanceWindow")
+    @Import(name="dailyMaintenanceWindow")
       private final @Nullable Output<ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs> dailyMaintenanceWindow;
 
     public Output<ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs> getDailyMaintenanceWindow() {
@@ -34,7 +34,7 @@ public final class ClusterMaintenancePolicyGetArgs extends io.pulumi.resources.R
      * Exceptions to maintenance window. Non-emergency maintenance should not occur in these windows. A cluster can have up to three maintenance exclusions at a time [Maintenance Window and Exclusions](https://cloud.google.com/kubernetes-engine/docs/concepts/maintenance-windows-and-exclusions)
      * 
      */
-    @InputImport(name="maintenanceExclusions")
+    @Import(name="maintenanceExclusions")
       private final @Nullable Output<List<ClusterMaintenancePolicyMaintenanceExclusionGetArgs>> maintenanceExclusions;
 
     public Output<List<ClusterMaintenancePolicyMaintenanceExclusionGetArgs>> getMaintenanceExclusions() {
@@ -45,7 +45,7 @@ public final class ClusterMaintenancePolicyGetArgs extends io.pulumi.resources.R
      * Time window for recurring maintenance operations.
      * 
      */
-    @InputImport(name="recurringWindow")
+    @Import(name="recurringWindow")
       private final @Nullable Output<ClusterMaintenancePolicyRecurringWindowGetArgs> recurringWindow;
 
     public Output<ClusterMaintenancePolicyRecurringWindowGetArgs> getRecurringWindow() {

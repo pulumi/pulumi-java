@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigKeyUsageBaseKeyUsageGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs;
@@ -22,7 +22,7 @@ public final class AuthorityConfigX509ConfigKeyUsageGetArgs extends io.pulumi.re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="baseKeyUsage", required=true)
+    @Import(name="baseKeyUsage", required=true)
       private final Output<AuthorityConfigX509ConfigKeyUsageBaseKeyUsageGetArgs> baseKeyUsage;
 
     public Output<AuthorityConfigX509ConfigKeyUsageBaseKeyUsageGetArgs> getBaseKeyUsage() {
@@ -34,7 +34,7 @@ public final class AuthorityConfigX509ConfigKeyUsageGetArgs extends io.pulumi.re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="extendedKeyUsage", required=true)
+    @Import(name="extendedKeyUsage", required=true)
       private final Output<AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs> extendedKeyUsage;
 
     public Output<AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs> getExtendedKeyUsage() {
@@ -46,7 +46,7 @@ public final class AuthorityConfigX509ConfigKeyUsageGetArgs extends io.pulumi.re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="unknownExtendedKeyUsages")
+    @Import(name="unknownExtendedKeyUsages")
       private final @Nullable Output<List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs>> unknownExtendedKeyUsages;
 
     public Output<List<AuthorityConfigX509ConfigKeyUsageUnknownExtendedKeyUsageGetArgs>> getUnknownExtendedKeyUsages() {

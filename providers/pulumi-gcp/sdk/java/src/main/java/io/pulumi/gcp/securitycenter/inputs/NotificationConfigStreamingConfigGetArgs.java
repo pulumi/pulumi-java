@@ -4,7 +4,7 @@
 package io.pulumi.gcp.securitycenter.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,7 +35,7 @@ public final class NotificationConfigStreamingConfigGetArgs extends io.pulumi.re
      *   for information on how to write a filter.
      * 
      */
-    @InputImport(name="filter", required=true)
+    @Import(name="filter", required=true)
       private final Output<String> filter;
 
     public Output<String> getFilter() {

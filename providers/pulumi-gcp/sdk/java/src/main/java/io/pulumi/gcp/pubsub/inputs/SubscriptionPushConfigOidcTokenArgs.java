@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SubscriptionPushConfigOidcTokenArgs extends io.pulumi.resourc
      * Note: if not specified, the Push endpoint URL will be used.
      * 
      */
-    @InputImport(name="audience")
+    @Import(name="audience")
       private final @Nullable Output<String> audience;
 
     public Output<String> getAudience() {
@@ -37,7 +37,7 @@ public final class SubscriptionPushConfigOidcTokenArgs extends io.pulumi.resourc
      * iam.serviceAccounts.actAs permission for the service account.
      * 
      */
-    @InputImport(name="serviceAccountEmail", required=true)
+    @Import(name="serviceAccountEmail", required=true)
       private final Output<String> serviceAccountEmail;
 
     public Output<String> getServiceAccountEmail() {

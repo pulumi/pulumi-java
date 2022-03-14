@@ -4,7 +4,7 @@
 package io.pulumi.gcp.containeranalysis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class OccurenceAttestationSignatureArgs extends io.pulumi.resources
      * * "ni:///sha-256;cD9o9Cq6LG3jD0iKXqEi_vdjJGecm_iXkbqVoScViaU"
      * 
      */
-    @InputImport(name="publicKeyId", required=true)
+    @Import(name="publicKeyId", required=true)
       private final Output<String> publicKeyId;
 
     public Output<String> getPublicKeyId() {
@@ -44,7 +44,7 @@ public final class OccurenceAttestationSignatureArgs extends io.pulumi.resources
      * unambiguously computed to derive the payload.
      * 
      */
-    @InputImport(name="signature")
+    @Import(name="signature")
       private final @Nullable Output<String> signature;
 
     public Output<String> getSignature() {

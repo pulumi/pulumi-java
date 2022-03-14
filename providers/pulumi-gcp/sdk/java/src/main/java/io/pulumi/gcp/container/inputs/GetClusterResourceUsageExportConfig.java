@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.GetClusterResourceUsageExportConfigBigqueryDestination;
 import java.lang.Boolean;
 import java.util.List;
@@ -14,21 +14,21 @@ public final class GetClusterResourceUsageExportConfig extends io.pulumi.resourc
 
     public static final GetClusterResourceUsageExportConfig Empty = new GetClusterResourceUsageExportConfig();
 
-    @InputImport(name="bigqueryDestinations", required=true)
+    @Import(name="bigqueryDestinations", required=true)
       private final List<GetClusterResourceUsageExportConfigBigqueryDestination> bigqueryDestinations;
 
     public List<GetClusterResourceUsageExportConfigBigqueryDestination> getBigqueryDestinations() {
         return this.bigqueryDestinations;
     }
 
-    @InputImport(name="enableNetworkEgressMetering", required=true)
+    @Import(name="enableNetworkEgressMetering", required=true)
       private final Boolean enableNetworkEgressMetering;
 
     public Boolean getEnableNetworkEgressMetering() {
         return this.enableNetworkEgressMetering;
     }
 
-    @InputImport(name="enableResourceConsumptionMetering", required=true)
+    @Import(name="enableResourceConsumptionMetering", required=true)
       private final Boolean enableResourceConsumptionMetering;
 
     public Boolean getEnableResourceConsumptionMetering() {

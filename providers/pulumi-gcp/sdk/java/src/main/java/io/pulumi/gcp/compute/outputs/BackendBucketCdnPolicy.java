@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.BackendBucketCdnPolicyNegativeCachingPolicy;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BackendBucketCdnPolicy {
     /**
      * Specifies the cache setting for all responses from this backend.
@@ -68,16 +68,16 @@ public final class BackendBucketCdnPolicy {
      */
     private final @Nullable Integer signedUrlCacheMaxAgeSec;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendBucketCdnPolicy(
-        @OutputCustomType.Parameter("cacheMode") @Nullable String cacheMode,
-        @OutputCustomType.Parameter("clientTtl") @Nullable Integer clientTtl,
-        @OutputCustomType.Parameter("defaultTtl") @Nullable Integer defaultTtl,
-        @OutputCustomType.Parameter("maxTtl") @Nullable Integer maxTtl,
-        @OutputCustomType.Parameter("negativeCaching") @Nullable Boolean negativeCaching,
-        @OutputCustomType.Parameter("negativeCachingPolicies") @Nullable List<BackendBucketCdnPolicyNegativeCachingPolicy> negativeCachingPolicies,
-        @OutputCustomType.Parameter("serveWhileStale") @Nullable Integer serveWhileStale,
-        @OutputCustomType.Parameter("signedUrlCacheMaxAgeSec") @Nullable Integer signedUrlCacheMaxAgeSec) {
+        @CustomType.Parameter("cacheMode") @Nullable String cacheMode,
+        @CustomType.Parameter("clientTtl") @Nullable Integer clientTtl,
+        @CustomType.Parameter("defaultTtl") @Nullable Integer defaultTtl,
+        @CustomType.Parameter("maxTtl") @Nullable Integer maxTtl,
+        @CustomType.Parameter("negativeCaching") @Nullable Boolean negativeCaching,
+        @CustomType.Parameter("negativeCachingPolicies") @Nullable List<BackendBucketCdnPolicyNegativeCachingPolicy> negativeCachingPolicies,
+        @CustomType.Parameter("serveWhileStale") @Nullable Integer serveWhileStale,
+        @CustomType.Parameter("signedUrlCacheMaxAgeSec") @Nullable Integer signedUrlCacheMaxAgeSec) {
         this.cacheMode = cacheMode;
         this.clientTtl = clientTtl;
         this.defaultTtl = defaultTtl;

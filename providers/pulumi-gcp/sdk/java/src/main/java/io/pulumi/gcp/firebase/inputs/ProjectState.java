@@ -4,7 +4,7 @@
 package io.pulumi.gcp.firebase.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * The GCP project display name
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -30,7 +30,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -41,7 +41,7 @@ public final class ProjectState extends io.pulumi.resources.ResourceArgs {
      * The number of the google project that firebase is enabled on.
      * 
      */
-    @InputImport(name="projectNumber")
+    @Import(name="projectNumber")
       private final @Nullable Output<String> projectNumber;
 
     public Output<String> getProjectNumber() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.datacatalog.inputs.TagTemplateFieldTypeArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -21,7 +21,7 @@ public final class TagTemplateFieldArgs extends io.pulumi.resources.ResourceArgs
      * A description for this field.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class TagTemplateFieldArgs extends io.pulumi.resources.ResourceArgs
      * The display name for this template.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -43,7 +43,7 @@ public final class TagTemplateFieldArgs extends io.pulumi.resources.ResourceArgs
      * The identifier for this object. Format specified above.
      * 
      */
-    @InputImport(name="fieldId", required=true)
+    @Import(name="fieldId", required=true)
       private final Output<String> fieldId;
 
     public Output<String> getFieldId() {
@@ -54,7 +54,7 @@ public final class TagTemplateFieldArgs extends io.pulumi.resources.ResourceArgs
      * Whether this is a required field. Defaults to false.
      * 
      */
-    @InputImport(name="isRequired")
+    @Import(name="isRequired")
       private final @Nullable Output<Boolean> isRequired;
 
     public Output<Boolean> getIsRequired() {
@@ -66,7 +66,7 @@ public final class TagTemplateFieldArgs extends io.pulumi.resources.ResourceArgs
      * The resource name of the tag template field in URL format. Example: projects/{project_id}/locations/{location}/tagTemplates/{tagTemplateId}/fields/{field}
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -79,7 +79,7 @@ public final class TagTemplateFieldArgs extends io.pulumi.resources.ResourceArgs
      * Multiple fields can have the same order, and field orders within a tag do not have to be sequential.
      * 
      */
-    @InputImport(name="order")
+    @Import(name="order")
       private final @Nullable Output<Integer> order;
 
     public Output<Integer> getOrder() {
@@ -91,7 +91,7 @@ public final class TagTemplateFieldArgs extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<TagTemplateFieldTypeArgs> type;
 
     public Output<TagTemplateFieldTypeArgs> getType() {

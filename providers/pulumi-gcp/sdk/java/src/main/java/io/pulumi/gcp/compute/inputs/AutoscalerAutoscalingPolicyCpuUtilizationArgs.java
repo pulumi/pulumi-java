@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AutoscalerAutoscalingPolicyCpuUtilizationArgs extends io.pulu
      * - OPTIMIZE_AVAILABILITY. Predictive autoscaling improves availability by monitoring daily and weekly load patterns and scaling out ahead of anticipated demand.
      * 
      */
-    @InputImport(name="predictiveMethod")
+    @Import(name="predictiveMethod")
       private final @Nullable Output<String> predictiveMethod;
 
     public Output<String> getPredictiveMethod() {
@@ -34,7 +34,7 @@ public final class AutoscalerAutoscalingPolicyCpuUtilizationArgs extends io.pulu
      * be a positive float value. If not defined, the default is 0.8.
      * 
      */
-    @InputImport(name="target", required=true)
+    @Import(name="target", required=true)
       private final Output<Double> target;
 
     public Output<Double> getTarget() {

@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StandardAppVersionDeploymentZip {
     /**
      * files count
@@ -23,10 +23,10 @@ public final class StandardAppVersionDeploymentZip {
      */
     private final String sourceUrl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StandardAppVersionDeploymentZip(
-        @OutputCustomType.Parameter("filesCount") @Nullable Integer filesCount,
-        @OutputCustomType.Parameter("sourceUrl") String sourceUrl) {
+        @CustomType.Parameter("filesCount") @Nullable Integer filesCount,
+        @CustomType.Parameter("sourceUrl") String sourceUrl) {
         this.filesCount = filesCount;
         this.sourceUrl = sourceUrl;
     }

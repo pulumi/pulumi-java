@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.notebooks.inputs.InstanceAcceleratorConfigArgs;
 import io.pulumi.gcp.notebooks.inputs.InstanceContainerImageArgs;
 import io.pulumi.gcp.notebooks.inputs.InstanceReservationAffinityArgs;
@@ -30,7 +30,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="acceleratorConfig")
+    @Import(name="acceleratorConfig")
       private final @Nullable Output<InstanceAcceleratorConfigArgs> acceleratorConfig;
 
     public Output<InstanceAcceleratorConfigArgs> getAcceleratorConfig() {
@@ -43,7 +43,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * If not specified, this defaults to 100.
      * 
      */
-    @InputImport(name="bootDiskSizeGb")
+    @Import(name="bootDiskSizeGb")
       private final @Nullable Output<Integer> bootDiskSizeGb;
 
     public Output<Integer> getBootDiskSizeGb() {
@@ -55,7 +55,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
      * 
      */
-    @InputImport(name="bootDiskType")
+    @Import(name="bootDiskType")
       private final @Nullable Output<String> bootDiskType;
 
     public Output<String> getBootDiskType() {
@@ -67,7 +67,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="containerImage")
+    @Import(name="containerImage")
       private final @Nullable Output<InstanceContainerImageArgs> containerImage;
 
     public Output<InstanceContainerImageArgs> getContainerImage() {
@@ -78,7 +78,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Instance creation time
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -90,7 +90,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * If not specified, we'll automatically choose from official GPU drivers.
      * 
      */
-    @InputImport(name="customGpuDriverPath")
+    @Import(name="customGpuDriverPath")
       private final @Nullable Output<String> customGpuDriverPath;
 
     public Output<String> getCustomGpuDriverPath() {
@@ -104,7 +104,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * If not specified, this defaults to 100.
      * 
      */
-    @InputImport(name="dataDiskSizeGb")
+    @Import(name="dataDiskSizeGb")
       private final @Nullable Output<Integer> dataDiskSizeGb;
 
     public Output<Integer> getDataDiskSizeGb() {
@@ -116,7 +116,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `DISK_TYPE_UNSPECIFIED`, `PD_STANDARD`, `PD_SSD`, and `PD_BALANCED`.
      * 
      */
-    @InputImport(name="dataDiskType")
+    @Import(name="dataDiskType")
       private final @Nullable Output<String> dataDiskType;
 
     public Output<String> getDataDiskType() {
@@ -128,7 +128,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `DISK_ENCRYPTION_UNSPECIFIED`, `GMEK`, and `CMEK`.
      * 
      */
-    @InputImport(name="diskEncryption")
+    @Import(name="diskEncryption")
       private final @Nullable Output<String> diskEncryption;
 
     public Output<String> getDiskEncryption() {
@@ -141,7 +141,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * won't be installed. Only applicable to instances with GPUs.
      * 
      */
-    @InputImport(name="installGpuDriver")
+    @Import(name="installGpuDriver")
       private final @Nullable Output<Boolean> installGpuDriver;
 
     public Output<Boolean> getInstallGpuDriver() {
@@ -156,7 +156,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * your VM instance's service account can use the instance.
      * 
      */
-    @InputImport(name="instanceOwners")
+    @Import(name="instanceOwners")
       private final @Nullable Output<List<String>> instanceOwners;
 
     public Output<List<String>> getInstanceOwners() {
@@ -168,7 +168,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Format: projects/{project_id}/locations/{location}/keyRings/{key_ring_id}/cryptoKeys/{key_id}
      * 
      */
-    @InputImport(name="kmsKey")
+    @Import(name="kmsKey")
       private final @Nullable Output<String> kmsKey;
 
     public Output<String> getKmsKey() {
@@ -180,7 +180,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -191,7 +191,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * A reference to the zone where the machine resides.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -202,7 +202,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * A reference to a machine type which defines VM kind.
      * 
      */
-    @InputImport(name="machineType", required=true)
+    @Import(name="machineType", required=true)
       private final Output<String> machineType;
 
     public Output<String> getMachineType() {
@@ -214,7 +214,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -225,7 +225,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The name specified for the Notebook instance.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -237,7 +237,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Format: projects/{project_id}/global/networks/{network_id}
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -249,7 +249,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `UNSPECIFIED_NIC_TYPE`, `VIRTIO_NET`, and `GVNIC`.
      * 
      */
-    @InputImport(name="nicType")
+    @Import(name="nicType")
       private final @Nullable Output<String> nicType;
 
     public Output<String> getNicType() {
@@ -260,7 +260,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The notebook instance will not register with the proxy..
      * 
      */
-    @InputImport(name="noProxyAccess")
+    @Import(name="noProxyAccess")
       private final @Nullable Output<Boolean> noProxyAccess;
 
     public Output<Boolean> getNoProxyAccess() {
@@ -271,7 +271,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * No public IP will be assigned to this instance.
      * 
      */
-    @InputImport(name="noPublicIp")
+    @Import(name="noPublicIp")
       private final @Nullable Output<Boolean> noPublicIp;
 
     public Output<Boolean> getNoPublicIp() {
@@ -282,7 +282,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * If true, the data disk will not be auto deleted when deleting the instance.
      * 
      */
-    @InputImport(name="noRemoveDataDisk")
+    @Import(name="noRemoveDataDisk")
       private final @Nullable Output<Boolean> noRemoveDataDisk;
 
     public Output<Boolean> getNoRemoveDataDisk() {
@@ -295,7 +295,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * or Cloud Storage path (gs://path-to-file/file-name).
      * 
      */
-    @InputImport(name="postStartupScript")
+    @Import(name="postStartupScript")
       private final @Nullable Output<String> postStartupScript;
 
     public Output<String> getPostStartupScript() {
@@ -307,7 +307,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Format: projects/{project_id}
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -319,7 +319,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="reservationAffinity")
+    @Import(name="reservationAffinity")
       private final @Nullable Output<InstanceReservationAffinityArgs> reservationAffinity;
 
     public Output<InstanceReservationAffinityArgs> getReservationAffinity() {
@@ -334,7 +334,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * the Compute Engine default service account is used.
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
@@ -348,7 +348,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * - https://www.googleapis.com/auth/userinfo.email
      * 
      */
-    @InputImport(name="serviceAccountScopes")
+    @Import(name="serviceAccountScopes")
       private final @Nullable Output<List<String>> serviceAccountScopes;
 
     public Output<List<String>> getServiceAccountScopes() {
@@ -361,7 +361,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="shieldedInstanceConfig")
+    @Import(name="shieldedInstanceConfig")
       private final @Nullable Output<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     public Output<InstanceShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
@@ -373,7 +373,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Format: projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}
      * 
      */
-    @InputImport(name="subnet")
+    @Import(name="subnet")
       private final @Nullable Output<String> subnet;
 
     public Output<String> getSubnet() {
@@ -384,7 +384,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The Compute Engine tags to add to instance.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
@@ -395,7 +395,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Instance update time.
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
@@ -407,7 +407,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="vmImage")
+    @Import(name="vmImage")
       private final @Nullable Output<InstanceVmImageArgs> vmImage;
 
     public Output<InstanceVmImageArgs> getVmImage() {

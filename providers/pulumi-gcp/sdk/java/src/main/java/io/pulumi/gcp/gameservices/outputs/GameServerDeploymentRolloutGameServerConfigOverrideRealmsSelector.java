@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.gameservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector {
     /**
      * List of realms to match against.
@@ -17,8 +17,8 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideRealmsSele
      */
     private final @Nullable List<String> realms;
 
-    @OutputCustomType.Constructor
-    private GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector(@OutputCustomType.Parameter("realms") @Nullable List<String> realms) {
+    @CustomType.Constructor
+    private GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector(@CustomType.Parameter("realms") @Nullable List<String> realms) {
         this.realms = realms;
     }
 

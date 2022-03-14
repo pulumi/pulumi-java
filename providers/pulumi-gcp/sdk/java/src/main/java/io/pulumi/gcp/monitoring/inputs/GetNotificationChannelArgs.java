@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
      * The display name for this notification channel.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -31,7 +31,7 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
      * NotificationChannelDescriptor schema) to filter the notification channels by.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Map<String,String> labels;
 
     public Map<String,String> getLabels() {
@@ -43,7 +43,7 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
@@ -54,7 +54,7 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
      * The type of the notification channel.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {
@@ -65,7 +65,7 @@ public final class GetNotificationChannelArgs extends io.pulumi.resources.Invoke
      * User-provided key-value labels to filter by.
      * 
      */
-    @InputImport(name="userLabels")
+    @Import(name="userLabels")
       private final @Nullable Map<String,String> userLabels;
 
     public Map<String,String> getUserLabels() {

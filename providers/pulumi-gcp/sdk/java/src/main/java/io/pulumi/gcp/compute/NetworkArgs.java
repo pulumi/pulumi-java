@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * the user can explicitly connect subnetwork resources.
      * 
      */
-    @InputImport(name="autoCreateSubnetworks")
+    @Import(name="autoCreateSubnetworks")
       private final @Nullable Output<Boolean> autoCreateSubnetworks;
 
     public Output<Boolean> getAutoCreateSubnetworks() {
@@ -36,7 +36,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * immediately after network creation. Defaults to `false`.
      * 
      */
-    @InputImport(name="deleteDefaultRoutesOnCreate")
+    @Import(name="deleteDefaultRoutesOnCreate")
       private final @Nullable Output<Boolean> deleteDefaultRoutesOnCreate;
 
     public Output<Boolean> getDeleteDefaultRoutesOnCreate() {
@@ -48,7 +48,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * recreated to modify this field.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -60,7 +60,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * and the maximum value is 1500 bytes.
      * 
      */
-    @InputImport(name="mtu")
+    @Import(name="mtu")
       private final @Nullable Output<Integer> mtu;
 
     public Output<Integer> getMtu() {
@@ -77,7 +77,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -89,7 +89,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -105,7 +105,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `REGIONAL` and `GLOBAL`.
      * 
      */
-    @InputImport(name="routingMode")
+    @Import(name="routingMode")
       private final @Nullable Output<String> routingMode;
 
     public Output<String> getRoutingMode() {

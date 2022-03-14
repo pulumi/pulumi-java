@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.OrganizationSecurityPolicyRuleMatchConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class OrganizationSecurityPolicyRuleMatchArgs extends io.pulumi.res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="config", required=true)
+    @Import(name="config", required=true)
       private final Output<OrganizationSecurityPolicyRuleMatchConfigArgs> config;
 
     public Output<OrganizationSecurityPolicyRuleMatchConfigArgs> getConfig() {
@@ -31,7 +31,7 @@ public final class OrganizationSecurityPolicyRuleMatchArgs extends io.pulumi.res
      * A description of the rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class OrganizationSecurityPolicyRuleMatchArgs extends io.pulumi.res
      * Possible values are `FIREWALL`.
      * 
      */
-    @InputImport(name="versionedExpr")
+    @Import(name="versionedExpr")
       private final @Nullable Output<String> versionedExpr;
 
     public Output<String> getVersionedExpr() {

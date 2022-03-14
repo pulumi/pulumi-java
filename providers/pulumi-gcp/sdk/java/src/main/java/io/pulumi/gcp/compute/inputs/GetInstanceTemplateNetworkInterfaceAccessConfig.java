@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig extends io.pu
      * network ip. If not given, one will be generated.
      * 
      */
-    @InputImport(name="natIp", required=true)
+    @Import(name="natIp", required=true)
       private final String natIp;
 
     public String getNatIp() {
@@ -30,14 +30,14 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig extends io.pu
      * STANDARD. If this field is not specified, it is assumed to be PREMIUM.
      * 
      */
-    @InputImport(name="networkTier", required=true)
+    @Import(name="networkTier", required=true)
       private final String networkTier;
 
     public String getNetworkTier() {
         return this.networkTier;
     }
 
-    @InputImport(name="publicPtrDomainName", required=true)
+    @Import(name="publicPtrDomainName", required=true)
       private final String publicPtrDomainName;
 
     public String getPublicPtrDomainName() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CxEntityTypeEntityGetArgs extends io.pulumi.resources.Resourc
      * For KIND_LIST entity types: This collection must contain exactly one synonym equal to value.
      * 
      */
-    @InputImport(name="synonyms")
+    @Import(name="synonyms")
       private final @Nullable Output<List<String>> synonyms;
 
     public Output<List<String>> getSynonyms() {
@@ -31,7 +31,7 @@ public final class CxEntityTypeEntityGetArgs extends io.pulumi.resources.Resourc
      * The word or phrase to be excluded.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

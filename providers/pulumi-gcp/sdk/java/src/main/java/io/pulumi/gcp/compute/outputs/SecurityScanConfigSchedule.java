@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityScanConfigSchedule {
     /**
      * The duration of time between executions in days
@@ -25,10 +25,10 @@ public final class SecurityScanConfigSchedule {
      */
     private final @Nullable String scheduleTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityScanConfigSchedule(
-        @OutputCustomType.Parameter("intervalDurationDays") Integer intervalDurationDays,
-        @OutputCustomType.Parameter("scheduleTime") @Nullable String scheduleTime) {
+        @CustomType.Parameter("intervalDurationDays") Integer intervalDurationDays,
+        @CustomType.Parameter("scheduleTime") @Nullable String scheduleTime) {
         this.intervalDurationDays = intervalDurationDays;
         this.scheduleTime = scheduleTime;
     }

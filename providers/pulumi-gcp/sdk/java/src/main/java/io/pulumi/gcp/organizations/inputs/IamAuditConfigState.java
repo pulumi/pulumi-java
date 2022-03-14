@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.organizations.inputs.IamAuditConfigAuditLogConfigGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
      * The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
      * 
      */
-    @InputImport(name="auditLogConfigs")
+    @Import(name="auditLogConfigs")
       private final @Nullable Output<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
 
     public Output<List<IamAuditConfigAuditLogConfigGetArgs>> getAuditLogConfigs() {
@@ -31,7 +31,7 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
      * The etag of iam policy
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -42,7 +42,7 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
      * The numeric ID of the organization in which you want to manage the audit logging config.
      * 
      */
-    @InputImport(name="orgId")
+    @Import(name="orgId")
       private final @Nullable Output<String> orgId;
 
     public Output<String> getOrgId() {
@@ -53,7 +53,7 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
      * Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_organization\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {

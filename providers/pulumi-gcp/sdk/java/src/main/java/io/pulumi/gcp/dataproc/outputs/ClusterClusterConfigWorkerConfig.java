@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataproc.outputs.ClusterClusterConfigWorkerConfigAccelerator;
 import io.pulumi.gcp.dataproc.outputs.ClusterClusterConfigWorkerConfigDiskConfig;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterClusterConfigWorkerConfig {
     /**
      * The Compute Engine accelerator configuration for these instances. Can be specified multiple times.
@@ -54,15 +54,15 @@ public final class ClusterClusterConfigWorkerConfig {
      */
     private final @Nullable Integer numInstances;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterClusterConfigWorkerConfig(
-        @OutputCustomType.Parameter("accelerators") @Nullable List<ClusterClusterConfigWorkerConfigAccelerator> accelerators,
-        @OutputCustomType.Parameter("diskConfig") @Nullable ClusterClusterConfigWorkerConfigDiskConfig diskConfig,
-        @OutputCustomType.Parameter("imageUri") @Nullable String imageUri,
-        @OutputCustomType.Parameter("instanceNames") @Nullable List<String> instanceNames,
-        @OutputCustomType.Parameter("machineType") @Nullable String machineType,
-        @OutputCustomType.Parameter("minCpuPlatform") @Nullable String minCpuPlatform,
-        @OutputCustomType.Parameter("numInstances") @Nullable Integer numInstances) {
+        @CustomType.Parameter("accelerators") @Nullable List<ClusterClusterConfigWorkerConfigAccelerator> accelerators,
+        @CustomType.Parameter("diskConfig") @Nullable ClusterClusterConfigWorkerConfigDiskConfig diskConfig,
+        @CustomType.Parameter("imageUri") @Nullable String imageUri,
+        @CustomType.Parameter("instanceNames") @Nullable List<String> instanceNames,
+        @CustomType.Parameter("machineType") @Nullable String machineType,
+        @CustomType.Parameter("minCpuPlatform") @Nullable String minCpuPlatform,
+        @CustomType.Parameter("numInstances") @Nullable Integer numInstances) {
         this.accelerators = accelerators;
         this.diskConfig = diskConfig;
         this.imageUri = imageUri;

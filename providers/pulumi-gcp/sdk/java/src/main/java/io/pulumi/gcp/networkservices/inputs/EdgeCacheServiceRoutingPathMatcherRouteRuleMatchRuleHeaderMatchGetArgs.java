@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
      * The queryParameterMatch matches if the value of the parameter exactly matches the contents of exactMatch.
      * 
      */
-    @InputImport(name="exactMatch")
+    @Import(name="exactMatch")
       private final @Nullable Output<String> exactMatch;
 
     public Output<String> getExactMatch() {
@@ -31,7 +31,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
      * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
      * 
      */
-    @InputImport(name="headerName", required=true)
+    @Import(name="headerName", required=true)
       private final Output<String> headerName;
 
     public Output<String> getHeaderName() {
@@ -43,7 +43,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
      * If set to true, the headerMatch is considered a match if the match criteria above are NOT met.
      * 
      */
-    @InputImport(name="invertMatch")
+    @Import(name="invertMatch")
       private final @Nullable Output<Boolean> invertMatch;
 
     public Output<Boolean> getInvertMatch() {
@@ -54,7 +54,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
      * The value of the header must start with the contents of prefixMatch.
      * 
      */
-    @InputImport(name="prefixMatch")
+    @Import(name="prefixMatch")
       private final @Nullable Output<String> prefixMatch;
 
     public Output<String> getPrefixMatch() {
@@ -65,7 +65,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
      * Specifies that the queryParameterMatch matches if the request contains the query parameter, irrespective of whether the parameter has a value or not.
      * 
      */
-    @InputImport(name="presentMatch")
+    @Import(name="presentMatch")
       private final @Nullable Output<Boolean> presentMatch;
 
     public Output<Boolean> getPresentMatch() {
@@ -76,7 +76,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
      * The value of the header must end with the contents of suffixMatch.
      * 
      */
-    @InputImport(name="suffixMatch")
+    @Import(name="suffixMatch")
       private final @Nullable Output<String> suffixMatch;
 
     public Output<String> getSuffixMatch() {

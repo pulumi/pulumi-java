@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptA
      * Required. Type of archive files in this repository. Possible values: ARCHIVE_TYPE_UNSPECIFIED, DEB, DEB_SRC
      * 
      */
-    @InputImport(name="archiveType", required=true)
+    @Import(name="archiveType", required=true)
       private final Output<String> archiveType;
 
     public Output<String> getArchiveType() {
@@ -30,7 +30,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptA
      * Required. List of components for this repository. Must contain at least one item.
      * 
      */
-    @InputImport(name="components", required=true)
+    @Import(name="components", required=true)
       private final Output<List<String>> components;
 
     public Output<List<String>> getComponents() {
@@ -41,7 +41,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptA
      * Required. Distribution of this repository.
      * 
      */
-    @InputImport(name="distribution", required=true)
+    @Import(name="distribution", required=true)
       private final Output<String> distribution;
 
     public Output<String> getDistribution() {
@@ -52,7 +52,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptA
      * URI of the key file for this repository. The agent maintains a keyring at `/etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg`.
      * 
      */
-    @InputImport(name="gpgKey")
+    @Import(name="gpgKey")
       private final @Nullable Output<String> gpgKey;
 
     public Output<String> getGpgKey() {
@@ -63,7 +63,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptA
      * Required. URI for this repository.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final Output<String> uri;
 
     public Output<String> getUri() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudfunctions.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetFunctionSourceRepository extends io.pulumi.resources.Invok
 
     public static final GetFunctionSourceRepository Empty = new GetFunctionSourceRepository();
 
-    @InputImport(name="deployedUrl", required=true)
+    @Import(name="deployedUrl", required=true)
       private final String deployedUrl;
 
     public String getDeployedUrl() {
@@ -23,7 +23,7 @@ public final class GetFunctionSourceRepository extends io.pulumi.resources.Invok
      * The URL pointing to the hosted repository where the function is defined.
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final String url;
 
     public String getUrl() {

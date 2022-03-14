@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class EntryGroupArgs extends io.pulumi.resources.ResourceArgs {
      * Entry group description, which can consist of several sentences or paragraphs that describe entry group contents.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -29,7 +29,7 @@ public final class EntryGroupArgs extends io.pulumi.resources.ResourceArgs {
      * A short name to identify the entry group, for example, "analytics data - jan 2011".
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -41,7 +41,7 @@ public final class EntryGroupArgs extends io.pulumi.resources.ResourceArgs {
      * contain only English letters, numbers and underscores, and be at most 64 characters.
      * 
      */
-    @InputImport(name="entryGroupId", required=true)
+    @Import(name="entryGroupId", required=true)
       private final Output<String> entryGroupId;
 
     public Output<String> getEntryGroupId() {
@@ -53,7 +53,7 @@ public final class EntryGroupArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -64,7 +64,7 @@ public final class EntryGroupArgs extends io.pulumi.resources.ResourceArgs {
      * EntryGroup location region.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {

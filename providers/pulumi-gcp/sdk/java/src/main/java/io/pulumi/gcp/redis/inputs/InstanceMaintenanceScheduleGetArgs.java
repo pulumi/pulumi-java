@@ -4,7 +4,7 @@
 package io.pulumi.gcp.redis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class InstanceMaintenanceScheduleGetArgs extends io.pulumi.resource
      * resolution and up to nine fractional digits.
      * 
      */
-    @InputImport(name="endTime")
+    @Import(name="endTime")
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
@@ -36,7 +36,7 @@ public final class InstanceMaintenanceScheduleGetArgs extends io.pulumi.resource
      * resolution and up to nine fractional digits.
      * 
      */
-    @InputImport(name="scheduleDeadlineTime")
+    @Import(name="scheduleDeadlineTime")
       private final @Nullable Output<String> scheduleDeadlineTime;
 
     public Output<String> getScheduleDeadlineTime() {
@@ -50,7 +50,7 @@ public final class InstanceMaintenanceScheduleGetArgs extends io.pulumi.resource
      * resolution and up to nine fractional digits.
      * 
      */
-    @InputImport(name="startTime")
+    @Import(name="startTime")
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {

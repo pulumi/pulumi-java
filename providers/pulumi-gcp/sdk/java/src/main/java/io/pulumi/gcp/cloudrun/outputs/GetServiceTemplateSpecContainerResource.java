@@ -3,20 +3,20 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceTemplateSpecContainerResource {
     private final Map<String,String> limits;
     private final Map<String,String> requests;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceTemplateSpecContainerResource(
-        @OutputCustomType.Parameter("limits") Map<String,String> limits,
-        @OutputCustomType.Parameter("requests") Map<String,String> requests) {
+        @CustomType.Parameter("limits") Map<String,String> limits,
+        @CustomType.Parameter("requests") Map<String,String> requests) {
         this.limits = limits;
         this.requests = requests;
     }

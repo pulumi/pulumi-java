@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TableExternalDataConfigurationGoogleSheetsOptions {
     /**
      * Information required to partition based on ranges.
@@ -26,10 +26,10 @@ public final class TableExternalDataConfigurationGoogleSheetsOptions {
      */
     private final @Nullable Integer skipLeadingRows;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableExternalDataConfigurationGoogleSheetsOptions(
-        @OutputCustomType.Parameter("range") @Nullable String range,
-        @OutputCustomType.Parameter("skipLeadingRows") @Nullable Integer skipLeadingRows) {
+        @CustomType.Parameter("range") @Nullable String range,
+        @CustomType.Parameter("skipLeadingRows") @Nullable Integer skipLeadingRows) {
         this.range = range;
         this.skipLeadingRows = skipLeadingRows;
     }

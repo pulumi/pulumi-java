@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ApiConfigOpenapiDocumentDocumentGetArgs extends io.pulumi.res
      * Base64 encoded content of the file.
      * 
      */
-    @InputImport(name="contents", required=true)
+    @Import(name="contents", required=true)
       private final Output<String> contents;
 
     public Output<String> getContents() {
@@ -28,7 +28,7 @@ public final class ApiConfigOpenapiDocumentDocumentGetArgs extends io.pulumi.res
      * The file path (full or relative path). This is typically the path of the file when it is uploaded.
      * 
      */
-    @InputImport(name="path", required=true)
+    @Import(name="path", required=true)
       private final Output<String> path;
 
     public Output<String> getPath() {

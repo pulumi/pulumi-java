@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataproc.inputs.JobPigConfigLoggingConfigGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class JobPigConfigGetArgs extends io.pulumi.resources.ResourceArgs 
      * Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
      * 
      */
-    @InputImport(name="continueOnFailure")
+    @Import(name="continueOnFailure")
       private final @Nullable Output<Boolean> continueOnFailure;
 
     public Output<Boolean> getContinueOnFailure() {
@@ -33,14 +33,14 @@ public final class JobPigConfigGetArgs extends io.pulumi.resources.ResourceArgs 
      * HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
      */
-    @InputImport(name="jarFileUris")
+    @Import(name="jarFileUris")
       private final @Nullable Output<List<String>> jarFileUris;
 
     public Output<List<String>> getJarFileUris() {
         return this.jarFileUris == null ? Output.empty() : this.jarFileUris;
     }
 
-    @InputImport(name="loggingConfig")
+    @Import(name="loggingConfig")
       private final @Nullable Output<JobPigConfigLoggingConfigGetArgs> loggingConfig;
 
     public Output<JobPigConfigLoggingConfigGetArgs> getLoggingConfig() {
@@ -51,7 +51,7 @@ public final class JobPigConfigGetArgs extends io.pulumi.resources.ResourceArgs 
      * A mapping of property names to values, used to configure Spark SQL's SparkConf. Properties that conflict with values set by the Cloud Dataproc API may be overwritten.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
@@ -63,7 +63,7 @@ public final class JobPigConfigGetArgs extends io.pulumi.resources.ResourceArgs 
      * Conflicts with `query_list`
      * 
      */
-    @InputImport(name="queryFileUri")
+    @Import(name="queryFileUri")
       private final @Nullable Output<String> queryFileUri;
 
     public Output<String> getQueryFileUri() {
@@ -75,7 +75,7 @@ public final class JobPigConfigGetArgs extends io.pulumi.resources.ResourceArgs 
      * Conflicts with `query_file_uri`
      * 
      */
-    @InputImport(name="queryLists")
+    @Import(name="queryLists")
       private final @Nullable Output<List<String>> queryLists;
 
     public Output<List<String>> getQueryLists() {
@@ -86,7 +86,7 @@ public final class JobPigConfigGetArgs extends io.pulumi.resources.ResourceArgs 
      * Mapping of query variable names to values (equivalent to the Spark SQL command: `SET name="value";`).
      * 
      */
-    @InputImport(name="scriptVariables")
+    @Import(name="scriptVariables")
       private final @Nullable Output<Map<String,String>> scriptVariables;
 
     public Output<Map<String,String>> getScriptVariables() {

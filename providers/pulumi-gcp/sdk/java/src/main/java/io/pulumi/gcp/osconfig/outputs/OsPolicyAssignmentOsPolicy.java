@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroup;
 import java.lang.Boolean;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OsPolicyAssignmentOsPolicy {
     /**
      * This flag determines the OS policy compliance status when none of the resource groups within the policy are applicable for a VM. Set this value to `true` if the policy needs to be reported as compliant even if the policy has nothing to validate or enforce.
@@ -40,13 +40,13 @@ public final class OsPolicyAssignmentOsPolicy {
      */
     private final List<OsPolicyAssignmentOsPolicyResourceGroup> resourceGroups;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OsPolicyAssignmentOsPolicy(
-        @OutputCustomType.Parameter("allowNoResourceGroupMatch") @Nullable Boolean allowNoResourceGroupMatch,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("mode") String mode,
-        @OutputCustomType.Parameter("resourceGroups") List<OsPolicyAssignmentOsPolicyResourceGroup> resourceGroups) {
+        @CustomType.Parameter("allowNoResourceGroupMatch") @Nullable Boolean allowNoResourceGroupMatch,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("mode") String mode,
+        @CustomType.Parameter("resourceGroups") List<OsPolicyAssignmentOsPolicyResourceGroup> resourceGroups) {
         this.allowNoResourceGroupMatch = allowNoResourceGroupMatch;
         this.description = description;
         this.id = id;

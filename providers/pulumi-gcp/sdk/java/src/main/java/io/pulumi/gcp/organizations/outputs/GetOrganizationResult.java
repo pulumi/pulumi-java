@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetOrganizationResult {
     /**
      * Timestamp when the Organization was created. A timestamp in RFC3339 UTC "Zulu" format, accurate to nanoseconds. Example: "2014-10-02T15:01:23.045123456Z".
@@ -44,16 +44,16 @@ public final class GetOrganizationResult {
     private final String orgId;
     private final @Nullable String organization;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetOrganizationResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("directoryCustomerId") String directoryCustomerId,
-        @OutputCustomType.Parameter("domain") String domain,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lifecycleState") String lifecycleState,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("orgId") String orgId,
-        @OutputCustomType.Parameter("organization") @Nullable String organization) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("directoryCustomerId") String directoryCustomerId,
+        @CustomType.Parameter("domain") String domain,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lifecycleState") String lifecycleState,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("orgId") String orgId,
+        @CustomType.Parameter("organization") @Nullable String organization) {
         this.createTime = createTime;
         this.directoryCustomerId = directoryCustomerId;
         this.domain = domain;

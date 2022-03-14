@@ -3,24 +3,24 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NodePoolNetworkConfig {
     private final @Nullable Boolean createPodRange;
     private final @Nullable String podIpv4CidrBlock;
     private final String podRange;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodePoolNetworkConfig(
-        @OutputCustomType.Parameter("createPodRange") @Nullable Boolean createPodRange,
-        @OutputCustomType.Parameter("podIpv4CidrBlock") @Nullable String podIpv4CidrBlock,
-        @OutputCustomType.Parameter("podRange") String podRange) {
+        @CustomType.Parameter("createPodRange") @Nullable Boolean createPodRange,
+        @CustomType.Parameter("podIpv4CidrBlock") @Nullable String podIpv4CidrBlock,
+        @CustomType.Parameter("podRange") String podRange) {
         this.createPodRange = createPodRange;
         this.podIpv4CidrBlock = podIpv4CidrBlock;
         this.podRange = podRange;

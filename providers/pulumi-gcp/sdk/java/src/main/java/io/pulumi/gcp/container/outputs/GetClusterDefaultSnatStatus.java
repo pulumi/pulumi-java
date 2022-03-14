@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterDefaultSnatStatus {
     private final Boolean disabled;
 
-    @OutputCustomType.Constructor
-    private GetClusterDefaultSnatStatus(@OutputCustomType.Parameter("disabled") Boolean disabled) {
+    @CustomType.Constructor
+    private GetClusterDefaultSnatStatus(@CustomType.Parameter("disabled") Boolean disabled) {
         this.disabled = disabled;
     }
 

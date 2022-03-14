@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.iam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTestablePermissionsPermission {
     /**
      * Whether the corresponding API has been enabled for the resource.
@@ -36,13 +36,13 @@ public final class GetTestablePermissionsPermission {
      */
     private final String title;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTestablePermissionsPermission(
-        @OutputCustomType.Parameter("apiDisabled") Boolean apiDisabled,
-        @OutputCustomType.Parameter("customSupportLevel") String customSupportLevel,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("stage") String stage,
-        @OutputCustomType.Parameter("title") String title) {
+        @CustomType.Parameter("apiDisabled") Boolean apiDisabled,
+        @CustomType.Parameter("customSupportLevel") String customSupportLevel,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("stage") String stage,
+        @CustomType.Parameter("title") String title) {
         this.apiDisabled = apiDisabled;
         this.customSupportLevel = customSupportLevel;
         this.name = name;

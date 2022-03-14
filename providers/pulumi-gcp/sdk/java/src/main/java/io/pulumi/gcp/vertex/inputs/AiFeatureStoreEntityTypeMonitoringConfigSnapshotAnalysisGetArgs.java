@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetAr
      * The monitoring schedule for snapshot analysis. For EntityType-level config: unset / disabled = true indicates disabled by default for Features under it; otherwise by default enable snapshot analysis monitoring with monitoringInterval for Features under it.
      * 
      */
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -31,7 +31,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetAr
      * A duration in seconds with up to nine fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @InputImport(name="monitoringInterval")
+    @Import(name="monitoringInterval")
       private final @Nullable Output<String> monitoringInterval;
 
     public Output<String> getMonitoringInterval() {

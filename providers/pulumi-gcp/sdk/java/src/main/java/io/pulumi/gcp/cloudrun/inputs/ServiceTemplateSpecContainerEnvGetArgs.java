@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvValueFromGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ServiceTemplateSpecContainerEnvGetArgs extends io.pulumi.reso
      * Volume's name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -37,7 +37,7 @@ public final class ServiceTemplateSpecContainerEnvGetArgs extends io.pulumi.reso
      * Defaults to "".
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
@@ -49,7 +49,7 @@ public final class ServiceTemplateSpecContainerEnvGetArgs extends io.pulumi.reso
      * Structure is documented below.
      * 
      */
-    @InputImport(name="valueFrom")
+    @Import(name="valueFrom")
       private final @Nullable Output<ServiceTemplateSpecContainerEnvValueFromGetArgs> valueFrom;
 
     public Output<ServiceTemplateSpecContainerEnvValueFromGetArgs> getValueFrom() {

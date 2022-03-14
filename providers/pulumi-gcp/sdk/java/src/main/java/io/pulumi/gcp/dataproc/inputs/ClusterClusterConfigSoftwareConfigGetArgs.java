@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ClusterClusterConfigSoftwareConfigGetArgs extends io.pulumi.r
      * [Cloud Dataproc versions](https://cloud.google.com/dataproc/docs/concepts/dataproc-versions)
      * 
      */
-    @InputImport(name="imageVersion")
+    @Import(name="imageVersion")
       private final @Nullable Output<String> imageVersion;
 
     public Output<String> getImageVersion() {
@@ -48,7 +48,7 @@ public final class ClusterClusterConfigSoftwareConfigGetArgs extends io.pulumi.r
      * * ZOOKEEPER
      * 
      */
-    @InputImport(name="optionalComponents")
+    @Import(name="optionalComponents")
       private final @Nullable Output<List<String>> optionalComponents;
 
     public Output<List<String>> getOptionalComponents() {
@@ -62,14 +62,14 @@ public final class ClusterClusterConfigSoftwareConfigGetArgs extends io.pulumi.r
      * [Cluster properties](https://cloud.google.com/dataproc/docs/concepts/cluster-properties)
      * 
      */
-    @InputImport(name="overrideProperties")
+    @Import(name="overrideProperties")
       private final @Nullable Output<Map<String,String>> overrideProperties;
 
     public Output<Map<String,String>> getOverrideProperties() {
         return this.overrideProperties == null ? Output.empty() : this.overrideProperties;
     }
 
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,Object>> properties;
 
     public Output<Map<String,Object>> getProperties() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigX509ConfigAdditionalExtensionObjectId;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AuthorityConfigX509ConfigAdditionalExtension {
     /**
      * Indicates whether or not this extension is critical (i.e., if the client does not know how to
@@ -29,11 +29,11 @@ public final class AuthorityConfigX509ConfigAdditionalExtension {
      */
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AuthorityConfigX509ConfigAdditionalExtension(
-        @OutputCustomType.Parameter("critical") Boolean critical,
-        @OutputCustomType.Parameter("objectId") AuthorityConfigX509ConfigAdditionalExtensionObjectId objectId,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("critical") Boolean critical,
+        @CustomType.Parameter("objectId") AuthorityConfigX509ConfigAdditionalExtensionObjectId objectId,
+        @CustomType.Parameter("value") String value) {
         this.critical = critical;
         this.objectId = objectId;
         this.value = value;

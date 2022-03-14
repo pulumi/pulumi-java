@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.logging.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.logging.outputs.MetricBucketOptionsExplicitBuckets;
 import io.pulumi.gcp.logging.outputs.MetricBucketOptionsExponentialBuckets;
 import io.pulumi.gcp.logging.outputs.MetricBucketOptionsLinearBuckets;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class MetricBucketOptions {
     /**
      * Specifies a set of buckets with arbitrary widths.
@@ -34,11 +34,11 @@ public final class MetricBucketOptions {
      */
     private final @Nullable MetricBucketOptionsLinearBuckets linearBuckets;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private MetricBucketOptions(
-        @OutputCustomType.Parameter("explicitBuckets") @Nullable MetricBucketOptionsExplicitBuckets explicitBuckets,
-        @OutputCustomType.Parameter("exponentialBuckets") @Nullable MetricBucketOptionsExponentialBuckets exponentialBuckets,
-        @OutputCustomType.Parameter("linearBuckets") @Nullable MetricBucketOptionsLinearBuckets linearBuckets) {
+        @CustomType.Parameter("explicitBuckets") @Nullable MetricBucketOptionsExplicitBuckets explicitBuckets,
+        @CustomType.Parameter("exponentialBuckets") @Nullable MetricBucketOptionsExponentialBuckets exponentialBuckets,
+        @CustomType.Parameter("linearBuckets") @Nullable MetricBucketOptionsLinearBuckets linearBuckets) {
         this.explicitBuckets = explicitBuckets;
         this.exponentialBuckets = exponentialBuckets;
         this.linearBuckets = linearBuckets;

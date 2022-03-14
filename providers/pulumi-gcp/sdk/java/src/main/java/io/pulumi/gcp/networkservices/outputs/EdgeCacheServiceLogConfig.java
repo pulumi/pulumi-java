@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EdgeCacheServiceLogConfig {
     /**
      * Specifies whether to enable logging for traffic served by this service.
@@ -24,10 +24,10 @@ public final class EdgeCacheServiceLogConfig {
      */
     private final @Nullable Double sampleRate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdgeCacheServiceLogConfig(
-        @OutputCustomType.Parameter("enable") @Nullable Boolean enable,
-        @OutputCustomType.Parameter("sampleRate") @Nullable Double sampleRate) {
+        @CustomType.Parameter("enable") @Nullable Boolean enable,
+        @CustomType.Parameter("sampleRate") @Nullable Double sampleRate) {
         this.enable = enable;
         this.sampleRate = sampleRate;
     }

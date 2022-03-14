@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetFolderArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the Folder in the form `{folder_id}` or `folders/{folder_id}`.
      * 
      */
-    @InputImport(name="folder", required=true)
+    @Import(name="folder", required=true)
       private final String folder;
 
     public String getFolder() {
@@ -30,7 +30,7 @@ public final class GetFolderArgs extends io.pulumi.resources.InvokeArgs {
      * `true` to find the organization that the folder belongs, `false` to avoid the lookup. It searches up the tree. (defaults to `false`)
      * 
      */
-    @InputImport(name="lookupOrganization")
+    @Import(name="lookupOrganization")
       private final @Nullable Boolean lookupOrganization;
 
     public Optional<Boolean> getLookupOrganization() {

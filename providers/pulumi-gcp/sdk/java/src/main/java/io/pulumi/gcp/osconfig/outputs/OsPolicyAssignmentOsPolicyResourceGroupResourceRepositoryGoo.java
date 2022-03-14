@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo {
     /**
      * Required. The name of the repository.
@@ -20,10 +20,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo 
      */
     private final String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGoo(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("url") String url) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("url") String url) {
         this.name = name;
         this.url = url;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vertex;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.vertex.inputs.AiFeatureStoreEntityTypeMonitoringConfigArgs;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
      * The name of the Featurestore to use, in the format projects/{project}/locations/{location}/featurestores/{featurestore}.
      * 
      */
-    @InputImport(name="featurestore", required=true)
+    @Import(name="featurestore", required=true)
       private final Output<String> featurestore;
 
     public Output<String> getFeaturestore() {
@@ -31,7 +31,7 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
      * A set of key/value label pairs to assign to this EntityType.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -44,7 +44,7 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
      * Structure is documented below.
      * 
      */
-    @InputImport(name="monitoringConfig")
+    @Import(name="monitoringConfig")
       private final @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> monitoringConfig;
 
     public Output<AiFeatureStoreEntityTypeMonitoringConfigArgs> getMonitoringConfig() {
@@ -55,7 +55,7 @@ public final class AiFeatureStoreEntityTypeArgs extends io.pulumi.resources.Reso
      * The name of the EntityType. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

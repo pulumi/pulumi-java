@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingStatusConditionArgs;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingStatusResourceRecordArgs;
 import java.lang.Integer;
@@ -18,28 +18,28 @@ public final class DomainMappingStatusArgs extends io.pulumi.resources.ResourceA
 
     public static final DomainMappingStatusArgs Empty = new DomainMappingStatusArgs();
 
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<DomainMappingStatusConditionArgs>> conditions;
 
     public Output<List<DomainMappingStatusConditionArgs>> getConditions() {
         return this.conditions == null ? Output.empty() : this.conditions;
     }
 
-    @InputImport(name="mappedRouteName")
+    @Import(name="mappedRouteName")
       private final @Nullable Output<String> mappedRouteName;
 
     public Output<String> getMappedRouteName() {
         return this.mappedRouteName == null ? Output.empty() : this.mappedRouteName;
     }
 
-    @InputImport(name="observedGeneration")
+    @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
     public Output<Integer> getObservedGeneration() {
         return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
     }
 
-    @InputImport(name="resourceRecords")
+    @Import(name="resourceRecords")
       private final @Nullable Output<List<DomainMappingStatusResourceRecordArgs>> resourceRecords;
 
     public Output<List<DomainMappingStatusResourceRecordArgs>> getResourceRecords() {

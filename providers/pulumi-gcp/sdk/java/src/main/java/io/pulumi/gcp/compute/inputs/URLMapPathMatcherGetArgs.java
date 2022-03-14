@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherDefaultRouteActionGetArgs;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherDefaultUrlRedirectGetArgs;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherHeaderActionGetArgs;
@@ -29,7 +29,7 @@ public final class URLMapPathMatcherGetArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="defaultRouteAction")
+    @Import(name="defaultRouteAction")
       private final @Nullable Output<URLMapPathMatcherDefaultRouteActionGetArgs> defaultRouteAction;
 
     public Output<URLMapPathMatcherDefaultRouteActionGetArgs> getDefaultRouteAction() {
@@ -40,7 +40,7 @@ public final class URLMapPathMatcherGetArgs extends io.pulumi.resources.Resource
      * The backend service or backend bucket to use when none of the given paths match.
      * 
      */
-    @InputImport(name="defaultService")
+    @Import(name="defaultService")
       private final @Nullable Output<String> defaultService;
 
     public Output<String> getDefaultService() {
@@ -54,7 +54,7 @@ public final class URLMapPathMatcherGetArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="defaultUrlRedirect")
+    @Import(name="defaultUrlRedirect")
       private final @Nullable Output<URLMapPathMatcherDefaultUrlRedirectGetArgs> defaultUrlRedirect;
 
     public Output<URLMapPathMatcherDefaultUrlRedirectGetArgs> getDefaultUrlRedirect() {
@@ -65,7 +65,7 @@ public final class URLMapPathMatcherGetArgs extends io.pulumi.resources.Resource
      * Description of this test case.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -80,7 +80,7 @@ public final class URLMapPathMatcherGetArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="headerAction")
+    @Import(name="headerAction")
       private final @Nullable Output<URLMapPathMatcherHeaderActionGetArgs> headerAction;
 
     public Output<URLMapPathMatcherHeaderActionGetArgs> getHeaderAction() {
@@ -92,7 +92,7 @@ public final class URLMapPathMatcherGetArgs extends io.pulumi.resources.Resource
      * request, in the absence of which the request match fails.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -109,7 +109,7 @@ public final class URLMapPathMatcherGetArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="pathRules")
+    @Import(name="pathRules")
       private final @Nullable Output<List<URLMapPathMatcherPathRuleGetArgs>> pathRules;
 
     public Output<List<URLMapPathMatcherPathRuleGetArgs>> getPathRules() {
@@ -126,7 +126,7 @@ public final class URLMapPathMatcherGetArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="routeRules")
+    @Import(name="routeRules")
       private final @Nullable Output<List<URLMapPathMatcherRouteRuleGetArgs>> routeRules;
 
     public Output<List<URLMapPathMatcherRouteRuleGetArgs>> getRouteRules() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionAbsentAggregation;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionAbsentTrigger;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AlertPolicyConditionConditionAbsent {
     /**
      * Specifies the alignment of data points in
@@ -70,12 +70,12 @@ public final class AlertPolicyConditionConditionAbsent {
      */
     private final @Nullable AlertPolicyConditionConditionAbsentTrigger trigger;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AlertPolicyConditionConditionAbsent(
-        @OutputCustomType.Parameter("aggregations") @Nullable List<AlertPolicyConditionConditionAbsentAggregation> aggregations,
-        @OutputCustomType.Parameter("duration") String duration,
-        @OutputCustomType.Parameter("filter") @Nullable String filter,
-        @OutputCustomType.Parameter("trigger") @Nullable AlertPolicyConditionConditionAbsentTrigger trigger) {
+        @CustomType.Parameter("aggregations") @Nullable List<AlertPolicyConditionConditionAbsentAggregation> aggregations,
+        @CustomType.Parameter("duration") String duration,
+        @CustomType.Parameter("filter") @Nullable String filter,
+        @CustomType.Parameter("trigger") @Nullable AlertPolicyConditionConditionAbsentTrigger trigger) {
         this.aggregations = aggregations;
         this.duration = duration;
         this.filter = filter;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.memcache.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class InstanceMemcacheParametersGetArgs extends io.pulumi.resources
      * This is a unique ID associated with this set of parameters.
      * 
      */
-    @InputImport(name="id")
+    @Import(name="id")
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
@@ -31,7 +31,7 @@ public final class InstanceMemcacheParametersGetArgs extends io.pulumi.resources
      * User-defined set of parameters to use in the memcache process.
      * 
      */
-    @InputImport(name="params")
+    @Import(name="params")
       private final @Nullable Output<Map<String,String>> params;
 
     public Output<Map<String,String>> getParams() {

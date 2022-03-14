@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class CxEnvironmentVersionConfig {
     /**
      * Format: projects/{{project}}/locations/{{location}}/agents/{{agent}}/flows/{{flow}}/versions/{{version}}.
@@ -15,8 +15,8 @@ public final class CxEnvironmentVersionConfig {
      */
     private final String version;
 
-    @OutputCustomType.Constructor
-    private CxEnvironmentVersionConfig(@OutputCustomType.Parameter("version") String version) {
+    @CustomType.Constructor
+    private CxEnvironmentVersionConfig(@CustomType.Parameter("version") String version) {
         this.version = version;
     }
 

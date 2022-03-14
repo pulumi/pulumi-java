@@ -4,7 +4,7 @@
 package io.pulumi.gcp.spanner;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.spanner.inputs.DatabaseIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class DatabaseIAMBindingArgs extends io.pulumi.resources.ResourceAr
 
     public static final DatabaseIAMBindingArgs Empty = new DatabaseIAMBindingArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<DatabaseIAMBindingConditionArgs> condition;
 
     public Output<DatabaseIAMBindingConditionArgs> getCondition() {
@@ -27,7 +27,7 @@ public final class DatabaseIAMBindingArgs extends io.pulumi.resources.ResourceAr
      * The name of the Spanner database.
      * 
      */
-    @InputImport(name="database", required=true)
+    @Import(name="database", required=true)
       private final Output<String> database;
 
     public Output<String> getDatabase() {
@@ -38,14 +38,14 @@ public final class DatabaseIAMBindingArgs extends io.pulumi.resources.ResourceAr
      * The name of the Spanner instance the database belongs to.
      * 
      */
-    @InputImport(name="instance", required=true)
+    @Import(name="instance", required=true)
       private final Output<String> instance;
 
     public Output<String> getInstance() {
         return this.instance;
     }
 
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -57,7 +57,7 @@ public final class DatabaseIAMBindingArgs extends io.pulumi.resources.ResourceAr
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -70,7 +70,7 @@ public final class DatabaseIAMBindingArgs extends io.pulumi.resources.ResourceAr
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

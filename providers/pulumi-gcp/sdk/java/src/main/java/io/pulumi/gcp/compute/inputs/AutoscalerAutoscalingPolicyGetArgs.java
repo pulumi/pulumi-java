@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.AutoscalerAutoscalingPolicyCpuUtilizationGetArgs;
 import io.pulumi.gcp.compute.inputs.AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs;
 import io.pulumi.gcp.compute.inputs.AutoscalerAutoscalingPolicyMetricGetArgs;
@@ -34,7 +34,7 @@ public final class AutoscalerAutoscalingPolicyGetArgs extends io.pulumi.resource
      * and time the startup process.
      * 
      */
-    @InputImport(name="cooldownPeriod")
+    @Import(name="cooldownPeriod")
       private final @Nullable Output<Integer> cooldownPeriod;
 
     public Output<Integer> getCooldownPeriod() {
@@ -48,7 +48,7 @@ public final class AutoscalerAutoscalingPolicyGetArgs extends io.pulumi.resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="cpuUtilization")
+    @Import(name="cpuUtilization")
       private final @Nullable Output<AutoscalerAutoscalingPolicyCpuUtilizationGetArgs> cpuUtilization;
 
     public Output<AutoscalerAutoscalingPolicyCpuUtilizationGetArgs> getCpuUtilization() {
@@ -60,7 +60,7 @@ public final class AutoscalerAutoscalingPolicyGetArgs extends io.pulumi.resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="loadBalancingUtilization")
+    @Import(name="loadBalancingUtilization")
       private final @Nullable Output<AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs> loadBalancingUtilization;
 
     public Output<AutoscalerAutoscalingPolicyLoadBalancingUtilizationGetArgs> getLoadBalancingUtilization() {
@@ -74,7 +74,7 @@ public final class AutoscalerAutoscalingPolicyGetArgs extends io.pulumi.resource
      * of replicas.
      * 
      */
-    @InputImport(name="maxReplicas", required=true)
+    @Import(name="maxReplicas", required=true)
       private final Output<Integer> maxReplicas;
 
     public Output<Integer> getMaxReplicas() {
@@ -86,7 +86,7 @@ public final class AutoscalerAutoscalingPolicyGetArgs extends io.pulumi.resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="metrics")
+    @Import(name="metrics")
       private final @Nullable Output<List<AutoscalerAutoscalingPolicyMetricGetArgs>> metrics;
 
     public Output<List<AutoscalerAutoscalingPolicyMetricGetArgs>> getMetrics() {
@@ -100,7 +100,7 @@ public final class AutoscalerAutoscalingPolicyGetArgs extends io.pulumi.resource
      * allowed.
      * 
      */
-    @InputImport(name="minReplicas", required=true)
+    @Import(name="minReplicas", required=true)
       private final Output<Integer> minReplicas;
 
     public Output<Integer> getMinReplicas() {
@@ -113,7 +113,7 @@ public final class AutoscalerAutoscalingPolicyGetArgs extends io.pulumi.resource
      * Possible values are `OFF`, `ONLY_UP`, and `ON`.
      * 
      */
-    @InputImport(name="mode")
+    @Import(name="mode")
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
@@ -126,7 +126,7 @@ public final class AutoscalerAutoscalingPolicyGetArgs extends io.pulumi.resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="scaleDownControl")
+    @Import(name="scaleDownControl")
       private final @Nullable Output<AutoscalerAutoscalingPolicyScaleDownControlGetArgs> scaleDownControl;
 
     public Output<AutoscalerAutoscalingPolicyScaleDownControlGetArgs> getScaleDownControl() {
@@ -139,7 +139,7 @@ public final class AutoscalerAutoscalingPolicyGetArgs extends io.pulumi.resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="scaleInControl")
+    @Import(name="scaleInControl")
       private final @Nullable Output<AutoscalerAutoscalingPolicyScaleInControlGetArgs> scaleInControl;
 
     public Output<AutoscalerAutoscalingPolicyScaleInControlGetArgs> getScaleInControl() {
@@ -151,7 +151,7 @@ public final class AutoscalerAutoscalingPolicyGetArgs extends io.pulumi.resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="scalingSchedules")
+    @Import(name="scalingSchedules")
       private final @Nullable Output<List<AutoscalerAutoscalingPolicyScalingScheduleGetArgs>> scalingSchedules;
 
     public Output<List<AutoscalerAutoscalingPolicyScalingScheduleGetArgs>> getScalingSchedules() {

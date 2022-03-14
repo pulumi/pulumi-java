@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ServiceNetworkSettingsNetworkSettingsGetArgs extends io.pulum
      * Possible values are `INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED`, `INGRESS_TRAFFIC_ALLOWED_ALL`, `INGRESS_TRAFFIC_ALLOWED_INTERNAL_ONLY`, and `INGRESS_TRAFFIC_ALLOWED_INTERNAL_AND_LB`.
      * 
      */
-    @InputImport(name="ingressTrafficAllowed")
+    @Import(name="ingressTrafficAllowed")
       private final @Nullable Output<String> ingressTrafficAllowed;
 
     public Output<String> getIngressTrafficAllowed() {

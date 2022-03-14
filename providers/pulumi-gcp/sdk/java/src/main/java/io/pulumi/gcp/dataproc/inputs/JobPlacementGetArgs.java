@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class JobPlacementGetArgs extends io.pulumi.resources.ResourceArgs 
 
     public static final JobPlacementGetArgs Empty = new JobPlacementGetArgs();
 
-    @InputImport(name="clusterName", required=true)
+    @Import(name="clusterName", required=true)
       private final Output<String> clusterName;
 
     public Output<String> getClusterName() {
         return this.clusterName;
     }
 
-    @InputImport(name="clusterUuid")
+    @Import(name="clusterUuid")
       private final @Nullable Output<String> clusterUuid;
 
     public Output<String> getClusterUuid() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class JobLoadTimePartitioningGetArgs extends io.pulumi.resources.Re
      * Number of milliseconds for which to keep the storage for a partition. A wrapper is used here because 0 is an invalid value.
      * 
      */
-    @InputImport(name="expirationMs")
+    @Import(name="expirationMs")
       private final @Nullable Output<String> expirationMs;
 
     public Output<String> getExpirationMs() {
@@ -31,7 +31,7 @@ public final class JobLoadTimePartitioningGetArgs extends io.pulumi.resources.Re
      * A wrapper is used here because an empty string is an invalid value.
      * 
      */
-    @InputImport(name="field")
+    @Import(name="field")
       private final @Nullable Output<String> field;
 
     public Output<String> getField() {
@@ -43,7 +43,7 @@ public final class JobLoadTimePartitioningGetArgs extends io.pulumi.resources.Re
      * but in OnePlatform the field will be treated as unset.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

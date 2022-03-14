@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityGetArgs;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyGetArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceG
      * Structure is documented below.
      * 
      */
-    @InputImport(name="availability")
+    @Import(name="availability")
       private final @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityGetArgs> availability;
 
     public Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailabilityGetArgs> getAvailability() {
@@ -34,7 +34,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceG
      * Structure is documented below.
      * 
      */
-    @InputImport(name="latency")
+    @Import(name="latency")
       private final @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyGetArgs> latency;
 
     public Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatencyGetArgs> getLatency() {
@@ -50,7 +50,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceG
      * field will result in an error.
      * 
      */
-    @InputImport(name="locations")
+    @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
     public Output<List<String>> getLocations() {
@@ -66,7 +66,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceG
      * error.
      * 
      */
-    @InputImport(name="methods")
+    @Import(name="methods")
       private final @Nullable Output<List<String>> methods;
 
     public Output<List<String>> getMethods() {
@@ -82,7 +82,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceG
      * field will result in an error.
      * 
      */
-    @InputImport(name="versions")
+    @Import(name="versions")
       private final @Nullable Output<List<String>> versions;
 
     public Output<List<String>> getVersions() {

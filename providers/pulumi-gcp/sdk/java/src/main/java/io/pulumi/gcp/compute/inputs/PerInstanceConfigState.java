@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.PerInstanceConfigPreservedStateGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class PerInstanceConfigState extends io.pulumi.resources.ResourceAr
      * The instance group manager this instance config is part of.
      * 
      */
-    @InputImport(name="instanceGroupManager")
+    @Import(name="instanceGroupManager")
       private final @Nullable Output<String> instanceGroupManager;
 
     public Output<String> getInstanceGroupManager() {
@@ -36,7 +36,7 @@ public final class PerInstanceConfigState extends io.pulumi.resources.ResourceAr
      * * NONE
      * 
      */
-    @InputImport(name="minimalAction")
+    @Import(name="minimalAction")
       private final @Nullable Output<String> minimalAction;
 
     public Output<String> getMinimalAction() {
@@ -52,7 +52,7 @@ public final class PerInstanceConfigState extends io.pulumi.resources.ResourceAr
      * * NONE
      * 
      */
-    @InputImport(name="mostDisruptiveAllowedAction")
+    @Import(name="mostDisruptiveAllowedAction")
       private final @Nullable Output<String> mostDisruptiveAllowedAction;
 
     public Output<String> getMostDisruptiveAllowedAction() {
@@ -63,7 +63,7 @@ public final class PerInstanceConfigState extends io.pulumi.resources.ResourceAr
      * The name for this per-instance config and its corresponding instance.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -75,7 +75,7 @@ public final class PerInstanceConfigState extends io.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    @InputImport(name="preservedState")
+    @Import(name="preservedState")
       private final @Nullable Output<PerInstanceConfigPreservedStateGetArgs> preservedState;
 
     public Output<PerInstanceConfigPreservedStateGetArgs> getPreservedState() {
@@ -87,7 +87,7 @@ public final class PerInstanceConfigState extends io.pulumi.resources.ResourceAr
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -100,7 +100,7 @@ public final class PerInstanceConfigState extends io.pulumi.resources.ResourceAr
      * State will be removed on the next instance recreation or update.
      * 
      */
-    @InputImport(name="removeInstanceStateOnDestroy")
+    @Import(name="removeInstanceStateOnDestroy")
       private final @Nullable Output<Boolean> removeInstanceStateOnDestroy;
 
     public Output<Boolean> getRemoveInstanceStateOnDestroy() {
@@ -111,7 +111,7 @@ public final class PerInstanceConfigState extends io.pulumi.resources.ResourceAr
      * Zone where the containing instance group manager is located
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

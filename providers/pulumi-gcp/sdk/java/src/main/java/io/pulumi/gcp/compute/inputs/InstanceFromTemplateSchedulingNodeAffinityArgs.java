@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,21 +14,21 @@ public final class InstanceFromTemplateSchedulingNodeAffinityArgs extends io.pul
 
     public static final InstanceFromTemplateSchedulingNodeAffinityArgs Empty = new InstanceFromTemplateSchedulingNodeAffinityArgs();
 
-    @InputImport(name="key", required=true)
+    @Import(name="key", required=true)
       private final Output<String> key;
 
     public Output<String> getKey() {
         return this.key;
     }
 
-    @InputImport(name="operator", required=true)
+    @Import(name="operator", required=true)
       private final Output<String> operator;
 
     public Output<String> getOperator() {
         return this.operator;
     }
 
-    @InputImport(name="values", required=true)
+    @Import(name="values", required=true)
       private final Output<List<String>> values;
 
     public Output<List<String>> getValues() {

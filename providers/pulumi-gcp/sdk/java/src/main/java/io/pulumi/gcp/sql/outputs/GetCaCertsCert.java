@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetCaCertsCert {
     /**
      * The CA certificate used to connect to the SQL instance via SSL.
@@ -35,13 +35,13 @@ public final class GetCaCertsCert {
      */
     private final String sha1Fingerprint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetCaCertsCert(
-        @OutputCustomType.Parameter("cert") String cert,
-        @OutputCustomType.Parameter("commonName") String commonName,
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("expirationTime") String expirationTime,
-        @OutputCustomType.Parameter("sha1Fingerprint") String sha1Fingerprint) {
+        @CustomType.Parameter("cert") String cert,
+        @CustomType.Parameter("commonName") String commonName,
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("expirationTime") String expirationTime,
+        @CustomType.Parameter("sha1Fingerprint") String sha1Fingerprint) {
         this.cert = cert;
         this.commonName = commonName;
         this.createTime = createTime;

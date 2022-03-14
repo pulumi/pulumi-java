@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceTemplateSpecContainerEnvFromConfigMapRef {
     /**
      * The Secret to select from.
@@ -24,10 +24,10 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRef {
      */
     private final @Nullable Boolean optional;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceTemplateSpecContainerEnvFromConfigMapRef(
-        @OutputCustomType.Parameter("localObjectReference") @Nullable ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference localObjectReference,
-        @OutputCustomType.Parameter("optional") @Nullable Boolean optional) {
+        @CustomType.Parameter("localObjectReference") @Nullable ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference localObjectReference,
+        @CustomType.Parameter("optional") @Nullable Boolean optional) {
         this.localObjectReference = localObjectReference;
         this.optional = optional;
     }

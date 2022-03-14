@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig {
     private final @Nullable String instanceGroupManagerName;
     private final @Nullable String instanceTemplateName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfig(
-        @OutputCustomType.Parameter("instanceGroupManagerName") @Nullable String instanceGroupManagerName,
-        @OutputCustomType.Parameter("instanceTemplateName") @Nullable String instanceTemplateName) {
+        @CustomType.Parameter("instanceGroupManagerName") @Nullable String instanceGroupManagerName,
+        @CustomType.Parameter("instanceTemplateName") @Nullable String instanceTemplateName) {
         this.instanceGroupManagerName = instanceGroupManagerName;
         this.instanceTemplateName = instanceTemplateName;
     }

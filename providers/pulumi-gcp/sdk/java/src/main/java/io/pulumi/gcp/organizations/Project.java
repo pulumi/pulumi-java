@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.organizations.ProjectArgs;
@@ -53,7 +53,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * you set `auto_create_network` to `false`, since the network will exist momentarily.
      * 
      */
-    @OutputExport(name="autoCreateNetwork", type=Boolean.class, parameters={})
+    @Export(name="autoCreateNetwork", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> autoCreateNetwork;
 
     /**
@@ -74,7 +74,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * for more details.
      * 
      */
-    @OutputExport(name="billingAccount", type=String.class, parameters={})
+    @Export(name="billingAccount", type=String.class, parameters={})
     private Output</* @Nullable */ String> billingAccount;
 
     /**
@@ -96,7 +96,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * project to be migrated to the newly specified folder.
      * 
      */
-    @OutputExport(name="folderId", type=String.class, parameters={})
+    @Export(name="folderId", type=String.class, parameters={})
     private Output</* @Nullable */ String> folderId;
 
     /**
@@ -114,7 +114,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * A set of key/value label pairs to assign to the project.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -128,7 +128,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The display name of the project.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -142,7 +142,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The numeric identifier of the project.
      * 
      */
-    @OutputExport(name="number", type=String.class, parameters={})
+    @Export(name="number", type=String.class, parameters={})
     private Output<String> number;
 
     /**
@@ -161,7 +161,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * organization.
      * 
      */
-    @OutputExport(name="orgId", type=String.class, parameters={})
+    @Export(name="orgId", type=String.class, parameters={})
     private Output</* @Nullable */ String> orgId;
 
     /**
@@ -180,7 +180,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The project ID. Changing this forces a new project to be created.
      * 
      */
-    @OutputExport(name="projectId", type=String.class, parameters={})
+    @Export(name="projectId", type=String.class, parameters={})
     private Output<String> projectId;
 
     /**
@@ -195,7 +195,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * without deleting the Project via the Google API.
      * 
      */
-    @OutputExport(name="skipDelete", type=Boolean.class, parameters={})
+    @Export(name="skipDelete", type=Boolean.class, parameters={})
     private Output<Boolean> skipDelete;
 
     /**

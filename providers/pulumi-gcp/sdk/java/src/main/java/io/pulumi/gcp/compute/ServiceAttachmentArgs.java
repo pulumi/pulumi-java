@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.ServiceAttachmentConsumerAcceptListArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * values include "ACCEPT_AUTOMATIC", "ACCEPT_MANUAL".
      * 
      */
-    @InputImport(name="connectionPreference", required=true)
+    @Import(name="connectionPreference", required=true)
       private final Output<String> connectionPreference;
 
     public Output<String> getConnectionPreference() {
@@ -35,7 +35,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="consumerAcceptLists")
+    @Import(name="consumerAcceptLists")
       private final @Nullable Output<List<ServiceAttachmentConsumerAcceptListArgs>> consumerAcceptLists;
 
     public Output<List<ServiceAttachmentConsumerAcceptListArgs>> getConsumerAcceptLists() {
@@ -47,7 +47,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * attachment.
      * 
      */
-    @InputImport(name="consumerRejectLists")
+    @Import(name="consumerRejectLists")
       private final @Nullable Output<List<String>> consumerRejectLists;
 
     public Output<List<String>> getConsumerRejectLists() {
@@ -58,7 +58,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -71,7 +71,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * destination servers.
      * 
      */
-    @InputImport(name="enableProxyProtocol", required=true)
+    @Import(name="enableProxyProtocol", required=true)
       private final Output<Boolean> enableProxyProtocol;
 
     public Output<Boolean> getEnableProxyProtocol() {
@@ -87,7 +87,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -98,7 +98,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * An array of subnets that is provided for NAT in this service attachment.
      * 
      */
-    @InputImport(name="natSubnets", required=true)
+    @Import(name="natSubnets", required=true)
       private final Output<List<String>> natSubnets;
 
     public Output<List<String>> getNatSubnets() {
@@ -110,7 +110,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -121,7 +121,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * URL of the region where the resource resides.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -133,7 +133,7 @@ public final class ServiceAttachmentArgs extends io.pulumi.resources.ResourceArg
      * this service attachment.
      * 
      */
-    @InputImport(name="targetService", required=true)
+    @Import(name="targetService", required=true)
       private final Output<String> targetService;
 
     public Output<String> getTargetService() {

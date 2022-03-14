@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BackendServiceCdnPolicyCacheKeyPolicy {
     /**
      * If true requests to different hosts will be cached separately.
@@ -52,13 +52,13 @@ public final class BackendServiceCdnPolicyCacheKeyPolicy {
      */
     private final @Nullable List<String> queryStringWhitelists;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendServiceCdnPolicyCacheKeyPolicy(
-        @OutputCustomType.Parameter("includeHost") @Nullable Boolean includeHost,
-        @OutputCustomType.Parameter("includeProtocol") @Nullable Boolean includeProtocol,
-        @OutputCustomType.Parameter("includeQueryString") @Nullable Boolean includeQueryString,
-        @OutputCustomType.Parameter("queryStringBlacklists") @Nullable List<String> queryStringBlacklists,
-        @OutputCustomType.Parameter("queryStringWhitelists") @Nullable List<String> queryStringWhitelists) {
+        @CustomType.Parameter("includeHost") @Nullable Boolean includeHost,
+        @CustomType.Parameter("includeProtocol") @Nullable Boolean includeProtocol,
+        @CustomType.Parameter("includeQueryString") @Nullable Boolean includeQueryString,
+        @CustomType.Parameter("queryStringBlacklists") @Nullable List<String> queryStringBlacklists,
+        @CustomType.Parameter("queryStringWhitelists") @Nullable List<String> queryStringWhitelists) {
         this.includeHost = includeHost;
         this.includeProtocol = includeProtocol;
         this.includeQueryString = includeQueryString;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigquery.inputs.TableEncryptionConfigurationGetArgs;
 import io.pulumi.gcp.bigquery.inputs.TableExternalDataConfigurationGetArgs;
 import io.pulumi.gcp.bigquery.inputs.TableMaterializedViewGetArgs;
@@ -30,7 +30,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * descending priority order.
      * 
      */
-    @InputImport(name="clusterings")
+    @Import(name="clusterings")
       private final @Nullable Output<List<String>> clusterings;
 
     public Output<List<String>> getClusterings() {
@@ -41,7 +41,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * The time when this table was created, in milliseconds since the epoch.
      * 
      */
-    @InputImport(name="creationTime")
+    @Import(name="creationTime")
       private final @Nullable Output<Integer> creationTime;
 
     public Output<Integer> getCreationTime() {
@@ -53,7 +53,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * Changing this forces a new resource to be created.
      * 
      */
-    @InputImport(name="datasetId")
+    @Import(name="datasetId")
       private final @Nullable Output<String> datasetId;
 
     public Output<String> getDatasetId() {
@@ -65,7 +65,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * in state, a `=destroy` or `=update` that would delete the instance will fail.
      * 
      */
-    @InputImport(name="deletionProtection")
+    @Import(name="deletionProtection")
       private final @Nullable Output<Boolean> deletionProtection;
 
     public Output<Boolean> getDeletionProtection() {
@@ -76,7 +76,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * The field description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -89,7 +89,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * is transparent to the user.  Structure is documented below.
      * 
      */
-    @InputImport(name="encryptionConfiguration")
+    @Import(name="encryptionConfiguration")
       private final @Nullable Output<TableEncryptionConfigurationGetArgs> encryptionConfiguration;
 
     public Output<TableEncryptionConfigurationGetArgs> getEncryptionConfiguration() {
@@ -100,7 +100,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * A hash of the resource.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -114,7 +114,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * reclaimed.
      * 
      */
-    @InputImport(name="expirationTime")
+    @Import(name="expirationTime")
       private final @Nullable Output<Integer> expirationTime;
 
     public Output<Integer> getExpirationTime() {
@@ -128,7 +128,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * if it were a standard BigQuery table. Structure is documented below.
      * 
      */
-    @InputImport(name="externalDataConfiguration")
+    @Import(name="externalDataConfiguration")
       private final @Nullable Output<TableExternalDataConfigurationGetArgs> externalDataConfiguration;
 
     public Output<TableExternalDataConfigurationGetArgs> getExternalDataConfiguration() {
@@ -139,7 +139,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * A descriptive name for the table.
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -150,7 +150,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * A mapping of labels to assign to the resource.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -161,7 +161,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * The time when this table was last modified, in milliseconds since the epoch.
      * 
      */
-    @InputImport(name="lastModifiedTime")
+    @Import(name="lastModifiedTime")
       private final @Nullable Output<Integer> lastModifiedTime;
 
     public Output<Integer> getLastModifiedTime() {
@@ -172,7 +172,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * The geographic location where the table resides. This value is inherited from the dataset.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -184,7 +184,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="materializedView")
+    @Import(name="materializedView")
       private final @Nullable Output<TableMaterializedViewGetArgs> materializedView;
 
     public Output<TableMaterializedViewGetArgs> getMaterializedView() {
@@ -195,7 +195,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * The size of this table in bytes, excluding any data in the streaming buffer.
      * 
      */
-    @InputImport(name="numBytes")
+    @Import(name="numBytes")
       private final @Nullable Output<Integer> numBytes;
 
     public Output<Integer> getNumBytes() {
@@ -206,7 +206,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * The number of bytes in the table that are considered "long-term storage".
      * 
      */
-    @InputImport(name="numLongTermBytes")
+    @Import(name="numLongTermBytes")
       private final @Nullable Output<Integer> numLongTermBytes;
 
     public Output<Integer> getNumLongTermBytes() {
@@ -217,7 +217,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * The number of rows of data in this table, excluding any data in the streaming buffer.
      * 
      */
-    @InputImport(name="numRows")
+    @Import(name="numRows")
       private final @Nullable Output<Integer> numRows;
 
     public Output<Integer> getNumRows() {
@@ -229,7 +229,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -241,7 +241,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * partitioning for this table. Structure is documented below.
      * 
      */
-    @InputImport(name="rangePartitioning")
+    @Import(name="rangePartitioning")
       private final @Nullable Output<TableRangePartitioningGetArgs> rangePartitioning;
 
     public Output<TableRangePartitioningGetArgs> getRangePartitioning() {
@@ -262,7 +262,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * `google_bigquery_table.schema`
      * 
      */
-    @InputImport(name="schema")
+    @Import(name="schema")
       private final @Nullable Output<String> schema;
 
     public Output<String> getSchema() {
@@ -273,7 +273,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * The URI of the created resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -285,7 +285,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * Changing this forces a new resource to be created.
      * 
      */
-    @InputImport(name="tableId")
+    @Import(name="tableId")
       private final @Nullable Output<String> tableId;
 
     public Output<String> getTableId() {
@@ -297,7 +297,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * partitioning for this table. Structure is documented below.
      * 
      */
-    @InputImport(name="timePartitioning")
+    @Import(name="timePartitioning")
       private final @Nullable Output<TableTimePartitioningGetArgs> timePartitioning;
 
     public Output<TableTimePartitioningGetArgs> getTimePartitioning() {
@@ -309,7 +309,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * which will generate one partition per day, hour, month, and year, respectively.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
@@ -321,7 +321,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="view")
+    @Import(name="view")
       private final @Nullable Output<TableViewGetArgs> view;
 
     public Output<TableViewGetArgs> getView() {

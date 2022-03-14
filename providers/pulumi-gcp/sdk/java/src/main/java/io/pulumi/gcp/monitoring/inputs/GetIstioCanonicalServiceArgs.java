@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetIstioCanonicalServiceArgs extends io.pulumi.resources.Invo
      * Corresponds to the destination_canonical_service_name metric label in label in Istio metrics.
      * 
      */
-    @InputImport(name="canonicalService", required=true)
+    @Import(name="canonicalService", required=true)
       private final String canonicalService;
 
     public String getCanonicalService() {
@@ -31,7 +31,7 @@ public final class GetIstioCanonicalServiceArgs extends io.pulumi.resources.Invo
      * Corresponds to the destination_canonical_service_namespace metric label in Istio metrics.
      * 
      */
-    @InputImport(name="canonicalServiceNamespace", required=true)
+    @Import(name="canonicalServiceNamespace", required=true)
       private final String canonicalServiceNamespace;
 
     public String getCanonicalServiceNamespace() {
@@ -43,7 +43,7 @@ public final class GetIstioCanonicalServiceArgs extends io.pulumi.resources.Invo
      * Corresponds to the meshUid metric label in Istio metrics.
      * 
      */
-    @InputImport(name="meshUid", required=true)
+    @Import(name="meshUid", required=true)
       private final String meshUid;
 
     public String getMeshUid() {
@@ -55,7 +55,7 @@ public final class GetIstioCanonicalServiceArgs extends io.pulumi.resources.Invo
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {

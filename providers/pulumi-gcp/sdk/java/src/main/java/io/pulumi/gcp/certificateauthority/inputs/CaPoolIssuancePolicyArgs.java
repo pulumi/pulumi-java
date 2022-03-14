@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyAllowedIssuanceModesArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyAllowedKeyTypeArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesArgs;
@@ -24,7 +24,7 @@ public final class CaPoolIssuancePolicyArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="allowedIssuanceModes")
+    @Import(name="allowedIssuanceModes")
       private final @Nullable Output<CaPoolIssuancePolicyAllowedIssuanceModesArgs> allowedIssuanceModes;
 
     public Output<CaPoolIssuancePolicyAllowedIssuanceModesArgs> getAllowedIssuanceModes() {
@@ -37,7 +37,7 @@ public final class CaPoolIssuancePolicyArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="allowedKeyTypes")
+    @Import(name="allowedKeyTypes")
       private final @Nullable Output<List<CaPoolIssuancePolicyAllowedKeyTypeArgs>> allowedKeyTypes;
 
     public Output<List<CaPoolIssuancePolicyAllowedKeyTypeArgs>> getAllowedKeyTypes() {
@@ -52,7 +52,7 @@ public final class CaPoolIssuancePolicyArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="baselineValues")
+    @Import(name="baselineValues")
       private final @Nullable Output<CaPoolIssuancePolicyBaselineValuesArgs> baselineValues;
 
     public Output<CaPoolIssuancePolicyBaselineValuesArgs> getBaselineValues() {
@@ -65,7 +65,7 @@ public final class CaPoolIssuancePolicyArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="identityConstraints")
+    @Import(name="identityConstraints")
       private final @Nullable Output<CaPoolIssuancePolicyIdentityConstraintsArgs> identityConstraints;
 
     public Output<CaPoolIssuancePolicyIdentityConstraintsArgs> getIdentityConstraints() {
@@ -77,7 +77,7 @@ public final class CaPoolIssuancePolicyArgs extends io.pulumi.resources.Resource
      * expires before a Certificate's requested maximumLifetime, the effective lifetime will be explicitly truncated to match it.
      * 
      */
-    @InputImport(name="maximumLifetime")
+    @Import(name="maximumLifetime")
       private final @Nullable Output<String> maximumLifetime;
 
     public Output<String> getMaximumLifetime() {

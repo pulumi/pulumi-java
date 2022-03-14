@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore {
     /**
      * Characters to not transform when masking.
@@ -23,10 +23,10 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      */
     private final @Nullable String commonCharactersToIgnore;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnore(
-        @OutputCustomType.Parameter("charactersToSkip") @Nullable String charactersToSkip,
-        @OutputCustomType.Parameter("commonCharactersToIgnore") @Nullable String commonCharactersToIgnore) {
+        @CustomType.Parameter("charactersToSkip") @Nullable String charactersToSkip,
+        @CustomType.Parameter("commonCharactersToIgnore") @Nullable String commonCharactersToIgnore) {
         this.charactersToSkip = charactersToSkip;
         this.commonCharactersToIgnore = commonCharactersToIgnore;
     }

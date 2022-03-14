@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ManagedZonePeeringConfigTargetNetwork {
     /**
      * The id or fully qualified URL of the VPC network to forward queries to.
@@ -17,8 +17,8 @@ public final class ManagedZonePeeringConfigTargetNetwork {
      */
     private final String networkUrl;
 
-    @OutputCustomType.Constructor
-    private ManagedZonePeeringConfigTargetNetwork(@OutputCustomType.Parameter("networkUrl") String networkUrl) {
+    @CustomType.Constructor
+    private ManagedZonePeeringConfigTargetNetwork(@CustomType.Parameter("networkUrl") String networkUrl) {
         this.networkUrl = networkUrl;
     }
 

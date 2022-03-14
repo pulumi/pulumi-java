@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAdd;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAdd;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegionUrlMapPathMatcherRouteRuleHeaderAction {
     /**
      * Headers to add to a matching request prior to forwarding the request to the
@@ -39,12 +39,12 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderAction {
      */
     private final @Nullable List<String> responseHeadersToRemoves;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionUrlMapPathMatcherRouteRuleHeaderAction(
-        @OutputCustomType.Parameter("requestHeadersToAdds") @Nullable List<RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAdd> requestHeadersToAdds,
-        @OutputCustomType.Parameter("requestHeadersToRemoves") @Nullable List<String> requestHeadersToRemoves,
-        @OutputCustomType.Parameter("responseHeadersToAdds") @Nullable List<RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAdd> responseHeadersToAdds,
-        @OutputCustomType.Parameter("responseHeadersToRemoves") @Nullable List<String> responseHeadersToRemoves) {
+        @CustomType.Parameter("requestHeadersToAdds") @Nullable List<RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAdd> requestHeadersToAdds,
+        @CustomType.Parameter("requestHeadersToRemoves") @Nullable List<String> requestHeadersToRemoves,
+        @CustomType.Parameter("responseHeadersToAdds") @Nullable List<RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAdd> responseHeadersToAdds,
+        @CustomType.Parameter("responseHeadersToRemoves") @Nullable List<String> responseHeadersToRemoves) {
         this.requestHeadersToAdds = requestHeadersToAdds;
         this.requestHeadersToRemoves = requestHeadersToRemoves;
         this.responseHeadersToAdds = responseHeadersToAdds;

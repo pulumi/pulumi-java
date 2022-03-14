@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,14 +14,14 @@ public final class ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs extends
 
     public static final ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs Empty = new ClusterMaintenancePolicyDailyMaintenanceWindowGetArgs();
 
-    @InputImport(name="duration")
+    @Import(name="duration")
       private final @Nullable Output<String> duration;
 
     public Output<String> getDuration() {
         return this.duration == null ? Output.empty() : this.duration;
     }
 
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
     public Output<String> getStartTime() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkerPoolWorkerConfig {
     /**
      * Size of the disk attached to the worker, in GB. See (https://cloud.google.com/cloud-build/docs/custom-workers/worker-pool-config-file). Specify a value of up to 1000. If `0` is specified, Cloud Build will use a standard disk size.
@@ -29,11 +29,11 @@ public final class WorkerPoolWorkerConfig {
      */
     private final @Nullable Boolean noExternalIp;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkerPoolWorkerConfig(
-        @OutputCustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
-        @OutputCustomType.Parameter("machineType") @Nullable String machineType,
-        @OutputCustomType.Parameter("noExternalIp") @Nullable Boolean noExternalIp) {
+        @CustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
+        @CustomType.Parameter("machineType") @Nullable String machineType,
+        @CustomType.Parameter("noExternalIp") @Nullable Boolean noExternalIp) {
         this.diskSizeGb = diskSizeGb;
         this.machineType = machineType;
         this.noExternalIp = noExternalIp;

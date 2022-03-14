@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut {
     /**
      * A TimeSeries [monitoring filter](https://cloud.google.com/monitoring/api/v3/filters)
@@ -30,10 +30,10 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistribut
      */
     private final SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange range;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCut(
-        @OutputCustomType.Parameter("distributionFilter") String distributionFilter,
-        @OutputCustomType.Parameter("range") SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange range) {
+        @CustomType.Parameter("distributionFilter") String distributionFilter,
+        @CustomType.Parameter("range") SloWindowsBasedSliGoodTotalRatioThresholdPerformanceDistributionCutRange range) {
         this.distributionFilter = distributionFilter;
         this.range = range;
     }

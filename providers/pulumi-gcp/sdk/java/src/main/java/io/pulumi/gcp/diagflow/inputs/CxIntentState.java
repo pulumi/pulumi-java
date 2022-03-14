@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.diagflow.inputs.CxIntentParameterGetArgs;
 import io.pulumi.gcp.diagflow.inputs.CxIntentTrainingPhraseGetArgs;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
      * Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -35,7 +35,7 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
      * The human-readable name of the intent, unique within the agent.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -47,7 +47,7 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
      * Adding training phrases to fallback intent is useful in the case of requests that are mistakenly matched, since training phrases assigned to fallback intents act as negative examples that triggers no-match event.
      * 
      */
-    @InputImport(name="isFallback")
+    @Import(name="isFallback")
       private final @Nullable Output<Boolean> isFallback;
 
     public Output<Boolean> getIsFallback() {
@@ -60,7 +60,7 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
      * An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -73,7 +73,7 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
      * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
      * 
      */
-    @InputImport(name="languageCode")
+    @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
     public Output<String> getLanguageCode() {
@@ -85,7 +85,7 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
      * ID>/intents/<Intent ID>.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -97,7 +97,7 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<CxIntentParameterGetArgs>> parameters;
 
     public Output<List<CxIntentParameterGetArgs>> getParameters() {
@@ -109,7 +109,7 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -122,7 +122,7 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
      * If the supplied value is negative, the intent is ignored in runtime detect intent requests.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -134,7 +134,7 @@ public final class CxIntentState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="trainingPhrases")
+    @Import(name="trainingPhrases")
       private final @Nullable Output<List<CxIntentTrainingPhraseGetArgs>> trainingPhrases;
 
     public Output<List<CxIntentTrainingPhraseGetArgs>> getTrainingPhrases() {

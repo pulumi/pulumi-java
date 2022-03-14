@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.composer.outputs.GetEnvironmentConfig;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetEnvironmentResult {
     /**
      * Configuration parameters for the environment.
@@ -29,14 +29,14 @@ public final class GetEnvironmentResult {
     private final @Nullable String project;
     private final @Nullable String region;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnvironmentResult(
-        @OutputCustomType.Parameter("configs") List<GetEnvironmentConfig> configs,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("region") @Nullable String region) {
+        @CustomType.Parameter("configs") List<GetEnvironmentConfig> configs,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("region") @Nullable String region) {
         this.configs = configs;
         this.id = id;
         this.labels = labels;

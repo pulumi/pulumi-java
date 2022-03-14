@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.NodeTemplateArgs;
@@ -57,7 +57,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * Possible values are `ENABLED` and `NONE`.
      * 
      */
-    @OutputExport(name="cpuOvercommitType", type=String.class, parameters={})
+    @Export(name="cpuOvercommitType", type=String.class, parameters={})
     private Output</* @Nullable */ String> cpuOvercommitType;
 
     /**
@@ -73,7 +73,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -87,7 +87,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * An optional textual description of the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -101,7 +101,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * Name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -116,7 +116,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * instance scheduling.
      * 
      */
-    @OutputExport(name="nodeAffinityLabels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="nodeAffinityLabels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> nodeAffinityLabels;
 
     /**
@@ -132,7 +132,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * Only one of nodeTypeFlexibility and nodeType can be specified.
      * 
      */
-    @OutputExport(name="nodeType", type=String.class, parameters={})
+    @Export(name="nodeType", type=String.class, parameters={})
     private Output</* @Nullable */ String> nodeType;
 
     /**
@@ -151,7 +151,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="nodeTypeFlexibility", type=NodeTemplateNodeTypeFlexibility.class, parameters={})
+    @Export(name="nodeTypeFlexibility", type=NodeTemplateNodeTypeFlexibility.class, parameters={})
     private Output</* @Nullable */ NodeTemplateNodeTypeFlexibility> nodeTypeFlexibility;
 
     /**
@@ -170,7 +170,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -186,7 +186,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider region is used.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -201,7 +201,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -217,7 +217,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="serverBinding", type=NodeTemplateServerBinding.class, parameters={})
+    @Export(name="serverBinding", type=NodeTemplateServerBinding.class, parameters={})
     private Output<NodeTemplateServerBinding> serverBinding;
 
     /**

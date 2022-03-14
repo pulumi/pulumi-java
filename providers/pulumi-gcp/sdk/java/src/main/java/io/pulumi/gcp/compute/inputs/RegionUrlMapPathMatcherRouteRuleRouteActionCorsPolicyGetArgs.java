@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs 
      * Control-Allow-Credentials header. Defaults to false.
      * 
      */
-    @InputImport(name="allowCredentials")
+    @Import(name="allowCredentials")
       private final @Nullable Output<Boolean> allowCredentials;
 
     public Output<Boolean> getAllowCredentials() {
@@ -34,7 +34,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs 
      * Specifies the content for the Access-Control-Allow-Headers header.
      * 
      */
-    @InputImport(name="allowHeaders")
+    @Import(name="allowHeaders")
       private final @Nullable Output<List<String>> allowHeaders;
 
     public Output<List<String>> getAllowHeaders() {
@@ -45,7 +45,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs 
      * Specifies the content for the Access-Control-Allow-Methods header.
      * 
      */
-    @InputImport(name="allowMethods")
+    @Import(name="allowMethods")
       private final @Nullable Output<List<String>> allowMethods;
 
     public Output<List<String>> getAllowMethods() {
@@ -58,7 +58,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs 
      * An origin is allowed if it matches either allow_origins or allow_origin_regex.
      * 
      */
-    @InputImport(name="allowOriginRegexes")
+    @Import(name="allowOriginRegexes")
       private final @Nullable Output<List<String>> allowOriginRegexes;
 
     public Output<List<String>> getAllowOriginRegexes() {
@@ -70,7 +70,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs 
      * origin is allowed if it matches either allow_origins or allow_origin_regex.
      * 
      */
-    @InputImport(name="allowOrigins")
+    @Import(name="allowOrigins")
       private final @Nullable Output<List<String>> allowOrigins;
 
     public Output<List<String>> getAllowOrigins() {
@@ -81,7 +81,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs 
      * If true, specifies the CORS policy is disabled.
      * 
      */
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -92,7 +92,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs 
      * Specifies the content for the Access-Control-Expose-Headers header.
      * 
      */
-    @InputImport(name="exposeHeaders")
+    @Import(name="exposeHeaders")
       private final @Nullable Output<List<String>> exposeHeaders;
 
     public Output<List<String>> getExposeHeaders() {
@@ -104,7 +104,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionCorsPolicyGetArgs 
      * translates to the content for the Access-Control-Max-Age header.
      * 
      */
-    @InputImport(name="maxAge")
+    @Import(name="maxAge")
       private final @Nullable Output<Integer> maxAge;
 
     public Output<Integer> getMaxAge() {

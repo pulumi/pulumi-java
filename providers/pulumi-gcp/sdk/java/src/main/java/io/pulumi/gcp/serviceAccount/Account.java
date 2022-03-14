@@ -4,7 +4,7 @@
 package io.pulumi.gcp.serviceAccount;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.serviceAccount.AccountArgs;
@@ -46,7 +46,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * to comply with RFC1035. Changing this forces a new service account to be created.
      * 
      */
-    @OutputExport(name="accountId", type=String.class, parameters={})
+    @Export(name="accountId", type=String.class, parameters={})
     private Output<String> accountId;
 
     /**
@@ -64,7 +64,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Must be less than or equal to 256 UTF-8 bytes.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -80,7 +80,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Must be set after creation to disable a service account.
      * 
      */
-    @OutputExport(name="disabled", type=Boolean.class, parameters={})
+    @Export(name="disabled", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> disabled;
 
     /**
@@ -96,7 +96,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Can be updated without creating a new resource.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -113,7 +113,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * that would grant the service account privileges.
      * 
      */
-    @OutputExport(name="email", type=String.class, parameters={})
+    @Export(name="email", type=String.class, parameters={})
     private Output<String> email;
 
     /**
@@ -129,7 +129,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The fully-qualified name of the service account.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -144,7 +144,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * Defaults to the provider project configuration.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -159,7 +159,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * The unique id of the service account.
      * 
      */
-    @OutputExport(name="uniqueId", type=String.class, parameters={})
+    @Export(name="uniqueId", type=String.class, parameters={})
     private Output<String> uniqueId;
 
     /**

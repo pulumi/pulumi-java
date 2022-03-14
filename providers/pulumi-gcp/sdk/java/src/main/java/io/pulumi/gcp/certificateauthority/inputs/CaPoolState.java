@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolPublishingOptionsGetArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class CaPoolState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="issuancePolicy")
+    @Import(name="issuancePolicy")
       private final @Nullable Output<CaPoolIssuancePolicyGetArgs> issuancePolicy;
 
     public Output<CaPoolIssuancePolicyGetArgs> getIssuancePolicy() {
@@ -35,7 +35,7 @@ public final class CaPoolState extends io.pulumi.resources.ResourceArgs {
      * "1.3kg", "count": "3" }.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -46,7 +46,7 @@ public final class CaPoolState extends io.pulumi.resources.ResourceArgs {
      * String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -57,7 +57,7 @@ public final class CaPoolState extends io.pulumi.resources.ResourceArgs {
      * The name for this CaPool.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -69,7 +69,7 @@ public final class CaPoolState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -81,7 +81,7 @@ public final class CaPoolState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="publishingOptions")
+    @Import(name="publishingOptions")
       private final @Nullable Output<CaPoolPublishingOptionsGetArgs> publishingOptions;
 
     public Output<CaPoolPublishingOptionsGetArgs> getPublishingOptions() {
@@ -93,7 +93,7 @@ public final class CaPoolState extends io.pulumi.resources.ResourceArgs {
      * Possible values are `ENTERPRISE` and `DEVOPS`.
      * 
      */
-    @InputImport(name="tier")
+    @Import(name="tier")
       private final @Nullable Output<String> tier;
 
     public Output<String> getTier() {

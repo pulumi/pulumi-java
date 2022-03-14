@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CaPoolIssuancePolicyAllowedIssuanceModes;
 import io.pulumi.gcp.certificateauthority.outputs.CaPoolIssuancePolicyAllowedKeyType;
 import io.pulumi.gcp.certificateauthority.outputs.CaPoolIssuancePolicyBaselineValues;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CaPoolIssuancePolicy {
     /**
      * IssuanceModes specifies the allowed ways in which Certificates may be requested from this CaPool.
@@ -52,13 +52,13 @@ public final class CaPoolIssuancePolicy {
      */
     private final @Nullable String maximumLifetime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CaPoolIssuancePolicy(
-        @OutputCustomType.Parameter("allowedIssuanceModes") @Nullable CaPoolIssuancePolicyAllowedIssuanceModes allowedIssuanceModes,
-        @OutputCustomType.Parameter("allowedKeyTypes") @Nullable List<CaPoolIssuancePolicyAllowedKeyType> allowedKeyTypes,
-        @OutputCustomType.Parameter("baselineValues") @Nullable CaPoolIssuancePolicyBaselineValues baselineValues,
-        @OutputCustomType.Parameter("identityConstraints") @Nullable CaPoolIssuancePolicyIdentityConstraints identityConstraints,
-        @OutputCustomType.Parameter("maximumLifetime") @Nullable String maximumLifetime) {
+        @CustomType.Parameter("allowedIssuanceModes") @Nullable CaPoolIssuancePolicyAllowedIssuanceModes allowedIssuanceModes,
+        @CustomType.Parameter("allowedKeyTypes") @Nullable List<CaPoolIssuancePolicyAllowedKeyType> allowedKeyTypes,
+        @CustomType.Parameter("baselineValues") @Nullable CaPoolIssuancePolicyBaselineValues baselineValues,
+        @CustomType.Parameter("identityConstraints") @Nullable CaPoolIssuancePolicyIdentityConstraints identityConstraints,
+        @CustomType.Parameter("maximumLifetime") @Nullable String maximumLifetime) {
         this.allowedIssuanceModes = allowedIssuanceModes;
         this.allowedKeyTypes = allowedKeyTypes;
         this.baselineValues = baselineValues;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigquery.inputs.JobCopyGetArgs;
 import io.pulumi.gcp.bigquery.inputs.JobExtractGetArgs;
 import io.pulumi.gcp.bigquery.inputs.JobLoadGetArgs;
@@ -26,7 +26,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="copy")
+    @Import(name="copy")
       private final @Nullable Output<JobCopyGetArgs> copy;
 
     public Output<JobCopyGetArgs> getCopy() {
@@ -38,7 +38,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="extract")
+    @Import(name="extract")
       private final @Nullable Output<JobExtractGetArgs> extract;
 
     public Output<JobExtractGetArgs> getExtract() {
@@ -49,7 +49,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The ID of the job. The ID must contain only letters (a-z, A-Z), numbers (0-9), underscores (_), or dashes (-). The maximum length is 1,024 characters.
      * 
      */
-    @InputImport(name="jobId")
+    @Import(name="jobId")
       private final @Nullable Output<String> jobId;
 
     public Output<String> getJobId() {
@@ -60,7 +60,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * Job timeout in milliseconds. If this time limit is exceeded, BigQuery may attempt to terminate the job.
      * 
      */
-    @InputImport(name="jobTimeoutMs")
+    @Import(name="jobTimeoutMs")
       private final @Nullable Output<String> jobTimeoutMs;
 
     public Output<String> getJobTimeoutMs() {
@@ -71,7 +71,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The type of the job.
      * 
      */
-    @InputImport(name="jobType")
+    @Import(name="jobType")
       private final @Nullable Output<String> jobType;
 
     public Output<String> getJobType() {
@@ -82,7 +82,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The labels associated with this job. You can use these to organize and group your jobs.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -94,7 +94,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="load")
+    @Import(name="load")
       private final @Nullable Output<JobLoadGetArgs> load;
 
     public Output<JobLoadGetArgs> getLoad() {
@@ -105,7 +105,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The geographic location of the job. The default value is US.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -117,7 +117,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -129,7 +129,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="query")
+    @Import(name="query")
       private final @Nullable Output<JobQueryGetArgs> query;
 
     public Output<JobQueryGetArgs> getQuery() {
@@ -140,7 +140,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The status of this job. Examine this value when polling an asynchronous job to see if the job is complete.
      * 
      */
-    @InputImport(name="statuses")
+    @Import(name="statuses")
       private final @Nullable Output<List<JobStatusGetArgs>> statuses;
 
     public Output<List<JobStatusGetArgs>> getStatuses() {
@@ -151,7 +151,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * Email address of the user who ran the job.
      * 
      */
-    @InputImport(name="userEmail")
+    @Import(name="userEmail")
       private final @Nullable Output<String> userEmail;
 
     public Output<String> getUserEmail() {

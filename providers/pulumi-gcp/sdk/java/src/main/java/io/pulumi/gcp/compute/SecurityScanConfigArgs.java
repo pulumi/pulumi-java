@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.SecurityScanConfigAuthenticationArgs;
 import io.pulumi.gcp.compute.inputs.SecurityScanConfigScheduleArgs;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    @InputImport(name="authentication")
+    @Import(name="authentication")
       private final @Nullable Output<SecurityScanConfigAuthenticationArgs> authentication;
 
     public Output<SecurityScanConfigAuthenticationArgs> getAuthentication() {
@@ -36,7 +36,7 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
      * https://cloud.google.com/security-scanner/docs/excluded-urls
      * 
      */
-    @InputImport(name="blacklistPatterns")
+    @Import(name="blacklistPatterns")
       private final @Nullable Output<List<String>> blacklistPatterns;
 
     public Output<List<String>> getBlacklistPatterns() {
@@ -47,7 +47,7 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
      * The user provider display name of the ScanConfig.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -60,7 +60,7 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
      * Possible values are `ENABLED` and `DISABLED`.
      * 
      */
-    @InputImport(name="exportToSecurityCommandCenter")
+    @Import(name="exportToSecurityCommandCenter")
       private final @Nullable Output<String> exportToSecurityCommandCenter;
 
     public Output<String> getExportToSecurityCommandCenter() {
@@ -72,7 +72,7 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
      * Defaults to 15.
      * 
      */
-    @InputImport(name="maxQps")
+    @Import(name="maxQps")
       private final @Nullable Output<Integer> maxQps;
 
     public Output<Integer> getMaxQps() {
@@ -84,7 +84,7 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -96,7 +96,7 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    @InputImport(name="schedule")
+    @Import(name="schedule")
       private final @Nullable Output<SecurityScanConfigScheduleArgs> schedule;
 
     public Output<SecurityScanConfigScheduleArgs> getSchedule() {
@@ -107,7 +107,7 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
      * The starting URLs from which the scanner finds site pages.
      * 
      */
-    @InputImport(name="startingUrls", required=true)
+    @Import(name="startingUrls", required=true)
       private final Output<List<String>> startingUrls;
 
     public Output<List<String>> getStartingUrls() {
@@ -119,7 +119,7 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
      * Each value may be one of `APP_ENGINE` and `COMPUTE`.
      * 
      */
-    @InputImport(name="targetPlatforms")
+    @Import(name="targetPlatforms")
       private final @Nullable Output<List<String>> targetPlatforms;
 
     public Output<List<String>> getTargetPlatforms() {
@@ -132,7 +132,7 @@ public final class SecurityScanConfigArgs extends io.pulumi.resources.ResourceAr
      * Possible values are `USER_AGENT_UNSPECIFIED`, `CHROME_LINUX`, `CHROME_ANDROID`, and `SAFARI_IPHONE`.
      * 
      */
-    @InputImport(name="userAgent")
+    @Import(name="userAgent")
       private final @Nullable Output<String> userAgent;
 
     public Output<String> getUserAgent() {

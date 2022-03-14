@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ReservationSpecificReservationInstancePropertiesGuestAccelera
      * this instance.
      * 
      */
-    @InputImport(name="acceleratorCount", required=true)
+    @Import(name="acceleratorCount", required=true)
       private final Output<Integer> acceleratorCount;
 
     public Output<Integer> getAcceleratorCount() {
@@ -33,7 +33,7 @@ public final class ReservationSpecificReservationInstancePropertiesGuestAccelera
      * If you are creating an instance template, specify only the accelerator name.
      * 
      */
-    @InputImport(name="acceleratorType", required=true)
+    @Import(name="acceleratorType", required=true)
       private final Output<String> acceleratorType;
 
     public Output<String> getAcceleratorType() {

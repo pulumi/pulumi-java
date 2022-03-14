@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.healthcare.inputs.Hl7StoreIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class Hl7StoreIamMemberArgs extends io.pulumi.resources.ResourceArg
 
     public static final Hl7StoreIamMemberArgs Empty = new Hl7StoreIamMemberArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<Hl7StoreIamMemberConditionArgs> condition;
 
     public Output<Hl7StoreIamMemberConditionArgs> getCondition() {
@@ -29,14 +29,14 @@ public final class Hl7StoreIamMemberArgs extends io.pulumi.resources.ResourceArg
      * project setting will be used as a fallback.
      * 
      */
-    @InputImport(name="hl7V2StoreId", required=true)
+    @Import(name="hl7V2StoreId", required=true)
       private final Output<String> hl7V2StoreId;
 
     public Output<String> getHl7V2StoreId() {
         return this.hl7V2StoreId;
     }
 
-    @InputImport(name="member", required=true)
+    @Import(name="member", required=true)
       private final Output<String> member;
 
     public Output<String> getMember() {
@@ -49,7 +49,7 @@ public final class Hl7StoreIamMemberArgs extends io.pulumi.resources.ResourceArg
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

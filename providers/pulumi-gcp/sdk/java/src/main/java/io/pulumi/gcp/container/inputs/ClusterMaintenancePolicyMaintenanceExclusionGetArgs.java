@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,21 +13,21 @@ public final class ClusterMaintenancePolicyMaintenanceExclusionGetArgs extends i
 
     public static final ClusterMaintenancePolicyMaintenanceExclusionGetArgs Empty = new ClusterMaintenancePolicyMaintenanceExclusionGetArgs();
 
-    @InputImport(name="endTime", required=true)
+    @Import(name="endTime", required=true)
       private final Output<String> endTime;
 
     public Output<String> getEndTime() {
         return this.endTime;
     }
 
-    @InputImport(name="exclusionName", required=true)
+    @Import(name="exclusionName", required=true)
       private final Output<String> exclusionName;
 
     public Output<String> getExclusionName() {
         return this.exclusionName;
     }
 
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final Output<String> startTime;
 
     public Output<String> getStartTime() {

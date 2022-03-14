@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.billing.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.billing.outputs.BudgetAmountSpecifiedAmount;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BudgetAmount {
     /**
      * Configures a budget amount that is automatically set to 100% of
@@ -29,10 +29,10 @@ public final class BudgetAmount {
      */
     private final @Nullable BudgetAmountSpecifiedAmount specifiedAmount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BudgetAmount(
-        @OutputCustomType.Parameter("lastPeriodAmount") @Nullable Boolean lastPeriodAmount,
-        @OutputCustomType.Parameter("specifiedAmount") @Nullable BudgetAmountSpecifiedAmount specifiedAmount) {
+        @CustomType.Parameter("lastPeriodAmount") @Nullable Boolean lastPeriodAmount,
+        @CustomType.Parameter("specifiedAmount") @Nullable BudgetAmountSpecifiedAmount specifiedAmount) {
         this.lastPeriodAmount = lastPeriodAmount;
         this.specifiedAmount = specifiedAmount;
     }

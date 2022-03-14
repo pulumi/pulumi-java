@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class CaPoolPublishingOptionsGetArgs extends io.pulumi.resources.Re
      * X.509 extension will not be written in issued certificates.
      * 
      */
-    @InputImport(name="publishCaCert", required=true)
+    @Import(name="publishCaCert", required=true)
       private final Output<Boolean> publishCaCert;
 
     public Output<Boolean> getPublishCaCert() {
@@ -33,7 +33,7 @@ public final class CaPoolPublishingOptionsGetArgs extends io.pulumi.resources.Re
      * also rebuilt shortly after a certificate is revoked.
      * 
      */
-    @InputImport(name="publishCrl", required=true)
+    @Import(name="publishCrl", required=true)
       private final Output<Boolean> publishCrl;
 
     public Output<Boolean> getPublishCrl() {

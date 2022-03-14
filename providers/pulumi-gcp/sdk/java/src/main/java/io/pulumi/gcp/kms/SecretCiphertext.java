@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.kms.SecretCiphertextArgs;
@@ -43,7 +43,7 @@ public class SecretCiphertext extends io.pulumi.resources.CustomResource {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    @OutputExport(name="additionalAuthenticatedData", type=String.class, parameters={})
+    @Export(name="additionalAuthenticatedData", type=String.class, parameters={})
     private Output</* @Nullable */ String> additionalAuthenticatedData;
 
     /**
@@ -58,7 +58,7 @@ public class SecretCiphertext extends io.pulumi.resources.CustomResource {
      * Contains the result of encrypting the provided plaintext, encoded in base64.
      * 
      */
-    @OutputExport(name="ciphertext", type=String.class, parameters={})
+    @Export(name="ciphertext", type=String.class, parameters={})
     private Output<String> ciphertext;
 
     /**
@@ -73,7 +73,7 @@ public class SecretCiphertext extends io.pulumi.resources.CustomResource {
      * Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'`
      * 
      */
-    @OutputExport(name="cryptoKey", type=String.class, parameters={})
+    @Export(name="cryptoKey", type=String.class, parameters={})
     private Output<String> cryptoKey;
 
     /**
@@ -89,7 +89,7 @@ public class SecretCiphertext extends io.pulumi.resources.CustomResource {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    @OutputExport(name="plaintext", type=String.class, parameters={})
+    @Export(name="plaintext", type=String.class, parameters={})
     private Output<String> plaintext;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gameservices;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.gameservices.GameServerDeploymentRolloutArgs;
@@ -51,7 +51,7 @@ public class GameServerDeploymentRollout extends io.pulumi.resources.CustomResou
      * `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
      * 
      */
-    @OutputExport(name="defaultGameServerConfig", type=String.class, parameters={})
+    @Export(name="defaultGameServerConfig", type=String.class, parameters={})
     private Output<String> defaultGameServerConfig;
 
     /**
@@ -67,7 +67,7 @@ public class GameServerDeploymentRollout extends io.pulumi.resources.CustomResou
      * The deployment to rollout the new config to. Only 1 rollout must be associated with each deployment.
      * 
      */
-    @OutputExport(name="deploymentId", type=String.class, parameters={})
+    @Export(name="deploymentId", type=String.class, parameters={})
     private Output<String> deploymentId;
 
     /**
@@ -85,7 +85,7 @@ public class GameServerDeploymentRollout extends io.pulumi.resources.CustomResou
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="gameServerConfigOverrides", type=List.class, parameters={GameServerDeploymentRolloutGameServerConfigOverride.class})
+    @Export(name="gameServerConfigOverrides", type=List.class, parameters={GameServerDeploymentRolloutGameServerConfigOverride.class})
     private Output</* @Nullable */ List<GameServerDeploymentRolloutGameServerConfigOverride>> gameServerConfigOverrides;
 
     /**
@@ -104,7 +104,7 @@ public class GameServerDeploymentRollout extends io.pulumi.resources.CustomResou
      * 'projects/my-project/locations/global/gameServerDeployments/my-deployment/rollout'.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -120,7 +120,7 @@ public class GameServerDeploymentRollout extends io.pulumi.resources.CustomResou
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

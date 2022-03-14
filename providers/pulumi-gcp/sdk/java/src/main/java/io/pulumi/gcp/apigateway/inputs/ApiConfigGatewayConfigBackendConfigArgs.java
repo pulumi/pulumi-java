@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ApiConfigGatewayConfigBackendConfigArgs extends io.pulumi.res
      * (https://cloud.google.com/service-infrastructure/docs/service-management/reference/rest/v1/services.configs#backend).
      * 
      */
-    @InputImport(name="googleServiceAccount", required=true)
+    @Import(name="googleServiceAccount", required=true)
       private final Output<String> googleServiceAccount;
 
     public Output<String> getGoogleServiceAccount() {

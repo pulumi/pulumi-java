@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig {
     private final Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig(@OutputCustomType.Parameter("enabled") Boolean enabled) {
+    @CustomType.Constructor
+    private GetClusterAddonsConfigGcePersistentDiskCsiDriverConfig(@CustomType.Parameter("enabled") Boolean enabled) {
         this.enabled = enabled;
     }
 

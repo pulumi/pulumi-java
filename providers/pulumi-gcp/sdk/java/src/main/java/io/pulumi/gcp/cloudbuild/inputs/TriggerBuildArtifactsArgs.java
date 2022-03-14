@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildArtifactsObjectsArgs;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class TriggerBuildArtifactsArgs extends io.pulumi.resources.Resourc
      * If any of the images fail to be pushed, the build is marked FAILURE.
      * 
      */
-    @InputImport(name="images")
+    @Import(name="images")
       private final @Nullable Output<List<String>> images;
 
     public Output<List<String>> getImages() {
@@ -39,7 +39,7 @@ public final class TriggerBuildArtifactsArgs extends io.pulumi.resources.Resourc
      * Structure is documented below.
      * 
      */
-    @InputImport(name="objects")
+    @Import(name="objects")
       private final @Nullable Output<TriggerBuildArtifactsObjectsArgs> objects;
 
     public Output<TriggerBuildArtifactsObjectsArgs> getObjects() {

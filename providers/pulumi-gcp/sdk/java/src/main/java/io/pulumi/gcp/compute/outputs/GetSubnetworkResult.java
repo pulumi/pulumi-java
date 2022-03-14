@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetSubnetworkSecondaryIpRange;
 import java.lang.Boolean;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetSubnetworkResult {
     /**
      * Description of this subnetwork.
@@ -59,19 +59,19 @@ public final class GetSubnetworkResult {
     private final List<GetSubnetworkSecondaryIpRange> secondaryIpRanges;
     private final String selfLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSubnetworkResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("gatewayAddress") String gatewayAddress,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ipCidrRange") String ipCidrRange,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("privateIpGoogleAccess") Boolean privateIpGoogleAccess,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("secondaryIpRanges") List<GetSubnetworkSecondaryIpRange> secondaryIpRanges,
-        @OutputCustomType.Parameter("selfLink") String selfLink) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("gatewayAddress") String gatewayAddress,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ipCidrRange") String ipCidrRange,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("privateIpGoogleAccess") Boolean privateIpGoogleAccess,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("secondaryIpRanges") List<GetSubnetworkSecondaryIpRange> secondaryIpRanges,
+        @CustomType.Parameter("selfLink") String selfLink) {
         this.description = description;
         this.gatewayAddress = gatewayAddress;
         this.id = id;

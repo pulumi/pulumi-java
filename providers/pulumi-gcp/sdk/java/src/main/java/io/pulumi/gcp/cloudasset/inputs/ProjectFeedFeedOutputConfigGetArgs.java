@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudasset.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudasset.inputs.ProjectFeedFeedOutputConfigPubsubDestinationGetArgs;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ProjectFeedFeedOutputConfigGetArgs extends io.pulumi.resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="pubsubDestination", required=true)
+    @Import(name="pubsubDestination", required=true)
       private final Output<ProjectFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination;
 
     public Output<ProjectFeedFeedOutputConfigPubsubDestinationGetArgs> getPubsubDestination() {

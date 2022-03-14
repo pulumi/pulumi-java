@@ -3,18 +3,18 @@
 
 package io.pulumi.gcp.vertex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AiMetadataStoreState {
     private final @Nullable String diskUtilizationBytes;
 
-    @OutputCustomType.Constructor
-    private AiMetadataStoreState(@OutputCustomType.Parameter("diskUtilizationBytes") @Nullable String diskUtilizationBytes) {
+    @CustomType.Constructor
+    private AiMetadataStoreState(@CustomType.Parameter("diskUtilizationBytes") @Nullable String diskUtilizationBytes) {
         this.diskUtilizationBytes = diskUtilizationBytes;
     }
 

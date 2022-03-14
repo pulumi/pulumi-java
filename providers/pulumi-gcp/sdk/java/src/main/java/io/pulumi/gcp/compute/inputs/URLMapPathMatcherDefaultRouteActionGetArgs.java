@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherDefaultRouteActionCorsPolicyGetArgs;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyGetArgs;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherDefaultRouteActionRequestMirrorPolicyGetArgs;
@@ -27,7 +27,7 @@ public final class URLMapPathMatcherDefaultRouteActionGetArgs extends io.pulumi.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="corsPolicy")
+    @Import(name="corsPolicy")
       private final @Nullable Output<URLMapPathMatcherDefaultRouteActionCorsPolicyGetArgs> corsPolicy;
 
     public Output<URLMapPathMatcherDefaultRouteActionCorsPolicyGetArgs> getCorsPolicy() {
@@ -43,7 +43,7 @@ public final class URLMapPathMatcherDefaultRouteActionGetArgs extends io.pulumi.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="faultInjectionPolicy")
+    @Import(name="faultInjectionPolicy")
       private final @Nullable Output<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyGetArgs> faultInjectionPolicy;
 
     public Output<URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyGetArgs> getFaultInjectionPolicy() {
@@ -57,7 +57,7 @@ public final class URLMapPathMatcherDefaultRouteActionGetArgs extends io.pulumi.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="requestMirrorPolicy")
+    @Import(name="requestMirrorPolicy")
       private final @Nullable Output<URLMapPathMatcherDefaultRouteActionRequestMirrorPolicyGetArgs> requestMirrorPolicy;
 
     public Output<URLMapPathMatcherDefaultRouteActionRequestMirrorPolicyGetArgs> getRequestMirrorPolicy() {
@@ -69,7 +69,7 @@ public final class URLMapPathMatcherDefaultRouteActionGetArgs extends io.pulumi.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="retryPolicy")
+    @Import(name="retryPolicy")
       private final @Nullable Output<URLMapPathMatcherDefaultRouteActionRetryPolicyGetArgs> retryPolicy;
 
     public Output<URLMapPathMatcherDefaultRouteActionRetryPolicyGetArgs> getRetryPolicy() {
@@ -83,7 +83,7 @@ public final class URLMapPathMatcherDefaultRouteActionGetArgs extends io.pulumi.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<URLMapPathMatcherDefaultRouteActionTimeoutGetArgs> timeout;
 
     public Output<URLMapPathMatcherDefaultRouteActionTimeoutGetArgs> getTimeout() {
@@ -95,7 +95,7 @@ public final class URLMapPathMatcherDefaultRouteActionGetArgs extends io.pulumi.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="urlRewrite")
+    @Import(name="urlRewrite")
       private final @Nullable Output<URLMapPathMatcherDefaultRouteActionUrlRewriteGetArgs> urlRewrite;
 
     public Output<URLMapPathMatcherDefaultRouteActionUrlRewriteGetArgs> getUrlRewrite() {
@@ -113,7 +113,7 @@ public final class URLMapPathMatcherDefaultRouteActionGetArgs extends io.pulumi.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="weightedBackendServices")
+    @Import(name="weightedBackendServices")
       private final @Nullable Output<List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetArgs>> weightedBackendServices;
 
     public Output<List<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetArgs>> getWeightedBackendServices() {

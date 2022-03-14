@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterClusterAutoscalingAutoProvisioningDefaults {
     /**
      * The image type to use for this node. Note that changing the image type
@@ -41,12 +41,12 @@ public final class ClusterClusterAutoscalingAutoProvisioningDefaults {
      */
     private final @Nullable String serviceAccount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterClusterAutoscalingAutoProvisioningDefaults(
-        @OutputCustomType.Parameter("imageType") @Nullable String imageType,
-        @OutputCustomType.Parameter("minCpuPlatform") @Nullable String minCpuPlatform,
-        @OutputCustomType.Parameter("oauthScopes") @Nullable List<String> oauthScopes,
-        @OutputCustomType.Parameter("serviceAccount") @Nullable String serviceAccount) {
+        @CustomType.Parameter("imageType") @Nullable String imageType,
+        @CustomType.Parameter("minCpuPlatform") @Nullable String minCpuPlatform,
+        @CustomType.Parameter("oauthScopes") @Nullable List<String> oauthScopes,
+        @CustomType.Parameter("serviceAccount") @Nullable String serviceAccount) {
         this.imageType = imageType;
         this.minCpuPlatform = minCpuPlatform;
         this.oauthScopes = oauthScopes;

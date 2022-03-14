@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class AzureClusterControlPlaneProxyConfigGetArgs extends io.pulumi.
      * The ARM ID the of the resource group containing proxy keyvault. Resource group ids are formatted as `/subscriptions/<subscription-id>/resourceGroups/<resource-group-name>`
      * 
      */
-    @InputImport(name="resourceGroupId", required=true)
+    @Import(name="resourceGroupId", required=true)
       private final Output<String> resourceGroupId;
 
     public Output<String> getResourceGroupId() {
@@ -28,7 +28,7 @@ public final class AzureClusterControlPlaneProxyConfigGetArgs extends io.pulumi.
      * The URL the of the proxy setting secret with its version. Secret ids are formatted as `https:<key-vault-name>.vault.azure.net/secrets/<secret-name>/<secret-version>`.
      * 
      */
-    @InputImport(name="secretId", required=true)
+    @Import(name="secretId", required=true)
       private final Output<String> secretId;
 
     public Output<String> getSecretId() {

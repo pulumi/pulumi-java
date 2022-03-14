@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetInstanceSchedulingNodeAffinity;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceScheduling {
     /**
      * Specifies if the instance should be
@@ -34,13 +34,13 @@ public final class GetInstanceScheduling {
      */
     private final Boolean preemptible;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceScheduling(
-        @OutputCustomType.Parameter("automaticRestart") Boolean automaticRestart,
-        @OutputCustomType.Parameter("minNodeCpus") Integer minNodeCpus,
-        @OutputCustomType.Parameter("nodeAffinities") List<GetInstanceSchedulingNodeAffinity> nodeAffinities,
-        @OutputCustomType.Parameter("onHostMaintenance") String onHostMaintenance,
-        @OutputCustomType.Parameter("preemptible") Boolean preemptible) {
+        @CustomType.Parameter("automaticRestart") Boolean automaticRestart,
+        @CustomType.Parameter("minNodeCpus") Integer minNodeCpus,
+        @CustomType.Parameter("nodeAffinities") List<GetInstanceSchedulingNodeAffinity> nodeAffinities,
+        @CustomType.Parameter("onHostMaintenance") String onHostMaintenance,
+        @CustomType.Parameter("preemptible") Boolean preemptible) {
         this.automaticRestart = automaticRestart;
         this.minNodeCpus = minNodeCpus;
         this.nodeAffinities = nodeAffinities;

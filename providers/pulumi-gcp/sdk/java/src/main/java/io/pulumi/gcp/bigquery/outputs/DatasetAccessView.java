@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DatasetAccessView {
     /**
      * The ID of the dataset containing this table.
@@ -27,11 +27,11 @@ public final class DatasetAccessView {
      */
     private final String tableId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatasetAccessView(
-        @OutputCustomType.Parameter("datasetId") String datasetId,
-        @OutputCustomType.Parameter("projectId") String projectId,
-        @OutputCustomType.Parameter("tableId") String tableId) {
+        @CustomType.Parameter("datasetId") String datasetId,
+        @CustomType.Parameter("projectId") String projectId,
+        @CustomType.Parameter("tableId") String tableId) {
         this.datasetId = datasetId;
         this.projectId = projectId;
         this.tableId = tableId;

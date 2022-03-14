@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.cloudasset.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudasset.outputs.FolderFeedFeedOutputConfigPubsubDestination;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FolderFeedFeedOutputConfig {
     /**
      * Destination on Cloud Pubsub.
@@ -16,8 +16,8 @@ public final class FolderFeedFeedOutputConfig {
      */
     private final FolderFeedFeedOutputConfigPubsubDestination pubsubDestination;
 
-    @OutputCustomType.Constructor
-    private FolderFeedFeedOutputConfig(@OutputCustomType.Parameter("pubsubDestination") FolderFeedFeedOutputConfigPubsubDestination pubsubDestination) {
+    @CustomType.Constructor
+    private FolderFeedFeedOutputConfig(@CustomType.Parameter("pubsubDestination") FolderFeedFeedOutputConfigPubsubDestination pubsubDestination) {
         this.pubsubDestination = pubsubDestination;
     }
 

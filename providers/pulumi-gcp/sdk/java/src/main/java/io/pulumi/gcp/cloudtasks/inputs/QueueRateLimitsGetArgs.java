@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudtasks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class QueueRateLimitsGetArgs extends io.pulumi.resources.ResourceAr
      * resource usage when many tasks are enqueued in a short period of time.
      * 
      */
-    @InputImport(name="maxBurstSize")
+    @Import(name="maxBurstSize")
       private final @Nullable Output<Integer> maxBurstSize;
 
     public Output<Integer> getMaxBurstSize() {
@@ -38,7 +38,7 @@ public final class QueueRateLimitsGetArgs extends io.pulumi.resources.ResourceAr
      * concurrent requests decreases.
      * 
      */
-    @InputImport(name="maxConcurrentDispatches")
+    @Import(name="maxConcurrentDispatches")
       private final @Nullable Output<Integer> maxConcurrentDispatches;
 
     public Output<Integer> getMaxConcurrentDispatches() {
@@ -50,7 +50,7 @@ public final class QueueRateLimitsGetArgs extends io.pulumi.resources.ResourceAr
      * If unspecified when the queue is created, Cloud Tasks will pick the default.
      * 
      */
-    @InputImport(name="maxDispatchesPerSecond")
+    @Import(name="maxDispatchesPerSecond")
       private final @Nullable Output<Double> maxDispatchesPerSecond;
 
     public Output<Double> getMaxDispatchesPerSecond() {

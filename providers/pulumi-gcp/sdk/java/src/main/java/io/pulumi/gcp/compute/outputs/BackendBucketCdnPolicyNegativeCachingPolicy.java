@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BackendBucketCdnPolicyNegativeCachingPolicy {
     /**
      * The HTTP status code to define a TTL against. Only HTTP status codes 300, 301, 308, 404, 405, 410, 421, 451 and 501
@@ -24,10 +24,10 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicy {
      */
     private final @Nullable Integer ttl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BackendBucketCdnPolicyNegativeCachingPolicy(
-        @OutputCustomType.Parameter("code") @Nullable Integer code,
-        @OutputCustomType.Parameter("ttl") @Nullable Integer ttl) {
+        @CustomType.Parameter("code") @Nullable Integer code,
+        @CustomType.Parameter("ttl") @Nullable Integer ttl) {
         this.code = code;
         this.ttl = ttl;
     }

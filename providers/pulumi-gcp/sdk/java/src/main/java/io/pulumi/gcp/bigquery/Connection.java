@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.ConnectionArgs;
@@ -52,7 +52,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="cloudSql", type=ConnectionCloudSql.class, parameters={})
+    @Export(name="cloudSql", type=ConnectionCloudSql.class, parameters={})
     private Output<ConnectionCloudSql> cloudSql;
 
     /**
@@ -67,7 +67,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Optional connection id that should be assigned to the created connection.
      * 
      */
-    @OutputExport(name="connectionId", type=String.class, parameters={})
+    @Export(name="connectionId", type=String.class, parameters={})
     private Output<String> connectionId;
 
     /**
@@ -81,7 +81,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * A descriptive description for the connection
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -95,7 +95,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * A descriptive name for the connection
      * 
      */
-    @OutputExport(name="friendlyName", type=String.class, parameters={})
+    @Export(name="friendlyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> friendlyName;
 
     /**
@@ -109,7 +109,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * True if the connection has credential assigned.
      * 
      */
-    @OutputExport(name="hasCredential", type=Boolean.class, parameters={})
+    @Export(name="hasCredential", type=Boolean.class, parameters={})
     private Output<Boolean> hasCredential;
 
     /**
@@ -126,7 +126,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * Examples: US, EU, asia-northeast1, us-central1, europe-west1. The default value is US.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -144,7 +144,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * "projects/{project_id}/locations/{location_id}/connections/{connectionId}"
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -160,7 +160,7 @@ public class Connection extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

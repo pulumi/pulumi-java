@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -36,7 +36,7 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
      * character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -48,7 +48,7 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -60,7 +60,7 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
      * If it is not provided, the provider region is used.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -73,7 +73,7 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
      * one SSL certificate must be specified.
      * 
      */
-    @InputImport(name="sslCertificates", required=true)
+    @Import(name="sslCertificates", required=true)
       private final Output<List<String>> sslCertificates;
 
     public Output<List<String>> getSslCertificates() {
@@ -85,7 +85,7 @@ public final class RegionTargetHttpsProxyArgs extends io.pulumi.resources.Resour
      * to the RegionBackendService.
      * 
      */
-    @InputImport(name="urlMap", required=true)
+    @Import(name="urlMap", required=true)
       private final Output<String> urlMap;
 
     public Output<String> getUrlMap() {

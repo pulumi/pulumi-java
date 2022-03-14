@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DomainMappingSpec {
     /**
      * The mode of the certificate.
@@ -34,11 +34,11 @@ public final class DomainMappingSpec {
      */
     private final String routeName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DomainMappingSpec(
-        @OutputCustomType.Parameter("certificateMode") @Nullable String certificateMode,
-        @OutputCustomType.Parameter("forceOverride") @Nullable Boolean forceOverride,
-        @OutputCustomType.Parameter("routeName") String routeName) {
+        @CustomType.Parameter("certificateMode") @Nullable String certificateMode,
+        @CustomType.Parameter("forceOverride") @Nullable Boolean forceOverride,
+        @CustomType.Parameter("routeName") String routeName) {
         this.certificateMode = certificateMode;
         this.forceOverride = forceOverride;
         this.routeName = routeName;

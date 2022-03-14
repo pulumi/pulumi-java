@@ -3,17 +3,17 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTopicMessageStoragePolicy {
     private final List<String> allowedPersistenceRegions;
 
-    @OutputCustomType.Constructor
-    private GetTopicMessageStoragePolicy(@OutputCustomType.Parameter("allowedPersistenceRegions") List<String> allowedPersistenceRegions) {
+    @CustomType.Constructor
+    private GetTopicMessageStoragePolicy(@CustomType.Parameter("allowedPersistenceRegions") List<String> allowedPersistenceRegions) {
         this.allowedPersistenceRegions = allowedPersistenceRegions;
     }
 

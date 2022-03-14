@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
     /**
      * Timeout for YARN graceful decommissioning of Node Managers. Specifies the
@@ -59,13 +59,13 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
      */
     private final @Nullable Double scaleUpMinWorkerFraction;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AutoscalingPolicyBasicAlgorithmYarnConfig(
-        @OutputCustomType.Parameter("gracefulDecommissionTimeout") String gracefulDecommissionTimeout,
-        @OutputCustomType.Parameter("scaleDownFactor") Double scaleDownFactor,
-        @OutputCustomType.Parameter("scaleDownMinWorkerFraction") @Nullable Double scaleDownMinWorkerFraction,
-        @OutputCustomType.Parameter("scaleUpFactor") Double scaleUpFactor,
-        @OutputCustomType.Parameter("scaleUpMinWorkerFraction") @Nullable Double scaleUpMinWorkerFraction) {
+        @CustomType.Parameter("gracefulDecommissionTimeout") String gracefulDecommissionTimeout,
+        @CustomType.Parameter("scaleDownFactor") Double scaleDownFactor,
+        @CustomType.Parameter("scaleDownMinWorkerFraction") @Nullable Double scaleDownMinWorkerFraction,
+        @CustomType.Parameter("scaleUpFactor") Double scaleUpFactor,
+        @CustomType.Parameter("scaleUpMinWorkerFraction") @Nullable Double scaleUpMinWorkerFraction) {
         this.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
         this.scaleDownFactor = scaleDownFactor;
         this.scaleDownMinWorkerFraction = scaleDownMinWorkerFraction;

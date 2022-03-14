@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs extends io.p
      * Bounds: [0s, 1d].
      * 
      */
-    @InputImport(name="gracefulDecommissionTimeout", required=true)
+    @Import(name="gracefulDecommissionTimeout", required=true)
       private final Output<String> gracefulDecommissionTimeout;
 
     public Output<String> getGracefulDecommissionTimeout() {
@@ -38,7 +38,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs extends io.p
      * Bounds: [0.0, 1.0].
      * 
      */
-    @InputImport(name="scaleDownFactor", required=true)
+    @Import(name="scaleDownFactor", required=true)
       private final Output<Double> scaleDownFactor;
 
     public Output<Double> getScaleDownFactor() {
@@ -53,7 +53,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs extends io.p
      * Bounds: [0.0, 1.0]. Default: 0.0.
      * 
      */
-    @InputImport(name="scaleDownMinWorkerFraction")
+    @Import(name="scaleDownMinWorkerFraction")
       private final @Nullable Output<Double> scaleDownMinWorkerFraction;
 
     public Output<Double> getScaleDownMinWorkerFraction() {
@@ -69,7 +69,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs extends io.p
      * Bounds: [0.0, 1.0].
      * 
      */
-    @InputImport(name="scaleUpFactor", required=true)
+    @Import(name="scaleUpFactor", required=true)
       private final Output<Double> scaleUpFactor;
 
     public Output<Double> getScaleUpFactor() {
@@ -84,7 +84,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfigGetArgs extends io.p
      * Bounds: [0.0, 1.0]. Default: 0.0.
      * 
      */
-    @InputImport(name="scaleUpMinWorkerFraction")
+    @Import(name="scaleUpMinWorkerFraction")
       private final @Nullable Output<Double> scaleUpMinWorkerFraction;
 
     public Output<Double> getScaleUpMinWorkerFraction() {

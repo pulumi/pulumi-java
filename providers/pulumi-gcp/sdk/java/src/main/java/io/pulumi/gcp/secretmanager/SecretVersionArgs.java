@@ -4,7 +4,7 @@
 package io.pulumi.gcp.secretmanager;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
      * The current state of the SecretVersion.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -30,7 +30,7 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
      * Secret Manager secret resource
      * 
      */
-    @InputImport(name="secret", required=true)
+    @Import(name="secret", required=true)
       private final Output<String> secret;
 
     public Output<String> getSecret() {
@@ -42,7 +42,7 @@ public final class SecretVersionArgs extends io.pulumi.resources.ResourceArgs {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    @InputImport(name="secretData", required=true)
+    @Import(name="secretData", required=true)
       private final Output<String> secretData;
 
     public Output<String> getSecretData() {

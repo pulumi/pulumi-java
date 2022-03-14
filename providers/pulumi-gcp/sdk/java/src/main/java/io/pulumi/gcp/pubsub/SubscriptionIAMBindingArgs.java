@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.pubsub.inputs.SubscriptionIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,14 +16,14 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
 
     public static final SubscriptionIAMBindingArgs Empty = new SubscriptionIAMBindingArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<SubscriptionIAMBindingConditionArgs> condition;
 
     public Output<SubscriptionIAMBindingConditionArgs> getCondition() {
         return this.condition == null ? Output.empty() : this.condition;
     }
 
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -35,7 +35,7 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -48,7 +48,7 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {
@@ -59,7 +59,7 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
      * The subscription name or id to bind to attach IAM policy to.
      * 
      */
-    @InputImport(name="subscription", required=true)
+    @Import(name="subscription", required=true)
       private final Output<String> subscription;
 
     public Output<String> getSubscription() {

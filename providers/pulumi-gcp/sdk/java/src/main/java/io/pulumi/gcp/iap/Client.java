@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.ClientArgs;
@@ -51,7 +51,7 @@ public class Client extends io.pulumi.resources.CustomResource {
      * `projects/{project_number}/brands/{brand_id}/identityAwareProxyClients/{client_id}`.
      * 
      */
-    @OutputExport(name="brand", type=String.class, parameters={})
+    @Export(name="brand", type=String.class, parameters={})
     private Output<String> brand;
 
     /**
@@ -67,7 +67,7 @@ public class Client extends io.pulumi.resources.CustomResource {
      * Output only. Unique identifier of the OAuth client.
      * 
      */
-    @OutputExport(name="clientId", type=String.class, parameters={})
+    @Export(name="clientId", type=String.class, parameters={})
     private Output<String> clientId;
 
     /**
@@ -81,7 +81,7 @@ public class Client extends io.pulumi.resources.CustomResource {
      * Human-friendly name given to the OAuth client.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -95,7 +95,7 @@ public class Client extends io.pulumi.resources.CustomResource {
      * Output only. Client secret of the OAuth client.
      * 
      */
-    @OutputExport(name="secret", type=String.class, parameters={})
+    @Export(name="secret", type=String.class, parameters={})
     private Output<String> secret;
 
     /**

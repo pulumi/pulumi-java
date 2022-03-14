@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -14,7 +14,7 @@ public final class JobSparkConfigLoggingConfigArgs extends io.pulumi.resources.R
 
     public static final JobSparkConfigLoggingConfigArgs Empty = new JobSparkConfigLoggingConfigArgs();
 
-    @InputImport(name="driverLogLevels", required=true)
+    @Import(name="driverLogLevels", required=true)
       private final Output<Map<String,String>> driverLogLevels;
 
     public Output<Map<String,String>> getDriverLogLevels() {

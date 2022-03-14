@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ClusterAuthenticatorGroupsConfigArgs extends io.pulumi.resour
      * The name of the RBAC security group for use with Google security groups in Kubernetes RBAC. Group name must be in format `gke-security-groups@yourdomain.com`.
      * 
      */
-    @InputImport(name="securityGroup", required=true)
+    @Import(name="securityGroup", required=true)
       private final Output<String> securityGroup;
 
     public Output<String> getSecurityGroup() {

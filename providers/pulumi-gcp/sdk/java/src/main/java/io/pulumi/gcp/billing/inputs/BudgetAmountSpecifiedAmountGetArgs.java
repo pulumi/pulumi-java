@@ -4,7 +4,7 @@
 package io.pulumi.gcp.billing.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BudgetAmountSpecifiedAmountGetArgs extends io.pulumi.resource
      * The 3-letter currency code defined in ISO 4217.
      * 
      */
-    @InputImport(name="currencyCode")
+    @Import(name="currencyCode")
       private final @Nullable Output<String> currencyCode;
 
     public Output<String> getCurrencyCode() {
@@ -36,7 +36,7 @@ public final class BudgetAmountSpecifiedAmountGetArgs extends io.pulumi.resource
      * nanos=-750,000,000.
      * 
      */
-    @InputImport(name="nanos")
+    @Import(name="nanos")
       private final @Nullable Output<Integer> nanos;
 
     public Output<Integer> getNanos() {
@@ -48,7 +48,7 @@ public final class BudgetAmountSpecifiedAmountGetArgs extends io.pulumi.resource
      * is "USD", then 1 unit is one US dollar.
      * 
      */
-    @InputImport(name="units")
+    @Import(name="units")
       private final @Nullable Output<String> units;
 
     public Output<String> getUnits() {

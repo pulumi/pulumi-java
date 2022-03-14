@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TransferJobTransferSpecTransferOptions {
     /**
      * Whether objects should be deleted from the source after they are transferred to the sink. Note that this option and `delete_objects_unique_in_sink` are mutually exclusive.
@@ -28,11 +28,11 @@ public final class TransferJobTransferSpecTransferOptions {
      */
     private final @Nullable Boolean overwriteObjectsAlreadyExistingInSink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TransferJobTransferSpecTransferOptions(
-        @OutputCustomType.Parameter("deleteObjectsFromSourceAfterTransfer") @Nullable Boolean deleteObjectsFromSourceAfterTransfer,
-        @OutputCustomType.Parameter("deleteObjectsUniqueInSink") @Nullable Boolean deleteObjectsUniqueInSink,
-        @OutputCustomType.Parameter("overwriteObjectsAlreadyExistingInSink") @Nullable Boolean overwriteObjectsAlreadyExistingInSink) {
+        @CustomType.Parameter("deleteObjectsFromSourceAfterTransfer") @Nullable Boolean deleteObjectsFromSourceAfterTransfer,
+        @CustomType.Parameter("deleteObjectsUniqueInSink") @Nullable Boolean deleteObjectsUniqueInSink,
+        @CustomType.Parameter("overwriteObjectsAlreadyExistingInSink") @Nullable Boolean overwriteObjectsAlreadyExistingInSink) {
         this.deleteObjectsFromSourceAfterTransfer = deleteObjectsFromSourceAfterTransfer;
         this.deleteObjectsUniqueInSink = deleteObjectsUniqueInSink;
         this.overwriteObjectsAlreadyExistingInSink = overwriteObjectsAlreadyExistingInSink;

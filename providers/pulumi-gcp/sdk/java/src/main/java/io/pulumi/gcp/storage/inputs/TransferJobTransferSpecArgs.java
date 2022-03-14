@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.storage.inputs.TransferJobTransferSpecAwsS3DataSourceArgs;
 import io.pulumi.gcp.storage.inputs.TransferJobTransferSpecAzureBlobStorageDataSourceArgs;
 import io.pulumi.gcp.storage.inputs.TransferJobTransferSpecGcsDataSinkArgs;
@@ -24,7 +24,7 @@ public final class TransferJobTransferSpecArgs extends io.pulumi.resources.Resou
      * An AWS S3 data source. Structure documented below.
      * 
      */
-    @InputImport(name="awsS3DataSource")
+    @Import(name="awsS3DataSource")
       private final @Nullable Output<TransferJobTransferSpecAwsS3DataSourceArgs> awsS3DataSource;
 
     public Output<TransferJobTransferSpecAwsS3DataSourceArgs> getAwsS3DataSource() {
@@ -35,7 +35,7 @@ public final class TransferJobTransferSpecArgs extends io.pulumi.resources.Resou
      * An Azure Blob Storage data source. Structure documented below.
      * 
      */
-    @InputImport(name="azureBlobStorageDataSource")
+    @Import(name="azureBlobStorageDataSource")
       private final @Nullable Output<TransferJobTransferSpecAzureBlobStorageDataSourceArgs> azureBlobStorageDataSource;
 
     public Output<TransferJobTransferSpecAzureBlobStorageDataSourceArgs> getAzureBlobStorageDataSource() {
@@ -46,7 +46,7 @@ public final class TransferJobTransferSpecArgs extends io.pulumi.resources.Resou
      * A Google Cloud Storage data sink. Structure documented below.
      * 
      */
-    @InputImport(name="gcsDataSink")
+    @Import(name="gcsDataSink")
       private final @Nullable Output<TransferJobTransferSpecGcsDataSinkArgs> gcsDataSink;
 
     public Output<TransferJobTransferSpecGcsDataSinkArgs> getGcsDataSink() {
@@ -57,7 +57,7 @@ public final class TransferJobTransferSpecArgs extends io.pulumi.resources.Resou
      * A Google Cloud Storage data source. Structure documented below.
      * 
      */
-    @InputImport(name="gcsDataSource")
+    @Import(name="gcsDataSource")
       private final @Nullable Output<TransferJobTransferSpecGcsDataSourceArgs> gcsDataSource;
 
     public Output<TransferJobTransferSpecGcsDataSourceArgs> getGcsDataSource() {
@@ -68,7 +68,7 @@ public final class TransferJobTransferSpecArgs extends io.pulumi.resources.Resou
      * A HTTP URL data source. Structure documented below.
      * 
      */
-    @InputImport(name="httpDataSource")
+    @Import(name="httpDataSource")
       private final @Nullable Output<TransferJobTransferSpecHttpDataSourceArgs> httpDataSource;
 
     public Output<TransferJobTransferSpecHttpDataSourceArgs> getHttpDataSource() {
@@ -79,7 +79,7 @@ public final class TransferJobTransferSpecArgs extends io.pulumi.resources.Resou
      * Only objects that satisfy these object conditions are included in the set of data source and data sink objects. Object conditions based on objects' `last_modification_time` do not exclude objects in a data sink. Structure documented below.
      * 
      */
-    @InputImport(name="objectConditions")
+    @Import(name="objectConditions")
       private final @Nullable Output<TransferJobTransferSpecObjectConditionsArgs> objectConditions;
 
     public Output<TransferJobTransferSpecObjectConditionsArgs> getObjectConditions() {
@@ -90,7 +90,7 @@ public final class TransferJobTransferSpecArgs extends io.pulumi.resources.Resou
      * Characteristics of how to treat files from datasource and sink during job. If the option `delete_objects_unique_in_sink` is true, object conditions based on objects' `last_modification_time` are ignored and do not exclude objects in a data source or a data sink. Structure documented below.
      * 
      */
-    @InputImport(name="transferOptions")
+    @Import(name="transferOptions")
       private final @Nullable Output<TransferJobTransferSpecTransferOptionsArgs> transferOptions;
 
     public Output<TransferJobTransferSpecTransferOptionsArgs> getTransferOptions() {

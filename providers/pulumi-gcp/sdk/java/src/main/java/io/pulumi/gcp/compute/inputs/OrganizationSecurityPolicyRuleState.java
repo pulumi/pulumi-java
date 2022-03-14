@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.OrganizationSecurityPolicyRuleMatchGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
      * "allow", "deny" or "goto_next".
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<String> action;
 
     public Output<String> getAction() {
@@ -34,7 +34,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
      * A description of the rule.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -46,7 +46,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
      * Possible values are `INGRESS` and `EGRESS`.
      * 
      */
-    @InputImport(name="direction")
+    @Import(name="direction")
       private final @Nullable Output<String> direction;
 
     public Output<String> getDirection() {
@@ -59,7 +59,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
      * configured export destination in Stackdriver.
      * 
      */
-    @InputImport(name="enableLogging")
+    @Import(name="enableLogging")
       private final @Nullable Output<Boolean> enableLogging;
 
     public Output<Boolean> getEnableLogging() {
@@ -71,7 +71,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
      * Structure is documented below.
      * 
      */
-    @InputImport(name="match")
+    @Import(name="match")
       private final @Nullable Output<OrganizationSecurityPolicyRuleMatchGetArgs> match;
 
     public Output<OrganizationSecurityPolicyRuleMatchGetArgs> getMatch() {
@@ -82,7 +82,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
      * The ID of the OrganizationSecurityPolicy this rule applies to.
      * 
      */
-    @InputImport(name="policyId")
+    @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
     public Output<String> getPolicyId() {
@@ -93,7 +93,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
      * If set to true, the specified action is not enforced.
      * 
      */
-    @InputImport(name="preview")
+    @Import(name="preview")
       private final @Nullable Output<Boolean> preview;
 
     public Output<Boolean> getPreview() {
@@ -106,7 +106,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
      * highest priority and 2147483647 is the lowest prority.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -120,7 +120,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
      * within the organization will receive the rule.
      * 
      */
-    @InputImport(name="targetResources")
+    @Import(name="targetResources")
       private final @Nullable Output<List<String>> targetResources;
 
     public Output<List<String>> getTargetResources() {
@@ -132,7 +132,7 @@ public final class OrganizationSecurityPolicyRuleState extends io.pulumi.resourc
      * instances that are applied with this rule.
      * 
      */
-    @InputImport(name="targetServiceAccounts")
+    @Import(name="targetServiceAccounts")
       private final @Nullable Output<List<String>> targetServiceAccounts;
 
     public Output<List<String>> getTargetServiceAccounts() {

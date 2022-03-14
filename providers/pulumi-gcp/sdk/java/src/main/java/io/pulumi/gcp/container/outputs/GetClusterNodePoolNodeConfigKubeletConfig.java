@@ -3,22 +3,22 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterNodePoolNodeConfigKubeletConfig {
     private final Boolean cpuCfsQuota;
     private final String cpuCfsQuotaPeriod;
     private final String cpuManagerPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterNodePoolNodeConfigKubeletConfig(
-        @OutputCustomType.Parameter("cpuCfsQuota") Boolean cpuCfsQuota,
-        @OutputCustomType.Parameter("cpuCfsQuotaPeriod") String cpuCfsQuotaPeriod,
-        @OutputCustomType.Parameter("cpuManagerPolicy") String cpuManagerPolicy) {
+        @CustomType.Parameter("cpuCfsQuota") Boolean cpuCfsQuota,
+        @CustomType.Parameter("cpuCfsQuotaPeriod") String cpuCfsQuotaPeriod,
+        @CustomType.Parameter("cpuManagerPolicy") String cpuManagerPolicy) {
         this.cpuCfsQuota = cpuCfsQuota;
         this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
         this.cpuManagerPolicy = cpuManagerPolicy;

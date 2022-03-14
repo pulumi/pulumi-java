@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.gkehub.MembershipArgs;
@@ -44,7 +44,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="authority", type=MembershipAuthority.class, parameters={})
+    @Export(name="authority", type=MembershipAuthority.class, parameters={})
     private Output</* @Nullable */ MembershipAuthority> authority;
 
     /**
@@ -65,7 +65,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * 
      */
     @Deprecated /* This field is unavailable in the GA provider and will be removed from the beta provider in a future release. */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -80,7 +80,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="endpoint", type=MembershipEndpoint.class, parameters={})
+    @Export(name="endpoint", type=MembershipEndpoint.class, parameters={})
     private Output</* @Nullable */ MembershipEndpoint> endpoint;
 
     /**
@@ -95,7 +95,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * Labels to apply to this membership.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -109,7 +109,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * The client-provided identifier of the membership.
      * 
      */
-    @OutputExport(name="membershipId", type=String.class, parameters={})
+    @Export(name="membershipId", type=String.class, parameters={})
     private Output<String> membershipId;
 
     /**
@@ -123,7 +123,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * The unique identifier of the membership.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -138,7 +138,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

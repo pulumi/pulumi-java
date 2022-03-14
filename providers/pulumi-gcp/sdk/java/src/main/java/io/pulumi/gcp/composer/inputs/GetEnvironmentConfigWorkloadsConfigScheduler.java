@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -13,28 +13,28 @@ public final class GetEnvironmentConfigWorkloadsConfigScheduler extends io.pulum
 
     public static final GetEnvironmentConfigWorkloadsConfigScheduler Empty = new GetEnvironmentConfigWorkloadsConfigScheduler();
 
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final Integer count;
 
     public Integer getCount() {
         return this.count;
     }
 
-    @InputImport(name="cpu", required=true)
+    @Import(name="cpu", required=true)
       private final Double cpu;
 
     public Double getCpu() {
         return this.cpu;
     }
 
-    @InputImport(name="memoryGb", required=true)
+    @Import(name="memoryGb", required=true)
       private final Double memoryGb;
 
     public Double getMemoryGb() {
         return this.memoryGb;
     }
 
-    @InputImport(name="storageGb", required=true)
+    @Import(name="storageGb", required=true)
       private final Double storageGb;
 
     public Double getStorageGb() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.folder.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class IamAuditConfigAuditLogConfigGetArgs extends io.pulumi.resourc
 
     public static final IamAuditConfigAuditLogConfigGetArgs Empty = new IamAuditConfigAuditLogConfigGetArgs();
 
-    @InputImport(name="exemptedMembers")
+    @Import(name="exemptedMembers")
       private final @Nullable Output<List<String>> exemptedMembers;
 
     public Output<List<String>> getExemptedMembers() {
         return this.exemptedMembers == null ? Output.empty() : this.exemptedMembers;
     }
 
-    @InputImport(name="logType", required=true)
+    @Import(name="logType", required=true)
       private final Output<String> logType;
 
     public Output<String> getLogType() {

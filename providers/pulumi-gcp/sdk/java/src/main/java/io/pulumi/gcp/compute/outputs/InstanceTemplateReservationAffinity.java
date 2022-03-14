@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.InstanceTemplateReservationAffinitySpecificReservation;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceTemplateReservationAffinity {
     /**
      * Specifies the label selector for the reservation to use..
@@ -24,10 +24,10 @@ public final class InstanceTemplateReservationAffinity {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceTemplateReservationAffinity(
-        @OutputCustomType.Parameter("specificReservation") @Nullable InstanceTemplateReservationAffinitySpecificReservation specificReservation,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("specificReservation") @Nullable InstanceTemplateReservationAffinitySpecificReservation specificReservation,
+        @CustomType.Parameter("type") String type) {
         this.specificReservation = specificReservation;
         this.type = type;
     }

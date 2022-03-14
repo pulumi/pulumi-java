@@ -4,7 +4,7 @@
 package io.pulumi.gcp.orgpolicy.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PolicySpecRuleValuesGetArgs extends io.pulumi.resources.Resou
      * List of values allowed at this resource.
      * 
      */
-    @InputImport(name="allowedValues")
+    @Import(name="allowedValues")
       private final @Nullable Output<List<String>> allowedValues;
 
     public Output<List<String>> getAllowedValues() {
@@ -30,7 +30,7 @@ public final class PolicySpecRuleValuesGetArgs extends io.pulumi.resources.Resou
      * List of values denied at this resource.
      * 
      */
-    @InputImport(name="deniedValues")
+    @Import(name="deniedValues")
       private final @Nullable Output<List<String>> deniedValues;
 
     public Output<List<String>> getDeniedValues() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.vertex.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.vertex.outputs.AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AiFeatureStoreEntityTypeMonitoringConfig {
     /**
      * Configuration of how features in Featurestore are monitored.
@@ -18,8 +18,8 @@ public final class AiFeatureStoreEntityTypeMonitoringConfig {
      */
     private final @Nullable AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis snapshotAnalysis;
 
-    @OutputCustomType.Constructor
-    private AiFeatureStoreEntityTypeMonitoringConfig(@OutputCustomType.Parameter("snapshotAnalysis") @Nullable AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis snapshotAnalysis) {
+    @CustomType.Constructor
+    private AiFeatureStoreEntityTypeMonitoringConfig(@CustomType.Parameter("snapshotAnalysis") @Nullable AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysis snapshotAnalysis) {
         this.snapshotAnalysis = snapshotAnalysis;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGet
      * Structure is documented below.
      * 
      */
-    @InputImport(name="field", required=true)
+    @Import(name="field", required=true)
       private final Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs> field;
 
     public Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldGetArgs> getField() {
@@ -31,7 +31,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldGet
      * Structure is documented below.
      * 
      */
-    @InputImport(name="table", required=true)
+    @Import(name="table", required=true)
       private final Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs> table;
 
     public Output<PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTableGetArgs> getTable() {

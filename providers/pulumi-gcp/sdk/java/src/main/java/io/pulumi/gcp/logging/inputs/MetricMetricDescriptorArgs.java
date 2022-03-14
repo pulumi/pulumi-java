@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.logging.inputs.MetricMetricDescriptorLabelArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class MetricMetricDescriptorArgs extends io.pulumi.resources.Resour
      * recommended to be set for any metrics associated with user-visible concepts, such as Quota.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -37,7 +37,7 @@ public final class MetricMetricDescriptorArgs extends io.pulumi.resources.Resour
      * Structure is documented below.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<List<MetricMetricDescriptorLabelArgs>> labels;
 
     public Output<List<MetricMetricDescriptorLabelArgs>> getLabels() {
@@ -51,7 +51,7 @@ public final class MetricMetricDescriptorArgs extends io.pulumi.resources.Resour
      * Possible values are `DELTA`, `GAUGE`, and `CUMULATIVE`.
      * 
      */
-    @InputImport(name="metricKind", required=true)
+    @Import(name="metricKind", required=true)
       private final Output<String> metricKind;
 
     public Output<String> getMetricKind() {
@@ -64,7 +64,7 @@ public final class MetricMetricDescriptorArgs extends io.pulumi.resources.Resour
      * [The Unified Code for Units of Measure](http://unitsofmeasure.org/ucum.html) standard
      * 
      */
-    @InputImport(name="unit")
+    @Import(name="unit")
       private final @Nullable Output<String> unit;
 
     public Output<String> getUnit() {
@@ -77,7 +77,7 @@ public final class MetricMetricDescriptorArgs extends io.pulumi.resources.Resour
      * Possible values are `BOOL`, `INT64`, and `STRING`.
      * 
      */
-    @InputImport(name="valueType", required=true)
+    @Import(name="valueType", required=true)
       private final Output<String> valueType;
 
     public Output<String> getValueType() {

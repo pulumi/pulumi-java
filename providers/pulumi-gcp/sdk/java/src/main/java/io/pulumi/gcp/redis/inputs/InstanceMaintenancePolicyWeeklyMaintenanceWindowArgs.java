@@ -4,7 +4,7 @@
 package io.pulumi.gcp.redis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.redis.inputs.InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends 
      *   Possible values are `DAY_OF_WEEK_UNSPECIFIED`, `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
      */
-    @InputImport(name="day", required=true)
+    @Import(name="day", required=true)
       private final Output<String> day;
 
     public Output<String> getDay() {
@@ -43,7 +43,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends 
      * terminated by 's'. Example: "3.5s".
      * 
      */
-    @InputImport(name="duration")
+    @Import(name="duration")
       private final @Nullable Output<String> duration;
 
     public Output<String> getDuration() {
@@ -57,7 +57,7 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowArgs extends 
      * resolution and up to nine fractional digits.
      * 
      */
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final Output<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs> startTime;
 
     public Output<InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTimeArgs> getStartTime() {

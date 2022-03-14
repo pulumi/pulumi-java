@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.storage.outputs.GetBucketLifecycleRuleAction;
 import io.pulumi.gcp.storage.outputs.GetBucketLifecycleRuleCondition;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBucketLifecycleRule {
     private final List<GetBucketLifecycleRuleAction> actions;
     private final List<GetBucketLifecycleRuleCondition> conditions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBucketLifecycleRule(
-        @OutputCustomType.Parameter("actions") List<GetBucketLifecycleRuleAction> actions,
-        @OutputCustomType.Parameter("conditions") List<GetBucketLifecycleRuleCondition> conditions) {
+        @CustomType.Parameter("actions") List<GetBucketLifecycleRuleAction> actions,
+        @CustomType.Parameter("conditions") List<GetBucketLifecycleRuleCondition> conditions) {
         this.actions = actions;
         this.conditions = conditions;
     }

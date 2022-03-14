@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue {
     /**
      * Day of month. Must be from 1 to 31 and valid for the year and month, or 0 if specifying a
@@ -28,11 +28,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      */
     private final @Nullable Integer year;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue(
-        @OutputCustomType.Parameter("day") @Nullable Integer day,
-        @OutputCustomType.Parameter("month") @Nullable Integer month,
-        @OutputCustomType.Parameter("year") @Nullable Integer year) {
+        @CustomType.Parameter("day") @Nullable Integer day,
+        @CustomType.Parameter("month") @Nullable Integer month,
+        @CustomType.Parameter("year") @Nullable Integer year) {
         this.day = day;
         this.month = month;
         this.year = year;

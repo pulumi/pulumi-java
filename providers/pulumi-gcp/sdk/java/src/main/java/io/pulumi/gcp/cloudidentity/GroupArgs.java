@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudidentity;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudidentity.inputs.GroupGroupKeyArgs;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * Must not be longer than 4,096 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * The display name of the Group.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -44,7 +44,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="groupKey", required=true)
+    @Import(name="groupKey", required=true)
       private final Output<GroupGroupKeyArgs> groupKey;
 
     public Output<GroupGroupKeyArgs> getGroupKey() {
@@ -60,7 +60,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `INITIAL_GROUP_CONFIG_UNSPECIFIED`, `WITH_INITIAL_OWNER`, and `EMPTY`.
      * 
      */
-    @InputImport(name="initialGroupConfig")
+    @Import(name="initialGroupConfig")
       private final @Nullable Output<String> initialGroupConfig;
 
     public Output<String> getInitialGroupConfig() {
@@ -74,7 +74,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 'system/groups/external': '' if the Group is an external-identity-mapped group.
      * 
      */
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -88,7 +88,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * groups or customers/{customer_id} for Google Groups.
      * 
      */
-    @InputImport(name="parent", required=true)
+    @Import(name="parent", required=true)
       private final Output<String> parent;
 
     public Output<String> getParent() {

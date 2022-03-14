@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudfunctions.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class FunctionSourceRepositoryGetArgs extends io.pulumi.resources.R
 
     public static final FunctionSourceRepositoryGetArgs Empty = new FunctionSourceRepositoryGetArgs();
 
-    @InputImport(name="deployedUrl")
+    @Import(name="deployedUrl")
       private final @Nullable Output<String> deployedUrl;
 
     public Output<String> getDeployedUrl() {
@@ -25,7 +25,7 @@ public final class FunctionSourceRepositoryGetArgs extends io.pulumi.resources.R
      * The URL pointing to the hosted repository where the function is defined. There are supported Cloud Source Repository URLs in the following formats:
      * 
      */
-    @InputImport(name="url", required=true)
+    @Import(name="url", required=true)
       private final Output<String> url;
 
     public Output<String> getUrl() {

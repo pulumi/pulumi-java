@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class PatchDeploymentPatchConfigYumGetArgs extends io.pulumi.resour
      * List of KBs to exclude from update.
      * 
      */
-    @InputImport(name="excludes")
+    @Import(name="excludes")
       private final @Nullable Output<List<String>> excludes;
 
     public Output<List<String>> getExcludes() {
@@ -33,7 +33,7 @@ public final class PatchDeploymentPatchConfigYumGetArgs extends io.pulumi.resour
      * any other patch configuration fields.
      * 
      */
-    @InputImport(name="exclusivePackages")
+    @Import(name="exclusivePackages")
       private final @Nullable Output<List<String>> exclusivePackages;
 
     public Output<List<String>> getExclusivePackages() {
@@ -44,7 +44,7 @@ public final class PatchDeploymentPatchConfigYumGetArgs extends io.pulumi.resour
      * Will cause patch to run yum update-minimal instead.
      * 
      */
-    @InputImport(name="minimal")
+    @Import(name="minimal")
       private final @Nullable Output<Boolean> minimal;
 
     public Output<Boolean> getMinimal() {
@@ -55,7 +55,7 @@ public final class PatchDeploymentPatchConfigYumGetArgs extends io.pulumi.resour
      * Adds the --security flag to yum update. Not supported on all platforms.
      * 
      */
-    @InputImport(name="security")
+    @Import(name="security")
       private final @Nullable Output<Boolean> security;
 
     public Output<Boolean> getSecurity() {

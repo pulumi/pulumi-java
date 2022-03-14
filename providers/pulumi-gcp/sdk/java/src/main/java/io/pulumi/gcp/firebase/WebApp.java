@@ -4,7 +4,7 @@
 package io.pulumi.gcp.firebase;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.firebase.WebAppArgs;
@@ -47,7 +47,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * token, as the data format is not specified.
      * 
      */
-    @OutputExport(name="appId", type=String.class, parameters={})
+    @Export(name="appId", type=String.class, parameters={})
     private Output<String> appId;
 
     /**
@@ -62,7 +62,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * The user-assigned display name of the App.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -76,7 +76,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * The fully qualified resource name of the App, for example: projects/projectId/webApps/appId
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class WebApp extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

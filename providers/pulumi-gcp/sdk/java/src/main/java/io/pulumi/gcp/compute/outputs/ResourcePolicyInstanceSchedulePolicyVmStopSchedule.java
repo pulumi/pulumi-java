@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePolicyInstanceSchedulePolicyVmStopSchedule {
     /**
      * Specifies the frequency for the operation, using the unix-cron format.
@@ -15,8 +15,8 @@ public final class ResourcePolicyInstanceSchedulePolicyVmStopSchedule {
      */
     private final String schedule;
 
-    @OutputCustomType.Constructor
-    private ResourcePolicyInstanceSchedulePolicyVmStopSchedule(@OutputCustomType.Parameter("schedule") String schedule) {
+    @CustomType.Constructor
+    private ResourcePolicyInstanceSchedulePolicyVmStopSchedule(@CustomType.Parameter("schedule") String schedule) {
         this.schedule = schedule;
     }
 

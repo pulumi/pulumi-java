@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildArtifactsObjectsTimingArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class TriggerBuildArtifactsObjectsArgs extends io.pulumi.resources.
      * this location as a prefix.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -33,7 +33,7 @@ public final class TriggerBuildArtifactsObjectsArgs extends io.pulumi.resources.
      * Path globs used to match files in the build's workspace.
      * 
      */
-    @InputImport(name="paths")
+    @Import(name="paths")
       private final @Nullable Output<List<String>> paths;
 
     public Output<List<String>> getPaths() {
@@ -46,7 +46,7 @@ public final class TriggerBuildArtifactsObjectsArgs extends io.pulumi.resources.
      * Structure is documented below.
      * 
      */
-    @InputImport(name="timings")
+    @Import(name="timings")
       private final @Nullable Output<List<TriggerBuildArtifactsObjectsTimingArgs>> timings;
 
     public Output<List<TriggerBuildArtifactsObjectsTimingArgs>> getTimings() {

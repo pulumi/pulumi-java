@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.iot.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DeviceState {
     private final @Nullable String binaryData;
     private final @Nullable String updateTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DeviceState(
-        @OutputCustomType.Parameter("binaryData") @Nullable String binaryData,
-        @OutputCustomType.Parameter("updateTime") @Nullable String updateTime) {
+        @CustomType.Parameter("binaryData") @Nullable String binaryData,
+        @CustomType.Parameter("updateTime") @Nullable String updateTime) {
         this.binaryData = binaryData;
         this.updateTime = updateTime;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerAutoHealingPoliciesGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerNamedPortGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerStatefulDiskGetArgs;
@@ -28,7 +28,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
      * group. You can specify only one value. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/creating-groups-of-managed-instances#monitoring_groups).
      * 
      */
-    @InputImport(name="autoHealingPolicies")
+    @Import(name="autoHealingPolicies")
       private final @Nullable Output<RegionInstanceGroupManagerAutoHealingPoliciesGetArgs> autoHealingPolicies;
 
     public Output<RegionInstanceGroupManagerAutoHealingPoliciesGetArgs> getAutoHealingPolicies() {
@@ -44,7 +44,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
      * name.
      * 
      */
-    @InputImport(name="baseInstanceName")
+    @Import(name="baseInstanceName")
       private final @Nullable Output<String> baseInstanceName;
 
     public Output<String> getBaseInstanceName() {
@@ -56,7 +56,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
      * group manager.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -67,7 +67,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
      * The shape to which the group converges either proactively or on resize events (depending on the value set in update_policy.0.instance_redistribution_type). For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/regional-mig-distribution-shape).
      * 
      */
-    @InputImport(name="distributionPolicyTargetShape")
+    @Import(name="distributionPolicyTargetShape")
       private final @Nullable Output<String> distributionPolicyTargetShape;
 
     public Output<String> getDistributionPolicyTargetShape() {
@@ -79,7 +79,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
      * group. You can specify one or more values. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/distributing-instances-with-regional-instance-groups#selectingzones).
      * 
      */
-    @InputImport(name="distributionPolicyZones")
+    @Import(name="distributionPolicyZones")
       private final @Nullable Output<List<String>> distributionPolicyZones;
 
     public Output<List<String>> getDistributionPolicyZones() {
@@ -90,7 +90,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
      * The fingerprint of the instance group manager.
      * 
      */
-    @InputImport(name="fingerprint")
+    @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
     public Output<String> getFingerprint() {
@@ -101,7 +101,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
      * The full URL of the instance group created by the manager.
      * 
      */
-    @InputImport(name="instanceGroup")
+    @Import(name="instanceGroup")
       private final @Nullable Output<String> instanceGroup;
 
     public Output<String> getInstanceGroup() {
@@ -112,7 +112,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
      * - Version name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -124,7 +124,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
      * for details on configuration.
      * 
      */
-    @InputImport(name="namedPorts")
+    @Import(name="namedPorts")
       private final @Nullable Output<List<RegionInstanceGroupManagerNamedPortGetArgs>> namedPorts;
 
     public Output<List<RegionInstanceGroupManagerNamedPortGetArgs>> getNamedPorts() {
@@ -136,7 +136,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -147,7 +147,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
      * The region where the managed instance group resides. If not provided, the provider region is used.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -158,7 +158,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
      * The URL of the created resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -169,7 +169,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
      * Disks created on the instances that will be preserved on instance delete, update, etc. Structure is documented below. For more information see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/configuring-stateful-disks-in-migs). Proactive cross zone instance redistribution must be disabled before you can update stateful disks on existing instance group managers. This can be controlled via the `update_policy`.
      * 
      */
-    @InputImport(name="statefulDisks")
+    @Import(name="statefulDisks")
       private final @Nullable Output<List<RegionInstanceGroupManagerStatefulDiskGetArgs>> statefulDisks;
 
     public Output<List<RegionInstanceGroupManagerStatefulDiskGetArgs>> getStatefulDisks() {
@@ -180,7 +180,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
      * The status of this managed instance group.
      * 
      */
-    @InputImport(name="statuses")
+    @Import(name="statuses")
       private final @Nullable Output<List<RegionInstanceGroupManagerStatusGetArgs>> statuses;
 
     public Output<List<RegionInstanceGroupManagerStatusGetArgs>> getStatuses() {
@@ -193,7 +193,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
      * not affect existing instances.
      * 
      */
-    @InputImport(name="targetPools")
+    @Import(name="targetPools")
       private final @Nullable Output<List<String>> targetPools;
 
     public Output<List<String>> getTargetPools() {
@@ -204,7 +204,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
      * - The number of instances calculated as a fixed number or a percentage depending on the settings. Structure is documented below.
      * 
      */
-    @InputImport(name="targetSize")
+    @Import(name="targetSize")
       private final @Nullable Output<Integer> targetSize;
 
     public Output<Integer> getTargetSize() {
@@ -215,7 +215,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
      * The update policy for this managed instance group. Structure is documented below. For more information, see the [official documentation](https://cloud.google.com/compute/docs/instance-groups/updating-managed-instance-groups) and [API](https://cloud.google.com/compute/docs/reference/rest/beta/regionInstanceGroupManagers/patch)
      * 
      */
-    @InputImport(name="updatePolicy")
+    @Import(name="updatePolicy")
       private final @Nullable Output<RegionInstanceGroupManagerUpdatePolicyGetArgs> updatePolicy;
 
     public Output<RegionInstanceGroupManagerUpdatePolicyGetArgs> getUpdatePolicy() {
@@ -228,7 +228,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
      * Structure is documented below.
      * 
      */
-    @InputImport(name="versions")
+    @Import(name="versions")
       private final @Nullable Output<List<RegionInstanceGroupManagerVersionGetArgs>> versions;
 
     public Output<List<RegionInstanceGroupManagerVersionGetArgs>> getVersions() {
@@ -241,7 +241,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
      * continue trying until it times out.
      * 
      */
-    @InputImport(name="waitForInstances")
+    @Import(name="waitForInstances")
       private final @Nullable Output<Boolean> waitForInstances;
 
     public Output<Boolean> getWaitForInstances() {
@@ -255,7 +255,7 @@ public final class RegionInstanceGroupManagerState extends io.pulumi.resources.R
      * instances to be stable before returning. The possible values are `STABLE` and `UPDATED`
      * 
      */
-    @InputImport(name="waitForInstancesStatus")
+    @Import(name="waitForInstancesStatus")
       private final @Nullable Output<String> waitForInstancesStatus;
 
     public Output<String> getWaitForInstancesStatus() {

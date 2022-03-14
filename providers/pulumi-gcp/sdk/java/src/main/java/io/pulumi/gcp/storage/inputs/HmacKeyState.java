@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
      * The access ID of the HMAC Key.
      * 
      */
-    @InputImport(name="accessId")
+    @Import(name="accessId")
       private final @Nullable Output<String> accessId;
 
     public Output<String> getAccessId() {
@@ -30,7 +30,7 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -41,7 +41,7 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
      * HMAC secret key material.
      * 
      */
-    @InputImport(name="secret")
+    @Import(name="secret")
       private final @Nullable Output<String> secret;
 
     public Output<String> getSecret() {
@@ -52,7 +52,7 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
      * The email address of the key's associated service account.
      * 
      */
-    @InputImport(name="serviceAccountEmail")
+    @Import(name="serviceAccountEmail")
       private final @Nullable Output<String> serviceAccountEmail;
 
     public Output<String> getServiceAccountEmail() {
@@ -65,7 +65,7 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
      * Possible values are `ACTIVE` and `INACTIVE`.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -76,7 +76,7 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
      * 'The creation time of the HMAC key in RFC 3339 format. '
      * 
      */
-    @InputImport(name="timeCreated")
+    @Import(name="timeCreated")
       private final @Nullable Output<String> timeCreated;
 
     public Output<String> getTimeCreated() {
@@ -87,7 +87,7 @@ public final class HmacKeyState extends io.pulumi.resources.ResourceArgs {
      * 'The last modification time of the HMAC key metadata in RFC 3339 format.'
      * 
      */
-    @InputImport(name="updated")
+    @Import(name="updated")
       private final @Nullable Output<String> updated;
 
     public Output<String> getUpdated() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSecretVersionResult {
     private final String createTime;
     private final String destroyTime;
@@ -24,17 +24,17 @@ public final class GetSecretVersionResult {
     private final String secretData;
     private final String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSecretVersionResult(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("destroyTime") String destroyTime,
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("secret") String secret,
-        @OutputCustomType.Parameter("secretData") String secretData,
-        @OutputCustomType.Parameter("version") String version) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("destroyTime") String destroyTime,
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("secret") String secret,
+        @CustomType.Parameter("secretData") String secretData,
+        @CustomType.Parameter("version") String version) {
         this.createTime = createTime;
         this.destroyTime = destroyTime;
         this.enabled = enabled;

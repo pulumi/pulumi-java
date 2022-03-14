@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
      * Required. Cloud Storage URI of executable file.
      * 
      */
-    @InputImport(name="executableFile")
+    @Import(name="executableFile")
       private final @Nullable Output<String> executableFile;
 
     public Output<String> getExecutableFile() {
@@ -29,7 +29,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
      * Optional. Amount of time executable has to complete. Default is 10 minutes (see JSON representation of (https://developers.google.com/protocol-buffers/docs/proto3#json)). Cluster creation fails with an explanatory error message (the name of the executable that caused the error and the exceeded timeout period) if the executable is not completed at end of the timeout period.
      * 
      */
-    @InputImport(name="executionTimeout")
+    @Import(name="executionTimeout")
       private final @Nullable Output<String> executionTimeout;
 
     public Output<String> getExecutionTimeout() {

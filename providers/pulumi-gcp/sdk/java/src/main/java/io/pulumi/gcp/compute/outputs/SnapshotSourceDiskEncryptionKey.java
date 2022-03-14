@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SnapshotSourceDiskEncryptionKey {
     /**
      * The service account used for the encryption request for the given KMS key.
@@ -25,10 +25,10 @@ public final class SnapshotSourceDiskEncryptionKey {
      */
     private final @Nullable String rawKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SnapshotSourceDiskEncryptionKey(
-        @OutputCustomType.Parameter("kmsKeyServiceAccount") @Nullable String kmsKeyServiceAccount,
-        @OutputCustomType.Parameter("rawKey") @Nullable String rawKey) {
+        @CustomType.Parameter("kmsKeyServiceAccount") @Nullable String kmsKeyServiceAccount,
+        @CustomType.Parameter("rawKey") @Nullable String rawKey) {
         this.kmsKeyServiceAccount = kmsKeyServiceAccount;
         this.rawKey = rawKey;
     }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetNetblockIPRangesArgs extends io.pulumi.resources.InvokeArg
      * The type of range for which to provide results.
      * 
      */
-    @InputImport(name="rangeType")
+    @Import(name="rangeType")
       private final @Nullable String rangeType;
 
     public Optional<String> getRangeType() {

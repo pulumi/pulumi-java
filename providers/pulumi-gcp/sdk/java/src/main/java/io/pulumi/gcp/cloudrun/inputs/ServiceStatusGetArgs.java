@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudrun.inputs.ServiceStatusConditionGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,35 +17,35 @@ public final class ServiceStatusGetArgs extends io.pulumi.resources.ResourceArgs
 
     public static final ServiceStatusGetArgs Empty = new ServiceStatusGetArgs();
 
-    @InputImport(name="conditions")
+    @Import(name="conditions")
       private final @Nullable Output<List<ServiceStatusConditionGetArgs>> conditions;
 
     public Output<List<ServiceStatusConditionGetArgs>> getConditions() {
         return this.conditions == null ? Output.empty() : this.conditions;
     }
 
-    @InputImport(name="latestCreatedRevisionName")
+    @Import(name="latestCreatedRevisionName")
       private final @Nullable Output<String> latestCreatedRevisionName;
 
     public Output<String> getLatestCreatedRevisionName() {
         return this.latestCreatedRevisionName == null ? Output.empty() : this.latestCreatedRevisionName;
     }
 
-    @InputImport(name="latestReadyRevisionName")
+    @Import(name="latestReadyRevisionName")
       private final @Nullable Output<String> latestReadyRevisionName;
 
     public Output<String> getLatestReadyRevisionName() {
         return this.latestReadyRevisionName == null ? Output.empty() : this.latestReadyRevisionName;
     }
 
-    @InputImport(name="observedGeneration")
+    @Import(name="observedGeneration")
       private final @Nullable Output<Integer> observedGeneration;
 
     public Output<Integer> getObservedGeneration() {
         return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
     }
 
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {

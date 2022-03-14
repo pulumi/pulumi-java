@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class Hl7StoreNotificationConfigsGetArgs extends io.pulumi.resource
      * * labels.x, a string value of the label with key x as set using the Message.labels map. For example, labels."priority"="high". The operator :* can be used to assert the existence of a label. For example, labels."priority":*.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
@@ -42,7 +42,7 @@ public final class Hl7StoreNotificationConfigsGetArgs extends io.pulumi.resource
      * Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
      * 
      */
-    @InputImport(name="pubsubTopic", required=true)
+    @Import(name="pubsubTopic", required=true)
       private final Output<String> pubsubTopic;
 
     public Output<String> getPubsubTopic() {

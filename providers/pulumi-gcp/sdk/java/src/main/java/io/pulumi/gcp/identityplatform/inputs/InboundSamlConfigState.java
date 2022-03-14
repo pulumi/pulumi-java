@@ -4,7 +4,7 @@
 package io.pulumi.gcp.identityplatform.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.identityplatform.inputs.InboundSamlConfigIdpConfigGetArgs;
 import io.pulumi.gcp.identityplatform.inputs.InboundSamlConfigSpConfigGetArgs;
 import java.lang.Boolean;
@@ -21,7 +21,7 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
      * Human friendly display name.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -32,7 +32,7 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
      * If this config allows users to sign in with the provider.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -44,7 +44,7 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    @InputImport(name="idpConfig")
+    @Import(name="idpConfig")
       private final @Nullable Output<InboundSamlConfigIdpConfigGetArgs> idpConfig;
 
     public Output<InboundSamlConfigIdpConfigGetArgs> getIdpConfig() {
@@ -57,7 +57,7 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
      * alphanumeric character, and have at least 2 characters.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -69,7 +69,7 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -82,7 +82,7 @@ public final class InboundSamlConfigState extends io.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    @InputImport(name="spConfig")
+    @Import(name="spConfig")
       private final @Nullable Output<InboundSamlConfigSpConfigGetArgs> spConfig;
 
     public Output<InboundSamlConfigSpConfigGetArgs> getSpConfig() {

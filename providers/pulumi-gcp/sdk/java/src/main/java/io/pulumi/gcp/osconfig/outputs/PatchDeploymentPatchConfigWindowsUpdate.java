@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PatchDeploymentPatchConfigWindowsUpdate {
     /**
      * Only apply updates of these windows update classifications. If empty, all updates are applied.
@@ -29,11 +29,11 @@ public final class PatchDeploymentPatchConfigWindowsUpdate {
      */
     private final @Nullable List<String> exclusivePatches;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PatchDeploymentPatchConfigWindowsUpdate(
-        @OutputCustomType.Parameter("classifications") @Nullable List<String> classifications,
-        @OutputCustomType.Parameter("excludes") @Nullable List<String> excludes,
-        @OutputCustomType.Parameter("exclusivePatches") @Nullable List<String> exclusivePatches) {
+        @CustomType.Parameter("classifications") @Nullable List<String> classifications,
+        @CustomType.Parameter("excludes") @Nullable List<String> excludes,
+        @CustomType.Parameter("exclusivePatches") @Nullable List<String> exclusivePatches) {
         this.classifications = classifications;
         this.excludes = excludes;
         this.exclusivePatches = exclusivePatches;

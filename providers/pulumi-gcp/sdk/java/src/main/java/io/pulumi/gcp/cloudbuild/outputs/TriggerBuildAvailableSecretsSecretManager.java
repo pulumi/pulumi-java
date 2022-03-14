@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TriggerBuildAvailableSecretsSecretManager {
     /**
      * A list of global environment variable definitions that will exist for all build steps
@@ -23,10 +23,10 @@ public final class TriggerBuildAvailableSecretsSecretManager {
      */
     private final String versionName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerBuildAvailableSecretsSecretManager(
-        @OutputCustomType.Parameter("env") String env,
-        @OutputCustomType.Parameter("versionName") String versionName) {
+        @CustomType.Parameter("env") String env,
+        @CustomType.Parameter("versionName") String versionName) {
         this.env = env;
         this.versionName = versionName;
     }

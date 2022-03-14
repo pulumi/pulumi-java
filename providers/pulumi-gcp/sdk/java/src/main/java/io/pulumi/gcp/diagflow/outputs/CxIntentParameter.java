@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CxIntentParameter {
     /**
      * The entity type of the parameter.
@@ -35,12 +35,12 @@ public final class CxIntentParameter {
      */
     private final @Nullable Boolean redact;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CxIntentParameter(
-        @OutputCustomType.Parameter("entityType") String entityType,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isList") @Nullable Boolean isList,
-        @OutputCustomType.Parameter("redact") @Nullable Boolean redact) {
+        @CustomType.Parameter("entityType") String entityType,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isList") @Nullable Boolean isList,
+        @CustomType.Parameter("redact") @Nullable Boolean redact) {
         this.entityType = entityType;
         this.id = id;
         this.isList = isList;

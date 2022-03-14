@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigee.InstanceAttachmentArgs;
@@ -42,7 +42,7 @@ public class InstanceAttachment extends io.pulumi.resources.CustomResource {
      * The resource ID of the environment.
      * 
      */
-    @OutputExport(name="environment", type=String.class, parameters={})
+    @Export(name="environment", type=String.class, parameters={})
     private Output<String> environment;
 
     /**
@@ -57,7 +57,7 @@ public class InstanceAttachment extends io.pulumi.resources.CustomResource {
      * in the format `organisations/{{org_name}}/instances/{{instance_name}}`.
      * 
      */
-    @OutputExport(name="instanceId", type=String.class, parameters={})
+    @Export(name="instanceId", type=String.class, parameters={})
     private Output<String> instanceId;
 
     /**
@@ -72,7 +72,7 @@ public class InstanceAttachment extends io.pulumi.resources.CustomResource {
      * The name of the newly created attachment (output parameter).
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

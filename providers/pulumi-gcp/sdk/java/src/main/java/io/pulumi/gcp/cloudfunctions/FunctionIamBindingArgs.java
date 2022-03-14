@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudfunctions;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudfunctions.inputs.FunctionIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,42 +16,42 @@ public final class FunctionIamBindingArgs extends io.pulumi.resources.ResourceAr
 
     public static final FunctionIamBindingArgs Empty = new FunctionIamBindingArgs();
 
-    @InputImport(name="cloudFunction", required=true)
+    @Import(name="cloudFunction", required=true)
       private final Output<String> cloudFunction;
 
     public Output<String> getCloudFunction() {
         return this.cloudFunction;
     }
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<FunctionIamBindingConditionArgs> condition;
 
     public Output<FunctionIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Output.empty() : this.condition;
     }
 
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
         return this.members;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
         return this.project == null ? Output.empty() : this.project;
     }
 
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
         return this.region == null ? Output.empty() : this.region;
     }
 
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

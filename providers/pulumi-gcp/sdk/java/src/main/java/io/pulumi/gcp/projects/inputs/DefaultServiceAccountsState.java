@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class DefaultServiceAccountsState extends io.pulumi.resources.Resou
      * The action to be performed in the default service accounts. Valid values are: `DEPRIVILEGE`, `DELETE`, `DISABLE`. Note that `DEPRIVILEGE` action will ignore the REVERT configuration in the restore_policy
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<String> action;
 
     public Output<String> getAction() {
@@ -31,7 +31,7 @@ public final class DefaultServiceAccountsState extends io.pulumi.resources.Resou
      * The project ID where service accounts are created.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -45,7 +45,7 @@ public final class DefaultServiceAccountsState extends io.pulumi.resources.Resou
      * If set to REVERT_AND_IGNORE_FAILURE it is the same behavior as REVERT but ignores errors returned by the API.
      * 
      */
-    @InputImport(name="restorePolicy")
+    @Import(name="restorePolicy")
       private final @Nullable Output<String> restorePolicy;
 
     public Output<String> getRestorePolicy() {
@@ -56,7 +56,7 @@ public final class DefaultServiceAccountsState extends io.pulumi.resources.Resou
      * The Service Accounts changed by this resource. It is used for `REVERT` the `action` on the destroy.
      * 
      */
-    @InputImport(name="serviceAccounts")
+    @Import(name="serviceAccounts")
       private final @Nullable Output<Map<String,Object>> serviceAccounts;
 
     public Output<Map<String,Object>> getServiceAccounts() {

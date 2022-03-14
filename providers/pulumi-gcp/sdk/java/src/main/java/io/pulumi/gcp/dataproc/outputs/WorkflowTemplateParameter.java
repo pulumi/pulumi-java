@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateParameterValidation;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplateParameter {
     /**
      * Optional. Brief description of the parameter. Must not exceed 1024 characters.
@@ -34,12 +34,12 @@ public final class WorkflowTemplateParameter {
      */
     private final @Nullable WorkflowTemplateParameterValidation validation;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowTemplateParameter(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("fields") List<String> fields,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("validation") @Nullable WorkflowTemplateParameterValidation validation) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("fields") List<String> fields,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("validation") @Nullable WorkflowTemplateParameterValidation validation) {
         this.description = description;
         this.fields = fields;
         this.name = name;

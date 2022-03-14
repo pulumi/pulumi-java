@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.ReservationShareSettingsProjectMapGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ReservationShareSettingsGetArgs extends io.pulumi.resources.R
      * Structure is documented below.
      * 
      */
-    @InputImport(name="projectMaps")
+    @Import(name="projectMaps")
       private final @Nullable Output<List<ReservationShareSettingsProjectMapGetArgs>> projectMaps;
 
     public Output<List<ReservationShareSettingsProjectMapGetArgs>> getProjectMaps() {
@@ -33,7 +33,7 @@ public final class ReservationShareSettingsGetArgs extends io.pulumi.resources.R
      * Possible values are `LOCAL` and `SPECIFIC_PROJECTS`.
      * 
      */
-    @InputImport(name="shareType")
+    @Import(name="shareType")
       private final @Nullable Output<String> shareType;
 
     public Output<String> getShareType() {

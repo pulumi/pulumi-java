@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iot;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iot.DeviceArgs;
@@ -45,7 +45,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * If a device is blocked, connections or requests from this device will fail.
      * 
      */
-    @OutputExport(name="blocked", type=Boolean.class, parameters={})
+    @Export(name="blocked", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> blocked;
 
     /**
@@ -59,7 +59,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
      * 
      */
-    @OutputExport(name="configs", type=List.class, parameters={DeviceConfig.class})
+    @Export(name="configs", type=List.class, parameters={DeviceConfig.class})
     private Output<List<DeviceConfig>> configs;
 
     /**
@@ -74,7 +74,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="credentials", type=List.class, parameters={DeviceCredential.class})
+    @Export(name="credentials", type=List.class, parameters={DeviceCredential.class})
     private Output</* @Nullable */ List<DeviceCredential>> credentials;
 
     /**
@@ -90,7 +90,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="gatewayConfig", type=DeviceGatewayConfig.class, parameters={})
+    @Export(name="gatewayConfig", type=DeviceGatewayConfig.class, parameters={})
     private Output</* @Nullable */ DeviceGatewayConfig> gatewayConfig;
 
     /**
@@ -105,7 +105,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The last time a cloud-to-device config version acknowledgment was received from the device.
      * 
      */
-    @OutputExport(name="lastConfigAckTime", type=String.class, parameters={})
+    @Export(name="lastConfigAckTime", type=String.class, parameters={})
     private Output<String> lastConfigAckTime;
 
     /**
@@ -119,7 +119,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The last time a cloud-to-device config version was sent to the device.
      * 
      */
-    @OutputExport(name="lastConfigSendTime", type=String.class, parameters={})
+    @Export(name="lastConfigSendTime", type=String.class, parameters={})
     private Output<String> lastConfigSendTime;
 
     /**
@@ -133,7 +133,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
      * 
      */
-    @OutputExport(name="lastErrorStatuses", type=List.class, parameters={DeviceLastErrorStatus.class})
+    @Export(name="lastErrorStatuses", type=List.class, parameters={DeviceLastErrorStatus.class})
     private Output<List<DeviceLastErrorStatus>> lastErrorStatuses;
 
     /**
@@ -147,7 +147,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub.
      * 
      */
-    @OutputExport(name="lastErrorTime", type=String.class, parameters={})
+    @Export(name="lastErrorTime", type=String.class, parameters={})
     private Output<String> lastErrorTime;
 
     /**
@@ -161,7 +161,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The last time a telemetry event was received.
      * 
      */
-    @OutputExport(name="lastEventTime", type=String.class, parameters={})
+    @Export(name="lastEventTime", type=String.class, parameters={})
     private Output<String> lastEventTime;
 
     /**
@@ -175,7 +175,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The last time an MQTT PINGREQ was received.
      * 
      */
-    @OutputExport(name="lastHeartbeatTime", type=String.class, parameters={})
+    @Export(name="lastHeartbeatTime", type=String.class, parameters={})
     private Output<String> lastHeartbeatTime;
 
     /**
@@ -189,7 +189,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The last time a state event was received.
      * 
      */
-    @OutputExport(name="lastStateTime", type=String.class, parameters={})
+    @Export(name="lastStateTime", type=String.class, parameters={})
     private Output<String> lastStateTime;
 
     /**
@@ -204,7 +204,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
      * 
      */
-    @OutputExport(name="logLevel", type=String.class, parameters={})
+    @Export(name="logLevel", type=String.class, parameters={})
     private Output</* @Nullable */ String> logLevel;
 
     /**
@@ -219,7 +219,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The metadata key-value pairs assigned to the device.
      * 
      */
-    @OutputExport(name="metadata", type=Map.class, parameters={String.class, String.class})
+    @Export(name="metadata", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> metadata;
 
     /**
@@ -233,7 +233,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * A unique name for the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -248,7 +248,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * unique.
      * 
      */
-    @OutputExport(name="numId", type=String.class, parameters={})
+    @Export(name="numId", type=String.class, parameters={})
     private Output<String> numId;
 
     /**
@@ -263,7 +263,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The name of the device registry where this device should be created.
      * 
      */
-    @OutputExport(name="registry", type=String.class, parameters={})
+    @Export(name="registry", type=String.class, parameters={})
     private Output<String> registry;
 
     /**
@@ -277,7 +277,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * The state most recently received from the device.
      * 
      */
-    @OutputExport(name="states", type=List.class, parameters={DeviceState.class})
+    @Export(name="states", type=List.class, parameters={DeviceState.class})
     private Output<List<DeviceState>> states;
 
     /**

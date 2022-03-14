@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.DicomStoreIamMemberArgs;
@@ -59,7 +59,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:healthcare/dicomStoreIamMember:DicomStoreIamMember")
 public class DicomStoreIamMember extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=DicomStoreIamMemberCondition.class, parameters={})
+    @Export(name="condition", type=DicomStoreIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ DicomStoreIamMemberCondition> condition;
 
     public Output</* @Nullable */ DicomStoreIamMemberCondition> getCondition() {
@@ -72,7 +72,7 @@ public class DicomStoreIamMember extends io.pulumi.resources.CustomResource {
      * project setting will be used as a fallback.
      * 
      */
-    @OutputExport(name="dicomStoreId", type=String.class, parameters={})
+    @Export(name="dicomStoreId", type=String.class, parameters={})
     private Output<String> dicomStoreId;
 
     /**
@@ -89,7 +89,7 @@ public class DicomStoreIamMember extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the DICOM store's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -99,7 +99,7 @@ public class DicomStoreIamMember extends io.pulumi.resources.CustomResource {
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="member", type=String.class, parameters={})
+    @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
     public Output<String> getMember() {
@@ -111,7 +111,7 @@ public class DicomStoreIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

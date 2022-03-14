@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.AwsClusterControlPlaneAwsServicesAuthenticationArgs;
 import io.pulumi.gcp.container.inputs.AwsClusterControlPlaneConfigEncryptionArgs;
 import io.pulumi.gcp.container.inputs.AwsClusterControlPlaneDatabaseEncryptionArgs;
@@ -27,7 +27,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * Required. Authentication configuration for management of AWS resources.
      * 
      */
-    @InputImport(name="awsServicesAuthentication", required=true)
+    @Import(name="awsServicesAuthentication", required=true)
       private final Output<AwsClusterControlPlaneAwsServicesAuthenticationArgs> awsServicesAuthentication;
 
     public Output<AwsClusterControlPlaneAwsServicesAuthenticationArgs> getAwsServicesAuthentication() {
@@ -38,7 +38,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * Required. The ARN of the AWS KMS key used to encrypt cluster configuration.
      * 
      */
-    @InputImport(name="configEncryption", required=true)
+    @Import(name="configEncryption", required=true)
       private final Output<AwsClusterControlPlaneConfigEncryptionArgs> configEncryption;
 
     public Output<AwsClusterControlPlaneConfigEncryptionArgs> getConfigEncryption() {
@@ -49,7 +49,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * Required. The ARN of the AWS KMS key used to encrypt cluster secrets.
      * 
      */
-    @InputImport(name="databaseEncryption", required=true)
+    @Import(name="databaseEncryption", required=true)
       private final Output<AwsClusterControlPlaneDatabaseEncryptionArgs> databaseEncryption;
 
     public Output<AwsClusterControlPlaneDatabaseEncryptionArgs> getDatabaseEncryption() {
@@ -60,7 +60,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * Required. The name of the AWS IAM instance pofile to assign to each control plane replica.
      * 
      */
-    @InputImport(name="iamInstanceProfile", required=true)
+    @Import(name="iamInstanceProfile", required=true)
       private final Output<String> iamInstanceProfile;
 
     public Output<String> getIamInstanceProfile() {
@@ -71,7 +71,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * Optional. The AWS instance type. When unspecified, it defaults to `t3.medium`.
      * 
      */
-    @InputImport(name="instanceType")
+    @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
@@ -82,7 +82,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster's etcd state. Volumes will be provisioned in the availability zone associated with the corresponding subnet. When unspecified, it defaults to 8 GiB with the GP2 volume type.
      * 
      */
-    @InputImport(name="mainVolume")
+    @Import(name="mainVolume")
       private final @Nullable Output<AwsClusterControlPlaneMainVolumeArgs> mainVolume;
 
     public Output<AwsClusterControlPlaneMainVolumeArgs> getMainVolume() {
@@ -93,7 +93,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * Proxy configuration for outbound HTTP(S) traffic.
      * 
      */
-    @InputImport(name="proxyConfig")
+    @Import(name="proxyConfig")
       private final @Nullable Output<AwsClusterControlPlaneProxyConfigArgs> proxyConfig;
 
     public Output<AwsClusterControlPlaneProxyConfigArgs> getProxyConfig() {
@@ -104,7 +104,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * Optional. Configuration related to the root volume provisioned for each control plane replica. Volumes will be provisioned in the availability zone associated with the corresponding subnet. When unspecified, it defaults to 32 GiB with the GP2 volume type.
      * 
      */
-    @InputImport(name="rootVolume")
+    @Import(name="rootVolume")
       private final @Nullable Output<AwsClusterControlPlaneRootVolumeArgs> rootVolume;
 
     public Output<AwsClusterControlPlaneRootVolumeArgs> getRootVolume() {
@@ -115,7 +115,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * Optional. The IDs of additional security groups to add to control plane replicas. The Anthos Multi-Cloud API will automatically create and manage security groups with the minimum rules needed for a functioning cluster.
      * 
      */
-    @InputImport(name="securityGroupIds")
+    @Import(name="securityGroupIds")
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
@@ -126,7 +126,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * Optional. SSH configuration for how to access the underlying control plane machines.
      * 
      */
-    @InputImport(name="sshConfig")
+    @Import(name="sshConfig")
       private final @Nullable Output<AwsClusterControlPlaneSshConfigArgs> sshConfig;
 
     public Output<AwsClusterControlPlaneSshConfigArgs> getSshConfig() {
@@ -137,7 +137,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * Required. The list of subnets where control plane replicas will run. A replica will be provisioned on each subnet and up to three values can be provided. Each subnet must be in a different AWS Availability Zone (AZ).
      * 
      */
-    @InputImport(name="subnetIds", required=true)
+    @Import(name="subnetIds", required=true)
       private final Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
@@ -148,7 +148,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * Optional. A set of AWS resource tags to propagate to all underlying managed AWS resources. Specify at most 50 pairs containing alphanumerics, spaces, and symbols (.+-=_:@/). Keys can be up to 127 Unicode characters. Values can be up to 255 Unicode characters.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -159,7 +159,7 @@ public final class AwsClusterControlPlaneArgs extends io.pulumi.resources.Resour
      * Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling .
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final Output<String> version;
 
     public Output<String> getVersion() {

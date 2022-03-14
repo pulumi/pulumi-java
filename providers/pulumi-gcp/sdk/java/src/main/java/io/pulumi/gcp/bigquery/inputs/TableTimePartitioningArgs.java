@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class TableTimePartitioningArgs extends io.pulumi.resources.Resourc
      * storage for a partition.
      * 
      */
-    @InputImport(name="expirationMs")
+    @Import(name="expirationMs")
       private final @Nullable Output<Integer> expirationMs;
 
     public Output<Integer> getExpirationMs() {
@@ -33,7 +33,7 @@ public final class TableTimePartitioningArgs extends io.pulumi.resources.Resourc
      * partition.
      * 
      */
-    @InputImport(name="field")
+    @Import(name="field")
       private final @Nullable Output<String> field;
 
     public Output<String> getField() {
@@ -46,7 +46,7 @@ public final class TableTimePartitioningArgs extends io.pulumi.resources.Resourc
      * specified.
      * 
      */
-    @InputImport(name="requirePartitionFilter")
+    @Import(name="requirePartitionFilter")
       private final @Nullable Output<Boolean> requirePartitionFilter;
 
     public Output<Boolean> getRequirePartitionFilter() {
@@ -58,7 +58,7 @@ public final class TableTimePartitioningArgs extends io.pulumi.resources.Resourc
      * which will generate one partition per day, hour, month, and year, respectively.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

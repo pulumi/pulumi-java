@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyRuleMatchConfigGetArgs;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyRuleMatchExprGetArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class SecurityPolicyRuleMatchGetArgs extends io.pulumi.resources.Re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="config")
+    @Import(name="config")
       private final @Nullable Output<SecurityPolicyRuleMatchConfigGetArgs> config;
 
     public Output<SecurityPolicyRuleMatchConfigGetArgs> getConfig() {
@@ -35,7 +35,7 @@ public final class SecurityPolicyRuleMatchGetArgs extends io.pulumi.resources.Re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="expr")
+    @Import(name="expr")
       private final @Nullable Output<SecurityPolicyRuleMatchExprGetArgs> expr;
 
     public Output<SecurityPolicyRuleMatchExprGetArgs> getExpr() {
@@ -48,7 +48,7 @@ public final class SecurityPolicyRuleMatchGetArgs extends io.pulumi.resources.Re
      * * SRC_IPS_V1: Must specify the corresponding `src_ip_ranges` field in `config`.
      * 
      */
-    @InputImport(name="versionedExpr")
+    @Import(name="versionedExpr")
       private final @Nullable Output<String> versionedExpr;
 
     public Output<String> getVersionedExpr() {

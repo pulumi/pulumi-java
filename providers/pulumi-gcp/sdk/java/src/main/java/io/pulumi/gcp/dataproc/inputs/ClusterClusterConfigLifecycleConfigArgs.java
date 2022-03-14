@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ClusterClusterConfigLifecycleConfigArgs extends io.pulumi.res
      * Example: "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @InputImport(name="autoDeleteTime")
+    @Import(name="autoDeleteTime")
       private final @Nullable Output<String> autoDeleteTime;
 
     public Output<String> getAutoDeleteTime() {
@@ -32,14 +32,14 @@ public final class ClusterClusterConfigLifecycleConfigArgs extends io.pulumi.res
      * (no jobs running). After this TTL, the cluster will be deleted. Valid range: [10m, 14d].
      * 
      */
-    @InputImport(name="idleDeleteTtl")
+    @Import(name="idleDeleteTtl")
       private final @Nullable Output<String> idleDeleteTtl;
 
     public Output<String> getIdleDeleteTtl() {
         return this.idleDeleteTtl == null ? Output.empty() : this.idleDeleteTtl;
     }
 
-    @InputImport(name="idleStartTime")
+    @Import(name="idleStartTime")
       private final @Nullable Output<String> idleStartTime;
 
     public Output<String> getIdleStartTime() {

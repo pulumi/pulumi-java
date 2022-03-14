@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
      * Whether to export the custom routes to the peer network.
      * 
      */
-    @InputImport(name="exportCustomRoutes", required=true)
+    @Import(name="exportCustomRoutes", required=true)
       private final Output<Boolean> exportCustomRoutes;
 
     public Output<Boolean> getExportCustomRoutes() {
@@ -30,7 +30,7 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
      * Whether to import the custom routes to the peer network.
      * 
      */
-    @InputImport(name="importCustomRoutes", required=true)
+    @Import(name="importCustomRoutes", required=true)
       private final Output<Boolean> importCustomRoutes;
 
     public Output<Boolean> getImportCustomRoutes() {
@@ -41,7 +41,7 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
      * The name of the primary network for the peering.
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final Output<String> network;
 
     public Output<String> getNetwork() {
@@ -52,7 +52,7 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
      * Name of the peering.
      * 
      */
-    @InputImport(name="peering", required=true)
+    @Import(name="peering", required=true)
       private final Output<String> peering;
 
     public Output<String> getPeering() {
@@ -64,7 +64,7 @@ public final class NetworkPeeringRoutesConfigArgs extends io.pulumi.resources.Re
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

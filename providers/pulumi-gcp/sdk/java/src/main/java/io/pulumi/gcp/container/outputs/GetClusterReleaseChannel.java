@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterReleaseChannel {
     private final String channel;
 
-    @OutputCustomType.Constructor
-    private GetClusterReleaseChannel(@OutputCustomType.Parameter("channel") String channel) {
+    @CustomType.Constructor
+    private GetClusterReleaseChannel(@CustomType.Parameter("channel") String channel) {
         this.channel = channel;
     }
 

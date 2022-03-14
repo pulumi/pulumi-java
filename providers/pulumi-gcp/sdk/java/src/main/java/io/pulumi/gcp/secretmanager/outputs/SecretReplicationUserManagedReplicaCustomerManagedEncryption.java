@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.secretmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SecretReplicationUserManagedReplicaCustomerManagedEncryption {
     /**
      * Describes the Cloud KMS encryption key that will be used to protect destination secret.
@@ -15,8 +15,8 @@ public final class SecretReplicationUserManagedReplicaCustomerManagedEncryption 
      */
     private final String kmsKeyName;
 
-    @OutputCustomType.Constructor
-    private SecretReplicationUserManagedReplicaCustomerManagedEncryption(@OutputCustomType.Parameter("kmsKeyName") String kmsKeyName) {
+    @CustomType.Constructor
+    private SecretReplicationUserManagedReplicaCustomerManagedEncryption(@CustomType.Parameter("kmsKeyName") String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
     }
 

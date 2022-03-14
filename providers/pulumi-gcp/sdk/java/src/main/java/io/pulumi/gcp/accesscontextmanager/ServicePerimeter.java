@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.accesscontextmanager.ServicePerimeterArgs;
@@ -55,7 +55,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Time the AccessPolicy was created in UTC.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -70,7 +70,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * behavior.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -87,7 +87,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Format: accessPolicies/{policy_id}/servicePerimeters/{short_name}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -104,7 +104,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Format: accessPolicies/{policy_id}
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**
@@ -134,7 +134,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Possible values are `PERIMETER_TYPE_REGULAR` and `PERIMETER_TYPE_BRIDGE`.
      * 
      */
-    @OutputExport(name="perimeterType", type=String.class, parameters={})
+    @Export(name="perimeterType", type=String.class, parameters={})
     private Output</* @Nullable */ String> perimeterType;
 
     /**
@@ -167,7 +167,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="spec", type=ServicePerimeterSpec.class, parameters={})
+    @Export(name="spec", type=ServicePerimeterSpec.class, parameters={})
     private Output</* @Nullable */ ServicePerimeterSpec> spec;
 
     /**
@@ -188,7 +188,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="status", type=ServicePerimeterStatus.class, parameters={})
+    @Export(name="status", type=ServicePerimeterStatus.class, parameters={})
     private Output</* @Nullable */ ServicePerimeterStatus> status;
 
     /**
@@ -205,7 +205,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Human readable title. Must be unique within the Policy.
      * 
      */
-    @OutputExport(name="title", type=String.class, parameters={})
+    @Export(name="title", type=String.class, parameters={})
     private Output<String> title;
 
     /**
@@ -219,7 +219,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * Time the AccessPolicy was updated in UTC.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -241,7 +241,7 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
      * bet set to True if any of the fields in the spec are set to non-default values.
      * 
      */
-    @OutputExport(name="useExplicitDryRunSpec", type=Boolean.class, parameters={})
+    @Export(name="useExplicitDryRunSpec", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> useExplicitDryRunSpec;
 
     /**

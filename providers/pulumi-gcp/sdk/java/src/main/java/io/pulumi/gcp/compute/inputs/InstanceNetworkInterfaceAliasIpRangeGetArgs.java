@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class InstanceNetworkInterfaceAliasIpRangeGetArgs extends io.pulumi
      * (e.g. 10.2.3.4), a netmask (e.g. /24) or a CIDR format string (e.g. 10.1.2.0/24).
      * 
      */
-    @InputImport(name="ipCidrRange", required=true)
+    @Import(name="ipCidrRange", required=true)
       private final Output<String> ipCidrRange;
 
     public Output<String> getIpCidrRange() {
@@ -34,7 +34,7 @@ public final class InstanceNetworkInterfaceAliasIpRangeGetArgs extends io.pulumi
      * range. If left unspecified, the primary range of the subnetwork will be used.
      * 
      */
-    @InputImport(name="subnetworkRangeName")
+    @Import(name="subnetworkRangeName")
       private final @Nullable Output<String> subnetworkRangeName;
 
     public Output<String> getSubnetworkRangeName() {

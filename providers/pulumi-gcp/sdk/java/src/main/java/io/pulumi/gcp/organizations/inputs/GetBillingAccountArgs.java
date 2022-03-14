@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GetBillingAccountArgs extends io.pulumi.resources.InvokeArgs 
      * The name of the billing account in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
      * 
      */
-    @InputImport(name="billingAccount")
+    @Import(name="billingAccount")
       private final @Nullable String billingAccount;
 
     public Optional<String> getBillingAccount() {
@@ -30,7 +30,7 @@ public final class GetBillingAccountArgs extends io.pulumi.resources.InvokeArgs 
      * The display name of the billing account.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
@@ -41,7 +41,7 @@ public final class GetBillingAccountArgs extends io.pulumi.resources.InvokeArgs 
      * `true` if the billing account is open, `false` if the billing account is closed.
      * 
      */
-    @InputImport(name="open")
+    @Import(name="open")
       private final @Nullable Boolean open;
 
     public Optional<Boolean> getOpen() {

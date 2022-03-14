@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class ClusterResourceUsageExportConfigBigqueryDestinationArgs exten
 
     public static final ClusterResourceUsageExportConfigBigqueryDestinationArgs Empty = new ClusterResourceUsageExportConfigBigqueryDestinationArgs();
 
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
     public Output<String> getDatasetId() {

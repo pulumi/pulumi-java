@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.certificateauthority.CertificateArgs;
@@ -48,7 +48,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Certificate Authority name.
      * 
      */
-    @OutputExport(name="certificateAuthority", type=String.class, parameters={})
+    @Export(name="certificateAuthority", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateAuthority;
 
     /**
@@ -63,7 +63,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * this field is present.
      * 
      */
-    @OutputExport(name="certificateDescriptions", type=List.class, parameters={CertificateCertificateDescription.class})
+    @Export(name="certificateDescriptions", type=List.class, parameters={CertificateCertificateDescription.class})
     private Output<List<CertificateCertificateDescription>> certificateDescriptions;
 
     /**
@@ -82,7 +82,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * as the Certificate.
      * 
      */
-    @OutputExport(name="certificateTemplate", type=String.class, parameters={})
+    @Export(name="certificateTemplate", type=String.class, parameters={})
     private Output</* @Nullable */ String> certificateTemplate;
 
     /**
@@ -101,7 +101,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="config", type=CertificateConfig.class, parameters={})
+    @Export(name="config", type=CertificateConfig.class, parameters={})
     private Output</* @Nullable */ CertificateConfig> config;
 
     /**
@@ -116,7 +116,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The time that this resource was created on the server. This is in RFC3339 text format.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -130,7 +130,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Labels with user-defined metadata to apply to this resource.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -146,7 +146,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @OutputExport(name="lifetime", type=String.class, parameters={})
+    @Export(name="lifetime", type=String.class, parameters={})
     private Output</* @Nullable */ String> lifetime;
 
     /**
@@ -163,7 +163,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * running `gcloud privateca locations list`.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -178,7 +178,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The name for this Certificate.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -192,7 +192,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Output only. The pem-encoded, signed X.509 certificate.
      * 
      */
-    @OutputExport(name="pemCertificate", type=String.class, parameters={})
+    @Export(name="pemCertificate", type=String.class, parameters={})
     private Output<String> pemCertificate;
 
     /**
@@ -206,7 +206,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Required. Expected to be in leaf-to-root order according to RFC 5246.
      * 
      */
-    @OutputExport(name="pemCertificates", type=List.class, parameters={String.class})
+    @Export(name="pemCertificates", type=List.class, parameters={String.class})
     private Output<List<String>> pemCertificates;
 
     /**
@@ -220,7 +220,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Immutable. A pem-encoded X.509 certificate signing request (CSR).
      * 
      */
-    @OutputExport(name="pemCsr", type=String.class, parameters={})
+    @Export(name="pemCsr", type=String.class, parameters={})
     private Output</* @Nullable */ String> pemCsr;
 
     /**
@@ -234,7 +234,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * The name of the CaPool this Certificate belongs to.
      * 
      */
-    @OutputExport(name="pool", type=String.class, parameters={})
+    @Export(name="pool", type=String.class, parameters={})
     private Output<String> pool;
 
     /**
@@ -249,7 +249,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -265,7 +265,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * this field is present.
      * 
      */
-    @OutputExport(name="revocationDetails", type=List.class, parameters={CertificateRevocationDetail.class})
+    @Export(name="revocationDetails", type=List.class, parameters={CertificateRevocationDetail.class})
     private Output<List<CertificateRevocationDetail>> revocationDetails;
 
     /**
@@ -280,7 +280,7 @@ public class Certificate extends io.pulumi.resources.CustomResource {
      * Output only. The time at which this CertificateAuthority was updated. This is in RFC3339 text format.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

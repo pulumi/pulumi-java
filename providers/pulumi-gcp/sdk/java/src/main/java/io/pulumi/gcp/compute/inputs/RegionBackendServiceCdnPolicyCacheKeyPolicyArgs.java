@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicyArgs extends io.pu
      * If true requests to different hosts will be cached separately.
      * 
      */
-    @InputImport(name="includeHost")
+    @Import(name="includeHost")
       private final @Nullable Output<Boolean> includeHost;
 
     public Output<Boolean> getIncludeHost() {
@@ -31,7 +31,7 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicyArgs extends io.pu
      * If true, http and https requests will be cached separately.
      * 
      */
-    @InputImport(name="includeProtocol")
+    @Import(name="includeProtocol")
       private final @Nullable Output<Boolean> includeProtocol;
 
     public Output<Boolean> getIncludeProtocol() {
@@ -47,7 +47,7 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicyArgs extends io.pu
      * key entirely.
      * 
      */
-    @InputImport(name="includeQueryString")
+    @Import(name="includeQueryString")
       private final @Nullable Output<Boolean> includeQueryString;
 
     public Output<Boolean> getIncludeQueryString() {
@@ -62,7 +62,7 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicyArgs extends io.pu
      * delimiters.
      * 
      */
-    @InputImport(name="queryStringBlacklists")
+    @Import(name="queryStringBlacklists")
       private final @Nullable Output<List<String>> queryStringBlacklists;
 
     public Output<List<String>> getQueryStringBlacklists() {
@@ -77,7 +77,7 @@ public final class RegionBackendServiceCdnPolicyCacheKeyPolicyArgs extends io.pu
      * delimiters.
      * 
      */
-    @InputImport(name="queryStringWhitelists")
+    @Import(name="queryStringWhitelists")
       private final @Nullable Output<List<String>> queryStringWhitelists;
 
     public Output<List<String>> getQueryStringWhitelists() {

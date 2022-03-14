@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.secretmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSecretTopic {
     private final String name;
 
-    @OutputCustomType.Constructor
-    private GetSecretTopic(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private GetSecretTopic(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

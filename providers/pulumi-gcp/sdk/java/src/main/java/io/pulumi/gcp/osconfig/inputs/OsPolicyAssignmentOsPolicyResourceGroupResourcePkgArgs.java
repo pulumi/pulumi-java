@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetArgs;
@@ -25,7 +25,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
      * An Apt Repository.
      * 
      */
-    @InputImport(name="apt")
+    @Import(name="apt")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs> apt;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptArgs> getApt() {
@@ -36,7 +36,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
      * A deb package file.
      * 
      */
-    @InputImport(name="deb")
+    @Import(name="deb")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs> deb;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebArgs> getDeb() {
@@ -47,7 +47,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
      * Required. The desired state the agent should maintain for this package. Possible values: DESIRED_STATE_UNSPECIFIED, INSTALLED, REMOVED
      * 
      */
-    @InputImport(name="desiredState", required=true)
+    @Import(name="desiredState", required=true)
       private final Output<String> desiredState;
 
     public Output<String> getDesiredState() {
@@ -58,7 +58,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
      * A package managed by GooGet.
      * 
      */
-    @InputImport(name="googet")
+    @Import(name="googet")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetArgs> googet;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetArgs> getGooget() {
@@ -69,7 +69,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
      * An MSI package.
      * 
      */
-    @InputImport(name="msi")
+    @Import(name="msi")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs> msi;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiArgs> getMsi() {
@@ -80,7 +80,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
      * An rpm package file.
      * 
      */
-    @InputImport(name="rpm")
+    @Import(name="rpm")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs> rpm;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs> getRpm() {
@@ -91,7 +91,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
      * A Yum Repository.
      * 
      */
-    @InputImport(name="yum")
+    @Import(name="yum")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumArgs> yum;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumArgs> getYum() {
@@ -102,7 +102,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs extend
      * A Zypper Repository.
      * 
      */
-    @InputImport(name="zypper")
+    @Import(name="zypper")
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperArgs> zypper;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperArgs> getZypper() {

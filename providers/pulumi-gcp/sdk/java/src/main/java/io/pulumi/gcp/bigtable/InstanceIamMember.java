@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigtable;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigtable.InstanceIamMemberArgs;
@@ -53,7 +53,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:bigtable/instanceIamMember:InstanceIamMember")
 public class InstanceIamMember extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=InstanceIamMemberCondition.class, parameters={})
+    @Export(name="condition", type=InstanceIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ InstanceIamMemberCondition> condition;
 
     public Output</* @Nullable */ InstanceIamMemberCondition> getCondition() {
@@ -63,7 +63,7 @@ public class InstanceIamMember extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the instances's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -77,7 +77,7 @@ public class InstanceIamMember extends io.pulumi.resources.CustomResource {
      * The name or relative resource id of the instance to manage IAM policies for.
      * 
      */
-    @OutputExport(name="instance", type=String.class, parameters={})
+    @Export(name="instance", type=String.class, parameters={})
     private Output<String> instance;
 
     /**
@@ -87,7 +87,7 @@ public class InstanceIamMember extends io.pulumi.resources.CustomResource {
     public Output<String> getInstance() {
         return this.instance;
     }
-    @OutputExport(name="member", type=String.class, parameters={})
+    @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
     public Output<String> getMember() {
@@ -98,7 +98,7 @@ public class InstanceIamMember extends io.pulumi.resources.CustomResource {
      * is not provided, a default will be supplied.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -115,7 +115,7 @@ public class InstanceIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

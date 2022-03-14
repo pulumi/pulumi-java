@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityGetArgs;
@@ -20,7 +20,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleG
      * Structure is documented below.
      * 
      */
-    @InputImport(name="hotwordRegex", required=true)
+    @Import(name="hotwordRegex", required=true)
       private final Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexGetArgs> hotwordRegex;
 
     public Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexGetArgs> getHotwordRegex() {
@@ -32,7 +32,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleG
      * Structure is documented below.
      * 
      */
-    @InputImport(name="likelihoodAdjustment", required=true)
+    @Import(name="likelihoodAdjustment", required=true)
       private final Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentGetArgs> likelihoodAdjustment;
 
     public Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentGetArgs> getLikelihoodAdjustment() {
@@ -48,7 +48,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleG
      * Structure is documented below.
      * 
      */
-    @InputImport(name="proximity", required=true)
+    @Import(name="proximity", required=true)
       private final Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityGetArgs> proximity;
 
     public Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityGetArgs> getProximity() {

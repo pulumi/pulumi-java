@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.projects.IAMPolicyArgs;
@@ -92,7 +92,7 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the project's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -108,7 +108,7 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
      * merged with any existing policy applied to the project.
      * 
      */
-    @OutputExport(name="policyData", type=String.class, parameters={})
+    @Export(name="policyData", type=String.class, parameters={})
     private Output<String> policyData;
 
     /**
@@ -125,7 +125,7 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
      * inferred from the provider.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

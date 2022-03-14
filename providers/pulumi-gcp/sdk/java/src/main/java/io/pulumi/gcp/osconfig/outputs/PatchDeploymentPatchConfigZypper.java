@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PatchDeploymentPatchConfigZypper {
     /**
      * Install only patches with these categories. Common categories include security, recommended, and feature.
@@ -45,14 +45,14 @@ public final class PatchDeploymentPatchConfigZypper {
      */
     private final @Nullable Boolean withUpdate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PatchDeploymentPatchConfigZypper(
-        @OutputCustomType.Parameter("categories") @Nullable List<String> categories,
-        @OutputCustomType.Parameter("excludes") @Nullable List<String> excludes,
-        @OutputCustomType.Parameter("exclusivePatches") @Nullable List<String> exclusivePatches,
-        @OutputCustomType.Parameter("severities") @Nullable List<String> severities,
-        @OutputCustomType.Parameter("withOptional") @Nullable Boolean withOptional,
-        @OutputCustomType.Parameter("withUpdate") @Nullable Boolean withUpdate) {
+        @CustomType.Parameter("categories") @Nullable List<String> categories,
+        @CustomType.Parameter("excludes") @Nullable List<String> excludes,
+        @CustomType.Parameter("exclusivePatches") @Nullable List<String> exclusivePatches,
+        @CustomType.Parameter("severities") @Nullable List<String> severities,
+        @CustomType.Parameter("withOptional") @Nullable Boolean withOptional,
+        @CustomType.Parameter("withUpdate") @Nullable Boolean withUpdate) {
         this.categories = categories;
         this.excludes = excludes;
         this.exclusivePatches = exclusivePatches;

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class UptimeCheckConfigResourceGroup {
     /**
      * The group of resources being monitored. Should be the `name` of a group
@@ -23,10 +23,10 @@ public final class UptimeCheckConfigResourceGroup {
      */
     private final @Nullable String resourceType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private UptimeCheckConfigResourceGroup(
-        @OutputCustomType.Parameter("groupId") @Nullable String groupId,
-        @OutputCustomType.Parameter("resourceType") @Nullable String resourceType) {
+        @CustomType.Parameter("groupId") @Nullable String groupId,
+        @CustomType.Parameter("resourceType") @Nullable String resourceType) {
         this.groupId = groupId;
         this.resourceType = resourceType;
     }

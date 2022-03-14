@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptions {
     /**
      * Set of files to scan.
@@ -16,8 +16,8 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptions {
      */
     private final PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference tableReference;
 
-    @OutputCustomType.Constructor
-    private PreventionJobTriggerInspectJobStorageConfigBigQueryOptions(@OutputCustomType.Parameter("tableReference") PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference tableReference) {
+    @CustomType.Constructor
+    private PreventionJobTriggerInspectJobStorageConfigBigQueryOptions(@CustomType.Parameter("tableReference") PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference tableReference) {
         this.tableReference = tableReference;
     }
 

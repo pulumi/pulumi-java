@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataTransferConfigEmailPreferences {
     /**
      * If true, email notifications will be sent on transfer run failures.
@@ -15,8 +15,8 @@ public final class DataTransferConfigEmailPreferences {
      */
     private final Boolean enableFailureEmail;
 
-    @OutputCustomType.Constructor
-    private DataTransferConfigEmailPreferences(@OutputCustomType.Parameter("enableFailureEmail") Boolean enableFailureEmail) {
+    @CustomType.Constructor
+    private DataTransferConfigEmailPreferences(@CustomType.Parameter("enableFailureEmail") Boolean enableFailureEmail) {
         this.enableFailureEmail = enableFailureEmail;
     }
 

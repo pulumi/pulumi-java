@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +13,7 @@ public final class GetClusterMonitoringConfig extends io.pulumi.resources.Invoke
 
     public static final GetClusterMonitoringConfig Empty = new GetClusterMonitoringConfig();
 
-    @InputImport(name="enableComponents", required=true)
+    @Import(name="enableComponents", required=true)
       private final List<String> enableComponents;
 
     public List<String> getEnableComponents() {

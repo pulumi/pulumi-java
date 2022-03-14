@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.monitoring.outputs.GetAppEngineServiceTelemetry;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAppEngineServiceResult {
     private final String displayName;
     /**
@@ -25,15 +25,15 @@ public final class GetAppEngineServiceResult {
     private final String serviceId;
     private final List<GetAppEngineServiceTelemetry> telemetries;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAppEngineServiceResult(
-        @OutputCustomType.Parameter("displayName") String displayName,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("moduleId") String moduleId,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("serviceId") String serviceId,
-        @OutputCustomType.Parameter("telemetries") List<GetAppEngineServiceTelemetry> telemetries) {
+        @CustomType.Parameter("displayName") String displayName,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("moduleId") String moduleId,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("serviceId") String serviceId,
+        @CustomType.Parameter("telemetries") List<GetAppEngineServiceTelemetry> telemetries) {
         this.displayName = displayName;
         this.id = id;
         this.moduleId = moduleId;

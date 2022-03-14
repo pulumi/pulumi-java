@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class CryptoKeyIAMPolicyState extends io.pulumi.resources.ResourceA
      * the provider's project setting will be used as a fallback.
      * 
      */
-    @InputImport(name="cryptoKeyId")
+    @Import(name="cryptoKeyId")
       private final @Nullable Output<String> cryptoKeyId;
 
     public Output<String> getCryptoKeyId() {
@@ -32,7 +32,7 @@ public final class CryptoKeyIAMPolicyState extends io.pulumi.resources.ResourceA
      * (Computed) The etag of the project's IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -44,7 +44,7 @@ public final class CryptoKeyIAMPolicyState extends io.pulumi.resources.ResourceA
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @InputImport(name="policyData")
+    @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
     public Output<String> getPolicyData() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.diagflow.inputs.CxPageEventHandlerTriggerFulfillmentGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class CxPageEventHandlerGetArgs extends io.pulumi.resources.Resourc
      * The name of the event to handle.
      * 
      */
-    @InputImport(name="event")
+    @Import(name="event")
       private final @Nullable Output<String> event;
 
     public Output<String> getEvent() {
@@ -31,7 +31,7 @@ public final class CxPageEventHandlerGetArgs extends io.pulumi.resources.Resourc
      * The unique identifier of this event handler.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -43,7 +43,7 @@ public final class CxPageEventHandlerGetArgs extends io.pulumi.resources.Resourc
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
      * 
      */
-    @InputImport(name="targetFlow")
+    @Import(name="targetFlow")
       private final @Nullable Output<String> targetFlow;
 
     public Output<String> getTargetFlow() {
@@ -55,7 +55,7 @@ public final class CxPageEventHandlerGetArgs extends io.pulumi.resources.Resourc
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/pages/<Page ID>.
      * 
      */
-    @InputImport(name="targetPage")
+    @Import(name="targetPage")
       private final @Nullable Output<String> targetPage;
 
     public Output<String> getTargetPage() {
@@ -67,7 +67,7 @@ public final class CxPageEventHandlerGetArgs extends io.pulumi.resources.Resourc
      * Structure is documented below.
      * 
      */
-    @InputImport(name="triggerFulfillment")
+    @Import(name="triggerFulfillment")
       private final @Nullable Output<CxPageEventHandlerTriggerFulfillmentGetArgs> triggerFulfillment;
 
     public Output<CxPageEventHandlerTriggerFulfillmentGetArgs> getTriggerFulfillment() {

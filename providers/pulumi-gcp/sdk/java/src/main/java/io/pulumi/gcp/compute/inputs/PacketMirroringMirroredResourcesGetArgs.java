@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.PacketMirroringMirroredResourcesInstanceGetArgs;
 import io.pulumi.gcp.compute.inputs.PacketMirroringMirroredResourcesSubnetworkGetArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class PacketMirroringMirroredResourcesGetArgs extends io.pulumi.res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="instances")
+    @Import(name="instances")
       private final @Nullable Output<List<PacketMirroringMirroredResourcesInstanceGetArgs>> instances;
 
     public Output<List<PacketMirroringMirroredResourcesInstanceGetArgs>> getInstances() {
@@ -34,7 +34,7 @@ public final class PacketMirroringMirroredResourcesGetArgs extends io.pulumi.res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="subnetworks")
+    @Import(name="subnetworks")
       private final @Nullable Output<List<PacketMirroringMirroredResourcesSubnetworkGetArgs>> subnetworks;
 
     public Output<List<PacketMirroringMirroredResourcesSubnetworkGetArgs>> getSubnetworks() {
@@ -45,7 +45,7 @@ public final class PacketMirroringMirroredResourcesGetArgs extends io.pulumi.res
      * All instances with these tags will be mirrored.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {

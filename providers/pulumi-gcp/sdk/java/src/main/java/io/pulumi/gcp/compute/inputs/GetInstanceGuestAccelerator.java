@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetInstanceGuestAccelerator extends io.pulumi.resources.Invok
      * The number of the guest accelerator cards exposed to this instance.
      * 
      */
-    @InputImport(name="count", required=true)
+    @Import(name="count", required=true)
       private final Integer count;
 
     public Integer getCount() {
@@ -28,7 +28,7 @@ public final class GetInstanceGuestAccelerator extends io.pulumi.resources.Invok
      * The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

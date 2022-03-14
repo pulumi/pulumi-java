@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetUptimeCheckIPsUptimeCheckIp {
     /**
      * The IP address from which the Uptime check originates. This is a fully specified IP address
@@ -29,11 +29,11 @@ public final class GetUptimeCheckIPsUptimeCheckIp {
      */
     private final String region;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetUptimeCheckIPsUptimeCheckIp(
-        @OutputCustomType.Parameter("ipAddress") String ipAddress,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("region") String region) {
+        @CustomType.Parameter("ipAddress") String ipAddress,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("region") String region) {
         this.ipAddress = ipAddress;
         this.location = location;
         this.region = region;

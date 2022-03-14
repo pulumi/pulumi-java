@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.binaryauthorization.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicyDefaultAdmissionRule {
     /**
      * The action when a pod creation is denied by the admission rule.
@@ -36,11 +36,11 @@ public final class PolicyDefaultAdmissionRule {
      */
     private final @Nullable List<String> requireAttestationsBies;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicyDefaultAdmissionRule(
-        @OutputCustomType.Parameter("enforcementMode") String enforcementMode,
-        @OutputCustomType.Parameter("evaluationMode") String evaluationMode,
-        @OutputCustomType.Parameter("requireAttestationsBies") @Nullable List<String> requireAttestationsBies) {
+        @CustomType.Parameter("enforcementMode") String enforcementMode,
+        @CustomType.Parameter("evaluationMode") String evaluationMode,
+        @CustomType.Parameter("requireAttestationsBies") @Nullable List<String> requireAttestationsBies) {
         this.enforcementMode = enforcementMode;
         this.evaluationMode = evaluationMode;
         this.requireAttestationsBies = requireAttestationsBies;

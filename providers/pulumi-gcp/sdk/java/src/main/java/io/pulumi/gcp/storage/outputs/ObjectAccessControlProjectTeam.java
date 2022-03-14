@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ObjectAccessControlProjectTeam {
     private final @Nullable String projectNumber;
     private final @Nullable String team;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ObjectAccessControlProjectTeam(
-        @OutputCustomType.Parameter("projectNumber") @Nullable String projectNumber,
-        @OutputCustomType.Parameter("team") @Nullable String team) {
+        @CustomType.Parameter("projectNumber") @Nullable String projectNumber,
+        @CustomType.Parameter("team") @Nullable String team) {
         this.projectNumber = projectNumber;
         this.team = team;
     }

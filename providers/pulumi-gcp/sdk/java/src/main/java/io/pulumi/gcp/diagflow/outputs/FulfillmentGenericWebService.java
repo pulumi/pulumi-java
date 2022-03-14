@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FulfillmentGenericWebService {
     /**
      * The password for HTTP Basic authentication.
@@ -33,12 +33,12 @@ public final class FulfillmentGenericWebService {
      */
     private final @Nullable String username;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FulfillmentGenericWebService(
-        @OutputCustomType.Parameter("password") @Nullable String password,
-        @OutputCustomType.Parameter("requestHeaders") @Nullable Map<String,String> requestHeaders,
-        @OutputCustomType.Parameter("uri") String uri,
-        @OutputCustomType.Parameter("username") @Nullable String username) {
+        @CustomType.Parameter("password") @Nullable String password,
+        @CustomType.Parameter("requestHeaders") @Nullable Map<String,String> requestHeaders,
+        @CustomType.Parameter("uri") String uri,
+        @CustomType.Parameter("username") @Nullable String username) {
         this.password = password;
         this.requestHeaders = requestHeaders;
         this.uri = uri;

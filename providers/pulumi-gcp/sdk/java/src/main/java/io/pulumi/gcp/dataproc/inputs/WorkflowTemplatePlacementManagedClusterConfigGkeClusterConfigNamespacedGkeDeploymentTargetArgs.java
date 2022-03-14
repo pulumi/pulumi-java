@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
      * Optional. A namespace within the GKE cluster to deploy into.
      * 
      */
-    @InputImport(name="clusterNamespace")
+    @Import(name="clusterNamespace")
       private final @Nullable Output<String> clusterNamespace;
 
     public Output<String> getClusterNamespace() {
@@ -29,7 +29,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfig
      * Optional. The target GKE cluster to deploy to. Format: 'projects/{project}/locations/{location}/clusters/{cluster_id}'
      * 
      */
-    @InputImport(name="targetGkeCluster")
+    @Import(name="targetGkeCluster")
       private final @Nullable Output<String> targetGkeCluster;
 
     public Output<String> getTargetGkeCluster() {

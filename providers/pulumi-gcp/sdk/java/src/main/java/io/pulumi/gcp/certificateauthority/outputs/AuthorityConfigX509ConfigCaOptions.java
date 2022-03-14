@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AuthorityConfigX509ConfigCaOptions {
     /**
      * When true, the "CA" in Basic Constraints extension will be set to true.
@@ -37,12 +37,12 @@ public final class AuthorityConfigX509ConfigCaOptions {
      */
     private final @Nullable Boolean zeroMaxIssuerPathLength;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AuthorityConfigX509ConfigCaOptions(
-        @OutputCustomType.Parameter("isCa") Boolean isCa,
-        @OutputCustomType.Parameter("maxIssuerPathLength") @Nullable Integer maxIssuerPathLength,
-        @OutputCustomType.Parameter("nonCa") @Nullable Boolean nonCa,
-        @OutputCustomType.Parameter("zeroMaxIssuerPathLength") @Nullable Boolean zeroMaxIssuerPathLength) {
+        @CustomType.Parameter("isCa") Boolean isCa,
+        @CustomType.Parameter("maxIssuerPathLength") @Nullable Integer maxIssuerPathLength,
+        @CustomType.Parameter("nonCa") @Nullable Boolean nonCa,
+        @CustomType.Parameter("zeroMaxIssuerPathLength") @Nullable Boolean zeroMaxIssuerPathLength) {
         this.isCa = isCa;
         this.maxIssuerPathLength = maxIssuerPathLength;
         this.nonCa = nonCa;

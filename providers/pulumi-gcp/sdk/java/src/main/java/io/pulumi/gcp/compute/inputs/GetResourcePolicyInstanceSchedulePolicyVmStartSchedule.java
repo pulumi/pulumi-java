@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetResourcePolicyInstanceSchedulePolicyVmStartSchedule extend
 
     public static final GetResourcePolicyInstanceSchedulePolicyVmStartSchedule Empty = new GetResourcePolicyInstanceSchedulePolicyVmStartSchedule();
 
-    @InputImport(name="schedule", required=true)
+    @Import(name="schedule", required=true)
       private final String schedule;
 
     public String getSchedule() {

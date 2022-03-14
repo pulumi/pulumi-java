@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterWorkloadIdentityConfig {
     private final String workloadPool;
 
-    @OutputCustomType.Constructor
-    private GetClusterWorkloadIdentityConfig(@OutputCustomType.Parameter("workloadPool") String workloadPool) {
+    @CustomType.Constructor
+    private GetClusterWorkloadIdentityConfig(@CustomType.Parameter("workloadPool") String workloadPool) {
         this.workloadPool = workloadPool;
     }
 

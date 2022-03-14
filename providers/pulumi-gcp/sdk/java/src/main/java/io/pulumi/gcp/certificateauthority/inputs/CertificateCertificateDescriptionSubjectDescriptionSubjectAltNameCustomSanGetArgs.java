@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,14 +22,14 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * handle this extension, the client should consider this to be an error).
      * 
      */
-    @InputImport(name="critical")
+    @Import(name="critical")
       private final @Nullable Output<Boolean> critical;
 
     public Output<Boolean> getCritical() {
         return this.critical == null ? Output.empty() : this.critical;
     }
 
-    @InputImport(name="obectIds")
+    @Import(name="obectIds")
       private final @Nullable Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs>> obectIds;
 
     public Output<List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdGetArgs>> getObectIds() {
@@ -40,7 +40,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * The value of this X.509 extension. A base64-encoded string.
      * 
      */
-    @InputImport(name="value")
+    @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {

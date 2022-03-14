@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceFromTemplateScratchDisk {
     private final String $interface;
 
-    @OutputCustomType.Constructor
-    private InstanceFromTemplateScratchDisk(@OutputCustomType.Parameter("interface") String $interface) {
+    @CustomType.Constructor
+    private InstanceFromTemplateScratchDisk(@CustomType.Parameter("interface") String $interface) {
         this.$interface = $interface;
     }
 

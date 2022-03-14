@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterClusterConfigLifecycleConfig {
     /**
      * The time when cluster will be auto-deleted.
@@ -26,11 +26,11 @@ public final class ClusterClusterConfigLifecycleConfig {
     private final @Nullable String idleDeleteTtl;
     private final @Nullable String idleStartTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterClusterConfigLifecycleConfig(
-        @OutputCustomType.Parameter("autoDeleteTime") @Nullable String autoDeleteTime,
-        @OutputCustomType.Parameter("idleDeleteTtl") @Nullable String idleDeleteTtl,
-        @OutputCustomType.Parameter("idleStartTime") @Nullable String idleStartTime) {
+        @CustomType.Parameter("autoDeleteTime") @Nullable String autoDeleteTime,
+        @CustomType.Parameter("idleDeleteTtl") @Nullable String idleDeleteTtl,
+        @CustomType.Parameter("idleStartTime") @Nullable String idleStartTime) {
         this.autoDeleteTime = autoDeleteTime;
         this.idleDeleteTtl = idleDeleteTtl;
         this.idleStartTime = idleStartTime;

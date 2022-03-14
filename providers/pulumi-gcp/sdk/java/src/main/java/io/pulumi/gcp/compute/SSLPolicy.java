@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.SSLPolicyArgs;
@@ -48,7 +48,7 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -70,7 +70,7 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
      * *must not* be present when using any other profile.
      * 
      */
-    @OutputExport(name="customFeatures", type=List.class, parameters={String.class})
+    @Export(name="customFeatures", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> customFeatures;
 
     /**
@@ -92,7 +92,7 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
      * An optional description of this resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -106,7 +106,7 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
      * The list of features enabled in the SSL policy.
      * 
      */
-    @OutputExport(name="enabledFeatures", type=List.class, parameters={String.class})
+    @Export(name="enabledFeatures", type=List.class, parameters={String.class})
     private Output<List<String>> enabledFeatures;
 
     /**
@@ -120,7 +120,7 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
      * Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
      * 
      */
-    @OutputExport(name="fingerprint", type=String.class, parameters={})
+    @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     /**
@@ -137,7 +137,7 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
      * Possible values are `TLS_1_0`, `TLS_1_1`, and `TLS_1_2`.
      * 
      */
-    @OutputExport(name="minTlsVersion", type=String.class, parameters={})
+    @Export(name="minTlsVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> minTlsVersion;
 
     /**
@@ -160,7 +160,7 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
      * character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -188,7 +188,7 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
      * Possible values are `COMPATIBLE`, `MODERN`, `RESTRICTED`, and `CUSTOM`.
      * 
      */
-    @OutputExport(name="profile", type=String.class, parameters={})
+    @Export(name="profile", type=String.class, parameters={})
     private Output</* @Nullable */ String> profile;
 
     /**
@@ -211,7 +211,7 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -226,7 +226,7 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**

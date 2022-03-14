@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -13,7 +13,7 @@ public final class GetClusterNodeConfigLinuxNodeConfig extends io.pulumi.resourc
 
     public static final GetClusterNodeConfigLinuxNodeConfig Empty = new GetClusterNodeConfigLinuxNodeConfig();
 
-    @InputImport(name="sysctls", required=true)
+    @Import(name="sysctls", required=true)
       private final Map<String,String> sysctls;
 
     public Map<String,String> getSysctls() {

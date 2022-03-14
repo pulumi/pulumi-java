@@ -3,20 +3,20 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterNetworkPolicy {
     private final Boolean enabled;
     private final String provider;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterNetworkPolicy(
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("provider") String provider) {
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("provider") String provider) {
         this.enabled = enabled;
         this.provider = provider;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.serviceAccount;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.serviceAccount.IAMPolicyArgs;
@@ -68,7 +68,7 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the service account IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -83,7 +83,7 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @OutputExport(name="policyData", type=String.class, parameters={})
+    @Export(name="policyData", type=String.class, parameters={})
     private Output<String> policyData;
 
     /**
@@ -98,7 +98,7 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
      * The fully-qualified name of the service account to apply policy to.
      * 
      */
-    @OutputExport(name="serviceAccountId", type=String.class, parameters={})
+    @Export(name="serviceAccountId", type=String.class, parameters={})
     private Output<String> serviceAccountId;
 
     /**

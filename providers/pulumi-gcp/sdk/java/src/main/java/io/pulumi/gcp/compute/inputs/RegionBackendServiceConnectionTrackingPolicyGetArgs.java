@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -33,7 +33,7 @@ public final class RegionBackendServiceConnectionTrackingPolicyGetArgs extends i
      * Possible values are `DEFAULT_FOR_PROTOCOL`, `NEVER_PERSIST`, and `ALWAYS_PERSIST`.
      * 
      */
-    @InputImport(name="connectionPersistenceOnUnhealthyBackends")
+    @Import(name="connectionPersistenceOnUnhealthyBackends")
       private final @Nullable Output<String> connectionPersistenceOnUnhealthyBackends;
 
     public Output<String> getConnectionPersistenceOnUnhealthyBackends() {
@@ -47,7 +47,7 @@ public final class RegionBackendServiceConnectionTrackingPolicyGetArgs extends i
      * For NLB the minimum(default) is 60 seconds and the maximum is 16 hours.
      * 
      */
-    @InputImport(name="idleTimeoutSec")
+    @Import(name="idleTimeoutSec")
       private final @Nullable Output<Integer> idleTimeoutSec;
 
     public Output<Integer> getIdleTimeoutSec() {
@@ -64,7 +64,7 @@ public final class RegionBackendServiceConnectionTrackingPolicyGetArgs extends i
      * Possible values are `PER_CONNECTION` and `PER_SESSION`.
      * 
      */
-    @InputImport(name="trackingMode")
+    @Import(name="trackingMode")
       private final @Nullable Output<String> trackingMode;
 
     public Output<String> getTrackingMode() {

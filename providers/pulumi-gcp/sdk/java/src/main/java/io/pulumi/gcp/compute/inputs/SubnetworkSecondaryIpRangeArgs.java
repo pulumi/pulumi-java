@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class SubnetworkSecondaryIpRangeArgs extends io.pulumi.resources.Re
      * secondary IP ranges within a network. Only IPv4 is supported.
      * 
      */
-    @InputImport(name="ipCidrRange", required=true)
+    @Import(name="ipCidrRange", required=true)
       private final Output<String> ipCidrRange;
 
     public Output<String> getIpCidrRange() {
@@ -34,7 +34,7 @@ public final class SubnetworkSecondaryIpRangeArgs extends io.pulumi.resources.Re
      * must be unique within the subnetwork.
      * 
      */
-    @InputImport(name="rangeName", required=true)
+    @Import(name="rangeName", required=true)
       private final Output<String> rangeName;
 
     public Output<String> getRangeName() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AwsClusterNetworking {
     /**
      * Required. All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
@@ -26,11 +26,11 @@ public final class AwsClusterNetworking {
      */
     private final String vpcId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AwsClusterNetworking(
-        @OutputCustomType.Parameter("podAddressCidrBlocks") List<String> podAddressCidrBlocks,
-        @OutputCustomType.Parameter("serviceAddressCidrBlocks") List<String> serviceAddressCidrBlocks,
-        @OutputCustomType.Parameter("vpcId") String vpcId) {
+        @CustomType.Parameter("podAddressCidrBlocks") List<String> podAddressCidrBlocks,
+        @CustomType.Parameter("serviceAddressCidrBlocks") List<String> serviceAddressCidrBlocks,
+        @CustomType.Parameter("vpcId") String vpcId) {
         this.podAddressCidrBlocks = podAddressCidrBlocks;
         this.serviceAddressCidrBlocks = serviceAddressCidrBlocks;
         this.vpcId = vpcId;

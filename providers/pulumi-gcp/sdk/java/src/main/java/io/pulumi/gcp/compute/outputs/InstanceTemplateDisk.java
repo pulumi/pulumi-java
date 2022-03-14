@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.InstanceTemplateDiskDiskEncryptionKey;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceTemplateDisk {
     /**
      * Whether or not the disk should be auto-deleted.
@@ -107,22 +107,22 @@ public final class InstanceTemplateDisk {
      */
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceTemplateDisk(
-        @OutputCustomType.Parameter("autoDelete") @Nullable Boolean autoDelete,
-        @OutputCustomType.Parameter("boot") @Nullable Boolean boot,
-        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
-        @OutputCustomType.Parameter("diskEncryptionKey") @Nullable InstanceTemplateDiskDiskEncryptionKey diskEncryptionKey,
-        @OutputCustomType.Parameter("diskName") @Nullable String diskName,
-        @OutputCustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
-        @OutputCustomType.Parameter("diskType") @Nullable String diskType,
-        @OutputCustomType.Parameter("interface") @Nullable String $interface,
-        @OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels,
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("resourcePolicies") @Nullable String resourcePolicies,
-        @OutputCustomType.Parameter("source") @Nullable String source,
-        @OutputCustomType.Parameter("sourceImage") @Nullable String sourceImage,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("autoDelete") @Nullable Boolean autoDelete,
+        @CustomType.Parameter("boot") @Nullable Boolean boot,
+        @CustomType.Parameter("deviceName") @Nullable String deviceName,
+        @CustomType.Parameter("diskEncryptionKey") @Nullable InstanceTemplateDiskDiskEncryptionKey diskEncryptionKey,
+        @CustomType.Parameter("diskName") @Nullable String diskName,
+        @CustomType.Parameter("diskSizeGb") @Nullable Integer diskSizeGb,
+        @CustomType.Parameter("diskType") @Nullable String diskType,
+        @CustomType.Parameter("interface") @Nullable String $interface,
+        @CustomType.Parameter("labels") @Nullable Map<String,String> labels,
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("resourcePolicies") @Nullable String resourcePolicies,
+        @CustomType.Parameter("source") @Nullable String source,
+        @CustomType.Parameter("sourceImage") @Nullable String sourceImage,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.autoDelete = autoDelete;
         this.boot = boot;
         this.deviceName = deviceName;

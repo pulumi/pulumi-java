@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.container.outputs.AzureNodePoolConfigRootVolume;
 import io.pulumi.gcp.container.outputs.AzureNodePoolConfigSshConfig;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AzureNodePoolConfig {
     /**
      * Optional. Configuration related to the root volume provisioned for each node pool machine. When unspecified, it defaults to a 32-GiB Azure Disk.
@@ -35,12 +35,12 @@ public final class AzureNodePoolConfig {
      */
     private final @Nullable String vmSize;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureNodePoolConfig(
-        @OutputCustomType.Parameter("rootVolume") @Nullable AzureNodePoolConfigRootVolume rootVolume,
-        @OutputCustomType.Parameter("sshConfig") AzureNodePoolConfigSshConfig sshConfig,
-        @OutputCustomType.Parameter("tags") @Nullable Map<String,String> tags,
-        @OutputCustomType.Parameter("vmSize") @Nullable String vmSize) {
+        @CustomType.Parameter("rootVolume") @Nullable AzureNodePoolConfigRootVolume rootVolume,
+        @CustomType.Parameter("sshConfig") AzureNodePoolConfigSshConfig sshConfig,
+        @CustomType.Parameter("tags") @Nullable Map<String,String> tags,
+        @CustomType.Parameter("vmSize") @Nullable String vmSize) {
         this.rootVolume = rootVolume;
         this.sshConfig = sshConfig;
         this.tags = tags;

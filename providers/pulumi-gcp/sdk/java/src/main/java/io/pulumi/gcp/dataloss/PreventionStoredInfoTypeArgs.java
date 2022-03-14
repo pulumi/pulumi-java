@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeDictionaryArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeRegexArgs;
@@ -21,7 +21,7 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
      * A description of the info type.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
      * Structure is documented below.
      * 
      */
-    @InputImport(name="dictionary")
+    @Import(name="dictionary")
       private final @Nullable Output<PreventionStoredInfoTypeDictionaryArgs> dictionary;
 
     public Output<PreventionStoredInfoTypeDictionaryArgs> getDictionary() {
@@ -44,7 +44,7 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
      * User set display name of the info type.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -56,7 +56,7 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
      * Structure is documented below.
      * 
      */
-    @InputImport(name="largeCustomDictionary")
+    @Import(name="largeCustomDictionary")
       private final @Nullable Output<PreventionStoredInfoTypeLargeCustomDictionaryArgs> largeCustomDictionary;
 
     public Output<PreventionStoredInfoTypeLargeCustomDictionaryArgs> getLargeCustomDictionary() {
@@ -71,7 +71,7 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
      * * `organizations/{{organization_id}}/locations/{{location}}`
      * 
      */
-    @InputImport(name="parent", required=true)
+    @Import(name="parent", required=true)
       private final Output<String> parent;
 
     public Output<String> getParent() {
@@ -83,7 +83,7 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
      * Structure is documented below.
      * 
      */
-    @InputImport(name="regex")
+    @Import(name="regex")
       private final @Nullable Output<PreventionStoredInfoTypeRegexArgs> regex;
 
     public Output<PreventionStoredInfoTypeRegexArgs> getRegex() {

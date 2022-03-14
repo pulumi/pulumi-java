@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyGetArgs extends io
      * can be specified as values, and you cannot specify a status code more than once.
      * 
      */
-    @InputImport(name="code")
+    @Import(name="code")
       private final @Nullable Output<Integer> code;
 
     public Output<Integer> getCode() {
@@ -31,7 +31,7 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyGetArgs extends io
      * (30 minutes), noting that infrequently accessed objects may be evicted from the cache before the defined TTL.
      * 
      */
-    @InputImport(name="ttl")
+    @Import(name="ttl")
       private final @Nullable Output<Integer> ttl;
 
     public Output<Integer> getTtl() {

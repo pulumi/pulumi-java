@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.diagflow.CxIntentArgs;
@@ -48,7 +48,7 @@ public class CxIntent extends io.pulumi.resources.CustomResource {
      * Human readable description for better understanding an intent like its scope, content, result etc. Maximum character limit: 140 characters.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -62,7 +62,7 @@ public class CxIntent extends io.pulumi.resources.CustomResource {
      * The human-readable name of the intent, unique within the agent.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -77,7 +77,7 @@ public class CxIntent extends io.pulumi.resources.CustomResource {
      * Adding training phrases to fallback intent is useful in the case of requests that are mistakenly matched, since training phrases assigned to fallback intents act as negative examples that triggers no-match event.
      * 
      */
-    @OutputExport(name="isFallback", type=Boolean.class, parameters={})
+    @Export(name="isFallback", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> isFallback;
 
     /**
@@ -94,7 +94,7 @@ public class CxIntent extends io.pulumi.resources.CustomResource {
      * An object containing a list of "key": value pairs. Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -112,7 +112,7 @@ public class CxIntent extends io.pulumi.resources.CustomResource {
      * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
      * 
      */
-    @OutputExport(name="languageCode", type=String.class, parameters={})
+    @Export(name="languageCode", type=String.class, parameters={})
     private Output</* @Nullable */ String> languageCode;
 
     /**
@@ -129,7 +129,7 @@ public class CxIntent extends io.pulumi.resources.CustomResource {
      * ID>/intents/<Intent ID>.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -145,7 +145,7 @@ public class CxIntent extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="parameters", type=List.class, parameters={CxIntentParameter.class})
+    @Export(name="parameters", type=List.class, parameters={CxIntentParameter.class})
     private Output</* @Nullable */ List<CxIntentParameter>> parameters;
 
     /**
@@ -161,7 +161,7 @@ public class CxIntent extends io.pulumi.resources.CustomResource {
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output</* @Nullable */ String> parent;
 
     /**
@@ -178,7 +178,7 @@ public class CxIntent extends io.pulumi.resources.CustomResource {
      * If the supplied value is negative, the intent is ignored in runtime detect intent requests.
      * 
      */
-    @OutputExport(name="priority", type=Integer.class, parameters={})
+    @Export(name="priority", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> priority;
 
     /**
@@ -195,7 +195,7 @@ public class CxIntent extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="trainingPhrases", type=List.class, parameters={CxIntentTrainingPhrase.class})
+    @Export(name="trainingPhrases", type=List.class, parameters={CxIntentTrainingPhrase.class})
     private Output</* @Nullable */ List<CxIntentTrainingPhrase>> trainingPhrases;
 
     /**

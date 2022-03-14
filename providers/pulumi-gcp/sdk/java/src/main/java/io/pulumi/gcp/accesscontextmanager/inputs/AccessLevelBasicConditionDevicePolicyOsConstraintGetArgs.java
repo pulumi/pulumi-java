@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraintGetArgs exte
      * Format: "major.minor.patch" such as "10.5.301", "9.2.1".
      * 
      */
-    @InputImport(name="minimumVersion")
+    @Import(name="minimumVersion")
       private final @Nullable Output<String> minimumVersion;
 
     public Output<String> getMinimumVersion() {
@@ -33,7 +33,7 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraintGetArgs exte
      * Possible values are `OS_UNSPECIFIED`, `DESKTOP_MAC`, `DESKTOP_WINDOWS`, `DESKTOP_LINUX`, `DESKTOP_CHROME_OS`, `ANDROID`, and `IOS`.
      * 
      */
-    @InputImport(name="osType", required=true)
+    @Import(name="osType", required=true)
       private final Output<String> osType;
 
     public Output<String> getOsType() {
@@ -44,7 +44,7 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraintGetArgs exte
      * If you specify DESKTOP_CHROME_OS for osType, you can optionally include requireVerifiedChromeOs to require Chrome Verified Access.
      * 
      */
-    @InputImport(name="requireVerifiedChromeOs")
+    @Import(name="requireVerifiedChromeOs")
       private final @Nullable Output<Boolean> requireVerifiedChromeOs;
 
     public Output<Boolean> getRequireVerifiedChromeOs() {

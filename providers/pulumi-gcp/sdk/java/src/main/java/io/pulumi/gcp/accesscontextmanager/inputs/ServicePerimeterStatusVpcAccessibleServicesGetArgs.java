@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ServicePerimeterStatusVpcAccessibleServicesGetArgs extends io
      * Must be empty unless `enableRestriction` is True.
      * 
      */
-    @InputImport(name="allowedServices")
+    @Import(name="allowedServices")
       private final @Nullable Output<List<String>> allowedServices;
 
     public Output<List<String>> getAllowedServices() {
@@ -33,7 +33,7 @@ public final class ServicePerimeterStatusVpcAccessibleServicesGetArgs extends io
      * list of APIs specified in 'allowedServices'.
      * 
      */
-    @InputImport(name="enableRestriction")
+    @Import(name="enableRestriction")
       private final @Nullable Output<Boolean> enableRestriction;
 
     public Output<Boolean> getEnableRestriction() {

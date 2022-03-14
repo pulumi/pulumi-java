@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.diagflow.CxEntityTypeArgs;
@@ -50,7 +50,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      *   Possible values are `AUTO_EXPANSION_MODE_DEFAULT` and `AUTO_EXPANSION_MODE_UNSPECIFIED`.
      * 
      */
-    @OutputExport(name="autoExpansionMode", type=String.class, parameters={})
+    @Export(name="autoExpansionMode", type=String.class, parameters={})
     private Output</* @Nullable */ String> autoExpansionMode;
 
     /**
@@ -67,7 +67,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      * The human-readable name of the entity type, unique within the agent.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -81,7 +81,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      * Enables fuzzy entity extraction during classification.
      * 
      */
-    @OutputExport(name="enableFuzzyExtraction", type=Boolean.class, parameters={})
+    @Export(name="enableFuzzyExtraction", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableFuzzyExtraction;
 
     /**
@@ -96,7 +96,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="entities", type=List.class, parameters={CxEntityTypeEntity.class})
+    @Export(name="entities", type=List.class, parameters={CxEntityTypeEntity.class})
     private Output<List<CxEntityTypeEntity>> entities;
 
     /**
@@ -113,7 +113,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="excludedPhrases", type=List.class, parameters={CxEntityTypeExcludedPhrase.class})
+    @Export(name="excludedPhrases", type=List.class, parameters={CxEntityTypeExcludedPhrase.class})
     private Output</* @Nullable */ List<CxEntityTypeExcludedPhrase>> excludedPhrases;
 
     /**
@@ -133,7 +133,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      *   Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -155,7 +155,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
      * 
      */
-    @OutputExport(name="languageCode", type=String.class, parameters={})
+    @Export(name="languageCode", type=String.class, parameters={})
     private Output</* @Nullable */ String> languageCode;
 
     /**
@@ -174,7 +174,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      * ID>/entityTypes/<Entity Type ID>.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -190,7 +190,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output</* @Nullable */ String> parent;
 
     /**
@@ -205,7 +205,7 @@ public class CxEntityType extends io.pulumi.resources.CustomResource {
      * Indicates whether parameters of the entity type should be redacted in log. If redaction is enabled, page parameters and intent parameters referring to the entity type will be replaced by parameter name when logging.
      * 
      */
-    @OutputExport(name="redact", type=Boolean.class, parameters={})
+    @Export(name="redact", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> redact;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.appengine.DomainMappingArgs;
@@ -49,7 +49,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * Relative name of the domain serving the application. Example: example.com.
      * 
      */
-    @OutputExport(name="domainName", type=String.class, parameters={})
+    @Export(name="domainName", type=String.class, parameters={})
     private Output<String> domainName;
 
     /**
@@ -63,7 +63,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * Full path to the DomainMapping resource in the API. Example: apps/myapp/domainMapping/example.com.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -80,7 +80,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * Possible values are `STRICT` and `OVERRIDE`.
      * 
      */
-    @OutputExport(name="overrideStrategy", type=String.class, parameters={})
+    @Export(name="overrideStrategy", type=String.class, parameters={})
     private Output</* @Nullable */ String> overrideStrategy;
 
     /**
@@ -98,7 +98,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -114,7 +114,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * configuration in order to serve the application via this domain mapping.
      * 
      */
-    @OutputExport(name="resourceRecords", type=List.class, parameters={DomainMappingResourceRecord.class})
+    @Export(name="resourceRecords", type=List.class, parameters={DomainMappingResourceRecord.class})
     private Output<List<DomainMappingResourceRecord>> resourceRecords;
 
     /**
@@ -130,7 +130,7 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="sslSettings", type=DomainMappingSslSettings.class, parameters={})
+    @Export(name="sslSettings", type=DomainMappingSslSettings.class, parameters={})
     private Output</* @Nullable */ DomainMappingSslSettings> sslSettings;
 
     /**

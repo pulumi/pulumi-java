@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs;
 import java.lang.Integer;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends io.p
      * Structure is documented below.
      * 
      */
-    @InputImport(name="maxFindingsPerInfoTypes")
+    @Import(name="maxFindingsPerInfoTypes")
       private final @Nullable Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> maxFindingsPerInfoTypes;
 
     public Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> getMaxFindingsPerInfoTypes() {
@@ -32,7 +32,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends io.p
      * Max number of findings that will be returned for each item scanned. The maximum returned is 2000.
      * 
      */
-    @InputImport(name="maxFindingsPerItem", required=true)
+    @Import(name="maxFindingsPerItem", required=true)
       private final Output<Integer> maxFindingsPerItem;
 
     public Output<Integer> getMaxFindingsPerItem() {
@@ -43,7 +43,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends io.p
      * Max number of findings that will be returned per request/job. The maximum returned is 2000.
      * 
      */
-    @InputImport(name="maxFindingsPerRequest", required=true)
+    @Import(name="maxFindingsPerRequest", required=true)
       private final Output<Integer> maxFindingsPerRequest;
 
     public Output<Integer> getMaxFindingsPerRequest() {

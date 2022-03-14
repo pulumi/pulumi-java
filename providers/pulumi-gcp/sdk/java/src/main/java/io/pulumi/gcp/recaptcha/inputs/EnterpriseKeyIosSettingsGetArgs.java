@@ -4,7 +4,7 @@
 package io.pulumi.gcp.recaptcha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class EnterpriseKeyIosSettingsGetArgs extends io.pulumi.resources.R
      * If set to true, it means allowed_bundle_ids will not be enforced.
      * 
      */
-    @InputImport(name="allowAllBundleIds")
+    @Import(name="allowAllBundleIds")
       private final @Nullable Output<Boolean> allowAllBundleIds;
 
     public Output<Boolean> getAllowAllBundleIds() {
@@ -31,7 +31,7 @@ public final class EnterpriseKeyIosSettingsGetArgs extends io.pulumi.resources.R
      * iOS bundle ids of apps allowed to use the key. Example: 'com.companyname.productname.appname'
      * 
      */
-    @InputImport(name="allowedBundleIds")
+    @Import(name="allowedBundleIds")
       private final @Nullable Output<List<String>> allowedBundleIds;
 
     public Output<List<String>> getAllowedBundleIds() {

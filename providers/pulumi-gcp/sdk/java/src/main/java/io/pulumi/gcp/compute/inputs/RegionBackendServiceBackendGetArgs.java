@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class RegionBackendServiceBackendGetArgs extends io.pulumi.resource
      * Possible values are `UTILIZATION`, `RATE`, and `CONNECTION`.
      * 
      */
-    @InputImport(name="balancingMode")
+    @Import(name="balancingMode")
       private final @Nullable Output<String> balancingMode;
 
     public Output<String> getBalancingMode() {
@@ -41,7 +41,7 @@ public final class RegionBackendServiceBackendGetArgs extends io.pulumi.resource
      * 0% of its available Capacity. Valid range is [0.0,1.0].
      * 
      */
-    @InputImport(name="capacityScaler")
+    @Import(name="capacityScaler")
       private final @Nullable Output<Double> capacityScaler;
 
     public Output<Double> getCapacityScaler() {
@@ -53,7 +53,7 @@ public final class RegionBackendServiceBackendGetArgs extends io.pulumi.resource
      * Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -65,7 +65,7 @@ public final class RegionBackendServiceBackendGetArgs extends io.pulumi.resource
      * than one failover backend can be configured for a given RegionBackendService.
      * 
      */
-    @InputImport(name="failover")
+    @Import(name="failover")
       private final @Nullable Output<Boolean> failover;
 
     public Output<Boolean> getFailover() {
@@ -91,7 +91,7 @@ public final class RegionBackendServiceBackendGetArgs extends io.pulumi.resource
      * partial URL.
      * 
      */
-    @InputImport(name="group", required=true)
+    @Import(name="group", required=true)
       private final Output<String> group;
 
     public Output<String> getGroup() {
@@ -103,7 +103,7 @@ public final class RegionBackendServiceBackendGetArgs extends io.pulumi.resource
      * Defaults to 1024.
      * 
      */
-    @InputImport(name="maxConnections")
+    @Import(name="maxConnections")
       private final @Nullable Output<Integer> maxConnections;
 
     public Output<Integer> getMaxConnections() {
@@ -120,7 +120,7 @@ public final class RegionBackendServiceBackendGetArgs extends io.pulumi.resource
      * maxConnectionsPerEndpoint must be set.
      * 
      */
-    @InputImport(name="maxConnectionsPerEndpoint")
+    @Import(name="maxConnectionsPerEndpoint")
       private final @Nullable Output<Integer> maxConnectionsPerEndpoint;
 
     public Output<Integer> getMaxConnectionsPerEndpoint() {
@@ -137,7 +137,7 @@ public final class RegionBackendServiceBackendGetArgs extends io.pulumi.resource
      * maxConnectionsPerInstance must be set.
      * 
      */
-    @InputImport(name="maxConnectionsPerInstance")
+    @Import(name="maxConnectionsPerInstance")
       private final @Nullable Output<Integer> maxConnectionsPerInstance;
 
     public Output<Integer> getMaxConnectionsPerInstance() {
@@ -153,7 +153,7 @@ public final class RegionBackendServiceBackendGetArgs extends io.pulumi.resource
      * group type, must be set.
      * 
      */
-    @InputImport(name="maxRate")
+    @Import(name="maxRate")
       private final @Nullable Output<Integer> maxRate;
 
     public Output<Integer> getMaxRate() {
@@ -168,7 +168,7 @@ public final class RegionBackendServiceBackendGetArgs extends io.pulumi.resource
      * for INTERNAL backend services.
      * 
      */
-    @InputImport(name="maxRatePerEndpoint")
+    @Import(name="maxRatePerEndpoint")
       private final @Nullable Output<Double> maxRatePerEndpoint;
 
     public Output<Double> getMaxRatePerEndpoint() {
@@ -183,7 +183,7 @@ public final class RegionBackendServiceBackendGetArgs extends io.pulumi.resource
      * for INTERNAL backend services.
      * 
      */
-    @InputImport(name="maxRatePerInstance")
+    @Import(name="maxRatePerInstance")
       private final @Nullable Output<Double> maxRatePerInstance;
 
     public Output<Double> getMaxRatePerInstance() {
@@ -196,7 +196,7 @@ public final class RegionBackendServiceBackendGetArgs extends io.pulumi.resource
      * Cannot be set for INTERNAL backend services.
      * 
      */
-    @InputImport(name="maxUtilization")
+    @Import(name="maxUtilization")
       private final @Nullable Output<Double> maxUtilization;
 
     public Output<Double> getMaxUtilization() {

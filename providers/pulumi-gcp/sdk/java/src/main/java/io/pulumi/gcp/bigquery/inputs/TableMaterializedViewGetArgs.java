@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class TableMaterializedViewGetArgs extends io.pulumi.resources.Reso
      * The default value is true.
      * 
      */
-    @InputImport(name="enableRefresh")
+    @Import(name="enableRefresh")
       private final @Nullable Output<Boolean> enableRefresh;
 
     public Output<Boolean> getEnableRefresh() {
@@ -32,7 +32,7 @@ public final class TableMaterializedViewGetArgs extends io.pulumi.resources.Reso
      * A query whose result is persisted.
      * 
      */
-    @InputImport(name="query", required=true)
+    @Import(name="query", required=true)
       private final Output<String> query;
 
     public Output<String> getQuery() {
@@ -44,7 +44,7 @@ public final class TableMaterializedViewGetArgs extends io.pulumi.resources.Reso
      * The default value is 1800000
      * 
      */
-    @InputImport(name="refreshIntervalMs")
+    @Import(name="refreshIntervalMs")
       private final @Nullable Output<Integer> refreshIntervalMs;
 
     public Output<Integer> getRefreshIntervalMs() {

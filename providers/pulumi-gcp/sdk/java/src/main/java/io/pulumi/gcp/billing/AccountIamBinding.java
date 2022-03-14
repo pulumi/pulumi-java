@@ -4,7 +4,7 @@
 package io.pulumi.gcp.billing;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.billing.AccountIamBindingArgs;
@@ -16,31 +16,31 @@ import javax.annotation.Nullable;
 
 @ResourceType(type="gcp:billing/accountIamBinding:AccountIamBinding")
 public class AccountIamBinding extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="billingAccountId", type=String.class, parameters={})
+    @Export(name="billingAccountId", type=String.class, parameters={})
     private Output<String> billingAccountId;
 
     public Output<String> getBillingAccountId() {
         return this.billingAccountId;
     }
-    @OutputExport(name="condition", type=AccountIamBindingCondition.class, parameters={})
+    @Export(name="condition", type=AccountIamBindingCondition.class, parameters={})
     private Output</* @Nullable */ AccountIamBindingCondition> condition;
 
     public Output</* @Nullable */ AccountIamBindingCondition> getCondition() {
         return this.condition;
     }
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="members", type=List.class, parameters={String.class})
+    @Export(name="members", type=List.class, parameters={String.class})
     private Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
         return this.members;
     }
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     public Output<String> getRole() {

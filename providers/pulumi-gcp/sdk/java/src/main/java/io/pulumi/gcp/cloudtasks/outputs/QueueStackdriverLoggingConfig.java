@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.cloudtasks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class QueueStackdriverLoggingConfig {
     /**
      * Specifies the fraction of operations to write to Stackdriver Logging.
@@ -17,8 +17,8 @@ public final class QueueStackdriverLoggingConfig {
      */
     private final Double samplingRatio;
 
-    @OutputCustomType.Constructor
-    private QueueStackdriverLoggingConfig(@OutputCustomType.Parameter("samplingRatio") Double samplingRatio) {
+    @CustomType.Constructor
+    private QueueStackdriverLoggingConfig(@CustomType.Parameter("samplingRatio") Double samplingRatio) {
         this.samplingRatio = samplingRatio;
     }
 

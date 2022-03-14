@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.SecurityPolicyRuleMatchConfig;
 import io.pulumi.gcp.compute.outputs.SecurityPolicyRuleMatchExpr;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecurityPolicyRuleMatch {
     /**
      * The configuration options available when specifying `versioned_expr`.
@@ -35,11 +35,11 @@ public final class SecurityPolicyRuleMatch {
      */
     private final @Nullable String versionedExpr;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecurityPolicyRuleMatch(
-        @OutputCustomType.Parameter("config") @Nullable SecurityPolicyRuleMatchConfig config,
-        @OutputCustomType.Parameter("expr") @Nullable SecurityPolicyRuleMatchExpr expr,
-        @OutputCustomType.Parameter("versionedExpr") @Nullable String versionedExpr) {
+        @CustomType.Parameter("config") @Nullable SecurityPolicyRuleMatchConfig config,
+        @CustomType.Parameter("expr") @Nullable SecurityPolicyRuleMatchExpr expr,
+        @CustomType.Parameter("versionedExpr") @Nullable String versionedExpr) {
         this.config = config;
         this.expr = expr;
         this.versionedExpr = versionedExpr;

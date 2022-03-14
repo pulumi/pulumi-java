@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,7 +14,7 @@ public final class RegionInstanceGroupManagerStatusVersionTargetGetArgs extends 
 
     public static final RegionInstanceGroupManagerStatusVersionTargetGetArgs Empty = new RegionInstanceGroupManagerStatusVersionTargetGetArgs();
 
-    @InputImport(name="isReached")
+    @Import(name="isReached")
       private final @Nullable Output<Boolean> isReached;
 
     public Output<Boolean> getIsReached() {

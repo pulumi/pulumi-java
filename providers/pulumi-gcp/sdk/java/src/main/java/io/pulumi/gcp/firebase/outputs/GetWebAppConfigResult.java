@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.firebase.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetWebAppConfigResult {
     private final String apiKey;
     private final String authDomain;
@@ -26,18 +26,18 @@ public final class GetWebAppConfigResult {
     private final String storageBucket;
     private final String webAppId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetWebAppConfigResult(
-        @OutputCustomType.Parameter("apiKey") String apiKey,
-        @OutputCustomType.Parameter("authDomain") String authDomain,
-        @OutputCustomType.Parameter("databaseUrl") String databaseUrl,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("locationId") String locationId,
-        @OutputCustomType.Parameter("measurementId") String measurementId,
-        @OutputCustomType.Parameter("messagingSenderId") String messagingSenderId,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("storageBucket") String storageBucket,
-        @OutputCustomType.Parameter("webAppId") String webAppId) {
+        @CustomType.Parameter("apiKey") String apiKey,
+        @CustomType.Parameter("authDomain") String authDomain,
+        @CustomType.Parameter("databaseUrl") String databaseUrl,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("locationId") String locationId,
+        @CustomType.Parameter("measurementId") String measurementId,
+        @CustomType.Parameter("messagingSenderId") String messagingSenderId,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("storageBucket") String storageBucket,
+        @CustomType.Parameter("webAppId") String webAppId) {
         this.apiKey = apiKey;
         this.authDomain = authDomain;
         this.databaseUrl = databaseUrl;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -18,21 +18,21 @@ public final class DeviceLastErrorStatusGetArgs extends io.pulumi.resources.Reso
 
     public static final DeviceLastErrorStatusGetArgs Empty = new DeviceLastErrorStatusGetArgs();
 
-    @InputImport(name="details")
+    @Import(name="details")
       private final @Nullable Output<List<Map<String,Object>>> details;
 
     public Output<List<Map<String,Object>>> getDetails() {
         return this.details == null ? Output.empty() : this.details;
     }
 
-    @InputImport(name="message")
+    @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
         return this.message == null ? Output.empty() : this.message;
     }
 
-    @InputImport(name="number")
+    @Import(name="number")
       private final @Nullable Output<Integer> number;
 
     public Output<Integer> getNumber() {

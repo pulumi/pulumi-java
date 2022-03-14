@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.networkconnectivity.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SpokeLinkedRouterApplianceInstancesInstance {
     /**
      * The IP address on the VM to use for peering.
@@ -22,10 +22,10 @@ public final class SpokeLinkedRouterApplianceInstancesInstance {
      */
     private final @Nullable String virtualMachine;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SpokeLinkedRouterApplianceInstancesInstance(
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
-        @OutputCustomType.Parameter("virtualMachine") @Nullable String virtualMachine) {
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @CustomType.Parameter("virtualMachine") @Nullable String virtualMachine) {
         this.ipAddress = ipAddress;
         this.virtualMachine = virtualMachine;
     }

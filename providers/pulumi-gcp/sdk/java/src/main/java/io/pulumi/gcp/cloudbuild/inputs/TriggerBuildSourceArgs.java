@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildSourceRepoSourceArgs;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildSourceStorageSourceArgs;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TriggerBuildSourceArgs extends io.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    @InputImport(name="repoSource")
+    @Import(name="repoSource")
       private final @Nullable Output<TriggerBuildSourceRepoSourceArgs> repoSource;
 
     public Output<TriggerBuildSourceRepoSourceArgs> getRepoSource() {
@@ -32,7 +32,7 @@ public final class TriggerBuildSourceArgs extends io.pulumi.resources.ResourceAr
      * Structure is documented below.
      * 
      */
-    @InputImport(name="storageSource")
+    @Import(name="storageSource")
       private final @Nullable Output<TriggerBuildSourceStorageSourceArgs> storageSource;
 
     public Output<TriggerBuildSourceStorageSourceArgs> getStorageSource() {

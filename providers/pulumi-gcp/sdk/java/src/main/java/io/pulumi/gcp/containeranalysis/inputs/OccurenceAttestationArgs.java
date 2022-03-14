@@ -4,7 +4,7 @@
 package io.pulumi.gcp.containeranalysis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.containeranalysis.inputs.OccurenceAttestationSignatureArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class OccurenceAttestationArgs extends io.pulumi.resources.Resource
      * more signatures. A base64-encoded string.
      * 
      */
-    @InputImport(name="serializedPayload", required=true)
+    @Import(name="serializedPayload", required=true)
       private final Output<String> serializedPayload;
 
     public Output<String> getSerializedPayload() {
@@ -36,7 +36,7 @@ public final class OccurenceAttestationArgs extends io.pulumi.resources.Resource
      * Structure is documented below.
      * 
      */
-    @InputImport(name="signatures", required=true)
+    @Import(name="signatures", required=true)
       private final Output<List<OccurenceAttestationSignatureArgs>> signatures;
 
     public Output<List<OccurenceAttestationSignatureArgs>> getSignatures() {

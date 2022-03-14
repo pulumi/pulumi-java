@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gameservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.gameservices.inputs.GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideGetArgs ex
      * Version of the configuration.
      * 
      */
-    @InputImport(name="configVersion")
+    @Import(name="configVersion")
       private final @Nullable Output<String> configVersion;
 
     public Output<String> getConfigVersion() {
@@ -31,7 +31,7 @@ public final class GameServerDeploymentRolloutGameServerConfigOverrideGetArgs ex
      * Structure is documented below.
      * 
      */
-    @InputImport(name="realmsSelector")
+    @Import(name="realmsSelector")
       private final @Nullable Output<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorGetArgs> realmsSelector;
 
     public Output<GameServerDeploymentRolloutGameServerConfigOverrideRealmsSelectorGetArgs> getRealmsSelector() {

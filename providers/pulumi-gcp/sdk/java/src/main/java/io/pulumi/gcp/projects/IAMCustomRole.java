@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.projects.IAMCustomRoleArgs;
@@ -52,7 +52,7 @@ public class IAMCustomRole extends io.pulumi.resources.CustomResource {
      * (Optional) The current deleted state of the role.
      * 
      */
-    @OutputExport(name="deleted", type=Boolean.class, parameters={})
+    @Export(name="deleted", type=Boolean.class, parameters={})
     private Output<Boolean> deleted;
 
     /**
@@ -66,7 +66,7 @@ public class IAMCustomRole extends io.pulumi.resources.CustomResource {
      * A human-readable description for the role.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -80,7 +80,7 @@ public class IAMCustomRole extends io.pulumi.resources.CustomResource {
      * The name of the role in the format `projects/{{project}}/roles/{{role_id}}`. Like `id`, this field can be used as a reference in other resources such as IAM role bindings.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -94,7 +94,7 @@ public class IAMCustomRole extends io.pulumi.resources.CustomResource {
      * The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
      * 
      */
-    @OutputExport(name="permissions", type=List.class, parameters={String.class})
+    @Export(name="permissions", type=List.class, parameters={String.class})
     private Output<List<String>> permissions;
 
     /**
@@ -109,7 +109,7 @@ public class IAMCustomRole extends io.pulumi.resources.CustomResource {
      * Defaults to the provider project configuration.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -124,7 +124,7 @@ public class IAMCustomRole extends io.pulumi.resources.CustomResource {
      * The camel case role id to use for this role. Cannot contain `-` characters.
      * 
      */
-    @OutputExport(name="roleId", type=String.class, parameters={})
+    @Export(name="roleId", type=String.class, parameters={})
     private Output<String> roleId;
 
     /**
@@ -140,7 +140,7 @@ public class IAMCustomRole extends io.pulumi.resources.CustomResource {
      * List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage).
      * 
      */
-    @OutputExport(name="stage", type=String.class, parameters={})
+    @Export(name="stage", type=String.class, parameters={})
     private Output</* @Nullable */ String> stage;
 
     /**
@@ -156,7 +156,7 @@ public class IAMCustomRole extends io.pulumi.resources.CustomResource {
      * A human-readable title for the role.
      * 
      */
-    @OutputExport(name="title", type=String.class, parameters={})
+    @Export(name="title", type=String.class, parameters={})
     private Output<String> title;
 
     /**

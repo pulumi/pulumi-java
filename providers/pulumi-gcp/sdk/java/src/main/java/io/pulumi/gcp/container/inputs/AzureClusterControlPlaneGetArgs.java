@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.AzureClusterControlPlaneDatabaseEncryptionGetArgs;
 import io.pulumi.gcp.container.inputs.AzureClusterControlPlaneMainVolumeGetArgs;
 import io.pulumi.gcp.container.inputs.AzureClusterControlPlaneProxyConfigGetArgs;
@@ -26,7 +26,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
      * Optional. Configuration related to application-layer secrets encryption.
      * 
      */
-    @InputImport(name="databaseEncryption")
+    @Import(name="databaseEncryption")
       private final @Nullable Output<AzureClusterControlPlaneDatabaseEncryptionGetArgs> databaseEncryption;
 
     public Output<AzureClusterControlPlaneDatabaseEncryptionGetArgs> getDatabaseEncryption() {
@@ -37,7 +37,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
      * Optional. Configuration related to the main volume provisioned for each control plane replica. The main volume is in charge of storing all of the cluster's etcd state. When unspecified, it defaults to a 8-GiB Azure Disk.
      * 
      */
-    @InputImport(name="mainVolume")
+    @Import(name="mainVolume")
       private final @Nullable Output<AzureClusterControlPlaneMainVolumeGetArgs> mainVolume;
 
     public Output<AzureClusterControlPlaneMainVolumeGetArgs> getMainVolume() {
@@ -48,7 +48,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
      * Proxy configuration for outbound HTTP(S) traffic.
      * 
      */
-    @InputImport(name="proxyConfig")
+    @Import(name="proxyConfig")
       private final @Nullable Output<AzureClusterControlPlaneProxyConfigGetArgs> proxyConfig;
 
     public Output<AzureClusterControlPlaneProxyConfigGetArgs> getProxyConfig() {
@@ -59,7 +59,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
      * Configuration for where to place the control plane replicas. Up to three replica placement instances can be specified. If replica_placements is set, the replica placement instances will be applied to the three control plane replicas as evenly as possible.
      * 
      */
-    @InputImport(name="replicaPlacements")
+    @Import(name="replicaPlacements")
       private final @Nullable Output<List<AzureClusterControlPlaneReplicaPlacementGetArgs>> replicaPlacements;
 
     public Output<List<AzureClusterControlPlaneReplicaPlacementGetArgs>> getReplicaPlacements() {
@@ -70,7 +70,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
      * Optional. Configuration related to the root volume provisioned for each control plane replica. When unspecified, it defaults to 32-GiB Azure Disk.
      * 
      */
-    @InputImport(name="rootVolume")
+    @Import(name="rootVolume")
       private final @Nullable Output<AzureClusterControlPlaneRootVolumeGetArgs> rootVolume;
 
     public Output<AzureClusterControlPlaneRootVolumeGetArgs> getRootVolume() {
@@ -81,7 +81,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
      * Required. SSH configuration for how to access the underlying control plane machines.
      * 
      */
-    @InputImport(name="sshConfig", required=true)
+    @Import(name="sshConfig", required=true)
       private final Output<AzureClusterControlPlaneSshConfigGetArgs> sshConfig;
 
     public Output<AzureClusterControlPlaneSshConfigGetArgs> getSshConfig() {
@@ -92,7 +92,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
      * For a given replica, the ARM ID of the subnet where the control plane VM is deployed. Make sure it's a subnet under the virtual network in the cluster configuration.
      * 
      */
-    @InputImport(name="subnetId", required=true)
+    @Import(name="subnetId", required=true)
       private final Output<String> subnetId;
 
     public Output<String> getSubnetId() {
@@ -103,7 +103,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
      * Optional. A set of tags to apply to all underlying control plane Azure resources.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
@@ -114,7 +114,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
      * Required. The Kubernetes version to run on control plane replicas (e.g. `1.19.10-gke.1000`). You can list all supported versions on a given Google Cloud region by calling GetAzureServerConfig.
      * 
      */
-    @InputImport(name="version", required=true)
+    @Import(name="version", required=true)
       private final Output<String> version;
 
     public Output<String> getVersion() {
@@ -125,7 +125,7 @@ public final class AzureClusterControlPlaneGetArgs extends io.pulumi.resources.R
      * Optional. The Azure VM size name. Example: `Standard_DS2_v2`. For available VM sizes, see https://docs.microsoft.com/en-us/azure/virtual-machines/vm-naming-conventions. When unspecified, it defaults to `Standard_DS2_v2`.
      * 
      */
-    @InputImport(name="vmSize")
+    @Import(name="vmSize")
       private final @Nullable Output<String> vmSize;
 
     public Output<String> getVmSize() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * year by itself or a year and month where the day is not significant.
      * 
      */
-    @InputImport(name="day")
+    @Import(name="day")
       private final @Nullable Output<Integer> day;
 
     public Output<Integer> getDay() {
@@ -30,7 +30,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Month of year. Must be from 1 to 12, or 0 if specifying a year without a month and day.
      * 
      */
-    @InputImport(name="month")
+    @Import(name="month")
       private final @Nullable Output<Integer> month;
 
     public Output<Integer> getMonth() {
@@ -41,7 +41,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * Year of date. Must be from 1 to 9999, or 0 if specifying a date without a year.
      * 
      */
-    @InputImport(name="year")
+    @Import(name="year")
       private final @Nullable Output<Integer> year;
 
     public Output<Integer> getYear() {

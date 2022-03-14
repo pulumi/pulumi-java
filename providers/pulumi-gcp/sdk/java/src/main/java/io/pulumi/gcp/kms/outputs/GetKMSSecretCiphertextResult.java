@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.kms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetKMSSecretCiphertextResult {
     /**
      * Contains the result of encrypting the provided plaintext, encoded in base64.
@@ -22,12 +22,12 @@ public final class GetKMSSecretCiphertextResult {
     private final String id;
     private final String plaintext;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKMSSecretCiphertextResult(
-        @OutputCustomType.Parameter("ciphertext") String ciphertext,
-        @OutputCustomType.Parameter("cryptoKey") String cryptoKey,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("plaintext") String plaintext) {
+        @CustomType.Parameter("ciphertext") String ciphertext,
+        @CustomType.Parameter("cryptoKey") String cryptoKey,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("plaintext") String plaintext) {
         this.ciphertext = ciphertext;
         this.cryptoKey = cryptoKey;
         this.id = id;

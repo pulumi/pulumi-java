@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.diagflow.inputs.CxVersionNluSettingGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
      * "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -32,7 +32,7 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
      * The description of the version. The maximum length is 500 characters. If exceeded, the request is rejected.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
      * The human-readable name of the version. Limit of 64 characters.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -55,7 +55,7 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
      * upon version creation.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -66,7 +66,7 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
      * The NLU settings of the flow at version creation.
      * 
      */
-    @InputImport(name="nluSettings")
+    @Import(name="nluSettings")
       private final @Nullable Output<List<CxVersionNluSettingGetArgs>> nluSettings;
 
     public Output<List<CxVersionNluSettingGetArgs>> getNluSettings() {
@@ -78,7 +78,7 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -90,7 +90,7 @@ public final class CxVersionState extends io.pulumi.resources.ResourceArgs {
      * has succeeded and this version is ready to serve. * FAILED: Version training failed.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {

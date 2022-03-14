@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class OsPolicyAssignmentInstanceFilterExclusionLabel {
     /**
      * Labels are identified by key/value pairs in this map. A VM should contain all the key/value pairs specified in this map to be selected.
@@ -17,8 +17,8 @@ public final class OsPolicyAssignmentInstanceFilterExclusionLabel {
      */
     private final @Nullable Map<String,String> labels;
 
-    @OutputCustomType.Constructor
-    private OsPolicyAssignmentInstanceFilterExclusionLabel(@OutputCustomType.Parameter("labels") @Nullable Map<String,String> labels) {
+    @CustomType.Constructor
+    private OsPolicyAssignmentInstanceFilterExclusionLabel(@CustomType.Parameter("labels") @Nullable Map<String,String> labels) {
         this.labels = labels;
     }
 

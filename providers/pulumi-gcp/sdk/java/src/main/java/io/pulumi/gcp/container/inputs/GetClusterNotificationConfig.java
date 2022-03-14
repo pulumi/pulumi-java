@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.container.inputs.GetClusterNotificationConfigPubsub;
 import java.util.List;
 import java.util.Objects;
@@ -13,7 +13,7 @@ public final class GetClusterNotificationConfig extends io.pulumi.resources.Invo
 
     public static final GetClusterNotificationConfig Empty = new GetClusterNotificationConfig();
 
-    @InputImport(name="pubsubs", required=true)
+    @Import(name="pubsubs", required=true)
       private final List<GetClusterNotificationConfigPubsub> pubsubs;
 
     public List<GetClusterNotificationConfigPubsub> getPubsubs() {

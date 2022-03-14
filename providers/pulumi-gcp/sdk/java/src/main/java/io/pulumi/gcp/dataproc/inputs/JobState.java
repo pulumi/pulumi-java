@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataproc.inputs.JobHadoopConfigGetArgs;
 import io.pulumi.gcp.dataproc.inputs.JobHiveConfigGetArgs;
 import io.pulumi.gcp.dataproc.inputs.JobPigConfigGetArgs;
@@ -31,7 +31,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * If present, the location of miscellaneous control files which may be used as part of job setup and handling. If not present, control files may be placed in the same location as driver_output_uri.
      * 
      */
-    @InputImport(name="driverControlsFilesUri")
+    @Import(name="driverControlsFilesUri")
       private final @Nullable Output<String> driverControlsFilesUri;
 
     public Output<String> getDriverControlsFilesUri() {
@@ -42,7 +42,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * A URI pointing to the location of the stdout of the job's driver program.
      * 
      */
-    @InputImport(name="driverOutputResourceUri")
+    @Import(name="driverOutputResourceUri")
       private final @Nullable Output<String> driverOutputResourceUri;
 
     public Output<String> getDriverOutputResourceUri() {
@@ -55,7 +55,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * job is first cancelled before issuing the delete.
      * 
      */
-    @InputImport(name="forceDelete")
+    @Import(name="forceDelete")
       private final @Nullable Output<Boolean> forceDelete;
 
     public Output<Boolean> getForceDelete() {
@@ -66,7 +66,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The config of Hadoop job
      * 
      */
-    @InputImport(name="hadoopConfig")
+    @Import(name="hadoopConfig")
       private final @Nullable Output<JobHadoopConfigGetArgs> hadoopConfig;
 
     public Output<JobHadoopConfigGetArgs> getHadoopConfig() {
@@ -77,7 +77,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The config of hive job
      * 
      */
-    @InputImport(name="hiveConfig")
+    @Import(name="hiveConfig")
       private final @Nullable Output<JobHiveConfigGetArgs> hiveConfig;
 
     public Output<JobHiveConfigGetArgs> getHiveConfig() {
@@ -88,7 +88,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The list of labels (key/value pairs) to add to the job.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -99,7 +99,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The config of pag job.
      * 
      */
-    @InputImport(name="pigConfig")
+    @Import(name="pigConfig")
       private final @Nullable Output<JobPigConfigGetArgs> pigConfig;
 
     public Output<JobPigConfigGetArgs> getPigConfig() {
@@ -110,7 +110,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The config of job placement.
      * 
      */
-    @InputImport(name="placement")
+    @Import(name="placement")
       private final @Nullable Output<JobPlacementGetArgs> placement;
 
     public Output<JobPlacementGetArgs> getPlacement() {
@@ -122,7 +122,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * subsequently run against. If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -133,7 +133,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The config of pySpark job.
      * 
      */
-    @InputImport(name="pysparkConfig")
+    @Import(name="pysparkConfig")
       private final @Nullable Output<JobPysparkConfigGetArgs> pysparkConfig;
 
     public Output<JobPysparkConfigGetArgs> getPysparkConfig() {
@@ -144,7 +144,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The reference of the job
      * 
      */
-    @InputImport(name="reference")
+    @Import(name="reference")
       private final @Nullable Output<JobReferenceGetArgs> reference;
 
     public Output<JobReferenceGetArgs> getReference() {
@@ -156,7 +156,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * for this job to be submitted to. If not specified, defaults to `global`.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -167,7 +167,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * Optional. Job scheduling configuration.
      * 
      */
-    @InputImport(name="scheduling")
+    @Import(name="scheduling")
       private final @Nullable Output<JobSchedulingGetArgs> scheduling;
 
     public Output<JobSchedulingGetArgs> getScheduling() {
@@ -178,7 +178,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The config of the Spark job.
      * 
      */
-    @InputImport(name="sparkConfig")
+    @Import(name="sparkConfig")
       private final @Nullable Output<JobSparkConfigGetArgs> sparkConfig;
 
     public Output<JobSparkConfigGetArgs> getSparkConfig() {
@@ -189,7 +189,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The config of SparkSql job
      * 
      */
-    @InputImport(name="sparksqlConfig")
+    @Import(name="sparksqlConfig")
       private final @Nullable Output<JobSparksqlConfigGetArgs> sparksqlConfig;
 
     public Output<JobSparksqlConfigGetArgs> getSparksqlConfig() {
@@ -200,7 +200,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
      * The status of the job.
      * 
      */
-    @InputImport(name="statuses")
+    @Import(name="statuses")
       private final @Nullable Output<List<JobStatusGetArgs>> statuses;
 
     public Output<List<JobStatusGetArgs>> getStatuses() {

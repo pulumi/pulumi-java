@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.logging.inputs.BillingAccountSinkBigqueryOptionsGetArgs;
 import io.pulumi.gcp.logging.inputs.BillingAccountSinkExclusionGetArgs;
 import java.lang.Boolean;
@@ -22,7 +22,7 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
      * Options that affect sinks exporting data to BigQuery. Structure documented below.
      * 
      */
-    @InputImport(name="bigqueryOptions")
+    @Import(name="bigqueryOptions")
       private final @Nullable Output<BillingAccountSinkBigqueryOptionsGetArgs> bigqueryOptions;
 
     public Output<BillingAccountSinkBigqueryOptionsGetArgs> getBigqueryOptions() {
@@ -33,7 +33,7 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
      * The billing account exported to the sink.
      * 
      */
-    @InputImport(name="billingAccount")
+    @Import(name="billingAccount")
       private final @Nullable Output<String> billingAccount;
 
     public Output<String> getBillingAccount() {
@@ -44,7 +44,7 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
      * A description of this exclusion.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -58,7 +58,7 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
      * The writer associated with the sink must have access to write to the above resource.
      * 
      */
-    @InputImport(name="destination")
+    @Import(name="destination")
       private final @Nullable Output<String> destination;
 
     public Output<String> getDestination() {
@@ -69,7 +69,7 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
      * If set to True, then this exclusion is disabled and it does not exclude any log entries.
      * 
      */
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -80,7 +80,7 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
      * Log entries that match any of the exclusion filters will not be exported. If a log entry is matched by both filter and one of exclusion_filters it will not be exported.  Can be repeated multiple times for multiple exclusions. Structure is documented below.
      * 
      */
-    @InputImport(name="exclusions")
+    @Import(name="exclusions")
       private final @Nullable Output<List<BillingAccountSinkExclusionGetArgs>> exclusions;
 
     public Output<List<BillingAccountSinkExclusionGetArgs>> getExclusions() {
@@ -92,7 +92,7 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
      * write a filter.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
@@ -103,7 +103,7 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
      * A client-assigned identifier, such as `load-balancer-exclusion`. Identifiers are limited to 100 characters and can include only letters, digits, underscores, hyphens, and periods. First character has to be alphanumeric.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -115,7 +115,7 @@ public final class BillingAccountSinkState extends io.pulumi.resources.ResourceA
      * configured `destination`.
      * 
      */
-    @InputImport(name="writerIdentity")
+    @Import(name="writerIdentity")
       private final @Nullable Output<String> writerIdentity;
 
     public Output<String> getWriterIdentity() {

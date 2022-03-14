@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Primary GCP region for analytics data storage. For valid values, see [Create an Apigee organization](https://cloud.google.com/apigee/docs/api-platform/get-started/create-org).
      * 
      */
-    @InputImport(name="analyticsRegion")
+    @Import(name="analyticsRegion")
       private final @Nullable Output<String> analyticsRegion;
 
     public Output<String> getAnalyticsRegion() {
@@ -31,7 +31,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Valid only when `RuntimeType` is set to CLOUD. The value can be updated only when there are no runtime instances. For example: "default".
      * 
      */
-    @InputImport(name="authorizedNetwork")
+    @Import(name="authorizedNetwork")
       private final @Nullable Output<String> authorizedNetwork;
 
     public Output<String> getAuthorizedNetwork() {
@@ -42,7 +42,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the Apigee organization.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -53,7 +53,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * The display name of the Apigee organization.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -64,7 +64,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * The project ID associated with the Apigee organization.
      * 
      */
-    @InputImport(name="projectId", required=true)
+    @Import(name="projectId", required=true)
       private final Output<String> projectId;
 
     public Output<String> getProjectId() {
@@ -78,7 +78,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Valid only when `RuntimeType` is CLOUD. For example: `projects/foo/locations/us/keyRings/bar/cryptoKeys/baz`.
      * 
      */
-    @InputImport(name="runtimeDatabaseEncryptionKeyName")
+    @Import(name="runtimeDatabaseEncryptionKeyName")
       private final @Nullable Output<String> runtimeDatabaseEncryptionKeyName;
 
     public Output<String> getRuntimeDatabaseEncryptionKeyName() {
@@ -91,7 +91,7 @@ public final class OrganizationArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `CLOUD` and `HYBRID`.
      * 
      */
-    @InputImport(name="runtimeType")
+    @Import(name="runtimeType")
       private final @Nullable Output<String> runtimeType;
 
     public Output<String> getRuntimeType() {

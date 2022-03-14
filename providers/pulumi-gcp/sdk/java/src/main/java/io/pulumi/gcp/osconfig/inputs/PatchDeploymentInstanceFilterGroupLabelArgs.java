@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class PatchDeploymentInstanceFilterGroupLabelArgs extends io.pulumi
      * Compute Engine instance labels that must be present for a VM instance to be targeted by this filter
      * 
      */
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {

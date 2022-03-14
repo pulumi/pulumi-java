@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.organizations.outputs.GetIAMPolicyAuditConfig;
 import io.pulumi.gcp.organizations.outputs.GetIAMPolicyBinding;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetIAMPolicyResult {
     private final @Nullable List<GetIAMPolicyAuditConfig> auditConfigs;
     private final @Nullable List<GetIAMPolicyBinding> bindings;
@@ -27,12 +27,12 @@ public final class GetIAMPolicyResult {
      */
     private final String policyData;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetIAMPolicyResult(
-        @OutputCustomType.Parameter("auditConfigs") @Nullable List<GetIAMPolicyAuditConfig> auditConfigs,
-        @OutputCustomType.Parameter("bindings") @Nullable List<GetIAMPolicyBinding> bindings,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("policyData") String policyData) {
+        @CustomType.Parameter("auditConfigs") @Nullable List<GetIAMPolicyAuditConfig> auditConfigs,
+        @CustomType.Parameter("bindings") @Nullable List<GetIAMPolicyBinding> bindings,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("policyData") String policyData) {
         this.auditConfigs = auditConfigs;
         this.bindings = bindings;
         this.id = id;

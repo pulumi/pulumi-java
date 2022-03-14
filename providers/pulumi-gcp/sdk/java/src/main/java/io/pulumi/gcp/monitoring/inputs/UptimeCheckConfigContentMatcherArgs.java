@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class UptimeCheckConfigContentMatcherArgs extends io.pulumi.resourc
      * String or regex content to match (max 1024 bytes)
      * 
      */
-    @InputImport(name="content", required=true)
+    @Import(name="content", required=true)
       private final Output<String> content;
 
     public Output<String> getContent() {
@@ -31,7 +31,7 @@ public final class UptimeCheckConfigContentMatcherArgs extends io.pulumi.resourc
      * Possible values are `CONTAINS_STRING`, `NOT_CONTAINS_STRING`, `MATCHES_REGEX`, and `NOT_MATCHES_REGEX`.
      * 
      */
-    @InputImport(name="matcher")
+    @Import(name="matcher")
       private final @Nullable Output<String> matcher;
 
     public Output<String> getMatcher() {

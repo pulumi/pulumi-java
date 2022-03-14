@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplateParameterValidationRegex {
     /**
      * Required. RE2 regular expressions used to validate the parameter's value. The value must match the regex in its entirety (substring matches are not sufficient).
@@ -16,8 +16,8 @@ public final class WorkflowTemplateParameterValidationRegex {
      */
     private final List<String> regexes;
 
-    @OutputCustomType.Constructor
-    private WorkflowTemplateParameterValidationRegex(@OutputCustomType.Parameter("regexes") List<String> regexes) {
+    @CustomType.Constructor
+    private WorkflowTemplateParameterValidationRegex(@CustomType.Parameter("regexes") List<String> regexes) {
         this.regexes = regexes;
     }
 

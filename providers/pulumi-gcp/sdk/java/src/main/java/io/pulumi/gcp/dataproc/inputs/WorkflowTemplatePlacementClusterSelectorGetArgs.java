@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class WorkflowTemplatePlacementClusterSelectorGetArgs extends io.pu
      * Required. The cluster labels. Cluster must have all labels to match.
      * 
      */
-    @InputImport(name="clusterLabels", required=true)
+    @Import(name="clusterLabels", required=true)
       private final Output<Map<String,String>> clusterLabels;
 
     public Output<Map<String,String>> getClusterLabels() {
@@ -30,7 +30,7 @@ public final class WorkflowTemplatePlacementClusterSelectorGetArgs extends io.pu
      * Optional. The zone where the Compute Engine cluster will be located. On a create request, it is required in the "global" region. If omitted in a non-global Dataproc region, the service will pick a zone in the corresponding Compute Engine region. On a get request, zone will always be present. A full URL, partial URI, or short name are valid. Examples: * `https://www.googleapis.com/compute/v1/projects/` * `us-central1-f`
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

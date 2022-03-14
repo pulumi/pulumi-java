@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet {
     /**
      * The regex-filtered set of files to scan.
@@ -28,10 +28,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      */
     private final @Nullable String url;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet(
-        @OutputCustomType.Parameter("regexFileSet") @Nullable PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet regexFileSet,
-        @OutputCustomType.Parameter("url") @Nullable String url) {
+        @CustomType.Parameter("regexFileSet") @Nullable PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSet regexFileSet,
+        @CustomType.Parameter("url") @Nullable String url) {
         this.regexFileSet = regexFileSet;
         this.url = url;
     }

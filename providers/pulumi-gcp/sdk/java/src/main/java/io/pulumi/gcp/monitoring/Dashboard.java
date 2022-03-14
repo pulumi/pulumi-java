@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.monitoring.DashboardArgs;
@@ -43,7 +43,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * The representation of an existing dashboard can be found by using the [API Explorer](https://cloud.google.com/monitoring/api/ref_v3/rest/v1/projects.dashboards/get)
      * 
      */
-    @OutputExport(name="dashboardJson", type=String.class, parameters={})
+    @Export(name="dashboardJson", type=String.class, parameters={})
     private Output<String> dashboardJson;
 
     /**
@@ -59,7 +59,7 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

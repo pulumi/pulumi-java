@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gameservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class GameServerConfigFleetConfigGetArgs extends io.pulumi.resource
      *   `https://agones.dev/site/docs/reference/fleet/`.
      * 
      */
-    @InputImport(name="fleetSpec", required=true)
+    @Import(name="fleetSpec", required=true)
       private final Output<String> fleetSpec;
 
     public Output<String> getFleetSpec() {
@@ -35,7 +35,7 @@ public final class GameServerConfigFleetConfigGetArgs extends io.pulumi.resource
      * The name of the ScalingConfig
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

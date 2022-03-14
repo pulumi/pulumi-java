@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datastore.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class DataStoreIndexPropertyArgs extends io.pulumi.resources.Resour
      * Possible values are `ASCENDING` and `DESCENDING`.
      * 
      */
-    @InputImport(name="direction", required=true)
+    @Import(name="direction", required=true)
       private final Output<String> direction;
 
     public Output<String> getDirection() {
@@ -29,7 +29,7 @@ public final class DataStoreIndexPropertyArgs extends io.pulumi.resources.Resour
      * The property name to index.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {

@@ -3,22 +3,22 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterNodePoolNetworkConfig {
     private final Boolean createPodRange;
     private final String podIpv4CidrBlock;
     private final String podRange;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterNodePoolNetworkConfig(
-        @OutputCustomType.Parameter("createPodRange") Boolean createPodRange,
-        @OutputCustomType.Parameter("podIpv4CidrBlock") String podIpv4CidrBlock,
-        @OutputCustomType.Parameter("podRange") String podRange) {
+        @CustomType.Parameter("createPodRange") Boolean createPodRange,
+        @CustomType.Parameter("podIpv4CidrBlock") String podIpv4CidrBlock,
+        @CustomType.Parameter("podRange") String podRange) {
         this.createPodRange = createPodRange;
         this.podIpv4CidrBlock = podIpv4CidrBlock;
         this.podRange = podRange;

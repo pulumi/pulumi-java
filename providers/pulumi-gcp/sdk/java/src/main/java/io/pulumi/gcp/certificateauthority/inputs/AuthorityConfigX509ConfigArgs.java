@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigAdditionalExtensionArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigCaOptionsArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigKeyUsageArgs;
@@ -24,7 +24,7 @@ public final class AuthorityConfigX509ConfigArgs extends io.pulumi.resources.Res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="additionalExtensions")
+    @Import(name="additionalExtensions")
       private final @Nullable Output<List<AuthorityConfigX509ConfigAdditionalExtensionArgs>> additionalExtensions;
 
     public Output<List<AuthorityConfigX509ConfigAdditionalExtensionArgs>> getAdditionalExtensions() {
@@ -36,7 +36,7 @@ public final class AuthorityConfigX509ConfigArgs extends io.pulumi.resources.Res
      * "Authority Information Access" extension in the certificate.
      * 
      */
-    @InputImport(name="aiaOcspServers")
+    @Import(name="aiaOcspServers")
       private final @Nullable Output<List<String>> aiaOcspServers;
 
     public Output<List<String>> getAiaOcspServers() {
@@ -48,7 +48,7 @@ public final class AuthorityConfigX509ConfigArgs extends io.pulumi.resources.Res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="caOptions", required=true)
+    @Import(name="caOptions", required=true)
       private final Output<AuthorityConfigX509ConfigCaOptionsArgs> caOptions;
 
     public Output<AuthorityConfigX509ConfigCaOptionsArgs> getCaOptions() {
@@ -60,7 +60,7 @@ public final class AuthorityConfigX509ConfigArgs extends io.pulumi.resources.Res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="keyUsage", required=true)
+    @Import(name="keyUsage", required=true)
       private final Output<AuthorityConfigX509ConfigKeyUsageArgs> keyUsage;
 
     public Output<AuthorityConfigX509ConfigKeyUsageArgs> getKeyUsage() {
@@ -72,7 +72,7 @@ public final class AuthorityConfigX509ConfigArgs extends io.pulumi.resources.Res
      * Structure is documented below.
      * 
      */
-    @InputImport(name="policyIds")
+    @Import(name="policyIds")
       private final @Nullable Output<List<AuthorityConfigX509ConfigPolicyIdArgs>> policyIds;
 
     public Output<List<AuthorityConfigX509ConfigPolicyIdArgs>> getPolicyIds() {

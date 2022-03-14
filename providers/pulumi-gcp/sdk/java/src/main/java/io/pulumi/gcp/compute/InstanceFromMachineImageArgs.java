@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.InstanceFromMachineImageAdvancedMachineFeaturesArgs;
 import io.pulumi.gcp.compute.inputs.InstanceFromMachineImageConfidentialInstanceConfigArgs;
 import io.pulumi.gcp.compute.inputs.InstanceFromMachineImageGuestAcceleratorArgs;
@@ -30,7 +30,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * Controls for advanced machine-related behavior features.
      * 
      */
-    @InputImport(name="advancedMachineFeatures")
+    @Import(name="advancedMachineFeatures")
       private final @Nullable Output<InstanceFromMachineImageAdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
     public Output<InstanceFromMachineImageAdvancedMachineFeaturesArgs> getAdvancedMachineFeatures() {
@@ -42,7 +42,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * stopping the instance without setting this field, the update will fail.
      * 
      */
-    @InputImport(name="allowStoppingForUpdate")
+    @Import(name="allowStoppingForUpdate")
       private final @Nullable Output<Boolean> allowStoppingForUpdate;
 
     public Output<Boolean> getAllowStoppingForUpdate() {
@@ -53,7 +53,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * Whether sending and receiving of packets with non-matching source or destination IPs is allowed.
      * 
      */
-    @InputImport(name="canIpForward")
+    @Import(name="canIpForward")
       private final @Nullable Output<Boolean> canIpForward;
 
     public Output<Boolean> getCanIpForward() {
@@ -65,7 +65,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * to create.
      * 
      */
-    @InputImport(name="confidentialInstanceConfig")
+    @Import(name="confidentialInstanceConfig")
       private final @Nullable Output<InstanceFromMachineImageConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
     public Output<InstanceFromMachineImageConfidentialInstanceConfigArgs> getConfidentialInstanceConfig() {
@@ -76,7 +76,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * Whether deletion protection is enabled on this instance.
      * 
      */
-    @InputImport(name="deletionProtection")
+    @Import(name="deletionProtection")
       private final @Nullable Output<Boolean> deletionProtection;
 
     public Output<Boolean> getDeletionProtection() {
@@ -87,7 +87,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * A brief description of the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -98,7 +98,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * Desired status of the instance. Either "RUNNING" or "TERMINATED".
      * 
      */
-    @InputImport(name="desiredStatus")
+    @Import(name="desiredStatus")
       private final @Nullable Output<String> desiredStatus;
 
     public Output<String> getDesiredStatus() {
@@ -109,7 +109,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * Whether the instance has virtual displays enabled.
      * 
      */
-    @InputImport(name="enableDisplay")
+    @Import(name="enableDisplay")
       private final @Nullable Output<Boolean> enableDisplay;
 
     public Output<Boolean> getEnableDisplay() {
@@ -120,7 +120,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * List of the type and count of accelerator cards attached to the instance.
      * 
      */
-    @InputImport(name="guestAccelerators")
+    @Import(name="guestAccelerators")
       private final @Nullable Output<List<InstanceFromMachineImageGuestAcceleratorArgs>> guestAccelerators;
 
     public Output<List<InstanceFromMachineImageGuestAcceleratorArgs>> getGuestAccelerators() {
@@ -133,7 +133,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * entire hostname must not exceed 253 characters. Changing this forces a new resource to be created.
      * 
      */
-    @InputImport(name="hostname")
+    @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
     public Output<String> getHostname() {
@@ -144,7 +144,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * A set of key/value label pairs assigned to the instance.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -155,7 +155,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * The machine type to create.
      * 
      */
-    @InputImport(name="machineType")
+    @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
     public Output<String> getMachineType() {
@@ -166,7 +166,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * Metadata key/value pairs made available within the instance.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -177,7 +177,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * Metadata startup scripts made available within the instance.
      * 
      */
-    @InputImport(name="metadataStartupScript")
+    @Import(name="metadataStartupScript")
       private final @Nullable Output<String> metadataStartupScript;
 
     public Output<String> getMetadataStartupScript() {
@@ -188,7 +188,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * The minimum CPU platform specified for the VM instance.
      * 
      */
-    @InputImport(name="minCpuPlatform")
+    @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
     public Output<String> getMinCpuPlatform() {
@@ -200,7 +200,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * Changing this forces a new resource to be created.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -211,7 +211,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * The networks attached to the instance.
      * 
      */
-    @InputImport(name="networkInterfaces")
+    @Import(name="networkInterfaces")
       private final @Nullable Output<List<InstanceFromMachineImageNetworkInterfaceArgs>> networkInterfaces;
 
     public Output<List<InstanceFromMachineImageNetworkInterfaceArgs>> getNetworkInterfaces() {
@@ -223,7 +223,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * default network performance configuration.
      * 
      */
-    @InputImport(name="networkPerformanceConfig")
+    @Import(name="networkPerformanceConfig")
       private final @Nullable Output<InstanceFromMachineImageNetworkPerformanceConfigArgs> networkPerformanceConfig;
 
     public Output<InstanceFromMachineImageNetworkPerformanceConfigArgs> getNetworkPerformanceConfig() {
@@ -235,7 +235,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * self_link nor project are provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -246,7 +246,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * Specifies the reservations that this instance can consume from.
      * 
      */
-    @InputImport(name="reservationAffinity")
+    @Import(name="reservationAffinity")
       private final @Nullable Output<InstanceFromMachineImageReservationAffinityArgs> reservationAffinity;
 
     public Output<InstanceFromMachineImageReservationAffinityArgs> getReservationAffinity() {
@@ -258,7 +258,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * is supported.
      * 
      */
-    @InputImport(name="resourcePolicies")
+    @Import(name="resourcePolicies")
       private final @Nullable Output<String> resourcePolicies;
 
     public Output<String> getResourcePolicies() {
@@ -269,7 +269,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * The scheduling strategy being used by the instance.
      * 
      */
-    @InputImport(name="scheduling")
+    @Import(name="scheduling")
       private final @Nullable Output<InstanceFromMachineImageSchedulingArgs> scheduling;
 
     public Output<InstanceFromMachineImageSchedulingArgs> getScheduling() {
@@ -280,7 +280,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * The service account to attach to the instance.
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<InstanceFromMachineImageServiceAccountArgs> serviceAccount;
 
     public Output<InstanceFromMachineImageServiceAccountArgs> getServiceAccount() {
@@ -291,7 +291,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * The shielded vm config being used by the instance.
      * 
      */
-    @InputImport(name="shieldedInstanceConfig")
+    @Import(name="shieldedInstanceConfig")
       private final @Nullable Output<InstanceFromMachineImageShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     public Output<InstanceFromMachineImageShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
@@ -303,7 +303,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * image to create the instance based on.
      * 
      */
-    @InputImport(name="sourceMachineImage", required=true)
+    @Import(name="sourceMachineImage", required=true)
       private final Output<String> sourceMachineImage;
 
     public Output<String> getSourceMachineImage() {
@@ -314,7 +314,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * The list of tags attached to the instance.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
@@ -326,7 +326,7 @@ public final class InstanceFromMachineImageArgs extends io.pulumi.resources.Reso
      * set, the provider zone is used.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataloss.PreventionJobTriggerArgs;
@@ -45,7 +45,7 @@ public class PreventionJobTrigger extends io.pulumi.resources.CustomResource {
      * A description of the job trigger.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -59,7 +59,7 @@ public class PreventionJobTrigger extends io.pulumi.resources.CustomResource {
      * User set display name of the job trigger.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -74,7 +74,7 @@ public class PreventionJobTrigger extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="inspectJob", type=PreventionJobTriggerInspectJob.class, parameters={})
+    @Export(name="inspectJob", type=PreventionJobTriggerInspectJob.class, parameters={})
     private Output</* @Nullable */ PreventionJobTriggerInspectJob> inspectJob;
 
     /**
@@ -89,7 +89,7 @@ public class PreventionJobTrigger extends io.pulumi.resources.CustomResource {
      * The timestamp of the last time this trigger executed.
      * 
      */
-    @OutputExport(name="lastRunTime", type=String.class, parameters={})
+    @Export(name="lastRunTime", type=String.class, parameters={})
     private Output<String> lastRunTime;
 
     /**
@@ -103,7 +103,7 @@ public class PreventionJobTrigger extends io.pulumi.resources.CustomResource {
      * The name of the Datastore kind.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -118,7 +118,7 @@ public class PreventionJobTrigger extends io.pulumi.resources.CustomResource {
      * or `projects/{{project}}/locations/{{location}}`
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**
@@ -135,7 +135,7 @@ public class PreventionJobTrigger extends io.pulumi.resources.CustomResource {
      * Possible values are `PAUSED`, `HEALTHY`, and `CANCELLED`.
      * 
      */
-    @OutputExport(name="status", type=String.class, parameters={})
+    @Export(name="status", type=String.class, parameters={})
     private Output</* @Nullable */ String> status;
 
     /**
@@ -152,7 +152,7 @@ public class PreventionJobTrigger extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="triggers", type=List.class, parameters={PreventionJobTriggerTrigger.class})
+    @Export(name="triggers", type=List.class, parameters={PreventionJobTriggerTrigger.class})
     private Output<List<PreventionJobTriggerTrigger>> triggers;
 
     /**

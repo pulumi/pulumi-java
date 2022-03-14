@@ -3,18 +3,18 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.gkehub.outputs.FeatureStateState;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FeatureState {
     private final @Nullable List<FeatureStateState> states;
 
-    @OutputCustomType.Constructor
-    private FeatureState(@OutputCustomType.Parameter("states") @Nullable List<FeatureStateState> states) {
+    @CustomType.Constructor
+    private FeatureState(@CustomType.Parameter("states") @Nullable List<FeatureStateState> states) {
         this.states = states;
     }
 

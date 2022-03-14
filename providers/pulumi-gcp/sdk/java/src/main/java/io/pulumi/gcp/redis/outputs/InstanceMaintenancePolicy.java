@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.redis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.redis.outputs.InstanceMaintenancePolicyWeeklyMaintenanceWindow;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceMaintenancePolicy {
     /**
      * - 
@@ -45,12 +45,12 @@ public final class InstanceMaintenancePolicy {
      */
     private final @Nullable List<InstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceMaintenancePolicy(
-        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("updateTime") @Nullable String updateTime,
-        @OutputCustomType.Parameter("weeklyMaintenanceWindows") @Nullable List<InstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows) {
+        @CustomType.Parameter("createTime") @Nullable String createTime,
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("updateTime") @Nullable String updateTime,
+        @CustomType.Parameter("weeklyMaintenanceWindows") @Nullable List<InstanceMaintenancePolicyWeeklyMaintenanceWindow> weeklyMaintenanceWindows) {
         this.createTime = createTime;
         this.description = description;
         this.updateTime = updateTime;

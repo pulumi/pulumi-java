@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.appengine.inputs.ApplicationFeatureSettingsArgs;
 import io.pulumi.gcp.appengine.inputs.ApplicationIapArgs;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The domain to authenticate users with when using App Engine's User API.
      * 
      */
-    @InputImport(name="authDomain")
+    @Import(name="authDomain")
       private final @Nullable Output<String> authDomain;
 
     public Output<String> getAuthDomain() {
@@ -34,7 +34,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * by the provider, but will be rejected by the API.
      * 
      */
-    @InputImport(name="databaseType")
+    @Import(name="databaseType")
       private final @Nullable Output<String> databaseType;
 
     public Output<String> getDatabaseType() {
@@ -45,7 +45,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * A block of optional settings to configure specific App Engine features:
      * 
      */
-    @InputImport(name="featureSettings")
+    @Import(name="featureSettings")
       private final @Nullable Output<ApplicationFeatureSettingsArgs> featureSettings;
 
     public Output<ApplicationFeatureSettingsArgs> getFeatureSettings() {
@@ -56,7 +56,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * Settings for enabling Cloud Identity Aware Proxy
      * 
      */
-    @InputImport(name="iap")
+    @Import(name="iap")
       private final @Nullable Output<ApplicationIapArgs> iap;
 
     public Output<ApplicationIapArgs> getIap() {
@@ -68,7 +68,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * to serve the app from.
      * 
      */
-    @InputImport(name="locationId", required=true)
+    @Import(name="locationId", required=true)
       private final Output<String> locationId;
 
     public Output<String> getLocationId() {
@@ -81,7 +81,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * you may get a "Permission denied" error.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -92,7 +92,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * The serving status of the app.
      * 
      */
-    @InputImport(name="servingStatus")
+    @Import(name="servingStatus")
       private final @Nullable Output<String> servingStatus;
 
     public Output<String> getServingStatus() {

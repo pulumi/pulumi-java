@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datastore;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.datastore.inputs.DataStoreIndexPropertyArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `NONE` and `ALL_ANCESTORS`.
      * 
      */
-    @InputImport(name="ancestor")
+    @Import(name="ancestor")
       private final @Nullable Output<String> ancestor;
 
     public Output<String> getAncestor() {
@@ -33,7 +33,7 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
      * The entity kind which the index applies to.
      * 
      */
-    @InputImport(name="kind", required=true)
+    @Import(name="kind", required=true)
       private final Output<String> kind;
 
     public Output<String> getKind() {
@@ -45,7 +45,7 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -57,7 +57,7 @@ public final class DataStoreIndexArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<List<DataStoreIndexPropertyArgs>> properties;
 
     public Output<List<DataStoreIndexPropertyArgs>> getProperties() {

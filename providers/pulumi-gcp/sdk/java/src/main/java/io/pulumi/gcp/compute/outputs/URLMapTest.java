@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class URLMapTest {
     /**
      * Description of this test case.
@@ -32,12 +32,12 @@ public final class URLMapTest {
      */
     private final String service;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private URLMapTest(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("host") String host,
-        @OutputCustomType.Parameter("path") String path,
-        @OutputCustomType.Parameter("service") String service) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("host") String host,
+        @CustomType.Parameter("path") String path,
+        @CustomType.Parameter("service") String service) {
         this.description = description;
         this.host = host;
         this.path = path;

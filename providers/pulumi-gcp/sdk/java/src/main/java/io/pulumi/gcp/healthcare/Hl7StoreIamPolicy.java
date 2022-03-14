@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.Hl7StoreIamPolicyArgs;
@@ -62,7 +62,7 @@ public class Hl7StoreIamPolicy extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the HL7v2 store's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -79,7 +79,7 @@ public class Hl7StoreIamPolicy extends io.pulumi.resources.CustomResource {
      * project setting will be used as a fallback.
      * 
      */
-    @OutputExport(name="hl7V2StoreId", type=String.class, parameters={})
+    @Export(name="hl7V2StoreId", type=String.class, parameters={})
     private Output<String> hl7V2StoreId;
 
     /**
@@ -97,7 +97,7 @@ public class Hl7StoreIamPolicy extends io.pulumi.resources.CustomResource {
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @OutputExport(name="policyData", type=String.class, parameters={})
+    @Export(name="policyData", type=String.class, parameters={})
     private Output<String> policyData;
 
     /**

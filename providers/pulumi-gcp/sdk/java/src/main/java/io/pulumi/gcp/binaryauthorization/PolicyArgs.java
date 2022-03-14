@@ -4,7 +4,7 @@
 package io.pulumi.gcp.binaryauthorization;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.binaryauthorization.inputs.PolicyAdmissionWhitelistPatternArgs;
 import io.pulumi.gcp.binaryauthorization.inputs.PolicyClusterAdmissionRuleArgs;
 import io.pulumi.gcp.binaryauthorization.inputs.PolicyDefaultAdmissionRuleArgs;
@@ -25,7 +25,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="admissionWhitelistPatterns")
+    @Import(name="admissionWhitelistPatterns")
       private final @Nullable Output<List<PolicyAdmissionWhitelistPatternArgs>> admissionWhitelistPatterns;
 
     public Output<List<PolicyAdmissionWhitelistPatternArgs>> getAdmissionWhitelistPatterns() {
@@ -40,7 +40,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * admission rule per cluster spec.
      * 
      */
-    @InputImport(name="clusterAdmissionRules")
+    @Import(name="clusterAdmissionRules")
       private final @Nullable Output<List<PolicyClusterAdmissionRuleArgs>> clusterAdmissionRules;
 
     public Output<List<PolicyClusterAdmissionRuleArgs>> getClusterAdmissionRules() {
@@ -53,7 +53,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="defaultAdmissionRule", required=true)
+    @Import(name="defaultAdmissionRule", required=true)
       private final Output<PolicyDefaultAdmissionRuleArgs> defaultAdmissionRule;
 
     public Output<PolicyDefaultAdmissionRuleArgs> getDefaultAdmissionRule() {
@@ -64,7 +64,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * A descriptive comment.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -78,7 +78,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `ENABLE` and `DISABLE`.
      * 
      */
-    @InputImport(name="globalPolicyEvaluationMode")
+    @Import(name="globalPolicyEvaluationMode")
       private final @Nullable Output<String> globalPolicyEvaluationMode;
 
     public Output<String> getGlobalPolicyEvaluationMode() {
@@ -90,7 +90,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

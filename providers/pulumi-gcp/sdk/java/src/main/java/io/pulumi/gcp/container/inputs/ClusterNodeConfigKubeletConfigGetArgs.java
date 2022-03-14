@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClusterNodeConfigKubeletConfigGetArgs extends io.pulumi.resou
      * containers that specify CPU limits.
      * 
      */
-    @InputImport(name="cpuCfsQuota")
+    @Import(name="cpuCfsQuota")
       private final @Nullable Output<Boolean> cpuCfsQuota;
 
     public Output<Boolean> getCpuCfsQuota() {
@@ -34,7 +34,7 @@ public final class ClusterNodeConfigKubeletConfigGetArgs extends io.pulumi.resou
      * "h". The value must be a positive duration.
      * 
      */
-    @InputImport(name="cpuCfsQuotaPeriod")
+    @Import(name="cpuCfsQuotaPeriod")
       private final @Nullable Output<String> cpuCfsQuotaPeriod;
 
     public Output<String> getCpuCfsQuotaPeriod() {
@@ -47,7 +47,7 @@ public final class ClusterNodeConfigKubeletConfigGetArgs extends io.pulumi.resou
      * One of `"none"` or `"static"`. Defaults to `none` when `kubelet_config` is unset.
      * 
      */
-    @InputImport(name="cpuManagerPolicy", required=true)
+    @Import(name="cpuManagerPolicy", required=true)
       private final Output<String> cpuManagerPolicy;
 
     public Output<String> getCpuManagerPolicy() {

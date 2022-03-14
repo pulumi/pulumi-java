@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.healthcare.inputs.ConsentStoreIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
 
     public static final ConsentStoreIamMemberState Empty = new ConsentStoreIamMemberState();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<ConsentStoreIamMemberConditionGetArgs> condition;
 
     public Output<ConsentStoreIamMemberConditionGetArgs> getCondition() {
@@ -26,7 +26,7 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="consentStoreId")
+    @Import(name="consentStoreId")
       private final @Nullable Output<String> consentStoreId;
 
     public Output<String> getConsentStoreId() {
@@ -39,7 +39,7 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="dataset")
+    @Import(name="dataset")
       private final @Nullable Output<String> dataset;
 
     public Output<String> getDataset() {
@@ -50,14 +50,14 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
         return this.etag == null ? Output.empty() : this.etag;
     }
 
-    @InputImport(name="member")
+    @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
@@ -70,7 +70,7 @@ public final class ConsentStoreIamMemberState extends io.pulumi.resources.Resour
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

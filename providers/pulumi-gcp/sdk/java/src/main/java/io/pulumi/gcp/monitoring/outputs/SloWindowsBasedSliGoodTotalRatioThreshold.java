@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformance;
 import java.lang.Double;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SloWindowsBasedSliGoodTotalRatioThreshold {
     /**
      * Basic SLI to evaluate to judge window quality.
@@ -33,11 +33,11 @@ public final class SloWindowsBasedSliGoodTotalRatioThreshold {
      */
     private final @Nullable Double threshold;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SloWindowsBasedSliGoodTotalRatioThreshold(
-        @OutputCustomType.Parameter("basicSliPerformance") @Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance basicSliPerformance,
-        @OutputCustomType.Parameter("performance") @Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformance performance,
-        @OutputCustomType.Parameter("threshold") @Nullable Double threshold) {
+        @CustomType.Parameter("basicSliPerformance") @Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance basicSliPerformance,
+        @CustomType.Parameter("performance") @Nullable SloWindowsBasedSliGoodTotalRatioThresholdPerformance performance,
+        @CustomType.Parameter("threshold") @Nullable Double threshold) {
         this.basicSliPerformance = basicSliPerformance;
         this.performance = performance;
         this.threshold = threshold;

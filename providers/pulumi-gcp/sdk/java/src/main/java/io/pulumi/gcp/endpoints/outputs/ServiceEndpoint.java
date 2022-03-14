@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.endpoints.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceEndpoint {
     private final @Nullable String address;
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServiceEndpoint(
-        @OutputCustomType.Parameter("address") @Nullable String address,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("address") @Nullable String address,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.address = address;
         this.name = name;
     }

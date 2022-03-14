@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -12,7 +12,7 @@ public final class GetClusterAddonsConfigHttpLoadBalancing extends io.pulumi.res
 
     public static final GetClusterAddonsConfigHttpLoadBalancing Empty = new GetClusterAddonsConfigHttpLoadBalancing();
 
-    @InputImport(name="disabled", required=true)
+    @Import(name="disabled", required=true)
       private final Boolean disabled;
 
     public Boolean getDisabled() {

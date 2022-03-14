@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dns.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dns.inputs.PolicyAlternativeNameServerConfigTargetNameServerArgs;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
      * Structure is documented below.
      * 
      */
-    @InputImport(name="targetNameServers", required=true)
+    @Import(name="targetNameServers", required=true)
       private final Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
 
     public Output<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> getTargetNameServers() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.assuredworkloads.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class WorkloadKmsSettingsArgs extends io.pulumi.resources.ResourceA
      * Required. Input only. Immutable. The time at which the Key Management Service will automatically create a new version of the crypto key and mark it as the primary.
      * 
      */
-    @InputImport(name="nextRotationTime", required=true)
+    @Import(name="nextRotationTime", required=true)
       private final Output<String> nextRotationTime;
 
     public Output<String> getNextRotationTime() {
@@ -28,7 +28,7 @@ public final class WorkloadKmsSettingsArgs extends io.pulumi.resources.ResourceA
      * Required. Input only. Immutable. will be advanced by this period when the Key Management Service automatically rotates a key. Must be at least 24 hours and at most 876,000 hours.
      * 
      */
-    @InputImport(name="rotationPeriod", required=true)
+    @Import(name="rotationPeriod", required=true)
       private final Output<String> rotationPeriod;
 
     public Output<String> getRotationPeriod() {

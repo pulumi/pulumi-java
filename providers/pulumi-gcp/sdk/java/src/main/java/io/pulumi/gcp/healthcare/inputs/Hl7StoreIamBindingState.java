@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.healthcare.inputs.Hl7StoreIamBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class Hl7StoreIamBindingState extends io.pulumi.resources.ResourceA
 
     public static final Hl7StoreIamBindingState Empty = new Hl7StoreIamBindingState();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<Hl7StoreIamBindingConditionGetArgs> condition;
 
     public Output<Hl7StoreIamBindingConditionGetArgs> getCondition() {
@@ -27,7 +27,7 @@ public final class Hl7StoreIamBindingState extends io.pulumi.resources.ResourceA
      * (Computed) The etag of the HL7v2 store's IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -41,14 +41,14 @@ public final class Hl7StoreIamBindingState extends io.pulumi.resources.ResourceA
      * project setting will be used as a fallback.
      * 
      */
-    @InputImport(name="hl7V2StoreId")
+    @Import(name="hl7V2StoreId")
       private final @Nullable Output<String> hl7V2StoreId;
 
     public Output<String> getHl7V2StoreId() {
         return this.hl7V2StoreId == null ? Output.empty() : this.hl7V2StoreId;
     }
 
-    @InputImport(name="members")
+    @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -61,7 +61,7 @@ public final class Hl7StoreIamBindingState extends io.pulumi.resources.ResourceA
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

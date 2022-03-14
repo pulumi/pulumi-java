@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.monitoring.inputs.UptimeCheckConfigContentMatcherArgs;
 import io.pulumi.gcp.monitoring.inputs.UptimeCheckConfigHttpCheckArgs;
 import io.pulumi.gcp.monitoring.inputs.UptimeCheckConfigMonitoredResourceArgs;
@@ -25,7 +25,7 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="contentMatchers")
+    @Import(name="contentMatchers")
       private final @Nullable Output<List<UptimeCheckConfigContentMatcherArgs>> contentMatchers;
 
     public Output<List<UptimeCheckConfigContentMatcherArgs>> getContentMatchers() {
@@ -36,7 +36,7 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
      * A human-friendly name for the uptime check configuration. The display name should be unique within a Stackdriver Workspace in order to make it easier to identify; however, uniqueness is not enforced.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -48,7 +48,7 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="httpCheck")
+    @Import(name="httpCheck")
       private final @Nullable Output<UptimeCheckConfigHttpCheckArgs> httpCheck;
 
     public Output<UptimeCheckConfigHttpCheckArgs> getHttpCheck() {
@@ -60,7 +60,7 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="monitoredResource")
+    @Import(name="monitoredResource")
       private final @Nullable Output<UptimeCheckConfigMonitoredResourceArgs> monitoredResource;
 
     public Output<UptimeCheckConfigMonitoredResourceArgs> getMonitoredResource() {
@@ -71,7 +71,7 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
      * How often, in seconds, the uptime check is performed. Currently, the only supported values are 60s (1 minute), 300s (5 minutes), 600s (10 minutes), and 900s (15 minutes). Optional, defaults to 300s.
      * 
      */
-    @InputImport(name="period")
+    @Import(name="period")
       private final @Nullable Output<String> period;
 
     public Output<String> getPeriod() {
@@ -83,7 +83,7 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -95,7 +95,7 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="resourceGroup")
+    @Import(name="resourceGroup")
       private final @Nullable Output<UptimeCheckConfigResourceGroupArgs> resourceGroup;
 
     public Output<UptimeCheckConfigResourceGroupArgs> getResourceGroup() {
@@ -106,7 +106,7 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
      * The list of regions from which the check will be run. Some regions contain one location, and others contain more than one. If this field is specified, enough regions to include a minimum of 3 locations must be provided, or an error message is returned. Not specifying this field will result in uptime checks running from all regions.
      * 
      */
-    @InputImport(name="selectedRegions")
+    @Import(name="selectedRegions")
       private final @Nullable Output<List<String>> selectedRegions;
 
     public Output<List<String>> getSelectedRegions() {
@@ -118,7 +118,7 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="tcpCheck")
+    @Import(name="tcpCheck")
       private final @Nullable Output<UptimeCheckConfigTcpCheckArgs> tcpCheck;
 
     public Output<UptimeCheckConfigTcpCheckArgs> getTcpCheck() {
@@ -129,7 +129,7 @@ public final class UptimeCheckConfigArgs extends io.pulumi.resources.ResourceArg
      * The maximum amount of time to wait for the request to complete (must be between 1 and 60 seconds). Accepted formats https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#google.protobuf.Duration
      * 
      */
-    @InputImport(name="timeout", required=true)
+    @Import(name="timeout", required=true)
       private final Output<String> timeout;
 
     public Output<String> getTimeout() {

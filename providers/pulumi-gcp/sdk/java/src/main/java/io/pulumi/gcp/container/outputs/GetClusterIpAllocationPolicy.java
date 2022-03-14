@@ -3,23 +3,23 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterIpAllocationPolicy {
     private final String clusterIpv4CidrBlock;
     private final String clusterSecondaryRangeName;
     private final String servicesIpv4CidrBlock;
     private final String servicesSecondaryRangeName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterIpAllocationPolicy(
-        @OutputCustomType.Parameter("clusterIpv4CidrBlock") String clusterIpv4CidrBlock,
-        @OutputCustomType.Parameter("clusterSecondaryRangeName") String clusterSecondaryRangeName,
-        @OutputCustomType.Parameter("servicesIpv4CidrBlock") String servicesIpv4CidrBlock,
-        @OutputCustomType.Parameter("servicesSecondaryRangeName") String servicesSecondaryRangeName) {
+        @CustomType.Parameter("clusterIpv4CidrBlock") String clusterIpv4CidrBlock,
+        @CustomType.Parameter("clusterSecondaryRangeName") String clusterSecondaryRangeName,
+        @CustomType.Parameter("servicesIpv4CidrBlock") String servicesIpv4CidrBlock,
+        @CustomType.Parameter("servicesSecondaryRangeName") String servicesSecondaryRangeName) {
         this.clusterIpv4CidrBlock = clusterIpv4CidrBlock;
         this.clusterSecondaryRangeName = clusterSecondaryRangeName;
         this.servicesIpv4CidrBlock = servicesIpv4CidrBlock;

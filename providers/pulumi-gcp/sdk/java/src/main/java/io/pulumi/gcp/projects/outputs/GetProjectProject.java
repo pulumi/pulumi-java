@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.projects.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetProjectProject {
     private final String createTime;
     private final Map<String,String> labels;
@@ -22,15 +22,15 @@ public final class GetProjectProject {
      */
     private final String projectId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProjectProject(
-        @OutputCustomType.Parameter("createTime") String createTime,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("lifecycleState") String lifecycleState,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("number") String number,
-        @OutputCustomType.Parameter("parent") Map<String,String> parent,
-        @OutputCustomType.Parameter("projectId") String projectId) {
+        @CustomType.Parameter("createTime") String createTime,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("lifecycleState") String lifecycleState,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("number") String number,
+        @CustomType.Parameter("parent") Map<String,String> parent,
+        @CustomType.Parameter("projectId") String projectId) {
         this.createTime = createTime;
         this.labels = labels;
         this.lifecycleState = lifecycleState;

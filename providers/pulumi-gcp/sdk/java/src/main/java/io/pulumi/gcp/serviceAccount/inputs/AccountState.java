@@ -4,7 +4,7 @@
 package io.pulumi.gcp.serviceAccount.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * to comply with RFC1035. Changing this forces a new service account to be created.
      * 
      */
-    @InputImport(name="accountId")
+    @Import(name="accountId")
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
@@ -34,7 +34,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * Must be less than or equal to 256 UTF-8 bytes.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -46,7 +46,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * Must be set after creation to disable a service account.
      * 
      */
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -58,7 +58,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * Can be updated without creating a new resource.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -71,7 +71,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * that would grant the service account privileges.
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
@@ -82,7 +82,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * The fully-qualified name of the service account.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -94,7 +94,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * Defaults to the provider project configuration.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -105,7 +105,7 @@ public final class AccountState extends io.pulumi.resources.ResourceArgs {
      * The unique id of the service account.
      * 
      */
-    @InputImport(name="uniqueId")
+    @Import(name="uniqueId")
       private final @Nullable Output<String> uniqueId;
 
     public Output<String> getUniqueId() {

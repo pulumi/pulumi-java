@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlexibleAppVersionDeploymentCloudBuildOptions {
     /**
      * Path to the yaml file used in deployment, used to determine runtime configuration details.
@@ -23,10 +23,10 @@ public final class FlexibleAppVersionDeploymentCloudBuildOptions {
      */
     private final @Nullable String cloudBuildTimeout;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlexibleAppVersionDeploymentCloudBuildOptions(
-        @OutputCustomType.Parameter("appYamlPath") String appYamlPath,
-        @OutputCustomType.Parameter("cloudBuildTimeout") @Nullable String cloudBuildTimeout) {
+        @CustomType.Parameter("appYamlPath") String appYamlPath,
+        @CustomType.Parameter("cloudBuildTimeout") @Nullable String cloudBuildTimeout) {
         this.appYamlPath = appYamlPath;
         this.cloudBuildTimeout = cloudBuildTimeout;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs
      * Optional. Indicates whether or not this extension is critical (i.e., if the client does not know how to handle this extension, the client should consider this to be an error).
      * 
      */
-    @InputImport(name="critical")
+    @Import(name="critical")
       private final @Nullable Output<Boolean> critical;
 
     public Output<Boolean> getCritical() {
@@ -31,7 +31,7 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs
      * Required. The OID for this X.509 extension.
      * 
      */
-    @InputImport(name="objectId", required=true)
+    @Import(name="objectId", required=true)
       private final Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> objectId;
 
     public Output<CertificateTemplatePredefinedValuesAdditionalExtensionObjectIdGetArgs> getObjectId() {
@@ -42,7 +42,7 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionGetArgs
      * Required. The value of this X.509 extension.
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

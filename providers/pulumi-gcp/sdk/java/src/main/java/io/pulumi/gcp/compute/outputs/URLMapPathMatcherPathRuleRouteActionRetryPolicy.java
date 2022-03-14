@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class URLMapPathMatcherPathRuleRouteActionRetryPolicy {
     /**
      * Specifies the allowed number retries. This number must be > 0. If not specified, defaults to 1.
@@ -47,11 +47,11 @@ public final class URLMapPathMatcherPathRuleRouteActionRetryPolicy {
      */
     private final @Nullable List<String> retryConditions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private URLMapPathMatcherPathRuleRouteActionRetryPolicy(
-        @OutputCustomType.Parameter("numRetries") @Nullable Integer numRetries,
-        @OutputCustomType.Parameter("perTryTimeout") @Nullable URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout perTryTimeout,
-        @OutputCustomType.Parameter("retryConditions") @Nullable List<String> retryConditions) {
+        @CustomType.Parameter("numRetries") @Nullable Integer numRetries,
+        @CustomType.Parameter("perTryTimeout") @Nullable URLMapPathMatcherPathRuleRouteActionRetryPolicyPerTryTimeout perTryTimeout,
+        @CustomType.Parameter("retryConditions") @Nullable List<String> retryConditions) {
         this.numRetries = numRetries;
         this.perTryTimeout = perTryTimeout;
         this.retryConditions = retryConditions;

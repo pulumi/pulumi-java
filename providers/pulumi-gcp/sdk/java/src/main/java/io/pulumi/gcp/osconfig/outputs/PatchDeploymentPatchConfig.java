@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentPatchConfigApt;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentPatchConfigGoo;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentPatchConfigPostStep;
@@ -16,7 +16,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PatchDeploymentPatchConfig {
     /**
      * Apt update settings. Use this setting to override the default apt patch rules.
@@ -67,16 +67,16 @@ public final class PatchDeploymentPatchConfig {
      */
     private final @Nullable PatchDeploymentPatchConfigZypper zypper;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PatchDeploymentPatchConfig(
-        @OutputCustomType.Parameter("apt") @Nullable PatchDeploymentPatchConfigApt apt,
-        @OutputCustomType.Parameter("goo") @Nullable PatchDeploymentPatchConfigGoo goo,
-        @OutputCustomType.Parameter("postStep") @Nullable PatchDeploymentPatchConfigPostStep postStep,
-        @OutputCustomType.Parameter("preStep") @Nullable PatchDeploymentPatchConfigPreStep preStep,
-        @OutputCustomType.Parameter("rebootConfig") @Nullable String rebootConfig,
-        @OutputCustomType.Parameter("windowsUpdate") @Nullable PatchDeploymentPatchConfigWindowsUpdate windowsUpdate,
-        @OutputCustomType.Parameter("yum") @Nullable PatchDeploymentPatchConfigYum yum,
-        @OutputCustomType.Parameter("zypper") @Nullable PatchDeploymentPatchConfigZypper zypper) {
+        @CustomType.Parameter("apt") @Nullable PatchDeploymentPatchConfigApt apt,
+        @CustomType.Parameter("goo") @Nullable PatchDeploymentPatchConfigGoo goo,
+        @CustomType.Parameter("postStep") @Nullable PatchDeploymentPatchConfigPostStep postStep,
+        @CustomType.Parameter("preStep") @Nullable PatchDeploymentPatchConfigPreStep preStep,
+        @CustomType.Parameter("rebootConfig") @Nullable String rebootConfig,
+        @CustomType.Parameter("windowsUpdate") @Nullable PatchDeploymentPatchConfigWindowsUpdate windowsUpdate,
+        @CustomType.Parameter("yum") @Nullable PatchDeploymentPatchConfigYum yum,
+        @CustomType.Parameter("zypper") @Nullable PatchDeploymentPatchConfigZypper zypper) {
         this.apt = apt;
         this.goo = goo;
         this.postStep = postStep;

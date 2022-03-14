@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.pubsub.inputs.SubscriptionPushConfigOidcTokenArgs;
 import java.lang.String;
 import java.util.Map;
@@ -37,7 +37,7 @@ public final class SubscriptionPushConfigArgs extends io.pulumi.resources.Resour
      * - v1 or v1beta2: uses the push format defined in the v1 Pub/Sub API.
      * 
      */
-    @InputImport(name="attributes")
+    @Import(name="attributes")
       private final @Nullable Output<Map<String,String>> attributes;
 
     public Output<Map<String,String>> getAttributes() {
@@ -50,7 +50,7 @@ public final class SubscriptionPushConfigArgs extends io.pulumi.resources.Resour
      * Structure is documented below.
      * 
      */
-    @InputImport(name="oidcToken")
+    @Import(name="oidcToken")
       private final @Nullable Output<SubscriptionPushConfigOidcTokenArgs> oidcToken;
 
     public Output<SubscriptionPushConfigOidcTokenArgs> getOidcToken() {
@@ -63,7 +63,7 @@ public final class SubscriptionPushConfigArgs extends io.pulumi.resources.Resour
      * "https://example.com/push".
      * 
      */
-    @InputImport(name="pushEndpoint", required=true)
+    @Import(name="pushEndpoint", required=true)
       private final Output<String> pushEndpoint;
 
     public Output<String> getPushEndpoint() {

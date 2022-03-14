@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class DataTransferConfigSensitiveParams {
     /**
      * The Secret Access Key of the AWS account transferring data from.
@@ -16,8 +16,8 @@ public final class DataTransferConfigSensitiveParams {
      */
     private final String secretAccessKey;
 
-    @OutputCustomType.Constructor
-    private DataTransferConfigSensitiveParams(@OutputCustomType.Parameter("secretAccessKey") String secretAccessKey) {
+    @CustomType.Constructor
+    private DataTransferConfigSensitiveParams(@CustomType.Parameter("secretAccessKey") String secretAccessKey) {
         this.secretAccessKey = secretAccessKey;
     }
 

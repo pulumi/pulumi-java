@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AlertPolicyConditionConditionMatchedLog {
     /**
      * A logs-based filter.
@@ -28,10 +28,10 @@ public final class AlertPolicyConditionConditionMatchedLog {
      */
     private final @Nullable Map<String,String> labelExtractors;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AlertPolicyConditionConditionMatchedLog(
-        @OutputCustomType.Parameter("filter") String filter,
-        @OutputCustomType.Parameter("labelExtractors") @Nullable Map<String,String> labelExtractors) {
+        @CustomType.Parameter("filter") String filter,
+        @CustomType.Parameter("labelExtractors") @Nullable Map<String,String> labelExtractors) {
         this.filter = filter;
         this.labelExtractors = labelExtractors;
     }

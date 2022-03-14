@@ -4,7 +4,7 @@
 package io.pulumi.gcp.resourcemanager;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * 200 characters.
      * 
      */
-    @InputImport(name="origin", required=true)
+    @Import(name="origin", required=true)
       private final Output<String> origin;
 
     public Output<String> getOrigin() {
@@ -34,7 +34,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * prefix (e.g. "projects/my-project-name").
      * 
      */
-    @InputImport(name="parent", required=true)
+    @Import(name="parent", required=true)
       private final Output<String> parent;
 
     public Output<String> getParent() {
@@ -46,7 +46,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * on a resource. Maximum length of 200 characters.
      * 
      */
-    @InputImport(name="reason", required=true)
+    @Import(name="reason", required=true)
       private final Output<String> reason;
 
     public Output<String> getReason() {
@@ -61,7 +61,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * e.g. ['resourcemanager.projects.delete']
      * 
      */
-    @InputImport(name="restrictions", required=true)
+    @Import(name="restrictions", required=true)
       private final Output<List<String>> restrictions;
 
     public Output<List<String>> getRestrictions() {

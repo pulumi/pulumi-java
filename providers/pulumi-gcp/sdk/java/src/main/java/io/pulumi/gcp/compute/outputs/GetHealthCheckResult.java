@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetHealthCheckGrpcHealthCheck;
 import io.pulumi.gcp.compute.outputs.GetHealthCheckHttp2HealthCheck;
 import io.pulumi.gcp.compute.outputs.GetHealthCheckHttpHealthCheck;
@@ -18,7 +18,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetHealthCheckResult {
     private final Integer checkIntervalSec;
     private final String creationTimestamp;
@@ -43,26 +43,26 @@ public final class GetHealthCheckResult {
     private final String type;
     private final Integer unhealthyThreshold;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHealthCheckResult(
-        @OutputCustomType.Parameter("checkIntervalSec") Integer checkIntervalSec,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("grpcHealthChecks") List<GetHealthCheckGrpcHealthCheck> grpcHealthChecks,
-        @OutputCustomType.Parameter("healthyThreshold") Integer healthyThreshold,
-        @OutputCustomType.Parameter("http2HealthChecks") List<GetHealthCheckHttp2HealthCheck> http2HealthChecks,
-        @OutputCustomType.Parameter("httpHealthChecks") List<GetHealthCheckHttpHealthCheck> httpHealthChecks,
-        @OutputCustomType.Parameter("httpsHealthChecks") List<GetHealthCheckHttpsHealthCheck> httpsHealthChecks,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("logConfigs") List<GetHealthCheckLogConfig> logConfigs,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("sslHealthChecks") List<GetHealthCheckSslHealthCheck> sslHealthChecks,
-        @OutputCustomType.Parameter("tcpHealthChecks") List<GetHealthCheckTcpHealthCheck> tcpHealthChecks,
-        @OutputCustomType.Parameter("timeoutSec") Integer timeoutSec,
-        @OutputCustomType.Parameter("type") String type,
-        @OutputCustomType.Parameter("unhealthyThreshold") Integer unhealthyThreshold) {
+        @CustomType.Parameter("checkIntervalSec") Integer checkIntervalSec,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("grpcHealthChecks") List<GetHealthCheckGrpcHealthCheck> grpcHealthChecks,
+        @CustomType.Parameter("healthyThreshold") Integer healthyThreshold,
+        @CustomType.Parameter("http2HealthChecks") List<GetHealthCheckHttp2HealthCheck> http2HealthChecks,
+        @CustomType.Parameter("httpHealthChecks") List<GetHealthCheckHttpHealthCheck> httpHealthChecks,
+        @CustomType.Parameter("httpsHealthChecks") List<GetHealthCheckHttpsHealthCheck> httpsHealthChecks,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("logConfigs") List<GetHealthCheckLogConfig> logConfigs,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("sslHealthChecks") List<GetHealthCheckSslHealthCheck> sslHealthChecks,
+        @CustomType.Parameter("tcpHealthChecks") List<GetHealthCheckTcpHealthCheck> tcpHealthChecks,
+        @CustomType.Parameter("timeoutSec") Integer timeoutSec,
+        @CustomType.Parameter("type") String type,
+        @CustomType.Parameter("unhealthyThreshold") Integer unhealthyThreshold) {
         this.checkIntervalSec = checkIntervalSec;
         this.creationTimestamp = creationTimestamp;
         this.description = description;

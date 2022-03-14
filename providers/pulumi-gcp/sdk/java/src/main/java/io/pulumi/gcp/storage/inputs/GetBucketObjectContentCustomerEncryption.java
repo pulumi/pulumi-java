@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetBucketObjectContentCustomerEncryption extends io.pulumi.re
 
     public static final GetBucketObjectContentCustomerEncryption Empty = new GetBucketObjectContentCustomerEncryption();
 
-    @InputImport(name="encryptionAlgorithm", required=true)
+    @Import(name="encryptionAlgorithm", required=true)
       private final String encryptionAlgorithm;
 
     public String getEncryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
 
-    @InputImport(name="encryptionKey", required=true)
+    @Import(name="encryptionKey", required=true)
       private final String encryptionKey;
 
     public String getEncryptionKey() {

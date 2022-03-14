@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,28 +14,28 @@ public final class JobStatusGetArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobStatusGetArgs Empty = new JobStatusGetArgs();
 
-    @InputImport(name="details")
+    @Import(name="details")
       private final @Nullable Output<String> details;
 
     public Output<String> getDetails() {
         return this.details == null ? Output.empty() : this.details;
     }
 
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
         return this.state == null ? Output.empty() : this.state;
     }
 
-    @InputImport(name="stateStartTime")
+    @Import(name="stateStartTime")
       private final @Nullable Output<String> stateStartTime;
 
     public Output<String> getStateStartTime() {
         return this.stateStartTime == null ? Output.empty() : this.stateStartTime;
     }
 
-    @InputImport(name="substate")
+    @Import(name="substate")
       private final @Nullable Output<String> substate;
 
     public Output<String> getSubstate() {

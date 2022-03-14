@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs;
 import java.lang.Double;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDela
      * Structure is documented below.
      * 
      */
-    @InputImport(name="fixedDelay")
+    @Import(name="fixedDelay")
       private final @Nullable Output<URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay;
 
     public Output<URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> getFixedDelay() {
@@ -32,7 +32,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDela
      * The value must be between 0.0 and 100.0 inclusive.
      * 
      */
-    @InputImport(name="percentage")
+    @Import(name="percentage")
       private final @Nullable Output<Double> percentage;
 
     public Output<Double> getPercentage() {

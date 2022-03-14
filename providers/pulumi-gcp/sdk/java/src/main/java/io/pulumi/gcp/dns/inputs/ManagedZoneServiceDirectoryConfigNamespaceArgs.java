@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dns.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ManagedZoneServiceDirectoryConfigNamespaceArgs extends io.pul
      * Ignored for `public` visibility zones.
      * 
      */
-    @InputImport(name="namespaceUrl", required=true)
+    @Import(name="namespaceUrl", required=true)
       private final Output<String> namespaceUrl;
 
     public Output<String> getNamespaceUrl() {

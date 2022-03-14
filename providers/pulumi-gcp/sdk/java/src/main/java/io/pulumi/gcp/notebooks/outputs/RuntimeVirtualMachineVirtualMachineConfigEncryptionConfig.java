@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig {
     /**
      * The Cloud KMS resource identifier of the customer-managed
@@ -21,8 +21,8 @@ public final class RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig {
      */
     private final @Nullable String kmsKey;
 
-    @OutputCustomType.Constructor
-    private RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig(@OutputCustomType.Parameter("kmsKey") @Nullable String kmsKey) {
+    @CustomType.Constructor
+    private RuntimeVirtualMachineVirtualMachineConfigEncryptionConfig(@CustomType.Parameter("kmsKey") @Nullable String kmsKey) {
         this.kmsKey = kmsKey;
     }
 

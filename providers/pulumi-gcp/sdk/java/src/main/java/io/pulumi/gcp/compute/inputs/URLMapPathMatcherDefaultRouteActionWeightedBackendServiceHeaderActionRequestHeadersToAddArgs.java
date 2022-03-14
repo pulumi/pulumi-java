@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
      * The name of the header to add.
      * 
      */
-    @InputImport(name="headerName")
+    @Import(name="headerName")
       private final @Nullable Output<String> headerName;
 
     public Output<String> getHeaderName() {
@@ -30,7 +30,7 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
      * The value of the header to add.
      * 
      */
-    @InputImport(name="headerValue")
+    @Import(name="headerValue")
       private final @Nullable Output<String> headerValue;
 
     public Output<String> getHeaderValue() {
@@ -42,7 +42,7 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHead
      * If true, headerValue is set for the header, discarding any values that were set for that header.
      * 
      */
-    @InputImport(name="replace")
+    @Import(name="replace")
       private final @Nullable Output<Boolean> replace;
 
     public Output<Boolean> getReplace() {

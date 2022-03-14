@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.tpu.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTensorflowVersionsResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -23,12 +23,12 @@ public final class GetTensorflowVersionsResult {
     private final List<String> versions;
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTensorflowVersionsResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("versions") List<String> versions,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("versions") List<String> versions,
+        @CustomType.Parameter("zone") String zone) {
         this.id = id;
         this.project = project;
         this.versions = versions;

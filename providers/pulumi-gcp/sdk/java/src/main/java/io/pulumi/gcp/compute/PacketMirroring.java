@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.PacketMirroringArgs;
@@ -61,7 +61,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="collectorIlb", type=PacketMirroringCollectorIlb.class, parameters={})
+    @Export(name="collectorIlb", type=PacketMirroringCollectorIlb.class, parameters={})
     private Output<PacketMirroringCollectorIlb> collectorIlb;
 
     /**
@@ -79,7 +79,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * A human-readable description of the rule.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -94,7 +94,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="filter", type=PacketMirroringFilter.class, parameters={})
+    @Export(name="filter", type=PacketMirroringFilter.class, parameters={})
     private Output</* @Nullable */ PacketMirroringFilter> filter;
 
     /**
@@ -110,7 +110,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="mirroredResources", type=PacketMirroringMirroredResources.class, parameters={})
+    @Export(name="mirroredResources", type=PacketMirroringMirroredResources.class, parameters={})
     private Output<PacketMirroringMirroredResources> mirroredResources;
 
     /**
@@ -125,7 +125,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * The name of the packet mirroring rule
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -142,7 +142,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="network", type=PacketMirroringNetwork.class, parameters={})
+    @Export(name="network", type=PacketMirroringNetwork.class, parameters={})
     private Output<PacketMirroringNetwork> network;
 
     /**
@@ -161,7 +161,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * the same instances.
      * 
      */
-    @OutputExport(name="priority", type=Integer.class, parameters={})
+    @Export(name="priority", type=Integer.class, parameters={})
     private Output<Integer> priority;
 
     /**
@@ -178,7 +178,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -194,7 +194,7 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider region is used.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.composer.inputs.GetEnvironmentConfigWorkloadsConfigScheduler;
 import io.pulumi.gcp.composer.inputs.GetEnvironmentConfigWorkloadsConfigWebServer;
 import io.pulumi.gcp.composer.inputs.GetEnvironmentConfigWorkloadsConfigWorker;
@@ -15,21 +15,21 @@ public final class GetEnvironmentConfigWorkloadsConfig extends io.pulumi.resourc
 
     public static final GetEnvironmentConfigWorkloadsConfig Empty = new GetEnvironmentConfigWorkloadsConfig();
 
-    @InputImport(name="schedulers", required=true)
+    @Import(name="schedulers", required=true)
       private final List<GetEnvironmentConfigWorkloadsConfigScheduler> schedulers;
 
     public List<GetEnvironmentConfigWorkloadsConfigScheduler> getSchedulers() {
         return this.schedulers;
     }
 
-    @InputImport(name="webServers", required=true)
+    @Import(name="webServers", required=true)
       private final List<GetEnvironmentConfigWorkloadsConfigWebServer> webServers;
 
     public List<GetEnvironmentConfigWorkloadsConfigWebServer> getWebServers() {
         return this.webServers;
     }
 
-    @InputImport(name="workers", required=true)
+    @Import(name="workers", required=true)
       private final List<GetEnvironmentConfigWorkloadsConfigWorker> workers;
 
     public List<GetEnvironmentConfigWorkloadsConfigWorker> getWorkers() {

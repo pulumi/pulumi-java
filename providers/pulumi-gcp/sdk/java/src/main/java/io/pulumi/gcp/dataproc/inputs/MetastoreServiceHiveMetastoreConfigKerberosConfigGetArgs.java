@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataproc.inputs.MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
      * Structure is documented below.
      * 
      */
-    @InputImport(name="keytab", required=true)
+    @Import(name="keytab", required=true)
       private final Output<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs> keytab;
 
     public Output<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabGetArgs> getKeytab() {
@@ -30,7 +30,7 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
      * A Cloud Storage URI that specifies the path to a krb5.conf file. It is of the form gs://{bucket_name}/path/to/krb5.conf, although the file does not need to be named krb5.conf explicitly.
      * 
      */
-    @InputImport(name="krb5ConfigGcsUri", required=true)
+    @Import(name="krb5ConfigGcsUri", required=true)
       private final Output<String> krb5ConfigGcsUri;
 
     public Output<String> getKrb5ConfigGcsUri() {
@@ -41,7 +41,7 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs exte
      * A Kerberos principal that exists in the both the keytab the KDC to authenticate as. A typical principal is of the form "primary/instance@REALM", but there is no exact format.
      * 
      */
-    @InputImport(name="principal", required=true)
+    @Import(name="principal", required=true)
       private final Output<String> principal;
 
     public Output<String> getPrincipal() {

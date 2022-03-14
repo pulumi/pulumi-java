@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplateIdentityConstraintsArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePassthroughExtensionsArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateTemplatePredefinedValuesArgs;
@@ -22,7 +22,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * Optional. Describes constraints on identities that may be appear in Certificates issued using this template. If this is omitted, then this template will not add restrictions on a certificate's identity.
      * 
      */
-    @InputImport(name="identityConstraints")
+    @Import(name="identityConstraints")
       private final @Nullable Output<CertificateTemplateIdentityConstraintsArgs> identityConstraints;
 
     public Output<CertificateTemplateIdentityConstraintsArgs> getIdentityConstraints() {
@@ -44,7 +44,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * Optional. Labels with user-defined metadata.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -55,7 +55,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -66,7 +66,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * The resource name for this CertificateTemplate in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -77,7 +77,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don't appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool's IssuancePolicy defines baseline_values that don't appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate's X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate's predefined_values.
      * 
      */
-    @InputImport(name="passthroughExtensions")
+    @Import(name="passthroughExtensions")
       private final @Nullable Output<CertificateTemplatePassthroughExtensionsArgs> passthroughExtensions;
 
     public Output<CertificateTemplatePassthroughExtensionsArgs> getPassthroughExtensions() {
@@ -88,7 +88,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * Optional. A set of X.509 values that will be applied to all issued certificates that use this template. If the certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If the issuing CaPool's IssuancePolicy defines conflicting baseline_values for the same properties, the certificate issuance request will fail.
      * 
      */
-    @InputImport(name="predefinedValues")
+    @Import(name="predefinedValues")
       private final @Nullable Output<CertificateTemplatePredefinedValuesArgs> predefinedValues;
 
     public Output<CertificateTemplatePredefinedValuesArgs> getPredefinedValues() {
@@ -99,7 +99,7 @@ public final class CertificateTemplateArgs extends io.pulumi.resources.ResourceA
      * The project for the resource
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

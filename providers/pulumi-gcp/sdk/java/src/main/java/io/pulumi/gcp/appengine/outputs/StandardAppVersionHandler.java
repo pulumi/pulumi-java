@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.appengine.outputs.StandardAppVersionHandlerScript;
 import io.pulumi.gcp.appengine.outputs.StandardAppVersionHandlerStaticFiles;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class StandardAppVersionHandler {
     /**
      * Actions to take when the user is not logged in.
@@ -57,15 +57,15 @@ public final class StandardAppVersionHandler {
      */
     private final @Nullable String urlRegex;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private StandardAppVersionHandler(
-        @OutputCustomType.Parameter("authFailAction") @Nullable String authFailAction,
-        @OutputCustomType.Parameter("login") @Nullable String login,
-        @OutputCustomType.Parameter("redirectHttpResponseCode") @Nullable String redirectHttpResponseCode,
-        @OutputCustomType.Parameter("script") @Nullable StandardAppVersionHandlerScript script,
-        @OutputCustomType.Parameter("securityLevel") @Nullable String securityLevel,
-        @OutputCustomType.Parameter("staticFiles") @Nullable StandardAppVersionHandlerStaticFiles staticFiles,
-        @OutputCustomType.Parameter("urlRegex") @Nullable String urlRegex) {
+        @CustomType.Parameter("authFailAction") @Nullable String authFailAction,
+        @CustomType.Parameter("login") @Nullable String login,
+        @CustomType.Parameter("redirectHttpResponseCode") @Nullable String redirectHttpResponseCode,
+        @CustomType.Parameter("script") @Nullable StandardAppVersionHandlerScript script,
+        @CustomType.Parameter("securityLevel") @Nullable String securityLevel,
+        @CustomType.Parameter("staticFiles") @Nullable StandardAppVersionHandlerStaticFiles staticFiles,
+        @CustomType.Parameter("urlRegex") @Nullable String urlRegex) {
         this.authFailAction = authFailAction;
         this.login = login;
         this.redirectHttpResponseCode = redirectHttpResponseCode;

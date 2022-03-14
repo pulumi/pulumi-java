@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.diagflow.inputs.CxPageFormParameterArgs;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CxPageFormArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="parameters")
+    @Import(name="parameters")
       private final @Nullable Output<List<CxPageFormParameterArgs>> parameters;
 
     public Output<List<CxPageFormParameterArgs>> getParameters() {

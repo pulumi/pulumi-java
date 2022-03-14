@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.URLMapDefaultRouteActionWeightedBackendServiceHeaderAction;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class URLMapDefaultRouteActionWeightedBackendService {
     /**
      * The full or partial URL to the BackendService resource being mirrored to.
@@ -38,11 +38,11 @@ public final class URLMapDefaultRouteActionWeightedBackendService {
      */
     private final @Nullable Integer weight;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private URLMapDefaultRouteActionWeightedBackendService(
-        @OutputCustomType.Parameter("backendService") @Nullable String backendService,
-        @OutputCustomType.Parameter("headerAction") @Nullable URLMapDefaultRouteActionWeightedBackendServiceHeaderAction headerAction,
-        @OutputCustomType.Parameter("weight") @Nullable Integer weight) {
+        @CustomType.Parameter("backendService") @Nullable String backendService,
+        @CustomType.Parameter("headerAction") @Nullable URLMapDefaultRouteActionWeightedBackendServiceHeaderAction headerAction,
+        @CustomType.Parameter("weight") @Nullable Integer weight) {
         this.backendService = backendService;
         this.headerAction = headerAction;
         this.weight = weight;

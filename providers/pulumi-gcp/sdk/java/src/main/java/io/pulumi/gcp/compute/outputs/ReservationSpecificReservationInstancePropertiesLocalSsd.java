@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ReservationSpecificReservationInstancePropertiesLocalSsd {
     /**
      * The size of the disk in base-2 GB.
@@ -25,10 +25,10 @@ public final class ReservationSpecificReservationInstancePropertiesLocalSsd {
      */
     private final @Nullable String $interface;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ReservationSpecificReservationInstancePropertiesLocalSsd(
-        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
-        @OutputCustomType.Parameter("interface") @Nullable String $interface) {
+        @CustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @CustomType.Parameter("interface") @Nullable String $interface) {
         this.diskSizeGb = diskSizeGb;
         this.$interface = $interface;
     }

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerTriggerSchedule;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionJobTriggerTrigger {
     /**
      * Schedule for triggered jobs
@@ -18,8 +18,8 @@ public final class PreventionJobTriggerTrigger {
      */
     private final @Nullable PreventionJobTriggerTriggerSchedule schedule;
 
-    @OutputCustomType.Constructor
-    private PreventionJobTriggerTrigger(@OutputCustomType.Parameter("schedule") @Nullable PreventionJobTriggerTriggerSchedule schedule) {
+    @CustomType.Constructor
+    private PreventionJobTriggerTrigger(@CustomType.Parameter("schedule") @Nullable PreventionJobTriggerTriggerSchedule schedule) {
         this.schedule = schedule;
     }
 

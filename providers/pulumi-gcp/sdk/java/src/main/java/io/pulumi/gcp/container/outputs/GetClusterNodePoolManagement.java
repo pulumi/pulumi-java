@@ -3,19 +3,19 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterNodePoolManagement {
     private final Boolean autoRepair;
     private final Boolean autoUpgrade;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterNodePoolManagement(
-        @OutputCustomType.Parameter("autoRepair") Boolean autoRepair,
-        @OutputCustomType.Parameter("autoUpgrade") Boolean autoUpgrade) {
+        @CustomType.Parameter("autoRepair") Boolean autoRepair,
+        @CustomType.Parameter("autoUpgrade") Boolean autoUpgrade) {
         this.autoRepair = autoRepair;
         this.autoUpgrade = autoUpgrade;
     }

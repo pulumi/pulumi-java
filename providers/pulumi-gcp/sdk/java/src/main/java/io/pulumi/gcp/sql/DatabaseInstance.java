@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.sql.DatabaseInstanceArgs;
@@ -62,7 +62,7 @@ public class DatabaseInstance extends io.pulumi.resources.CustomResource {
      * configuration is detailed below.
      * 
      */
-    @OutputExport(name="clone", type=DatabaseInstanceClone.class, parameters={})
+    @Export(name="clone", type=DatabaseInstanceClone.class, parameters={})
     private Output</* @Nullable */ DatabaseInstanceClone> clone;
 
     /**
@@ -79,7 +79,7 @@ public class DatabaseInstance extends io.pulumi.resources.CustomResource {
      * connection strings. For example, when connecting with [Cloud SQL Proxy](https://cloud.google.com/sql/docs/mysql/connect-admin-proxy).
      * 
      */
-    @OutputExport(name="connectionName", type=String.class, parameters={})
+    @Export(name="connectionName", type=String.class, parameters={})
     private Output<String> connectionName;
 
     /**
@@ -102,7 +102,7 @@ public class DatabaseInstance extends io.pulumi.resources.CustomResource {
      * includes an up-to-date reference of supported versions.
      * 
      */
-    @OutputExport(name="databaseVersion", type=String.class, parameters={})
+    @Export(name="databaseVersion", type=String.class, parameters={})
     private Output<String> databaseVersion;
 
     /**
@@ -125,7 +125,7 @@ public class DatabaseInstance extends io.pulumi.resources.CustomResource {
      * in state, a `destroy` or `update` command that deletes the instance will fail.
      * 
      */
-    @OutputExport(name="deletionProtection", type=Boolean.class, parameters={})
+    @Export(name="deletionProtection", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deletionProtection;
 
     /**
@@ -147,7 +147,7 @@ public class DatabaseInstance extends io.pulumi.resources.CustomResource {
      * key - please see [this step](https://cloud.google.com/sql/docs/mysql/configure-cmek#grantkey).
      * 
      */
-    @OutputExport(name="encryptionKeyName", type=String.class, parameters={})
+    @Export(name="encryptionKeyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> encryptionKeyName;
 
     /**
@@ -168,7 +168,7 @@ public class DatabaseInstance extends io.pulumi.resources.CustomResource {
      * The first IPv4 address of any type assigned.
      * 
      */
-    @OutputExport(name="firstIpAddress", type=String.class, parameters={})
+    @Export(name="firstIpAddress", type=String.class, parameters={})
     private Output<String> firstIpAddress;
 
     /**
@@ -178,7 +178,7 @@ public class DatabaseInstance extends io.pulumi.resources.CustomResource {
     public Output<String> getFirstIpAddress() {
         return this.firstIpAddress;
     }
-    @OutputExport(name="ipAddresses", type=List.class, parameters={DatabaseInstanceIpAddress.class})
+    @Export(name="ipAddresses", type=List.class, parameters={DatabaseInstanceIpAddress.class})
     private Output<List<DatabaseInstanceIpAddress>> ipAddresses;
 
     public Output<List<DatabaseInstanceIpAddress>> getIpAddresses() {
@@ -190,7 +190,7 @@ public class DatabaseInstance extends io.pulumi.resources.CustomResource {
      * have `binary_log_enabled` set, as well as existing backups.
      * 
      */
-    @OutputExport(name="masterInstanceName", type=String.class, parameters={})
+    @Export(name="masterInstanceName", type=String.class, parameters={})
     private Output<String> masterInstanceName;
 
     /**
@@ -206,7 +206,7 @@ public class DatabaseInstance extends io.pulumi.resources.CustomResource {
      * A name for this whitelist entry.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -220,7 +220,7 @@ public class DatabaseInstance extends io.pulumi.resources.CustomResource {
      * The first private (`PRIVATE`) IPv4 address assigned.
      * 
      */
-    @OutputExport(name="privateIpAddress", type=String.class, parameters={})
+    @Export(name="privateIpAddress", type=String.class, parameters={})
     private Output<String> privateIpAddress;
 
     /**
@@ -234,7 +234,7 @@ public class DatabaseInstance extends io.pulumi.resources.CustomResource {
      * The full project ID of the source instance.`
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -248,7 +248,7 @@ public class DatabaseInstance extends io.pulumi.resources.CustomResource {
      * The first public (`PRIMARY`) IPv4 address assigned.
      * 
      */
-    @OutputExport(name="publicIpAddress", type=String.class, parameters={})
+    @Export(name="publicIpAddress", type=String.class, parameters={})
     private Output<String> publicIpAddress;
 
     /**
@@ -267,7 +267,7 @@ public class DatabaseInstance extends io.pulumi.resources.CustomResource {
      * make sure you understand this.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -287,7 +287,7 @@ public class DatabaseInstance extends io.pulumi.resources.CustomResource {
      * configuration is detailed below. Valid only for MySQL instances.
      * 
      */
-    @OutputExport(name="replicaConfiguration", type=DatabaseInstanceReplicaConfiguration.class, parameters={})
+    @Export(name="replicaConfiguration", type=DatabaseInstanceReplicaConfiguration.class, parameters={})
     private Output<DatabaseInstanceReplicaConfiguration> replicaConfiguration;
 
     /**
@@ -305,7 +305,7 @@ public class DatabaseInstance extends io.pulumi.resources.CustomResource {
      * block during resource creation/update will trigger the restore action after the resource is created/updated.
      * 
      */
-    @OutputExport(name="restoreBackupContext", type=DatabaseInstanceRestoreBackupContext.class, parameters={})
+    @Export(name="restoreBackupContext", type=DatabaseInstanceRestoreBackupContext.class, parameters={})
     private Output</* @Nullable */ DatabaseInstanceRestoreBackupContext> restoreBackupContext;
 
     /**
@@ -322,7 +322,7 @@ public class DatabaseInstance extends io.pulumi.resources.CustomResource {
      * Initial root password. Required for MS SQL Server, ignored by MySQL and PostgreSQL.
      * 
      */
-    @OutputExport(name="rootPassword", type=String.class, parameters={})
+    @Export(name="rootPassword", type=String.class, parameters={})
     private Output</* @Nullable */ String> rootPassword;
 
     /**
@@ -336,7 +336,7 @@ public class DatabaseInstance extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -346,7 +346,7 @@ public class DatabaseInstance extends io.pulumi.resources.CustomResource {
     public Output<String> getSelfLink() {
         return this.selfLink;
     }
-    @OutputExport(name="serverCaCerts", type=List.class, parameters={DatabaseInstanceServerCaCert.class})
+    @Export(name="serverCaCerts", type=List.class, parameters={DatabaseInstanceServerCaCert.class})
     private Output<List<DatabaseInstanceServerCaCert>> serverCaCerts;
 
     public Output<List<DatabaseInstanceServerCaCert>> getServerCaCerts() {
@@ -357,7 +357,7 @@ public class DatabaseInstance extends io.pulumi.resources.CustomResource {
      * instance.
      * 
      */
-    @OutputExport(name="serviceAccountEmailAddress", type=String.class, parameters={})
+    @Export(name="serviceAccountEmailAddress", type=String.class, parameters={})
     private Output<String> serviceAccountEmailAddress;
 
     /**
@@ -373,7 +373,7 @@ public class DatabaseInstance extends io.pulumi.resources.CustomResource {
      * configuration is detailed below. Required if `clone` is not set.
      * 
      */
-    @OutputExport(name="settings", type=DatabaseInstanceSettings.class, parameters={})
+    @Export(name="settings", type=DatabaseInstanceSettings.class, parameters={})
     private Output<DatabaseInstanceSettings> settings;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.appengine.EngineSplitTrafficArgs;
@@ -46,7 +46,7 @@ public class EngineSplitTraffic extends io.pulumi.resources.CustomResource {
      * If set to true traffic will be migrated to this version.
      * 
      */
-    @OutputExport(name="migrateTraffic", type=Boolean.class, parameters={})
+    @Export(name="migrateTraffic", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> migrateTraffic;
 
     /**
@@ -61,7 +61,7 @@ public class EngineSplitTraffic extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -76,7 +76,7 @@ public class EngineSplitTraffic extends io.pulumi.resources.CustomResource {
      * The name of the service these settings apply to.
      * 
      */
-    @OutputExport(name="service", type=String.class, parameters={})
+    @Export(name="service", type=String.class, parameters={})
     private Output<String> service;
 
     /**
@@ -91,7 +91,7 @@ public class EngineSplitTraffic extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="split", type=EngineSplitTrafficSplit.class, parameters={})
+    @Export(name="split", type=EngineSplitTrafficSplit.class, parameters={})
     private Output<EngineSplitTrafficSplit> split;
 
     /**

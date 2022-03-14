@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplateSpecContainerEnvValueFrom;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetServiceTemplateSpecContainerEnv {
     /**
      * The name of the Cloud Run Service.
@@ -19,11 +19,11 @@ public final class GetServiceTemplateSpecContainerEnv {
     private final String value;
     private final List<GetServiceTemplateSpecContainerEnvValueFrom> valueFroms;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetServiceTemplateSpecContainerEnv(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("value") String value,
-        @OutputCustomType.Parameter("valueFroms") List<GetServiceTemplateSpecContainerEnvValueFrom> valueFroms) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("value") String value,
+        @CustomType.Parameter("valueFroms") List<GetServiceTemplateSpecContainerEnvValueFrom> valueFroms) {
         this.name = name;
         this.value = value;
         this.valueFroms = valueFroms;

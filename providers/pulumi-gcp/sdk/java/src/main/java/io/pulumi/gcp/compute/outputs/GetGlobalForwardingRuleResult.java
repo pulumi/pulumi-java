@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetGlobalForwardingRuleMetadataFilter;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetGlobalForwardingRuleResult {
     private final String description;
     /**
@@ -34,23 +34,23 @@ public final class GetGlobalForwardingRuleResult {
     private final String selfLink;
     private final String target;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetGlobalForwardingRuleResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ipAddress") String ipAddress,
-        @OutputCustomType.Parameter("ipProtocol") String ipProtocol,
-        @OutputCustomType.Parameter("ipVersion") String ipVersion,
-        @OutputCustomType.Parameter("labelFingerprint") String labelFingerprint,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("loadBalancingScheme") String loadBalancingScheme,
-        @OutputCustomType.Parameter("metadataFilters") List<GetGlobalForwardingRuleMetadataFilter> metadataFilters,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("portRange") String portRange,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("target") String target) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ipAddress") String ipAddress,
+        @CustomType.Parameter("ipProtocol") String ipProtocol,
+        @CustomType.Parameter("ipVersion") String ipVersion,
+        @CustomType.Parameter("labelFingerprint") String labelFingerprint,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("loadBalancingScheme") String loadBalancingScheme,
+        @CustomType.Parameter("metadataFilters") List<GetGlobalForwardingRuleMetadataFilter> metadataFilters,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("portRange") String portRange,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("target") String target) {
         this.description = description;
         this.id = id;
         this.ipAddress = ipAddress;

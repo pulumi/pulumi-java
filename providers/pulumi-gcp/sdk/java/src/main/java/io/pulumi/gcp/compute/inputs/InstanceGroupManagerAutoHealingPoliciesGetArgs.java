@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class InstanceGroupManagerAutoHealingPoliciesGetArgs extends io.pul
      * The health check resource that signals autohealing.
      * 
      */
-    @InputImport(name="healthCheck", required=true)
+    @Import(name="healthCheck", required=true)
       private final Output<String> healthCheck;
 
     public Output<String> getHealthCheck() {
@@ -30,7 +30,7 @@ public final class InstanceGroupManagerAutoHealingPoliciesGetArgs extends io.pul
      * it applies autohealing policies to new instances or recently recreated instances. Between 0 and 3600.
      * 
      */
-    @InputImport(name="initialDelaySec", required=true)
+    @Import(name="initialDelaySec", required=true)
       private final Output<Integer> initialDelaySec;
 
     public Output<Integer> getInitialDelaySec() {

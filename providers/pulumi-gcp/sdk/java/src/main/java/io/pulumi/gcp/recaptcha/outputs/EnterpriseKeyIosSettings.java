@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.recaptcha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnterpriseKeyIosSettings {
     /**
      * If set to true, it means allowed_bundle_ids will not be enforced.
@@ -24,10 +24,10 @@ public final class EnterpriseKeyIosSettings {
      */
     private final @Nullable List<String> allowedBundleIds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnterpriseKeyIosSettings(
-        @OutputCustomType.Parameter("allowAllBundleIds") @Nullable Boolean allowAllBundleIds,
-        @OutputCustomType.Parameter("allowedBundleIds") @Nullable List<String> allowedBundleIds) {
+        @CustomType.Parameter("allowAllBundleIds") @Nullable Boolean allowAllBundleIds,
+        @CustomType.Parameter("allowedBundleIds") @Nullable List<String> allowedBundleIds) {
         this.allowAllBundleIds = allowAllBundleIds;
         this.allowedBundleIds = allowedBundleIds;
     }

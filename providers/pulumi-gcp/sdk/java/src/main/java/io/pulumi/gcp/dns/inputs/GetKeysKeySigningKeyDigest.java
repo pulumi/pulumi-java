@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetKeysKeySigningKeyDigest extends io.pulumi.resources.Invoke
      * The base-16 encoded bytes of this digest. Suitable for use in a DS resource record.
      * 
      */
-    @InputImport(name="digest")
+    @Import(name="digest")
       private final @Nullable String digest;
 
     public Optional<String> getDigest() {
@@ -29,7 +29,7 @@ public final class GetKeysKeySigningKeyDigest extends io.pulumi.resources.Invoke
      * Specifies the algorithm used to calculate this digest. Possible values are `sha1`, `sha256` and `sha384`
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable String type;
 
     public Optional<String> getType() {

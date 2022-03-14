@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegionNetworkEndpointGroupAppEngine {
     /**
      * Optional serving service.
@@ -36,11 +36,11 @@ public final class RegionNetworkEndpointGroupAppEngine {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionNetworkEndpointGroupAppEngine(
-        @OutputCustomType.Parameter("service") @Nullable String service,
-        @OutputCustomType.Parameter("urlMask") @Nullable String urlMask,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("service") @Nullable String service,
+        @CustomType.Parameter("urlMask") @Nullable String urlMask,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.service = service;
         this.urlMask = urlMask;
         this.version = version;

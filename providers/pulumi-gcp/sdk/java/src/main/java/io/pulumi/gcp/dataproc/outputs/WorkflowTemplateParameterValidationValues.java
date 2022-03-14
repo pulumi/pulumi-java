@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplateParameterValidationValues {
     /**
      * Optional. Corresponds to the label values of reservation resource.
@@ -16,8 +16,8 @@ public final class WorkflowTemplateParameterValidationValues {
      */
     private final List<String> values;
 
-    @OutputCustomType.Constructor
-    private WorkflowTemplateParameterValidationValues(@OutputCustomType.Parameter("values") List<String> values) {
+    @CustomType.Constructor
+    private WorkflowTemplateParameterValidationValues(@CustomType.Parameter("values") List<String> values) {
         this.values = values;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesAssignmentGetArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageGetArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageRepositoryGetArgs;
@@ -30,7 +30,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="assignment")
+    @Import(name="assignment")
       private final @Nullable Output<GuestPoliciesAssignmentGetArgs> assignment;
 
     public Output<GuestPoliciesAssignmentGetArgs> getAssignment() {
@@ -42,7 +42,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
      * "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -53,7 +53,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
      * Description of the guest policy. Length of the description is limited to 1024 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -64,7 +64,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
      * The etag for this guest policy. If this is provided on update, it must match the server's etag.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -80,7 +80,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
      * * Must be unique within the project.
      * 
      */
-    @InputImport(name="guestPolicyId")
+    @Import(name="guestPolicyId")
       private final @Nullable Output<String> guestPolicyId;
 
     public Output<String> getGuestPolicyId() {
@@ -94,7 +94,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
      * could potentially have conflicting assignments.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -108,7 +108,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="packageRepositories")
+    @Import(name="packageRepositories")
       private final @Nullable Output<List<GuestPoliciesPackageRepositoryGetArgs>> packageRepositories;
 
     public Output<List<GuestPoliciesPackageRepositoryGetArgs>> getPackageRepositories() {
@@ -120,7 +120,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="packages")
+    @Import(name="packages")
       private final @Nullable Output<List<GuestPoliciesPackageGetArgs>> packages;
 
     public Output<List<GuestPoliciesPackageGetArgs>> getPackages() {
@@ -132,7 +132,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -144,7 +144,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="recipes")
+    @Import(name="recipes")
       private final @Nullable Output<List<GuestPoliciesRecipeGetArgs>> recipes;
 
     public Output<List<GuestPoliciesRecipeGetArgs>> getRecipes() {
@@ -156,7 +156,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
      * "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

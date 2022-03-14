@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.pubsub.SubscriptionArgs;
@@ -71,7 +71,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * will eventually redeliver the message.
      * 
      */
-    @OutputExport(name="ackDeadlineSeconds", type=Integer.class, parameters={})
+    @Export(name="ackDeadlineSeconds", type=Integer.class, parameters={})
     private Output<Integer> ackDeadlineSeconds;
 
     /**
@@ -106,7 +106,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="deadLetterPolicy", type=SubscriptionDeadLetterPolicy.class, parameters={})
+    @Export(name="deadLetterPolicy", type=SubscriptionDeadLetterPolicy.class, parameters={})
     private Output</* @Nullable */ SubscriptionDeadLetterPolicy> deadLetterPolicy;
 
     /**
@@ -129,7 +129,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * may be delivered in any order.
      * 
      */
-    @OutputExport(name="enableMessageOrdering", type=Boolean.class, parameters={})
+    @Export(name="enableMessageOrdering", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableMessageOrdering;
 
     /**
@@ -152,7 +152,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="expirationPolicy", type=SubscriptionExpirationPolicy.class, parameters={})
+    @Export(name="expirationPolicy", type=SubscriptionExpirationPolicy.class, parameters={})
     private Output<SubscriptionExpirationPolicy> expirationPolicy;
 
     /**
@@ -176,7 +176,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * you can't modify the filter.
      * 
      */
-    @OutputExport(name="filter", type=String.class, parameters={})
+    @Export(name="filter", type=String.class, parameters={})
     private Output</* @Nullable */ String> filter;
 
     /**
@@ -193,7 +193,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * A set of key/value label pairs to assign to this Subscription.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -214,7 +214,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * by 's'. Example: `"600.5s"`.
      * 
      */
-    @OutputExport(name="messageRetentionDuration", type=String.class, parameters={})
+    @Export(name="messageRetentionDuration", type=String.class, parameters={})
     private Output</* @Nullable */ String> messageRetentionDuration;
 
     /**
@@ -235,7 +235,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Name of the subscription.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -250,7 +250,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -268,7 +268,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="pushConfig", type=SubscriptionPushConfig.class, parameters={})
+    @Export(name="pushConfig", type=SubscriptionPushConfig.class, parameters={})
     private Output</* @Nullable */ SubscriptionPushConfig> pushConfig;
 
     /**
@@ -288,7 +288,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * messageRetentionDuration window.
      * 
      */
-    @OutputExport(name="retainAckedMessages", type=Boolean.class, parameters={})
+    @Export(name="retainAckedMessages", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> retainAckedMessages;
 
     /**
@@ -308,7 +308,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="retryPolicy", type=SubscriptionRetryPolicy.class, parameters={})
+    @Export(name="retryPolicy", type=SubscriptionRetryPolicy.class, parameters={})
     private Output</* @Nullable */ SubscriptionRetryPolicy> retryPolicy;
 
     /**
@@ -325,7 +325,7 @@ public class Subscription extends io.pulumi.resources.CustomResource {
      * A reference to a Topic resource.
      * 
      */
-    @OutputExport(name="topic", type=String.class, parameters={})
+    @Export(name="topic", type=String.class, parameters={})
     private Output<String> topic;
 
     /**

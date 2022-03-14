@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.bigquery.outputs.TableExternalDataConfigurationCsvOptions;
 import io.pulumi.gcp.bigquery.outputs.TableExternalDataConfigurationGoogleSheetsOptions;
 import io.pulumi.gcp.bigquery.outputs.TableExternalDataConfigurationHivePartitioningOptions;
@@ -15,7 +15,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TableExternalDataConfiguration {
     /**
      * - Let BigQuery try to autodetect the schema
@@ -97,18 +97,18 @@ public final class TableExternalDataConfiguration {
      */
     private final List<String> sourceUris;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableExternalDataConfiguration(
-        @OutputCustomType.Parameter("autodetect") Boolean autodetect,
-        @OutputCustomType.Parameter("compression") @Nullable String compression,
-        @OutputCustomType.Parameter("csvOptions") @Nullable TableExternalDataConfigurationCsvOptions csvOptions,
-        @OutputCustomType.Parameter("googleSheetsOptions") @Nullable TableExternalDataConfigurationGoogleSheetsOptions googleSheetsOptions,
-        @OutputCustomType.Parameter("hivePartitioningOptions") @Nullable TableExternalDataConfigurationHivePartitioningOptions hivePartitioningOptions,
-        @OutputCustomType.Parameter("ignoreUnknownValues") @Nullable Boolean ignoreUnknownValues,
-        @OutputCustomType.Parameter("maxBadRecords") @Nullable Integer maxBadRecords,
-        @OutputCustomType.Parameter("schema") @Nullable String schema,
-        @OutputCustomType.Parameter("sourceFormat") String sourceFormat,
-        @OutputCustomType.Parameter("sourceUris") List<String> sourceUris) {
+        @CustomType.Parameter("autodetect") Boolean autodetect,
+        @CustomType.Parameter("compression") @Nullable String compression,
+        @CustomType.Parameter("csvOptions") @Nullable TableExternalDataConfigurationCsvOptions csvOptions,
+        @CustomType.Parameter("googleSheetsOptions") @Nullable TableExternalDataConfigurationGoogleSheetsOptions googleSheetsOptions,
+        @CustomType.Parameter("hivePartitioningOptions") @Nullable TableExternalDataConfigurationHivePartitioningOptions hivePartitioningOptions,
+        @CustomType.Parameter("ignoreUnknownValues") @Nullable Boolean ignoreUnknownValues,
+        @CustomType.Parameter("maxBadRecords") @Nullable Integer maxBadRecords,
+        @CustomType.Parameter("schema") @Nullable String schema,
+        @CustomType.Parameter("sourceFormat") String sourceFormat,
+        @CustomType.Parameter("sourceUris") List<String> sourceUris) {
         this.autodetect = autodetect;
         this.compression = compression;
         this.csvOptions = csvOptions;

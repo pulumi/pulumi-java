@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateConfigSubjectConfigSubject;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateConfigSubjectConfigSubjectAltName;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateConfigSubjectConfig {
     /**
      * Contains distinguished name fields such as the location and organization.
@@ -25,10 +25,10 @@ public final class CertificateConfigSubjectConfig {
      */
     private final @Nullable CertificateConfigSubjectConfigSubjectAltName subjectAltName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateConfigSubjectConfig(
-        @OutputCustomType.Parameter("subject") CertificateConfigSubjectConfigSubject subject,
-        @OutputCustomType.Parameter("subjectAltName") @Nullable CertificateConfigSubjectConfigSubjectAltName subjectAltName) {
+        @CustomType.Parameter("subject") CertificateConfigSubjectConfigSubject subject,
+        @CustomType.Parameter("subjectAltName") @Nullable CertificateConfigSubjectConfigSubjectAltName subjectAltName) {
         this.subject = subject;
         this.subjectAltName = subjectAltName;
     }

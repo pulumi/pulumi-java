@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.NodeTemplateNodeTypeFlexibilityArgs;
 import io.pulumi.gcp.compute.inputs.NodeTemplateServerBindingArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `ENABLED` and `NONE`.
      * 
      */
-    @InputImport(name="cpuOvercommitType")
+    @Import(name="cpuOvercommitType")
       private final @Nullable Output<String> cpuOvercommitType;
 
     public Output<String> getCpuOvercommitType() {
@@ -34,7 +34,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * An optional textual description of the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * instance scheduling.
      * 
      */
-    @InputImport(name="nodeAffinityLabels")
+    @Import(name="nodeAffinityLabels")
       private final @Nullable Output<Map<String,String>> nodeAffinityLabels;
 
     public Output<Map<String,String>> getNodeAffinityLabels() {
@@ -69,7 +69,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * Only one of nodeTypeFlexibility and nodeType can be specified.
      * 
      */
-    @InputImport(name="nodeType")
+    @Import(name="nodeType")
       private final @Nullable Output<String> nodeType;
 
     public Output<String> getNodeType() {
@@ -84,7 +84,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="nodeTypeFlexibility")
+    @Import(name="nodeTypeFlexibility")
       private final @Nullable Output<NodeTemplateNodeTypeFlexibilityArgs> nodeTypeFlexibility;
 
     public Output<NodeTemplateNodeTypeFlexibilityArgs> getNodeTypeFlexibility() {
@@ -96,7 +96,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -108,7 +108,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider region is used.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -121,7 +121,7 @@ public final class NodeTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="serverBinding")
+    @Import(name="serverBinding")
       private final @Nullable Output<NodeTemplateServerBindingArgs> serverBinding;
 
     public Output<NodeTemplateServerBindingArgs> getServerBinding() {

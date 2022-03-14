@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.appengine.outputs.FlexibleAppVersionAutomaticScalingCpuUtilization;
 import io.pulumi.gcp.appengine.outputs.FlexibleAppVersionAutomaticScalingDiskUtilization;
 import io.pulumi.gcp.appengine.outputs.FlexibleAppVersionAutomaticScalingNetworkUtilization;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlexibleAppVersionAutomaticScaling {
     /**
      * The time period that the Autoscaler should wait before it starts collecting information from a new instance.
@@ -84,20 +84,20 @@ public final class FlexibleAppVersionAutomaticScaling {
      */
     private final @Nullable FlexibleAppVersionAutomaticScalingRequestUtilization requestUtilization;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlexibleAppVersionAutomaticScaling(
-        @OutputCustomType.Parameter("coolDownPeriod") @Nullable String coolDownPeriod,
-        @OutputCustomType.Parameter("cpuUtilization") FlexibleAppVersionAutomaticScalingCpuUtilization cpuUtilization,
-        @OutputCustomType.Parameter("diskUtilization") @Nullable FlexibleAppVersionAutomaticScalingDiskUtilization diskUtilization,
-        @OutputCustomType.Parameter("maxConcurrentRequests") @Nullable Integer maxConcurrentRequests,
-        @OutputCustomType.Parameter("maxIdleInstances") @Nullable Integer maxIdleInstances,
-        @OutputCustomType.Parameter("maxPendingLatency") @Nullable String maxPendingLatency,
-        @OutputCustomType.Parameter("maxTotalInstances") @Nullable Integer maxTotalInstances,
-        @OutputCustomType.Parameter("minIdleInstances") @Nullable Integer minIdleInstances,
-        @OutputCustomType.Parameter("minPendingLatency") @Nullable String minPendingLatency,
-        @OutputCustomType.Parameter("minTotalInstances") @Nullable Integer minTotalInstances,
-        @OutputCustomType.Parameter("networkUtilization") @Nullable FlexibleAppVersionAutomaticScalingNetworkUtilization networkUtilization,
-        @OutputCustomType.Parameter("requestUtilization") @Nullable FlexibleAppVersionAutomaticScalingRequestUtilization requestUtilization) {
+        @CustomType.Parameter("coolDownPeriod") @Nullable String coolDownPeriod,
+        @CustomType.Parameter("cpuUtilization") FlexibleAppVersionAutomaticScalingCpuUtilization cpuUtilization,
+        @CustomType.Parameter("diskUtilization") @Nullable FlexibleAppVersionAutomaticScalingDiskUtilization diskUtilization,
+        @CustomType.Parameter("maxConcurrentRequests") @Nullable Integer maxConcurrentRequests,
+        @CustomType.Parameter("maxIdleInstances") @Nullable Integer maxIdleInstances,
+        @CustomType.Parameter("maxPendingLatency") @Nullable String maxPendingLatency,
+        @CustomType.Parameter("maxTotalInstances") @Nullable Integer maxTotalInstances,
+        @CustomType.Parameter("minIdleInstances") @Nullable Integer minIdleInstances,
+        @CustomType.Parameter("minPendingLatency") @Nullable String minPendingLatency,
+        @CustomType.Parameter("minTotalInstances") @Nullable Integer minTotalInstances,
+        @CustomType.Parameter("networkUtilization") @Nullable FlexibleAppVersionAutomaticScalingNetworkUtilization networkUtilization,
+        @CustomType.Parameter("requestUtilization") @Nullable FlexibleAppVersionAutomaticScalingRequestUtilization requestUtilization) {
         this.coolDownPeriod = coolDownPeriod;
         this.cpuUtilization = cpuUtilization;
         this.diskUtilization = diskUtilization;

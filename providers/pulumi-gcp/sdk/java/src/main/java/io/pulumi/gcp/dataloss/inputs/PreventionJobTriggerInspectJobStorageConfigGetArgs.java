@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGetArgs;
@@ -22,7 +22,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigGetArgs extends io
      * Structure is documented below.
      * 
      */
-    @InputImport(name="bigQueryOptions")
+    @Import(name="bigQueryOptions")
       private final @Nullable Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGetArgs> bigQueryOptions;
 
     public Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsGetArgs> getBigQueryOptions() {
@@ -34,7 +34,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigGetArgs extends io
      * Structure is documented below.
      * 
      */
-    @InputImport(name="cloudStorageOptions")
+    @Import(name="cloudStorageOptions")
       private final @Nullable Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsGetArgs> cloudStorageOptions;
 
     public Output<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsGetArgs> getCloudStorageOptions() {
@@ -46,7 +46,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigGetArgs extends io
      * Structure is documented below.
      * 
      */
-    @InputImport(name="datastoreOptions")
+    @Import(name="datastoreOptions")
       private final @Nullable Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGetArgs> datastoreOptions;
 
     public Output<PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsGetArgs> getDatastoreOptions() {
@@ -58,7 +58,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigGetArgs extends io
      * Structure is documented below.
      * 
      */
-    @InputImport(name="timespanConfig")
+    @Import(name="timespanConfig")
       private final @Nullable Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetArgs> timespanConfig;
 
     public Output<PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetArgs> getTimespanConfig() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataproc.outputs.JobSparksqlConfigLoggingConfig;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobSparksqlConfig {
     /**
      * HCFS URIs of jar files to be added to the Spark CLASSPATH.
@@ -43,14 +43,14 @@ public final class JobSparksqlConfig {
      */
     private final @Nullable Map<String,String> scriptVariables;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobSparksqlConfig(
-        @OutputCustomType.Parameter("jarFileUris") @Nullable List<String> jarFileUris,
-        @OutputCustomType.Parameter("loggingConfig") @Nullable JobSparksqlConfigLoggingConfig loggingConfig,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("queryFileUri") @Nullable String queryFileUri,
-        @OutputCustomType.Parameter("queryLists") @Nullable List<String> queryLists,
-        @OutputCustomType.Parameter("scriptVariables") @Nullable Map<String,String> scriptVariables) {
+        @CustomType.Parameter("jarFileUris") @Nullable List<String> jarFileUris,
+        @CustomType.Parameter("loggingConfig") @Nullable JobSparksqlConfigLoggingConfig loggingConfig,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("queryFileUri") @Nullable String queryFileUri,
+        @CustomType.Parameter("queryLists") @Nullable List<String> queryLists,
+        @CustomType.Parameter("scriptVariables") @Nullable Map<String,String> scriptVariables) {
         this.jarFileUris = jarFileUris;
         this.loggingConfig = loggingConfig;
         this.properties = properties;

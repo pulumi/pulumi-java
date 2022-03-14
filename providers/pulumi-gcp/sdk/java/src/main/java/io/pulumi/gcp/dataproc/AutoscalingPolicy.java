@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataproc.AutoscalingPolicyArgs;
@@ -44,7 +44,7 @@ public class AutoscalingPolicy extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="basicAlgorithm", type=AutoscalingPolicyBasicAlgorithm.class, parameters={})
+    @Export(name="basicAlgorithm", type=AutoscalingPolicyBasicAlgorithm.class, parameters={})
     private Output</* @Nullable */ AutoscalingPolicyBasicAlgorithm> basicAlgorithm;
 
     /**
@@ -60,7 +60,7 @@ public class AutoscalingPolicy extends io.pulumi.resources.CustomResource {
      * The default value is `global`.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output</* @Nullable */ String> location;
 
     /**
@@ -75,7 +75,7 @@ public class AutoscalingPolicy extends io.pulumi.resources.CustomResource {
      * The "resource name" of the autoscaling policy.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -91,7 +91,7 @@ public class AutoscalingPolicy extends io.pulumi.resources.CustomResource {
      * 3 and 50 characters.
      * 
      */
-    @OutputExport(name="policyId", type=String.class, parameters={})
+    @Export(name="policyId", type=String.class, parameters={})
     private Output<String> policyId;
 
     /**
@@ -108,7 +108,7 @@ public class AutoscalingPolicy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -124,7 +124,7 @@ public class AutoscalingPolicy extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="secondaryWorkerConfig", type=AutoscalingPolicySecondaryWorkerConfig.class, parameters={})
+    @Export(name="secondaryWorkerConfig", type=AutoscalingPolicySecondaryWorkerConfig.class, parameters={})
     private Output</* @Nullable */ AutoscalingPolicySecondaryWorkerConfig> secondaryWorkerConfig;
 
     /**
@@ -140,7 +140,7 @@ public class AutoscalingPolicy extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="workerConfig", type=AutoscalingPolicyWorkerConfig.class, parameters={})
+    @Export(name="workerConfig", type=AutoscalingPolicyWorkerConfig.class, parameters={})
     private Output</* @Nullable */ AutoscalingPolicyWorkerConfig> workerConfig;
 
     /**

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AlertPolicyAlertStrategyNotificationRateLimit {
     /**
      * Not more than one notification per period.
@@ -17,8 +17,8 @@ public final class AlertPolicyAlertStrategyNotificationRateLimit {
      */
     private final @Nullable String period;
 
-    @OutputCustomType.Constructor
-    private AlertPolicyAlertStrategyNotificationRateLimit(@OutputCustomType.Parameter("period") @Nullable String period) {
+    @CustomType.Constructor
+    private AlertPolicyAlertStrategyNotificationRateLimit(@CustomType.Parameter("period") @Nullable String period) {
         this.period = period;
     }
 

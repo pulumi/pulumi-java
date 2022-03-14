@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ManagedZoneDnssecConfigDefaultKeySpec {
     /**
      * String mnemonic specifying the DNSSEC algorithm of this key
@@ -40,12 +40,12 @@ public final class ManagedZoneDnssecConfigDefaultKeySpec {
      */
     private final @Nullable String kind;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ManagedZoneDnssecConfigDefaultKeySpec(
-        @OutputCustomType.Parameter("algorithm") @Nullable String algorithm,
-        @OutputCustomType.Parameter("keyLength") @Nullable Integer keyLength,
-        @OutputCustomType.Parameter("keyType") @Nullable String keyType,
-        @OutputCustomType.Parameter("kind") @Nullable String kind) {
+        @CustomType.Parameter("algorithm") @Nullable String algorithm,
+        @CustomType.Parameter("keyLength") @Nullable Integer keyLength,
+        @CustomType.Parameter("keyType") @Nullable String keyType,
+        @CustomType.Parameter("kind") @Nullable String kind) {
         this.algorithm = algorithm;
         this.keyLength = keyLength;
         this.keyType = keyType;

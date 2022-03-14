@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.gkehub.inputs.MembershipAuthorityGetArgs;
 import io.pulumi.gcp.gkehub.inputs.MembershipEndpointGetArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="authority")
+    @Import(name="authority")
       private final @Nullable Output<MembershipAuthorityGetArgs> authority;
 
     public Output<MembershipAuthorityGetArgs> getAuthority() {
@@ -39,7 +39,7 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Deprecated /* This field is unavailable in the GA provider and will be removed from the beta provider in a future release. */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     @Deprecated /* This field is unavailable in the GA provider and will be removed from the beta provider in a future release. */
@@ -52,7 +52,7 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="endpoint")
+    @Import(name="endpoint")
       private final @Nullable Output<MembershipEndpointGetArgs> endpoint;
 
     public Output<MembershipEndpointGetArgs> getEndpoint() {
@@ -63,7 +63,7 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
      * Labels to apply to this membership.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -74,7 +74,7 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
      * The client-provided identifier of the membership.
      * 
      */
-    @InputImport(name="membershipId")
+    @Import(name="membershipId")
       private final @Nullable Output<String> membershipId;
 
     public Output<String> getMembershipId() {
@@ -85,7 +85,7 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
      * The unique identifier of the membership.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -97,7 +97,7 @@ public final class MembershipState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

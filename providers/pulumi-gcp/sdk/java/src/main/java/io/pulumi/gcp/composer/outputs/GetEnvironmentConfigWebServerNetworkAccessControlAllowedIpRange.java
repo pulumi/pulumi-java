@@ -3,19 +3,19 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange {
     private final String description;
     private final String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnvironmentConfigWebServerNetworkAccessControlAllowedIpRange(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("value") String value) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("value") String value) {
         this.description = description;
         this.value = value;
     }

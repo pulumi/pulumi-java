@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RegionInstanceGroupManagerVersionTargetSizeArgs extends io.pu
      * , The number of instances which are managed for this version. Conflicts with `percent`.
      * 
      */
-    @InputImport(name="fixed")
+    @Import(name="fixed")
       private final @Nullable Output<Integer> fixed;
 
     public Output<Integer> getFixed() {
@@ -31,7 +31,7 @@ public final class RegionInstanceGroupManagerVersionTargetSizeArgs extends io.pu
      * one of which has a `target_size.percent` of `60` will create 2 instances of that `version`.
      * 
      */
-    @InputImport(name="percent")
+    @Import(name="percent")
       private final @Nullable Output<Integer> percent;
 
     public Output<Integer> getPercent() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.tags.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
      * fractional digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -30,7 +30,7 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
      * User-assigned description of the TagKey. Must not exceed 256 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -41,7 +41,7 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
      * The generated numeric id for the TagKey.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -52,7 +52,7 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
      * Output only. Namespaced name of the TagKey.
      * 
      */
-    @InputImport(name="namespacedName")
+    @Import(name="namespacedName")
       private final @Nullable Output<String> namespacedName;
 
     public Output<String> getNamespacedName() {
@@ -63,7 +63,7 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
      * Input only. The resource name of the new TagKey's parent. Must be of the form organizations/{org_id}.
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -75,7 +75,7 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
      * The short name must be 1-63 characters, beginning and ending with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
      */
-    @InputImport(name="shortName")
+    @Import(name="shortName")
       private final @Nullable Output<String> shortName;
 
     public Output<String> getShortName() {
@@ -87,7 +87,7 @@ public final class TagKeyState extends io.pulumi.resources.ResourceArgs {
      * digits. Examples: "2014-10-02T15:01:23Z" and "2014-10-02T15:01:23.045123456Z".
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

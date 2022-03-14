@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,14 +13,14 @@ public final class GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule 
 
     public static final GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule Empty = new GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule();
 
-    @InputImport(name="daysInCycle", required=true)
+    @Import(name="daysInCycle", required=true)
       private final Integer daysInCycle;
 
     public Integer getDaysInCycle() {
         return this.daysInCycle;
     }
 
-    @InputImport(name="startTime", required=true)
+    @Import(name="startTime", required=true)
       private final String startTime;
 
     public String getStartTime() {

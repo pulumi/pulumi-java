@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dns;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dns.PolicyArgs;
@@ -54,7 +54,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="alternativeNameServerConfig", type=PolicyAlternativeNameServerConfig.class, parameters={})
+    @Export(name="alternativeNameServerConfig", type=PolicyAlternativeNameServerConfig.class, parameters={})
     private Output</* @Nullable */ PolicyAlternativeNameServerConfig> alternativeNameServerConfig;
 
     /**
@@ -71,7 +71,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * A textual description field. Defaults to 'Managed by Pulumi'.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -88,7 +88,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * that are bound to this policy.
      * 
      */
-    @OutputExport(name="enableInboundForwarding", type=Boolean.class, parameters={})
+    @Export(name="enableInboundForwarding", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableInboundForwarding;
 
     /**
@@ -106,7 +106,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Defaults to no logging if not set.
      * 
      */
-    @OutputExport(name="enableLogging", type=Boolean.class, parameters={})
+    @Export(name="enableLogging", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableLogging;
 
     /**
@@ -121,7 +121,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * User assigned name for this policy.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -136,7 +136,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="networks", type=List.class, parameters={PolicyNetwork.class})
+    @Export(name="networks", type=List.class, parameters={PolicyNetwork.class})
     private Output</* @Nullable */ List<PolicyNetwork>> networks;
 
     /**
@@ -152,7 +152,7 @@ public class Policy extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

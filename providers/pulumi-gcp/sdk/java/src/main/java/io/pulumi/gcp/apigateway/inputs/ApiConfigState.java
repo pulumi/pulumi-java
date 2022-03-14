@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigateway.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.apigateway.inputs.ApiConfigGatewayConfigGetArgs;
 import io.pulumi.gcp.apigateway.inputs.ApiConfigOpenapiDocumentGetArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
      * The API to attach the config to.
      * 
      */
-    @InputImport(name="api")
+    @Import(name="api")
       private final @Nullable Output<String> api;
 
     public Output<String> getApi() {
@@ -33,7 +33,7 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
      * Identifier to assign to the API Config. Must be unique within scope of the parent resource(api).
      * 
      */
-    @InputImport(name="apiConfigId")
+    @Import(name="apiConfigId")
       private final @Nullable Output<String> apiConfigId;
 
     public Output<String> getApiConfigId() {
@@ -45,7 +45,7 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
      * specified prefix. If this and api_config_id are unspecified, a random value is chosen for the name.
      * 
      */
-    @InputImport(name="apiConfigIdPrefix")
+    @Import(name="apiConfigIdPrefix")
       private final @Nullable Output<String> apiConfigIdPrefix;
 
     public Output<String> getApiConfigIdPrefix() {
@@ -56,7 +56,7 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
      * A user-visible name for the API.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -69,7 +69,7 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="gatewayConfig")
+    @Import(name="gatewayConfig")
       private final @Nullable Output<ApiConfigGatewayConfigGetArgs> gatewayConfig;
 
     public Output<ApiConfigGatewayConfigGetArgs> getGatewayConfig() {
@@ -80,7 +80,7 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
      * Resource labels to represent user-provided metadata.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -91,7 +91,7 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
      * The resource name of the API Config.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -103,7 +103,7 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="openapiDocuments")
+    @Import(name="openapiDocuments")
       private final @Nullable Output<List<ApiConfigOpenapiDocumentGetArgs>> openapiDocuments;
 
     public Output<List<ApiConfigOpenapiDocumentGetArgs>> getOpenapiDocuments() {
@@ -115,7 +115,7 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -126,7 +126,7 @@ public final class ApiConfigState extends io.pulumi.resources.ResourceArgs {
      * The ID of the associated Service Config (https://cloud.google.com/service-infrastructure/docs/glossary#config).
      * 
      */
-    @InputImport(name="serviceConfigId")
+    @Import(name="serviceConfigId")
       private final @Nullable Output<String> serviceConfigId;
 
     public Output<String> getServiceConfigId() {

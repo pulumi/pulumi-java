@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectId;
 import java.lang.Boolean;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan {
     /**
      * Indicates whether or not this extension is critical (i.e., if the client does not know how to
@@ -27,11 +27,11 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan(
-        @OutputCustomType.Parameter("critical") @Nullable Boolean critical,
-        @OutputCustomType.Parameter("obectIds") @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectId> obectIds,
-        @OutputCustomType.Parameter("value") @Nullable String value) {
+        @CustomType.Parameter("critical") @Nullable Boolean critical,
+        @CustomType.Parameter("obectIds") @Nullable List<CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectId> obectIds,
+        @CustomType.Parameter("value") @Nullable String value) {
         this.critical = critical;
         this.obectIds = obectIds;
         this.value = value;

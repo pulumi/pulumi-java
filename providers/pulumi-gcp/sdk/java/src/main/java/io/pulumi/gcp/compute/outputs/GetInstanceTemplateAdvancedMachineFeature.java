@@ -3,20 +3,20 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceTemplateAdvancedMachineFeature {
     private final Boolean enableNestedVirtualization;
     private final Integer threadsPerCore;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceTemplateAdvancedMachineFeature(
-        @OutputCustomType.Parameter("enableNestedVirtualization") Boolean enableNestedVirtualization,
-        @OutputCustomType.Parameter("threadsPerCore") Integer threadsPerCore) {
+        @CustomType.Parameter("enableNestedVirtualization") Boolean enableNestedVirtualization,
+        @CustomType.Parameter("threadsPerCore") Integer threadsPerCore) {
         this.enableNestedVirtualization = enableNestedVirtualization;
         this.threadsPerCore = threadsPerCore;
     }

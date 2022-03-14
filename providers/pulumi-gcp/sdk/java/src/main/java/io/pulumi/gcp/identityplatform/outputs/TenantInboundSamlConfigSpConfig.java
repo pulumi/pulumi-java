@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.identityplatform.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.identityplatform.outputs.TenantInboundSamlConfigSpConfigSpCertificate;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TenantInboundSamlConfigSpConfig {
     /**
      * Callback URI where responses from IDP are handled. Must start with `https://`.
@@ -30,11 +30,11 @@ public final class TenantInboundSamlConfigSpConfig {
      */
     private final String spEntityId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TenantInboundSamlConfigSpConfig(
-        @OutputCustomType.Parameter("callbackUri") String callbackUri,
-        @OutputCustomType.Parameter("spCertificates") @Nullable List<TenantInboundSamlConfigSpConfigSpCertificate> spCertificates,
-        @OutputCustomType.Parameter("spEntityId") String spEntityId) {
+        @CustomType.Parameter("callbackUri") String callbackUri,
+        @CustomType.Parameter("spCertificates") @Nullable List<TenantInboundSamlConfigSpConfigSpCertificate> spCertificates,
+        @CustomType.Parameter("spEntityId") String spEntityId) {
         this.callbackUri = callbackUri;
         this.spCertificates = spCertificates;
         this.spEntityId = spEntityId;

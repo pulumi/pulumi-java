@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RegionBackendServiceConsistentHashHttpCookieGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class RegionBackendServiceConsistentHashGetArgs extends io.pulumi.r
      * Structure is documented below.
      * 
      */
-    @InputImport(name="httpCookie")
+    @Import(name="httpCookie")
       private final @Nullable Output<RegionBackendServiceConsistentHashHttpCookieGetArgs> httpCookie;
 
     public Output<RegionBackendServiceConsistentHashHttpCookieGetArgs> getHttpCookie() {
@@ -36,7 +36,7 @@ public final class RegionBackendServiceConsistentHashGetArgs extends io.pulumi.r
      * This field is applicable if the sessionAffinity is set to HEADER_FIELD.
      * 
      */
-    @InputImport(name="httpHeaderName")
+    @Import(name="httpHeaderName")
       private final @Nullable Output<String> httpHeaderName;
 
     public Output<String> getHttpHeaderName() {
@@ -52,7 +52,7 @@ public final class RegionBackendServiceConsistentHashGetArgs extends io.pulumi.r
      * Defaults to 1024.
      * 
      */
-    @InputImport(name="minimumRingSize")
+    @Import(name="minimumRingSize")
       private final @Nullable Output<Integer> minimumRingSize;
 
     public Output<Integer> getMinimumRingSize() {

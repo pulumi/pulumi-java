@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.pubsub.outputs.LiteTopicPartitionConfigCapacity;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class LiteTopicPartitionConfig {
     /**
      * The capacity configuration.
@@ -24,10 +24,10 @@ public final class LiteTopicPartitionConfig {
      */
     private final Integer count;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private LiteTopicPartitionConfig(
-        @OutputCustomType.Parameter("capacity") @Nullable LiteTopicPartitionConfigCapacity capacity,
-        @OutputCustomType.Parameter("count") Integer count) {
+        @CustomType.Parameter("capacity") @Nullable LiteTopicPartitionConfigCapacity capacity,
+        @CustomType.Parameter("count") Integer count) {
         this.capacity = capacity;
         this.count = count;
     }

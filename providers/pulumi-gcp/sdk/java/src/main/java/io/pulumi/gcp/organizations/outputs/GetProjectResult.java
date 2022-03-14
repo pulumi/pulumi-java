@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetProjectResult {
     private final Boolean autoCreateNetwork;
     private final String billingAccount;
@@ -32,18 +32,18 @@ public final class GetProjectResult {
     private final @Nullable String projectId;
     private final Boolean skipDelete;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetProjectResult(
-        @OutputCustomType.Parameter("autoCreateNetwork") Boolean autoCreateNetwork,
-        @OutputCustomType.Parameter("billingAccount") String billingAccount,
-        @OutputCustomType.Parameter("folderId") String folderId,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("labels") Map<String,String> labels,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("number") String number,
-        @OutputCustomType.Parameter("orgId") String orgId,
-        @OutputCustomType.Parameter("projectId") @Nullable String projectId,
-        @OutputCustomType.Parameter("skipDelete") Boolean skipDelete) {
+        @CustomType.Parameter("autoCreateNetwork") Boolean autoCreateNetwork,
+        @CustomType.Parameter("billingAccount") String billingAccount,
+        @CustomType.Parameter("folderId") String folderId,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("labels") Map<String,String> labels,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("number") String number,
+        @CustomType.Parameter("orgId") String orgId,
+        @CustomType.Parameter("projectId") @Nullable String projectId,
+        @CustomType.Parameter("skipDelete") Boolean skipDelete) {
         this.autoCreateNetwork = autoCreateNetwork;
         this.billingAccount = billingAccount;
         this.folderId = folderId;

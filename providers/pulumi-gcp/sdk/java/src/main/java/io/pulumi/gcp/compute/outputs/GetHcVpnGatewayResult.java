@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetHcVpnGatewayVpnInterface;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetHcVpnGatewayResult {
     private final String description;
     /**
@@ -26,16 +26,16 @@ public final class GetHcVpnGatewayResult {
     private final String selfLink;
     private final List<GetHcVpnGatewayVpnInterface> vpnInterfaces;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetHcVpnGatewayResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("region") @Nullable String region,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("vpnInterfaces") List<GetHcVpnGatewayVpnInterface> vpnInterfaces) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("region") @Nullable String region,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("vpnInterfaces") List<GetHcVpnGatewayVpnInterface> vpnInterfaces) {
         this.description = description;
         this.id = id;
         this.name = name;

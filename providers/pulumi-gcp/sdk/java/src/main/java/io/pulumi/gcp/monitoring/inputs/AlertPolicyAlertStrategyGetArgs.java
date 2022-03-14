@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyAlertStrategyNotificationRateLimitGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AlertPolicyAlertStrategyGetArgs extends io.pulumi.resources.R
      * If an alert policy that was active has no data for this long, any open incidents will close.
      * 
      */
-    @InputImport(name="autoClose")
+    @Import(name="autoClose")
       private final @Nullable Output<String> autoClose;
 
     public Output<String> getAutoClose() {
@@ -32,7 +32,7 @@ public final class AlertPolicyAlertStrategyGetArgs extends io.pulumi.resources.R
      * Structure is documented below.
      * 
      */
-    @InputImport(name="notificationRateLimit")
+    @Import(name="notificationRateLimit")
       private final @Nullable Output<AlertPolicyAlertStrategyNotificationRateLimitGetArgs> notificationRateLimit;
 
     public Output<AlertPolicyAlertStrategyNotificationRateLimitGetArgs> getNotificationRateLimit() {

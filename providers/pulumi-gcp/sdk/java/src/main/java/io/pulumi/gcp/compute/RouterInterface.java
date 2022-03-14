@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RouterInterfaceArgs;
@@ -38,7 +38,7 @@ public class RouterInterface extends io.pulumi.resources.CustomResource {
      * specified.
      * 
      */
-    @OutputExport(name="interconnectAttachment", type=String.class, parameters={})
+    @Export(name="interconnectAttachment", type=String.class, parameters={})
     private Output</* @Nullable */ String> interconnectAttachment;
 
     /**
@@ -56,7 +56,7 @@ public class RouterInterface extends io.pulumi.resources.CustomResource {
      * in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
      * 
      */
-    @OutputExport(name="ipRange", type=String.class, parameters={})
+    @Export(name="ipRange", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipRange;
 
     /**
@@ -72,7 +72,7 @@ public class RouterInterface extends io.pulumi.resources.CustomResource {
      * this forces a new interface to be created.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -88,7 +88,7 @@ public class RouterInterface extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used. Changing this forces a new interface to be created.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -105,7 +105,7 @@ public class RouterInterface extends io.pulumi.resources.CustomResource {
      * created.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -122,7 +122,7 @@ public class RouterInterface extends io.pulumi.resources.CustomResource {
      * Changing this forces a new interface to be created.
      * 
      */
-    @OutputExport(name="router", type=String.class, parameters={})
+    @Export(name="router", type=String.class, parameters={})
     private Output<String> router;
 
     /**
@@ -139,7 +139,7 @@ public class RouterInterface extends io.pulumi.resources.CustomResource {
      * one of `vpn_tunnel` and `interconnect_attachment` can be specified.
      * 
      */
-    @OutputExport(name="vpnTunnel", type=String.class, parameters={})
+    @Export(name="vpnTunnel", type=String.class, parameters={})
     private Output</* @Nullable */ String> vpnTunnel;
 
     /**

@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDefaultServiceAccountResult {
     /**
      * The email address of the service account. This value is often used to refer to the service account
@@ -22,11 +22,11 @@ public final class GetDefaultServiceAccountResult {
     private final String id;
     private final String project;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDefaultServiceAccountResult(
-        @OutputCustomType.Parameter("email") String email,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("project") String project) {
+        @CustomType.Parameter("email") String email,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("project") String project) {
         this.email = email;
         this.id = id;
         this.project = project;

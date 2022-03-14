@@ -4,7 +4,7 @@
 package io.pulumi.gcp.folder.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class OrganizationPolicyBooleanPolicyGetArgs extends io.pulumi.reso
      * If true, then the Policy is enforced. If false, then any configuration is acceptable.
      * 
      */
-    @InputImport(name="enforced", required=true)
+    @Import(name="enforced", required=true)
       private final Output<Boolean> enforced;
 
     public Output<Boolean> getEnforced() {

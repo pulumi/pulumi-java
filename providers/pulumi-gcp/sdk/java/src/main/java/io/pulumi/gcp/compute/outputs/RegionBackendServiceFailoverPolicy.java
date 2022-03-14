@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegionBackendServiceFailoverPolicy {
     /**
      * On failover or failback, this field indicates whether connection drain
@@ -45,11 +45,11 @@ public final class RegionBackendServiceFailoverPolicy {
      */
     private final @Nullable Double failoverRatio;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionBackendServiceFailoverPolicy(
-        @OutputCustomType.Parameter("disableConnectionDrainOnFailover") @Nullable Boolean disableConnectionDrainOnFailover,
-        @OutputCustomType.Parameter("dropTrafficIfUnhealthy") @Nullable Boolean dropTrafficIfUnhealthy,
-        @OutputCustomType.Parameter("failoverRatio") @Nullable Double failoverRatio) {
+        @CustomType.Parameter("disableConnectionDrainOnFailover") @Nullable Boolean disableConnectionDrainOnFailover,
+        @CustomType.Parameter("dropTrafficIfUnhealthy") @Nullable Boolean dropTrafficIfUnhealthy,
+        @CustomType.Parameter("failoverRatio") @Nullable Double failoverRatio) {
         this.disableConnectionDrainOnFailover = disableConnectionDrainOnFailover;
         this.dropTrafficIfUnhealthy = dropTrafficIfUnhealthy;
         this.failoverRatio = failoverRatio;

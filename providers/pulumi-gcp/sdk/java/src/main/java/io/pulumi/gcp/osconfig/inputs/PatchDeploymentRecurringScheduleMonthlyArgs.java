@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PatchDeploymentRecurringScheduleMonthlyArgs extends io.pulumi
      * will not run in February, April, June, etc.
      * 
      */
-    @InputImport(name="monthDay")
+    @Import(name="monthDay")
       private final @Nullable Output<Integer> monthDay;
 
     public Output<Integer> getMonthDay() {
@@ -33,7 +33,7 @@ public final class PatchDeploymentRecurringScheduleMonthlyArgs extends io.pulumi
      * Structure is documented below.
      * 
      */
-    @InputImport(name="weekDayOfMonth")
+    @Import(name="weekDayOfMonth")
       private final @Nullable Output<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs> weekDayOfMonth;
 
     public Output<PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs> getWeekDayOfMonth() {

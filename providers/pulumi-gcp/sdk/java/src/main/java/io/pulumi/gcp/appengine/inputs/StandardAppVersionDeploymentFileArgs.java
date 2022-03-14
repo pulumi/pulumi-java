@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class StandardAppVersionDeploymentFileArgs extends io.pulumi.resour
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -29,7 +29,7 @@ public final class StandardAppVersionDeploymentFileArgs extends io.pulumi.resour
      * SHA1 checksum of the file
      * 
      */
-    @InputImport(name="sha1Sum")
+    @Import(name="sha1Sum")
       private final @Nullable Output<String> sha1Sum;
 
     public Output<String> getSha1Sum() {
@@ -40,7 +40,7 @@ public final class StandardAppVersionDeploymentFileArgs extends io.pulumi.resour
      * Source URL
      * 
      */
-    @InputImport(name="sourceUrl", required=true)
+    @Import(name="sourceUrl", required=true)
       private final Output<String> sourceUrl;
 
     public Output<String> getSourceUrl() {

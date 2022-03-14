@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.sql.outputs.GetDatabaseInstanceClone;
 import io.pulumi.gcp.sql.outputs.GetDatabaseInstanceIpAddress;
 import io.pulumi.gcp.sql.outputs.GetDatabaseInstanceReplicaConfiguration;
@@ -17,7 +17,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetDatabaseInstanceResult {
     private final List<GetDatabaseInstanceClone> clones;
     private final String connectionName;
@@ -45,29 +45,29 @@ public final class GetDatabaseInstanceResult {
     private final String serviceAccountEmailAddress;
     private final List<GetDatabaseInstanceSetting> settings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatabaseInstanceResult(
-        @OutputCustomType.Parameter("clones") List<GetDatabaseInstanceClone> clones,
-        @OutputCustomType.Parameter("connectionName") String connectionName,
-        @OutputCustomType.Parameter("databaseVersion") String databaseVersion,
-        @OutputCustomType.Parameter("deletionProtection") Boolean deletionProtection,
-        @OutputCustomType.Parameter("encryptionKeyName") String encryptionKeyName,
-        @OutputCustomType.Parameter("firstIpAddress") String firstIpAddress,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("ipAddresses") List<GetDatabaseInstanceIpAddress> ipAddresses,
-        @OutputCustomType.Parameter("masterInstanceName") String masterInstanceName,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("privateIpAddress") String privateIpAddress,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("publicIpAddress") String publicIpAddress,
-        @OutputCustomType.Parameter("region") String region,
-        @OutputCustomType.Parameter("replicaConfigurations") List<GetDatabaseInstanceReplicaConfiguration> replicaConfigurations,
-        @OutputCustomType.Parameter("restoreBackupContexts") List<GetDatabaseInstanceRestoreBackupContext> restoreBackupContexts,
-        @OutputCustomType.Parameter("rootPassword") String rootPassword,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("serverCaCerts") List<GetDatabaseInstanceServerCaCert> serverCaCerts,
-        @OutputCustomType.Parameter("serviceAccountEmailAddress") String serviceAccountEmailAddress,
-        @OutputCustomType.Parameter("settings") List<GetDatabaseInstanceSetting> settings) {
+        @CustomType.Parameter("clones") List<GetDatabaseInstanceClone> clones,
+        @CustomType.Parameter("connectionName") String connectionName,
+        @CustomType.Parameter("databaseVersion") String databaseVersion,
+        @CustomType.Parameter("deletionProtection") Boolean deletionProtection,
+        @CustomType.Parameter("encryptionKeyName") String encryptionKeyName,
+        @CustomType.Parameter("firstIpAddress") String firstIpAddress,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("ipAddresses") List<GetDatabaseInstanceIpAddress> ipAddresses,
+        @CustomType.Parameter("masterInstanceName") String masterInstanceName,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("privateIpAddress") String privateIpAddress,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("publicIpAddress") String publicIpAddress,
+        @CustomType.Parameter("region") String region,
+        @CustomType.Parameter("replicaConfigurations") List<GetDatabaseInstanceReplicaConfiguration> replicaConfigurations,
+        @CustomType.Parameter("restoreBackupContexts") List<GetDatabaseInstanceRestoreBackupContext> restoreBackupContexts,
+        @CustomType.Parameter("rootPassword") String rootPassword,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("serverCaCerts") List<GetDatabaseInstanceServerCaCert> serverCaCerts,
+        @CustomType.Parameter("serviceAccountEmailAddress") String serviceAccountEmailAddress,
+        @CustomType.Parameter("settings") List<GetDatabaseInstanceSetting> settings) {
         this.clones = clones;
         this.connectionName = connectionName;
         this.databaseVersion = databaseVersion;

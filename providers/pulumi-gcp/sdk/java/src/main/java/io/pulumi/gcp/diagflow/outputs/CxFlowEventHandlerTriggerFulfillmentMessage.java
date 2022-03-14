@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.diagflow.outputs.CxFlowEventHandlerTriggerFulfillmentMessageText;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CxFlowEventHandlerTriggerFulfillmentMessage {
     /**
      * A collection of text responses.
@@ -17,8 +17,8 @@ public final class CxFlowEventHandlerTriggerFulfillmentMessage {
      */
     private final @Nullable CxFlowEventHandlerTriggerFulfillmentMessageText text;
 
-    @OutputCustomType.Constructor
-    private CxFlowEventHandlerTriggerFulfillmentMessage(@OutputCustomType.Parameter("text") @Nullable CxFlowEventHandlerTriggerFulfillmentMessageText text) {
+    @CustomType.Constructor
+    private CxFlowEventHandlerTriggerFulfillmentMessage(@CustomType.Parameter("text") @Nullable CxFlowEventHandlerTriggerFulfillmentMessageText text) {
         this.text = text;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.diagflow.inputs.CxEntityTypeEntityGetArgs;
 import io.pulumi.gcp.diagflow.inputs.CxEntityTypeExcludedPhraseGetArgs;
 import java.lang.Boolean;
@@ -25,7 +25,7 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
      *   Possible values are `AUTO_EXPANSION_MODE_DEFAULT` and `AUTO_EXPANSION_MODE_UNSPECIFIED`.
      * 
      */
-    @InputImport(name="autoExpansionMode")
+    @Import(name="autoExpansionMode")
       private final @Nullable Output<String> autoExpansionMode;
 
     public Output<String> getAutoExpansionMode() {
@@ -36,7 +36,7 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
      * The human-readable name of the entity type, unique within the agent.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -47,7 +47,7 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
      * Enables fuzzy entity extraction during classification.
      * 
      */
-    @InputImport(name="enableFuzzyExtraction")
+    @Import(name="enableFuzzyExtraction")
       private final @Nullable Output<Boolean> enableFuzzyExtraction;
 
     public Output<Boolean> getEnableFuzzyExtraction() {
@@ -59,7 +59,7 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="entities")
+    @Import(name="entities")
       private final @Nullable Output<List<CxEntityTypeEntityGetArgs>> entities;
 
     public Output<List<CxEntityTypeEntityGetArgs>> getEntities() {
@@ -72,7 +72,7 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="excludedPhrases")
+    @Import(name="excludedPhrases")
       private final @Nullable Output<List<CxEntityTypeExcludedPhraseGetArgs>> excludedPhrases;
 
     public Output<List<CxEntityTypeExcludedPhraseGetArgs>> getExcludedPhrases() {
@@ -87,7 +87,7 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
      *   Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -102,7 +102,7 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
      * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
      * 
      */
-    @InputImport(name="languageCode")
+    @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
     public Output<String> getLanguageCode() {
@@ -114,7 +114,7 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
      * ID>/entityTypes/<Entity Type ID>.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -126,7 +126,7 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>.
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -137,7 +137,7 @@ public final class CxEntityTypeState extends io.pulumi.resources.ResourceArgs {
      * Indicates whether parameters of the entity type should be redacted in log. If redaction is enabled, page parameters and intent parameters referring to the entity type will be replaced by parameter name when logging.
      * 
      */
-    @InputImport(name="redact")
+    @Import(name="redact")
       private final @Nullable Output<Boolean> redact;
 
     public Output<Boolean> getRedact() {

@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PacketMirroringMirroredResourcesSubnetwork {
     /**
      * The URL of the instances where this rule should be active.
@@ -15,8 +15,8 @@ public final class PacketMirroringMirroredResourcesSubnetwork {
      */
     private final String url;
 
-    @OutputCustomType.Constructor
-    private PacketMirroringMirroredResourcesSubnetwork(@OutputCustomType.Parameter("url") String url) {
+    @CustomType.Constructor
+    private PacketMirroringMirroredResourcesSubnetwork(@CustomType.Parameter("url") String url) {
         this.url = url;
     }
 

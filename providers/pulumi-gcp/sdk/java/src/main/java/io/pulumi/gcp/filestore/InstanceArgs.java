@@ -4,7 +4,7 @@
 package io.pulumi.gcp.filestore;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.filestore.inputs.InstanceFileSharesArgs;
 import io.pulumi.gcp.filestore.inputs.InstanceNetworkArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * A description of the instance.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -35,7 +35,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="fileShares", required=true)
+    @Import(name="fileShares", required=true)
       private final Output<InstanceFileSharesArgs> fileShares;
 
     public Output<InstanceFileSharesArgs> getFileShares() {
@@ -46,7 +46,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Resource labels to represent user-provided metadata.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -57,7 +57,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the location of the instance. This can be a region for ENTERPRISE tier instances.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -68,7 +68,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the fileshare (16 characters or less)
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -81,7 +81,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="networks", required=true)
+    @Import(name="networks", required=true)
       private final Output<List<InstanceNetworkArgs>> networks;
 
     public Output<List<InstanceNetworkArgs>> getNetworks() {
@@ -93,7 +93,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -105,7 +105,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values include: STANDARD, PREMIUM, BASIC_HDD, BASIC_SSD, HIGH_SCALE_SSD and ENTERPRISE (beta only)
      * 
      */
-    @InputImport(name="tier", required=true)
+    @Import(name="tier", required=true)
       private final Output<String> tier;
 
     public Output<String> getTier() {
@@ -122,7 +122,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @Deprecated /* Deprecated in favor of location. */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     @Deprecated /* Deprecated in favor of location. */

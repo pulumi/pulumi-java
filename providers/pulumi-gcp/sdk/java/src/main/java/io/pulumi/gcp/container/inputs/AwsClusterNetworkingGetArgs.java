@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class AwsClusterNetworkingGetArgs extends io.pulumi.resources.Resou
      * Required. All pods in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
      * 
      */
-    @InputImport(name="podAddressCidrBlocks", required=true)
+    @Import(name="podAddressCidrBlocks", required=true)
       private final Output<List<String>> podAddressCidrBlocks;
 
     public Output<List<String>> getPodAddressCidrBlocks() {
@@ -29,7 +29,7 @@ public final class AwsClusterNetworkingGetArgs extends io.pulumi.resources.Resou
      * Required. All services in the cluster are assigned an RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
      * 
      */
-    @InputImport(name="serviceAddressCidrBlocks", required=true)
+    @Import(name="serviceAddressCidrBlocks", required=true)
       private final Output<List<String>> serviceAddressCidrBlocks;
 
     public Output<List<String>> getServiceAddressCidrBlocks() {
@@ -40,7 +40,7 @@ public final class AwsClusterNetworkingGetArgs extends io.pulumi.resources.Resou
      * Required. The VPC associated with the cluster. All component clusters (i.e. control plane and node pools) run on a single VPC. This field cannot be changed after creation.
      * 
      */
-    @InputImport(name="vpcId", required=true)
+    @Import(name="vpcId", required=true)
       private final Output<String> vpcId;
 
     public Output<String> getVpcId() {

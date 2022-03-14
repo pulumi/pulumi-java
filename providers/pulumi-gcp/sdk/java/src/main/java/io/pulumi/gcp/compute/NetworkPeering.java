@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.NetworkPeeringArgs;
@@ -41,7 +41,7 @@ public class NetworkPeering extends io.pulumi.resources.CustomResource {
      * Whether to export the custom routes to the peer network. Defaults to `false`.
      * 
      */
-    @OutputExport(name="exportCustomRoutes", type=Boolean.class, parameters={})
+    @Export(name="exportCustomRoutes", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> exportCustomRoutes;
 
     /**
@@ -55,7 +55,7 @@ public class NetworkPeering extends io.pulumi.resources.CustomResource {
      * Whether subnet routes with public IP range are exported. The default value is true, all subnet routes are exported. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always exported to peers and are not controlled by this field.
      * 
      */
-    @OutputExport(name="exportSubnetRoutesWithPublicIp", type=Boolean.class, parameters={})
+    @Export(name="exportSubnetRoutesWithPublicIp", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> exportSubnetRoutesWithPublicIp;
 
     /**
@@ -69,7 +69,7 @@ public class NetworkPeering extends io.pulumi.resources.CustomResource {
      * Whether to import the custom routes from the peer network. Defaults to `false`.
      * 
      */
-    @OutputExport(name="importCustomRoutes", type=Boolean.class, parameters={})
+    @Export(name="importCustomRoutes", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> importCustomRoutes;
 
     /**
@@ -83,7 +83,7 @@ public class NetworkPeering extends io.pulumi.resources.CustomResource {
      * Whether subnet routes with public IP range are imported. The default value is false. The IPv4 special-use ranges (https://en.wikipedia.org/wiki/IPv4#Special_addresses) are always imported from peers and are not controlled by this field.
      * 
      */
-    @OutputExport(name="importSubnetRoutesWithPublicIp", type=Boolean.class, parameters={})
+    @Export(name="importSubnetRoutesWithPublicIp", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> importSubnetRoutesWithPublicIp;
 
     /**
@@ -97,7 +97,7 @@ public class NetworkPeering extends io.pulumi.resources.CustomResource {
      * Name of the peering.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -111,7 +111,7 @@ public class NetworkPeering extends io.pulumi.resources.CustomResource {
      * The primary network of the peering.
      * 
      */
-    @OutputExport(name="network", type=String.class, parameters={})
+    @Export(name="network", type=String.class, parameters={})
     private Output<String> network;
 
     /**
@@ -126,7 +126,7 @@ public class NetworkPeering extends io.pulumi.resources.CustomResource {
      * may belong to a different project.
      * 
      */
-    @OutputExport(name="peerNetwork", type=String.class, parameters={})
+    @Export(name="peerNetwork", type=String.class, parameters={})
     private Output<String> peerNetwork;
 
     /**
@@ -142,7 +142,7 @@ public class NetworkPeering extends io.pulumi.resources.CustomResource {
      * `ACTIVE` when there's a matching configuration in the peer network.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -157,7 +157,7 @@ public class NetworkPeering extends io.pulumi.resources.CustomResource {
      * Details about the current state of the peering.
      * 
      */
-    @OutputExport(name="stateDetails", type=String.class, parameters={})
+    @Export(name="stateDetails", type=String.class, parameters={})
     private Output<String> stateDetails;
 
     /**

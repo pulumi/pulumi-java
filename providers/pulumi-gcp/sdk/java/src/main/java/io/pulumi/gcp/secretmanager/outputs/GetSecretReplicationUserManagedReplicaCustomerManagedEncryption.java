@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.secretmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSecretReplicationUserManagedReplicaCustomerManagedEncryption {
     private final String kmsKeyName;
 
-    @OutputCustomType.Constructor
-    private GetSecretReplicationUserManagedReplicaCustomerManagedEncryption(@OutputCustomType.Parameter("kmsKeyName") String kmsKeyName) {
+    @CustomType.Constructor
+    private GetSecretReplicationUserManagedReplicaCustomerManagedEncryption(@CustomType.Parameter("kmsKeyName") String kmsKeyName) {
         this.kmsKeyName = kmsKeyName;
     }
 

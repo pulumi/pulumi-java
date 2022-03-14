@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class URLMapPathMatcherPathRuleRouteActionRequestMirrorPolicy {
     /**
      * The full or partial URL to the BackendService resource being mirrored to.
@@ -15,8 +15,8 @@ public final class URLMapPathMatcherPathRuleRouteActionRequestMirrorPolicy {
      */
     private final String backendService;
 
-    @OutputCustomType.Constructor
-    private URLMapPathMatcherPathRuleRouteActionRequestMirrorPolicy(@OutputCustomType.Parameter("backendService") String backendService) {
+    @CustomType.Constructor
+    private URLMapPathMatcherPathRuleRouteActionRequestMirrorPolicy(@CustomType.Parameter("backendService") String backendService) {
         this.backendService = backendService;
     }
 

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudrun.inputs.GetServiceTemplateSpecVolumeSecret;
 import java.lang.String;
 import java.util.List;
@@ -18,14 +18,14 @@ public final class GetServiceTemplateSpecVolume extends io.pulumi.resources.Invo
      * The name of the Cloud Run Service.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="secrets", required=true)
+    @Import(name="secrets", required=true)
       private final List<GetServiceTemplateSpecVolumeSecret> secrets;
 
     public List<GetServiceTemplateSpecVolumeSecret> getSecrets() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,21 +13,21 @@ public final class GetDatabaseInstanceSettingMaintenanceWindow extends io.pulumi
 
     public static final GetDatabaseInstanceSettingMaintenanceWindow Empty = new GetDatabaseInstanceSettingMaintenanceWindow();
 
-    @InputImport(name="day", required=true)
+    @Import(name="day", required=true)
       private final Integer day;
 
     public Integer getDay() {
         return this.day;
     }
 
-    @InputImport(name="hour", required=true)
+    @Import(name="hour", required=true)
       private final Integer hour;
 
     public Integer getHour() {
         return this.hour;
     }
 
-    @InputImport(name="updateTrack", required=true)
+    @Import(name="updateTrack", required=true)
       private final String updateTrack;
 
     public String getUpdateTrack() {

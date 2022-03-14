@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FeatureMembershipConfigmanagementBinauthz {
     /**
      * Enables the installation of Policy Controller. If false, the rest of PolicyController fields take no effect.
@@ -17,8 +17,8 @@ public final class FeatureMembershipConfigmanagementBinauthz {
      */
     private final @Nullable Boolean enabled;
 
-    @OutputCustomType.Constructor
-    private FeatureMembershipConfigmanagementBinauthz(@OutputCustomType.Parameter("enabled") @Nullable Boolean enabled) {
+    @CustomType.Constructor
+    private FeatureMembershipConfigmanagementBinauthz(@CustomType.Parameter("enabled") @Nullable Boolean enabled) {
         this.enabled = enabled;
     }
 

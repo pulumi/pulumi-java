@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dns.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dns.inputs.ManagedZonePeeringConfigTargetNetworkArgs;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ManagedZonePeeringConfigArgs extends io.pulumi.resources.Reso
      * Structure is documented below.
      * 
      */
-    @InputImport(name="targetNetwork", required=true)
+    @Import(name="targetNetwork", required=true)
       private final Output<ManagedZonePeeringConfigTargetNetworkArgs> targetNetwork;
 
     public Output<ManagedZonePeeringConfigTargetNetworkArgs> getTargetNetwork() {

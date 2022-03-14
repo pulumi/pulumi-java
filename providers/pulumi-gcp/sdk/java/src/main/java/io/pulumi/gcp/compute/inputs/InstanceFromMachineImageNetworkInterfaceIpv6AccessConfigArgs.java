@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -14,28 +14,28 @@ public final class InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigArgs 
 
     public static final InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigArgs Empty = new InstanceFromMachineImageNetworkInterfaceIpv6AccessConfigArgs();
 
-    @InputImport(name="externalIpv6")
+    @Import(name="externalIpv6")
       private final @Nullable Output<String> externalIpv6;
 
     public Output<String> getExternalIpv6() {
         return this.externalIpv6 == null ? Output.empty() : this.externalIpv6;
     }
 
-    @InputImport(name="externalIpv6PrefixLength")
+    @Import(name="externalIpv6PrefixLength")
       private final @Nullable Output<String> externalIpv6PrefixLength;
 
     public Output<String> getExternalIpv6PrefixLength() {
         return this.externalIpv6PrefixLength == null ? Output.empty() : this.externalIpv6PrefixLength;
     }
 
-    @InputImport(name="networkTier", required=true)
+    @Import(name="networkTier", required=true)
       private final Output<String> networkTier;
 
     public Output<String> getNetworkTier() {
         return this.networkTier;
     }
 
-    @InputImport(name="publicPtrDomainName")
+    @Import(name="publicPtrDomainName")
       private final @Nullable Output<String> publicPtrDomainName;
 
     public Output<String> getPublicPtrDomainName() {

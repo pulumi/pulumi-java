@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.storage.outputs.TransferJobTransferSpecAwsS3DataSourceAwsAccessKey;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TransferJobTransferSpecAwsS3DataSource {
     /**
      * AWS credentials block.
@@ -28,11 +28,11 @@ public final class TransferJobTransferSpecAwsS3DataSource {
      */
     private final @Nullable String roleArn;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TransferJobTransferSpecAwsS3DataSource(
-        @OutputCustomType.Parameter("awsAccessKey") @Nullable TransferJobTransferSpecAwsS3DataSourceAwsAccessKey awsAccessKey,
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("roleArn") @Nullable String roleArn) {
+        @CustomType.Parameter("awsAccessKey") @Nullable TransferJobTransferSpecAwsS3DataSourceAwsAccessKey awsAccessKey,
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("roleArn") @Nullable String roleArn) {
         this.awsAccessKey = awsAccessKey;
         this.bucketName = bucketName;
         this.roleArn = roleArn;

@@ -3,18 +3,18 @@
 
 package io.pulumi.gcp.kms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RegistryCredential {
     private final Map<String,Object> publicKeyCertificate;
 
-    @OutputCustomType.Constructor
-    private RegistryCredential(@OutputCustomType.Parameter("publicKeyCertificate") Map<String,Object> publicKeyCertificate) {
+    @CustomType.Constructor
+    private RegistryCredential(@CustomType.Parameter("publicKeyCertificate") Map<String,Object> publicKeyCertificate) {
         this.publicKeyCertificate = publicKeyCertificate;
     }
 

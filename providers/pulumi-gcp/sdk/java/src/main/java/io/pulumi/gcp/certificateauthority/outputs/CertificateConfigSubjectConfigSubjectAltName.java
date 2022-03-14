@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateConfigSubjectConfigSubjectAltName {
     /**
      * Contains only valid, fully-qualified host names.
@@ -32,12 +32,12 @@ public final class CertificateConfigSubjectConfigSubjectAltName {
      */
     private final @Nullable List<String> uris;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateConfigSubjectConfigSubjectAltName(
-        @OutputCustomType.Parameter("dnsNames") @Nullable List<String> dnsNames,
-        @OutputCustomType.Parameter("emailAddresses") @Nullable List<String> emailAddresses,
-        @OutputCustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
-        @OutputCustomType.Parameter("uris") @Nullable List<String> uris) {
+        @CustomType.Parameter("dnsNames") @Nullable List<String> dnsNames,
+        @CustomType.Parameter("emailAddresses") @Nullable List<String> emailAddresses,
+        @CustomType.Parameter("ipAddresses") @Nullable List<String> ipAddresses,
+        @CustomType.Parameter("uris") @Nullable List<String> uris) {
         this.dnsNames = dnsNames;
         this.emailAddresses = emailAddresses;
         this.ipAddresses = ipAddresses;

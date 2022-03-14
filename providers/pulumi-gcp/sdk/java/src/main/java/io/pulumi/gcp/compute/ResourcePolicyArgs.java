@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.ResourcePolicyGroupPlacementPolicyArgs;
 import io.pulumi.gcp.compute.inputs.ResourcePolicyInstanceSchedulePolicyArgs;
 import io.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyArgs;
@@ -21,7 +21,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="groupPlacementPolicy")
+    @Import(name="groupPlacementPolicy")
       private final @Nullable Output<ResourcePolicyGroupPlacementPolicyArgs> groupPlacementPolicy;
 
     public Output<ResourcePolicyGroupPlacementPolicyArgs> getGroupPlacementPolicy() {
@@ -45,7 +45,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="instanceSchedulePolicy")
+    @Import(name="instanceSchedulePolicy")
       private final @Nullable Output<ResourcePolicyInstanceSchedulePolicyArgs> instanceSchedulePolicy;
 
     public Output<ResourcePolicyInstanceSchedulePolicyArgs> getInstanceSchedulePolicy() {
@@ -62,7 +62,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -74,7 +74,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -85,7 +85,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Region where resource policy resides.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -97,7 +97,7 @@ public final class ResourcePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="snapshotSchedulePolicy")
+    @Import(name="snapshotSchedulePolicy")
       private final @Nullable Output<ResourcePolicySnapshotSchedulePolicyArgs> snapshotSchedulePolicy;
 
     public Output<ResourcePolicySnapshotSchedulePolicyArgs> getSnapshotSchedulePolicy() {

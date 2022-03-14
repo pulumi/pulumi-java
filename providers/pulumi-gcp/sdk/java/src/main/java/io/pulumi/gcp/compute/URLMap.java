@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.URLMapArgs;
@@ -53,7 +53,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -72,7 +72,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="defaultRouteAction", type=URLMapDefaultRouteAction.class, parameters={})
+    @Export(name="defaultRouteAction", type=URLMapDefaultRouteAction.class, parameters={})
     private Output</* @Nullable */ URLMapDefaultRouteAction> defaultRouteAction;
 
     /**
@@ -91,7 +91,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * The backend service or backend bucket to use when none of the given paths match.
      * 
      */
-    @OutputExport(name="defaultService", type=String.class, parameters={})
+    @Export(name="defaultService", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultService;
 
     /**
@@ -108,7 +108,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="defaultUrlRedirect", type=URLMapDefaultUrlRedirect.class, parameters={})
+    @Export(name="defaultUrlRedirect", type=URLMapDefaultUrlRedirect.class, parameters={})
     private Output</* @Nullable */ URLMapDefaultUrlRedirect> defaultUrlRedirect;
 
     /**
@@ -125,7 +125,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * Description of this test case.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -139,7 +139,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
      * 
      */
-    @OutputExport(name="fingerprint", type=String.class, parameters={})
+    @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     /**
@@ -157,7 +157,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="headerAction", type=URLMapHeaderAction.class, parameters={})
+    @Export(name="headerAction", type=URLMapHeaderAction.class, parameters={})
     private Output</* @Nullable */ URLMapHeaderAction> headerAction;
 
     /**
@@ -176,7 +176,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="hostRules", type=List.class, parameters={URLMapHostRule.class})
+    @Export(name="hostRules", type=List.class, parameters={URLMapHostRule.class})
     private Output</* @Nullable */ List<URLMapHostRule>> hostRules;
 
     /**
@@ -191,7 +191,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * The unique identifier for the resource.
      * 
      */
-    @OutputExport(name="mapId", type=Integer.class, parameters={})
+    @Export(name="mapId", type=Integer.class, parameters={})
     private Output<Integer> mapId;
 
     /**
@@ -206,7 +206,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * request, in the absence of which the request match fails.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -222,7 +222,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * hostRule matches the URL's host portion.
      * 
      */
-    @OutputExport(name="pathMatchers", type=List.class, parameters={URLMapPathMatcher.class})
+    @Export(name="pathMatchers", type=List.class, parameters={URLMapPathMatcher.class})
     private Output</* @Nullable */ List<URLMapPathMatcher>> pathMatchers;
 
     /**
@@ -238,7 +238,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -253,7 +253,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -270,7 +270,7 @@ public class URLMap extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="tests", type=List.class, parameters={URLMapTest.class})
+    @Export(name="tests", type=List.class, parameters={URLMapTest.class})
     private Output</* @Nullable */ List<URLMapTest>> tests;
 
     /**

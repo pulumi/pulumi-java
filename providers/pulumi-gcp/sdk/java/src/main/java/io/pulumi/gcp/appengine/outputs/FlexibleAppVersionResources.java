@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.appengine.outputs.FlexibleAppVersionResourcesVolume;
 import java.lang.Double;
 import java.lang.Integer;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlexibleAppVersionResources {
     /**
      * Number of CPU cores needed.
@@ -36,12 +36,12 @@ public final class FlexibleAppVersionResources {
      */
     private final @Nullable List<FlexibleAppVersionResourcesVolume> volumes;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlexibleAppVersionResources(
-        @OutputCustomType.Parameter("cpu") @Nullable Integer cpu,
-        @OutputCustomType.Parameter("diskGb") @Nullable Integer diskGb,
-        @OutputCustomType.Parameter("memoryGb") @Nullable Double memoryGb,
-        @OutputCustomType.Parameter("volumes") @Nullable List<FlexibleAppVersionResourcesVolume> volumes) {
+        @CustomType.Parameter("cpu") @Nullable Integer cpu,
+        @CustomType.Parameter("diskGb") @Nullable Integer diskGb,
+        @CustomType.Parameter("memoryGb") @Nullable Double memoryGb,
+        @CustomType.Parameter("volumes") @Nullable List<FlexibleAppVersionResourcesVolume> volumes) {
         this.cpu = cpu;
         this.diskGb = diskGb;
         this.memoryGb = memoryGb;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobSparkSqlJobLoggingConfigGetArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobSparkSqlJobQueryListGetArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class WorkflowTemplateJobSparkSqlJobGetArgs extends io.pulumi.resou
      * Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
      * 
      */
-    @InputImport(name="jarFileUris")
+    @Import(name="jarFileUris")
       private final @Nullable Output<List<String>> jarFileUris;
 
     public Output<List<String>> getJarFileUris() {
@@ -33,7 +33,7 @@ public final class WorkflowTemplateJobSparkSqlJobGetArgs extends io.pulumi.resou
      * Optional. The runtime log config for job execution.
      * 
      */
-    @InputImport(name="loggingConfig")
+    @Import(name="loggingConfig")
       private final @Nullable Output<WorkflowTemplateJobSparkSqlJobLoggingConfigGetArgs> loggingConfig;
 
     public Output<WorkflowTemplateJobSparkSqlJobLoggingConfigGetArgs> getLoggingConfig() {
@@ -44,7 +44,7 @@ public final class WorkflowTemplateJobSparkSqlJobGetArgs extends io.pulumi.resou
      * Optional. The properties to set on daemon config files. Property keys are specified in `prefix:property` format, for example `core:hadoop.tmp.dir`. The following are supported prefixes and their mappings: * capacity-scheduler: `capacity-scheduler.xml` * core: `core-site.xml` * distcp: `distcp-default.xml` * hdfs: `hdfs-site.xml` * hive: `hive-site.xml` * mapred: `mapred-site.xml` * pig: `pig.properties` * spark: `spark-defaults.conf` * yarn: `yarn-site.xml` For more information, see (https://cloud.google.com/dataproc/docs/concepts/cluster-properties).
      * 
      */
-    @InputImport(name="properties")
+    @Import(name="properties")
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
@@ -55,7 +55,7 @@ public final class WorkflowTemplateJobSparkSqlJobGetArgs extends io.pulumi.resou
      * The HCFS URI of the script that contains SQL queries.
      * 
      */
-    @InputImport(name="queryFileUri")
+    @Import(name="queryFileUri")
       private final @Nullable Output<String> queryFileUri;
 
     public Output<String> getQueryFileUri() {
@@ -66,7 +66,7 @@ public final class WorkflowTemplateJobSparkSqlJobGetArgs extends io.pulumi.resou
      * A list of queries.
      * 
      */
-    @InputImport(name="queryList")
+    @Import(name="queryList")
       private final @Nullable Output<WorkflowTemplateJobSparkSqlJobQueryListGetArgs> queryList;
 
     public Output<WorkflowTemplateJobSparkSqlJobQueryListGetArgs> getQueryList() {
@@ -77,7 +77,7 @@ public final class WorkflowTemplateJobSparkSqlJobGetArgs extends io.pulumi.resou
      * Optional. Mapping of query variable names to values (equivalent to the Spark SQL command: SET `name="value";`).
      * 
      */
-    @InputImport(name="scriptVariables")
+    @Import(name="scriptVariables")
       private final @Nullable Output<Map<String,String>> scriptVariables;
 
     public Output<Map<String,String>> getScriptVariables() {

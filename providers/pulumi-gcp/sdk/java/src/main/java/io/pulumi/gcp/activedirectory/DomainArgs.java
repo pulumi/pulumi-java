@@ -4,7 +4,7 @@
 package io.pulumi.gcp.activedirectory;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * If not specified, setupadmin will be used.
      * 
      */
-    @InputImport(name="admin")
+    @Import(name="admin")
       private final @Nullable Output<String> admin;
 
     public Output<String> getAdmin() {
@@ -33,7 +33,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * If CIDR subnets overlap between networks, domain creation will fail.
      * 
      */
-    @InputImport(name="authorizedNetworks")
+    @Import(name="authorizedNetworks")
       private final @Nullable Output<List<String>> authorizedNetworks;
 
     public Output<List<String>> getAuthorizedNetworks() {
@@ -45,7 +45,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * https://cloud.google.com/managed-microsoft-ad/reference/rest/v1/projects.locations.global.domains.
      * 
      */
-    @InputImport(name="domainName", required=true)
+    @Import(name="domainName", required=true)
       private final Output<String> domainName;
 
     public Output<String> getDomainName() {
@@ -56,7 +56,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Resource labels that can contain user-provided metadata
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -68,7 +68,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * e.g. us-west1 or us-east4 Service supports up to 4 locations at once. Each location will use a /26 block.
      * 
      */
-    @InputImport(name="locations", required=true)
+    @Import(name="locations", required=true)
       private final Output<List<String>> locations;
 
     public Output<List<String>> getLocations() {
@@ -80,7 +80,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -92,7 +92,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * Ranges must be unique and non-overlapping with existing subnets in authorizedNetworks
      * 
      */
-    @InputImport(name="reservedIpRange", required=true)
+    @Import(name="reservedIpRange", required=true)
       private final Output<String> reservedIpRange;
 
     public Output<String> getReservedIpRange() {

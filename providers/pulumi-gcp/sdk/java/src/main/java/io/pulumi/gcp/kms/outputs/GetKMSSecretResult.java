@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.kms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetKMSSecretResult {
     private final @Nullable String additionalAuthenticatedData;
     private final String ciphertext;
@@ -25,13 +25,13 @@ public final class GetKMSSecretResult {
      */
     private final String plaintext;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKMSSecretResult(
-        @OutputCustomType.Parameter("additionalAuthenticatedData") @Nullable String additionalAuthenticatedData,
-        @OutputCustomType.Parameter("ciphertext") String ciphertext,
-        @OutputCustomType.Parameter("cryptoKey") String cryptoKey,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("plaintext") String plaintext) {
+        @CustomType.Parameter("additionalAuthenticatedData") @Nullable String additionalAuthenticatedData,
+        @CustomType.Parameter("ciphertext") String ciphertext,
+        @CustomType.Parameter("cryptoKey") String cryptoKey,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("plaintext") String plaintext) {
         this.additionalAuthenticatedData = additionalAuthenticatedData;
         this.ciphertext = ciphertext;
         this.cryptoKey = cryptoKey;

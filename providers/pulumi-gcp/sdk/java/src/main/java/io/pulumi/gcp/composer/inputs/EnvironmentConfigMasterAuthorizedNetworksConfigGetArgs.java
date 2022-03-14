@@ -4,7 +4,7 @@
 package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -16,14 +16,14 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs extend
 
     public static final EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs Empty = new EnvironmentConfigMasterAuthorizedNetworksConfigGetArgs();
 
-    @InputImport(name="cidrBlocks")
+    @Import(name="cidrBlocks")
       private final @Nullable Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs>> cidrBlocks;
 
     public Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockGetArgs>> getCidrBlocks() {
         return this.cidrBlocks == null ? Output.empty() : this.cidrBlocks;
     }
 
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {

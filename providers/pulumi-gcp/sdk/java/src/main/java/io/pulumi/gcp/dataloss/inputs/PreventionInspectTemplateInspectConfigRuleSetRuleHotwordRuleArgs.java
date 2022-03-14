@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs;
@@ -20,7 +20,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="hotwordRegex", required=true)
+    @Import(name="hotwordRegex", required=true)
       private final Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs> hotwordRegex;
 
     public Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleHotwordRegexArgs> getHotwordRegex() {
@@ -32,7 +32,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="likelihoodAdjustment", required=true)
+    @Import(name="likelihoodAdjustment", required=true)
       private final Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs> likelihoodAdjustment;
 
     public Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleLikelihoodAdjustmentArgs> getLikelihoodAdjustment() {
@@ -48,7 +48,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="proximity", required=true)
+    @Import(name="proximity", required=true)
       private final Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs> proximity;
 
     public Output<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs> getProximity() {

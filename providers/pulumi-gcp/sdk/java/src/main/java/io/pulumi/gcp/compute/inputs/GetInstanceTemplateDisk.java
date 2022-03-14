@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.GetInstanceTemplateDiskDiskEncryptionKey;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,7 +22,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * This defaults to true.
      * 
      */
-    @InputImport(name="autoDelete", required=true)
+    @Import(name="autoDelete", required=true)
       private final Boolean autoDelete;
 
     public Boolean getAutoDelete() {
@@ -33,7 +33,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * Indicates that this is a boot disk.
      * 
      */
-    @InputImport(name="boot", required=true)
+    @Import(name="boot", required=true)
       private final Boolean boot;
 
     public Boolean getBoot() {
@@ -46,7 +46,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * specified, the server chooses a default device name to apply to this disk.
      * 
      */
-    @InputImport(name="deviceName", required=true)
+    @Import(name="deviceName", required=true)
       private final String deviceName;
 
     public String getDeviceName() {
@@ -57,7 +57,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * Encrypts or decrypts a disk using a customer-supplied encryption key.
      * 
      */
-    @InputImport(name="diskEncryptionKeys", required=true)
+    @Import(name="diskEncryptionKeys", required=true)
       private final List<GetInstanceTemplateDiskDiskEncryptionKey> diskEncryptionKeys;
 
     public List<GetInstanceTemplateDiskDiskEncryptionKey> getDiskEncryptionKeys() {
@@ -69,7 +69,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * to the name of the instance.
      * 
      */
-    @InputImport(name="diskName", required=true)
+    @Import(name="diskName", required=true)
       private final String diskName;
 
     public String getDiskName() {
@@ -82,7 +82,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * the size must be exactly 375GB.
      * 
      */
-    @InputImport(name="diskSizeGb", required=true)
+    @Import(name="diskSizeGb", required=true)
       private final Integer diskSizeGb;
 
     public Integer getDiskSizeGb() {
@@ -94,7 +94,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * `"local-ssd"`, `"pd-balanced"` or `"pd-standard"`.
      * 
      */
-    @InputImport(name="diskType", required=true)
+    @Import(name="diskType", required=true)
       private final String diskType;
 
     public String getDiskType() {
@@ -108,7 +108,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * than SCSI. Local SSDs can use either NVME or SCSI.
      * 
      */
-    @InputImport(name="interface", required=true)
+    @Import(name="interface", required=true)
       private final String $interface;
 
     public String get$interface() {
@@ -120,7 +120,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * this template
      * 
      */
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
@@ -133,14 +133,14 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * read-write mode.
      * 
      */
-    @InputImport(name="mode", required=true)
+    @Import(name="mode", required=true)
       private final String mode;
 
     public String getMode() {
         return this.mode;
     }
 
-    @InputImport(name="resourcePolicies", required=true)
+    @Import(name="resourcePolicies", required=true)
       private final List<String> resourcePolicies;
 
     public List<String> getResourcePolicies() {
@@ -153,7 +153,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * > **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
      * 
      */
-    @InputImport(name="source", required=true)
+    @Import(name="source", required=true)
       private final String source;
 
     public String getSource() {
@@ -170,7 +170,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * > **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
      * 
      */
-    @InputImport(name="sourceImage", required=true)
+    @Import(name="sourceImage", required=true)
       private final String sourceImage;
 
     public String getSourceImage() {
@@ -181,7 +181,7 @@ public final class GetInstanceTemplateDisk extends io.pulumi.resources.InvokeArg
      * The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final String type;
 
     public String getType() {

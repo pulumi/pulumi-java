@@ -4,7 +4,7 @@
 package io.pulumi.gcp.servicenetworking;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.servicenetworking.PeeredDnsDomainArgs;
@@ -36,7 +36,7 @@ public class PeeredDnsDomain extends io.pulumi.resources.CustomResource {
      * The DNS domain suffix of the peered DNS domain. Make sure to suffix with a `.` (dot).
      * 
      */
-    @OutputExport(name="dnsSuffix", type=String.class, parameters={})
+    @Export(name="dnsSuffix", type=String.class, parameters={})
     private Output<String> dnsSuffix;
 
     /**
@@ -50,7 +50,7 @@ public class PeeredDnsDomain extends io.pulumi.resources.CustomResource {
      * Internal name used for the peered DNS domain.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -64,7 +64,7 @@ public class PeeredDnsDomain extends io.pulumi.resources.CustomResource {
      * The network in the consumer project.
      * 
      */
-    @OutputExport(name="network", type=String.class, parameters={})
+    @Export(name="network", type=String.class, parameters={})
     private Output<String> network;
 
     /**
@@ -78,7 +78,7 @@ public class PeeredDnsDomain extends io.pulumi.resources.CustomResource {
      * an identifier for the resource with format `services/{{service}}/projects/{{project}}/global/networks/{{network}}`
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**
@@ -92,7 +92,7 @@ public class PeeredDnsDomain extends io.pulumi.resources.CustomResource {
      * The producer project number. If not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -106,7 +106,7 @@ public class PeeredDnsDomain extends io.pulumi.resources.CustomResource {
      * Private service connection between service and consumer network, defaults to `servicenetworking.googleapis.com`
      * 
      */
-    @OutputExport(name="service", type=String.class, parameters={})
+    @Export(name="service", type=String.class, parameters={})
     private Output</* @Nullable */ String> service;
 
     /**

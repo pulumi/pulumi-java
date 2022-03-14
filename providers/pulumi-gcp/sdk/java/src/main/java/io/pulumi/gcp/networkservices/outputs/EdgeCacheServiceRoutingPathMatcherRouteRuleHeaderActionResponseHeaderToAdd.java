@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd {
     /**
      * Headers to remove from the response prior to sending it back to the client.
@@ -29,11 +29,11 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
      */
     private final @Nullable Boolean replace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAdd(
-        @OutputCustomType.Parameter("headerName") String headerName,
-        @OutputCustomType.Parameter("headerValue") String headerValue,
-        @OutputCustomType.Parameter("replace") @Nullable Boolean replace) {
+        @CustomType.Parameter("headerName") String headerName,
+        @CustomType.Parameter("headerValue") String headerValue,
+        @CustomType.Parameter("replace") @Nullable Boolean replace) {
         this.headerName = headerName;
         this.headerValue = headerValue;
         this.replace = replace;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DiskDiskEncryptionKeyArgs extends io.pulumi.resources.Resourc
      * See https://cloud.google.com/compute/docs/disks/customer-managed-encryption#encrypt_a_new_persistent_disk_with_your_own_keys
      * 
      */
-    @InputImport(name="kmsKeySelfLink")
+    @Import(name="kmsKeySelfLink")
       private final @Nullable Output<String> kmsKeySelfLink;
 
     public Output<String> getKmsKeySelfLink() {
@@ -34,7 +34,7 @@ public final class DiskDiskEncryptionKeyArgs extends io.pulumi.resources.Resourc
      * If absent, the Compute Engine Service Agent service account is used.
      * 
      */
-    @InputImport(name="kmsKeyServiceAccount")
+    @Import(name="kmsKeyServiceAccount")
       private final @Nullable Output<String> kmsKeyServiceAccount;
 
     public Output<String> getKmsKeyServiceAccount() {
@@ -46,7 +46,7 @@ public final class DiskDiskEncryptionKeyArgs extends io.pulumi.resources.Resourc
      * RFC 4648 base64 to either encrypt or decrypt this resource.
      * 
      */
-    @InputImport(name="rawKey")
+    @Import(name="rawKey")
       private final @Nullable Output<String> rawKey;
 
     public Output<String> getRawKey() {
@@ -59,7 +59,7 @@ public final class DiskDiskEncryptionKeyArgs extends io.pulumi.resources.Resourc
      * encryption key that protects this resource.
      * 
      */
-    @InputImport(name="sha256")
+    @Import(name="sha256")
       private final @Nullable Output<String> sha256;
 
     public Output<String> getSha256() {

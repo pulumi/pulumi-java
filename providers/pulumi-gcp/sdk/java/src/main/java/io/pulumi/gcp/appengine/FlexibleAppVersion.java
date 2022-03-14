@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.appengine.FlexibleAppVersionArgs;
@@ -68,7 +68,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="apiConfig", type=FlexibleAppVersionApiConfig.class, parameters={})
+    @Export(name="apiConfig", type=FlexibleAppVersionApiConfig.class, parameters={})
     private Output</* @Nullable */ FlexibleAppVersionApiConfig> apiConfig;
 
     /**
@@ -84,7 +84,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="automaticScaling", type=FlexibleAppVersionAutomaticScaling.class, parameters={})
+    @Export(name="automaticScaling", type=FlexibleAppVersionAutomaticScaling.class, parameters={})
     private Output</* @Nullable */ FlexibleAppVersionAutomaticScaling> automaticScaling;
 
     /**
@@ -99,7 +99,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * Metadata settings that are supplied to this version to enable beta runtime features.
      * 
      */
-    @OutputExport(name="betaSettings", type=Map.class, parameters={String.class, String.class})
+    @Export(name="betaSettings", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> betaSettings;
 
     /**
@@ -114,7 +114,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * Only applicable if the corresponding StaticFilesHandler does not specify its own expiration time.
      * 
      */
-    @OutputExport(name="defaultExpiration", type=String.class, parameters={})
+    @Export(name="defaultExpiration", type=String.class, parameters={})
     private Output</* @Nullable */ String> defaultExpiration;
 
     /**
@@ -129,7 +129,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * If set to `true`, the service will be deleted if it is the last version.
      * 
      */
-    @OutputExport(name="deleteServiceOnDestroy", type=Boolean.class, parameters={})
+    @Export(name="deleteServiceOnDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> deleteServiceOnDestroy;
 
     /**
@@ -144,7 +144,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="deployment", type=FlexibleAppVersionDeployment.class, parameters={})
+    @Export(name="deployment", type=FlexibleAppVersionDeployment.class, parameters={})
     private Output</* @Nullable */ FlexibleAppVersionDeployment> deployment;
 
     /**
@@ -160,7 +160,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="endpointsApiService", type=FlexibleAppVersionEndpointsApiService.class, parameters={})
+    @Export(name="endpointsApiService", type=FlexibleAppVersionEndpointsApiService.class, parameters={})
     private Output</* @Nullable */ FlexibleAppVersionEndpointsApiService> endpointsApiService;
 
     /**
@@ -176,7 +176,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="entrypoint", type=FlexibleAppVersionEntrypoint.class, parameters={})
+    @Export(name="entrypoint", type=FlexibleAppVersionEntrypoint.class, parameters={})
     private Output</* @Nullable */ FlexibleAppVersionEntrypoint> entrypoint;
 
     /**
@@ -191,7 +191,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * Environment variables available to the application.  As these are not returned in the API request, the provider will not detect any changes made outside of the config.
      * 
      */
-    @OutputExport(name="envVariables", type=Map.class, parameters={String.class, String.class})
+    @Export(name="envVariables", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> envVariables;
 
     /**
@@ -207,7 +207,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="handlers", type=List.class, parameters={FlexibleAppVersionHandler.class})
+    @Export(name="handlers", type=List.class, parameters={FlexibleAppVersionHandler.class})
     private Output<List<FlexibleAppVersionHandler>> handlers;
 
     /**
@@ -224,7 +224,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
      * 
      */
-    @OutputExport(name="inboundServices", type=List.class, parameters={String.class})
+    @Export(name="inboundServices", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> inboundServices;
 
     /**
@@ -242,7 +242,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * Defaults to F1 for AutomaticScaling and B1 for ManualScaling.
      * 
      */
-    @OutputExport(name="instanceClass", type=String.class, parameters={})
+    @Export(name="instanceClass", type=String.class, parameters={})
     private Output</* @Nullable */ String> instanceClass;
 
     /**
@@ -260,7 +260,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="livenessCheck", type=FlexibleAppVersionLivenessCheck.class, parameters={})
+    @Export(name="livenessCheck", type=FlexibleAppVersionLivenessCheck.class, parameters={})
     private Output<FlexibleAppVersionLivenessCheck> livenessCheck;
 
     /**
@@ -276,7 +276,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="manualScaling", type=FlexibleAppVersionManualScaling.class, parameters={})
+    @Export(name="manualScaling", type=FlexibleAppVersionManualScaling.class, parameters={})
     private Output</* @Nullable */ FlexibleAppVersionManualScaling> manualScaling;
 
     /**
@@ -291,7 +291,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -306,7 +306,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="network", type=FlexibleAppVersionNetwork.class, parameters={})
+    @Export(name="network", type=FlexibleAppVersionNetwork.class, parameters={})
     private Output</* @Nullable */ FlexibleAppVersionNetwork> network;
 
     /**
@@ -321,7 +321,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * Files that match this pattern will not be built into this version. Only applicable for Go runtimes.
      * 
      */
-    @OutputExport(name="nobuildFilesRegex", type=String.class, parameters={})
+    @Export(name="nobuildFilesRegex", type=String.class, parameters={})
     private Output</* @Nullable */ String> nobuildFilesRegex;
 
     /**
@@ -335,7 +335,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * If set to `true`, the application version will not be deleted.
      * 
      */
-    @OutputExport(name="noopOnDestroy", type=Boolean.class, parameters={})
+    @Export(name="noopOnDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> noopOnDestroy;
 
     /**
@@ -350,7 +350,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -366,7 +366,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="readinessCheck", type=FlexibleAppVersionReadinessCheck.class, parameters={})
+    @Export(name="readinessCheck", type=FlexibleAppVersionReadinessCheck.class, parameters={})
     private Output<FlexibleAppVersionReadinessCheck> readinessCheck;
 
     /**
@@ -382,7 +382,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="resources", type=FlexibleAppVersionResources.class, parameters={})
+    @Export(name="resources", type=FlexibleAppVersionResources.class, parameters={})
     private Output</* @Nullable */ FlexibleAppVersionResources> resources;
 
     /**
@@ -397,7 +397,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * Desired runtime. Example python27.
      * 
      */
-    @OutputExport(name="runtime", type=String.class, parameters={})
+    @Export(name="runtime", type=String.class, parameters={})
     private Output<String> runtime;
 
     /**
@@ -413,7 +413,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * Substitute `<language>` with `python`, `java`, `php`, `ruby`, `go` or `nodejs`.
      * 
      */
-    @OutputExport(name="runtimeApiVersion", type=String.class, parameters={})
+    @Export(name="runtimeApiVersion", type=String.class, parameters={})
     private Output<String> runtimeApiVersion;
 
     /**
@@ -429,7 +429,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * The channel of the runtime to use. Only available for some runtimes.
      * 
      */
-    @OutputExport(name="runtimeChannel", type=String.class, parameters={})
+    @Export(name="runtimeChannel", type=String.class, parameters={})
     private Output</* @Nullable */ String> runtimeChannel;
 
     /**
@@ -443,7 +443,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * The path or name of the app's main executable.
      * 
      */
-    @OutputExport(name="runtimeMainExecutablePath", type=String.class, parameters={})
+    @Export(name="runtimeMainExecutablePath", type=String.class, parameters={})
     private Output</* @Nullable */ String> runtimeMainExecutablePath;
 
     /**
@@ -457,7 +457,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * AppEngine service resource. Can contain numbers, letters, and hyphens.
      * 
      */
-    @OutputExport(name="service", type=String.class, parameters={})
+    @Export(name="service", type=String.class, parameters={})
     private Output<String> service;
 
     /**
@@ -473,7 +473,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * Possible values are `SERVING` and `STOPPED`.
      * 
      */
-    @OutputExport(name="servingStatus", type=String.class, parameters={})
+    @Export(name="servingStatus", type=String.class, parameters={})
     private Output</* @Nullable */ String> servingStatus;
 
     /**
@@ -490,7 +490,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * Reserved names,"default", "latest", and any name with the prefix "ah-".
      * 
      */
-    @OutputExport(name="versionId", type=String.class, parameters={})
+    @Export(name="versionId", type=String.class, parameters={})
     private Output</* @Nullable */ String> versionId;
 
     /**
@@ -506,7 +506,7 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="vpcAccessConnector", type=FlexibleAppVersionVpcAccessConnector.class, parameters={})
+    @Export(name="vpcAccessConnector", type=FlexibleAppVersionVpcAccessConnector.class, parameters={})
     private Output</* @Nullable */ FlexibleAppVersionVpcAccessConnector> vpcAccessConnector;
 
     /**

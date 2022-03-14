@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.secretmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.secretmanager.outputs.SecretReplicationUserManagedReplicaCustomerManagedEncryption;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecretReplicationUserManagedReplica {
     /**
      * Customer Managed Encryption for the secret.
@@ -24,10 +24,10 @@ public final class SecretReplicationUserManagedReplica {
      */
     private final String location;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecretReplicationUserManagedReplica(
-        @OutputCustomType.Parameter("customerManagedEncryption") @Nullable SecretReplicationUserManagedReplicaCustomerManagedEncryption customerManagedEncryption,
-        @OutputCustomType.Parameter("location") String location) {
+        @CustomType.Parameter("customerManagedEncryption") @Nullable SecretReplicationUserManagedReplicaCustomerManagedEncryption customerManagedEncryption,
+        @CustomType.Parameter("location") String location) {
         this.customerManagedEncryption = customerManagedEncryption;
         this.location = location;
     }

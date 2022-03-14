@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @InputImport(name="creationTimestamp")
+    @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
@@ -30,7 +30,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * An optional description of this resource. Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -41,7 +41,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * Fingerprint of the resource. This field is used internally during updates of this resource.
      * 
      */
-    @InputImport(name="fingerprint")
+    @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
     public Output<String> getFingerprint() {
@@ -52,7 +52,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * The unique identifier for the resource. This identifier is defined by the server.
      * 
      */
-    @InputImport(name="firewallPolicyId")
+    @Import(name="firewallPolicyId")
       private final @Nullable Output<String> firewallPolicyId;
 
     public Output<String> getFirewallPolicyId() {
@@ -63,7 +63,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * Name of the resource. It is a numeric ID allocated by GCP which uniquely identifies the Firewall Policy.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -74,7 +74,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * The parent of the firewall policy.
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -85,7 +85,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * Total count of all firewall policy rule tuples. A firewall policy can not exceed a set number of tuples.
      * 
      */
-    @InputImport(name="ruleTupleCount")
+    @Import(name="ruleTupleCount")
       private final @Nullable Output<Integer> ruleTupleCount;
 
     public Output<Integer> getRuleTupleCount() {
@@ -96,7 +96,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * Server-defined URL for the resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -107,7 +107,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * Server-defined URL for this resource with the resource id.
      * 
      */
-    @InputImport(name="selfLinkWithId")
+    @Import(name="selfLinkWithId")
       private final @Nullable Output<String> selfLinkWithId;
 
     public Output<String> getSelfLinkWithId() {
@@ -118,7 +118,7 @@ public final class FirewallPolicyState extends io.pulumi.resources.ResourceArgs 
      * User-provided name of the Organization firewall policy. The name should be unique in the organization in which the firewall policy is created. The name must be 1-63 characters long, and comply with RFC1035. Specifically, the name must be 1-63 characters long and match the regular expression a-z? which means the first character must be a lowercase letter, and all following characters must be a dash, lowercase letter, or digit, except the last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="shortName")
+    @Import(name="shortName")
       private final @Nullable Output<String> shortName;
 
     public Output<String> getShortName() {

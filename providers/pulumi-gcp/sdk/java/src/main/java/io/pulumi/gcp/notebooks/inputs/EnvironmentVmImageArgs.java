@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class EnvironmentVmImageArgs extends io.pulumi.resources.ResourceAr
      * Use this VM image family to find the image; the newest image in this family will be used.
      * 
      */
-    @InputImport(name="imageFamily")
+    @Import(name="imageFamily")
       private final @Nullable Output<String> imageFamily;
 
     public Output<String> getImageFamily() {
@@ -29,7 +29,7 @@ public final class EnvironmentVmImageArgs extends io.pulumi.resources.ResourceAr
      * Use VM image name to find the image.
      * 
      */
-    @InputImport(name="imageName")
+    @Import(name="imageName")
       private final @Nullable Output<String> imageName;
 
     public Output<String> getImageName() {
@@ -41,7 +41,7 @@ public final class EnvironmentVmImageArgs extends io.pulumi.resources.ResourceAr
      * Format: projects/{project_id}
      * 
      */
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final Output<String> project;
 
     public Output<String> getProject() {

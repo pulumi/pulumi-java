@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class RegionDiskDiskEncryptionKeyGetArgs extends io.pulumi.resource
      * The name of the encryption key that is stored in Google Cloud KMS.
      * 
      */
-    @InputImport(name="kmsKeyName")
+    @Import(name="kmsKeyName")
       private final @Nullable Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {
@@ -30,7 +30,7 @@ public final class RegionDiskDiskEncryptionKeyGetArgs extends io.pulumi.resource
      * RFC 4648 base64 to either encrypt or decrypt this resource.
      * 
      */
-    @InputImport(name="rawKey")
+    @Import(name="rawKey")
       private final @Nullable Output<String> rawKey;
 
     public Output<String> getRawKey() {
@@ -43,7 +43,7 @@ public final class RegionDiskDiskEncryptionKeyGetArgs extends io.pulumi.resource
      * encryption key that protects this resource.
      * 
      */
-    @InputImport(name="sha256")
+    @Import(name="sha256")
       private final @Nullable Output<String> sha256;
 
     public Output<String> getSha256() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
      * Optional. Type of reservation to consume Possible values: TYPE_UNSPECIFIED, NO_RESERVATION, ANY_RESERVATION, SPECIFIC_RESERVATION
      * 
      */
-    @InputImport(name="consumeReservationType")
+    @Import(name="consumeReservationType")
       private final @Nullable Output<String> consumeReservationType;
 
     public Output<String> getConsumeReservationType() {
@@ -30,7 +30,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
      * Optional. Corresponds to the label key of reservation resource.
      * 
      */
-    @InputImport(name="key")
+    @Import(name="key")
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
@@ -41,7 +41,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
      * Optional. Corresponds to the label values of reservation resource.
      * 
      */
-    @InputImport(name="values")
+    @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
     public Output<List<String>> getValues() {

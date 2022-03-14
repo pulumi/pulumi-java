@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterNotificationConfigPubsub {
     /**
      * Enable the PodSecurityPolicy controller for this cluster.
@@ -24,10 +24,10 @@ public final class ClusterNotificationConfigPubsub {
      */
     private final @Nullable String topic;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterNotificationConfigPubsub(
-        @OutputCustomType.Parameter("enabled") Boolean enabled,
-        @OutputCustomType.Parameter("topic") @Nullable String topic) {
+        @CustomType.Parameter("enabled") Boolean enabled,
+        @CustomType.Parameter("topic") @Nullable String topic) {
         this.enabled = enabled;
         this.topic = topic;
     }

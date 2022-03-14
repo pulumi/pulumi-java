@@ -4,7 +4,7 @@
 package io.pulumi.gcp.ml;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.ml.inputs.EngineModelDefaultVersionArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="defaultVersion")
+    @Import(name="defaultVersion")
       private final @Nullable Output<EngineModelDefaultVersionArgs> defaultVersion;
 
     public Output<EngineModelDefaultVersionArgs> getDefaultVersion() {
@@ -34,7 +34,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
      * The description specified for the model when it was created.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
      * One or more labels that you can add, to organize your models.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -56,7 +56,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
      * The name specified for the version when it was created.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -67,7 +67,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
      * If true, online prediction nodes send stderr and stdout streams to Stackdriver Logging
      * 
      */
-    @InputImport(name="onlinePredictionConsoleLogging")
+    @Import(name="onlinePredictionConsoleLogging")
       private final @Nullable Output<Boolean> onlinePredictionConsoleLogging;
 
     public Output<Boolean> getOnlinePredictionConsoleLogging() {
@@ -78,7 +78,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
      * If true, online prediction access logs are sent to StackDriver Logging.
      * 
      */
-    @InputImport(name="onlinePredictionLogging")
+    @Import(name="onlinePredictionLogging")
       private final @Nullable Output<Boolean> onlinePredictionLogging;
 
     public Output<Boolean> getOnlinePredictionLogging() {
@@ -90,7 +90,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -102,7 +102,7 @@ public final class EngineModelArgs extends io.pulumi.resources.ResourceArgs {
      * Currently only one region per model is supported
      * 
      */
-    @InputImport(name="regions")
+    @Import(name="regions")
       private final @Nullable Output<String> regions;
 
     public Output<String> getRegions() {

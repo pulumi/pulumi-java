@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove {
     /**
      * Headers to remove from the response prior to sending it back to the client.
@@ -16,8 +16,8 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionReques
      */
     private final String headerName;
 
-    @OutputCustomType.Constructor
-    private EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove(@OutputCustomType.Parameter("headerName") String headerName) {
+    @CustomType.Constructor
+    private EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRequestHeaderToRemove(@CustomType.Parameter("headerName") String headerName) {
         this.headerName = headerName;
     }
 

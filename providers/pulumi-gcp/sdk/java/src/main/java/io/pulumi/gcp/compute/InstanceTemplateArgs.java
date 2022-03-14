@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.InstanceTemplateAdvancedMachineFeaturesArgs;
 import io.pulumi.gcp.compute.inputs.InstanceTemplateConfidentialInstanceConfigArgs;
 import io.pulumi.gcp.compute.inputs.InstanceTemplateDiskArgs;
@@ -32,7 +32,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Configure Nested Virtualisation and Simultaneous Hyper Threading on this VM. Structure is documented below
      * 
      */
-    @InputImport(name="advancedMachineFeatures")
+    @Import(name="advancedMachineFeatures")
       private final @Nullable Output<InstanceTemplateAdvancedMachineFeaturesArgs> advancedMachineFeatures;
 
     public Output<InstanceTemplateAdvancedMachineFeaturesArgs> getAdvancedMachineFeatures() {
@@ -44,7 +44,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * packets with non-matching source or destination IPs. This defaults to false.
      * 
      */
-    @InputImport(name="canIpForward")
+    @Import(name="canIpForward")
       private final @Nullable Output<Boolean> canIpForward;
 
     public Output<Boolean> getCanIpForward() {
@@ -55,7 +55,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Enable [Confidential Mode](https://cloud.google.com/compute/confidential-vm/docs/about-cvm) on this VM. Structure is documented below
      * 
      */
-    @InputImport(name="confidentialInstanceConfig")
+    @Import(name="confidentialInstanceConfig")
       private final @Nullable Output<InstanceTemplateConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
     public Output<InstanceTemplateConfidentialInstanceConfigArgs> getConfidentialInstanceConfig() {
@@ -66,7 +66,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * A brief description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -79,7 +79,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * documented below.
      * 
      */
-    @InputImport(name="disks", required=true)
+    @Import(name="disks", required=true)
       private final Output<List<InstanceTemplateDiskArgs>> disks;
 
     public Output<List<InstanceTemplateDiskArgs>> getDisks() {
@@ -91,7 +91,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * **Note**: `allow_stopping_for_update` must be set to true in order to update this field.
      * 
      */
-    @InputImport(name="enableDisplay")
+    @Import(name="enableDisplay")
       private final @Nullable Output<Boolean> enableDisplay;
 
     public Output<Boolean> getEnableDisplay() {
@@ -102,7 +102,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * List of the type and count of accelerator cards attached to the instance. Structure documented below.
      * 
      */
-    @InputImport(name="guestAccelerators")
+    @Import(name="guestAccelerators")
       private final @Nullable Output<List<InstanceTemplateGuestAcceleratorArgs>> guestAccelerators;
 
     public Output<List<InstanceTemplateGuestAcceleratorArgs>> getGuestAccelerators() {
@@ -114,7 +114,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * created from this template.
      * 
      */
-    @InputImport(name="instanceDescription")
+    @Import(name="instanceDescription")
       private final @Nullable Output<String> instanceDescription;
 
     public Output<String> getInstanceDescription() {
@@ -126,7 +126,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * this template
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -137,7 +137,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * The machine type to create.
      * 
      */
-    @InputImport(name="machineType", required=true)
+    @Import(name="machineType", required=true)
       private final Output<String> machineType;
 
     public Output<String> getMachineType() {
@@ -149,7 +149,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * within instances created from this template.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,Object>> metadata;
 
     public Output<Map<String,Object>> getMetadata() {
@@ -163,7 +163,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * thus the two mechanisms are not allowed to be used simultaneously.
      * 
      */
-    @InputImport(name="metadataStartupScript")
+    @Import(name="metadataStartupScript")
       private final @Nullable Output<String> metadataStartupScript;
 
     public Output<String> getMetadataStartupScript() {
@@ -175,7 +175,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * `Intel Haswell` or `Intel Skylake`. See the complete list [here](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform).
      * 
      */
-    @InputImport(name="minCpuPlatform")
+    @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
     public Output<String> getMinCpuPlatform() {
@@ -187,7 +187,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * this blank, the provider will auto-generate a unique name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -199,7 +199,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * prefix. Conflicts with `name`.
      * 
      */
-    @InputImport(name="namePrefix")
+    @Import(name="namePrefix")
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
@@ -212,7 +212,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="networkInterfaces")
+    @Import(name="networkInterfaces")
       private final @Nullable Output<List<InstanceTemplateNetworkInterfaceArgs>> networkInterfaces;
 
     public Output<List<InstanceTemplateNetworkInterfaceArgs>> getNetworkInterfaces() {
@@ -228,7 +228,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * in order for this setting to take effect.
      * 
      */
-    @InputImport(name="networkPerformanceConfig")
+    @Import(name="networkPerformanceConfig")
       private final @Nullable Output<InstanceTemplateNetworkPerformanceConfigArgs> networkPerformanceConfig;
 
     public Output<InstanceTemplateNetworkPerformanceConfigArgs> getNetworkPerformanceConfig() {
@@ -240,7 +240,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -256,7 +256,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Provider if no value is given.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -268,7 +268,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="reservationAffinity")
+    @Import(name="reservationAffinity")
       private final @Nullable Output<InstanceTemplateReservationAffinityArgs> reservationAffinity;
 
     public Output<InstanceTemplateReservationAffinityArgs> getReservationAffinity() {
@@ -280,7 +280,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * this configuration option are detailed below.
      * 
      */
-    @InputImport(name="scheduling")
+    @Import(name="scheduling")
       private final @Nullable Output<InstanceTemplateSchedulingArgs> scheduling;
 
     public Output<InstanceTemplateSchedulingArgs> getScheduling() {
@@ -291,7 +291,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Service account to attach to the instance. Structure is documented below.
      * 
      */
-    @InputImport(name="serviceAccount")
+    @Import(name="serviceAccount")
       private final @Nullable Output<InstanceTemplateServiceAccountArgs> serviceAccount;
 
     public Output<InstanceTemplateServiceAccountArgs> getServiceAccount() {
@@ -303,7 +303,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * **Note**: `shielded_instance_config` can only be used with boot images with shielded vm support. See the complete list [here](https://cloud.google.com/compute/docs/images#shielded-images).
      * 
      */
-    @InputImport(name="shieldedInstanceConfig")
+    @Import(name="shieldedInstanceConfig")
       private final @Nullable Output<InstanceTemplateShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     public Output<InstanceTemplateShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
@@ -314,7 +314,7 @@ public final class InstanceTemplateArgs extends io.pulumi.resources.ResourceArgs
      * Tags to attach to the instance.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {

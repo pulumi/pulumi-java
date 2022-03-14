@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dns.outputs.GetKeysZoneSigningKeyDigest;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetKeysZoneSigningKey {
     /**
      * String mnemonic specifying the DNSSEC algorithm of this key. Immutable after creation time. Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
@@ -59,17 +59,17 @@ public final class GetKeysZoneSigningKey {
      */
     private final String publicKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKeysZoneSigningKey(
-        @OutputCustomType.Parameter("algorithm") String algorithm,
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("digests") List<GetKeysZoneSigningKeyDigest> digests,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isActive") Boolean isActive,
-        @OutputCustomType.Parameter("keyLength") Integer keyLength,
-        @OutputCustomType.Parameter("keyTag") Integer keyTag,
-        @OutputCustomType.Parameter("publicKey") String publicKey) {
+        @CustomType.Parameter("algorithm") String algorithm,
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("digests") List<GetKeysZoneSigningKeyDigest> digests,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isActive") Boolean isActive,
+        @CustomType.Parameter("keyLength") Integer keyLength,
+        @CustomType.Parameter("keyTag") Integer keyTag,
+        @CustomType.Parameter("publicKey") String publicKey) {
         this.algorithm = algorithm;
         this.creationTime = creationTime;
         this.description = description;

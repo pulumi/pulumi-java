@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs;
 import io.pulumi.gcp.compute.inputs.ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
      * Structure is documented below.
      * 
      */
-    @InputImport(name="guestAccelerators")
+    @Import(name="guestAccelerators")
       private final @Nullable Output<List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs>> guestAccelerators;
 
     public Output<List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs>> getGuestAccelerators() {
@@ -35,7 +35,7 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
      * Structure is documented below.
      * 
      */
-    @InputImport(name="localSsds")
+    @Import(name="localSsds")
       private final @Nullable Output<List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs>> localSsds;
 
     public Output<List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs>> getLocalSsds() {
@@ -46,7 +46,7 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
      * The name of the machine type to reserve.
      * 
      */
-    @InputImport(name="machineType", required=true)
+    @Import(name="machineType", required=true)
       private final Output<String> machineType;
 
     public Output<String> getMachineType() {
@@ -60,7 +60,7 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
      * for information on available CPU platforms.
      * 
      */
-    @InputImport(name="minCpuPlatform")
+    @Import(name="minCpuPlatform")
       private final @Nullable Output<String> minCpuPlatform;
 
     public Output<String> getMinCpuPlatform() {

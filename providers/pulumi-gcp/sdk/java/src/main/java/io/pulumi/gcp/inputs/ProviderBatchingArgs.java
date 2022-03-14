@@ -4,7 +4,7 @@
 package io.pulumi.gcp.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class ProviderBatchingArgs extends io.pulumi.resources.ResourceArgs
 
     public static final ProviderBatchingArgs Empty = new ProviderBatchingArgs();
 
-    @InputImport(name="enableBatching")
+    @Import(name="enableBatching")
       private final @Nullable Output<Boolean> enableBatching;
 
     public Output<Boolean> getEnableBatching() {
         return this.enableBatching == null ? Output.empty() : this.enableBatching;
     }
 
-    @InputImport(name="sendAfter")
+    @Import(name="sendAfter")
       private final @Nullable Output<String> sendAfter;
 
     public Output<String> getSendAfter() {

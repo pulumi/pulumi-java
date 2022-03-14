@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.BackendBucketSignedUrlKeyArgs;
@@ -37,7 +37,7 @@ public class BackendBucketSignedUrlKey extends io.pulumi.resources.CustomResourc
      * The backend bucket this signed URL key belongs.
      * 
      */
-    @OutputExport(name="backendBucket", type=String.class, parameters={})
+    @Export(name="backendBucket", type=String.class, parameters={})
     private Output<String> backendBucket;
 
     /**
@@ -53,7 +53,7 @@ public class BackendBucketSignedUrlKey extends io.pulumi.resources.CustomResourc
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    @OutputExport(name="keyValue", type=String.class, parameters={})
+    @Export(name="keyValue", type=String.class, parameters={})
     private Output<String> keyValue;
 
     /**
@@ -69,7 +69,7 @@ public class BackendBucketSignedUrlKey extends io.pulumi.resources.CustomResourc
      * Name of the signed URL key.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -84,7 +84,7 @@ public class BackendBucketSignedUrlKey extends io.pulumi.resources.CustomResourc
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

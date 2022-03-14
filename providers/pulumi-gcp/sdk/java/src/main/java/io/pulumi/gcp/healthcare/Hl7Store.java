@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.Hl7StoreArgs;
@@ -49,7 +49,7 @@ public class Hl7Store extends io.pulumi.resources.CustomResource {
      * 'projects/{project}/locations/{location}/datasets/{dataset}'
      * 
      */
-    @OutputExport(name="dataset", type=String.class, parameters={})
+    @Export(name="dataset", type=String.class, parameters={})
     private Output<String> dataset;
 
     /**
@@ -71,7 +71,7 @@ public class Hl7Store extends io.pulumi.resources.CustomResource {
      * Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -93,7 +93,7 @@ public class Hl7Store extends io.pulumi.resources.CustomResource {
      * ** Changing this property may recreate the Hl7v2 store (removing all data) **
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -115,7 +115,7 @@ public class Hl7Store extends io.pulumi.resources.CustomResource {
      * 
      */
     @Deprecated /* This field has been replaced by notificationConfigs */
-    @OutputExport(name="notificationConfig", type=Hl7StoreNotificationConfig.class, parameters={})
+    @Export(name="notificationConfig", type=Hl7StoreNotificationConfig.class, parameters={})
     private Output</* @Nullable */ Hl7StoreNotificationConfig> notificationConfig;
 
     /**
@@ -135,7 +135,7 @@ public class Hl7Store extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="notificationConfigs", type=List.class, parameters={Hl7StoreNotificationConfigs.class})
+    @Export(name="notificationConfigs", type=List.class, parameters={Hl7StoreNotificationConfigs.class})
     private Output</* @Nullable */ List<Hl7StoreNotificationConfigs>> notificationConfigs;
 
     /**
@@ -153,7 +153,7 @@ public class Hl7Store extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="parserConfig", type=Hl7StoreParserConfig.class, parameters={})
+    @Export(name="parserConfig", type=Hl7StoreParserConfig.class, parameters={})
     private Output<Hl7StoreParserConfig> parserConfig;
 
     /**
@@ -168,7 +168,7 @@ public class Hl7Store extends io.pulumi.resources.CustomResource {
      * The fully qualified name of this dataset
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**

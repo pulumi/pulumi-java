@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd {
     /**
      * The name of the header to add.
@@ -29,11 +29,11 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceHeaderActionReq
      */
     private final @Nullable Boolean replace;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private URLMapDefaultRouteActionWeightedBackendServiceHeaderActionRequestHeadersToAdd(
-        @OutputCustomType.Parameter("headerName") @Nullable String headerName,
-        @OutputCustomType.Parameter("headerValue") @Nullable String headerValue,
-        @OutputCustomType.Parameter("replace") @Nullable Boolean replace) {
+        @CustomType.Parameter("headerName") @Nullable String headerName,
+        @CustomType.Parameter("headerValue") @Nullable String headerValue,
+        @CustomType.Parameter("replace") @Nullable Boolean replace) {
         this.headerName = headerName;
         this.headerValue = headerValue;
         this.replace = replace;

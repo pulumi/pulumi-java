@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.appengine.inputs.StandardAppVersionAutomaticScalingGetArgs;
 import io.pulumi.gcp.appengine.inputs.StandardAppVersionBasicScalingGetArgs;
 import io.pulumi.gcp.appengine.inputs.StandardAppVersionDeploymentGetArgs;
@@ -30,7 +30,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="automaticScaling")
+    @Import(name="automaticScaling")
       private final @Nullable Output<StandardAppVersionAutomaticScalingGetArgs> automaticScaling;
 
     public Output<StandardAppVersionAutomaticScalingGetArgs> getAutomaticScaling() {
@@ -42,7 +42,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="basicScaling")
+    @Import(name="basicScaling")
       private final @Nullable Output<StandardAppVersionBasicScalingGetArgs> basicScaling;
 
     public Output<StandardAppVersionBasicScalingGetArgs> getBasicScaling() {
@@ -53,7 +53,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * If set to `true`, the service will be deleted if it is the last version.
      * 
      */
-    @InputImport(name="deleteServiceOnDestroy")
+    @Import(name="deleteServiceOnDestroy")
       private final @Nullable Output<Boolean> deleteServiceOnDestroy;
 
     public Output<Boolean> getDeleteServiceOnDestroy() {
@@ -65,7 +65,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="deployment")
+    @Import(name="deployment")
       private final @Nullable Output<StandardAppVersionDeploymentGetArgs> deployment;
 
     public Output<StandardAppVersionDeploymentGetArgs> getDeployment() {
@@ -77,7 +77,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="entrypoint")
+    @Import(name="entrypoint")
       private final @Nullable Output<StandardAppVersionEntrypointGetArgs> entrypoint;
 
     public Output<StandardAppVersionEntrypointGetArgs> getEntrypoint() {
@@ -88,7 +88,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * Environment variables available to the application.
      * 
      */
-    @InputImport(name="envVariables")
+    @Import(name="envVariables")
       private final @Nullable Output<Map<String,String>> envVariables;
 
     public Output<Map<String,String>> getEnvVariables() {
@@ -101,7 +101,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="handlers")
+    @Import(name="handlers")
       private final @Nullable Output<List<StandardAppVersionHandlerGetArgs>> handlers;
 
     public Output<List<StandardAppVersionHandlerGetArgs>> getHandlers() {
@@ -113,7 +113,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * Each value may be one of `INBOUND_SERVICE_MAIL`, `INBOUND_SERVICE_MAIL_BOUNCE`, `INBOUND_SERVICE_XMPP_ERROR`, `INBOUND_SERVICE_XMPP_MESSAGE`, `INBOUND_SERVICE_XMPP_SUBSCRIBE`, `INBOUND_SERVICE_XMPP_PRESENCE`, `INBOUND_SERVICE_CHANNEL_PRESENCE`, and `INBOUND_SERVICE_WARMUP`.
      * 
      */
-    @InputImport(name="inboundServices")
+    @Import(name="inboundServices")
       private final @Nullable Output<List<String>> inboundServices;
 
     public Output<List<String>> getInboundServices() {
@@ -127,7 +127,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * Defaults to F1 for AutomaticScaling and B2 for ManualScaling and BasicScaling. If no scaling is specified, AutomaticScaling is chosen.
      * 
      */
-    @InputImport(name="instanceClass")
+    @Import(name="instanceClass")
       private final @Nullable Output<String> instanceClass;
 
     public Output<String> getInstanceClass() {
@@ -139,7 +139,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="libraries")
+    @Import(name="libraries")
       private final @Nullable Output<List<StandardAppVersionLibraryGetArgs>> libraries;
 
     public Output<List<StandardAppVersionLibraryGetArgs>> getLibraries() {
@@ -151,7 +151,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="manualScaling")
+    @Import(name="manualScaling")
       private final @Nullable Output<StandardAppVersionManualScalingGetArgs> manualScaling;
 
     public Output<StandardAppVersionManualScalingGetArgs> getManualScaling() {
@@ -162,7 +162,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -173,7 +173,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * If set to `true`, the application version will not be deleted.
      * 
      */
-    @InputImport(name="noopOnDestroy")
+    @Import(name="noopOnDestroy")
       private final @Nullable Output<Boolean> noopOnDestroy;
 
     public Output<Boolean> getNoopOnDestroy() {
@@ -185,7 +185,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -196,7 +196,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * Desired runtime. Example python27.
      * 
      */
-    @InputImport(name="runtime")
+    @Import(name="runtime")
       private final @Nullable Output<String> runtime;
 
     public Output<String> getRuntime() {
@@ -209,7 +209,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * Substitute `<language>` with `python`, `java`, `php`, `ruby`, `go` or `nodejs`.
      * 
      */
-    @InputImport(name="runtimeApiVersion")
+    @Import(name="runtimeApiVersion")
       private final @Nullable Output<String> runtimeApiVersion;
 
     public Output<String> getRuntimeApiVersion() {
@@ -220,7 +220,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * AppEngine service resource
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {
@@ -231,7 +231,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * Whether multiple requests can be dispatched to this version at once.
      * 
      */
-    @InputImport(name="threadsafe")
+    @Import(name="threadsafe")
       private final @Nullable Output<Boolean> threadsafe;
 
     public Output<Boolean> getThreadsafe() {
@@ -242,7 +242,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * Relative name of the version within the service. For example, `v1`. Version names can contain only lowercase letters, numbers, or hyphens. Reserved names,"default", "latest", and any name with the prefix "ah-".
      * 
      */
-    @InputImport(name="versionId")
+    @Import(name="versionId")
       private final @Nullable Output<String> versionId;
 
     public Output<String> getVersionId() {
@@ -254,7 +254,7 @@ public final class StandardAppVersionState extends io.pulumi.resources.ResourceA
      * Structure is documented below.
      * 
      */
-    @InputImport(name="vpcAccessConnector")
+    @Import(name="vpcAccessConnector")
       private final @Nullable Output<StandardAppVersionVpcAccessConnectorGetArgs> vpcAccessConnector;
 
     public Output<StandardAppVersionVpcAccessConnectorGetArgs> getVpcAccessConnector() {

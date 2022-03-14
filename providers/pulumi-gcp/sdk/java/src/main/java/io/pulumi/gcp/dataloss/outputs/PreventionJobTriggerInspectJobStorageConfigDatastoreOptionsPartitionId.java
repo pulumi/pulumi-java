@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId {
     /**
      * If not empty, the ID of the namespace to which the entities belong.
@@ -22,10 +22,10 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPa
      */
     private final String projectId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId(
-        @OutputCustomType.Parameter("namespaceId") @Nullable String namespaceId,
-        @OutputCustomType.Parameter("projectId") String projectId) {
+        @CustomType.Parameter("namespaceId") @Nullable String namespaceId,
+        @CustomType.Parameter("projectId") String projectId) {
         this.namespaceId = namespaceId;
         this.projectId = projectId;
     }

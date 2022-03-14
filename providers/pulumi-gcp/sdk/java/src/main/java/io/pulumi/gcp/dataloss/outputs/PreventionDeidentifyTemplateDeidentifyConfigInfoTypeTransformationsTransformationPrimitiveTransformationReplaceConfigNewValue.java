@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue;
 import io.pulumi.gcp.dataloss.outputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValue;
 import java.lang.Boolean;
@@ -14,7 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValue {
     /**
      * A boolean value.
@@ -61,16 +61,16 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      */
     private final @Nullable String timestampValue;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValue(
-        @OutputCustomType.Parameter("booleanValue") @Nullable Boolean booleanValue,
-        @OutputCustomType.Parameter("dateValue") @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue dateValue,
-        @OutputCustomType.Parameter("dayOfWeekValue") @Nullable String dayOfWeekValue,
-        @OutputCustomType.Parameter("floatValue") @Nullable Double floatValue,
-        @OutputCustomType.Parameter("integerValue") @Nullable Integer integerValue,
-        @OutputCustomType.Parameter("stringValue") @Nullable String stringValue,
-        @OutputCustomType.Parameter("timeValue") @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValue timeValue,
-        @OutputCustomType.Parameter("timestampValue") @Nullable String timestampValue) {
+        @CustomType.Parameter("booleanValue") @Nullable Boolean booleanValue,
+        @CustomType.Parameter("dateValue") @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValue dateValue,
+        @CustomType.Parameter("dayOfWeekValue") @Nullable String dayOfWeekValue,
+        @CustomType.Parameter("floatValue") @Nullable Double floatValue,
+        @CustomType.Parameter("integerValue") @Nullable Integer integerValue,
+        @CustomType.Parameter("stringValue") @Nullable String stringValue,
+        @CustomType.Parameter("timeValue") @Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueTimeValue timeValue,
+        @CustomType.Parameter("timestampValue") @Nullable String timestampValue) {
         this.booleanValue = booleanValue;
         this.dateValue = dateValue;
         this.dayOfWeekValue = dayOfWeekValue;

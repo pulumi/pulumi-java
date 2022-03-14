@@ -4,7 +4,7 @@
 package io.pulumi.gcp.identityplatform;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to allow email/password user authentication.
      * 
      */
-    @InputImport(name="allowPasswordSignup")
+    @Import(name="allowPasswordSignup")
       private final @Nullable Output<Boolean> allowPasswordSignup;
 
     public Output<Boolean> getAllowPasswordSignup() {
@@ -32,7 +32,7 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
      * are not able to manage its users.
      * 
      */
-    @InputImport(name="disableAuth")
+    @Import(name="disableAuth")
       private final @Nullable Output<Boolean> disableAuth;
 
     public Output<Boolean> getDisableAuth() {
@@ -43,7 +43,7 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
      * Human friendly display name of the tenant.
      * 
      */
-    @InputImport(name="displayName", required=true)
+    @Import(name="displayName", required=true)
       private final Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -54,7 +54,7 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
      * Whether to enable email link user authentication.
      * 
      */
-    @InputImport(name="enableEmailLinkSignin")
+    @Import(name="enableEmailLinkSignin")
       private final @Nullable Output<Boolean> enableEmailLinkSignin;
 
     public Output<Boolean> getEnableEmailLinkSignin() {
@@ -66,7 +66,7 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

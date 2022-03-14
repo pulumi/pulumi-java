@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigtable;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigtable.GCPolicyArgs;
@@ -33,7 +33,7 @@ public class GCPolicy extends io.pulumi.resources.CustomResource {
      * The name of the column family.
      * 
      */
-    @OutputExport(name="columnFamily", type=String.class, parameters={})
+    @Export(name="columnFamily", type=String.class, parameters={})
     private Output<String> columnFamily;
 
     /**
@@ -47,7 +47,7 @@ public class GCPolicy extends io.pulumi.resources.CustomResource {
      * The name of the Bigtable instance.
      * 
      */
-    @OutputExport(name="instanceName", type=String.class, parameters={})
+    @Export(name="instanceName", type=String.class, parameters={})
     private Output<String> instanceName;
 
     /**
@@ -61,7 +61,7 @@ public class GCPolicy extends io.pulumi.resources.CustomResource {
      * GC policy that applies to all cells older than the given age.
      * 
      */
-    @OutputExport(name="maxAge", type=GCPolicyMaxAge.class, parameters={})
+    @Export(name="maxAge", type=GCPolicyMaxAge.class, parameters={})
     private Output</* @Nullable */ GCPolicyMaxAge> maxAge;
 
     /**
@@ -75,7 +75,7 @@ public class GCPolicy extends io.pulumi.resources.CustomResource {
      * GC policy that applies to all versions of a cell except for the most recent.
      * 
      */
-    @OutputExport(name="maxVersions", type=List.class, parameters={GCPolicyMaxVersion.class})
+    @Export(name="maxVersions", type=List.class, parameters={GCPolicyMaxVersion.class})
     private Output</* @Nullable */ List<GCPolicyMaxVersion>> maxVersions;
 
     /**
@@ -89,7 +89,7 @@ public class GCPolicy extends io.pulumi.resources.CustomResource {
      * If multiple policies are set, you should choose between `UNION` OR `INTERSECTION`.
      * 
      */
-    @OutputExport(name="mode", type=String.class, parameters={})
+    @Export(name="mode", type=String.class, parameters={})
     private Output</* @Nullable */ String> mode;
 
     /**
@@ -103,7 +103,7 @@ public class GCPolicy extends io.pulumi.resources.CustomResource {
      * The ID of the project in which the resource belongs. If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -117,7 +117,7 @@ public class GCPolicy extends io.pulumi.resources.CustomResource {
      * The name of the table.
      * 
      */
-    @OutputExport(name="table", type=String.class, parameters={})
+    @Export(name="table", type=String.class, parameters={})
     private Output<String> table;
 
     /**

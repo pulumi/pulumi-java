@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudscheduler.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class JobRetryConfigArgs extends io.pulumi.resources.ResourceArgs {
      * A duration in seconds with up to nine fractional digits, terminated by 's'.
      * 
      */
-    @InputImport(name="maxBackoffDuration")
+    @Import(name="maxBackoffDuration")
       private final @Nullable Output<String> maxBackoffDuration;
 
     public Output<String> getMaxBackoffDuration() {
@@ -34,7 +34,7 @@ public final class JobRetryConfigArgs extends io.pulumi.resources.ResourceArgs {
      * and finally retries retries at intervals of maxBackoffDuration up to retryCount times.
      * 
      */
-    @InputImport(name="maxDoublings")
+    @Import(name="maxDoublings")
       private final @Nullable Output<Integer> maxDoublings;
 
     public Output<Integer> getMaxDoublings() {
@@ -47,7 +47,7 @@ public final class JobRetryConfigArgs extends io.pulumi.resources.ResourceArgs {
      * A duration in seconds with up to nine fractional digits, terminated by 's'.
      * 
      */
-    @InputImport(name="maxRetryDuration")
+    @Import(name="maxRetryDuration")
       private final @Nullable Output<String> maxRetryDuration;
 
     public Output<String> getMaxRetryDuration() {
@@ -59,7 +59,7 @@ public final class JobRetryConfigArgs extends io.pulumi.resources.ResourceArgs {
      * A duration in seconds with up to nine fractional digits, terminated by 's'.
      * 
      */
-    @InputImport(name="minBackoffDuration")
+    @Import(name="minBackoffDuration")
       private final @Nullable Output<String> minBackoffDuration;
 
     public Output<String> getMinBackoffDuration() {
@@ -72,7 +72,7 @@ public final class JobRetryConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Values greater than 5 and negative values are not allowed.
      * 
      */
-    @InputImport(name="retryCount")
+    @Import(name="retryCount")
       private final @Nullable Output<Integer> retryCount;
 
     public Output<Integer> getRetryCount() {

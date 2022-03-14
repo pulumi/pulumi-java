@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.MachineImageMachineImageEncryptionKeyArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
      * A text description of the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -32,7 +32,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
      * Currently only supported on Windows instances using the Volume Shadow Copy Service (VSS).
      * 
      */
-    @InputImport(name="guestFlush")
+    @Import(name="guestFlush")
       private final @Nullable Output<Boolean> guestFlush;
 
     public Output<Boolean> getGuestFlush() {
@@ -47,7 +47,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="machineImageEncryptionKey")
+    @Import(name="machineImageEncryptionKey")
       private final @Nullable Output<MachineImageMachineImageEncryptionKeyArgs> machineImageEncryptionKey;
 
     public Output<MachineImageMachineImageEncryptionKeyArgs> getMachineImageEncryptionKey() {
@@ -58,7 +58,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
      * Name of the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -70,7 +70,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -81,7 +81,7 @@ public final class MachineImageArgs extends io.pulumi.resources.ResourceArgs {
      * The source instance used to create the machine image. You can provide this as a partial or full URL to the resource.
      * 
      */
-    @InputImport(name="sourceInstance", required=true)
+    @Import(name="sourceInstance", required=true)
       private final Output<String> sourceInstance;
 
     public Output<String> getSourceInstance() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class InstanceAcceleratorConfig {
     /**
      * Count of cores of this accelerator.
@@ -22,10 +22,10 @@ public final class InstanceAcceleratorConfig {
      */
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceAcceleratorConfig(
-        @OutputCustomType.Parameter("coreCount") Integer coreCount,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("coreCount") Integer coreCount,
+        @CustomType.Parameter("type") String type) {
         this.coreCount = coreCount;
         this.type = type;
     }

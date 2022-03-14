@@ -4,7 +4,7 @@
 package io.pulumi.gcp.containeranalysis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class NoteAttestationAuthorityHintGetArgs extends io.pulumi.resourc
      * example "qa".
      * 
      */
-    @InputImport(name="humanReadableName", required=true)
+    @Import(name="humanReadableName", required=true)
       private final Output<String> humanReadableName;
 
     public Output<String> getHumanReadableName() {

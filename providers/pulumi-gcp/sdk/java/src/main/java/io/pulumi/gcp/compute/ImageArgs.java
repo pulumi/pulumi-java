@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.ImageGuestOsFeatureArgs;
 import io.pulumi.gcp.compute.inputs.ImageRawDiskArgs;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -35,7 +35,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * Size of the image when restored onto a persistent disk (in GB).
      * 
      */
-    @InputImport(name="diskSizeGb")
+    @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
     public Output<Integer> getDiskSizeGb() {
@@ -50,7 +50,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * RFC1035.
      * 
      */
-    @InputImport(name="family")
+    @Import(name="family")
       private final @Nullable Output<String> family;
 
     public Output<String> getFamily() {
@@ -63,7 +63,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="guestOsFeatures")
+    @Import(name="guestOsFeatures")
       private final @Nullable Output<List<ImageGuestOsFeatureArgs>> guestOsFeatures;
 
     public Output<List<ImageGuestOsFeatureArgs>> getGuestOsFeatures() {
@@ -74,7 +74,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * Labels to apply to this Image.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -85,7 +85,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * Any applicable license URI.
      * 
      */
-    @InputImport(name="licenses")
+    @Import(name="licenses")
       private final @Nullable Output<List<String>> licenses;
 
     public Output<List<String>> getLicenses() {
@@ -102,7 +102,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -114,7 +114,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -126,7 +126,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="rawDisk")
+    @Import(name="rawDisk")
       private final @Nullable Output<ImageRawDiskArgs> rawDisk;
 
     public Output<ImageRawDiskArgs> getRawDisk() {
@@ -139,7 +139,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * rawDisk.source property but not both to create an image.
      * 
      */
-    @InputImport(name="sourceDisk")
+    @Import(name="sourceDisk")
       private final @Nullable Output<String> sourceDisk;
 
     public Output<String> getSourceDisk() {
@@ -155,7 +155,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * * The sourceDisk URL
      * 
      */
-    @InputImport(name="sourceImage")
+    @Import(name="sourceImage")
       private final @Nullable Output<String> sourceImage;
 
     public Output<String> getSourceImage() {
@@ -172,7 +172,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
      * * The sourceDisk URL
      * 
      */
-    @InputImport(name="sourceSnapshot")
+    @Import(name="sourceSnapshot")
       private final @Nullable Output<String> sourceSnapshot;
 
     public Output<String> getSourceSnapshot() {

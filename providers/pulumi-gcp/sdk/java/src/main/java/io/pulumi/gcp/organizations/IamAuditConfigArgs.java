@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.organizations.inputs.IamAuditConfigAuditLogConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ public final class IamAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The configuration for logging of each type of permission.  This can be specified multiple times.  Structure is documented below.
      * 
      */
-    @InputImport(name="auditLogConfigs", required=true)
+    @Import(name="auditLogConfigs", required=true)
       private final Output<List<IamAuditConfigAuditLogConfigArgs>> auditLogConfigs;
 
     public Output<List<IamAuditConfigAuditLogConfigArgs>> getAuditLogConfigs() {
@@ -30,7 +30,7 @@ public final class IamAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * The numeric ID of the organization in which you want to manage the audit logging config.
      * 
      */
-    @InputImport(name="orgId", required=true)
+    @Import(name="orgId", required=true)
       private final Output<String> orgId;
 
     public Output<String> getOrgId() {
@@ -41,7 +41,7 @@ public final class IamAuditConfigArgs extends io.pulumi.resources.ResourceArgs {
      * Service which will be enabled for audit logging.  The special value `allServices` covers all services.  Note that if there are google\_organization\_iam\_audit\_config resources covering both `allServices` and a specific service then the union of the two AuditConfigs is used for that service: the `log_types` specified in each `audit_log_config` are enabled, and the `exempted_members` in each `audit_log_config` are exempted.
      * 
      */
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final Output<String> service;
 
     public Output<String> getService() {

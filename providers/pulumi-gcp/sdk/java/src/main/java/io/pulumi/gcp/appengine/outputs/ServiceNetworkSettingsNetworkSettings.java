@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServiceNetworkSettingsNetworkSettings {
     /**
      * The ingress settings for version or service.
@@ -19,8 +19,8 @@ public final class ServiceNetworkSettingsNetworkSettings {
      */
     private final @Nullable String ingressTrafficAllowed;
 
-    @OutputCustomType.Constructor
-    private ServiceNetworkSettingsNetworkSettings(@OutputCustomType.Parameter("ingressTrafficAllowed") @Nullable String ingressTrafficAllowed) {
+    @CustomType.Constructor
+    private ServiceNetworkSettingsNetworkSettings(@CustomType.Parameter("ingressTrafficAllowed") @Nullable String ingressTrafficAllowed) {
         this.ingressTrafficAllowed = ingressTrafficAllowed;
     }
 

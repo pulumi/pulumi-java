@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyAdaptiveProtectionConfigArgs;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyRuleArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
      * 
      */
-    @InputImport(name="adaptiveProtectionConfig")
+    @Import(name="adaptiveProtectionConfig")
       private final @Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
 
     public Output<SecurityPolicyAdaptiveProtectionConfigArgs> getAdaptiveProtectionConfig() {
@@ -32,7 +32,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of this rule. Max size is 64.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the security policy.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -55,7 +55,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -68,7 +68,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * security policy, a default rule with action "allow" will be added. Structure is documented below.
      * 
      */
-    @InputImport(name="rules")
+    @Import(name="rules")
       private final @Nullable Output<List<SecurityPolicyRuleArgs>> rules;
 
     public Output<List<SecurityPolicyRuleArgs>> getRules() {

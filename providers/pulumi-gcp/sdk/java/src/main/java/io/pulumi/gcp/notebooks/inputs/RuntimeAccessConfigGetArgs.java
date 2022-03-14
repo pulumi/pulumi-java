@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class RuntimeAccessConfigGetArgs extends io.pulumi.resources.Resour
      * rest/v1/projects.locations.runtimes#RuntimeAccessType`.
      * 
      */
-    @InputImport(name="accessType")
+    @Import(name="accessType")
       private final @Nullable Output<String> accessType;
 
     public Output<String> getAccessType() {
@@ -32,7 +32,7 @@ public final class RuntimeAccessConfigGetArgs extends io.pulumi.resources.Resour
      * The proxy endpoint that is used to access the runtime.
      * 
      */
-    @InputImport(name="proxyUri")
+    @Import(name="proxyUri")
       private final @Nullable Output<String> proxyUri;
 
     public Output<String> getProxyUri() {
@@ -44,7 +44,7 @@ public final class RuntimeAccessConfigGetArgs extends io.pulumi.resources.Resour
      * Currently supports one owner only.
      * 
      */
-    @InputImport(name="runtimeOwner")
+    @Import(name="runtimeOwner")
       private final @Nullable Output<String> runtimeOwner;
 
     public Output<String> getRuntimeOwner() {

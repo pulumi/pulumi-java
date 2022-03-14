@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdGetArgs;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliMetricMeanInRangeGetArgs;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliMetricSumInRangeGetArgs;
@@ -25,7 +25,7 @@ public final class SloWindowsBasedSliGetArgs extends io.pulumi.resources.Resourc
      * `metric_sum_in_range` must be set for `windows_based_sli`.
      * 
      */
-    @InputImport(name="goodBadMetricFilter")
+    @Import(name="goodBadMetricFilter")
       private final @Nullable Output<String> goodBadMetricFilter;
 
     public Output<String> getGoodBadMetricFilter() {
@@ -40,7 +40,7 @@ public final class SloWindowsBasedSliGetArgs extends io.pulumi.resources.Resourc
      * Structure is documented below.
      * 
      */
-    @InputImport(name="goodTotalRatioThreshold")
+    @Import(name="goodTotalRatioThreshold")
       private final @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdGetArgs> goodTotalRatioThreshold;
 
     public Output<SloWindowsBasedSliGoodTotalRatioThresholdGetArgs> getGoodTotalRatioThreshold() {
@@ -58,7 +58,7 @@ public final class SloWindowsBasedSliGetArgs extends io.pulumi.resources.Resourc
      * Structure is documented below.
      * 
      */
-    @InputImport(name="metricMeanInRange")
+    @Import(name="metricMeanInRange")
       private final @Nullable Output<SloWindowsBasedSliMetricMeanInRangeGetArgs> metricMeanInRange;
 
     public Output<SloWindowsBasedSliMetricMeanInRangeGetArgs> getMetricMeanInRange() {
@@ -76,7 +76,7 @@ public final class SloWindowsBasedSliGetArgs extends io.pulumi.resources.Resourc
      * Structure is documented below.
      * 
      */
-    @InputImport(name="metricSumInRange")
+    @Import(name="metricSumInRange")
       private final @Nullable Output<SloWindowsBasedSliMetricSumInRangeGetArgs> metricSumInRange;
 
     public Output<SloWindowsBasedSliMetricSumInRangeGetArgs> getMetricSumInRange() {
@@ -89,7 +89,7 @@ public final class SloWindowsBasedSliGetArgs extends io.pulumi.resources.Resourc
      * integer fraction of a day and at least 60s.
      * 
      */
-    @InputImport(name="windowPeriod")
+    @Import(name="windowPeriod")
       private final @Nullable Output<String> windowPeriod;
 
     public Output<String> getWindowPeriod() {

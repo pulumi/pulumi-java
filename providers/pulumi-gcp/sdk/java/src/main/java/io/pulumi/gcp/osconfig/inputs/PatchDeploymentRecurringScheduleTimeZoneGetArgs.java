@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PatchDeploymentRecurringScheduleTimeZoneGetArgs extends io.pu
      * IANA Time Zone Database time zone, e.g. "America/New_York".
      * 
      */
-    @InputImport(name="id", required=true)
+    @Import(name="id", required=true)
       private final Output<String> id;
 
     public Output<String> getId() {
@@ -29,7 +29,7 @@ public final class PatchDeploymentRecurringScheduleTimeZoneGetArgs extends io.pu
      * IANA Time Zone Database version number, e.g. "2019a".
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

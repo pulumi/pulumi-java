@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.diagflow.inputs.IntentFollowupIntentInfoGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * Note: The action name must not contain whitespaces.
      * 
      */
-    @InputImport(name="action")
+    @Import(name="action")
       private final @Nullable Output<String> action;
 
     public Output<String> getAction() {
@@ -36,7 +36,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * Each value may be one of `FACEBOOK`, `SLACK`, `TELEGRAM`, `KIK`, `SKYPE`, `LINE`, `VIBER`, `ACTIONS_ON_GOOGLE`, and `GOOGLE_HANGOUTS`.
      * 
      */
-    @InputImport(name="defaultResponsePlatforms")
+    @Import(name="defaultResponsePlatforms")
       private final @Nullable Output<List<String>> defaultResponsePlatforms;
 
     public Output<List<String>> getDefaultResponsePlatforms() {
@@ -47,7 +47,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * The name of this intent to be displayed on the console.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -60,7 +60,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * [events reference](https://cloud.google.com/dialogflow/docs/events-overview) for more details.
      * 
      */
-    @InputImport(name="events")
+    @Import(name="events")
       private final @Nullable Output<List<String>> events;
 
     public Output<List<String>> getEvents() {
@@ -72,7 +72,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * in the output.
      * 
      */
-    @InputImport(name="followupIntentInfos")
+    @Import(name="followupIntentInfos")
       private final @Nullable Output<List<IntentFollowupIntentInfoGetArgs>> followupIntentInfos;
 
     public Output<List<IntentFollowupIntentInfoGetArgs>> getFollowupIntentInfos() {
@@ -84,7 +84,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * Format: projects/<Project ID>/agent/sessions/-/contexts/<Context ID>.
      * 
      */
-    @InputImport(name="inputContextNames")
+    @Import(name="inputContextNames")
       private final @Nullable Output<List<String>> inputContextNames;
 
     public Output<List<String>> getInputContextNames() {
@@ -95,7 +95,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * Indicates whether this is a fallback intent.
      * 
      */
-    @InputImport(name="isFallback")
+    @Import(name="isFallback")
       private final @Nullable Output<Boolean> isFallback;
 
     public Output<Boolean> getIsFallback() {
@@ -108,7 +108,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * ONLY match mode. Also, auto-markup in the UI is turned off.
      * 
      */
-    @InputImport(name="mlDisabled")
+    @Import(name="mlDisabled")
       private final @Nullable Output<Boolean> mlDisabled;
 
     public Output<Boolean> getMlDisabled() {
@@ -119,7 +119,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * The unique identifier of this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -131,7 +131,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * Format: projects/<Project ID>/agent/intents/<Intent ID>.
      * 
      */
-    @InputImport(name="parentFollowupIntentName")
+    @Import(name="parentFollowupIntentName")
       private final @Nullable Output<String> parentFollowupIntentName;
 
     public Output<String> getParentFollowupIntentName() {
@@ -145,7 +145,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * - If the supplied value is negative, the intent is ignored in runtime detect intent requests.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -157,7 +157,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -168,7 +168,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * Indicates whether to delete all contexts in the current session when this intent is matched.
      * 
      */
-    @InputImport(name="resetContexts")
+    @Import(name="resetContexts")
       private final @Nullable Output<Boolean> resetContexts;
 
     public Output<Boolean> getResetContexts() {
@@ -180,7 +180,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      * chain for this intent. Format: projects/<Project ID>/agent/intents/<Intent ID>.
      * 
      */
-    @InputImport(name="rootFollowupIntentName")
+    @Import(name="rootFollowupIntentName")
       private final @Nullable Output<String> rootFollowupIntentName;
 
     public Output<String> getRootFollowupIntentName() {
@@ -195,7 +195,7 @@ public final class IntentState extends io.pulumi.resources.ResourceArgs {
      *   Possible values are `WEBHOOK_STATE_ENABLED` and `WEBHOOK_STATE_ENABLED_FOR_SLOT_FILLING`.
      * 
      */
-    @InputImport(name="webhookState")
+    @Import(name="webhookState")
       private final @Nullable Output<String> webhookState;
 
     public Output<String> getWebhookState() {

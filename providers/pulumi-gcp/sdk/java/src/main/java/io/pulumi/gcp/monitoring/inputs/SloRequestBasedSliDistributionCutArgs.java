@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.monitoring.inputs.SloRequestBasedSliDistributionCutRangeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SloRequestBasedSliDistributionCutArgs extends io.pulumi.resou
      * MetricKind = DELTA or MetricKind = CUMULATIVE.
      * 
      */
-    @InputImport(name="distributionFilter", required=true)
+    @Import(name="distributionFilter", required=true)
       private final Output<String> distributionFilter;
 
     public Output<String> getDistributionFilter() {
@@ -38,7 +38,7 @@ public final class SloRequestBasedSliDistributionCutArgs extends io.pulumi.resou
      * Structure is documented below.
      * 
      */
-    @InputImport(name="range", required=true)
+    @Import(name="range", required=true)
       private final Output<SloRequestBasedSliDistributionCutRangeArgs> range;
 
     public Output<SloRequestBasedSliDistributionCutRangeArgs> getRange() {

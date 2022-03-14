@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.iam.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class WorkloadIdentityPoolProviderAws {
     /**
      * The AWS account ID.
@@ -15,8 +15,8 @@ public final class WorkloadIdentityPoolProviderAws {
      */
     private final String accountId;
 
-    @OutputCustomType.Constructor
-    private WorkloadIdentityPoolProviderAws(@OutputCustomType.Parameter("accountId") String accountId) {
+    @CustomType.Constructor
+    private WorkloadIdentityPoolProviderAws(@CustomType.Parameter("accountId") String accountId) {
         this.accountId = accountId;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class BackendBucketSignedUrlKeyState extends io.pulumi.resources.Re
      * The backend bucket this signed URL key belongs.
      * 
      */
-    @InputImport(name="backendBucket")
+    @Import(name="backendBucket")
       private final @Nullable Output<String> backendBucket;
 
     public Output<String> getBackendBucket() {
@@ -31,7 +31,7 @@ public final class BackendBucketSignedUrlKeyState extends io.pulumi.resources.Re
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    @InputImport(name="keyValue")
+    @Import(name="keyValue")
       private final @Nullable Output<String> keyValue;
 
     public Output<String> getKeyValue() {
@@ -42,7 +42,7 @@ public final class BackendBucketSignedUrlKeyState extends io.pulumi.resources.Re
      * Name of the signed URL key.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -54,7 +54,7 @@ public final class BackendBucketSignedUrlKeyState extends io.pulumi.resources.Re
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

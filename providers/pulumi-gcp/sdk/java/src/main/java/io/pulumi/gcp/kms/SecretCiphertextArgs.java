@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SecretCiphertextArgs extends io.pulumi.resources.ResourceArgs
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    @InputImport(name="additionalAuthenticatedData")
+    @Import(name="additionalAuthenticatedData")
       private final @Nullable Output<String> additionalAuthenticatedData;
 
     public Output<String> getAdditionalAuthenticatedData() {
@@ -31,7 +31,7 @@ public final class SecretCiphertextArgs extends io.pulumi.resources.ResourceArgs
      * Format: `'projects/{{project}}/locations/{{location}}/keyRings/{{keyRing}}/cryptoKeys/{{cryptoKey}}'`
      * 
      */
-    @InputImport(name="cryptoKey", required=true)
+    @Import(name="cryptoKey", required=true)
       private final Output<String> cryptoKey;
 
     public Output<String> getCryptoKey() {
@@ -43,7 +43,7 @@ public final class SecretCiphertextArgs extends io.pulumi.resources.ResourceArgs
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    @InputImport(name="plaintext", required=true)
+    @Import(name="plaintext", required=true)
       private final Output<String> plaintext;
 
     public Output<String> getPlaintext() {

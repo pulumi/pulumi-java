@@ -4,7 +4,7 @@
 package io.pulumi.gcp.containeranalysis.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.containeranalysis.inputs.OccurenceAttestationGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="attestation")
+    @Import(name="attestation")
       private final @Nullable Output<OccurenceAttestationGetArgs> attestation;
 
     public Output<OccurenceAttestationGetArgs> getAttestation() {
@@ -38,7 +38,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * The time when the repository was created.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -50,7 +50,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * in list requests.
      * 
      */
-    @InputImport(name="kind")
+    @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
@@ -61,7 +61,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * The name of the occurrence.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -74,7 +74,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * filter in list requests.
      * 
      */
-    @InputImport(name="noteName")
+    @Import(name="noteName")
       private final @Nullable Output<String> noteName;
 
     public Output<String> getNoteName() {
@@ -86,7 +86,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -97,7 +97,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * A description of actions that can be taken to remedy the note.
      * 
      */
-    @InputImport(name="remediation")
+    @Import(name="remediation")
       private final @Nullable Output<String> remediation;
 
     public Output<String> getRemediation() {
@@ -110,7 +110,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * https://gcr.io/project/image@sha256:123abc for a Docker image.
      * 
      */
-    @InputImport(name="resourceUri")
+    @Import(name="resourceUri")
       private final @Nullable Output<String> resourceUri;
 
     public Output<String> getResourceUri() {
@@ -121,7 +121,7 @@ public final class OccurenceState extends io.pulumi.resources.ResourceArgs {
      * The time when the repository was last updated.
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs exte
      * Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
      * 
      */
-    @InputImport(name="allowedSuccessCodes")
+    @Import(name="allowedSuccessCodes")
       private final @Nullable Output<List<Integer>> allowedSuccessCodes;
 
     public Output<List<Integer>> getAllowedSuccessCodes() {
@@ -33,7 +33,7 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs exte
      * Structure is documented below.
      * 
      */
-    @InputImport(name="gcsObject")
+    @Import(name="gcsObject")
       private final @Nullable Output<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectArgs> gcsObject;
 
     public Output<PatchDeploymentPatchConfigPreStepLinuxExecStepConfigGcsObjectArgs> getGcsObject() {
@@ -46,7 +46,7 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs exte
      * Possible values are `SHELL` and `POWERSHELL`.
      * 
      */
-    @InputImport(name="interpreter")
+    @Import(name="interpreter")
       private final @Nullable Output<String> interpreter;
 
     public Output<String> getInterpreter() {
@@ -57,7 +57,7 @@ public final class PatchDeploymentPatchConfigPreStepLinuxExecStepConfigArgs exte
      * An absolute path to the executable on the VM.
      * 
      */
-    @InputImport(name="localPath")
+    @Import(name="localPath")
       private final @Nullable Output<String> localPath;
 
     public Output<String> getLocalPath() {

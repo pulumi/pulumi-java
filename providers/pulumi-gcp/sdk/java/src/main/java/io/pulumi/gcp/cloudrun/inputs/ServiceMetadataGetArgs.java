@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -28,7 +28,7 @@ public final class ServiceMetadataGetArgs extends io.pulumi.resources.ResourceAr
      *   for the Service. For example, `"run.googleapis.com/ingress" = "all"`.
      * 
      */
-    @InputImport(name="annotations")
+    @Import(name="annotations")
       private final @Nullable Output<Map<String,String>> annotations;
 
     public Output<Map<String,String>> getAnnotations() {
@@ -40,7 +40,7 @@ public final class ServiceMetadataGetArgs extends io.pulumi.resources.ResourceAr
      * A sequence number representing a specific generation of the desired state.
      * 
      */
-    @InputImport(name="generation")
+    @Import(name="generation")
       private final @Nullable Output<Integer> generation;
 
     public Output<Integer> getGeneration() {
@@ -54,7 +54,7 @@ public final class ServiceMetadataGetArgs extends io.pulumi.resources.ResourceAr
      * More info: http://kubernetes.io/docs/user-guide/labels
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -66,7 +66,7 @@ public final class ServiceMetadataGetArgs extends io.pulumi.resources.ResourceAr
      * project ID or project number.
      * 
      */
-    @InputImport(name="namespace")
+    @Import(name="namespace")
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
@@ -84,7 +84,7 @@ public final class ServiceMetadataGetArgs extends io.pulumi.resources.ResourceAr
      * https://git.k8s.io/community/contributors/devel/api-conventions.md#concurrency-control-and-consistency
      * 
      */
-    @InputImport(name="resourceVersion")
+    @Import(name="resourceVersion")
       private final @Nullable Output<String> resourceVersion;
 
     public Output<String> getResourceVersion() {
@@ -96,7 +96,7 @@ public final class ServiceMetadataGetArgs extends io.pulumi.resources.ResourceAr
      * SelfLink is a URL representing this object.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -110,7 +110,7 @@ public final class ServiceMetadataGetArgs extends io.pulumi.resources.ResourceAr
      * More info: http://kubernetes.io/docs/user-guide/identifiers#uids
      * 
      */
-    @InputImport(name="uid")
+    @Import(name="uid")
       private final @Nullable Output<String> uid;
 
     public Output<String> getUid() {

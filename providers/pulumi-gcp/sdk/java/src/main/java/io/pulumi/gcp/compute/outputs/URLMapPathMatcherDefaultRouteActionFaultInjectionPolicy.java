@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicy {
     /**
      * The specification for how client requests are aborted as part of fault injection.
@@ -25,10 +25,10 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicy {
      */
     private final @Nullable URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay delay;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private URLMapPathMatcherDefaultRouteActionFaultInjectionPolicy(
-        @OutputCustomType.Parameter("abort") @Nullable URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort abort,
-        @OutputCustomType.Parameter("delay") @Nullable URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay delay) {
+        @CustomType.Parameter("abort") @Nullable URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort abort,
+        @CustomType.Parameter("delay") @Nullable URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay delay) {
         this.abort = abort;
         this.delay = delay;
     }

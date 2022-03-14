@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.redis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceMaintenanceSchedule {
     /**
      * - 
@@ -37,11 +37,11 @@ public final class InstanceMaintenanceSchedule {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceMaintenanceSchedule(
-        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
-        @OutputCustomType.Parameter("scheduleDeadlineTime") @Nullable String scheduleDeadlineTime,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
+        @CustomType.Parameter("endTime") @Nullable String endTime,
+        @CustomType.Parameter("scheduleDeadlineTime") @Nullable String scheduleDeadlineTime,
+        @CustomType.Parameter("startTime") @Nullable String startTime) {
         this.endTime = endTime;
         this.scheduleDeadlineTime = scheduleDeadlineTime;
         this.startTime = startTime;

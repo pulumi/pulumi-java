@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetNetworkEndpointGroupResult {
     /**
      * The NEG default port.
@@ -52,19 +52,19 @@ public final class GetNetworkEndpointGroupResult {
     private final String subnetwork;
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetNetworkEndpointGroupResult(
-        @OutputCustomType.Parameter("defaultPort") Integer defaultPort,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("networkEndpointType") String networkEndpointType,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("selfLink") @Nullable String selfLink,
-        @OutputCustomType.Parameter("size") Integer size,
-        @OutputCustomType.Parameter("subnetwork") String subnetwork,
-        @OutputCustomType.Parameter("zone") @Nullable String zone) {
+        @CustomType.Parameter("defaultPort") Integer defaultPort,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("networkEndpointType") String networkEndpointType,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("selfLink") @Nullable String selfLink,
+        @CustomType.Parameter("size") Integer size,
+        @CustomType.Parameter("subnetwork") String subnetwork,
+        @CustomType.Parameter("zone") @Nullable String zone) {
         this.defaultPort = defaultPort;
         this.description = description;
         this.id = id;

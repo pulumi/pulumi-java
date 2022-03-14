@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class RuntimeSoftwareConfigGetArgs extends io.pulumi.resources.Reso
      * If not specified, we'll automatically choose from official GPU drivers.
      * 
      */
-    @InputImport(name="customGpuDriverPath")
+    @Import(name="customGpuDriverPath")
       private final @Nullable Output<String> customGpuDriverPath;
 
     public Output<String> getCustomGpuDriverPath() {
@@ -32,7 +32,7 @@ public final class RuntimeSoftwareConfigGetArgs extends io.pulumi.resources.Reso
      * Verifies core internal services are running. Default: True.
      * 
      */
-    @InputImport(name="enableHealthMonitoring")
+    @Import(name="enableHealthMonitoring")
       private final @Nullable Output<Boolean> enableHealthMonitoring;
 
     public Output<Boolean> getEnableHealthMonitoring() {
@@ -44,7 +44,7 @@ public final class RuntimeSoftwareConfigGetArgs extends io.pulumi.resources.Reso
      * Default: True
      * 
      */
-    @InputImport(name="idleShutdown")
+    @Import(name="idleShutdown")
       private final @Nullable Output<Boolean> idleShutdown;
 
     public Output<Boolean> getIdleShutdown() {
@@ -56,7 +56,7 @@ public final class RuntimeSoftwareConfigGetArgs extends io.pulumi.resources.Reso
      * Default: 180 minutes
      * 
      */
-    @InputImport(name="idleShutdownTimeout")
+    @Import(name="idleShutdownTimeout")
       private final @Nullable Output<Integer> idleShutdownTimeout;
 
     public Output<Integer> getIdleShutdownTimeout() {
@@ -67,7 +67,7 @@ public final class RuntimeSoftwareConfigGetArgs extends io.pulumi.resources.Reso
      * Install Nvidia Driver automatically.
      * 
      */
-    @InputImport(name="installGpuDriver")
+    @Import(name="installGpuDriver")
       private final @Nullable Output<Boolean> installGpuDriver;
 
     public Output<Boolean> getInstallGpuDriver() {
@@ -79,7 +79,7 @@ public final class RuntimeSoftwareConfigGetArgs extends io.pulumi.resources.Reso
      * Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
      * 
      */
-    @InputImport(name="notebookUpgradeSchedule")
+    @Import(name="notebookUpgradeSchedule")
       private final @Nullable Output<String> notebookUpgradeSchedule;
 
     public Output<String> getNotebookUpgradeSchedule() {
@@ -92,7 +92,7 @@ public final class RuntimeSoftwareConfigGetArgs extends io.pulumi.resources.Reso
      * Cloud Storage path (gs://path-to-file/file-name).
      * 
      */
-    @InputImport(name="postStartupScript")
+    @Import(name="postStartupScript")
       private final @Nullable Output<String> postStartupScript;
 
     public Output<String> getPostStartupScript() {

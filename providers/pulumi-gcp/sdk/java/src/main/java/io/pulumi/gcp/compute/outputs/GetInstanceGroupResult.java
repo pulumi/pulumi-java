@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetInstanceGroupNamedPort;
 import java.lang.Integer;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceGroupResult {
     /**
      * Textual description of the instance group.
@@ -53,18 +53,18 @@ public final class GetInstanceGroupResult {
     private final Integer size;
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceGroupResult(
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("instances") List<String> instances,
-        @OutputCustomType.Parameter("name") @Nullable String name,
-        @OutputCustomType.Parameter("namedPorts") List<GetInstanceGroupNamedPort> namedPorts,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("project") String project,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("size") Integer size,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("instances") List<String> instances,
+        @CustomType.Parameter("name") @Nullable String name,
+        @CustomType.Parameter("namedPorts") List<GetInstanceGroupNamedPort> namedPorts,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("project") String project,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("size") Integer size,
+        @CustomType.Parameter("zone") String zone) {
         this.description = description;
         this.id = id;
         this.instances = instances;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class GuestPoliciesRecipeInstallStepArchiveExtractionArgs extends i
      * The id of the relevant artifact in the recipe.
      * 
      */
-    @InputImport(name="artifactId", required=true)
+    @Import(name="artifactId", required=true)
       private final Output<String> artifactId;
 
     public Output<String> getArtifactId() {
@@ -29,7 +29,7 @@ public final class GuestPoliciesRecipeInstallStepArchiveExtractionArgs extends i
      * Directory to extract archive to. Defaults to / on Linux or C:\ on Windows.
      * 
      */
-    @InputImport(name="destination")
+    @Import(name="destination")
       private final @Nullable Output<String> destination;
 
     public Output<String> getDestination() {
@@ -41,7 +41,7 @@ public final class GuestPoliciesRecipeInstallStepArchiveExtractionArgs extends i
      * Possible values are `TAR`, `TAR_GZIP`, `TAR_BZIP`, `TAR_LZMA`, `TAR_XZ`, and `ZIP`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
      * A textual description for the organization security policy.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -29,7 +29,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
      * A textual name of the security policy.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -40,7 +40,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
      * Fingerprint of this resource. This field is used internally during updates of this resource.
      * 
      */
-    @InputImport(name="fingerprint")
+    @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
     public Output<String> getFingerprint() {
@@ -52,7 +52,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
      * Format: organizations/{organization_id} or folders/{folder_id}
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -63,7 +63,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
      * The unique identifier for the resource. This identifier is defined by the server.
      * 
      */
-    @InputImport(name="policyId")
+    @Import(name="policyId")
       private final @Nullable Output<String> policyId;
 
     public Output<String> getPolicyId() {
@@ -78,7 +78,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
      * Possible values are `FIREWALL`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

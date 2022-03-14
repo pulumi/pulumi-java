@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetImageVersionsImageVersion extends io.pulumi.resources.Invo
      * The string identifier of the image version, in the form: "composer-x.y.z-airflow-a.b(.c)"
      * 
      */
-    @InputImport(name="imageVersionId", required=true)
+    @Import(name="imageVersionId", required=true)
       private final String imageVersionId;
 
     public String getImageVersionId() {
@@ -28,7 +28,7 @@ public final class GetImageVersionsImageVersion extends io.pulumi.resources.Invo
      * Supported python versions for this image version
      * 
      */
-    @InputImport(name="supportedPythonVersions", required=true)
+    @Import(name="supportedPythonVersions", required=true)
       private final List<String> supportedPythonVersions;
 
     public List<String> getSupportedPythonVersions() {

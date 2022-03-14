@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class EntityTypeEntityGetArgs extends io.pulumi.resources.ResourceA
      * * This collection must contain exactly one synonym equal to value.
      * 
      */
-    @InputImport(name="synonyms", required=true)
+    @Import(name="synonyms", required=true)
       private final Output<List<String>> synonyms;
 
     public Output<List<String>> getSynonyms() {
@@ -37,7 +37,7 @@ public final class EntityTypeEntityGetArgs extends io.pulumi.resources.ResourceA
      * * A string that can contain references to other entity types (with or without aliases).
      * 
      */
-    @InputImport(name="value", required=true)
+    @Import(name="value", required=true)
       private final Output<String> value;
 
     public Output<String> getValue() {

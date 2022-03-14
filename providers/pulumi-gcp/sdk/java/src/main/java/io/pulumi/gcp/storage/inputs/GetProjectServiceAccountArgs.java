@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetProjectServiceAccountArgs extends io.pulumi.resources.Invo
      * The project the unique service account was created for. If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
@@ -30,7 +30,7 @@ public final class GetProjectServiceAccountArgs extends io.pulumi.resources.Invo
      * from a different account than the one you are finding the service account for.
      * 
      */
-    @InputImport(name="userProject")
+    @Import(name="userProject")
       private final @Nullable String userProject;
 
     public Optional<String> getUserProject() {

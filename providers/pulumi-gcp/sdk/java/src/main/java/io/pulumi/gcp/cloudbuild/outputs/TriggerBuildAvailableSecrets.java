@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerBuildAvailableSecretsSecretManager;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TriggerBuildAvailableSecrets {
     /**
      * Pairs a secret environment variable with a SecretVersion in Secret Manager.
@@ -17,8 +17,8 @@ public final class TriggerBuildAvailableSecrets {
      */
     private final List<TriggerBuildAvailableSecretsSecretManager> secretManagers;
 
-    @OutputCustomType.Constructor
-    private TriggerBuildAvailableSecrets(@OutputCustomType.Parameter("secretManagers") List<TriggerBuildAvailableSecretsSecretManager> secretManagers) {
+    @CustomType.Constructor
+    private TriggerBuildAvailableSecrets(@CustomType.Parameter("secretManagers") List<TriggerBuildAvailableSecretsSecretManager> secretManagers) {
         this.secretManagers = secretManagers;
     }
 

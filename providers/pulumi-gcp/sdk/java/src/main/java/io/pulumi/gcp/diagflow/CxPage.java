@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.diagflow.CxPageArgs;
@@ -47,7 +47,7 @@ public class CxPage extends io.pulumi.resources.CustomResource {
      * The human-readable name of the parameter, unique within the form.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -62,7 +62,7 @@ public class CxPage extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="entryFulfillment", type=CxPageEntryFulfillment.class, parameters={})
+    @Export(name="entryFulfillment", type=CxPageEntryFulfillment.class, parameters={})
     private Output</* @Nullable */ CxPageEntryFulfillment> entryFulfillment;
 
     /**
@@ -78,7 +78,7 @@ public class CxPage extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="eventHandlers", type=List.class, parameters={CxPageEventHandler.class})
+    @Export(name="eventHandlers", type=List.class, parameters={CxPageEventHandler.class})
     private Output</* @Nullable */ List<CxPageEventHandler>> eventHandlers;
 
     /**
@@ -94,7 +94,7 @@ public class CxPage extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="form", type=CxPageForm.class, parameters={})
+    @Export(name="form", type=CxPageForm.class, parameters={})
     private Output</* @Nullable */ CxPageForm> form;
 
     /**
@@ -120,7 +120,7 @@ public class CxPage extends io.pulumi.resources.CustomResource {
      * If not specified, the agent's default language is used. Many languages are supported. Note: languages must be enabled in the agent before they can be used.
      * 
      */
-    @OutputExport(name="languageCode", type=String.class, parameters={})
+    @Export(name="languageCode", type=String.class, parameters={})
     private Output</* @Nullable */ String> languageCode;
 
     /**
@@ -146,7 +146,7 @@ public class CxPage extends io.pulumi.resources.CustomResource {
      * The unique identifier of this event handler.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -162,7 +162,7 @@ public class CxPage extends io.pulumi.resources.CustomResource {
      * Format: projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>.
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output</* @Nullable */ String> parent;
 
     /**
@@ -180,7 +180,7 @@ public class CxPage extends io.pulumi.resources.CustomResource {
      * Format:projects/<Project ID>/locations/<Location ID>/agents/<Agent ID>/flows/<Flow ID>/transitionRouteGroups/<TransitionRouteGroup ID>.
      * 
      */
-    @OutputExport(name="transitionRouteGroups", type=List.class, parameters={String.class})
+    @Export(name="transitionRouteGroups", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> transitionRouteGroups;
 
     /**
@@ -205,7 +205,7 @@ public class CxPage extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="transitionRoutes", type=List.class, parameters={CxPageTransitionRoute.class})
+    @Export(name="transitionRoutes", type=List.class, parameters={CxPageTransitionRoute.class})
     private Output</* @Nullable */ List<CxPageTransitionRoute>> transitionRoutes;
 
     /**

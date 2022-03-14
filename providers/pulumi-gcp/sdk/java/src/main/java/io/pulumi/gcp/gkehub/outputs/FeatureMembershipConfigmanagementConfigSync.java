@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.gkehub.outputs.FeatureMembershipConfigmanagementConfigSyncGit;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FeatureMembershipConfigmanagementConfigSync {
     /**
      * - 
@@ -24,10 +24,10 @@ public final class FeatureMembershipConfigmanagementConfigSync {
      */
     private final @Nullable String sourceFormat;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FeatureMembershipConfigmanagementConfigSync(
-        @OutputCustomType.Parameter("git") @Nullable FeatureMembershipConfigmanagementConfigSyncGit git,
-        @OutputCustomType.Parameter("sourceFormat") @Nullable String sourceFormat) {
+        @CustomType.Parameter("git") @Nullable FeatureMembershipConfigmanagementConfigSyncGit git,
+        @CustomType.Parameter("sourceFormat") @Nullable String sourceFormat) {
         this.git = git;
         this.sourceFormat = sourceFormat;
     }

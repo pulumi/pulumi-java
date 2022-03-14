@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.secretmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.secretmanager.outputs.SecretReplicationUserManaged;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SecretReplication {
     /**
      * The Secret will automatically be replicated without any restrictions.
@@ -24,10 +24,10 @@ public final class SecretReplication {
      */
     private final @Nullable SecretReplicationUserManaged userManaged;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SecretReplication(
-        @OutputCustomType.Parameter("automatic") @Nullable Boolean automatic,
-        @OutputCustomType.Parameter("userManaged") @Nullable SecretReplicationUserManaged userManaged) {
+        @CustomType.Parameter("automatic") @Nullable Boolean automatic,
+        @CustomType.Parameter("userManaged") @Nullable SecretReplicationUserManaged userManaged) {
         this.automatic = automatic;
         this.userManaged = userManaged;
     }

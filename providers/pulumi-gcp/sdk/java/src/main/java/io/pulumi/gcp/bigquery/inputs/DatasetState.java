@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigquery.inputs.DatasetAccessGetArgs;
 import io.pulumi.gcp.bigquery.inputs.DatasetDefaultEncryptionConfigurationGetArgs;
 import java.lang.Boolean;
@@ -25,7 +25,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="accesses")
+    @Import(name="accesses")
       private final @Nullable Output<List<DatasetAccessGetArgs>> accesses;
 
     public Output<List<DatasetAccessGetArgs>> getAccesses() {
@@ -36,7 +36,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * The time when this dataset was created, in milliseconds since the epoch.
      * 
      */
-    @InputImport(name="creationTime")
+    @Import(name="creationTime")
       private final @Nullable Output<Integer> creationTime;
 
     public Output<Integer> getCreationTime() {
@@ -47,7 +47,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * The ID of the dataset containing this table.
      * 
      */
-    @InputImport(name="datasetId")
+    @Import(name="datasetId")
       private final @Nullable Output<String> datasetId;
 
     public Output<String> getDatasetId() {
@@ -61,7 +61,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="defaultEncryptionConfiguration")
+    @Import(name="defaultEncryptionConfiguration")
       private final @Nullable Output<DatasetDefaultEncryptionConfigurationGetArgs> defaultEncryptionConfiguration;
 
     public Output<DatasetDefaultEncryptionConfigurationGetArgs> getDefaultEncryptionConfiguration() {
@@ -73,7 +73,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * the dataset, in milliseconds.
      * 
      */
-    @InputImport(name="defaultPartitionExpirationMs")
+    @Import(name="defaultPartitionExpirationMs")
       private final @Nullable Output<Integer> defaultPartitionExpirationMs;
 
     public Output<Integer> getDefaultPartitionExpirationMs() {
@@ -85,7 +85,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * The minimum value is 3600000 milliseconds (one hour).
      * 
      */
-    @InputImport(name="defaultTableExpirationMs")
+    @Import(name="defaultTableExpirationMs")
       private final @Nullable Output<Integer> defaultTableExpirationMs;
 
     public Output<Integer> getDefaultTableExpirationMs() {
@@ -98,7 +98,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * destroying the resource will fail if tables are present.
      * 
      */
-    @InputImport(name="deleteContentsOnDestroy")
+    @Import(name="deleteContentsOnDestroy")
       private final @Nullable Output<Boolean> deleteContentsOnDestroy;
 
     public Output<Boolean> getDeleteContentsOnDestroy() {
@@ -109,7 +109,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * A user-friendly description of the dataset
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -120,7 +120,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * A hash of the resource.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -131,7 +131,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * A descriptive name for the dataset
      * 
      */
-    @InputImport(name="friendlyName")
+    @Import(name="friendlyName")
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
@@ -143,7 +143,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * organize and group your datasets
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -154,7 +154,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * The date when this dataset or any of its tables was last modified, in milliseconds since the epoch.
      * 
      */
-    @InputImport(name="lastModifiedTime")
+    @Import(name="lastModifiedTime")
       private final @Nullable Output<Integer> lastModifiedTime;
 
     public Output<Integer> getLastModifiedTime() {
@@ -166,7 +166,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * See [official docs](https://cloud.google.com/bigquery/docs/dataset-locations).
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -178,7 +178,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -189,7 +189,7 @@ public final class DatasetState extends io.pulumi.resources.ResourceArgs {
      * The URI of the created resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {

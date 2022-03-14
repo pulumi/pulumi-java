@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TransferJobTransferSpecObjectConditions {
     /**
      * `exclude_prefixes` must follow the requirements described for `include_prefixes`. See [Requirements](https://cloud.google.com/storage-transfer/docs/reference/rest/v1/TransferSpec#ObjectConditions).
@@ -33,12 +33,12 @@ public final class TransferJobTransferSpecObjectConditions {
      */
     private final @Nullable String minTimeElapsedSinceLastModification;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TransferJobTransferSpecObjectConditions(
-        @OutputCustomType.Parameter("excludePrefixes") @Nullable List<String> excludePrefixes,
-        @OutputCustomType.Parameter("includePrefixes") @Nullable List<String> includePrefixes,
-        @OutputCustomType.Parameter("maxTimeElapsedSinceLastModification") @Nullable String maxTimeElapsedSinceLastModification,
-        @OutputCustomType.Parameter("minTimeElapsedSinceLastModification") @Nullable String minTimeElapsedSinceLastModification) {
+        @CustomType.Parameter("excludePrefixes") @Nullable List<String> excludePrefixes,
+        @CustomType.Parameter("includePrefixes") @Nullable List<String> includePrefixes,
+        @CustomType.Parameter("maxTimeElapsedSinceLastModification") @Nullable String maxTimeElapsedSinceLastModification,
+        @CustomType.Parameter("minTimeElapsedSinceLastModification") @Nullable String minTimeElapsedSinceLastModification) {
         this.excludePrefixes = excludePrefixes;
         this.includePrefixes = includePrefixes;
         this.maxTimeElapsedSinceLastModification = maxTimeElapsedSinceLastModification;

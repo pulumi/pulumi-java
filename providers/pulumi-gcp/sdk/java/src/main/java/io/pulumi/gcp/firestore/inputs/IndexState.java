@@ -4,7 +4,7 @@
 package io.pulumi.gcp.firestore.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.firestore.inputs.IndexFieldGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class IndexState extends io.pulumi.resources.ResourceArgs {
      * The collection being indexed.
      * 
      */
-    @InputImport(name="collection")
+    @Import(name="collection")
       private final @Nullable Output<String> collection;
 
     public Output<String> getCollection() {
@@ -31,7 +31,7 @@ public final class IndexState extends io.pulumi.resources.ResourceArgs {
      * The Firestore database id. Defaults to `"(default)"`.
      * 
      */
-    @InputImport(name="database")
+    @Import(name="database")
       private final @Nullable Output<String> database;
 
     public Output<String> getDatabase() {
@@ -48,7 +48,7 @@ public final class IndexState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="fields")
+    @Import(name="fields")
       private final @Nullable Output<List<IndexFieldGetArgs>> fields;
 
     public Output<List<IndexFieldGetArgs>> getFields() {
@@ -60,7 +60,7 @@ public final class IndexState extends io.pulumi.resources.ResourceArgs {
      * 'projects/{{project}}/databases/{{database}}/collectionGroups/{{collection}}/indexes/{{server_generated_id}}'
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -72,7 +72,7 @@ public final class IndexState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -85,7 +85,7 @@ public final class IndexState extends io.pulumi.resources.ResourceArgs {
      * Possible values are `COLLECTION` and `COLLECTION_GROUP`.
      * 
      */
-    @InputImport(name="queryScope")
+    @Import(name="queryScope")
       private final @Nullable Output<String> queryScope;
 
     public Output<String> getQueryScope() {

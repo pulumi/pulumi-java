@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -45,7 +45,7 @@ public final class AutoscalerAutoscalingPolicyMetricGetArgs extends io.pulumi.re
      * will sum their respective values to obtain its scaling value.
      * 
      */
-    @InputImport(name="filter")
+    @Import(name="filter")
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
@@ -56,7 +56,7 @@ public final class AutoscalerAutoscalingPolicyMetricGetArgs extends io.pulumi.re
      * The identifier for this object. Format specified above.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -80,7 +80,7 @@ public final class AutoscalerAutoscalingPolicyMetricGetArgs extends io.pulumi.re
      * instead.
      * 
      */
-    @InputImport(name="singleInstanceAssignment")
+    @Import(name="singleInstanceAssignment")
       private final @Nullable Output<Double> singleInstanceAssignment;
 
     public Output<Double> getSingleInstanceAssignment() {
@@ -93,7 +93,7 @@ public final class AutoscalerAutoscalingPolicyMetricGetArgs extends io.pulumi.re
      * be a positive float value. If not defined, the default is 0.8.
      * 
      */
-    @InputImport(name="target")
+    @Import(name="target")
       private final @Nullable Output<Double> target;
 
     public Output<Double> getTarget() {
@@ -106,7 +106,7 @@ public final class AutoscalerAutoscalingPolicyMetricGetArgs extends io.pulumi.re
      * Possible values are `GAUGE`, `DELTA_PER_SECOND`, and `DELTA_PER_MINUTE`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TableViewArgs extends io.pulumi.resources.ResourceArgs {
      * A query whose result is persisted.
      * 
      */
-    @InputImport(name="query", required=true)
+    @Import(name="query", required=true)
       private final Output<String> query;
 
     public Output<String> getQuery() {
@@ -31,7 +31,7 @@ public final class TableViewArgs extends io.pulumi.resources.ResourceArgs {
      * The default value is true. If set to false, the view will use BigQuery's standard SQL.
      * 
      */
-    @InputImport(name="useLegacySql")
+    @Import(name="useLegacySql")
       private final @Nullable Output<Boolean> useLegacySql;
 
     public Output<Boolean> getUseLegacySql() {

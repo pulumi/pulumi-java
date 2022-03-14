@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.kms.KeyRingIAMMemberArgs;
@@ -70,7 +70,7 @@ public class KeyRingIAMMember extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="condition", type=KeyRingIAMMemberCondition.class, parameters={})
+    @Export(name="condition", type=KeyRingIAMMemberCondition.class, parameters={})
     private Output</* @Nullable */ KeyRingIAMMemberCondition> condition;
 
     /**
@@ -85,7 +85,7 @@ public class KeyRingIAMMember extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the key ring's IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -102,7 +102,7 @@ public class KeyRingIAMMember extends io.pulumi.resources.CustomResource {
      * project setting will be used as a fallback.
      * 
      */
-    @OutputExport(name="keyRingId", type=String.class, parameters={})
+    @Export(name="keyRingId", type=String.class, parameters={})
     private Output<String> keyRingId;
 
     /**
@@ -115,7 +115,7 @@ public class KeyRingIAMMember extends io.pulumi.resources.CustomResource {
     public Output<String> getKeyRingId() {
         return this.keyRingId;
     }
-    @OutputExport(name="member", type=String.class, parameters={})
+    @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
     public Output<String> getMember() {
@@ -127,7 +127,7 @@ public class KeyRingIAMMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

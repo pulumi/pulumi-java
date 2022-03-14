@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.AccessLevelsAccessLevelBasicConditionDevicePolicy;
 import java.lang.Boolean;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AccessLevelsAccessLevelBasicCondition {
     /**
      * Device specific restrictions, all restrictions must hold for
@@ -71,14 +71,14 @@ public final class AccessLevelsAccessLevelBasicCondition {
      */
     private final @Nullable List<String> requiredAccessLevels;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AccessLevelsAccessLevelBasicCondition(
-        @OutputCustomType.Parameter("devicePolicy") @Nullable AccessLevelsAccessLevelBasicConditionDevicePolicy devicePolicy,
-        @OutputCustomType.Parameter("ipSubnetworks") @Nullable List<String> ipSubnetworks,
-        @OutputCustomType.Parameter("members") @Nullable List<String> members,
-        @OutputCustomType.Parameter("negate") @Nullable Boolean negate,
-        @OutputCustomType.Parameter("regions") @Nullable List<String> regions,
-        @OutputCustomType.Parameter("requiredAccessLevels") @Nullable List<String> requiredAccessLevels) {
+        @CustomType.Parameter("devicePolicy") @Nullable AccessLevelsAccessLevelBasicConditionDevicePolicy devicePolicy,
+        @CustomType.Parameter("ipSubnetworks") @Nullable List<String> ipSubnetworks,
+        @CustomType.Parameter("members") @Nullable List<String> members,
+        @CustomType.Parameter("negate") @Nullable Boolean negate,
+        @CustomType.Parameter("regions") @Nullable List<String> regions,
+        @CustomType.Parameter("requiredAccessLevels") @Nullable List<String> requiredAccessLevels) {
         this.devicePolicy = devicePolicy;
         this.ipSubnetworks = ipSubnetworks;
         this.members = members;

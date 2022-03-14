@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class FhirStoreNotificationConfigArgs extends io.pulumi.resources.R
      * Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
      * 
      */
-    @InputImport(name="pubsubTopic", required=true)
+    @Import(name="pubsubTopic", required=true)
       private final Output<String> pubsubTopic;
 
     public Output<String> getPubsubTopic() {

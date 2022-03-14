@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.datacatalog.inputs.TagTemplateFieldTypeEnumTypeGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TagTemplateFieldTypeGetArgs extends io.pulumi.resources.Resou
      * Structure is documented below.
      * 
      */
-    @InputImport(name="enumType")
+    @Import(name="enumType")
       private final @Nullable Output<TagTemplateFieldTypeEnumTypeGetArgs> enumType;
 
     public Output<TagTemplateFieldTypeEnumTypeGetArgs> getEnumType() {
@@ -34,7 +34,7 @@ public final class TagTemplateFieldTypeGetArgs extends io.pulumi.resources.Resou
      * Possible values are `DOUBLE`, `STRING`, `BOOL`, and `TIMESTAMP`.
      * 
      */
-    @InputImport(name="primitiveType")
+    @Import(name="primitiveType")
       private final @Nullable Output<String> primitiveType;
 
     public Output<String> getPrimitiveType() {

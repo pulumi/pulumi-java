@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -21,7 +21,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
      * Holds the value for a tag field with boolean type.
      * 
      */
-    @InputImport(name="boolValue")
+    @Import(name="boolValue")
       private final @Nullable Output<Boolean> boolValue;
 
     public Output<Boolean> getBoolValue() {
@@ -33,7 +33,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
      * The display name of this field
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -44,7 +44,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
      * Holds the value for a tag field with double type.
      * 
      */
-    @InputImport(name="doubleValue")
+    @Import(name="doubleValue")
       private final @Nullable Output<Double> doubleValue;
 
     public Output<Double> getDoubleValue() {
@@ -56,7 +56,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="enumValue")
+    @Import(name="enumValue")
       private final @Nullable Output<String> enumValue;
 
     public Output<String> getEnumValue() {
@@ -67,7 +67,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
      * The identifier for this object. Format specified above.
      * 
      */
-    @InputImport(name="fieldName", required=true)
+    @Import(name="fieldName", required=true)
       private final Output<String> fieldName;
 
     public Output<String> getFieldName() {
@@ -81,7 +81,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
      * within a tag do not have to be sequential.
      * 
      */
-    @InputImport(name="order")
+    @Import(name="order")
       private final @Nullable Output<Integer> order;
 
     public Output<Integer> getOrder() {
@@ -92,7 +92,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
      * Holds the value for a tag field with string type.
      * 
      */
-    @InputImport(name="stringValue")
+    @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
     public Output<String> getStringValue() {
@@ -103,7 +103,7 @@ public final class TagFieldArgs extends io.pulumi.resources.ResourceArgs {
      * Holds the value for a tag field with timestamp type.
      * 
      */
-    @InputImport(name="timestampValue")
+    @Import(name="timestampValue")
       private final @Nullable Output<String> timestampValue;
 
     public Output<String> getTimestampValue() {

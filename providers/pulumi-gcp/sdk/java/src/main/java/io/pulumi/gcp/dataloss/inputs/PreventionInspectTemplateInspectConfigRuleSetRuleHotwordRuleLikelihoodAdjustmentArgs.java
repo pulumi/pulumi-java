@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleL
      * Possible values are `VERY_UNLIKELY`, `UNLIKELY`, `POSSIBLE`, `LIKELY`, and `VERY_LIKELY`.
      * 
      */
-    @InputImport(name="fixedLikelihood")
+    @Import(name="fixedLikelihood")
       private final @Nullable Output<String> fixedLikelihood;
 
     public Output<String> getFixedLikelihood() {
@@ -36,7 +36,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleL
      * will result in a final likelihood of LIKELY. Either this or fixed_likelihood can be set.
      * 
      */
-    @InputImport(name="relativeLikelihood")
+    @Import(name="relativeLikelihood")
       private final @Nullable Output<Integer> relativeLikelihood;
 
     public Output<Integer> getRelativeLikelihood() {

@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class AzureClusterNetworking {
     /**
      * Required. The IP address range of the pods in this cluster, in CIDR notation (e.g. `10.96.0.0/14`). All pods in the cluster get assigned a unique RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
@@ -26,11 +26,11 @@ public final class AzureClusterNetworking {
      */
     private final String virtualNetworkId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AzureClusterNetworking(
-        @OutputCustomType.Parameter("podAddressCidrBlocks") List<String> podAddressCidrBlocks,
-        @OutputCustomType.Parameter("serviceAddressCidrBlocks") List<String> serviceAddressCidrBlocks,
-        @OutputCustomType.Parameter("virtualNetworkId") String virtualNetworkId) {
+        @CustomType.Parameter("podAddressCidrBlocks") List<String> podAddressCidrBlocks,
+        @CustomType.Parameter("serviceAddressCidrBlocks") List<String> serviceAddressCidrBlocks,
+        @CustomType.Parameter("virtualNetworkId") String virtualNetworkId) {
         this.podAddressCidrBlocks = podAddressCidrBlocks;
         this.serviceAddressCidrBlocks = serviceAddressCidrBlocks;
         this.virtualNetworkId = virtualNetworkId;

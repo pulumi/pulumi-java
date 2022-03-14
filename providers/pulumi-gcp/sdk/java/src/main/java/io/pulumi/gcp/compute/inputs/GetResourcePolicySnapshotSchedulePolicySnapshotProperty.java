@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,21 +15,21 @@ public final class GetResourcePolicySnapshotSchedulePolicySnapshotProperty exten
 
     public static final GetResourcePolicySnapshotSchedulePolicySnapshotProperty Empty = new GetResourcePolicySnapshotSchedulePolicySnapshotProperty();
 
-    @InputImport(name="guestFlush", required=true)
+    @Import(name="guestFlush", required=true)
       private final Boolean guestFlush;
 
     public Boolean getGuestFlush() {
         return this.guestFlush;
     }
 
-    @InputImport(name="labels", required=true)
+    @Import(name="labels", required=true)
       private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
     }
 
-    @InputImport(name="storageLocations", required=true)
+    @Import(name="storageLocations", required=true)
       private final List<String> storageLocations;
 
     public List<String> getStorageLocations() {

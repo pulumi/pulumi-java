@@ -3,18 +3,18 @@
 
 package io.pulumi.gcp.datacatalog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EntryBigqueryTableSpecViewSpec {
     private final @Nullable String viewQuery;
 
-    @OutputCustomType.Constructor
-    private EntryBigqueryTableSpecViewSpec(@OutputCustomType.Parameter("viewQuery") @Nullable String viewQuery) {
+    @CustomType.Constructor
+    private EntryBigqueryTableSpecViewSpec(@CustomType.Parameter("viewQuery") @Nullable String viewQuery) {
         this.viewQuery = viewQuery;
     }
 

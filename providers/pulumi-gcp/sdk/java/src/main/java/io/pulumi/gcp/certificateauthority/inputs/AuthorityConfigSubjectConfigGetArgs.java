@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigSubjectConfigSubjectAltNameGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigSubjectConfigSubjectGetArgs;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AuthorityConfigSubjectConfigGetArgs extends io.pulumi.resourc
      * Structure is documented below.
      * 
      */
-    @InputImport(name="subject", required=true)
+    @Import(name="subject", required=true)
       private final Output<AuthorityConfigSubjectConfigSubjectGetArgs> subject;
 
     public Output<AuthorityConfigSubjectConfigSubjectGetArgs> getSubject() {
@@ -32,7 +32,7 @@ public final class AuthorityConfigSubjectConfigGetArgs extends io.pulumi.resourc
      * Structure is documented below.
      * 
      */
-    @InputImport(name="subjectAltName")
+    @Import(name="subjectAltName")
       private final @Nullable Output<AuthorityConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName;
 
     public Output<AuthorityConfigSubjectConfigSubjectAltNameGetArgs> getSubjectAltName() {

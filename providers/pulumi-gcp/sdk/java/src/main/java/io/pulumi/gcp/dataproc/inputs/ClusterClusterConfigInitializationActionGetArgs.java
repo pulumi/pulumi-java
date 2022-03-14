@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClusterClusterConfigInitializationActionGetArgs extends io.pu
      * The script must be a GCS file with a gs:// prefix.
      * 
      */
-    @InputImport(name="script", required=true)
+    @Import(name="script", required=true)
       private final Output<String> script;
 
     public Output<String> getScript() {
@@ -33,7 +33,7 @@ public final class ClusterClusterConfigInitializationActionGetArgs extends io.pu
      * computed value if not set (currently 300).
      * 
      */
-    @InputImport(name="timeoutSec")
+    @Import(name="timeoutSec")
       private final @Nullable Output<Integer> timeoutSec;
 
     public Output<Integer> getTimeoutSec() {

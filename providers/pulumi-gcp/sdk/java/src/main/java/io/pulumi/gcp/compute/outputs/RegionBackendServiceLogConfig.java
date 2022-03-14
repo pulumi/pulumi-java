@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegionBackendServiceLogConfig {
     /**
      * Whether to enable logging for the load balancer traffic served by this backend service.
@@ -26,10 +26,10 @@ public final class RegionBackendServiceLogConfig {
      */
     private final @Nullable Double sampleRate;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionBackendServiceLogConfig(
-        @OutputCustomType.Parameter("enable") @Nullable Boolean enable,
-        @OutputCustomType.Parameter("sampleRate") @Nullable Double sampleRate) {
+        @CustomType.Parameter("enable") @Nullable Boolean enable,
+        @CustomType.Parameter("sampleRate") @Nullable Double sampleRate) {
         this.enable = enable;
         this.sampleRate = sampleRate;
     }

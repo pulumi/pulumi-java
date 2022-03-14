@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TriggerGithubPushGetArgs extends io.pulumi.resources.Resource
      * Regex of branches to match.  Specify only one of branch or tag.
      * 
      */
-    @InputImport(name="branch")
+    @Import(name="branch")
       private final @Nullable Output<String> branch;
 
     public Output<String> getBranch() {
@@ -30,7 +30,7 @@ public final class TriggerGithubPushGetArgs extends io.pulumi.resources.Resource
      * Only trigger a build if the revision regex does NOT match the revision regex.
      * 
      */
-    @InputImport(name="invertRegex")
+    @Import(name="invertRegex")
       private final @Nullable Output<Boolean> invertRegex;
 
     public Output<Boolean> getInvertRegex() {
@@ -41,7 +41,7 @@ public final class TriggerGithubPushGetArgs extends io.pulumi.resources.Resource
      * Regex of tags to match.  Specify only one of branch or tag.
      * 
      */
-    @InputImport(name="tag")
+    @Import(name="tag")
       private final @Nullable Output<String> tag;
 
     public Output<String> getTag() {

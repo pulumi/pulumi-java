@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetRouterBgpAdvertisedIpRange extends io.pulumi.resources.Inv
 
     public static final GetRouterBgpAdvertisedIpRange Empty = new GetRouterBgpAdvertisedIpRange();
 
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
         return this.description;
     }
 
-    @InputImport(name="range", required=true)
+    @Import(name="range", required=true)
       private final String range;
 
     public String getRange() {

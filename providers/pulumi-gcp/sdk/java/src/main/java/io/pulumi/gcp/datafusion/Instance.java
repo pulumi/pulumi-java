@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datafusion;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datafusion.InstanceArgs;
@@ -53,7 +53,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The time the instance was created in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -67,7 +67,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * User-managed service account to set on Dataproc when Cloud Data Fusion creates Dataproc to run data processing pipelines.
      * 
      */
-    @OutputExport(name="dataprocServiceAccount", type=String.class, parameters={})
+    @Export(name="dataprocServiceAccount", type=String.class, parameters={})
     private Output</* @Nullable */ String> dataprocServiceAccount;
 
     /**
@@ -81,7 +81,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * An optional description of the instance.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -95,7 +95,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Option to enable Stackdriver Logging.
      * 
      */
-    @OutputExport(name="enableStackdriverLogging", type=Boolean.class, parameters={})
+    @Export(name="enableStackdriverLogging", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableStackdriverLogging;
 
     /**
@@ -109,7 +109,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Option to enable Stackdriver Monitoring.
      * 
      */
-    @OutputExport(name="enableStackdriverMonitoring", type=Boolean.class, parameters={})
+    @Export(name="enableStackdriverMonitoring", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableStackdriverMonitoring;
 
     /**
@@ -124,7 +124,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * such as Compute Engine VMs.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -139,7 +139,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The ID of the instance or a fully qualified identifier for the instance.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -154,7 +154,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="networkConfig", type=InstanceNetworkConfig.class, parameters={})
+    @Export(name="networkConfig", type=InstanceNetworkConfig.class, parameters={})
     private Output</* @Nullable */ InstanceNetworkConfig> networkConfig;
 
     /**
@@ -169,7 +169,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Map of additional options used to configure the behavior of Data Fusion instance.
      * 
      */
-    @OutputExport(name="options", type=Map.class, parameters={String.class, String.class})
+    @Export(name="options", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> options;
 
     /**
@@ -185,7 +185,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * able to access the public internet.
      * 
      */
-    @OutputExport(name="privateInstance", type=Boolean.class, parameters={})
+    @Export(name="privateInstance", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> privateInstance;
 
     /**
@@ -202,7 +202,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -217,7 +217,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The region of the Data Fusion instance.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -231,7 +231,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Service account which will be used to access resources in the customer project.
      * 
      */
-    @OutputExport(name="serviceAccount", type=String.class, parameters={})
+    @Export(name="serviceAccount", type=String.class, parameters={})
     private Output<String> serviceAccount;
 
     /**
@@ -245,7 +245,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Endpoint on which the Data Fusion UI and REST APIs are accessible.
      * 
      */
-    @OutputExport(name="serviceEndpoint", type=String.class, parameters={})
+    @Export(name="serviceEndpoint", type=String.class, parameters={})
     private Output<String> serviceEndpoint;
 
     /**
@@ -261,7 +261,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * being upgraded - RESTARTING: Instance is being restarted
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -277,7 +277,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Additional information about the current state of this Data Fusion instance if available.
      * 
      */
-    @OutputExport(name="stateMessage", type=String.class, parameters={})
+    @Export(name="stateMessage", type=String.class, parameters={})
     private Output<String> stateMessage;
 
     /**
@@ -301,7 +301,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      *   Possible values are `BASIC`, `ENTERPRISE`, and `DEVELOPER`.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**
@@ -325,7 +325,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The time the instance was last updated in RFC3339 UTC "Zulu" format, accurate to nanoseconds.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -339,7 +339,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Current version of the Data Fusion.
      * 
      */
-    @OutputExport(name="version", type=String.class, parameters={})
+    @Export(name="version", type=String.class, parameters={})
     private Output<String> version;
 
     /**

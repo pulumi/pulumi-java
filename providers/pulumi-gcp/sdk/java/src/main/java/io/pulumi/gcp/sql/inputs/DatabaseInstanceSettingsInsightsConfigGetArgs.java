@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends io.pulu
      * True if Query Insights feature is enabled.
      * 
      */
-    @InputImport(name="queryInsightsEnabled")
+    @Import(name="queryInsightsEnabled")
       private final @Nullable Output<Boolean> queryInsightsEnabled;
 
     public Output<Boolean> getQueryInsightsEnabled() {
@@ -30,7 +30,7 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends io.pulu
      * Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
      * 
      */
-    @InputImport(name="queryStringLength")
+    @Import(name="queryStringLength")
       private final @Nullable Output<Integer> queryStringLength;
 
     public Output<Integer> getQueryStringLength() {
@@ -41,7 +41,7 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends io.pulu
      * True if Query Insights will record application tags from query when enabled.
      * 
      */
-    @InputImport(name="recordApplicationTags")
+    @Import(name="recordApplicationTags")
       private final @Nullable Output<Boolean> recordApplicationTags;
 
     public Output<Boolean> getRecordApplicationTags() {
@@ -52,7 +52,7 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends io.pulu
      * True if Query Insights will record client address when enabled.
      * 
      */
-    @InputImport(name="recordClientAddress")
+    @Import(name="recordClientAddress")
       private final @Nullable Output<Boolean> recordClientAddress;
 
     public Output<Boolean> getRecordClientAddress() {

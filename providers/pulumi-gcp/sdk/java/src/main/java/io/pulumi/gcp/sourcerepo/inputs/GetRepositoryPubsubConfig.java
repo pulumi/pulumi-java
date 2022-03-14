@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sourcerepo.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,21 +12,21 @@ public final class GetRepositoryPubsubConfig extends io.pulumi.resources.InvokeA
 
     public static final GetRepositoryPubsubConfig Empty = new GetRepositoryPubsubConfig();
 
-    @InputImport(name="messageFormat", required=true)
+    @Import(name="messageFormat", required=true)
       private final String messageFormat;
 
     public String getMessageFormat() {
         return this.messageFormat;
     }
 
-    @InputImport(name="serviceAccountEmail", required=true)
+    @Import(name="serviceAccountEmail", required=true)
       private final String serviceAccountEmail;
 
     public String getServiceAccountEmail() {
         return this.serviceAccountEmail;
     }
 
-    @InputImport(name="topic", required=true)
+    @Import(name="topic", required=true)
       private final String topic;
 
     public String getTopic() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.storage.inputs.BucketIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -32,7 +32,7 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<BucketIAMBindingConditionArgs> condition;
 
     public Output<BucketIAMBindingConditionArgs> getCondition() {
@@ -53,7 +53,7 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
      * * **projectViewer:projectid**: Viewers of the given project. For example, "projectViewer:my-example-project"
      * 
      */
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -66,7 +66,7 @@ public final class BucketIAMBindingArgs extends io.pulumi.resources.ResourceArgs
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

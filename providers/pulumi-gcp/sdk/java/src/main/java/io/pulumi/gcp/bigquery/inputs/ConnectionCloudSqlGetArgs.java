@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.bigquery.inputs.ConnectionCloudSqlCredentialGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ConnectionCloudSqlGetArgs extends io.pulumi.resources.Resourc
      * Structure is documented below.
      * 
      */
-    @InputImport(name="credential", required=true)
+    @Import(name="credential", required=true)
       private final Output<ConnectionCloudSqlCredentialGetArgs> credential;
 
     public Output<ConnectionCloudSqlCredentialGetArgs> getCredential() {
@@ -30,7 +30,7 @@ public final class ConnectionCloudSqlGetArgs extends io.pulumi.resources.Resourc
      * Database name.
      * 
      */
-    @InputImport(name="database", required=true)
+    @Import(name="database", required=true)
       private final Output<String> database;
 
     public Output<String> getDatabase() {
@@ -41,7 +41,7 @@ public final class ConnectionCloudSqlGetArgs extends io.pulumi.resources.Resourc
      * Cloud SQL instance ID in the form project:location:instance.
      * 
      */
-    @InputImport(name="instanceId", required=true)
+    @Import(name="instanceId", required=true)
       private final Output<String> instanceId;
 
     public Output<String> getInstanceId() {
@@ -53,7 +53,7 @@ public final class ConnectionCloudSqlGetArgs extends io.pulumi.resources.Resourc
      * Possible values are `DATABASE_TYPE_UNSPECIFIED`, `POSTGRES`, and `MYSQL`.
      * 
      */
-    @InputImport(name="type", required=true)
+    @Import(name="type", required=true)
       private final Output<String> type;
 
     public Output<String> getType() {

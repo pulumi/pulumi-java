@@ -4,7 +4,7 @@
 package io.pulumi.gcp.memcache;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.memcache.InstanceArgs;
@@ -57,7 +57,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * 'default' will be used.
      * 
      */
-    @OutputExport(name="authorizedNetwork", type=String.class, parameters={})
+    @Export(name="authorizedNetwork", type=String.class, parameters={})
     private Output<String> authorizedNetwork;
 
     /**
@@ -72,7 +72,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -86,7 +86,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Endpoint for Discovery API
      * 
      */
-    @OutputExport(name="discoveryEndpoint", type=String.class, parameters={})
+    @Export(name="discoveryEndpoint", type=String.class, parameters={})
     private Output<String> discoveryEndpoint;
 
     /**
@@ -100,7 +100,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * A user-visible name for the instance.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -114,7 +114,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Resource labels to represent user-provided metadata.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -128,7 +128,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The full version of memcached server running on this instance.
      * 
      */
-    @OutputExport(name="memcacheFullVersion", type=String.class, parameters={})
+    @Export(name="memcacheFullVersion", type=String.class, parameters={})
     private Output<String> memcacheFullVersion;
 
     /**
@@ -142,7 +142,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Additional information about the instance state, if available.
      * 
      */
-    @OutputExport(name="memcacheNodes", type=List.class, parameters={InstanceMemcacheNode.class})
+    @Export(name="memcacheNodes", type=List.class, parameters={InstanceMemcacheNode.class})
     private Output<List<InstanceMemcacheNode>> memcacheNodes;
 
     /**
@@ -157,7 +157,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="memcacheParameters", type=InstanceMemcacheParameters.class, parameters={})
+    @Export(name="memcacheParameters", type=InstanceMemcacheParameters.class, parameters={})
     private Output</* @Nullable */ InstanceMemcacheParameters> memcacheParameters;
 
     /**
@@ -176,7 +176,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Possible values are `MEMCACHE_1_5`.
      * 
      */
-    @OutputExport(name="memcacheVersion", type=String.class, parameters={})
+    @Export(name="memcacheVersion", type=String.class, parameters={})
     private Output</* @Nullable */ String> memcacheVersion;
 
     /**
@@ -194,7 +194,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The resource name of the instance.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -209,7 +209,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="nodeConfig", type=InstanceNodeConfig.class, parameters={})
+    @Export(name="nodeConfig", type=InstanceNodeConfig.class, parameters={})
     private Output<InstanceNodeConfig> nodeConfig;
 
     /**
@@ -224,7 +224,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Number of nodes in the memcache instance.
      * 
      */
-    @OutputExport(name="nodeCount", type=Integer.class, parameters={})
+    @Export(name="nodeCount", type=Integer.class, parameters={})
     private Output<Integer> nodeCount;
 
     /**
@@ -239,7 +239,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -254,7 +254,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * The region of the Memcache instance. If it is not provided, the provider region is used.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -269,7 +269,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * provided, all zones will be used.
      * 
      */
-    @OutputExport(name="zones", type=List.class, parameters={String.class})
+    @Export(name="zones", type=List.class, parameters={String.class})
     private Output<List<String>> zones;
 
     /**

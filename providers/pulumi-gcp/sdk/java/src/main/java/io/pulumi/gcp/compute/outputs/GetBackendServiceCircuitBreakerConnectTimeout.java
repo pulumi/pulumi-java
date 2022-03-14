@@ -3,19 +3,19 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBackendServiceCircuitBreakerConnectTimeout {
     private final Integer nanos;
     private final Integer seconds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackendServiceCircuitBreakerConnectTimeout(
-        @OutputCustomType.Parameter("nanos") Integer nanos,
-        @OutputCustomType.Parameter("seconds") Integer seconds) {
+        @CustomType.Parameter("nanos") Integer nanos,
+        @CustomType.Parameter("seconds") Integer seconds) {
         this.nanos = nanos;
         this.seconds = seconds;
     }

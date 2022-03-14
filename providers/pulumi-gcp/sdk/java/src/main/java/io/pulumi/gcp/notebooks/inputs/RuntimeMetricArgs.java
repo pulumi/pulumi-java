@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class RuntimeMetricArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final RuntimeMetricArgs Empty = new RuntimeMetricArgs();
 
-    @InputImport(name="systemMetrics")
+    @Import(name="systemMetrics")
       private final @Nullable Output<Map<String,String>> systemMetrics;
 
     public Output<Map<String,String>> getSystemMetrics() {

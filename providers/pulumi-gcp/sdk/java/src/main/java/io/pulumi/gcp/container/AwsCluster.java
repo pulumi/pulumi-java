@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.container.AwsClusterArgs;
@@ -50,7 +50,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * Optional. Annotations on the cluster. This field has the same restrictions as Kubernetes annotations. The total size of all keys and values combined is limited to 256k. Key can have 2 segments: prefix (optional) and name (required), separated by a slash (/). Prefix must be a DNS subdomain. Name must be 63 characters or less, begin and end with alphanumerics, with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * 
      */
-    @OutputExport(name="annotations", type=Map.class, parameters={String.class, String.class})
+    @Export(name="annotations", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> annotations;
 
     /**
@@ -64,7 +64,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * Required. Configuration related to the cluster RBAC settings.
      * 
      */
-    @OutputExport(name="authorization", type=AwsClusterAuthorization.class, parameters={})
+    @Export(name="authorization", type=AwsClusterAuthorization.class, parameters={})
     private Output<AwsClusterAuthorization> authorization;
 
     /**
@@ -78,7 +78,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * Required. The AWS region where the cluster runs. Each Google Cloud region supports a subset of nearby AWS regions. You can call to list all supported AWS regions within a given Google Cloud region.
      * 
      */
-    @OutputExport(name="awsRegion", type=String.class, parameters={})
+    @Export(name="awsRegion", type=String.class, parameters={})
     private Output<String> awsRegion;
 
     /**
@@ -92,7 +92,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * Required. Configuration related to the cluster control plane.
      * 
      */
-    @OutputExport(name="controlPlane", type=AwsClusterControlPlane.class, parameters={})
+    @Export(name="controlPlane", type=AwsClusterControlPlane.class, parameters={})
     private Output<AwsClusterControlPlane> controlPlane;
 
     /**
@@ -106,7 +106,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * Output only. The time at which this cluster was created.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -120,7 +120,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * Optional. A human readable description of this cluster. Cannot be longer than 255 UTF-8 encoded bytes.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -134,7 +134,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * Output only. The endpoint of the cluster's API server.
      * 
      */
-    @OutputExport(name="endpoint", type=String.class, parameters={})
+    @Export(name="endpoint", type=String.class, parameters={})
     private Output<String> endpoint;
 
     /**
@@ -149,7 +149,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * and delete requests to ensure the client has an up-to-date value before proceeding.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -164,7 +164,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * Fleet configuration.
      * 
      */
-    @OutputExport(name="fleet", type=AwsClusterFleet.class, parameters={})
+    @Export(name="fleet", type=AwsClusterFleet.class, parameters={})
     private Output<AwsClusterFleet> fleet;
 
     /**
@@ -178,7 +178,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * The location for the resource
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -192,7 +192,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * The name of this resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -206,7 +206,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * Required. Cluster-wide networking configuration.
      * 
      */
-    @OutputExport(name="networking", type=AwsClusterNetworking.class, parameters={})
+    @Export(name="networking", type=AwsClusterNetworking.class, parameters={})
     private Output<AwsClusterNetworking> networking;
 
     /**
@@ -220,7 +220,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * The project for the resource
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -234,7 +234,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * Output only. If set, there are currently changes in flight to the cluster.
      * 
      */
-    @OutputExport(name="reconciling", type=Boolean.class, parameters={})
+    @Export(name="reconciling", type=Boolean.class, parameters={})
     private Output<Boolean> reconciling;
 
     /**
@@ -249,7 +249,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * STOPPING, ERROR, DEGRADED
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -264,7 +264,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * Output only. A globally unique identifier for the cluster.
      * 
      */
-    @OutputExport(name="uid", type=String.class, parameters={})
+    @Export(name="uid", type=String.class, parameters={})
     private Output<String> uid;
 
     /**
@@ -278,7 +278,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * Output only. The time at which this cluster was last updated.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**
@@ -292,7 +292,7 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
      * Output only. Workload Identity settings.
      * 
      */
-    @OutputExport(name="workloadIdentityConfigs", type=List.class, parameters={AwsClusterWorkloadIdentityConfig.class})
+    @Export(name="workloadIdentityConfigs", type=List.class, parameters={AwsClusterWorkloadIdentityConfig.class})
     private Output<List<AwsClusterWorkloadIdentityConfig>> workloadIdentityConfigs;
 
     /**

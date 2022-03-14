@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketLifecycleRuleCondition {
     /**
      * Minimum age of an object in days to satisfy this condition.
@@ -59,17 +59,17 @@ public final class BucketLifecycleRuleCondition {
      */
     private final @Nullable String withState;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketLifecycleRuleCondition(
-        @OutputCustomType.Parameter("age") @Nullable Integer age,
-        @OutputCustomType.Parameter("createdBefore") @Nullable String createdBefore,
-        @OutputCustomType.Parameter("customTimeBefore") @Nullable String customTimeBefore,
-        @OutputCustomType.Parameter("daysSinceCustomTime") @Nullable Integer daysSinceCustomTime,
-        @OutputCustomType.Parameter("daysSinceNoncurrentTime") @Nullable Integer daysSinceNoncurrentTime,
-        @OutputCustomType.Parameter("matchesStorageClasses") @Nullable List<String> matchesStorageClasses,
-        @OutputCustomType.Parameter("noncurrentTimeBefore") @Nullable String noncurrentTimeBefore,
-        @OutputCustomType.Parameter("numNewerVersions") @Nullable Integer numNewerVersions,
-        @OutputCustomType.Parameter("withState") @Nullable String withState) {
+        @CustomType.Parameter("age") @Nullable Integer age,
+        @CustomType.Parameter("createdBefore") @Nullable String createdBefore,
+        @CustomType.Parameter("customTimeBefore") @Nullable String customTimeBefore,
+        @CustomType.Parameter("daysSinceCustomTime") @Nullable Integer daysSinceCustomTime,
+        @CustomType.Parameter("daysSinceNoncurrentTime") @Nullable Integer daysSinceNoncurrentTime,
+        @CustomType.Parameter("matchesStorageClasses") @Nullable List<String> matchesStorageClasses,
+        @CustomType.Parameter("noncurrentTimeBefore") @Nullable String noncurrentTimeBefore,
+        @CustomType.Parameter("numNewerVersions") @Nullable Integer numNewerVersions,
+        @CustomType.Parameter("withState") @Nullable String withState) {
         this.age = age;
         this.createdBefore = createdBefore;
         this.customTimeBefore = customTimeBefore;

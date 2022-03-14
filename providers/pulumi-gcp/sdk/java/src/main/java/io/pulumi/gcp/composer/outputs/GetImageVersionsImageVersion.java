@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetImageVersionsImageVersion {
     /**
      * The string identifier of the image version, in the form: "composer-x.y.z-airflow-a.b(.c)"
@@ -21,10 +21,10 @@ public final class GetImageVersionsImageVersion {
      */
     private final List<String> supportedPythonVersions;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetImageVersionsImageVersion(
-        @OutputCustomType.Parameter("imageVersionId") String imageVersionId,
-        @OutputCustomType.Parameter("supportedPythonVersions") List<String> supportedPythonVersions) {
+        @CustomType.Parameter("imageVersionId") String imageVersionId,
+        @CustomType.Parameter("supportedPythonVersions") List<String> supportedPythonVersions) {
         this.imageVersionId = imageVersionId;
         this.supportedPythonVersions = supportedPythonVersions;
     }

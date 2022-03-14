@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datacatalog.PolicyTagArgs;
@@ -39,7 +39,7 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
      * Resource names of child policy tags of this policy tag.
      * 
      */
-    @OutputExport(name="childPolicyTags", type=List.class, parameters={String.class})
+    @Export(name="childPolicyTags", type=List.class, parameters={String.class})
     private Output<List<String>> childPolicyTags;
 
     /**
@@ -56,7 +56,7 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
      * If not set, defaults to an empty description.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -75,7 +75,7 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
      * not start or end with spaces; and be at most 200 bytes long when encoded in UTF-8.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -92,7 +92,7 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
      * "projects/{project}/locations/{region}/taxonomies/{taxonomy}/policyTags/{policytag}"
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -109,7 +109,7 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
      * If not set, defaults to an empty string.
      * 
      */
-    @OutputExport(name="parentPolicyTag", type=String.class, parameters={})
+    @Export(name="parentPolicyTag", type=String.class, parameters={})
     private Output</* @Nullable */ String> parentPolicyTag;
 
     /**
@@ -125,7 +125,7 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
      * Taxonomy the policy tag is associated with
      * 
      */
-    @OutputExport(name="taxonomy", type=String.class, parameters={})
+    @Export(name="taxonomy", type=String.class, parameters={})
     private Output<String> taxonomy;
 
     /**

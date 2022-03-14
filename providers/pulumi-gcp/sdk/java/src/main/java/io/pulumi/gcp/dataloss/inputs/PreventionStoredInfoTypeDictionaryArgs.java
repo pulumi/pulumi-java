@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeDictionaryCloudStoragePathArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeDictionaryWordListArgs;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PreventionStoredInfoTypeDictionaryArgs extends io.pulumi.reso
      * Structure is documented below.
      * 
      */
-    @InputImport(name="cloudStoragePath")
+    @Import(name="cloudStoragePath")
       private final @Nullable Output<PreventionStoredInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath;
 
     public Output<PreventionStoredInfoTypeDictionaryCloudStoragePathArgs> getCloudStoragePath() {
@@ -32,7 +32,7 @@ public final class PreventionStoredInfoTypeDictionaryArgs extends io.pulumi.reso
      * Structure is documented below.
      * 
      */
-    @InputImport(name="wordList")
+    @Import(name="wordList")
       private final @Nullable Output<PreventionStoredInfoTypeDictionaryWordListArgs> wordList;
 
     public Output<PreventionStoredInfoTypeDictionaryWordListArgs> getWordList() {

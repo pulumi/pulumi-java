@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.pubsub.TopicArgs;
@@ -56,7 +56,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * The expected format is `projects/*{@literal /}locations/*{@literal /}keyRings/*{@literal /}cryptoKeys/*`
      * 
      */
-    @OutputExport(name="kmsKeyName", type=String.class, parameters={})
+    @Export(name="kmsKeyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> kmsKeyName;
 
     /**
@@ -74,7 +74,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * A set of key/value label pairs to assign to this Topic.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -94,7 +94,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Cannot be more than 7 days or less than 10 minutes.
      * 
      */
-    @OutputExport(name="messageRetentionDuration", type=String.class, parameters={})
+    @Export(name="messageRetentionDuration", type=String.class, parameters={})
     private Output</* @Nullable */ String> messageRetentionDuration;
 
     /**
@@ -117,7 +117,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="messageStoragePolicy", type=TopicMessageStoragePolicy.class, parameters={})
+    @Export(name="messageStoragePolicy", type=TopicMessageStoragePolicy.class, parameters={})
     private Output<TopicMessageStoragePolicy> messageStoragePolicy;
 
     /**
@@ -134,7 +134,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Name of the topic.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -149,7 +149,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -165,7 +165,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="schemaSettings", type=TopicSchemaSettings.class, parameters={})
+    @Export(name="schemaSettings", type=TopicSchemaSettings.class, parameters={})
     private Output<TopicSchemaSettings> schemaSettings;
 
     /**

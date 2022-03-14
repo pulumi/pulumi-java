@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataproc.outputs.JobPysparkConfigLoggingConfig;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobPysparkConfig {
     /**
      * HCFS URIs of archives to be extracted in the working directory of .jar, .tar, .tar.gz, .tgz, and .zip.
@@ -51,16 +51,16 @@ public final class JobPysparkConfig {
      */
     private final @Nullable List<String> pythonFileUris;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobPysparkConfig(
-        @OutputCustomType.Parameter("archiveUris") @Nullable List<String> archiveUris,
-        @OutputCustomType.Parameter("args") @Nullable List<String> args,
-        @OutputCustomType.Parameter("fileUris") @Nullable List<String> fileUris,
-        @OutputCustomType.Parameter("jarFileUris") @Nullable List<String> jarFileUris,
-        @OutputCustomType.Parameter("loggingConfig") @Nullable JobPysparkConfigLoggingConfig loggingConfig,
-        @OutputCustomType.Parameter("mainPythonFileUri") String mainPythonFileUri,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("pythonFileUris") @Nullable List<String> pythonFileUris) {
+        @CustomType.Parameter("archiveUris") @Nullable List<String> archiveUris,
+        @CustomType.Parameter("args") @Nullable List<String> args,
+        @CustomType.Parameter("fileUris") @Nullable List<String> fileUris,
+        @CustomType.Parameter("jarFileUris") @Nullable List<String> jarFileUris,
+        @CustomType.Parameter("loggingConfig") @Nullable JobPysparkConfigLoggingConfig loggingConfig,
+        @CustomType.Parameter("mainPythonFileUri") String mainPythonFileUri,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("pythonFileUris") @Nullable List<String> pythonFileUris) {
         this.archiveUris = archiveUris;
         this.args = args;
         this.fileUris = fileUris;

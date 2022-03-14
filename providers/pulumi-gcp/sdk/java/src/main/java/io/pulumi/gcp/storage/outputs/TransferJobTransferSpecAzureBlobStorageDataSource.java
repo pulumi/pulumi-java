@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.storage.outputs.TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TransferJobTransferSpecAzureBlobStorageDataSource {
     /**
      * Credentials used to authenticate API requests to Azure block.
@@ -33,12 +33,12 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSource {
      */
     private final String storageAccount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TransferJobTransferSpecAzureBlobStorageDataSource(
-        @OutputCustomType.Parameter("azureCredentials") TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials azureCredentials,
-        @OutputCustomType.Parameter("container") String container,
-        @OutputCustomType.Parameter("path") @Nullable String path,
-        @OutputCustomType.Parameter("storageAccount") String storageAccount) {
+        @CustomType.Parameter("azureCredentials") TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials azureCredentials,
+        @CustomType.Parameter("container") String container,
+        @CustomType.Parameter("path") @Nullable String path,
+        @CustomType.Parameter("storageAccount") String storageAccount) {
         this.azureCredentials = azureCredentials;
         this.container = container;
         this.path = path;

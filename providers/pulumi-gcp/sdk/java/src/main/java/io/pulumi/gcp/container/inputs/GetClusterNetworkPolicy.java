@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -13,14 +13,14 @@ public final class GetClusterNetworkPolicy extends io.pulumi.resources.InvokeArg
 
     public static final GetClusterNetworkPolicy Empty = new GetClusterNetworkPolicy();
 
-    @InputImport(name="enabled", required=true)
+    @Import(name="enabled", required=true)
       private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
     }
 
-    @InputImport(name="provider", required=true)
+    @Import(name="provider", required=true)
       private final String provider;
 
     public String getProvider() {

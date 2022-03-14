@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ManagedSslCertificateManagedGetArgs extends io.pulumi.resourc
      * there can be up to 100 domains in this list.
      * 
      */
-    @InputImport(name="domains", required=true)
+    @Import(name="domains", required=true)
       private final Output<List<String>> domains;
 
     public Output<List<String>> getDomains() {

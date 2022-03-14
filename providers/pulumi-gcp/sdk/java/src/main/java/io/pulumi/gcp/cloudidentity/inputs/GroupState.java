@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudidentity.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudidentity.inputs.GroupGroupKeyGetArgs;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * The time when the Group was created.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -32,7 +32,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * Must not be longer than 4,096 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -43,7 +43,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * The display name of the Group.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -55,7 +55,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="groupKey")
+    @Import(name="groupKey")
       private final @Nullable Output<GroupGroupKeyGetArgs> groupKey;
 
     public Output<GroupGroupKeyGetArgs> getGroupKey() {
@@ -71,7 +71,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * Possible values are `INITIAL_GROUP_CONFIG_UNSPECIFIED`, `WITH_INITIAL_OWNER`, and `EMPTY`.
      * 
      */
-    @InputImport(name="initialGroupConfig")
+    @Import(name="initialGroupConfig")
       private final @Nullable Output<String> initialGroupConfig;
 
     public Output<String> getInitialGroupConfig() {
@@ -85,7 +85,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * 'system/groups/external': '' if the Group is an external-identity-mapped group.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -96,7 +96,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * Resource name of the Group in the format: groups/{group_id}, where group_id is the unique ID assigned to the Group.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -110,7 +110,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * groups or customers/{customer_id} for Google Groups.
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -121,7 +121,7 @@ public final class GroupState extends io.pulumi.resources.ResourceArgs {
      * The time when the Group was last updated.
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceFromTemplateAttachedDisk {
     private final @Nullable String deviceName;
     private final @Nullable String diskEncryptionKeyRaw;
@@ -18,14 +18,14 @@ public final class InstanceFromTemplateAttachedDisk {
     private final @Nullable String mode;
     private final String source;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceFromTemplateAttachedDisk(
-        @OutputCustomType.Parameter("deviceName") @Nullable String deviceName,
-        @OutputCustomType.Parameter("diskEncryptionKeyRaw") @Nullable String diskEncryptionKeyRaw,
-        @OutputCustomType.Parameter("diskEncryptionKeySha256") @Nullable String diskEncryptionKeySha256,
-        @OutputCustomType.Parameter("kmsKeySelfLink") @Nullable String kmsKeySelfLink,
-        @OutputCustomType.Parameter("mode") @Nullable String mode,
-        @OutputCustomType.Parameter("source") String source) {
+        @CustomType.Parameter("deviceName") @Nullable String deviceName,
+        @CustomType.Parameter("diskEncryptionKeyRaw") @Nullable String diskEncryptionKeyRaw,
+        @CustomType.Parameter("diskEncryptionKeySha256") @Nullable String diskEncryptionKeySha256,
+        @CustomType.Parameter("kmsKeySelfLink") @Nullable String kmsKeySelfLink,
+        @CustomType.Parameter("mode") @Nullable String mode,
+        @CustomType.Parameter("source") String source) {
         this.deviceName = deviceName;
         this.diskEncryptionKeyRaw = diskEncryptionKeyRaw;
         this.diskEncryptionKeySha256 = diskEncryptionKeySha256;

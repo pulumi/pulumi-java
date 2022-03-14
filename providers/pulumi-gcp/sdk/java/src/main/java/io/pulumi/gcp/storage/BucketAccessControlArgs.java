@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * The name of the bucket.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -43,7 +43,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * example.com, the entity would be domain-example.com.
      * 
      */
-    @InputImport(name="entity", required=true)
+    @Import(name="entity", required=true)
       private final Output<String> entity;
 
     public Output<String> getEntity() {
@@ -55,7 +55,7 @@ public final class BucketAccessControlArgs extends io.pulumi.resources.ResourceA
      * Possible values are `OWNER`, `READER`, and `WRITER`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

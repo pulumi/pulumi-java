@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobQueryDefaultDataset {
     /**
      * The ID of the dataset containing this model.
@@ -22,10 +22,10 @@ public final class JobQueryDefaultDataset {
      */
     private final @Nullable String projectId;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobQueryDefaultDataset(
-        @OutputCustomType.Parameter("datasetId") String datasetId,
-        @OutputCustomType.Parameter("projectId") @Nullable String projectId) {
+        @CustomType.Parameter("datasetId") String datasetId,
+        @CustomType.Parameter("projectId") @Nullable String projectId) {
         this.datasetId = datasetId;
         this.projectId = projectId;
     }

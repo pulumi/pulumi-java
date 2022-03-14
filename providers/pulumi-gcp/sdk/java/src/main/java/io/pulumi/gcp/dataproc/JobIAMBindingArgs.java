@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataproc.inputs.JobIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,21 +16,21 @@ public final class JobIAMBindingArgs extends io.pulumi.resources.ResourceArgs {
 
     public static final JobIAMBindingArgs Empty = new JobIAMBindingArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<JobIAMBindingConditionArgs> condition;
 
     public Output<JobIAMBindingConditionArgs> getCondition() {
         return this.condition == null ? Output.empty() : this.condition;
     }
 
-    @InputImport(name="jobId", required=true)
+    @Import(name="jobId", required=true)
       private final Output<String> jobId;
 
     public Output<String> getJobId() {
         return this.jobId;
     }
 
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -42,7 +42,7 @@ public final class JobIAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * is not provided, the provider will use a default.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -54,7 +54,7 @@ public final class JobIAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * is not provided, the provider will use a default.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -67,7 +67,7 @@ public final class JobIAMBindingArgs extends io.pulumi.resources.ResourceArgs {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

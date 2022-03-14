@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigee.InstanceArgs;
@@ -42,7 +42,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Description of the instance.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -57,7 +57,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Use the following format: `projects/([^/]+)/locations/([^/]+)/keyRings/([^/]+)/cryptoKeys/([^/]+)`
      * 
      */
-    @OutputExport(name="diskEncryptionKeyName", type=String.class, parameters={})
+    @Export(name="diskEncryptionKeyName", type=String.class, parameters={})
     private Output</* @Nullable */ String> diskEncryptionKeyName;
 
     /**
@@ -72,7 +72,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Display name of the instance.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -86,7 +86,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Output only. Hostname or IP address of the exposed Apigee endpoint used by clients to connect to the service.
      * 
      */
-    @OutputExport(name="host", type=String.class, parameters={})
+    @Export(name="host", type=String.class, parameters={})
     private Output<String> host;
 
     /**
@@ -106,7 +106,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Input format: "a.b.c.d/22"
      * 
      */
-    @OutputExport(name="ipRange", type=String.class, parameters={})
+    @Export(name="ipRange", type=String.class, parameters={})
     private Output</* @Nullable */ String> ipRange;
 
     /**
@@ -128,7 +128,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * subscriptions, it should correspond to a Compute Engine region.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -144,7 +144,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Resource ID of the instance.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -159,7 +159,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * in the format `organizations/{{org_name}}`.
      * 
      */
-    @OutputExport(name="orgId", type=String.class, parameters={})
+    @Export(name="orgId", type=String.class, parameters={})
     private Output<String> orgId;
 
     /**
@@ -175,7 +175,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * see [CidrRange](https://cloud.google.com/apigee/docs/reference/apis/apigee/rest/v1/organizations.instances#CidrRange) on the documentation.
      * 
      */
-    @OutputExport(name="peeringCidrRange", type=String.class, parameters={})
+    @Export(name="peeringCidrRange", type=String.class, parameters={})
     private Output<String> peeringCidrRange;
 
     /**
@@ -190,7 +190,7 @@ public class Instance extends io.pulumi.resources.CustomResource {
      * Output only. Port number of the exposed Apigee endpoint.
      * 
      */
-    @OutputExport(name="port", type=String.class, parameters={})
+    @Export(name="port", type=String.class, parameters={})
     private Output<String> port;
 
     /**

@@ -3,22 +3,22 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AuthorityAccessUrl {
     private final @Nullable String caCertificateAccessUrl;
     private final @Nullable List<String> crlAccessUrls;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AuthorityAccessUrl(
-        @OutputCustomType.Parameter("caCertificateAccessUrl") @Nullable String caCertificateAccessUrl,
-        @OutputCustomType.Parameter("crlAccessUrls") @Nullable List<String> crlAccessUrls) {
+        @CustomType.Parameter("caCertificateAccessUrl") @Nullable String caCertificateAccessUrl,
+        @CustomType.Parameter("crlAccessUrls") @Nullable List<String> crlAccessUrls) {
         this.caCertificateAccessUrl = caCertificateAccessUrl;
         this.crlAccessUrls = crlAccessUrls;
     }

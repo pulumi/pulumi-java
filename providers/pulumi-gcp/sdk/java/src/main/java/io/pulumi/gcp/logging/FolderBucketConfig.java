@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.logging.FolderBucketConfigArgs;
@@ -37,7 +37,7 @@ public class FolderBucketConfig extends io.pulumi.resources.CustomResource {
      * The name of the logging bucket. Logging automatically creates two log buckets: `_Required` and `_Default`.
      * 
      */
-    @OutputExport(name="bucketId", type=String.class, parameters={})
+    @Export(name="bucketId", type=String.class, parameters={})
     private Output<String> bucketId;
 
     /**
@@ -51,7 +51,7 @@ public class FolderBucketConfig extends io.pulumi.resources.CustomResource {
      * Describes this bucket.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output<String> description;
 
     /**
@@ -65,7 +65,7 @@ public class FolderBucketConfig extends io.pulumi.resources.CustomResource {
      * The parent resource that contains the logging bucket.
      * 
      */
-    @OutputExport(name="folder", type=String.class, parameters={})
+    @Export(name="folder", type=String.class, parameters={})
     private Output<String> folder;
 
     /**
@@ -79,7 +79,7 @@ public class FolderBucketConfig extends io.pulumi.resources.CustomResource {
      * The bucket's lifecycle such as active or deleted. See [LifecycleState](https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState).
      * 
      */
-    @OutputExport(name="lifecycleState", type=String.class, parameters={})
+    @Export(name="lifecycleState", type=String.class, parameters={})
     private Output<String> lifecycleState;
 
     /**
@@ -93,7 +93,7 @@ public class FolderBucketConfig extends io.pulumi.resources.CustomResource {
      * The location of the bucket.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -107,7 +107,7 @@ public class FolderBucketConfig extends io.pulumi.resources.CustomResource {
      * The resource name of the bucket. For example: "folders/my-folder-id/locations/my-location/buckets/my-bucket-id"
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -121,7 +121,7 @@ public class FolderBucketConfig extends io.pulumi.resources.CustomResource {
      * Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used. Bucket retention can not be increased on buckets outside of projects.
      * 
      */
-    @OutputExport(name="retentionDays", type=Integer.class, parameters={})
+    @Export(name="retentionDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> retentionDays;
 
     /**

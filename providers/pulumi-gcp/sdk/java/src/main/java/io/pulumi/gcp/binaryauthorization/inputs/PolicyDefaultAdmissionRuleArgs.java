@@ -4,7 +4,7 @@
 package io.pulumi.gcp.binaryauthorization.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PolicyDefaultAdmissionRuleArgs extends io.pulumi.resources.Re
      * Possible values are `ENFORCED_BLOCK_AND_AUDIT_LOG` and `DRYRUN_AUDIT_LOG_ONLY`.
      * 
      */
-    @InputImport(name="enforcementMode", required=true)
+    @Import(name="enforcementMode", required=true)
       private final Output<String> enforcementMode;
 
     public Output<String> getEnforcementMode() {
@@ -32,7 +32,7 @@ public final class PolicyDefaultAdmissionRuleArgs extends io.pulumi.resources.Re
      * Possible values are `ALWAYS_ALLOW`, `REQUIRE_ATTESTATION`, and `ALWAYS_DENY`.
      * 
      */
-    @InputImport(name="evaluationMode", required=true)
+    @Import(name="evaluationMode", required=true)
       private final Output<String> evaluationMode;
 
     public Output<String> getEvaluationMode() {
@@ -50,7 +50,7 @@ public final class PolicyDefaultAdmissionRuleArgs extends io.pulumi.resources.Re
      * specifies REQUIRE_ATTESTATION, otherwise it must be empty.
      * 
      */
-    @InputImport(name="requireAttestationsBies")
+    @Import(name="requireAttestationsBies")
       private final @Nullable Output<List<String>> requireAttestationsBies;
 
     public Output<List<String>> getRequireAttestationsBies() {

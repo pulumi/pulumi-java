@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ProjectDefaultNetworkTierArgs extends io.pulumi.resources.Res
      * This field can take the following values: `PREMIUM` or `STANDARD`.
      * 
      */
-    @InputImport(name="networkTier", required=true)
+    @Import(name="networkTier", required=true)
       private final Output<String> networkTier;
 
     public Output<String> getNetworkTier() {
@@ -31,7 +31,7 @@ public final class ProjectDefaultNetworkTierArgs extends io.pulumi.resources.Res
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

@@ -3,19 +3,19 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBackendBucketCdnPolicyNegativeCachingPolicy {
     private final Integer code;
     private final Integer ttl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackendBucketCdnPolicyNegativeCachingPolicy(
-        @OutputCustomType.Parameter("code") Integer code,
-        @OutputCustomType.Parameter("ttl") Integer ttl) {
+        @CustomType.Parameter("code") Integer code,
+        @CustomType.Parameter("ttl") Integer ttl) {
         this.code = code;
         this.ttl = ttl;
     }

@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.redis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceMaintenanceSchedule {
     private final String endTime;
     private final String scheduleDeadlineTime;
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceMaintenanceSchedule(
-        @OutputCustomType.Parameter("endTime") String endTime,
-        @OutputCustomType.Parameter("scheduleDeadlineTime") String scheduleDeadlineTime,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("endTime") String endTime,
+        @CustomType.Parameter("scheduleDeadlineTime") String scheduleDeadlineTime,
+        @CustomType.Parameter("startTime") String startTime) {
         this.endTime = endTime;
         this.scheduleDeadlineTime = scheduleDeadlineTime;
         this.startTime = startTime;

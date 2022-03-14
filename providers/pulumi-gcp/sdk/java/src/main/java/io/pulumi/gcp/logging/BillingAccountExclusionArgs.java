@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
      * The billing account to create the exclusion for.
      * 
      */
-    @InputImport(name="billingAccount", required=true)
+    @Import(name="billingAccount", required=true)
       private final Output<String> billingAccount;
 
     public Output<String> getBillingAccount() {
@@ -30,7 +30,7 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
      * A human-readable description.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -42,7 +42,7 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
      * false.
      * 
      */
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -55,7 +55,7 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
      * write a filter.
      * 
      */
-    @InputImport(name="filter", required=true)
+    @Import(name="filter", required=true)
       private final Output<String> filter;
 
     public Output<String> getFilter() {
@@ -66,7 +66,7 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
      * The name of the logging exclusion.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.AttachedDiskArgs;
@@ -52,7 +52,7 @@ public class AttachedDisk extends io.pulumi.resources.CustomResource {
      * the instance.
      * 
      */
-    @OutputExport(name="deviceName", type=String.class, parameters={})
+    @Export(name="deviceName", type=String.class, parameters={})
     private Output<String> deviceName;
 
     /**
@@ -70,7 +70,7 @@ public class AttachedDisk extends io.pulumi.resources.CustomResource {
      * `name` or `self_link` of the disk that will be attached.
      * 
      */
-    @OutputExport(name="disk", type=String.class, parameters={})
+    @Export(name="disk", type=String.class, parameters={})
     private Output<String> disk;
 
     /**
@@ -87,7 +87,7 @@ public class AttachedDisk extends io.pulumi.resources.CustomResource {
      * as properties on the resource or provider.
      * 
      */
-    @OutputExport(name="instance", type=String.class, parameters={})
+    @Export(name="instance", type=String.class, parameters={})
     private Output<String> instance;
 
     /**
@@ -106,7 +106,7 @@ public class AttachedDisk extends io.pulumi.resources.CustomResource {
      * READ_WRITE mode.
      * 
      */
-    @OutputExport(name="mode", type=String.class, parameters={})
+    @Export(name="mode", type=String.class, parameters={})
     private Output</* @Nullable */ String> mode;
 
     /**
@@ -123,7 +123,7 @@ public class AttachedDisk extends io.pulumi.resources.CustomResource {
      * `self_link` the project defined in the link will take precedence.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -139,7 +139,7 @@ public class AttachedDisk extends io.pulumi.resources.CustomResource {
      * `self_link` the zone defined in the link will take precedence.
      * 
      */
-    @OutputExport(name="zone", type=String.class, parameters={})
+    @Export(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
     /**

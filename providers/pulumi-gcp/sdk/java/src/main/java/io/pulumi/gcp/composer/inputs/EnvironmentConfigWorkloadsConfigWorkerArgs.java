@@ -4,7 +4,7 @@
 package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -15,35 +15,35 @@ public final class EnvironmentConfigWorkloadsConfigWorkerArgs extends io.pulumi.
 
     public static final EnvironmentConfigWorkloadsConfigWorkerArgs Empty = new EnvironmentConfigWorkloadsConfigWorkerArgs();
 
-    @InputImport(name="cpu")
+    @Import(name="cpu")
       private final @Nullable Output<Double> cpu;
 
     public Output<Double> getCpu() {
         return this.cpu == null ? Output.empty() : this.cpu;
     }
 
-    @InputImport(name="maxCount")
+    @Import(name="maxCount")
       private final @Nullable Output<Integer> maxCount;
 
     public Output<Integer> getMaxCount() {
         return this.maxCount == null ? Output.empty() : this.maxCount;
     }
 
-    @InputImport(name="memoryGb")
+    @Import(name="memoryGb")
       private final @Nullable Output<Double> memoryGb;
 
     public Output<Double> getMemoryGb() {
         return this.memoryGb == null ? Output.empty() : this.memoryGb;
     }
 
-    @InputImport(name="minCount")
+    @Import(name="minCount")
       private final @Nullable Output<Integer> minCount;
 
     public Output<Integer> getMinCount() {
         return this.minCount == null ? Output.empty() : this.minCount;
     }
 
-    @InputImport(name="storageGb")
+    @Import(name="storageGb")
       private final @Nullable Output<Double> storageGb;
 
     public Output<Double> getStorageGb() {

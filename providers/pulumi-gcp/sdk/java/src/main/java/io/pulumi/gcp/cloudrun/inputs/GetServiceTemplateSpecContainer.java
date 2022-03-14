@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudrun.inputs.GetServiceTemplateSpecContainerEnv;
 import io.pulumi.gcp.cloudrun.inputs.GetServiceTemplateSpecContainerEnvFrom;
 import io.pulumi.gcp.cloudrun.inputs.GetServiceTemplateSpecContainerPort;
@@ -18,63 +18,63 @@ public final class GetServiceTemplateSpecContainer extends io.pulumi.resources.I
 
     public static final GetServiceTemplateSpecContainer Empty = new GetServiceTemplateSpecContainer();
 
-    @InputImport(name="args", required=true)
+    @Import(name="args", required=true)
       private final List<String> args;
 
     public List<String> getArgs() {
         return this.args;
     }
 
-    @InputImport(name="commands", required=true)
+    @Import(name="commands", required=true)
       private final List<String> commands;
 
     public List<String> getCommands() {
         return this.commands;
     }
 
-    @InputImport(name="envFroms", required=true)
+    @Import(name="envFroms", required=true)
       private final List<GetServiceTemplateSpecContainerEnvFrom> envFroms;
 
     public List<GetServiceTemplateSpecContainerEnvFrom> getEnvFroms() {
         return this.envFroms;
     }
 
-    @InputImport(name="envs", required=true)
+    @Import(name="envs", required=true)
       private final List<GetServiceTemplateSpecContainerEnv> envs;
 
     public List<GetServiceTemplateSpecContainerEnv> getEnvs() {
         return this.envs;
     }
 
-    @InputImport(name="image", required=true)
+    @Import(name="image", required=true)
       private final String image;
 
     public String getImage() {
         return this.image;
     }
 
-    @InputImport(name="ports", required=true)
+    @Import(name="ports", required=true)
       private final List<GetServiceTemplateSpecContainerPort> ports;
 
     public List<GetServiceTemplateSpecContainerPort> getPorts() {
         return this.ports;
     }
 
-    @InputImport(name="resources", required=true)
+    @Import(name="resources", required=true)
       private final List<GetServiceTemplateSpecContainerResource> resources;
 
     public List<GetServiceTemplateSpecContainerResource> getResources() {
         return this.resources;
     }
 
-    @InputImport(name="volumeMounts", required=true)
+    @Import(name="volumeMounts", required=true)
       private final List<GetServiceTemplateSpecContainerVolumeMount> volumeMounts;
 
     public List<GetServiceTemplateSpecContainerVolumeMount> getVolumeMounts() {
         return this.volumeMounts;
     }
 
-    @InputImport(name="workingDir", required=true)
+    @Import(name="workingDir", required=true)
       private final String workingDir;
 
     public String getWorkingDir() {

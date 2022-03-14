@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.gameservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GameServerConfigScalingConfigSchedule {
     /**
      * The duration for the cron job event. The duration of the event is effective
@@ -38,12 +38,12 @@ public final class GameServerConfigScalingConfigSchedule {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GameServerConfigScalingConfigSchedule(
-        @OutputCustomType.Parameter("cronJobDuration") @Nullable String cronJobDuration,
-        @OutputCustomType.Parameter("cronSpec") @Nullable String cronSpec,
-        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
+        @CustomType.Parameter("cronJobDuration") @Nullable String cronJobDuration,
+        @CustomType.Parameter("cronSpec") @Nullable String cronSpec,
+        @CustomType.Parameter("endTime") @Nullable String endTime,
+        @CustomType.Parameter("startTime") @Nullable String startTime) {
         this.cronJobDuration = cronJobDuration;
         this.cronSpec = cronSpec;
         this.endTime = endTime;

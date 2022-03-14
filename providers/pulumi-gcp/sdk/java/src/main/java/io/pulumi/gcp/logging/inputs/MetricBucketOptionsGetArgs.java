@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.logging.inputs.MetricBucketOptionsExplicitBucketsGetArgs;
 import io.pulumi.gcp.logging.inputs.MetricBucketOptionsExponentialBucketsGetArgs;
 import io.pulumi.gcp.logging.inputs.MetricBucketOptionsLinearBucketsGetArgs;
@@ -21,7 +21,7 @@ public final class MetricBucketOptionsGetArgs extends io.pulumi.resources.Resour
      * Structure is documented below.
      * 
      */
-    @InputImport(name="explicitBuckets")
+    @Import(name="explicitBuckets")
       private final @Nullable Output<MetricBucketOptionsExplicitBucketsGetArgs> explicitBuckets;
 
     public Output<MetricBucketOptionsExplicitBucketsGetArgs> getExplicitBuckets() {
@@ -34,7 +34,7 @@ public final class MetricBucketOptionsGetArgs extends io.pulumi.resources.Resour
      * Structure is documented below.
      * 
      */
-    @InputImport(name="exponentialBuckets")
+    @Import(name="exponentialBuckets")
       private final @Nullable Output<MetricBucketOptionsExponentialBucketsGetArgs> exponentialBuckets;
 
     public Output<MetricBucketOptionsExponentialBucketsGetArgs> getExponentialBuckets() {
@@ -47,7 +47,7 @@ public final class MetricBucketOptionsGetArgs extends io.pulumi.resources.Resour
      * Structure is documented below.
      * 
      */
-    @InputImport(name="linearBuckets")
+    @Import(name="linearBuckets")
       private final @Nullable Output<MetricBucketOptionsLinearBucketsGetArgs> linearBuckets;
 
     public Output<MetricBucketOptionsLinearBucketsGetArgs> getLinearBuckets() {

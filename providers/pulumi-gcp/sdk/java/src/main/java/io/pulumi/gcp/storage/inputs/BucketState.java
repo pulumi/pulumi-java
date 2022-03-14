@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.storage.inputs.BucketCorGetArgs;
 import io.pulumi.gcp.storage.inputs.BucketEncryptionGetArgs;
 import io.pulumi.gcp.storage.inputs.BucketLifecycleRuleGetArgs;
@@ -28,14 +28,14 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * The bucket's [Cross-Origin Resource Sharing (CORS)](https://www.w3.org/TR/cors/) configuration. Multiple blocks of this type are permitted. Structure is documented below.
      * 
      */
-    @InputImport(name="cors")
+    @Import(name="cors")
       private final @Nullable Output<List<BucketCorGetArgs>> cors;
 
     public Output<List<BucketCorGetArgs>> getCors() {
         return this.cors == null ? Output.empty() : this.cors;
     }
 
-    @InputImport(name="defaultEventBasedHold")
+    @Import(name="defaultEventBasedHold")
       private final @Nullable Output<Boolean> defaultEventBasedHold;
 
     public Output<Boolean> getDefaultEventBasedHold() {
@@ -46,7 +46,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * The bucket's encryption configuration. Structure is documented below.
      * 
      */
-    @InputImport(name="encryption")
+    @Import(name="encryption")
       private final @Nullable Output<BucketEncryptionGetArgs> encryption;
 
     public Output<BucketEncryptionGetArgs> getEncryption() {
@@ -59,7 +59,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * bucket that contains objects, the provider will fail that run.
      * 
      */
-    @InputImport(name="forceDestroy")
+    @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
     public Output<Boolean> getForceDestroy() {
@@ -70,7 +70,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * A map of key/value label pairs to assign to the bucket.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -81,7 +81,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * The bucket's [Lifecycle Rules](https://cloud.google.com/storage/docs/lifecycle#configuration) configuration. Multiple blocks of this type are permitted. Structure is documented below.
      * 
      */
-    @InputImport(name="lifecycleRules")
+    @Import(name="lifecycleRules")
       private final @Nullable Output<List<BucketLifecycleRuleGetArgs>> lifecycleRules;
 
     public Output<List<BucketLifecycleRuleGetArgs>> getLifecycleRules() {
@@ -92,7 +92,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * The [GCS location](https://cloud.google.com/storage/docs/bucket-locations)
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -103,7 +103,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * The bucket's [Access & Storage Logs](https://cloud.google.com/storage/docs/access-logs) configuration. Structure is documented below.
      * 
      */
-    @InputImport(name="logging")
+    @Import(name="logging")
       private final @Nullable Output<BucketLoggingGetArgs> logging;
 
     public Output<BucketLoggingGetArgs> getLogging() {
@@ -114,7 +114,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * The name of the bucket.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -126,7 +126,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -137,7 +137,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * Prevents public access to a bucket.
      * 
      */
-    @InputImport(name="publicAccessPrevention")
+    @Import(name="publicAccessPrevention")
       private final @Nullable Output<String> publicAccessPrevention;
 
     public Output<String> getPublicAccessPrevention() {
@@ -148,7 +148,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * Enables [Requester Pays](https://cloud.google.com/storage/docs/requester-pays) on a storage bucket.
      * 
      */
-    @InputImport(name="requesterPays")
+    @Import(name="requesterPays")
       private final @Nullable Output<Boolean> requesterPays;
 
     public Output<Boolean> getRequesterPays() {
@@ -159,7 +159,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * Configuration of the bucket's data retention policy for how long objects in the bucket should be retained. Structure is documented below.
      * 
      */
-    @InputImport(name="retentionPolicy")
+    @Import(name="retentionPolicy")
       private final @Nullable Output<BucketRetentionPolicyGetArgs> retentionPolicy;
 
     public Output<BucketRetentionPolicyGetArgs> getRetentionPolicy() {
@@ -170,7 +170,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * The URI of the created resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -181,7 +181,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * The target [Storage Class](https://cloud.google.com/storage/docs/storage-classes) of objects affected by this Lifecycle Rule. Supported values include: `STANDARD`, `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`.
      * 
      */
-    @InputImport(name="storageClass")
+    @Import(name="storageClass")
       private final @Nullable Output<String> storageClass;
 
     public Output<String> getStorageClass() {
@@ -192,7 +192,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * Enables [Uniform bucket-level access](https://cloud.google.com/storage/docs/uniform-bucket-level-access) access to a bucket.
      * 
      */
-    @InputImport(name="uniformBucketLevelAccess")
+    @Import(name="uniformBucketLevelAccess")
       private final @Nullable Output<Boolean> uniformBucketLevelAccess;
 
     public Output<Boolean> getUniformBucketLevelAccess() {
@@ -203,7 +203,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * The base URL of the bucket, in the format `gs://<bucket-name>`.
      * 
      */
-    @InputImport(name="url")
+    @Import(name="url")
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
@@ -214,7 +214,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * The bucket's [Versioning](https://cloud.google.com/storage/docs/object-versioning) configuration.  Structure is documented below.
      * 
      */
-    @InputImport(name="versioning")
+    @Import(name="versioning")
       private final @Nullable Output<BucketVersioningGetArgs> versioning;
 
     public Output<BucketVersioningGetArgs> getVersioning() {
@@ -225,7 +225,7 @@ public final class BucketState extends io.pulumi.resources.ResourceArgs {
      * Configuration if the bucket acts as a website. Structure is documented below.
      * 
      */
-    @InputImport(name="website")
+    @Import(name="website")
       private final @Nullable Output<BucketWebsiteGetArgs> website;
 
     public Output<BucketWebsiteGetArgs> getWebsite() {

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromSource;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServicePerimetersServicePerimeterSpecIngressPolicyIngressFrom {
     /**
      * A list of identities that are allowed access through this `EgressPolicy`.
@@ -35,11 +35,11 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyIngressFrom
      */
     private final @Nullable List<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromSource> sources;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServicePerimetersServicePerimeterSpecIngressPolicyIngressFrom(
-        @OutputCustomType.Parameter("identities") @Nullable List<String> identities,
-        @OutputCustomType.Parameter("identityType") @Nullable String identityType,
-        @OutputCustomType.Parameter("sources") @Nullable List<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromSource> sources) {
+        @CustomType.Parameter("identities") @Nullable List<String> identities,
+        @CustomType.Parameter("identityType") @Nullable String identityType,
+        @CustomType.Parameter("sources") @Nullable List<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromSource> sources) {
         this.identities = identities;
         this.identityType = identityType;
         this.sources = sources;

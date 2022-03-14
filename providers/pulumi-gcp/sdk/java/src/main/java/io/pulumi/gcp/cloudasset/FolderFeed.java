@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudasset;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudasset.FolderFeedArgs;
@@ -48,7 +48,7 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
      * See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
      * 
      */
-    @OutputExport(name="assetNames", type=List.class, parameters={String.class})
+    @Export(name="assetNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> assetNames;
 
     /**
@@ -69,7 +69,7 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
      * supported asset types.
      * 
      */
-    @OutputExport(name="assetTypes", type=List.class, parameters={String.class})
+    @Export(name="assetTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> assetTypes;
 
     /**
@@ -89,7 +89,7 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
      * enablement check, quota, and billing.
      * 
      */
-    @OutputExport(name="billingProject", type=String.class, parameters={})
+    @Export(name="billingProject", type=String.class, parameters={})
     private Output<String> billingProject;
 
     /**
@@ -110,7 +110,7 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="condition", type=FolderFeedCondition.class, parameters={})
+    @Export(name="condition", type=FolderFeedCondition.class, parameters={})
     private Output</* @Nullable */ FolderFeedCondition> condition;
 
     /**
@@ -130,7 +130,7 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
      * Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
      * 
      */
-    @OutputExport(name="contentType", type=String.class, parameters={})
+    @Export(name="contentType", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentType;
 
     /**
@@ -145,7 +145,7 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
      * This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
      * 
      */
-    @OutputExport(name="feedId", type=String.class, parameters={})
+    @Export(name="feedId", type=String.class, parameters={})
     private Output<String> feedId;
 
     /**
@@ -160,7 +160,7 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="feedOutputConfig", type=FolderFeedFeedOutputConfig.class, parameters={})
+    @Export(name="feedOutputConfig", type=FolderFeedFeedOutputConfig.class, parameters={})
     private Output<FolderFeedFeedOutputConfig> feedOutputConfig;
 
     /**
@@ -175,7 +175,7 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
      * The folder this feed should be created in.
      * 
      */
-    @OutputExport(name="folder", type=String.class, parameters={})
+    @Export(name="folder", type=String.class, parameters={})
     private Output<String> folder;
 
     /**
@@ -189,7 +189,7 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
      * The ID of the folder where this feed has been created. Both [FOLDER_NUMBER] and folders/[FOLDER_NUMBER] are accepted.
      * 
      */
-    @OutputExport(name="folderId", type=String.class, parameters={})
+    @Export(name="folderId", type=String.class, parameters={})
     private Output<String> folderId;
 
     /**
@@ -203,7 +203,7 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
      * The format will be folders/{folder_number}/feeds/{client-assigned_feed_identifier}.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**

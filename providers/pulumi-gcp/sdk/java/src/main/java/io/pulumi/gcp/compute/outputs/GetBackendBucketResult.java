@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetBackendBucketCdnPolicy;
 import java.lang.Boolean;
 import java.lang.String;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBackendBucketResult {
     private final String bucketName;
     private final List<GetBackendBucketCdnPolicy> cdnPolicies;
@@ -29,18 +29,18 @@ public final class GetBackendBucketResult {
     private final @Nullable String project;
     private final String selfLink;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBackendBucketResult(
-        @OutputCustomType.Parameter("bucketName") String bucketName,
-        @OutputCustomType.Parameter("cdnPolicies") List<GetBackendBucketCdnPolicy> cdnPolicies,
-        @OutputCustomType.Parameter("creationTimestamp") String creationTimestamp,
-        @OutputCustomType.Parameter("customResponseHeaders") List<String> customResponseHeaders,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("enableCdn") Boolean enableCdn,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") @Nullable String project,
-        @OutputCustomType.Parameter("selfLink") String selfLink) {
+        @CustomType.Parameter("bucketName") String bucketName,
+        @CustomType.Parameter("cdnPolicies") List<GetBackendBucketCdnPolicy> cdnPolicies,
+        @CustomType.Parameter("creationTimestamp") String creationTimestamp,
+        @CustomType.Parameter("customResponseHeaders") List<String> customResponseHeaders,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("enableCdn") Boolean enableCdn,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") @Nullable String project,
+        @CustomType.Parameter("selfLink") String selfLink) {
         this.bucketName = bucketName;
         this.cdnPolicies = cdnPolicies;
         this.creationTimestamp = creationTimestamp;

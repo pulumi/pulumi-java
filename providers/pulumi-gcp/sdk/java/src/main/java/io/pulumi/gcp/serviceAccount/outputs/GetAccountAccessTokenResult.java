@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.serviceAccount.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetAccountAccessTokenResult {
     /**
      * The `access_token` representing the new generated identity.
@@ -27,14 +27,14 @@ public final class GetAccountAccessTokenResult {
     private final List<String> scopes;
     private final String targetServiceAccount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetAccountAccessTokenResult(
-        @OutputCustomType.Parameter("accessToken") String accessToken,
-        @OutputCustomType.Parameter("delegates") @Nullable List<String> delegates,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("lifetime") @Nullable String lifetime,
-        @OutputCustomType.Parameter("scopes") List<String> scopes,
-        @OutputCustomType.Parameter("targetServiceAccount") String targetServiceAccount) {
+        @CustomType.Parameter("accessToken") String accessToken,
+        @CustomType.Parameter("delegates") @Nullable List<String> delegates,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("lifetime") @Nullable String lifetime,
+        @CustomType.Parameter("scopes") List<String> scopes,
+        @CustomType.Parameter("targetServiceAccount") String targetServiceAccount) {
         this.accessToken = accessToken;
         this.delegates = delegates;
         this.id = id;

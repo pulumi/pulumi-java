@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends io.pulumi
      * certificate.
      * 
      */
-    @InputImport(name="caCertificate")
+    @Import(name="caCertificate")
       private final @Nullable Output<String> caCertificate;
 
     public Output<String> getCaCertificate() {
@@ -33,7 +33,7 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends io.pulumi
      * certificate.
      * 
      */
-    @InputImport(name="clientCertificate")
+    @Import(name="clientCertificate")
       private final @Nullable Output<String> clientCertificate;
 
     public Output<String> getClientCertificate() {
@@ -45,7 +45,7 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends io.pulumi
      * corresponding public key in encoded in the `client_certificate`.
      * 
      */
-    @InputImport(name="clientKey")
+    @Import(name="clientKey")
       private final @Nullable Output<String> clientKey;
 
     public Output<String> getClientKey() {
@@ -57,7 +57,7 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends io.pulumi
      * between connect retries.
      * 
      */
-    @InputImport(name="connectRetryInterval")
+    @Import(name="connectRetryInterval")
       private final @Nullable Output<Integer> connectRetryInterval;
 
     public Output<Integer> getConnectRetryInterval() {
@@ -69,7 +69,7 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends io.pulumi
      * instances are created. Format is `gs://bucket/filename`.
      * 
      */
-    @InputImport(name="dumpFilePath")
+    @Import(name="dumpFilePath")
       private final @Nullable Output<String> dumpFilePath;
 
     public Output<String> getDumpFilePath() {
@@ -83,7 +83,7 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends io.pulumi
      * the new master instance.
      * 
      */
-    @InputImport(name="failoverTarget")
+    @Import(name="failoverTarget")
       private final @Nullable Output<Boolean> failoverTarget;
 
     public Output<Boolean> getFailoverTarget() {
@@ -95,7 +95,7 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends io.pulumi
      * heartbeats.
      * 
      */
-    @InputImport(name="masterHeartbeatPeriod")
+    @Import(name="masterHeartbeatPeriod")
       private final @Nullable Output<Integer> masterHeartbeatPeriod;
 
     public Output<Integer> getMasterHeartbeatPeriod() {
@@ -106,14 +106,14 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends io.pulumi
      * Password for the replication connection.
      * 
      */
-    @InputImport(name="password")
+    @Import(name="password")
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
         return this.password == null ? Output.empty() : this.password;
     }
 
-    @InputImport(name="sslCipher")
+    @Import(name="sslCipher")
       private final @Nullable Output<String> sslCipher;
 
     public Output<String> getSslCipher() {
@@ -124,7 +124,7 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends io.pulumi
      * Username for replication connection.
      * 
      */
-    @InputImport(name="username")
+    @Import(name="username")
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {
@@ -136,7 +136,7 @@ public final class DatabaseInstanceReplicaConfigurationGetArgs extends io.pulumi
      * value is checked during the SSL handshake.
      * 
      */
-    @InputImport(name="verifyServerCertificate")
+    @Import(name="verifyServerCertificate")
       private final @Nullable Output<Boolean> verifyServerCertificate;
 
     public Output<Boolean> getVerifyServerCertificate() {

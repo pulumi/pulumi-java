@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.storage.outputs.TransferJobScheduleScheduleEndDate;
 import io.pulumi.gcp.storage.outputs.TransferJobScheduleScheduleStartDate;
 import io.pulumi.gcp.storage.outputs.TransferJobScheduleStartTimeOfDay;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TransferJobSchedule {
     /**
      * The last day the recurring transfer will be run. If `schedule_end_date` is the same as `schedule_start_date`, the transfer will be executed only once. Structure documented below.
@@ -29,11 +29,11 @@ public final class TransferJobSchedule {
      */
     private final @Nullable TransferJobScheduleStartTimeOfDay startTimeOfDay;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TransferJobSchedule(
-        @OutputCustomType.Parameter("scheduleEndDate") @Nullable TransferJobScheduleScheduleEndDate scheduleEndDate,
-        @OutputCustomType.Parameter("scheduleStartDate") TransferJobScheduleScheduleStartDate scheduleStartDate,
-        @OutputCustomType.Parameter("startTimeOfDay") @Nullable TransferJobScheduleStartTimeOfDay startTimeOfDay) {
+        @CustomType.Parameter("scheduleEndDate") @Nullable TransferJobScheduleScheduleEndDate scheduleEndDate,
+        @CustomType.Parameter("scheduleStartDate") TransferJobScheduleScheduleStartDate scheduleStartDate,
+        @CustomType.Parameter("startTimeOfDay") @Nullable TransferJobScheduleStartTimeOfDay startTimeOfDay) {
         this.scheduleEndDate = scheduleEndDate;
         this.scheduleStartDate = scheduleStartDate;
         this.startTimeOfDay = startTimeOfDay;

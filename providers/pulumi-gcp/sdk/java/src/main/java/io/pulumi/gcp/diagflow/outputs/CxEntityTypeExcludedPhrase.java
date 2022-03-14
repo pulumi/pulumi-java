@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CxEntityTypeExcludedPhrase {
     /**
      * The word or phrase to be excluded.
@@ -17,8 +17,8 @@ public final class CxEntityTypeExcludedPhrase {
      */
     private final @Nullable String value;
 
-    @OutputCustomType.Constructor
-    private CxEntityTypeExcludedPhrase(@OutputCustomType.Parameter("value") @Nullable String value) {
+    @CustomType.Constructor
+    private CxEntityTypeExcludedPhrase(@CustomType.Parameter("value") @Nullable String value) {
         this.value = value;
     }
 

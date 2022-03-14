@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs 
      * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
      * 
      */
-    @InputImport(name="dayOfWeek", required=true)
+    @Import(name="dayOfWeek", required=true)
       private final Output<String> dayOfWeek;
 
     public Output<String> getDayOfWeek() {
@@ -30,7 +30,7 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthGetArgs 
      * Week number in a month. 1-4 indicates the 1st to 4th week of the month. -1 indicates the last week of the month.
      * 
      */
-    @InputImport(name="weekOrdinal", required=true)
+    @Import(name="weekOrdinal", required=true)
       private final Output<Integer> weekOrdinal;
 
     public Output<Integer> getWeekOrdinal() {

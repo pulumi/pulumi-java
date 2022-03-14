@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingMetadataGetArgs;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingSpecGetArgs;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingStatusGetArgs;
@@ -22,7 +22,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
      * The location of the cloud run instance. eg us-central1
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -34,7 +34,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<DomainMappingMetadataGetArgs> metadata;
 
     public Output<DomainMappingMetadataGetArgs> getMetadata() {
@@ -45,7 +45,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
      * Name should be a [verified](https://support.google.com/webmasters/answer/9008080) domain
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -69,7 +69,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="spec")
+    @Import(name="spec")
       private final @Nullable Output<DomainMappingSpecGetArgs> spec;
 
     public Output<DomainMappingSpecGetArgs> getSpec() {
@@ -80,7 +80,7 @@ public final class DomainMappingState extends io.pulumi.resources.ResourceArgs {
      * The current status of the DomainMapping.
      * 
      */
-    @InputImport(name="statuses")
+    @Import(name="statuses")
       private final @Nullable Output<List<DomainMappingStatusGetArgs>> statuses;
 
     public Output<List<DomainMappingStatusGetArgs>> getStatuses() {

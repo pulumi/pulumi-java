@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField;
 import io.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField {
     /**
      * Designated field in the BigQuery table.
@@ -23,10 +23,10 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField {
      */
     private final PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable table;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField(
-        @OutputCustomType.Parameter("field") PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField field,
-        @OutputCustomType.Parameter("table") PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable table) {
+        @CustomType.Parameter("field") PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldField field,
+        @CustomType.Parameter("table") PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldTable table) {
         this.field = field;
         this.table = table;
     }

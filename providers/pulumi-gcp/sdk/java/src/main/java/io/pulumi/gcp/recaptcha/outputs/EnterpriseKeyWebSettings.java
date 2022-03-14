@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.recaptcha.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnterpriseKeyWebSettings {
     /**
      * If set to true, it means allowed_domains will not be enforced.
@@ -39,13 +39,13 @@ public final class EnterpriseKeyWebSettings {
      */
     private final String integrationType;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnterpriseKeyWebSettings(
-        @OutputCustomType.Parameter("allowAllDomains") @Nullable Boolean allowAllDomains,
-        @OutputCustomType.Parameter("allowAmpTraffic") @Nullable Boolean allowAmpTraffic,
-        @OutputCustomType.Parameter("allowedDomains") @Nullable List<String> allowedDomains,
-        @OutputCustomType.Parameter("challengeSecurityPreference") @Nullable String challengeSecurityPreference,
-        @OutputCustomType.Parameter("integrationType") String integrationType) {
+        @CustomType.Parameter("allowAllDomains") @Nullable Boolean allowAllDomains,
+        @CustomType.Parameter("allowAmpTraffic") @Nullable Boolean allowAmpTraffic,
+        @CustomType.Parameter("allowedDomains") @Nullable List<String> allowedDomains,
+        @CustomType.Parameter("challengeSecurityPreference") @Nullable String challengeSecurityPreference,
+        @CustomType.Parameter("integrationType") String integrationType) {
         this.allowAllDomains = allowAllDomains;
         this.allowAmpTraffic = allowAmpTraffic;
         this.allowedDomains = allowedDomains;

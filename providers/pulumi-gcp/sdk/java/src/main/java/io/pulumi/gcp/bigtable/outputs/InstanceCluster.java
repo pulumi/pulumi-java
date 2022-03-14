@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.bigtable.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceCluster {
     /**
      * The ID of the Cloud Bigtable cluster.
@@ -43,13 +43,13 @@ public final class InstanceCluster {
      */
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceCluster(
-        @OutputCustomType.Parameter("clusterId") String clusterId,
-        @OutputCustomType.Parameter("kmsKeyName") @Nullable String kmsKeyName,
-        @OutputCustomType.Parameter("numNodes") @Nullable Integer numNodes,
-        @OutputCustomType.Parameter("storageType") @Nullable String storageType,
-        @OutputCustomType.Parameter("zone") @Nullable String zone) {
+        @CustomType.Parameter("clusterId") String clusterId,
+        @CustomType.Parameter("kmsKeyName") @Nullable String kmsKeyName,
+        @CustomType.Parameter("numNodes") @Nullable Integer numNodes,
+        @CustomType.Parameter("storageType") @Nullable String storageType,
+        @CustomType.Parameter("zone") @Nullable String zone) {
         this.clusterId = clusterId;
         this.kmsKeyName = kmsKeyName;
         this.numNodes = numNodes;

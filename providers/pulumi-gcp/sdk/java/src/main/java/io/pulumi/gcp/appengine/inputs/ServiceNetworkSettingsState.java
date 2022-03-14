@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.appengine.inputs.ServiceNetworkSettingsNetworkSettingsGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
      * Structure is documented below.
      * 
      */
-    @InputImport(name="networkSettings")
+    @Import(name="networkSettings")
       private final @Nullable Output<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings;
 
     public Output<ServiceNetworkSettingsNetworkSettingsGetArgs> getNetworkSettings() {
@@ -32,7 +32,7 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -43,7 +43,7 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
      * The name of the service these settings apply to.
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {

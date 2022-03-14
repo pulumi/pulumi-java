@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.InstanceGroupNamedPortArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * group.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -34,7 +34,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * network and zone as the instance group.
      * 
      */
-    @InputImport(name="instances")
+    @Import(name="instances")
       private final @Nullable Output<List<String>> instances;
 
     public Output<List<String>> getInstances() {
@@ -45,7 +45,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The name which the port will be mapped to.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -57,7 +57,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * for details on configuration. Structure is documented below.
      * 
      */
-    @InputImport(name="namedPorts")
+    @Import(name="namedPorts")
       private final @Nullable Output<List<InstanceGroupNamedPortArgs>> namedPorts;
 
     public Output<List<InstanceGroupNamedPortArgs>> getNamedPorts() {
@@ -71,7 +71,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * `network` nor `instances` is specified, this field will be blank).
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -83,7 +83,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -94,7 +94,7 @@ public final class InstanceGroupArgs extends io.pulumi.resources.ResourceArgs {
      * The zone that this instance group should be created in.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

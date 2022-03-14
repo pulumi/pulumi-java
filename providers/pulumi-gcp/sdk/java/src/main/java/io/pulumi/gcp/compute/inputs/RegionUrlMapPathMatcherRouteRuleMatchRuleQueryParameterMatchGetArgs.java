@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchG
      * must be set.
      * 
      */
-    @InputImport(name="exactMatch")
+    @Import(name="exactMatch")
       private final @Nullable Output<String> exactMatch;
 
     public Output<String> getExactMatch() {
@@ -33,7 +33,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchG
      * request, in the absence of which the request match fails.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -46,7 +46,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchG
      * presentMatch, exactMatch and regexMatch must be set.
      * 
      */
-    @InputImport(name="presentMatch")
+    @Import(name="presentMatch")
       private final @Nullable Output<Boolean> presentMatch;
 
     public Output<Boolean> getPresentMatch() {
@@ -60,7 +60,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchG
      * exactMatch and regexMatch must be set.
      * 
      */
-    @InputImport(name="regexMatch")
+    @Import(name="regexMatch")
       private final @Nullable Output<String> regexMatch;
 
     public Output<String> getRegexMatch() {

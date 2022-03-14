@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.kms.inputs.RegistryCredentialGetArgs;
 import io.pulumi.gcp.kms.inputs.RegistryEventNotificationConfigItemGetArgs;
 import java.lang.Object;
@@ -23,7 +23,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * List of public key certificates to authenticate devices.
      * 
      */
-    @InputImport(name="credentials")
+    @Import(name="credentials")
       private final @Nullable Output<List<RegistryCredentialGetArgs>> credentials;
 
     public Output<List<RegistryCredentialGetArgs>> getCredentials() {
@@ -34,7 +34,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * List of configurations for event notifications, such as PubSub topics to publish device events to.
      * 
      */
-    @InputImport(name="eventNotificationConfigs")
+    @Import(name="eventNotificationConfigs")
       private final @Nullable Output<List<RegistryEventNotificationConfigItemGetArgs>> eventNotificationConfigs;
 
     public Output<List<RegistryEventNotificationConfigItemGetArgs>> getEventNotificationConfigs() {
@@ -45,7 +45,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * Activate or deactivate HTTP.
      * 
      */
-    @InputImport(name="httpConfig")
+    @Import(name="httpConfig")
       private final @Nullable Output<Map<String,Object>> httpConfig;
 
     public Output<Map<String,Object>> getHttpConfig() {
@@ -59,7 +59,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * "DEBUG"]
      * 
      */
-    @InputImport(name="logLevel")
+    @Import(name="logLevel")
       private final @Nullable Output<String> logLevel;
 
     public Output<String> getLogLevel() {
@@ -70,7 +70,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * Activate or deactivate MQTT.
      * 
      */
-    @InputImport(name="mqttConfig")
+    @Import(name="mqttConfig")
       private final @Nullable Output<Map<String,Object>> mqttConfig;
 
     public Output<Map<String,Object>> getMqttConfig() {
@@ -81,14 +81,14 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * A unique name for the resource, required by device registry.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
         return this.name == null ? Output.empty() : this.name;
     }
 
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -99,7 +99,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * The region in which the created registry should reside. If it is not provided, the provider region is used.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -110,7 +110,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * A PubSub topic to publish device state updates.
      * 
      */
-    @InputImport(name="stateNotificationConfig")
+    @Import(name="stateNotificationConfig")
       private final @Nullable Output<Map<String,Object>> stateNotificationConfig;
 
     public Output<Map<String,Object>> getStateNotificationConfig() {

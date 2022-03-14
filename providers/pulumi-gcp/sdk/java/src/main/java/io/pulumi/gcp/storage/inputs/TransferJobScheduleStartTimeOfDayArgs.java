@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class TransferJobScheduleStartTimeOfDayArgs extends io.pulumi.resou
      * Hours of day in 24 hour format. Should be from 0 to 23
      * 
      */
-    @InputImport(name="hours", required=true)
+    @Import(name="hours", required=true)
       private final Output<Integer> hours;
 
     public Output<Integer> getHours() {
@@ -28,7 +28,7 @@ public final class TransferJobScheduleStartTimeOfDayArgs extends io.pulumi.resou
      * Minutes of hour of day. Must be from 0 to 59.
      * 
      */
-    @InputImport(name="minutes", required=true)
+    @Import(name="minutes", required=true)
       private final Output<Integer> minutes;
 
     public Output<Integer> getMinutes() {
@@ -39,7 +39,7 @@ public final class TransferJobScheduleStartTimeOfDayArgs extends io.pulumi.resou
      * Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
      * 
      */
-    @InputImport(name="nanos", required=true)
+    @Import(name="nanos", required=true)
       private final Output<Integer> nanos;
 
     public Output<Integer> getNanos() {
@@ -50,7 +50,7 @@ public final class TransferJobScheduleStartTimeOfDayArgs extends io.pulumi.resou
      * Seconds of minutes of the time. Must normally be from 0 to 59.
      * 
      */
-    @InputImport(name="seconds", required=true)
+    @Import(name="seconds", required=true)
       private final Output<Integer> seconds;
 
     public Output<Integer> getSeconds() {

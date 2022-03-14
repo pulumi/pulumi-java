@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class AuthorityKeySpec {
     /**
      * The algorithm to use for creating a managed Cloud KMS key for a for a simplified
@@ -25,10 +25,10 @@ public final class AuthorityKeySpec {
      */
     private final @Nullable String cloudKmsKeyVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private AuthorityKeySpec(
-        @OutputCustomType.Parameter("algorithm") @Nullable String algorithm,
-        @OutputCustomType.Parameter("cloudKmsKeyVersion") @Nullable String cloudKmsKeyVersion) {
+        @CustomType.Parameter("algorithm") @Nullable String algorithm,
+        @CustomType.Parameter("cloudKmsKeyVersion") @Nullable String cloudKmsKeyVersion) {
         this.algorithm = algorithm;
         this.cloudKmsKeyVersion = cloudKmsKeyVersion;
     }

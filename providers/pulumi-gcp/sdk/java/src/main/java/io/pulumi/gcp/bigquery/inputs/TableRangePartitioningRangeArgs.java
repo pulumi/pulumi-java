@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class TableRangePartitioningRangeArgs extends io.pulumi.resources.R
      * End of the range partitioning, exclusive.
      * 
      */
-    @InputImport(name="end", required=true)
+    @Import(name="end", required=true)
       private final Output<Integer> end;
 
     public Output<Integer> getEnd() {
@@ -28,7 +28,7 @@ public final class TableRangePartitioningRangeArgs extends io.pulumi.resources.R
      * The width of each range within the partition.
      * 
      */
-    @InputImport(name="interval", required=true)
+    @Import(name="interval", required=true)
       private final Output<Integer> interval;
 
     public Output<Integer> getInterval() {
@@ -39,7 +39,7 @@ public final class TableRangePartitioningRangeArgs extends io.pulumi.resources.R
      * Start of the range partitioning, inclusive.
      * 
      */
-    @InputImport(name="start", required=true)
+    @Import(name="start", required=true)
       private final Output<Integer> start;
 
     public Output<Integer> getStart() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ClusterIpAllocationPolicyArgs extends io.pulumi.resources.Res
      * pick a specific range to use.
      * 
      */
-    @InputImport(name="clusterIpv4CidrBlock")
+    @Import(name="clusterIpv4CidrBlock")
       private final @Nullable Output<String> clusterIpv4CidrBlock;
 
     public Output<String> getClusterIpv4CidrBlock() {
@@ -35,7 +35,7 @@ public final class ClusterIpAllocationPolicyArgs extends io.pulumi.resources.Res
      * `cluster_ipv4_cidr_block` can be used to automatically create a GKE-managed one.
      * 
      */
-    @InputImport(name="clusterSecondaryRangeName")
+    @Import(name="clusterSecondaryRangeName")
       private final @Nullable Output<String> clusterSecondaryRangeName;
 
     public Output<String> getClusterSecondaryRangeName() {
@@ -50,7 +50,7 @@ public final class ClusterIpAllocationPolicyArgs extends io.pulumi.resources.Res
      * pick a specific range to use.
      * 
      */
-    @InputImport(name="servicesIpv4CidrBlock")
+    @Import(name="servicesIpv4CidrBlock")
       private final @Nullable Output<String> servicesIpv4CidrBlock;
 
     public Output<String> getServicesIpv4CidrBlock() {
@@ -64,7 +64,7 @@ public final class ClusterIpAllocationPolicyArgs extends io.pulumi.resources.Res
      * GKE-managed one.
      * 
      */
-    @InputImport(name="servicesSecondaryRangeName")
+    @Import(name="servicesSecondaryRangeName")
       private final @Nullable Output<String> servicesSecondaryRangeName;
 
     public Output<String> getServicesSecondaryRangeName() {

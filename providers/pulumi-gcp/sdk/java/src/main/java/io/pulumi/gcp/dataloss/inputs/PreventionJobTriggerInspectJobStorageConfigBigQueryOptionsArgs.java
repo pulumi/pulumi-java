@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="tableReference", required=true)
+    @Import(name="tableReference", required=true)
       private final Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs> tableReference;
 
     public Output<PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReferenceArgs> getTableReference() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseInstanceSettingsLocationPreference {
     /**
      * A GAE application whose zone to remain
@@ -24,10 +24,10 @@ public final class DatabaseInstanceSettingsLocationPreference {
      */
     private final @Nullable String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabaseInstanceSettingsLocationPreference(
-        @OutputCustomType.Parameter("followGaeApplication") @Nullable String followGaeApplication,
-        @OutputCustomType.Parameter("zone") @Nullable String zone) {
+        @CustomType.Parameter("followGaeApplication") @Nullable String followGaeApplication,
+        @CustomType.Parameter("zone") @Nullable String zone) {
         this.followGaeApplication = followGaeApplication;
         this.zone = zone;
     }

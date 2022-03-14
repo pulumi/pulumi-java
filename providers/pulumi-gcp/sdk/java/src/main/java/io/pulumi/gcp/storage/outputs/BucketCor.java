@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketCor {
     /**
      * The value, in seconds, to return in the [Access-Control-Max-Age header](https://www.w3.org/TR/cors/#access-control-max-age-response-header) used in preflight responses.
@@ -34,12 +34,12 @@ public final class BucketCor {
      */
     private final @Nullable List<String> responseHeaders;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketCor(
-        @OutputCustomType.Parameter("maxAgeSeconds") @Nullable Integer maxAgeSeconds,
-        @OutputCustomType.Parameter("methods") @Nullable List<String> methods,
-        @OutputCustomType.Parameter("origins") @Nullable List<String> origins,
-        @OutputCustomType.Parameter("responseHeaders") @Nullable List<String> responseHeaders) {
+        @CustomType.Parameter("maxAgeSeconds") @Nullable Integer maxAgeSeconds,
+        @CustomType.Parameter("methods") @Nullable List<String> methods,
+        @CustomType.Parameter("origins") @Nullable List<String> origins,
+        @CustomType.Parameter("responseHeaders") @Nullable List<String> responseHeaders) {
         this.maxAgeSeconds = maxAgeSeconds;
         this.methods = methods;
         this.origins = origins;

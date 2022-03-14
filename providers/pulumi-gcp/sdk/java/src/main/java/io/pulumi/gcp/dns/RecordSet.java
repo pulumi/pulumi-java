@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dns;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dns.RecordSetArgs;
@@ -41,7 +41,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * reside.
      * 
      */
-    @OutputExport(name="managedZone", type=String.class, parameters={})
+    @Export(name="managedZone", type=String.class, parameters={})
     private Output<String> managedZone;
 
     /**
@@ -56,7 +56,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * The DNS name this record set will apply to.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -71,7 +71,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -89,7 +89,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * string (e.g. "first255characters\"\"morecharacters").
      * 
      */
-    @OutputExport(name="rrdatas", type=List.class, parameters={String.class})
+    @Export(name="rrdatas", type=List.class, parameters={String.class})
     private Output<List<String>> rrdatas;
 
     /**
@@ -106,7 +106,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * The time-to-live of this record set (seconds).
      * 
      */
-    @OutputExport(name="ttl", type=Integer.class, parameters={})
+    @Export(name="ttl", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> ttl;
 
     /**
@@ -120,7 +120,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * The DNS record set type.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output<String> type;
 
     /**

@@ -3,24 +3,24 @@
 
 package io.pulumi.gcp.datacatalog.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EntryBigqueryDateShardedSpec {
     private final @Nullable String dataset;
     private final @Nullable Integer shardCount;
     private final @Nullable String tablePrefix;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EntryBigqueryDateShardedSpec(
-        @OutputCustomType.Parameter("dataset") @Nullable String dataset,
-        @OutputCustomType.Parameter("shardCount") @Nullable Integer shardCount,
-        @OutputCustomType.Parameter("tablePrefix") @Nullable String tablePrefix) {
+        @CustomType.Parameter("dataset") @Nullable String dataset,
+        @CustomType.Parameter("shardCount") @Nullable Integer shardCount,
+        @CustomType.Parameter("tablePrefix") @Nullable String tablePrefix) {
         this.dataset = dataset;
         this.shardCount = shardCount;
         this.tablePrefix = tablePrefix;

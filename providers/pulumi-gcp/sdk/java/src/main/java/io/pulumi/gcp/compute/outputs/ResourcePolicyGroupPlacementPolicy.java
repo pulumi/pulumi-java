@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePolicyGroupPlacementPolicy {
     /**
      * The number of availability domains instances will be spread across. If two instances are in different
@@ -33,11 +33,11 @@ public final class ResourcePolicyGroupPlacementPolicy {
      */
     private final @Nullable Integer vmCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourcePolicyGroupPlacementPolicy(
-        @OutputCustomType.Parameter("availabilityDomainCount") @Nullable Integer availabilityDomainCount,
-        @OutputCustomType.Parameter("collocation") @Nullable String collocation,
-        @OutputCustomType.Parameter("vmCount") @Nullable Integer vmCount) {
+        @CustomType.Parameter("availabilityDomainCount") @Nullable Integer availabilityDomainCount,
+        @CustomType.Parameter("collocation") @Nullable String collocation,
+        @CustomType.Parameter("vmCount") @Nullable Integer vmCount) {
         this.availabilityDomainCount = availabilityDomainCount;
         this.collocation = collocation;
         this.vmCount = vmCount;

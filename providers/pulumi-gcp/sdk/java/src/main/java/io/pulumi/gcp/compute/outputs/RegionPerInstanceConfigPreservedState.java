@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.RegionPerInstanceConfigPreservedStateDisk;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Map;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class RegionPerInstanceConfigPreservedState {
     /**
      * Stateful disks for the instance.
@@ -25,10 +25,10 @@ public final class RegionPerInstanceConfigPreservedState {
      */
     private final @Nullable Map<String,String> metadata;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionPerInstanceConfigPreservedState(
-        @OutputCustomType.Parameter("disks") @Nullable List<RegionPerInstanceConfigPreservedStateDisk> disks,
-        @OutputCustomType.Parameter("metadata") @Nullable Map<String,String> metadata) {
+        @CustomType.Parameter("disks") @Nullable List<RegionPerInstanceConfigPreservedStateDisk> disks,
+        @CustomType.Parameter("metadata") @Nullable Map<String,String> metadata) {
         this.disks = disks;
         this.metadata = metadata;
     }

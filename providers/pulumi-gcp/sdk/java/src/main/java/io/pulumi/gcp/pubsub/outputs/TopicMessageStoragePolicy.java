@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class TopicMessageStoragePolicy {
     /**
      * A list of IDs of GCP regions where messages that are published to
@@ -21,8 +21,8 @@ public final class TopicMessageStoragePolicy {
      */
     private final List<String> allowedPersistenceRegions;
 
-    @OutputCustomType.Constructor
-    private TopicMessageStoragePolicy(@OutputCustomType.Parameter("allowedPersistenceRegions") List<String> allowedPersistenceRegions) {
+    @CustomType.Constructor
+    private TopicMessageStoragePolicy(@CustomType.Parameter("allowedPersistenceRegions") List<String> allowedPersistenceRegions) {
         this.allowedPersistenceRegions = allowedPersistenceRegions;
     }
 

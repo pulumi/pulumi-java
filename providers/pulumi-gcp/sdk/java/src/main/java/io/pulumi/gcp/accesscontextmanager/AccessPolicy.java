@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.accesscontextmanager.AccessPolicyArgs;
@@ -48,7 +48,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * Time the AccessPolicy was created in UTC.
      * 
      */
-    @OutputExport(name="createTime", type=String.class, parameters={})
+    @Export(name="createTime", type=String.class, parameters={})
     private Output<String> createTime;
 
     /**
@@ -62,7 +62,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * Resource name of the AccessPolicy. Format: {policy_id}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -77,7 +77,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * Format: organizations/{organization_id}
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**
@@ -92,7 +92,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * Human readable title. Does not affect behavior.
      * 
      */
-    @OutputExport(name="title", type=String.class, parameters={})
+    @Export(name="title", type=String.class, parameters={})
     private Output<String> title;
 
     /**
@@ -106,7 +106,7 @@ public class AccessPolicy extends io.pulumi.resources.CustomResource {
      * Time the AccessPolicy was updated in UTC.
      * 
      */
-    @OutputExport(name="updateTime", type=String.class, parameters={})
+    @Export(name="updateTime", type=String.class, parameters={})
     private Output<String> updateTime;
 
     /**

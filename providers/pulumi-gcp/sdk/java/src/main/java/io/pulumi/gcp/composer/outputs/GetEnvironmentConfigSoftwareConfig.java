@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEnvironmentConfigSoftwareConfig {
     private final Map<String,String> airflowConfigOverrides;
     private final Map<String,String> envVariables;
@@ -18,14 +18,14 @@ public final class GetEnvironmentConfigSoftwareConfig {
     private final String pythonVersion;
     private final Integer schedulerCount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnvironmentConfigSoftwareConfig(
-        @OutputCustomType.Parameter("airflowConfigOverrides") Map<String,String> airflowConfigOverrides,
-        @OutputCustomType.Parameter("envVariables") Map<String,String> envVariables,
-        @OutputCustomType.Parameter("imageVersion") String imageVersion,
-        @OutputCustomType.Parameter("pypiPackages") Map<String,String> pypiPackages,
-        @OutputCustomType.Parameter("pythonVersion") String pythonVersion,
-        @OutputCustomType.Parameter("schedulerCount") Integer schedulerCount) {
+        @CustomType.Parameter("airflowConfigOverrides") Map<String,String> airflowConfigOverrides,
+        @CustomType.Parameter("envVariables") Map<String,String> envVariables,
+        @CustomType.Parameter("imageVersion") String imageVersion,
+        @CustomType.Parameter("pypiPackages") Map<String,String> pypiPackages,
+        @CustomType.Parameter("pythonVersion") String pythonVersion,
+        @CustomType.Parameter("schedulerCount") Integer schedulerCount) {
         this.airflowConfigOverrides = airflowConfigOverrides;
         this.envVariables = envVariables;
         this.imageVersion = imageVersion;

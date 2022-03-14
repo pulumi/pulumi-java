@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.storage.inputs.ObjectAccessControlProjectTeamGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
      * The name of the bucket.
      * 
      */
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -32,7 +32,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
      * The domain associated with the entity.
      * 
      */
-    @InputImport(name="domain")
+    @Import(name="domain")
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
@@ -43,7 +43,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
      * The email address associated with the entity.
      * 
      */
-    @InputImport(name="email")
+    @Import(name="email")
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
@@ -62,7 +62,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
      * * allAuthenticatedUsers
      * 
      */
-    @InputImport(name="entity")
+    @Import(name="entity")
       private final @Nullable Output<String> entity;
 
     public Output<String> getEntity() {
@@ -73,7 +73,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
      * The ID for the entity
      * 
      */
-    @InputImport(name="entityId")
+    @Import(name="entityId")
       private final @Nullable Output<String> entityId;
 
     public Output<String> getEntityId() {
@@ -84,7 +84,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
      * The content generation of the object, if applied to an object.
      * 
      */
-    @InputImport(name="generation")
+    @Import(name="generation")
       private final @Nullable Output<Integer> generation;
 
     public Output<Integer> getGeneration() {
@@ -95,7 +95,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
      * The name of the object to apply the access control to.
      * 
      */
-    @InputImport(name="object")
+    @Import(name="object")
       private final @Nullable Output<String> object;
 
     public Output<String> getObject() {
@@ -106,7 +106,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
      * The project team associated with the entity
      * 
      */
-    @InputImport(name="projectTeams")
+    @Import(name="projectTeams")
       private final @Nullable Output<List<ObjectAccessControlProjectTeamGetArgs>> projectTeams;
 
     public Output<List<ObjectAccessControlProjectTeamGetArgs>> getProjectTeams() {
@@ -118,7 +118,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
      * Possible values are `OWNER` and `READER`.
      * 
      */
-    @InputImport(name="role")
+    @Import(name="role")
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {

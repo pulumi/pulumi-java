@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @InputImport(name="creationTimestamp")
+    @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
@@ -38,7 +38,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
      * *must not* be present when using any other profile.
      * 
      */
-    @InputImport(name="customFeatures")
+    @Import(name="customFeatures")
       private final @Nullable Output<List<String>> customFeatures;
 
     public Output<List<String>> getCustomFeatures() {
@@ -49,7 +49,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -60,7 +60,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
      * The list of features enabled in the SSL policy.
      * 
      */
-    @InputImport(name="enabledFeatures")
+    @Import(name="enabledFeatures")
       private final @Nullable Output<List<String>> enabledFeatures;
 
     public Output<List<String>> getEnabledFeatures() {
@@ -71,7 +71,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
      * Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
      * 
      */
-    @InputImport(name="fingerprint")
+    @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
     public Output<String> getFingerprint() {
@@ -85,7 +85,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
      * Possible values are `TLS_1_0`, `TLS_1_1`, and `TLS_1_2`.
      * 
      */
-    @InputImport(name="minTlsVersion")
+    @Import(name="minTlsVersion")
       private final @Nullable Output<String> minTlsVersion;
 
     public Output<String> getMinTlsVersion() {
@@ -102,7 +102,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
      * character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -121,7 +121,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
      * Possible values are `COMPATIBLE`, `MODERN`, `RESTRICTED`, and `CUSTOM`.
      * 
      */
-    @InputImport(name="profile")
+    @Import(name="profile")
       private final @Nullable Output<String> profile;
 
     public Output<String> getProfile() {
@@ -133,7 +133,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -144,7 +144,7 @@ public final class SSLPolicyState extends io.pulumi.resources.ResourceArgs {
      * The URI of the created resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {

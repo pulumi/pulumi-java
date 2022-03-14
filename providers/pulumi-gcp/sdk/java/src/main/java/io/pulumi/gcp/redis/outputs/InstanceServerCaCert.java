@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.redis.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceServerCaCert {
     private final @Nullable String cert;
     /**
@@ -24,13 +24,13 @@ public final class InstanceServerCaCert {
     private final @Nullable String serialNumber;
     private final @Nullable String sha1Fingerprint;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceServerCaCert(
-        @OutputCustomType.Parameter("cert") @Nullable String cert,
-        @OutputCustomType.Parameter("createTime") @Nullable String createTime,
-        @OutputCustomType.Parameter("expireTime") @Nullable String expireTime,
-        @OutputCustomType.Parameter("serialNumber") @Nullable String serialNumber,
-        @OutputCustomType.Parameter("sha1Fingerprint") @Nullable String sha1Fingerprint) {
+        @CustomType.Parameter("cert") @Nullable String cert,
+        @CustomType.Parameter("createTime") @Nullable String createTime,
+        @CustomType.Parameter("expireTime") @Nullable String expireTime,
+        @CustomType.Parameter("serialNumber") @Nullable String serialNumber,
+        @CustomType.Parameter("sha1Fingerprint") @Nullable String sha1Fingerprint) {
         this.cert = cert;
         this.createTime = createTime;
         this.expireTime = expireTime;

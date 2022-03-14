@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesAssignmentArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageRepositoryArgs;
@@ -30,7 +30,7 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="assignment", required=true)
+    @Import(name="assignment", required=true)
       private final Output<GuestPoliciesAssignmentArgs> assignment;
 
     public Output<GuestPoliciesAssignmentArgs> getAssignment() {
@@ -41,7 +41,7 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
      * Description of the guest policy. Length of the description is limited to 1024 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -52,7 +52,7 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
      * The etag for this guest policy. If this is provided on update, it must match the server's etag.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -68,7 +68,7 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
      * * Must be unique within the project.
      * 
      */
-    @InputImport(name="guestPolicyId", required=true)
+    @Import(name="guestPolicyId", required=true)
       private final Output<String> guestPolicyId;
 
     public Output<String> getGuestPolicyId() {
@@ -82,7 +82,7 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="packageRepositories")
+    @Import(name="packageRepositories")
       private final @Nullable Output<List<GuestPoliciesPackageRepositoryArgs>> packageRepositories;
 
     public Output<List<GuestPoliciesPackageRepositoryArgs>> getPackageRepositories() {
@@ -94,7 +94,7 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="packages")
+    @Import(name="packages")
       private final @Nullable Output<List<GuestPoliciesPackageArgs>> packages;
 
     public Output<List<GuestPoliciesPackageArgs>> getPackages() {
@@ -106,7 +106,7 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -118,7 +118,7 @@ public final class GuestPoliciesArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="recipes")
+    @Import(name="recipes")
       private final @Nullable Output<List<GuestPoliciesRecipeArgs>> recipes;
 
     public Output<List<GuestPoliciesRecipeArgs>> getRecipes() {

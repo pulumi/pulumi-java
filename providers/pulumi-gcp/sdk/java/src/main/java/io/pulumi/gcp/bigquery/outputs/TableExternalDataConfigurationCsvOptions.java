@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TableExternalDataConfigurationCsvOptions {
     /**
      * Indicates if BigQuery should accept rows
@@ -56,14 +56,14 @@ public final class TableExternalDataConfigurationCsvOptions {
      */
     private final @Nullable Integer skipLeadingRows;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TableExternalDataConfigurationCsvOptions(
-        @OutputCustomType.Parameter("allowJaggedRows") @Nullable Boolean allowJaggedRows,
-        @OutputCustomType.Parameter("allowQuotedNewlines") @Nullable Boolean allowQuotedNewlines,
-        @OutputCustomType.Parameter("encoding") @Nullable String encoding,
-        @OutputCustomType.Parameter("fieldDelimiter") @Nullable String fieldDelimiter,
-        @OutputCustomType.Parameter("quote") String quote,
-        @OutputCustomType.Parameter("skipLeadingRows") @Nullable Integer skipLeadingRows) {
+        @CustomType.Parameter("allowJaggedRows") @Nullable Boolean allowJaggedRows,
+        @CustomType.Parameter("allowQuotedNewlines") @Nullable Boolean allowQuotedNewlines,
+        @CustomType.Parameter("encoding") @Nullable String encoding,
+        @CustomType.Parameter("fieldDelimiter") @Nullable String fieldDelimiter,
+        @CustomType.Parameter("quote") String quote,
+        @CustomType.Parameter("skipLeadingRows") @Nullable Integer skipLeadingRows) {
         this.allowJaggedRows = allowJaggedRows;
         this.allowQuotedNewlines = allowQuotedNewlines;
         this.encoding = encoding;

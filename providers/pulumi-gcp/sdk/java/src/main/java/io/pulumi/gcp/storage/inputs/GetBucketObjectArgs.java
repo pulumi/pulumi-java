@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the containing bucket.
      * 
      */
-    @InputImport(name="bucket")
+    @Import(name="bucket")
       private final @Nullable String bucket;
 
     public Optional<String> getBucket() {
@@ -29,7 +29,7 @@ public final class GetBucketObjectArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the object.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable String name;
 
     public Optional<String> getName() {

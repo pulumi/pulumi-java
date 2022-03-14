@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.storage.outputs.GetBucketObjectContentCustomerEncryption;
 import java.lang.Boolean;
 import java.lang.String;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetBucketObjectContentResult {
     private final String bucket;
     private final String cacheControl;
@@ -46,30 +46,30 @@ public final class GetBucketObjectContentResult {
     private final String storageClass;
     private final Boolean temporaryHold;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBucketObjectContentResult(
-        @OutputCustomType.Parameter("bucket") String bucket,
-        @OutputCustomType.Parameter("cacheControl") String cacheControl,
-        @OutputCustomType.Parameter("content") @Nullable String content,
-        @OutputCustomType.Parameter("contentDisposition") String contentDisposition,
-        @OutputCustomType.Parameter("contentEncoding") String contentEncoding,
-        @OutputCustomType.Parameter("contentLanguage") String contentLanguage,
-        @OutputCustomType.Parameter("contentType") String contentType,
-        @OutputCustomType.Parameter("crc32c") String crc32c,
-        @OutputCustomType.Parameter("customerEncryptions") List<GetBucketObjectContentCustomerEncryption> customerEncryptions,
-        @OutputCustomType.Parameter("detectMd5hash") String detectMd5hash,
-        @OutputCustomType.Parameter("eventBasedHold") Boolean eventBasedHold,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("kmsKeyName") String kmsKeyName,
-        @OutputCustomType.Parameter("md5hash") String md5hash,
-        @OutputCustomType.Parameter("mediaLink") String mediaLink,
-        @OutputCustomType.Parameter("metadata") Map<String,String> metadata,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("outputName") String outputName,
-        @OutputCustomType.Parameter("selfLink") String selfLink,
-        @OutputCustomType.Parameter("source") String source,
-        @OutputCustomType.Parameter("storageClass") String storageClass,
-        @OutputCustomType.Parameter("temporaryHold") Boolean temporaryHold) {
+        @CustomType.Parameter("bucket") String bucket,
+        @CustomType.Parameter("cacheControl") String cacheControl,
+        @CustomType.Parameter("content") @Nullable String content,
+        @CustomType.Parameter("contentDisposition") String contentDisposition,
+        @CustomType.Parameter("contentEncoding") String contentEncoding,
+        @CustomType.Parameter("contentLanguage") String contentLanguage,
+        @CustomType.Parameter("contentType") String contentType,
+        @CustomType.Parameter("crc32c") String crc32c,
+        @CustomType.Parameter("customerEncryptions") List<GetBucketObjectContentCustomerEncryption> customerEncryptions,
+        @CustomType.Parameter("detectMd5hash") String detectMd5hash,
+        @CustomType.Parameter("eventBasedHold") Boolean eventBasedHold,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("kmsKeyName") String kmsKeyName,
+        @CustomType.Parameter("md5hash") String md5hash,
+        @CustomType.Parameter("mediaLink") String mediaLink,
+        @CustomType.Parameter("metadata") Map<String,String> metadata,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("outputName") String outputName,
+        @CustomType.Parameter("selfLink") String selfLink,
+        @CustomType.Parameter("source") String source,
+        @CustomType.Parameter("storageClass") String storageClass,
+        @CustomType.Parameter("temporaryHold") Boolean temporaryHold) {
         this.bucket = bucket;
         this.cacheControl = cacheControl;
         this.content = content;

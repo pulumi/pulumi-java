@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.monitoring.SloArgs;
@@ -56,7 +56,7 @@ public class Slo extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="basicSli", type=SloBasicSli.class, parameters={})
+    @Export(name="basicSli", type=SloBasicSli.class, parameters={})
     private Output</* @Nullable */ SloBasicSli> basicSli;
 
     /**
@@ -78,7 +78,7 @@ public class Slo extends io.pulumi.resources.CustomResource {
      * Possible values are `DAY`, `WEEK`, `FORTNIGHT`, and `MONTH`.
      * 
      */
-    @OutputExport(name="calendarPeriod", type=String.class, parameters={})
+    @Export(name="calendarPeriod", type=String.class, parameters={})
     private Output</* @Nullable */ String> calendarPeriod;
 
     /**
@@ -94,7 +94,7 @@ public class Slo extends io.pulumi.resources.CustomResource {
      * Name used for UI elements listing this SLO.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -109,7 +109,7 @@ public class Slo extends io.pulumi.resources.CustomResource {
      * to be met. 0 < goal <= 0.999
      * 
      */
-    @OutputExport(name="goal", type=Double.class, parameters={})
+    @Export(name="goal", type=Double.class, parameters={})
     private Output<Double> goal;
 
     /**
@@ -125,7 +125,7 @@ public class Slo extends io.pulumi.resources.CustomResource {
      * projects/[PROJECT_ID_OR_NUMBER]/services/[SERVICE_ID]/serviceLevelObjectives/[SLO_NAME]
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -141,7 +141,7 @@ public class Slo extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -163,7 +163,7 @@ public class Slo extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="requestBasedSli", type=SloRequestBasedSli.class, parameters={})
+    @Export(name="requestBasedSli", type=SloRequestBasedSli.class, parameters={})
     private Output</* @Nullable */ SloRequestBasedSli> requestBasedSli;
 
     /**
@@ -185,7 +185,7 @@ public class Slo extends io.pulumi.resources.CustomResource {
      * Must be between 1 to 30 days, inclusive.
      * 
      */
-    @OutputExport(name="rollingPeriodDays", type=Integer.class, parameters={})
+    @Export(name="rollingPeriodDays", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> rollingPeriodDays;
 
     /**
@@ -200,7 +200,7 @@ public class Slo extends io.pulumi.resources.CustomResource {
      * ID of the service to which this SLO belongs.
      * 
      */
-    @OutputExport(name="service", type=String.class, parameters={})
+    @Export(name="service", type=String.class, parameters={})
     private Output<String> service;
 
     /**
@@ -214,7 +214,7 @@ public class Slo extends io.pulumi.resources.CustomResource {
      * The id to use for this ServiceLevelObjective. If omitted, an id will be generated instead.
      * 
      */
-    @OutputExport(name="sloId", type=String.class, parameters={})
+    @Export(name="sloId", type=String.class, parameters={})
     private Output<String> sloId;
 
     /**
@@ -236,7 +236,7 @@ public class Slo extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="windowsBasedSli", type=SloWindowsBasedSli.class, parameters={})
+    @Export(name="windowsBasedSli", type=SloWindowsBasedSli.class, parameters={})
     private Output</* @Nullable */ SloWindowsBasedSli> windowsBasedSli;
 
     /**

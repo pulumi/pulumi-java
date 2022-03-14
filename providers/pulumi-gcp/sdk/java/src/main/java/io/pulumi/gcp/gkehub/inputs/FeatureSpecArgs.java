@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.gkehub.inputs.FeatureSpecMulticlusteringressArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FeatureSpecArgs extends io.pulumi.resources.ResourceArgs {
      * The `multiclusteringress` block supports:
      * 
      */
-    @InputImport(name="multiclusteringress")
+    @Import(name="multiclusteringress")
       private final @Nullable Output<FeatureSpecMulticlusteringressArgs> multiclusteringress;
 
     public Output<FeatureSpecMulticlusteringressArgs> getMulticlusteringress() {

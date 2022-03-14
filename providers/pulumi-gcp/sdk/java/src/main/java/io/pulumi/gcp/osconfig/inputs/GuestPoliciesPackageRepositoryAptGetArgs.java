@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GuestPoliciesPackageRepositoryAptGetArgs extends io.pulumi.re
      * Possible values are `DEB` and `DEB_SRC`.
      * 
      */
-    @InputImport(name="archiveType")
+    @Import(name="archiveType")
       private final @Nullable Output<String> archiveType;
 
     public Output<String> getArchiveType() {
@@ -32,7 +32,7 @@ public final class GuestPoliciesPackageRepositoryAptGetArgs extends io.pulumi.re
      * List of components for this repository. Must contain at least one item.
      * 
      */
-    @InputImport(name="components", required=true)
+    @Import(name="components", required=true)
       private final Output<List<String>> components;
 
     public Output<List<String>> getComponents() {
@@ -43,7 +43,7 @@ public final class GuestPoliciesPackageRepositoryAptGetArgs extends io.pulumi.re
      * Distribution of this repository.
      * 
      */
-    @InputImport(name="distribution", required=true)
+    @Import(name="distribution", required=true)
       private final Output<String> distribution;
 
     public Output<String> getDistribution() {
@@ -55,7 +55,7 @@ public final class GuestPoliciesPackageRepositoryAptGetArgs extends io.pulumi.re
      * /etc/apt/trusted.gpg.d/osconfig_agent_managed.gpg containing all the keys in any applied guest policy.
      * 
      */
-    @InputImport(name="gpgKey")
+    @Import(name="gpgKey")
       private final @Nullable Output<String> gpgKey;
 
     public Output<String> getGpgKey() {
@@ -66,7 +66,7 @@ public final class GuestPoliciesPackageRepositoryAptGetArgs extends io.pulumi.re
      * URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
      * 
      */
-    @InputImport(name="uri", required=true)
+    @Import(name="uri", required=true)
       private final Output<String> uri;
 
     public Output<String> getUri() {

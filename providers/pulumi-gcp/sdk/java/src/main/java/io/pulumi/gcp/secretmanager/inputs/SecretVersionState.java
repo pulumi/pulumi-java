@@ -4,7 +4,7 @@
 package io.pulumi.gcp.secretmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * The time at which the Secret was created.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -30,7 +30,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * The time at which the Secret was destroyed. Only present if state is DESTROYED.
      * 
      */
-    @InputImport(name="destroyTime")
+    @Import(name="destroyTime")
       private final @Nullable Output<String> destroyTime;
 
     public Output<String> getDestroyTime() {
@@ -41,7 +41,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * The current state of the SecretVersion.
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -52,7 +52,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * The resource name of the SecretVersion. Format: 'projects/{{project}}/secrets/{{secret_id}}/versions/{{version}}'
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -63,7 +63,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * Secret Manager secret resource
      * 
      */
-    @InputImport(name="secret")
+    @Import(name="secret")
       private final @Nullable Output<String> secret;
 
     public Output<String> getSecret() {
@@ -75,7 +75,7 @@ public final class SecretVersionState extends io.pulumi.resources.ResourceArgs {
      * **Note**: This property is sensitive and will not be displayed in the plan.
      * 
      */
-    @InputImport(name="secretData")
+    @Import(name="secretData")
       private final @Nullable Output<String> secretData;
 
     public Output<String> getSecretData() {

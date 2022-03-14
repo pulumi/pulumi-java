@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.DatasetAccessArgs;
@@ -27,7 +27,7 @@ public class DatasetAccess extends io.pulumi.resources.CustomResource {
      * stored in state as a different member type
      * 
      */
-    @OutputExport(name="apiUpdatedMember", type=Boolean.class, parameters={})
+    @Export(name="apiUpdatedMember", type=Boolean.class, parameters={})
     private Output<Boolean> apiUpdatedMember;
 
     /**
@@ -42,7 +42,7 @@ public class DatasetAccess extends io.pulumi.resources.CustomResource {
      * The ID of the dataset containing this table.
      * 
      */
-    @OutputExport(name="datasetId", type=String.class, parameters={})
+    @Export(name="datasetId", type=String.class, parameters={})
     private Output<String> datasetId;
 
     /**
@@ -57,7 +57,7 @@ public class DatasetAccess extends io.pulumi.resources.CustomResource {
      * domain specified will be granted the specified access
      * 
      */
-    @OutputExport(name="domain", type=String.class, parameters={})
+    @Export(name="domain", type=String.class, parameters={})
     private Output</* @Nullable */ String> domain;
 
     /**
@@ -72,7 +72,7 @@ public class DatasetAccess extends io.pulumi.resources.CustomResource {
      * An email address of a Google Group to grant access to.
      * 
      */
-    @OutputExport(name="groupByEmail", type=String.class, parameters={})
+    @Export(name="groupByEmail", type=String.class, parameters={})
     private Output</* @Nullable */ String> groupByEmail;
 
     /**
@@ -87,7 +87,7 @@ public class DatasetAccess extends io.pulumi.resources.CustomResource {
      * group, domain, or special group. For example: `allUsers`
      * 
      */
-    @OutputExport(name="iamMember", type=String.class, parameters={})
+    @Export(name="iamMember", type=String.class, parameters={})
     private Output</* @Nullable */ String> iamMember;
 
     /**
@@ -103,7 +103,7 @@ public class DatasetAccess extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -123,7 +123,7 @@ public class DatasetAccess extends io.pulumi.resources.CustomResource {
      * [official docs](https://cloud.google.com/bigquery/docs/access-control).
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output</* @Nullable */ String> role;
 
     /**
@@ -142,7 +142,7 @@ public class DatasetAccess extends io.pulumi.resources.CustomResource {
      * A special group to grant access to. Possible values include:
      * 
      */
-    @OutputExport(name="specialGroup", type=String.class, parameters={})
+    @Export(name="specialGroup", type=String.class, parameters={})
     private Output</* @Nullable */ String> specialGroup;
 
     /**
@@ -157,7 +157,7 @@ public class DatasetAccess extends io.pulumi.resources.CustomResource {
      * fred@example.com
      * 
      */
-    @OutputExport(name="userByEmail", type=String.class, parameters={})
+    @Export(name="userByEmail", type=String.class, parameters={})
     private Output</* @Nullable */ String> userByEmail;
 
     /**
@@ -177,7 +177,7 @@ public class DatasetAccess extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="view", type=DatasetAccessView.class, parameters={})
+    @Export(name="view", type=DatasetAccessView.class, parameters={})
     private Output</* @Nullable */ DatasetAccessView> view;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.InstanceSchedulingNodeAffinityGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class InstanceSchedulingGetArgs extends io.pulumi.resources.Resourc
      * Defaults to true.
      * 
      */
-    @InputImport(name="automaticRestart")
+    @Import(name="automaticRestart")
       private final @Nullable Output<Boolean> automaticRestart;
 
     public Output<Boolean> getAutomaticRestart() {
@@ -35,7 +35,7 @@ public final class InstanceSchedulingGetArgs extends io.pulumi.resources.Resourc
      * The minimum number of virtual CPUs this instance will consume when running on a sole-tenant node.
      * 
      */
-    @InputImport(name="minNodeCpus")
+    @Import(name="minNodeCpus")
       private final @Nullable Output<Integer> minNodeCpus;
 
     public Output<Integer> getMinNodeCpus() {
@@ -50,7 +50,7 @@ public final class InstanceSchedulingGetArgs extends io.pulumi.resources.Resourc
      * Structure documented below.
      * 
      */
-    @InputImport(name="nodeAffinities")
+    @Import(name="nodeAffinities")
       private final @Nullable Output<List<InstanceSchedulingNodeAffinityGetArgs>> nodeAffinities;
 
     public Output<List<InstanceSchedulingNodeAffinityGetArgs>> getNodeAffinities() {
@@ -63,7 +63,7 @@ public final class InstanceSchedulingGetArgs extends io.pulumi.resources.Resourc
      * [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options).
      * 
      */
-    @InputImport(name="onHostMaintenance")
+    @Import(name="onHostMaintenance")
       private final @Nullable Output<String> onHostMaintenance;
 
     public Output<String> getOnHostMaintenance() {
@@ -76,7 +76,7 @@ public final class InstanceSchedulingGetArgs extends io.pulumi.resources.Resourc
      * set to false.  Defaults to false.
      * 
      */
-    @InputImport(name="preemptible")
+    @Import(name="preemptible")
       private final @Nullable Output<Boolean> preemptible;
 
     public Output<Boolean> getPreemptible() {

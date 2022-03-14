@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.logging.inputs.MetricBucketOptionsArgs;
 import io.pulumi.gcp.logging.inputs.MetricMetricDescriptorArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class MetricArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="bucketOptions")
+    @Import(name="bucketOptions")
       private final @Nullable Output<MetricBucketOptionsArgs> bucketOptions;
 
     public Output<MetricBucketOptionsArgs> getBucketOptions() {
@@ -35,7 +35,7 @@ public final class MetricArgs extends io.pulumi.resources.ResourceArgs {
      * description is 8000 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -47,7 +47,7 @@ public final class MetricArgs extends io.pulumi.resources.ResourceArgs {
      * is used to match log entries.
      * 
      */
-    @InputImport(name="filter", required=true)
+    @Import(name="filter", required=true)
       private final Output<String> filter;
 
     public Output<String> getFilter() {
@@ -61,7 +61,7 @@ public final class MetricArgs extends io.pulumi.resources.ResourceArgs {
      * the same as for the valueExtractor field.
      * 
      */
-    @InputImport(name="labelExtractors")
+    @Import(name="labelExtractors")
       private final @Nullable Output<Map<String,String>> labelExtractors;
 
     public Output<Map<String,String>> getLabelExtractors() {
@@ -73,7 +73,7 @@ public final class MetricArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="metricDescriptor", required=true)
+    @Import(name="metricDescriptor", required=true)
       private final Output<MetricMetricDescriptorArgs> metricDescriptor;
 
     public Output<MetricMetricDescriptorArgs> getMetricDescriptor() {
@@ -88,7 +88,7 @@ public final class MetricArgs extends io.pulumi.resources.ResourceArgs {
      * of the name.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -100,7 +100,7 @@ public final class MetricArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -117,7 +117,7 @@ public final class MetricArgs extends io.pulumi.resources.ResourceArgs {
      * error to specify a regex that does not include exactly one capture group.
      * 
      */
-    @InputImport(name="valueExtractor")
+    @Import(name="valueExtractor")
       private final @Nullable Output<String> valueExtractor;
 
     public Output<String> getValueExtractor() {

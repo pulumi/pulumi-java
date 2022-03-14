@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.notebooks.RuntimeArgs;
@@ -56,7 +56,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="accessConfig", type=RuntimeAccessConfig.class, parameters={})
+    @Export(name="accessConfig", type=RuntimeAccessConfig.class, parameters={})
     private Output</* @Nullable */ RuntimeAccessConfig> accessConfig;
 
     /**
@@ -72,7 +72,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * 'https://cloud.google.com/vertex-ai/docs/workbench/ reference/rest/v1/projects.locations.runtimes#healthstate'.
      * 
      */
-    @OutputExport(name="healthState", type=String.class, parameters={})
+    @Export(name="healthState", type=String.class, parameters={})
     private Output<String> healthState;
 
     /**
@@ -87,7 +87,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * A reference to the zone where the machine resides.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -101,7 +101,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * Contains Runtime daemon metrics such as Service status and JupyterLab status
      * 
      */
-    @OutputExport(name="metrics", type=List.class, parameters={RuntimeMetric.class})
+    @Export(name="metrics", type=List.class, parameters={RuntimeMetric.class})
     private Output<List<RuntimeMetric>> metrics;
 
     /**
@@ -115,7 +115,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * The name specified for the Notebook instance.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -130,7 +130,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -146,7 +146,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="softwareConfig", type=RuntimeSoftwareConfig.class, parameters={})
+    @Export(name="softwareConfig", type=RuntimeSoftwareConfig.class, parameters={})
     private Output<RuntimeSoftwareConfig> softwareConfig;
 
     /**
@@ -161,7 +161,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * The state of this runtime.
      * 
      */
-    @OutputExport(name="state", type=String.class, parameters={})
+    @Export(name="state", type=String.class, parameters={})
     private Output<String> state;
 
     /**
@@ -176,7 +176,7 @@ public class Runtime extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="virtualMachine", type=RuntimeVirtualMachine.class, parameters={})
+    @Export(name="virtualMachine", type=RuntimeVirtualMachine.class, parameters={})
     private Output</* @Nullable */ RuntimeVirtualMachine> virtualMachine;
 
     /**

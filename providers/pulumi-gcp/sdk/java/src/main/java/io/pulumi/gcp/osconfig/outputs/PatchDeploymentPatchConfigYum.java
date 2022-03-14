@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PatchDeploymentPatchConfigYum {
     /**
      * List of KBs to exclude from update.
@@ -36,12 +36,12 @@ public final class PatchDeploymentPatchConfigYum {
      */
     private final @Nullable Boolean security;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PatchDeploymentPatchConfigYum(
-        @OutputCustomType.Parameter("excludes") @Nullable List<String> excludes,
-        @OutputCustomType.Parameter("exclusivePackages") @Nullable List<String> exclusivePackages,
-        @OutputCustomType.Parameter("minimal") @Nullable Boolean minimal,
-        @OutputCustomType.Parameter("security") @Nullable Boolean security) {
+        @CustomType.Parameter("excludes") @Nullable List<String> excludes,
+        @CustomType.Parameter("exclusivePackages") @Nullable List<String> exclusivePackages,
+        @CustomType.Parameter("minimal") @Nullable Boolean minimal,
+        @CustomType.Parameter("security") @Nullable Boolean security) {
         this.excludes = excludes;
         this.exclusivePackages = exclusivePackages;
         this.minimal = minimal;

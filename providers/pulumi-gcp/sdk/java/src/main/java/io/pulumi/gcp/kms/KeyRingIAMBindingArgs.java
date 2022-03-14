@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.kms.inputs.KeyRingIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class KeyRingIAMBindingArgs extends io.pulumi.resources.ResourceArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<KeyRingIAMBindingConditionArgs> condition;
 
     public Output<KeyRingIAMBindingConditionArgs> getCondition() {
@@ -35,14 +35,14 @@ public final class KeyRingIAMBindingArgs extends io.pulumi.resources.ResourceArg
      * project setting will be used as a fallback.
      * 
      */
-    @InputImport(name="keyRingId", required=true)
+    @Import(name="keyRingId", required=true)
       private final Output<String> keyRingId;
 
     public Output<String> getKeyRingId() {
         return this.keyRingId;
     }
 
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -55,7 +55,7 @@ public final class KeyRingIAMBindingArgs extends io.pulumi.resources.ResourceArg
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

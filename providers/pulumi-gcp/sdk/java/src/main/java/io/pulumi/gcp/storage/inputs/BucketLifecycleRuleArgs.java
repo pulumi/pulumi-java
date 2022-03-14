@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.storage.inputs.BucketLifecycleRuleActionArgs;
 import io.pulumi.gcp.storage.inputs.BucketLifecycleRuleConditionArgs;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class BucketLifecycleRuleArgs extends io.pulumi.resources.ResourceA
      * The Lifecycle Rule's action configuration. A single block of this type is supported. Structure is documented below.
      * 
      */
-    @InputImport(name="action", required=true)
+    @Import(name="action", required=true)
       private final Output<BucketLifecycleRuleActionArgs> action;
 
     public Output<BucketLifecycleRuleActionArgs> getAction() {
@@ -29,7 +29,7 @@ public final class BucketLifecycleRuleArgs extends io.pulumi.resources.ResourceA
      * The Lifecycle Rule's condition configuration. A single block of this type is supported. Structure is documented below.
      * 
      */
-    @InputImport(name="condition", required=true)
+    @Import(name="condition", required=true)
       private final Output<BucketLifecycleRuleConditionArgs> condition;
 
     public Output<BucketLifecycleRuleConditionArgs> getCondition() {

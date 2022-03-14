@@ -4,7 +4,7 @@
 package io.pulumi.gcp.servicenetworking.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
      * The DNS domain suffix of the peered DNS domain. Make sure to suffix with a `.` (dot).
      * 
      */
-    @InputImport(name="dnsSuffix")
+    @Import(name="dnsSuffix")
       private final @Nullable Output<String> dnsSuffix;
 
     public Output<String> getDnsSuffix() {
@@ -29,7 +29,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
      * Internal name used for the peered DNS domain.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -40,7 +40,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
      * The network in the consumer project.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -51,7 +51,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
      * an identifier for the resource with format `services/{{service}}/projects/{{project}}/global/networks/{{network}}`
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -62,7 +62,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
      * The producer project number. If not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -73,7 +73,7 @@ public final class PeeredDnsDomainState extends io.pulumi.resources.ResourceArgs
      * Private service connection between service and consumer network, defaults to `servicenetworking.googleapis.com`
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {

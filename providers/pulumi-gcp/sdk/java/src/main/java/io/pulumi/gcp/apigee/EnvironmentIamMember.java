@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigee.EnvironmentIamMemberArgs;
@@ -57,7 +57,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:apigee/environmentIamMember:EnvironmentIamMember")
 public class EnvironmentIamMember extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=EnvironmentIamMemberCondition.class, parameters={})
+    @Export(name="condition", type=EnvironmentIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ EnvironmentIamMemberCondition> condition;
 
     public Output</* @Nullable */ EnvironmentIamMemberCondition> getCondition() {
@@ -67,7 +67,7 @@ public class EnvironmentIamMember extends io.pulumi.resources.CustomResource {
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @OutputExport(name="envId", type=String.class, parameters={})
+    @Export(name="envId", type=String.class, parameters={})
     private Output<String> envId;
 
     /**
@@ -81,7 +81,7 @@ public class EnvironmentIamMember extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -91,13 +91,13 @@ public class EnvironmentIamMember extends io.pulumi.resources.CustomResource {
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="member", type=String.class, parameters={})
+    @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
     public Output<String> getMember() {
         return this.member;
     }
-    @OutputExport(name="orgId", type=String.class, parameters={})
+    @Export(name="orgId", type=String.class, parameters={})
     private Output<String> orgId;
 
     public Output<String> getOrgId() {
@@ -109,7 +109,7 @@ public class EnvironmentIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**

@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class CertificateRevocationDetail {
     private final @Nullable String revocationState;
     private final @Nullable String revocationTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private CertificateRevocationDetail(
-        @OutputCustomType.Parameter("revocationState") @Nullable String revocationState,
-        @OutputCustomType.Parameter("revocationTime") @Nullable String revocationTime) {
+        @CustomType.Parameter("revocationState") @Nullable String revocationState,
+        @CustomType.Parameter("revocationTime") @Nullable String revocationTime) {
         this.revocationState = revocationState;
         this.revocationTime = revocationTime;
     }

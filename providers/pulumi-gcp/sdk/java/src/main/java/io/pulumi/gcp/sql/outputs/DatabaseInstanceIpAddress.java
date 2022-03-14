@@ -3,23 +3,23 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseInstanceIpAddress {
     private final @Nullable String ipAddress;
     private final @Nullable String timeToRetire;
     private final @Nullable String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabaseInstanceIpAddress(
-        @OutputCustomType.Parameter("ipAddress") @Nullable String ipAddress,
-        @OutputCustomType.Parameter("timeToRetire") @Nullable String timeToRetire,
-        @OutputCustomType.Parameter("type") @Nullable String type) {
+        @CustomType.Parameter("ipAddress") @Nullable String ipAddress,
+        @CustomType.Parameter("timeToRetire") @Nullable String timeToRetire,
+        @CustomType.Parameter("type") @Nullable String type) {
         this.ipAddress = ipAddress;
         this.timeToRetire = timeToRetire;
         this.type = type;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionResourcesVolumeArgs;
 import java.lang.Double;
 import java.lang.Integer;
@@ -21,7 +21,7 @@ public final class FlexibleAppVersionResourcesArgs extends io.pulumi.resources.R
      * Number of CPU cores needed.
      * 
      */
-    @InputImport(name="cpu")
+    @Import(name="cpu")
       private final @Nullable Output<Integer> cpu;
 
     public Output<Integer> getCpu() {
@@ -32,7 +32,7 @@ public final class FlexibleAppVersionResourcesArgs extends io.pulumi.resources.R
      * Disk size (GB) needed.
      * 
      */
-    @InputImport(name="diskGb")
+    @Import(name="diskGb")
       private final @Nullable Output<Integer> diskGb;
 
     public Output<Integer> getDiskGb() {
@@ -43,7 +43,7 @@ public final class FlexibleAppVersionResourcesArgs extends io.pulumi.resources.R
      * Memory (GB) needed.
      * 
      */
-    @InputImport(name="memoryGb")
+    @Import(name="memoryGb")
       private final @Nullable Output<Double> memoryGb;
 
     public Output<Double> getMemoryGb() {
@@ -55,7 +55,7 @@ public final class FlexibleAppVersionResourcesArgs extends io.pulumi.resources.R
      * Structure is documented below.
      * 
      */
-    @InputImport(name="volumes")
+    @Import(name="volumes")
       private final @Nullable Output<List<FlexibleAppVersionResourcesVolumeArgs>> volumes;
 
     public Output<List<FlexibleAppVersionResourcesVolumeArgs>> getVolumes() {

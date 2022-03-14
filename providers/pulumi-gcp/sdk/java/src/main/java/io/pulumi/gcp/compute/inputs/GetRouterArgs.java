@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class GetRouterArgs extends io.pulumi.resources.InvokeArgs {
      * The name of the router.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -29,7 +29,7 @@ public final class GetRouterArgs extends io.pulumi.resources.InvokeArgs {
      * The VPC network on which this router lives.
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final String network;
 
     public String getNetwork() {
@@ -41,7 +41,7 @@ public final class GetRouterArgs extends io.pulumi.resources.InvokeArgs {
      * belongs. If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
@@ -53,7 +53,7 @@ public final class GetRouterArgs extends io.pulumi.resources.InvokeArgs {
      * unspecified, this defaults to the region configured in the provider.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable String region;
 
     public Optional<String> getRegion() {

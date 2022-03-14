@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType {
     /**
      * Resource name of the requested StoredInfoType, for example `organizations/433245324/storedInfoTypes/432452342`
@@ -16,8 +16,8 @@ public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInf
      */
     private final String name;
 
-    @OutputCustomType.Constructor
-    private PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType(@OutputCustomType.Parameter("name") String name) {
+    @CustomType.Constructor
+    private PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoType(@CustomType.Parameter("name") String name) {
         this.name = name;
     }
 

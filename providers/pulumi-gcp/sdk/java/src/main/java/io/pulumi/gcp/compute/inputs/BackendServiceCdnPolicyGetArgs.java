@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.BackendServiceCdnPolicyCacheKeyPolicyGetArgs;
 import io.pulumi.gcp.compute.inputs.BackendServiceCdnPolicyNegativeCachingPolicyGetArgs;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class BackendServiceCdnPolicyGetArgs extends io.pulumi.resources.Re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="cacheKeyPolicy")
+    @Import(name="cacheKeyPolicy")
       private final @Nullable Output<BackendServiceCdnPolicyCacheKeyPolicyGetArgs> cacheKeyPolicy;
 
     public Output<BackendServiceCdnPolicyCacheKeyPolicyGetArgs> getCacheKeyPolicy() {
@@ -37,7 +37,7 @@ public final class BackendServiceCdnPolicyGetArgs extends io.pulumi.resources.Re
      * Possible values are `USE_ORIGIN_HEADERS`, `FORCE_CACHE_ALL`, and `CACHE_ALL_STATIC`.
      * 
      */
-    @InputImport(name="cacheMode")
+    @Import(name="cacheMode")
       private final @Nullable Output<String> cacheMode;
 
     public Output<String> getCacheMode() {
@@ -48,7 +48,7 @@ public final class BackendServiceCdnPolicyGetArgs extends io.pulumi.resources.Re
      * Specifies the maximum allowed TTL for cached content served by this origin.
      * 
      */
-    @InputImport(name="clientTtl")
+    @Import(name="clientTtl")
       private final @Nullable Output<Integer> clientTtl;
 
     public Output<Integer> getClientTtl() {
@@ -60,7 +60,7 @@ public final class BackendServiceCdnPolicyGetArgs extends io.pulumi.resources.Re
      * that do not have an existing valid TTL (max-age or s-max-age).
      * 
      */
-    @InputImport(name="defaultTtl")
+    @Import(name="defaultTtl")
       private final @Nullable Output<Integer> defaultTtl;
 
     public Output<Integer> getDefaultTtl() {
@@ -71,7 +71,7 @@ public final class BackendServiceCdnPolicyGetArgs extends io.pulumi.resources.Re
      * Specifies the maximum allowed TTL for cached content served by this origin.
      * 
      */
-    @InputImport(name="maxTtl")
+    @Import(name="maxTtl")
       private final @Nullable Output<Integer> maxTtl;
 
     public Output<Integer> getMaxTtl() {
@@ -82,7 +82,7 @@ public final class BackendServiceCdnPolicyGetArgs extends io.pulumi.resources.Re
      * Negative caching allows per-status code TTLs to be set, in order to apply fine-grained caching for common errors or redirects.
      * 
      */
-    @InputImport(name="negativeCaching")
+    @Import(name="negativeCaching")
       private final @Nullable Output<Boolean> negativeCaching;
 
     public Output<Boolean> getNegativeCaching() {
@@ -95,7 +95,7 @@ public final class BackendServiceCdnPolicyGetArgs extends io.pulumi.resources.Re
      * Structure is documented below.
      * 
      */
-    @InputImport(name="negativeCachingPolicies")
+    @Import(name="negativeCachingPolicies")
       private final @Nullable Output<List<BackendServiceCdnPolicyNegativeCachingPolicyGetArgs>> negativeCachingPolicies;
 
     public Output<List<BackendServiceCdnPolicyNegativeCachingPolicyGetArgs>> getNegativeCachingPolicies() {
@@ -106,7 +106,7 @@ public final class BackendServiceCdnPolicyGetArgs extends io.pulumi.resources.Re
      * Serve existing content from the cache (if available) when revalidating content with the origin, or when an error is encountered when refreshing the cache.
      * 
      */
-    @InputImport(name="serveWhileStale")
+    @Import(name="serveWhileStale")
       private final @Nullable Output<Integer> serveWhileStale;
 
     public Output<Integer> getServeWhileStale() {
@@ -125,7 +125,7 @@ public final class BackendServiceCdnPolicyGetArgs extends io.pulumi.resources.Re
      * responses will not be altered.
      * 
      */
-    @InputImport(name="signedUrlCacheMaxAgeSec")
+    @Import(name="signedUrlCacheMaxAgeSec")
       private final @Nullable Output<Integer> signedUrlCacheMaxAgeSec;
 
     public Output<Integer> getSignedUrlCacheMaxAgeSec() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.apigateway.inputs.GatewayIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,21 +15,21 @@ public final class GatewayIamMemberArgs extends io.pulumi.resources.ResourceArgs
 
     public static final GatewayIamMemberArgs Empty = new GatewayIamMemberArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<GatewayIamMemberConditionArgs> condition;
 
     public Output<GatewayIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Output.empty() : this.condition;
     }
 
-    @InputImport(name="gateway", required=true)
+    @Import(name="gateway", required=true)
       private final Output<String> gateway;
 
     public Output<String> getGateway() {
         return this.gateway;
     }
 
-    @InputImport(name="member", required=true)
+    @Import(name="member", required=true)
       private final Output<String> member;
 
     public Output<String> getMember() {
@@ -41,7 +41,7 @@ public final class GatewayIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -55,7 +55,7 @@ public final class GatewayIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * region is specified, it is taken from the provider configuration.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -68,7 +68,7 @@ public final class GatewayIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

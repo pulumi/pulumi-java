@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudrun.inputs.GetServiceTemplateMetadata;
 import io.pulumi.gcp.cloudrun.inputs.GetServiceTemplateSpec;
 import java.util.List;
@@ -14,14 +14,14 @@ public final class GetServiceTemplate extends io.pulumi.resources.InvokeArgs {
 
     public static final GetServiceTemplate Empty = new GetServiceTemplate();
 
-    @InputImport(name="metadatas", required=true)
+    @Import(name="metadatas", required=true)
       private final List<GetServiceTemplateMetadata> metadatas;
 
     public List<GetServiceTemplateMetadata> getMetadatas() {
         return this.metadatas;
     }
 
-    @InputImport(name="specs", required=true)
+    @Import(name="specs", required=true)
       private final List<GetServiceTemplateSpec> specs;
 
     public List<GetServiceTemplateSpec> getSpecs() {

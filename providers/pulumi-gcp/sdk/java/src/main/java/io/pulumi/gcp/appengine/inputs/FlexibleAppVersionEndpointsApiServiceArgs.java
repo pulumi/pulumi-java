@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FlexibleAppVersionEndpointsApiServiceArgs extends io.pulumi.r
      * the configuration ID. In this case, configId must be omitted.
      * 
      */
-    @InputImport(name="configId")
+    @Import(name="configId")
       private final @Nullable Output<String> configId;
 
     public Output<String> getConfigId() {
@@ -35,7 +35,7 @@ public final class FlexibleAppVersionEndpointsApiServiceArgs extends io.pulumi.r
      * Enable or disable trace sampling. By default, this is set to false for enabled.
      * 
      */
-    @InputImport(name="disableTraceSampling")
+    @Import(name="disableTraceSampling")
       private final @Nullable Output<Boolean> disableTraceSampling;
 
     public Output<Boolean> getDisableTraceSampling() {
@@ -46,7 +46,7 @@ public final class FlexibleAppVersionEndpointsApiServiceArgs extends io.pulumi.r
      * Full Serverless VPC Access Connector name e.g. /projects/my-project/locations/us-central1/connectors/c1.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -59,7 +59,7 @@ public final class FlexibleAppVersionEndpointsApiServiceArgs extends io.pulumi.r
      * Possible values are `FIXED` and `MANAGED`.
      * 
      */
-    @InputImport(name="rolloutStrategy")
+    @Import(name="rolloutStrategy")
       private final @Nullable Output<String> rolloutStrategy;
 
     public Output<String> getRolloutStrategy() {

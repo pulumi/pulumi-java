@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataloss.PreventionStoredInfoTypeArgs;
@@ -45,7 +45,7 @@ public class PreventionStoredInfoType extends io.pulumi.resources.CustomResource
      * A description of the info type.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -60,7 +60,7 @@ public class PreventionStoredInfoType extends io.pulumi.resources.CustomResource
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="dictionary", type=PreventionStoredInfoTypeDictionary.class, parameters={})
+    @Export(name="dictionary", type=PreventionStoredInfoTypeDictionary.class, parameters={})
     private Output</* @Nullable */ PreventionStoredInfoTypeDictionary> dictionary;
 
     /**
@@ -75,7 +75,7 @@ public class PreventionStoredInfoType extends io.pulumi.resources.CustomResource
      * User set display name of the info type.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -90,7 +90,7 @@ public class PreventionStoredInfoType extends io.pulumi.resources.CustomResource
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="largeCustomDictionary", type=PreventionStoredInfoTypeLargeCustomDictionary.class, parameters={})
+    @Export(name="largeCustomDictionary", type=PreventionStoredInfoTypeLargeCustomDictionary.class, parameters={})
     private Output</* @Nullable */ PreventionStoredInfoTypeLargeCustomDictionary> largeCustomDictionary;
 
     /**
@@ -105,7 +105,7 @@ public class PreventionStoredInfoType extends io.pulumi.resources.CustomResource
      * Name describing the field.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -123,7 +123,7 @@ public class PreventionStoredInfoType extends io.pulumi.resources.CustomResource
      * * `organizations/{{organization_id}}/locations/{{location}}`
      * 
      */
-    @OutputExport(name="parent", type=String.class, parameters={})
+    @Export(name="parent", type=String.class, parameters={})
     private Output<String> parent;
 
     /**
@@ -142,7 +142,7 @@ public class PreventionStoredInfoType extends io.pulumi.resources.CustomResource
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="regex", type=PreventionStoredInfoTypeRegex.class, parameters={})
+    @Export(name="regex", type=PreventionStoredInfoTypeRegex.class, parameters={})
     private Output</* @Nullable */ PreventionStoredInfoTypeRegex> regex;
 
     /**

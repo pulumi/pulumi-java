@@ -3,19 +3,19 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBucketWebsite {
     private final String mainPageSuffix;
     private final String notFoundPage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBucketWebsite(
-        @OutputCustomType.Parameter("mainPageSuffix") String mainPageSuffix,
-        @OutputCustomType.Parameter("notFoundPage") String notFoundPage) {
+        @CustomType.Parameter("mainPageSuffix") String mainPageSuffix,
+        @CustomType.Parameter("notFoundPage") String notFoundPage) {
         this.mainPageSuffix = mainPageSuffix;
         this.notFoundPage = notFoundPage;
     }

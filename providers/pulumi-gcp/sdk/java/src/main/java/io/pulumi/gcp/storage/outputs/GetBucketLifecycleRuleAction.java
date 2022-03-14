@@ -3,19 +3,19 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetBucketLifecycleRuleAction {
     private final String storageClass;
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetBucketLifecycleRuleAction(
-        @OutputCustomType.Parameter("storageClass") String storageClass,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("storageClass") String storageClass,
+        @CustomType.Parameter("type") String type) {
         this.storageClass = storageClass;
         this.type = type;
     }

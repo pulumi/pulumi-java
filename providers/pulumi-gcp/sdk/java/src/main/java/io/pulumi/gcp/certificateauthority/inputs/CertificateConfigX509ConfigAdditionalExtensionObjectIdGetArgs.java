@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class CertificateConfigX509ConfigAdditionalExtensionObjectIdGetArgs
      * An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
      * 
      */
-    @InputImport(name="objectIdPaths", required=true)
+    @Import(name="objectIdPaths", required=true)
       private final Output<List<Integer>> objectIdPaths;
 
     public Output<List<Integer>> getObjectIdPaths() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArg
      * Count of cores of this accelerator.
      * 
      */
-    @InputImport(name="coreCount")
+    @Import(name="coreCount")
       private final @Nullable Output<Integer> coreCount;
 
     public Output<Integer> getCoreCount() {
@@ -32,7 +32,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArg
      * rest/v1/projects.locations.runtimes#AcceleratorType`
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

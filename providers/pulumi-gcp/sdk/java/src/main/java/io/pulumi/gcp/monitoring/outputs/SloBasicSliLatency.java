@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class SloBasicSliLatency {
     /**
      * A duration string, e.g. 10s.
@@ -17,8 +17,8 @@ public final class SloBasicSliLatency {
      */
     private final String threshold;
 
-    @OutputCustomType.Constructor
-    private SloBasicSliLatency(@OutputCustomType.Parameter("threshold") String threshold) {
+    @CustomType.Constructor
+    private SloBasicSliLatency(@CustomType.Parameter("threshold") String threshold) {
         this.threshold = threshold;
     }
 

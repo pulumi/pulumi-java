@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BucketWebsiteArgs extends io.pulumi.resources.ResourceArgs {
      * missing objects are treated as potential directories.
      * 
      */
-    @InputImport(name="mainPageSuffix")
+    @Import(name="mainPageSuffix")
       private final @Nullable Output<String> mainPageSuffix;
 
     public Output<String> getMainPageSuffix() {
@@ -31,7 +31,7 @@ public final class BucketWebsiteArgs extends io.pulumi.resources.ResourceArgs {
      * resource is not found.
      * 
      */
-    @InputImport(name="notFoundPage")
+    @Import(name="notFoundPage")
       private final @Nullable Output<String> notFoundPage;
 
     public Output<String> getNotFoundPage() {

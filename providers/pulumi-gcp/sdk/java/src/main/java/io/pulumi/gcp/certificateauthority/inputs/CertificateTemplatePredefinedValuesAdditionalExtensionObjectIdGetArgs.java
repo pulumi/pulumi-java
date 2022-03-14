@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class CertificateTemplatePredefinedValuesAdditionalExtensionObjectI
      * Required. The parts of an OID path. The most significant parts of the path come first.
      * 
      */
-    @InputImport(name="objectIdPaths", required=true)
+    @Import(name="objectIdPaths", required=true)
       private final Output<List<Integer>> objectIdPaths;
 
     public Output<List<Integer>> getObjectIdPaths() {

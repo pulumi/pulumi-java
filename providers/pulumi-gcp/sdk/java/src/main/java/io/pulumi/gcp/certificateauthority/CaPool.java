@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.certificateauthority.CaPoolArgs;
@@ -46,7 +46,7 @@ public class CaPool extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="issuancePolicy", type=CaPoolIssuancePolicy.class, parameters={})
+    @Export(name="issuancePolicy", type=CaPoolIssuancePolicy.class, parameters={})
     private Output</* @Nullable */ CaPoolIssuancePolicy> issuancePolicy;
 
     /**
@@ -63,7 +63,7 @@ public class CaPool extends io.pulumi.resources.CustomResource {
      * "1.3kg", "count": "3" }.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -79,7 +79,7 @@ public class CaPool extends io.pulumi.resources.CustomResource {
      * String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
      * 
      */
-    @OutputExport(name="location", type=String.class, parameters={})
+    @Export(name="location", type=String.class, parameters={})
     private Output<String> location;
 
     /**
@@ -93,7 +93,7 @@ public class CaPool extends io.pulumi.resources.CustomResource {
      * The name for this CaPool.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -108,7 +108,7 @@ public class CaPool extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -124,7 +124,7 @@ public class CaPool extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="publishingOptions", type=CaPoolPublishingOptions.class, parameters={})
+    @Export(name="publishingOptions", type=CaPoolPublishingOptions.class, parameters={})
     private Output</* @Nullable */ CaPoolPublishingOptions> publishingOptions;
 
     /**
@@ -140,7 +140,7 @@ public class CaPool extends io.pulumi.resources.CustomResource {
      * Possible values are `ENTERPRISE` and `DEVOPS`.
      * 
      */
-    @OutputExport(name="tier", type=String.class, parameters={})
+    @Export(name="tier", type=String.class, parameters={})
     private Output<String> tier;
 
     /**

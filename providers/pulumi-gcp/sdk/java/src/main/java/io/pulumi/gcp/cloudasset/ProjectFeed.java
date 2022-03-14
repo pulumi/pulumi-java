@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudasset;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudasset.ProjectFeedArgs;
@@ -52,7 +52,7 @@ public class ProjectFeed extends io.pulumi.resources.CustomResource {
      * See https://cloud.google.com/apis/design/resourceNames#fullResourceName for more info.
      * 
      */
-    @OutputExport(name="assetNames", type=List.class, parameters={String.class})
+    @Export(name="assetNames", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> assetNames;
 
     /**
@@ -73,7 +73,7 @@ public class ProjectFeed extends io.pulumi.resources.CustomResource {
      * supported asset types.
      * 
      */
-    @OutputExport(name="assetTypes", type=List.class, parameters={String.class})
+    @Export(name="assetTypes", type=List.class, parameters={String.class})
     private Output</* @Nullable */ List<String>> assetTypes;
 
     /**
@@ -94,7 +94,7 @@ public class ProjectFeed extends io.pulumi.resources.CustomResource {
      * project will be used.
      * 
      */
-    @OutputExport(name="billingProject", type=String.class, parameters={})
+    @Export(name="billingProject", type=String.class, parameters={})
     private Output</* @Nullable */ String> billingProject;
 
     /**
@@ -116,7 +116,7 @@ public class ProjectFeed extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="condition", type=ProjectFeedCondition.class, parameters={})
+    @Export(name="condition", type=ProjectFeedCondition.class, parameters={})
     private Output</* @Nullable */ ProjectFeedCondition> condition;
 
     /**
@@ -136,7 +136,7 @@ public class ProjectFeed extends io.pulumi.resources.CustomResource {
      * Possible values are `CONTENT_TYPE_UNSPECIFIED`, `RESOURCE`, `IAM_POLICY`, `ORG_POLICY`, and `ACCESS_POLICY`.
      * 
      */
-    @OutputExport(name="contentType", type=String.class, parameters={})
+    @Export(name="contentType", type=String.class, parameters={})
     private Output</* @Nullable */ String> contentType;
 
     /**
@@ -151,7 +151,7 @@ public class ProjectFeed extends io.pulumi.resources.CustomResource {
      * This is the client-assigned asset feed identifier and it needs to be unique under a specific parent.
      * 
      */
-    @OutputExport(name="feedId", type=String.class, parameters={})
+    @Export(name="feedId", type=String.class, parameters={})
     private Output<String> feedId;
 
     /**
@@ -166,7 +166,7 @@ public class ProjectFeed extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="feedOutputConfig", type=ProjectFeedFeedOutputConfig.class, parameters={})
+    @Export(name="feedOutputConfig", type=ProjectFeedFeedOutputConfig.class, parameters={})
     private Output<ProjectFeedFeedOutputConfig> feedOutputConfig;
 
     /**
@@ -181,7 +181,7 @@ public class ProjectFeed extends io.pulumi.resources.CustomResource {
      * The format will be projects/{projectNumber}/feeds/{client-assigned_feed_identifier}.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -196,7 +196,7 @@ public class ProjectFeed extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

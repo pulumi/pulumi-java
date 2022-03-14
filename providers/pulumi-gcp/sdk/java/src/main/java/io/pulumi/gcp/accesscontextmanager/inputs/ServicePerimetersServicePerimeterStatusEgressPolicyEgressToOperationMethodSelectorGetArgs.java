@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOp
      * then ALL methods and permissions are allowed.
      * 
      */
-    @InputImport(name="method")
+    @Import(name="method")
       private final @Nullable Output<String> method;
 
     public Output<String> getMethod() {
@@ -32,7 +32,7 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOp
      * corresponding `serviceName` in `ApiOperation`.
      * 
      */
-    @InputImport(name="permission")
+    @Import(name="permission")
       private final @Nullable Output<String> permission;
 
     public Output<String> getPermission() {

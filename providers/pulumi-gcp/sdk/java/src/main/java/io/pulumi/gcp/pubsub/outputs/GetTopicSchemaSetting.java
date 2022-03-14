@@ -3,19 +3,19 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetTopicSchemaSetting {
     private final String encoding;
     private final String schema;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetTopicSchemaSetting(
-        @OutputCustomType.Parameter("encoding") String encoding,
-        @OutputCustomType.Parameter("schema") String schema) {
+        @CustomType.Parameter("encoding") String encoding,
+        @CustomType.Parameter("schema") String schema) {
         this.encoding = encoding;
         this.schema = schema;
     }

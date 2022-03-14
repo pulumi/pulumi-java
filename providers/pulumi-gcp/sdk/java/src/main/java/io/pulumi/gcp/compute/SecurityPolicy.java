@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.SecurityPolicyArgs;
@@ -29,7 +29,7 @@ public class SecurityPolicy extends io.pulumi.resources.CustomResource {
      * Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
      * 
      */
-    @OutputExport(name="adaptiveProtectionConfig", type=SecurityPolicyAdaptiveProtectionConfig.class, parameters={})
+    @Export(name="adaptiveProtectionConfig", type=SecurityPolicyAdaptiveProtectionConfig.class, parameters={})
     private Output</* @Nullable */ SecurityPolicyAdaptiveProtectionConfig> adaptiveProtectionConfig;
 
     /**
@@ -43,7 +43,7 @@ public class SecurityPolicy extends io.pulumi.resources.CustomResource {
      * An optional description of this rule. Max size is 64.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -57,7 +57,7 @@ public class SecurityPolicy extends io.pulumi.resources.CustomResource {
      * Fingerprint of this resource.
      * 
      */
-    @OutputExport(name="fingerprint", type=String.class, parameters={})
+    @Export(name="fingerprint", type=String.class, parameters={})
     private Output<String> fingerprint;
 
     /**
@@ -71,7 +71,7 @@ public class SecurityPolicy extends io.pulumi.resources.CustomResource {
      * The name of the security policy.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -86,7 +86,7 @@ public class SecurityPolicy extends io.pulumi.resources.CustomResource {
      * is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -103,7 +103,7 @@ public class SecurityPolicy extends io.pulumi.resources.CustomResource {
      * security policy, a default rule with action "allow" will be added. Structure is documented below.
      * 
      */
-    @OutputExport(name="rules", type=List.class, parameters={SecurityPolicyRule.class})
+    @Export(name="rules", type=List.class, parameters={SecurityPolicyRule.class})
     private Output<List<SecurityPolicyRule>> rules;
 
     /**
@@ -119,7 +119,7 @@ public class SecurityPolicy extends io.pulumi.resources.CustomResource {
      * The URI of the created resourc
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**

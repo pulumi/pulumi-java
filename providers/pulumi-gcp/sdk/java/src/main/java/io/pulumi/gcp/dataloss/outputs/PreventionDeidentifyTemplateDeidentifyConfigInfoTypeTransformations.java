@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformation;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations {
     /**
      * Transformation for each infoType. Cannot specify more than one for a given infoType.
@@ -17,8 +17,8 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      */
     private final List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformation> transformations;
 
-    @OutputCustomType.Constructor
-    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations(@OutputCustomType.Parameter("transformations") List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformation> transformations) {
+    @CustomType.Constructor
+    private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformations(@CustomType.Parameter("transformations") List<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformation> transformations) {
         this.transformations = transformations;
     }
 

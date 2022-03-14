@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class RegionInstanceGroupManagerNamedPort {
     /**
      * - Version name.
@@ -22,10 +22,10 @@ public final class RegionInstanceGroupManagerNamedPort {
      */
     private final Integer port;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private RegionInstanceGroupManagerNamedPort(
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("port") Integer port) {
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("port") Integer port) {
         this.name = name;
         this.port = port;
     }

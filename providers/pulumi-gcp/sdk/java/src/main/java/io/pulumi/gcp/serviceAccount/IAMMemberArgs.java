@@ -4,7 +4,7 @@
 package io.pulumi.gcp.serviceAccount;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.serviceAccount.inputs.IAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class IAMMemberArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<IAMMemberConditionArgs> condition;
 
     public Output<IAMMemberConditionArgs> getCondition() {
         return this.condition == null ? Output.empty() : this.condition;
     }
 
-    @InputImport(name="member", required=true)
+    @Import(name="member", required=true)
       private final Output<String> member;
 
     public Output<String> getMember() {
@@ -40,7 +40,7 @@ public final class IAMMemberArgs extends io.pulumi.resources.ResourceArgs {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {
@@ -51,7 +51,7 @@ public final class IAMMemberArgs extends io.pulumi.resources.ResourceArgs {
      * The fully-qualified name of the service account to apply policy to.
      * 
      */
-    @InputImport(name="serviceAccountId", required=true)
+    @Import(name="serviceAccountId", required=true)
       private final Output<String> serviceAccountId;
 
     public Output<String> getServiceAccountId() {

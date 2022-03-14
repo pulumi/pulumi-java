@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.NodeGroupArgs;
@@ -60,7 +60,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="autoscalingPolicy", type=NodeGroupAutoscalingPolicy.class, parameters={})
+    @Export(name="autoscalingPolicy", type=NodeGroupAutoscalingPolicy.class, parameters={})
     private Output<NodeGroupAutoscalingPolicy> autoscalingPolicy;
 
     /**
@@ -76,7 +76,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -90,7 +90,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * An optional textual description of the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -104,7 +104,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * The initial number of nodes in the node group. One of `initial_size` or `size` must be specified.
      * 
      */
-    @OutputExport(name="initialSize", type=Integer.class, parameters={})
+    @Export(name="initialSize", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> initialSize;
 
     /**
@@ -118,7 +118,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * Specifies how to handle instances when a node in the group undergoes maintenance. Set to one of: DEFAULT, RESTART_IN_PLACE, or MIGRATE_WITHIN_NODE_GROUP. The default value is DEFAULT.
      * 
      */
-    @OutputExport(name="maintenancePolicy", type=String.class, parameters={})
+    @Export(name="maintenancePolicy", type=String.class, parameters={})
     private Output</* @Nullable */ String> maintenancePolicy;
 
     /**
@@ -133,7 +133,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="maintenanceWindow", type=NodeGroupMaintenanceWindow.class, parameters={})
+    @Export(name="maintenanceWindow", type=NodeGroupMaintenanceWindow.class, parameters={})
     private Output</* @Nullable */ NodeGroupMaintenanceWindow> maintenanceWindow;
 
     /**
@@ -148,7 +148,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * Name of the resource.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -162,7 +162,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * The URL of the node template to which this node group belongs.
      * 
      */
-    @OutputExport(name="nodeTemplate", type=String.class, parameters={})
+    @Export(name="nodeTemplate", type=String.class, parameters={})
     private Output<String> nodeTemplate;
 
     /**
@@ -177,7 +177,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -192,7 +192,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -206,7 +206,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * The total number of nodes in the node group. One of `initial_size` or `size` must be specified.
      * 
      */
-    @OutputExport(name="size", type=Integer.class, parameters={})
+    @Export(name="size", type=Integer.class, parameters={})
     private Output<Integer> size;
 
     /**
@@ -220,7 +220,7 @@ public class NodeGroup extends io.pulumi.resources.CustomResource {
      * Zone where this node group is located
      * 
      */
-    @OutputExport(name="zone", type=String.class, parameters={})
+    @Export(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
     /**

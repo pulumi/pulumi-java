@@ -4,7 +4,7 @@
 package io.pulumi.gcp.artifactregistry;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.artifactregistry.inputs.RepositoryIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class RepositoryIamMemberArgs extends io.pulumi.resources.ResourceA
 
     public static final RepositoryIamMemberArgs Empty = new RepositoryIamMemberArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<RepositoryIamMemberConditionArgs> condition;
 
     public Output<RepositoryIamMemberConditionArgs> getCondition() {
@@ -27,14 +27,14 @@ public final class RepositoryIamMemberArgs extends io.pulumi.resources.ResourceA
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="member", required=true)
+    @Import(name="member", required=true)
       private final Output<String> member;
 
     public Output<String> getMember() {
@@ -46,7 +46,7 @@ public final class RepositoryIamMemberArgs extends io.pulumi.resources.ResourceA
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -57,7 +57,7 @@ public final class RepositoryIamMemberArgs extends io.pulumi.resources.ResourceA
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="repository", required=true)
+    @Import(name="repository", required=true)
       private final Output<String> repository;
 
     public Output<String> getRepository() {
@@ -70,7 +70,7 @@ public final class RepositoryIamMemberArgs extends io.pulumi.resources.ResourceA
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

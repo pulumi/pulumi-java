@@ -4,7 +4,7 @@
 package io.pulumi.gcp.tags;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.tags.TagValueIamMemberArgs;
@@ -57,7 +57,7 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="gcp:tags/tagValueIamMember:TagValueIamMember")
 public class TagValueIamMember extends io.pulumi.resources.CustomResource {
-    @OutputExport(name="condition", type=TagValueIamMemberCondition.class, parameters={})
+    @Export(name="condition", type=TagValueIamMemberCondition.class, parameters={})
     private Output</* @Nullable */ TagValueIamMemberCondition> condition;
 
     public Output</* @Nullable */ TagValueIamMemberCondition> getCondition() {
@@ -67,7 +67,7 @@ public class TagValueIamMember extends io.pulumi.resources.CustomResource {
      * (Computed) The etag of the IAM policy.
      * 
      */
-    @OutputExport(name="etag", type=String.class, parameters={})
+    @Export(name="etag", type=String.class, parameters={})
     private Output<String> etag;
 
     /**
@@ -77,7 +77,7 @@ public class TagValueIamMember extends io.pulumi.resources.CustomResource {
     public Output<String> getEtag() {
         return this.etag;
     }
-    @OutputExport(name="member", type=String.class, parameters={})
+    @Export(name="member", type=String.class, parameters={})
     private Output<String> member;
 
     public Output<String> getMember() {
@@ -89,7 +89,7 @@ public class TagValueIamMember extends io.pulumi.resources.CustomResource {
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @OutputExport(name="role", type=String.class, parameters={})
+    @Export(name="role", type=String.class, parameters={})
     private Output<String> role;
 
     /**
@@ -105,7 +105,7 @@ public class TagValueIamMember extends io.pulumi.resources.CustomResource {
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @OutputExport(name="tagValue", type=String.class, parameters={})
+    @Export(name="tagValue", type=String.class, parameters={})
     private Output<String> tagValue;
 
     /**

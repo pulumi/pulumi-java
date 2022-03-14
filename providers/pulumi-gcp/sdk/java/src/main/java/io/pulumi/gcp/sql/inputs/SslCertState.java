@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * The actual certificate data for this client certificate.
      * 
      */
-    @InputImport(name="cert")
+    @Import(name="cert")
       private final @Nullable Output<String> cert;
 
     public Output<String> getCert() {
@@ -29,7 +29,7 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * The serial number extracted from the certificate data.
      * 
      */
-    @InputImport(name="certSerialNumber")
+    @Import(name="certSerialNumber")
       private final @Nullable Output<String> certSerialNumber;
 
     public Output<String> getCertSerialNumber() {
@@ -41,7 +41,7 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * client. Constrained to [a-zA-Z.-_ ]+. Changing this forces a new resource to be created.
      * 
      */
-    @InputImport(name="commonName")
+    @Import(name="commonName")
       private final @Nullable Output<String> commonName;
 
     public Output<String> getCommonName() {
@@ -53,7 +53,7 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * for example 2012-11-15T16:19:00.094Z.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -65,7 +65,7 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * for example 2012-11-15T16:19:00.094Z.
      * 
      */
-    @InputImport(name="expirationTime")
+    @Import(name="expirationTime")
       private final @Nullable Output<String> expirationTime;
 
     public Output<String> getExpirationTime() {
@@ -77,7 +77,7 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * forces a new resource to be created.
      * 
      */
-    @InputImport(name="instance")
+    @Import(name="instance")
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
@@ -88,7 +88,7 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * The private key associated with the client certificate.
      * 
      */
-    @InputImport(name="privateKey")
+    @Import(name="privateKey")
       private final @Nullable Output<String> privateKey;
 
     public Output<String> getPrivateKey() {
@@ -100,7 +100,7 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -111,7 +111,7 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * The CA cert of the server this client cert was generated from.
      * 
      */
-    @InputImport(name="serverCaCert")
+    @Import(name="serverCaCert")
       private final @Nullable Output<String> serverCaCert;
 
     public Output<String> getServerCaCert() {
@@ -122,7 +122,7 @@ public final class SslCertState extends io.pulumi.resources.ResourceArgs {
      * The SHA1 Fingerprint of the certificate.
      * 
      */
-    @InputImport(name="sha1Fingerprint")
+    @Import(name="sha1Fingerprint")
       private final @Nullable Output<String> sha1Fingerprint;
 
     public Output<String> getSha1Fingerprint() {

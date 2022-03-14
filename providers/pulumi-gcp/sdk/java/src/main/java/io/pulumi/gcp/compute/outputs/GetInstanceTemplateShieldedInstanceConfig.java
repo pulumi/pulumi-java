@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetInstanceTemplateShieldedInstanceConfig {
     private final Boolean enableIntegrityMonitoring;
     private final Boolean enableSecureBoot;
     private final Boolean enableVtpm;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetInstanceTemplateShieldedInstanceConfig(
-        @OutputCustomType.Parameter("enableIntegrityMonitoring") Boolean enableIntegrityMonitoring,
-        @OutputCustomType.Parameter("enableSecureBoot") Boolean enableSecureBoot,
-        @OutputCustomType.Parameter("enableVtpm") Boolean enableVtpm) {
+        @CustomType.Parameter("enableIntegrityMonitoring") Boolean enableIntegrityMonitoring,
+        @CustomType.Parameter("enableSecureBoot") Boolean enableSecureBoot,
+        @CustomType.Parameter("enableVtpm") Boolean enableVtpm) {
         this.enableIntegrityMonitoring = enableIntegrityMonitoring;
         this.enableSecureBoot = enableSecureBoot;
         this.enableVtpm = enableVtpm;

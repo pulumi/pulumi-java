@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FlexibleAppVersionManualScaling {
     /**
      * Number of instances to assign to the service at the start.
@@ -17,8 +17,8 @@ public final class FlexibleAppVersionManualScaling {
      */
     private final Integer instances;
 
-    @OutputCustomType.Constructor
-    private FlexibleAppVersionManualScaling(@OutputCustomType.Parameter("instances") Integer instances) {
+    @CustomType.Constructor
+    private FlexibleAppVersionManualScaling(@CustomType.Parameter("instances") Integer instances) {
         this.instances = instances;
     }
 

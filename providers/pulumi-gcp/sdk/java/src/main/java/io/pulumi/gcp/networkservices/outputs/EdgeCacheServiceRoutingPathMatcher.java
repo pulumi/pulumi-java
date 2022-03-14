@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.networkservices.outputs.EdgeCacheServiceRoutingPathMatcherRouteRule;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EdgeCacheServiceRoutingPathMatcher {
     /**
      * A human-readable description of the resource.
@@ -30,11 +30,11 @@ public final class EdgeCacheServiceRoutingPathMatcher {
      */
     private final List<EdgeCacheServiceRoutingPathMatcherRouteRule> routeRules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EdgeCacheServiceRoutingPathMatcher(
-        @OutputCustomType.Parameter("description") @Nullable String description,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("routeRules") List<EdgeCacheServiceRoutingPathMatcherRouteRule> routeRules) {
+        @CustomType.Parameter("description") @Nullable String description,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("routeRules") List<EdgeCacheServiceRoutingPathMatcherRouteRule> routeRules) {
         this.description = description;
         this.name = name;
         this.routeRules = routeRules;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.recaptcha.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.recaptcha.inputs.EnterpriseKeyAndroidSettingsGetArgs;
 import io.pulumi.gcp.recaptcha.inputs.EnterpriseKeyIosSettingsGetArgs;
 import io.pulumi.gcp.recaptcha.inputs.EnterpriseKeyTestingOptionsGetArgs;
@@ -23,7 +23,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * Settings for keys that can be used by Android apps.
      * 
      */
-    @InputImport(name="androidSettings")
+    @Import(name="androidSettings")
       private final @Nullable Output<EnterpriseKeyAndroidSettingsGetArgs> androidSettings;
 
     public Output<EnterpriseKeyAndroidSettingsGetArgs> getAndroidSettings() {
@@ -34,7 +34,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * The timestamp corresponding to the creation of this Key.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -45,7 +45,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * Human-readable display name of this key. Modifiable by user.
      * 
      */
-    @InputImport(name="displayName")
+    @Import(name="displayName")
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
@@ -56,7 +56,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * Settings for keys that can be used by iOS apps.
      * 
      */
-    @InputImport(name="iosSettings")
+    @Import(name="iosSettings")
       private final @Nullable Output<EnterpriseKeyIosSettingsGetArgs> iosSettings;
 
     public Output<EnterpriseKeyIosSettingsGetArgs> getIosSettings() {
@@ -67,7 +67,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * See [Creating and managing labels](https://cloud.google.com/recaptcha-enterprise/docs/labels).
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -78,7 +78,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * The resource name for the Key in the format "projects/{project}/keys/{key}".
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -89,7 +89,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * The project for the resource
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -100,7 +100,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * Options for user acceptance testing.
      * 
      */
-    @InputImport(name="testingOptions")
+    @Import(name="testingOptions")
       private final @Nullable Output<EnterpriseKeyTestingOptionsGetArgs> testingOptions;
 
     public Output<EnterpriseKeyTestingOptionsGetArgs> getTestingOptions() {
@@ -111,7 +111,7 @@ public final class EnterpriseKeyState extends io.pulumi.resources.ResourceArgs {
      * Settings for keys that can be used by websites.
      * 
      */
-    @InputImport(name="webSettings")
+    @Import(name="webSettings")
       private final @Nullable Output<EnterpriseKeyWebSettingsGetArgs> webSettings;
 
     public Output<EnterpriseKeyWebSettingsGetArgs> getWebSettings() {

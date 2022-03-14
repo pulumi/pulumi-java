@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ProjectMetadataArgs extends io.pulumi.resources.ResourceArgs 
      * A series of key value pairs.
      * 
      */
-    @InputImport(name="metadata", required=true)
+    @Import(name="metadata", required=true)
       private final Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -31,7 +31,7 @@ public final class ProjectMetadataArgs extends io.pulumi.resources.ResourceArgs 
      * is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class ClusterWorkloadIdentityConfigArgs extends io.pulumi.resources
      * The workload pool to attach all Kubernetes service accounts to.
      * 
      */
-    @InputImport(name="workloadPool")
+    @Import(name="workloadPool")
       private final @Nullable Output<String> workloadPool;
 
     public Output<String> getWorkloadPool() {

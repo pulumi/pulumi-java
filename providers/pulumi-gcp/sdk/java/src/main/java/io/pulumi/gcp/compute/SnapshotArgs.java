@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.SnapshotSnapshotEncryptionKeyArgs;
 import io.pulumi.gcp.compute.inputs.SnapshotSourceDiskEncryptionKeyArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Labels to apply to this Snapshot.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -50,7 +50,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -62,7 +62,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -75,7 +75,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="snapshotEncryptionKey")
+    @Import(name="snapshotEncryptionKey")
       private final @Nullable Output<SnapshotSnapshotEncryptionKeyArgs> snapshotEncryptionKey;
 
     public Output<SnapshotSnapshotEncryptionKeyArgs> getSnapshotEncryptionKey() {
@@ -86,7 +86,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * A reference to the disk used to create this snapshot.
      * 
      */
-    @InputImport(name="sourceDisk", required=true)
+    @Import(name="sourceDisk", required=true)
       private final Output<String> sourceDisk;
 
     public Output<String> getSourceDisk() {
@@ -100,7 +100,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="sourceDiskEncryptionKey")
+    @Import(name="sourceDiskEncryptionKey")
       private final @Nullable Output<SnapshotSourceDiskEncryptionKeyArgs> sourceDiskEncryptionKey;
 
     public Output<SnapshotSourceDiskEncryptionKeyArgs> getSourceDiskEncryptionKey() {
@@ -111,7 +111,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
      * 
      */
-    @InputImport(name="storageLocations")
+    @Import(name="storageLocations")
       private final @Nullable Output<List<String>> storageLocations;
 
     public Output<List<String>> getStorageLocations() {
@@ -122,7 +122,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * A reference to the zone where the disk is hosted.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

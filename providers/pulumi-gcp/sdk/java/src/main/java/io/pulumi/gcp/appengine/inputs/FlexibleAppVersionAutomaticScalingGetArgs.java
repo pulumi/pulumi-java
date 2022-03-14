@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs;
@@ -25,7 +25,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * during which the collected usage would not be reliable. Default: 120s
      * 
      */
-    @InputImport(name="coolDownPeriod")
+    @Import(name="coolDownPeriod")
       private final @Nullable Output<String> coolDownPeriod;
 
     public Output<String> getCoolDownPeriod() {
@@ -37,7 +37,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * Structure is documented below.
      * 
      */
-    @InputImport(name="cpuUtilization", required=true)
+    @Import(name="cpuUtilization", required=true)
       private final Output<FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs> cpuUtilization;
 
     public Output<FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs> getCpuUtilization() {
@@ -49,7 +49,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * Structure is documented below.
      * 
      */
-    @InputImport(name="diskUtilization")
+    @Import(name="diskUtilization")
       private final @Nullable Output<FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs> diskUtilization;
 
     public Output<FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs> getDiskUtilization() {
@@ -61,7 +61,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * Defaults to a runtime-specific value.
      * 
      */
-    @InputImport(name="maxConcurrentRequests")
+    @Import(name="maxConcurrentRequests")
       private final @Nullable Output<Integer> maxConcurrentRequests;
 
     public Output<Integer> getMaxConcurrentRequests() {
@@ -72,7 +72,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * Maximum number of idle instances that should be maintained for this version.
      * 
      */
-    @InputImport(name="maxIdleInstances")
+    @Import(name="maxIdleInstances")
       private final @Nullable Output<Integer> maxIdleInstances;
 
     public Output<Integer> getMaxIdleInstances() {
@@ -83,7 +83,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * Maximum amount of time that a request should wait in the pending queue before starting a new instance to handle it.
      * 
      */
-    @InputImport(name="maxPendingLatency")
+    @Import(name="maxPendingLatency")
       private final @Nullable Output<String> maxPendingLatency;
 
     public Output<String> getMaxPendingLatency() {
@@ -94,7 +94,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * Maximum number of instances that should be started to handle requests for this version. Default: 20
      * 
      */
-    @InputImport(name="maxTotalInstances")
+    @Import(name="maxTotalInstances")
       private final @Nullable Output<Integer> maxTotalInstances;
 
     public Output<Integer> getMaxTotalInstances() {
@@ -105,7 +105,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * Minimum number of idle instances that should be maintained for this version. Only applicable for the default version of a service.
      * 
      */
-    @InputImport(name="minIdleInstances")
+    @Import(name="minIdleInstances")
       private final @Nullable Output<Integer> minIdleInstances;
 
     public Output<Integer> getMinIdleInstances() {
@@ -116,7 +116,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * Minimum amount of time a request should wait in the pending queue before starting a new instance to handle it.
      * 
      */
-    @InputImport(name="minPendingLatency")
+    @Import(name="minPendingLatency")
       private final @Nullable Output<String> minPendingLatency;
 
     public Output<String> getMinPendingLatency() {
@@ -127,7 +127,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * Minimum number of running instances that should be maintained for this version. Default: 2
      * 
      */
-    @InputImport(name="minTotalInstances")
+    @Import(name="minTotalInstances")
       private final @Nullable Output<Integer> minTotalInstances;
 
     public Output<Integer> getMinTotalInstances() {
@@ -139,7 +139,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * Structure is documented below.
      * 
      */
-    @InputImport(name="networkUtilization")
+    @Import(name="networkUtilization")
       private final @Nullable Output<FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs> networkUtilization;
 
     public Output<FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs> getNetworkUtilization() {
@@ -151,7 +151,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * Structure is documented below.
      * 
      */
-    @InputImport(name="requestUtilization")
+    @Import(name="requestUtilization")
       private final @Nullable Output<FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs> requestUtilization;
 
     public Output<FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs> getRequestUtilization() {

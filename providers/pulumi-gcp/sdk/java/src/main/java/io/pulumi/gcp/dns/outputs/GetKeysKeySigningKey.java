@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dns.outputs.GetKeysKeySigningKeyDigest;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetKeysKeySigningKey {
     /**
      * String mnemonic specifying the DNSSEC algorithm of this key. Immutable after creation time. Possible values are `ecdsap256sha256`, `ecdsap384sha384`, `rsasha1`, `rsasha256`, and `rsasha512`.
@@ -64,18 +64,18 @@ public final class GetKeysKeySigningKey {
      */
     private final String publicKey;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKeysKeySigningKey(
-        @OutputCustomType.Parameter("algorithm") String algorithm,
-        @OutputCustomType.Parameter("creationTime") String creationTime,
-        @OutputCustomType.Parameter("description") String description,
-        @OutputCustomType.Parameter("digests") List<GetKeysKeySigningKeyDigest> digests,
-        @OutputCustomType.Parameter("dsRecord") String dsRecord,
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("isActive") Boolean isActive,
-        @OutputCustomType.Parameter("keyLength") Integer keyLength,
-        @OutputCustomType.Parameter("keyTag") Integer keyTag,
-        @OutputCustomType.Parameter("publicKey") String publicKey) {
+        @CustomType.Parameter("algorithm") String algorithm,
+        @CustomType.Parameter("creationTime") String creationTime,
+        @CustomType.Parameter("description") String description,
+        @CustomType.Parameter("digests") List<GetKeysKeySigningKeyDigest> digests,
+        @CustomType.Parameter("dsRecord") String dsRecord,
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("isActive") Boolean isActive,
+        @CustomType.Parameter("keyLength") Integer keyLength,
+        @CustomType.Parameter("keyTag") Integer keyTag,
+        @CustomType.Parameter("publicKey") String publicKey) {
         this.algorithm = algorithm;
         this.creationTime = creationTime;
         this.description = description;

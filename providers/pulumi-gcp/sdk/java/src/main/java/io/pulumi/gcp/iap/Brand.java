@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.BrandArgs;
@@ -46,7 +46,7 @@ public class Brand extends io.pulumi.resources.CustomResource {
      * Application name displayed on OAuth consent screen.
      * 
      */
-    @OutputExport(name="applicationTitle", type=String.class, parameters={})
+    @Export(name="applicationTitle", type=String.class, parameters={})
     private Output<String> applicationTitle;
 
     /**
@@ -61,7 +61,7 @@ public class Brand extends io.pulumi.resources.CustomResource {
      * identification corresponds to the project number as only one brand per project can be created.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -76,7 +76,7 @@ public class Brand extends io.pulumi.resources.CustomResource {
      * Whether the brand is only intended for usage inside the GSuite organization only.
      * 
      */
-    @OutputExport(name="orgInternalOnly", type=Boolean.class, parameters={})
+    @Export(name="orgInternalOnly", type=Boolean.class, parameters={})
     private Output<Boolean> orgInternalOnly;
 
     /**
@@ -91,7 +91,7 @@ public class Brand extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -110,7 +110,7 @@ public class Brand extends io.pulumi.resources.CustomResource {
      * is an owner of the specified group in Cloud Identity.
      * 
      */
-    @OutputExport(name="supportEmail", type=String.class, parameters={})
+    @Export(name="supportEmail", type=String.class, parameters={})
     private Output<String> supportEmail;
 
     /**

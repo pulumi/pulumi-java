@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeterStatusEgressPolicyEgressFrom;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeterStatusEgressPolicyEgressTo;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServicePerimetersServicePerimeterStatusEgressPolicy {
     /**
      * Defines conditions on the source of a request causing this `EgressPolicy` to apply.
@@ -26,10 +26,10 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicy {
      */
     private final @Nullable ServicePerimetersServicePerimeterStatusEgressPolicyEgressTo egressTo;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServicePerimetersServicePerimeterStatusEgressPolicy(
-        @OutputCustomType.Parameter("egressFrom") @Nullable ServicePerimetersServicePerimeterStatusEgressPolicyEgressFrom egressFrom,
-        @OutputCustomType.Parameter("egressTo") @Nullable ServicePerimetersServicePerimeterStatusEgressPolicyEgressTo egressTo) {
+        @CustomType.Parameter("egressFrom") @Nullable ServicePerimetersServicePerimeterStatusEgressPolicyEgressFrom egressFrom,
+        @CustomType.Parameter("egressTo") @Nullable ServicePerimetersServicePerimeterStatusEgressPolicyEgressTo egressTo) {
         this.egressFrom = egressFrom;
         this.egressTo = egressTo;
     }

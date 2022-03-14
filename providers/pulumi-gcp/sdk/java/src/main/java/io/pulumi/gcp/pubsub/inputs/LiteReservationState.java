@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
      * Name of the reservation.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -31,7 +31,7 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -42,7 +42,7 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
      * The region of the pubsub lite reservation.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -55,7 +55,7 @@ public final class LiteReservationState extends io.pulumi.resources.ResourceArgs
      * messages.
      * 
      */
-    @InputImport(name="throughputCapacity")
+    @Import(name="throughputCapacity")
       private final @Nullable Output<Integer> throughputCapacity;
 
     public Output<Integer> getThroughputCapacity() {

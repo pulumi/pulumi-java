@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.composer.outputs.EnvironmentConfigDatabaseConfig;
 import io.pulumi.gcp.composer.outputs.EnvironmentConfigEncryptionConfig;
 import io.pulumi.gcp.composer.outputs.EnvironmentConfigMaintenanceWindow;
@@ -20,7 +20,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class EnvironmentConfig {
     private final @Nullable String airflowUri;
     private final @Nullable String dagGcsPrefix;
@@ -38,23 +38,23 @@ public final class EnvironmentConfig {
     private final @Nullable EnvironmentConfigWebServerNetworkAccessControl webServerNetworkAccessControl;
     private final @Nullable EnvironmentConfigWorkloadsConfig workloadsConfig;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private EnvironmentConfig(
-        @OutputCustomType.Parameter("airflowUri") @Nullable String airflowUri,
-        @OutputCustomType.Parameter("dagGcsPrefix") @Nullable String dagGcsPrefix,
-        @OutputCustomType.Parameter("databaseConfig") @Nullable EnvironmentConfigDatabaseConfig databaseConfig,
-        @OutputCustomType.Parameter("encryptionConfig") @Nullable EnvironmentConfigEncryptionConfig encryptionConfig,
-        @OutputCustomType.Parameter("environmentSize") @Nullable String environmentSize,
-        @OutputCustomType.Parameter("gkeCluster") @Nullable String gkeCluster,
-        @OutputCustomType.Parameter("maintenanceWindow") @Nullable EnvironmentConfigMaintenanceWindow maintenanceWindow,
-        @OutputCustomType.Parameter("masterAuthorizedNetworksConfig") @Nullable EnvironmentConfigMasterAuthorizedNetworksConfig masterAuthorizedNetworksConfig,
-        @OutputCustomType.Parameter("nodeConfig") @Nullable EnvironmentConfigNodeConfig nodeConfig,
-        @OutputCustomType.Parameter("nodeCount") @Nullable Integer nodeCount,
-        @OutputCustomType.Parameter("privateEnvironmentConfig") @Nullable EnvironmentConfigPrivateEnvironmentConfig privateEnvironmentConfig,
-        @OutputCustomType.Parameter("softwareConfig") @Nullable EnvironmentConfigSoftwareConfig softwareConfig,
-        @OutputCustomType.Parameter("webServerConfig") @Nullable EnvironmentConfigWebServerConfig webServerConfig,
-        @OutputCustomType.Parameter("webServerNetworkAccessControl") @Nullable EnvironmentConfigWebServerNetworkAccessControl webServerNetworkAccessControl,
-        @OutputCustomType.Parameter("workloadsConfig") @Nullable EnvironmentConfigWorkloadsConfig workloadsConfig) {
+        @CustomType.Parameter("airflowUri") @Nullable String airflowUri,
+        @CustomType.Parameter("dagGcsPrefix") @Nullable String dagGcsPrefix,
+        @CustomType.Parameter("databaseConfig") @Nullable EnvironmentConfigDatabaseConfig databaseConfig,
+        @CustomType.Parameter("encryptionConfig") @Nullable EnvironmentConfigEncryptionConfig encryptionConfig,
+        @CustomType.Parameter("environmentSize") @Nullable String environmentSize,
+        @CustomType.Parameter("gkeCluster") @Nullable String gkeCluster,
+        @CustomType.Parameter("maintenanceWindow") @Nullable EnvironmentConfigMaintenanceWindow maintenanceWindow,
+        @CustomType.Parameter("masterAuthorizedNetworksConfig") @Nullable EnvironmentConfigMasterAuthorizedNetworksConfig masterAuthorizedNetworksConfig,
+        @CustomType.Parameter("nodeConfig") @Nullable EnvironmentConfigNodeConfig nodeConfig,
+        @CustomType.Parameter("nodeCount") @Nullable Integer nodeCount,
+        @CustomType.Parameter("privateEnvironmentConfig") @Nullable EnvironmentConfigPrivateEnvironmentConfig privateEnvironmentConfig,
+        @CustomType.Parameter("softwareConfig") @Nullable EnvironmentConfigSoftwareConfig softwareConfig,
+        @CustomType.Parameter("webServerConfig") @Nullable EnvironmentConfigWebServerConfig webServerConfig,
+        @CustomType.Parameter("webServerNetworkAccessControl") @Nullable EnvironmentConfigWebServerNetworkAccessControl webServerNetworkAccessControl,
+        @CustomType.Parameter("workloadsConfig") @Nullable EnvironmentConfigWorkloadsConfig workloadsConfig) {
         this.airflowUri = airflowUri;
         this.dagGcsPrefix = dagGcsPrefix;
         this.databaseConfig = databaseConfig;

@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FlexibleAppVersionEntrypoint {
     /**
      * The format should be a shell command that can be fed to bash -c.
@@ -15,8 +15,8 @@ public final class FlexibleAppVersionEntrypoint {
      */
     private final String shell;
 
-    @OutputCustomType.Constructor
-    private FlexibleAppVersionEntrypoint(@OutputCustomType.Parameter("shell") String shell) {
+    @CustomType.Constructor
+    private FlexibleAppVersionEntrypoint(@CustomType.Parameter("shell") String shell) {
         this.shell = shell;
     }
 

@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.compute.outputs.GetResourcePolicyInstanceSchedulePolicyVmStartSchedule;
 import io.pulumi.gcp.compute.outputs.GetResourcePolicyInstanceSchedulePolicyVmStopSchedule;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetResourcePolicyInstanceSchedulePolicy {
     private final String expirationTime;
     private final String startTime;
@@ -18,13 +18,13 @@ public final class GetResourcePolicyInstanceSchedulePolicy {
     private final List<GetResourcePolicyInstanceSchedulePolicyVmStartSchedule> vmStartSchedules;
     private final List<GetResourcePolicyInstanceSchedulePolicyVmStopSchedule> vmStopSchedules;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetResourcePolicyInstanceSchedulePolicy(
-        @OutputCustomType.Parameter("expirationTime") String expirationTime,
-        @OutputCustomType.Parameter("startTime") String startTime,
-        @OutputCustomType.Parameter("timeZone") String timeZone,
-        @OutputCustomType.Parameter("vmStartSchedules") List<GetResourcePolicyInstanceSchedulePolicyVmStartSchedule> vmStartSchedules,
-        @OutputCustomType.Parameter("vmStopSchedules") List<GetResourcePolicyInstanceSchedulePolicyVmStopSchedule> vmStopSchedules) {
+        @CustomType.Parameter("expirationTime") String expirationTime,
+        @CustomType.Parameter("startTime") String startTime,
+        @CustomType.Parameter("timeZone") String timeZone,
+        @CustomType.Parameter("vmStartSchedules") List<GetResourcePolicyInstanceSchedulePolicyVmStartSchedule> vmStartSchedules,
+        @CustomType.Parameter("vmStopSchedules") List<GetResourcePolicyInstanceSchedulePolicyVmStopSchedule> vmStopSchedules) {
         this.expirationTime = expirationTime;
         this.startTime = startTime;
         this.timeZone = timeZone;

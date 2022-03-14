@@ -4,7 +4,7 @@
 package io.pulumi.gcp.filestore.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.filestore.inputs.InstanceFileSharesNfsExportOptionGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class InstanceFileSharesGetArgs extends io.pulumi.resources.Resourc
      * for the standard tier, or 2560 GiB for the premium tier.
      * 
      */
-    @InputImport(name="capacityGb", required=true)
+    @Import(name="capacityGb", required=true)
       private final Output<Integer> capacityGb;
 
     public Output<Integer> getCapacityGb() {
@@ -33,7 +33,7 @@ public final class InstanceFileSharesGetArgs extends io.pulumi.resources.Resourc
      * The name of the fileshare (16 characters or less)
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -45,7 +45,7 @@ public final class InstanceFileSharesGetArgs extends io.pulumi.resources.Resourc
      * Structure is documented below.
      * 
      */
-    @InputImport(name="nfsExportOptions")
+    @Import(name="nfsExportOptions")
       private final @Nullable Output<List<InstanceFileSharesNfsExportOptionGetArgs>> nfsExportOptions;
 
     public Output<List<InstanceFileSharesNfsExportOptionGetArgs>> getNfsExportOptions() {

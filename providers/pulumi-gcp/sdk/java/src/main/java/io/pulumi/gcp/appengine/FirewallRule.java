@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.appengine.FirewallRuleArgs;
@@ -49,7 +49,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * Possible values are `UNSPECIFIED_ACTION`, `ALLOW`, and `DENY`.
      * 
      */
-    @OutputExport(name="action", type=String.class, parameters={})
+    @Export(name="action", type=String.class, parameters={})
     private Output<String> action;
 
     /**
@@ -64,7 +64,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * An optional string description of this rule.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -82,7 +82,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * this rule can be modified by the user.
      * 
      */
-    @OutputExport(name="priority", type=Integer.class, parameters={})
+    @Export(name="priority", type=Integer.class, parameters={})
     private Output</* @Nullable */ Integer> priority;
 
     /**
@@ -101,7 +101,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -116,7 +116,7 @@ public class FirewallRule extends io.pulumi.resources.CustomResource {
      * IP address or range, defined using CIDR notation, of requests that this rule applies to.
      * 
      */
-    @OutputExport(name="sourceRange", type=String.class, parameters={})
+    @Export(name="sourceRange", type=String.class, parameters={})
     private Output<String> sourceRange;
 
     /**

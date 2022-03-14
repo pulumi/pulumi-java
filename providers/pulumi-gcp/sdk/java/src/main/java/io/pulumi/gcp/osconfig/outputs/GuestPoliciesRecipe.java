@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeArtifact;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeInstallStep;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeUpdateStep;
@@ -13,7 +13,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GuestPoliciesRecipe {
     /**
      * Resources available to be used in the steps in the recipe.
@@ -60,14 +60,14 @@ public final class GuestPoliciesRecipe {
      */
     private final @Nullable String version;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GuestPoliciesRecipe(
-        @OutputCustomType.Parameter("artifacts") @Nullable List<GuestPoliciesRecipeArtifact> artifacts,
-        @OutputCustomType.Parameter("desiredState") @Nullable String desiredState,
-        @OutputCustomType.Parameter("installSteps") @Nullable List<GuestPoliciesRecipeInstallStep> installSteps,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("updateSteps") @Nullable List<GuestPoliciesRecipeUpdateStep> updateSteps,
-        @OutputCustomType.Parameter("version") @Nullable String version) {
+        @CustomType.Parameter("artifacts") @Nullable List<GuestPoliciesRecipeArtifact> artifacts,
+        @CustomType.Parameter("desiredState") @Nullable String desiredState,
+        @CustomType.Parameter("installSteps") @Nullable List<GuestPoliciesRecipeInstallStep> installSteps,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("updateSteps") @Nullable List<GuestPoliciesRecipeUpdateStep> updateSteps,
+        @CustomType.Parameter("version") @Nullable String version) {
         this.artifacts = artifacts;
         this.desiredState = desiredState;
         this.installSteps = installSteps;

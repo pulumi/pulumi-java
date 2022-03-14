@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.cloudscheduler.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobPubsubTarget {
     /**
      * Attributes for PubsubMessage.
@@ -34,11 +34,11 @@ public final class JobPubsubTarget {
      */
     private final String topicName;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobPubsubTarget(
-        @OutputCustomType.Parameter("attributes") @Nullable Map<String,String> attributes,
-        @OutputCustomType.Parameter("data") @Nullable String data,
-        @OutputCustomType.Parameter("topicName") String topicName) {
+        @CustomType.Parameter("attributes") @Nullable Map<String,String> attributes,
+        @CustomType.Parameter("data") @Nullable String data,
+        @CustomType.Parameter("topicName") String topicName) {
         this.attributes = attributes;
         this.data = data;
         this.topicName = topicName;

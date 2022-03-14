@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDatabaseInstanceIpAddress {
     private final String ipAddress;
     private final String timeToRetire;
     private final String type;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatabaseInstanceIpAddress(
-        @OutputCustomType.Parameter("ipAddress") String ipAddress,
-        @OutputCustomType.Parameter("timeToRetire") String timeToRetire,
-        @OutputCustomType.Parameter("type") String type) {
+        @CustomType.Parameter("ipAddress") String ipAddress,
+        @CustomType.Parameter("timeToRetire") String timeToRetire,
+        @CustomType.Parameter("type") String type) {
         this.ipAddress = ipAddress;
         this.timeToRetire = timeToRetire;
         this.type = type;

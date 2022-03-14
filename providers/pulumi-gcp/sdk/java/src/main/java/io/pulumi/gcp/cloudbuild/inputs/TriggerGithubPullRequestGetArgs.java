@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TriggerGithubPullRequestGetArgs extends io.pulumi.resources.R
      * Regex of branches to match.  Specify only one of branch or tag.
      * 
      */
-    @InputImport(name="branch", required=true)
+    @Import(name="branch", required=true)
       private final Output<String> branch;
 
     public Output<String> getBranch() {
@@ -31,7 +31,7 @@ public final class TriggerGithubPullRequestGetArgs extends io.pulumi.resources.R
      * Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY`.
      * 
      */
-    @InputImport(name="commentControl")
+    @Import(name="commentControl")
       private final @Nullable Output<String> commentControl;
 
     public Output<String> getCommentControl() {
@@ -42,7 +42,7 @@ public final class TriggerGithubPullRequestGetArgs extends io.pulumi.resources.R
      * Only trigger a build if the revision regex does NOT match the revision regex.
      * 
      */
-    @InputImport(name="invertRegex")
+    @Import(name="invertRegex")
       private final @Nullable Output<Boolean> invertRegex;
 
     public Output<Boolean> getInvertRegex() {

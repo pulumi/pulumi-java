@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dataproc.inputs.ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,14 +21,14 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigGetArgs extends io
      * Disk Config
      * 
      */
-    @InputImport(name="diskConfig")
+    @Import(name="diskConfig")
       private final @Nullable Output<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs> diskConfig;
 
     public Output<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs> getDiskConfig() {
         return this.diskConfig == null ? Output.empty() : this.diskConfig;
     }
 
-    @InputImport(name="instanceNames")
+    @Import(name="instanceNames")
       private final @Nullable Output<List<String>> instanceNames;
 
     public Output<List<String>> getInstanceNames() {
@@ -40,7 +40,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigGetArgs extends io
      * Defaults to 0.
      * 
      */
-    @InputImport(name="numInstances")
+    @Import(name="numInstances")
       private final @Nullable Output<Integer> numInstances;
 
     public Output<Integer> getNumInstances() {

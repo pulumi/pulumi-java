@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.gkehub.inputs.MembershipEndpointGkeClusterGetArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class MembershipEndpointGetArgs extends io.pulumi.resources.Resourc
      * Structure is documented below.
      * 
      */
-    @InputImport(name="gkeCluster")
+    @Import(name="gkeCluster")
       private final @Nullable Output<MembershipEndpointGkeClusterGetArgs> gkeCluster;
 
     public Output<MembershipEndpointGkeClusterGetArgs> getGkeCluster() {

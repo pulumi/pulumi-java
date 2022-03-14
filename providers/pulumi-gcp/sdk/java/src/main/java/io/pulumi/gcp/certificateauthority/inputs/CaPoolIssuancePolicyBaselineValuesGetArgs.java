@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesAdditionalExtensionGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesCaOptionsGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs;
@@ -24,7 +24,7 @@ public final class CaPoolIssuancePolicyBaselineValuesGetArgs extends io.pulumi.r
      * Structure is documented below.
      * 
      */
-    @InputImport(name="additionalExtensions")
+    @Import(name="additionalExtensions")
       private final @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionGetArgs>> additionalExtensions;
 
     public Output<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionGetArgs>> getAdditionalExtensions() {
@@ -36,7 +36,7 @@ public final class CaPoolIssuancePolicyBaselineValuesGetArgs extends io.pulumi.r
      * "Authority Information Access" extension in the certificate.
      * 
      */
-    @InputImport(name="aiaOcspServers")
+    @Import(name="aiaOcspServers")
       private final @Nullable Output<List<String>> aiaOcspServers;
 
     public Output<List<String>> getAiaOcspServers() {
@@ -48,7 +48,7 @@ public final class CaPoolIssuancePolicyBaselineValuesGetArgs extends io.pulumi.r
      * Structure is documented below.
      * 
      */
-    @InputImport(name="caOptions", required=true)
+    @Import(name="caOptions", required=true)
       private final Output<CaPoolIssuancePolicyBaselineValuesCaOptionsGetArgs> caOptions;
 
     public Output<CaPoolIssuancePolicyBaselineValuesCaOptionsGetArgs> getCaOptions() {
@@ -60,7 +60,7 @@ public final class CaPoolIssuancePolicyBaselineValuesGetArgs extends io.pulumi.r
      * Structure is documented below.
      * 
      */
-    @InputImport(name="keyUsage", required=true)
+    @Import(name="keyUsage", required=true)
       private final Output<CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs> keyUsage;
 
     public Output<CaPoolIssuancePolicyBaselineValuesKeyUsageGetArgs> getKeyUsage() {
@@ -72,7 +72,7 @@ public final class CaPoolIssuancePolicyBaselineValuesGetArgs extends io.pulumi.r
      * Structure is documented below.
      * 
      */
-    @InputImport(name="policyIds")
+    @Import(name="policyIds")
       private final @Nullable Output<List<CaPoolIssuancePolicyBaselineValuesPolicyIdGetArgs>> policyIds;
 
     public Output<List<CaPoolIssuancePolicyBaselineValuesPolicyIdGetArgs>> getPolicyIds() {

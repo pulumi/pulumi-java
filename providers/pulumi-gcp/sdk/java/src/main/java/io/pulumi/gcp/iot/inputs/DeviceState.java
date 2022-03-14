@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iot.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.iot.inputs.DeviceConfigGetArgs;
 import io.pulumi.gcp.iot.inputs.DeviceCredentialGetArgs;
 import io.pulumi.gcp.iot.inputs.DeviceGatewayConfigGetArgs;
@@ -26,7 +26,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * If a device is blocked, connections or requests from this device will fail.
      * 
      */
-    @InputImport(name="blocked")
+    @Import(name="blocked")
       private final @Nullable Output<Boolean> blocked;
 
     public Output<Boolean> getBlocked() {
@@ -37,7 +37,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * The most recent device configuration, which is eventually sent from Cloud IoT Core to the device.
      * 
      */
-    @InputImport(name="configs")
+    @Import(name="configs")
       private final @Nullable Output<List<DeviceConfigGetArgs>> configs;
 
     public Output<List<DeviceConfigGetArgs>> getConfigs() {
@@ -49,7 +49,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="credentials")
+    @Import(name="credentials")
       private final @Nullable Output<List<DeviceCredentialGetArgs>> credentials;
 
     public Output<List<DeviceCredentialGetArgs>> getCredentials() {
@@ -61,7 +61,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="gatewayConfig")
+    @Import(name="gatewayConfig")
       private final @Nullable Output<DeviceGatewayConfigGetArgs> gatewayConfig;
 
     public Output<DeviceGatewayConfigGetArgs> getGatewayConfig() {
@@ -72,7 +72,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * The last time a cloud-to-device config version acknowledgment was received from the device.
      * 
      */
-    @InputImport(name="lastConfigAckTime")
+    @Import(name="lastConfigAckTime")
       private final @Nullable Output<String> lastConfigAckTime;
 
     public Output<String> getLastConfigAckTime() {
@@ -83,7 +83,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * The last time a cloud-to-device config version was sent to the device.
      * 
      */
-    @InputImport(name="lastConfigSendTime")
+    @Import(name="lastConfigSendTime")
       private final @Nullable Output<String> lastConfigSendTime;
 
     public Output<String> getLastConfigSendTime() {
@@ -94,7 +94,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * The error message of the most recent error, such as a failure to publish to Cloud Pub/Sub.
      * 
      */
-    @InputImport(name="lastErrorStatuses")
+    @Import(name="lastErrorStatuses")
       private final @Nullable Output<List<DeviceLastErrorStatusGetArgs>> lastErrorStatuses;
 
     public Output<List<DeviceLastErrorStatusGetArgs>> getLastErrorStatuses() {
@@ -105,7 +105,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * The time the most recent error occurred, such as a failure to publish to Cloud Pub/Sub.
      * 
      */
-    @InputImport(name="lastErrorTime")
+    @Import(name="lastErrorTime")
       private final @Nullable Output<String> lastErrorTime;
 
     public Output<String> getLastErrorTime() {
@@ -116,7 +116,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * The last time a telemetry event was received.
      * 
      */
-    @InputImport(name="lastEventTime")
+    @Import(name="lastEventTime")
       private final @Nullable Output<String> lastEventTime;
 
     public Output<String> getLastEventTime() {
@@ -127,7 +127,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * The last time an MQTT PINGREQ was received.
      * 
      */
-    @InputImport(name="lastHeartbeatTime")
+    @Import(name="lastHeartbeatTime")
       private final @Nullable Output<String> lastHeartbeatTime;
 
     public Output<String> getLastHeartbeatTime() {
@@ -138,7 +138,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * The last time a state event was received.
      * 
      */
-    @InputImport(name="lastStateTime")
+    @Import(name="lastStateTime")
       private final @Nullable Output<String> lastStateTime;
 
     public Output<String> getLastStateTime() {
@@ -150,7 +150,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * Possible values are `NONE`, `ERROR`, `INFO`, and `DEBUG`.
      * 
      */
-    @InputImport(name="logLevel")
+    @Import(name="logLevel")
       private final @Nullable Output<String> logLevel;
 
     public Output<String> getLogLevel() {
@@ -161,7 +161,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * The metadata key-value pairs assigned to the device.
      * 
      */
-    @InputImport(name="metadata")
+    @Import(name="metadata")
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
@@ -172,7 +172,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * A unique name for the resource.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -184,7 +184,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * unique.
      * 
      */
-    @InputImport(name="numId")
+    @Import(name="numId")
       private final @Nullable Output<String> numId;
 
     public Output<String> getNumId() {
@@ -195,7 +195,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * The name of the device registry where this device should be created.
      * 
      */
-    @InputImport(name="registry")
+    @Import(name="registry")
       private final @Nullable Output<String> registry;
 
     public Output<String> getRegistry() {
@@ -206,7 +206,7 @@ public final class DeviceState extends io.pulumi.resources.ResourceArgs {
      * The state most recently received from the device.
      * 
      */
-    @InputImport(name="states")
+    @Import(name="states")
       private final @Nullable Output<List<DeviceStateGetArgs>> states;
 
     public Output<List<DeviceStateGetArgs>> getStates() {

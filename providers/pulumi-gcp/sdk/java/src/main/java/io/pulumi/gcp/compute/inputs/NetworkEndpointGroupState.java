@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
      * network endpoint.
      * 
      */
-    @InputImport(name="defaultPort")
+    @Import(name="defaultPort")
       private final @Nullable Output<Integer> defaultPort;
 
     public Output<Integer> getDefaultPort() {
@@ -32,7 +32,7 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
      * you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -49,7 +49,7 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
      * character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -61,7 +61,7 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
      * Uses "default" project network if unspecified.
      * 
      */
-    @InputImport(name="network")
+    @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
@@ -74,7 +74,7 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
      * Possible values are `GCE_VM_IP_PORT`.
      * 
      */
-    @InputImport(name="networkEndpointType")
+    @Import(name="networkEndpointType")
       private final @Nullable Output<String> networkEndpointType;
 
     public Output<String> getNetworkEndpointType() {
@@ -86,7 +86,7 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -97,7 +97,7 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
      * The URI of the created resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -108,7 +108,7 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
      * Number of network endpoints in the network endpoint group.
      * 
      */
-    @InputImport(name="size")
+    @Import(name="size")
       private final @Nullable Output<Integer> size;
 
     public Output<Integer> getSize() {
@@ -119,7 +119,7 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
      * Optional subnetwork to which all network endpoints in the NEG belong.
      * 
      */
-    @InputImport(name="subnetwork")
+    @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {
@@ -130,7 +130,7 @@ public final class NetworkEndpointGroupState extends io.pulumi.resources.Resourc
      * Zone where the network endpoint group is located.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RegionPerInstanceConfigArgs;
@@ -59,7 +59,7 @@ public class RegionPerInstanceConfig extends io.pulumi.resources.CustomResource 
      * * NONE
      * 
      */
-    @OutputExport(name="minimalAction", type=String.class, parameters={})
+    @Export(name="minimalAction", type=String.class, parameters={})
     private Output</* @Nullable */ String> minimalAction;
 
     /**
@@ -83,7 +83,7 @@ public class RegionPerInstanceConfig extends io.pulumi.resources.CustomResource 
      * * NONE
      * 
      */
-    @OutputExport(name="mostDisruptiveAllowedAction", type=String.class, parameters={})
+    @Export(name="mostDisruptiveAllowedAction", type=String.class, parameters={})
     private Output</* @Nullable */ String> mostDisruptiveAllowedAction;
 
     /**
@@ -102,7 +102,7 @@ public class RegionPerInstanceConfig extends io.pulumi.resources.CustomResource 
      * The name for this per-instance config and its corresponding instance.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -117,7 +117,7 @@ public class RegionPerInstanceConfig extends io.pulumi.resources.CustomResource 
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="preservedState", type=RegionPerInstanceConfigPreservedState.class, parameters={})
+    @Export(name="preservedState", type=RegionPerInstanceConfigPreservedState.class, parameters={})
     private Output</* @Nullable */ RegionPerInstanceConfigPreservedState> preservedState;
 
     /**
@@ -133,7 +133,7 @@ public class RegionPerInstanceConfig extends io.pulumi.resources.CustomResource 
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -148,7 +148,7 @@ public class RegionPerInstanceConfig extends io.pulumi.resources.CustomResource 
      * Region where the containing instance group manager is located
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -162,7 +162,7 @@ public class RegionPerInstanceConfig extends io.pulumi.resources.CustomResource 
      * The region instance group manager this instance config is part of.
      * 
      */
-    @OutputExport(name="regionInstanceGroupManager", type=String.class, parameters={})
+    @Export(name="regionInstanceGroupManager", type=String.class, parameters={})
     private Output<String> regionInstanceGroupManager;
 
     /**
@@ -178,7 +178,7 @@ public class RegionPerInstanceConfig extends io.pulumi.resources.CustomResource 
      * State will be removed on the next instance recreation or update.
      * 
      */
-    @OutputExport(name="removeInstanceStateOnDestroy", type=Boolean.class, parameters={})
+    @Export(name="removeInstanceStateOnDestroy", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> removeInstanceStateOnDestroy;
 
     /**

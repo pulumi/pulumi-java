@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class DatabaseInstanceSettingsMaintenanceWindow {
     /**
      * Day of week (`1-7`), starting on Monday
@@ -29,11 +29,11 @@ public final class DatabaseInstanceSettingsMaintenanceWindow {
      */
     private final @Nullable String updateTrack;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private DatabaseInstanceSettingsMaintenanceWindow(
-        @OutputCustomType.Parameter("day") @Nullable Integer day,
-        @OutputCustomType.Parameter("hour") @Nullable Integer hour,
-        @OutputCustomType.Parameter("updateTrack") @Nullable String updateTrack) {
+        @CustomType.Parameter("day") @Nullable Integer day,
+        @CustomType.Parameter("hour") @Nullable Integer hour,
+        @CustomType.Parameter("updateTrack") @Nullable String updateTrack) {
         this.day = day;
         this.hour = hour;
         this.updateTrack = updateTrack;

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class AuthorityAccessUrlArgs extends io.pulumi.resources.ResourceAr
 
     public static final AuthorityAccessUrlArgs Empty = new AuthorityAccessUrlArgs();
 
-    @InputImport(name="caCertificateAccessUrl")
+    @Import(name="caCertificateAccessUrl")
       private final @Nullable Output<String> caCertificateAccessUrl;
 
     public Output<String> getCaCertificateAccessUrl() {
         return this.caCertificateAccessUrl == null ? Output.empty() : this.caCertificateAccessUrl;
     }
 
-    @InputImport(name="crlAccessUrls")
+    @Import(name="crlAccessUrls")
       private final @Nullable Output<List<String>> crlAccessUrls;
 
     public Output<List<String>> getCrlAccessUrls() {

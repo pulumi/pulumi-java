@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.serviceAccount.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class GetAccountKeyArgs extends io.pulumi.resources.InvokeArgs {
      * is the email address or unique id of the service account.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -32,7 +32,7 @@ public final class GetAccountKeyArgs extends io.pulumi.resources.InvokeArgs {
      * Defaults to the provider project configuration.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable String project;
 
     public Optional<String> getProject() {
@@ -43,7 +43,7 @@ public final class GetAccountKeyArgs extends io.pulumi.resources.InvokeArgs {
      * The output format of the public key requested. TYPE_X509_PEM_FILE is the default output format.
      * 
      */
-    @InputImport(name="publicKeyType")
+    @Import(name="publicKeyType")
       private final @Nullable String publicKeyType;
 
     public Optional<String> getPublicKeyType() {

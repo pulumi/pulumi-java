@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.gameservices.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GameServerConfigFleetConfig {
     /**
      * The fleet spec, which is sent to Agones to configure fleet.
@@ -28,10 +28,10 @@ public final class GameServerConfigFleetConfig {
      */
     private final @Nullable String name;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GameServerConfigFleetConfig(
-        @OutputCustomType.Parameter("fleetSpec") String fleetSpec,
-        @OutputCustomType.Parameter("name") @Nullable String name) {
+        @CustomType.Parameter("fleetSpec") String fleetSpec,
+        @CustomType.Parameter("name") @Nullable String name) {
         this.fleetSpec = fleetSpec;
         this.name = name;
     }

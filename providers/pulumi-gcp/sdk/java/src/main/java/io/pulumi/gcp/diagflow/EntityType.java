@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.diagflow.EntityTypeArgs;
@@ -41,7 +41,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * The name of this entity type to be displayed on the console.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -55,7 +55,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * Enables fuzzy entity extraction during classification.
      * 
      */
-    @OutputExport(name="enableFuzzyExtraction", type=Boolean.class, parameters={})
+    @Export(name="enableFuzzyExtraction", type=Boolean.class, parameters={})
     private Output</* @Nullable */ Boolean> enableFuzzyExtraction;
 
     /**
@@ -70,7 +70,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="entities", type=List.class, parameters={EntityTypeEntity.class})
+    @Export(name="entities", type=List.class, parameters={EntityTypeEntity.class})
     private Output</* @Nullable */ List<EntityTypeEntity>> entities;
 
     /**
@@ -90,7 +90,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      *   Possible values are `KIND_MAP`, `KIND_LIST`, and `KIND_REGEXP`.
      * 
      */
-    @OutputExport(name="kind", type=String.class, parameters={})
+    @Export(name="kind", type=String.class, parameters={})
     private Output<String> kind;
 
     /**
@@ -109,7 +109,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * The unique identifier of the entity type. Format: projects/<Project ID>/agent/entityTypes/<Entity type ID>.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -124,7 +124,7 @@ public class EntityType extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**

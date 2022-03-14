@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionInspectTemplateInspectConfigLimits {
     /**
      * Configuration of findings limit given for specified infoTypes.
@@ -29,11 +29,11 @@ public final class PreventionInspectTemplateInspectConfigLimits {
      */
     private final Integer maxFindingsPerRequest;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionInspectTemplateInspectConfigLimits(
-        @OutputCustomType.Parameter("maxFindingsPerInfoTypes") @Nullable List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType> maxFindingsPerInfoTypes,
-        @OutputCustomType.Parameter("maxFindingsPerItem") Integer maxFindingsPerItem,
-        @OutputCustomType.Parameter("maxFindingsPerRequest") Integer maxFindingsPerRequest) {
+        @CustomType.Parameter("maxFindingsPerInfoTypes") @Nullable List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoType> maxFindingsPerInfoTypes,
+        @CustomType.Parameter("maxFindingsPerItem") Integer maxFindingsPerItem,
+        @CustomType.Parameter("maxFindingsPerRequest") Integer maxFindingsPerRequest) {
         this.maxFindingsPerInfoTypes = maxFindingsPerInfoTypes;
         this.maxFindingsPerItem = maxFindingsPerItem;
         this.maxFindingsPerRequest = maxFindingsPerRequest;

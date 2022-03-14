@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.vertex.inputs.AiFeatureStoreOnlineServingConfigGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * nine fractional digits.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -33,7 +33,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * Used to perform consistent read-modify-write updates.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -44,7 +44,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * If set to true, any EntityTypes and Features for this Featurestore will also be deleted
      * 
      */
-    @InputImport(name="forceDestroy")
+    @Import(name="forceDestroy")
       private final @Nullable Output<Boolean> forceDestroy;
 
     public Output<Boolean> getForceDestroy() {
@@ -55,7 +55,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * A set of key/value label pairs to assign to this Featurestore.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -66,7 +66,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * The name of the Featurestore. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -78,7 +78,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="onlineServingConfig")
+    @Import(name="onlineServingConfig")
       private final @Nullable Output<AiFeatureStoreOnlineServingConfigGetArgs> onlineServingConfig;
 
     public Output<AiFeatureStoreOnlineServingConfigGetArgs> getOnlineServingConfig() {
@@ -90,7 +90,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -101,7 +101,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * The region of the dataset. eg us-central1
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -113,7 +113,7 @@ public final class AiFeatureStoreState extends io.pulumi.resources.ResourceArgs 
      * to nine fractional digits.
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

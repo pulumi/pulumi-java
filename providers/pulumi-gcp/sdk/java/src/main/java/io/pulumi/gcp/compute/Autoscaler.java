@@ -5,7 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.AutoscalerArgs;
@@ -62,7 +62,7 @@ public class Autoscaler extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="autoscalingPolicy", type=AutoscalerAutoscalingPolicy.class, parameters={})
+    @Export(name="autoscalingPolicy", type=AutoscalerAutoscalingPolicy.class, parameters={})
     private Output<AutoscalerAutoscalingPolicy> autoscalingPolicy;
 
     /**
@@ -81,7 +81,7 @@ public class Autoscaler extends io.pulumi.resources.CustomResource {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @OutputExport(name="creationTimestamp", type=String.class, parameters={})
+    @Export(name="creationTimestamp", type=String.class, parameters={})
     private Output<String> creationTimestamp;
 
     /**
@@ -95,7 +95,7 @@ public class Autoscaler extends io.pulumi.resources.CustomResource {
      * An optional description of this resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -109,7 +109,7 @@ public class Autoscaler extends io.pulumi.resources.CustomResource {
      * The identifier for this object. Format specified above.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -124,7 +124,7 @@ public class Autoscaler extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -139,7 +139,7 @@ public class Autoscaler extends io.pulumi.resources.CustomResource {
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**
@@ -155,7 +155,7 @@ public class Autoscaler extends io.pulumi.resources.CustomResource {
      * be a positive float value. If not defined, the default is 0.8.
      * 
      */
-    @OutputExport(name="target", type=String.class, parameters={})
+    @Export(name="target", type=String.class, parameters={})
     private Output<String> target;
 
     /**
@@ -171,7 +171,7 @@ public class Autoscaler extends io.pulumi.resources.CustomResource {
      * URL of the zone where the instance group resides.
      * 
      */
-    @OutputExport(name="zone", type=String.class, parameters={})
+    @Export(name="zone", type=String.class, parameters={})
     private Output<String> zone;
 
     /**

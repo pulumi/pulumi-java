@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerBuildArtifactsObjectsTiming;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerBuildArtifactsObjects {
     /**
      * Cloud Storage bucket and optional object path, in the form "gs://bucket/path/to/somewhere/".
@@ -33,11 +33,11 @@ public final class TriggerBuildArtifactsObjects {
      */
     private final @Nullable List<TriggerBuildArtifactsObjectsTiming> timings;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerBuildArtifactsObjects(
-        @OutputCustomType.Parameter("location") @Nullable String location,
-        @OutputCustomType.Parameter("paths") @Nullable List<String> paths,
-        @OutputCustomType.Parameter("timings") @Nullable List<TriggerBuildArtifactsObjectsTiming> timings) {
+        @CustomType.Parameter("location") @Nullable String location,
+        @CustomType.Parameter("paths") @Nullable List<String> paths,
+        @CustomType.Parameter("timings") @Nullable List<TriggerBuildArtifactsObjectsTiming> timings) {
         this.location = location;
         this.paths = paths;
         this.timings = timings;

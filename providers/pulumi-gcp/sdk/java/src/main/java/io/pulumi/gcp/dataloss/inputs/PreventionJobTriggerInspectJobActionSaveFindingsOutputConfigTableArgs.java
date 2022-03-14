@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigT
      * Dataset ID of the table.
      * 
      */
-    @InputImport(name="datasetId", required=true)
+    @Import(name="datasetId", required=true)
       private final Output<String> datasetId;
 
     public Output<String> getDatasetId() {
@@ -29,7 +29,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigT
      * The Google Cloud Platform project ID of the project containing the table.
      * 
      */
-    @InputImport(name="projectId", required=true)
+    @Import(name="projectId", required=true)
       private final Output<String> projectId;
 
     public Output<String> getProjectId() {
@@ -41,7 +41,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigT
      * `dlp_googleapis_yyyy_mm_dd_[dlp_job_id]`. Pacific timezone will be used for generating the date details.
      * 
      */
-    @InputImport(name="tableId")
+    @Import(name="tableId")
       private final @Nullable Output<String> tableId;
 
     public Output<String> getTableId() {

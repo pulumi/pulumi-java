@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigateway;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigateway.GatewayArgs;
@@ -52,7 +52,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * When changing api configs please ensure the new config is a new resource and the lifecycle rule `create_before_destroy` is set.
      * 
      */
-    @OutputExport(name="apiConfig", type=String.class, parameters={})
+    @Export(name="apiConfig", type=String.class, parameters={})
     private Output<String> apiConfig;
 
     /**
@@ -67,7 +67,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * The default API Gateway host name of the form {gatewayId}-{hash}.{region_code}.gateway.dev.
      * 
      */
-    @OutputExport(name="defaultHostname", type=String.class, parameters={})
+    @Export(name="defaultHostname", type=String.class, parameters={})
     private Output<String> defaultHostname;
 
     /**
@@ -81,7 +81,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * A user-visible name for the API.
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -95,7 +95,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Identifier to assign to the Gateway. Must be unique within scope of the parent resource(project).
      * 
      */
-    @OutputExport(name="gatewayId", type=String.class, parameters={})
+    @Export(name="gatewayId", type=String.class, parameters={})
     private Output<String> gatewayId;
 
     /**
@@ -109,7 +109,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Resource labels to represent user-provided metadata.
      * 
      */
-    @OutputExport(name="labels", type=Map.class, parameters={String.class, String.class})
+    @Export(name="labels", type=Map.class, parameters={String.class, String.class})
     private Output</* @Nullable */ Map<String,String>> labels;
 
     /**
@@ -123,7 +123,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * Resource name of the Gateway. Format: projects/{project}/locations/{region}/gateways/{gateway}
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -138,7 +138,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -153,7 +153,7 @@ public class Gateway extends io.pulumi.resources.CustomResource {
      * The region of the gateway for the API.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**

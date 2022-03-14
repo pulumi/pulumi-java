@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudtasks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class QueueRetryConfigArgs extends io.pulumi.resources.ResourceArgs
      * -1 indicates unlimited attempts.
      * 
      */
-    @InputImport(name="maxAttempts")
+    @Import(name="maxAttempts")
       private final @Nullable Output<Integer> maxAttempts;
 
     public Output<Integer> getMaxAttempts() {
@@ -38,7 +38,7 @@ public final class QueueRetryConfigArgs extends io.pulumi.resources.ResourceArgs
      * specifies that the task should be retried.
      * 
      */
-    @InputImport(name="maxBackoff")
+    @Import(name="maxBackoff")
       private final @Nullable Output<String> maxBackoff;
 
     public Output<String> getMaxBackoff() {
@@ -52,7 +52,7 @@ public final class QueueRetryConfigArgs extends io.pulumi.resources.ResourceArgs
      * up to maxAttempts times.
      * 
      */
-    @InputImport(name="maxDoublings")
+    @Import(name="maxDoublings")
       private final @Nullable Output<Integer> maxDoublings;
 
     public Output<Integer> getMaxDoublings() {
@@ -68,7 +68,7 @@ public final class QueueRetryConfigArgs extends io.pulumi.resources.ResourceArgs
      * If zero, then the task age is unlimited.
      * 
      */
-    @InputImport(name="maxRetryDuration")
+    @Import(name="maxRetryDuration")
       private final @Nullable Output<String> maxRetryDuration;
 
     public Output<String> getMaxRetryDuration() {
@@ -81,7 +81,7 @@ public final class QueueRetryConfigArgs extends io.pulumi.resources.ResourceArgs
      * specifies that the task should be retried.
      * 
      */
-    @InputImport(name="minBackoff")
+    @Import(name="minBackoff")
       private final @Nullable Output<String> minBackoff;
 
     public Output<String> getMinBackoff() {

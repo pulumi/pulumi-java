@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -13,49 +13,49 @@ public final class GetEnvironmentConfigPrivateEnvironmentConfig extends io.pulum
 
     public static final GetEnvironmentConfigPrivateEnvironmentConfig Empty = new GetEnvironmentConfigPrivateEnvironmentConfig();
 
-    @InputImport(name="cloudComposerConnectionSubnetwork", required=true)
+    @Import(name="cloudComposerConnectionSubnetwork", required=true)
       private final String cloudComposerConnectionSubnetwork;
 
     public String getCloudComposerConnectionSubnetwork() {
         return this.cloudComposerConnectionSubnetwork;
     }
 
-    @InputImport(name="cloudComposerNetworkIpv4CidrBlock", required=true)
+    @Import(name="cloudComposerNetworkIpv4CidrBlock", required=true)
       private final String cloudComposerNetworkIpv4CidrBlock;
 
     public String getCloudComposerNetworkIpv4CidrBlock() {
         return this.cloudComposerNetworkIpv4CidrBlock;
     }
 
-    @InputImport(name="cloudSqlIpv4CidrBlock", required=true)
+    @Import(name="cloudSqlIpv4CidrBlock", required=true)
       private final String cloudSqlIpv4CidrBlock;
 
     public String getCloudSqlIpv4CidrBlock() {
         return this.cloudSqlIpv4CidrBlock;
     }
 
-    @InputImport(name="enablePrivateEndpoint", required=true)
+    @Import(name="enablePrivateEndpoint", required=true)
       private final Boolean enablePrivateEndpoint;
 
     public Boolean getEnablePrivateEndpoint() {
         return this.enablePrivateEndpoint;
     }
 
-    @InputImport(name="enablePrivatelyUsedPublicIps", required=true)
+    @Import(name="enablePrivatelyUsedPublicIps", required=true)
       private final Boolean enablePrivatelyUsedPublicIps;
 
     public Boolean getEnablePrivatelyUsedPublicIps() {
         return this.enablePrivatelyUsedPublicIps;
     }
 
-    @InputImport(name="masterIpv4CidrBlock", required=true)
+    @Import(name="masterIpv4CidrBlock", required=true)
       private final String masterIpv4CidrBlock;
 
     public String getMasterIpv4CidrBlock() {
         return this.masterIpv4CidrBlock;
     }
 
-    @InputImport(name="webServerIpv4CidrBlock", required=true)
+    @Import(name="webServerIpv4CidrBlock", required=true)
       private final String webServerIpv4CidrBlock;
 
     public String getWebServerIpv4CidrBlock() {

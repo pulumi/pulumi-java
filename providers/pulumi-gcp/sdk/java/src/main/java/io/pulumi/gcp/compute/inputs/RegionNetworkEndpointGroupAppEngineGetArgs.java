@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class RegionNetworkEndpointGroupAppEngineGetArgs extends io.pulumi.
      * Example value: "default", "my-service".
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {
@@ -36,7 +36,7 @@ public final class RegionNetworkEndpointGroupAppEngineGetArgs extends io.pulumi.
      * will parse them to { function = "function1" } and { function = "function2" } respectively.
      * 
      */
-    @InputImport(name="urlMask")
+    @Import(name="urlMask")
       private final @Nullable Output<String> urlMask;
 
     public Output<String> getUrlMask() {
@@ -49,7 +49,7 @@ public final class RegionNetworkEndpointGroupAppEngineGetArgs extends io.pulumi.
      * Example value: "v1", "v2".
      * 
      */
-    @InputImport(name="version")
+    @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {

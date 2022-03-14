@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -16,7 +16,7 @@ public final class DicomStoreIamBindingArgs extends io.pulumi.resources.Resource
 
     public static final DicomStoreIamBindingArgs Empty = new DicomStoreIamBindingArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<DicomStoreIamBindingConditionArgs> condition;
 
     public Output<DicomStoreIamBindingConditionArgs> getCondition() {
@@ -30,14 +30,14 @@ public final class DicomStoreIamBindingArgs extends io.pulumi.resources.Resource
      * project setting will be used as a fallback.
      * 
      */
-    @InputImport(name="dicomStoreId", required=true)
+    @Import(name="dicomStoreId", required=true)
       private final Output<String> dicomStoreId;
 
     public Output<String> getDicomStoreId() {
         return this.dicomStoreId;
     }
 
-    @InputImport(name="members", required=true)
+    @Import(name="members", required=true)
       private final Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
@@ -50,7 +50,7 @@ public final class DicomStoreIamBindingArgs extends io.pulumi.resources.Resource
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

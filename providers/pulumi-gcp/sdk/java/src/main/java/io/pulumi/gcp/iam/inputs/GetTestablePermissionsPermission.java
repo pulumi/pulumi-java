@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iam.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class GetTestablePermissionsPermission extends io.pulumi.resources.
      * Whether the corresponding API has been enabled for the resource.
      * 
      */
-    @InputImport(name="apiDisabled", required=true)
+    @Import(name="apiDisabled", required=true)
       private final Boolean apiDisabled;
 
     public Boolean getApiDisabled() {
@@ -28,7 +28,7 @@ public final class GetTestablePermissionsPermission extends io.pulumi.resources.
      * The level of support for custom roles. Can be one of `"NOT_SUPPORTED"`, `"SUPPORTED"`, `"TESTING"`. Default is `"SUPPORTED"`
      * 
      */
-    @InputImport(name="customSupportLevel", required=true)
+    @Import(name="customSupportLevel", required=true)
       private final String customSupportLevel;
 
     public String getCustomSupportLevel() {
@@ -39,7 +39,7 @@ public final class GetTestablePermissionsPermission extends io.pulumi.resources.
      * Name of the permission.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -50,7 +50,7 @@ public final class GetTestablePermissionsPermission extends io.pulumi.resources.
      * Release stage of the permission.
      * 
      */
-    @InputImport(name="stage", required=true)
+    @Import(name="stage", required=true)
       private final String stage;
 
     public String getStage() {
@@ -61,7 +61,7 @@ public final class GetTestablePermissionsPermission extends io.pulumi.resources.
      * Human readable title of the permission.
      * 
      */
-    @InputImport(name="title", required=true)
+    @Import(name="title", required=true)
       private final String title;
 
     public String getTitle() {

@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlexibleAppVersionAutomaticScalingDiskUtilization {
     /**
      * Target bytes read per second.
@@ -32,12 +32,12 @@ public final class FlexibleAppVersionAutomaticScalingDiskUtilization {
      */
     private final @Nullable Integer targetWriteOpsPerSecond;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlexibleAppVersionAutomaticScalingDiskUtilization(
-        @OutputCustomType.Parameter("targetReadBytesPerSecond") @Nullable Integer targetReadBytesPerSecond,
-        @OutputCustomType.Parameter("targetReadOpsPerSecond") @Nullable Integer targetReadOpsPerSecond,
-        @OutputCustomType.Parameter("targetWriteBytesPerSecond") @Nullable Integer targetWriteBytesPerSecond,
-        @OutputCustomType.Parameter("targetWriteOpsPerSecond") @Nullable Integer targetWriteOpsPerSecond) {
+        @CustomType.Parameter("targetReadBytesPerSecond") @Nullable Integer targetReadBytesPerSecond,
+        @CustomType.Parameter("targetReadOpsPerSecond") @Nullable Integer targetReadOpsPerSecond,
+        @CustomType.Parameter("targetWriteBytesPerSecond") @Nullable Integer targetWriteBytesPerSecond,
+        @CustomType.Parameter("targetWriteOpsPerSecond") @Nullable Integer targetWriteOpsPerSecond) {
         this.targetReadBytesPerSecond = targetReadBytesPerSecond;
         this.targetReadOpsPerSecond = targetReadOpsPerSecond;
         this.targetWriteBytesPerSecond = targetWriteBytesPerSecond;

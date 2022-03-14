@@ -4,7 +4,7 @@
 package io.pulumi.gcp.firebase;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.firebase.ProjectArgs;
@@ -46,7 +46,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The GCP project display name
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output<String> displayName;
 
     /**
@@ -61,7 +61,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -76,7 +76,7 @@ public class Project extends io.pulumi.resources.CustomResource {
      * The number of the google project that firebase is enabled on.
      * 
      */
-    @OutputExport(name="projectNumber", type=String.class, parameters={})
+    @Export(name="projectNumber", type=String.class, parameters={})
     private Output<String> projectNumber;
 
     /**

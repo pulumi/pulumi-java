@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityKeySpecArgs;
 import java.lang.Boolean;
@@ -22,7 +22,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * The user provided Resource ID for this Certificate Authority.
      * 
      */
-    @InputImport(name="certificateAuthorityId", required=true)
+    @Import(name="certificateAuthorityId", required=true)
       private final Output<String> certificateAuthorityId;
 
     public Output<String> getCertificateAuthorityId() {
@@ -34,7 +34,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="config", required=true)
+    @Import(name="config", required=true)
       private final Output<AuthorityConfigArgs> config;
 
     public Output<AuthorityConfigArgs> getConfig() {
@@ -49,7 +49,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * created.
      * 
      */
-    @InputImport(name="gcsBucket")
+    @Import(name="gcsBucket")
       private final @Nullable Output<String> gcsBucket;
 
     public Output<String> getGcsBucket() {
@@ -61,7 +61,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * Use with care. Defaults to `false`.
      * 
      */
-    @InputImport(name="ignoreActiveCertificatesOnDeletion")
+    @Import(name="ignoreActiveCertificatesOnDeletion")
       private final @Nullable Output<Boolean> ignoreActiveCertificatesOnDeletion;
 
     public Output<Boolean> getIgnoreActiveCertificatesOnDeletion() {
@@ -75,7 +75,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="keySpec", required=true)
+    @Import(name="keySpec", required=true)
       private final Output<AuthorityKeySpecArgs> keySpec;
 
     public Output<AuthorityKeySpecArgs> getKeySpec() {
@@ -88,7 +88,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * "1.3kg", "count": "3" }.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -101,7 +101,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * fractional digits, terminated by 's'. Example: "3.5s".
      * 
      */
-    @InputImport(name="lifetime")
+    @Import(name="lifetime")
       private final @Nullable Output<String> lifetime;
 
     public Output<String> getLifetime() {
@@ -113,7 +113,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * running `gcloud privateca locations list`.
      * 
      */
-    @InputImport(name="location", required=true)
+    @Import(name="location", required=true)
       private final Output<String> location;
 
     public Output<String> getLocation() {
@@ -124,7 +124,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * The name of the CaPool this Certificate Authority belongs to.
      * 
      */
-    @InputImport(name="pool", required=true)
+    @Import(name="pool", required=true)
       private final Output<String> pool;
 
     public Output<String> getPool() {
@@ -136,7 +136,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -152,7 +152,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * Possible values are `SELF_SIGNED` and `SUBORDINATE`.
      * 
      */
-    @InputImport(name="type")
+    @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {

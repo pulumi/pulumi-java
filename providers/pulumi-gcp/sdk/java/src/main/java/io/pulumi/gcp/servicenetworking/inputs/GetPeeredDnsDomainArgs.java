@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.servicenetworking.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,28 +12,28 @@ public final class GetPeeredDnsDomainArgs extends io.pulumi.resources.InvokeArgs
 
     public static final GetPeeredDnsDomainArgs Empty = new GetPeeredDnsDomainArgs();
 
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
         return this.name;
     }
 
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final String network;
 
     public String getNetwork() {
         return this.network;
     }
 
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final String project;
 
     public String getProject() {
         return this.project;
     }
 
-    @InputImport(name="service", required=true)
+    @Import(name="service", required=true)
       private final String service;
 
     public String getService() {

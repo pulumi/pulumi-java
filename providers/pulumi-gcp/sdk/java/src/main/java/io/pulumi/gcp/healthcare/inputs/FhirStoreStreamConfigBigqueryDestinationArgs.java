@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.healthcare.inputs.FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class FhirStoreStreamConfigBigqueryDestinationArgs extends io.pulum
      * BigQuery URI to a dataset, up to 2000 characters long, in the format bq://projectId.bqDatasetId
      * 
      */
-    @InputImport(name="datasetUri", required=true)
+    @Import(name="datasetUri", required=true)
       private final Output<String> datasetUri;
 
     public Output<String> getDatasetUri() {
@@ -30,7 +30,7 @@ public final class FhirStoreStreamConfigBigqueryDestinationArgs extends io.pulum
      * Structure is documented below.
      * 
      */
-    @InputImport(name="schemaConfig", required=true)
+    @Import(name="schemaConfig", required=true)
       private final Output<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> schemaConfig;
 
     public Output<FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs> getSchemaConfig() {

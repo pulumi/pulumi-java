@@ -3,24 +3,24 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterClusterAutoscalingAutoProvisioningDefault {
     private final String imageType;
     private final String minCpuPlatform;
     private final List<String> oauthScopes;
     private final String serviceAccount;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterClusterAutoscalingAutoProvisioningDefault(
-        @OutputCustomType.Parameter("imageType") String imageType,
-        @OutputCustomType.Parameter("minCpuPlatform") String minCpuPlatform,
-        @OutputCustomType.Parameter("oauthScopes") List<String> oauthScopes,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount) {
+        @CustomType.Parameter("imageType") String imageType,
+        @CustomType.Parameter("minCpuPlatform") String minCpuPlatform,
+        @CustomType.Parameter("oauthScopes") List<String> oauthScopes,
+        @CustomType.Parameter("serviceAccount") String serviceAccount) {
         this.imageType = imageType;
         this.minCpuPlatform = minCpuPlatform;
         this.oauthScopes = oauthScopes;

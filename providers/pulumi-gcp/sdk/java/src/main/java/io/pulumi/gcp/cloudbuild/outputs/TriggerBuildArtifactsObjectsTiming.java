@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class TriggerBuildArtifactsObjectsTiming {
     /**
      * End of time span.
@@ -26,10 +26,10 @@ public final class TriggerBuildArtifactsObjectsTiming {
      */
     private final @Nullable String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private TriggerBuildArtifactsObjectsTiming(
-        @OutputCustomType.Parameter("endTime") @Nullable String endTime,
-        @OutputCustomType.Parameter("startTime") @Nullable String startTime) {
+        @CustomType.Parameter("endTime") @Nullable String endTime,
+        @CustomType.Parameter("startTime") @Nullable String startTime) {
         this.endTime = endTime;
         this.startTime = startTime;
     }

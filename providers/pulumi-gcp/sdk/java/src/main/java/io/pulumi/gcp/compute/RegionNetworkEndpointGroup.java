@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RegionNetworkEndpointGroupArgs;
@@ -55,7 +55,7 @@ public class RegionNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="appEngine", type=RegionNetworkEndpointGroupAppEngine.class, parameters={})
+    @Export(name="appEngine", type=RegionNetworkEndpointGroupAppEngine.class, parameters={})
     private Output</* @Nullable */ RegionNetworkEndpointGroupAppEngine> appEngine;
 
     /**
@@ -73,7 +73,7 @@ public class RegionNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="cloudFunction", type=RegionNetworkEndpointGroupCloudFunction.class, parameters={})
+    @Export(name="cloudFunction", type=RegionNetworkEndpointGroupCloudFunction.class, parameters={})
     private Output</* @Nullable */ RegionNetworkEndpointGroupCloudFunction> cloudFunction;
 
     /**
@@ -91,7 +91,7 @@ public class RegionNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="cloudRun", type=RegionNetworkEndpointGroupCloudRun.class, parameters={})
+    @Export(name="cloudRun", type=RegionNetworkEndpointGroupCloudRun.class, parameters={})
     private Output</* @Nullable */ RegionNetworkEndpointGroupCloudRun> cloudRun;
 
     /**
@@ -108,7 +108,7 @@ public class RegionNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * you create the resource.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -129,7 +129,7 @@ public class RegionNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * character, which cannot be a dash.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -151,7 +151,7 @@ public class RegionNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * Possible values are `SERVERLESS`.
      * 
      */
-    @OutputExport(name="networkEndpointType", type=String.class, parameters={})
+    @Export(name="networkEndpointType", type=String.class, parameters={})
     private Output</* @Nullable */ String> networkEndpointType;
 
     /**
@@ -168,7 +168,7 @@ public class RegionNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * If it is not provided, the provider project is used.
      * 
      */
-    @OutputExport(name="project", type=String.class, parameters={})
+    @Export(name="project", type=String.class, parameters={})
     private Output<String> project;
 
     /**
@@ -183,7 +183,7 @@ public class RegionNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * A reference to the region where the Serverless NEGs Reside.
      * 
      */
-    @OutputExport(name="region", type=String.class, parameters={})
+    @Export(name="region", type=String.class, parameters={})
     private Output<String> region;
 
     /**
@@ -197,7 +197,7 @@ public class RegionNetworkEndpointGroup extends io.pulumi.resources.CustomResour
      * The URI of the created resource.
      * 
      */
-    @OutputExport(name="selfLink", type=String.class, parameters={})
+    @Export(name="selfLink", type=String.class, parameters={})
     private Output<String> selfLink;
 
     /**

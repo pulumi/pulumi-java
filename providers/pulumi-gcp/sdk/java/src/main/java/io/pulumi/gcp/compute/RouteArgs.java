@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -33,7 +33,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * Only IPv4 is supported.
      * 
      */
-    @InputImport(name="destRange", required=true)
+    @Import(name="destRange", required=true)
       private final Output<String> destRange;
 
     public Output<String> getDestRange() {
@@ -50,7 +50,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * last character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -61,7 +61,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * The network that this route applies to.
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final Output<String> network;
 
     public Output<String> getNetwork() {
@@ -78,7 +78,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * * The string `default-internet-gateway`.
      * 
      */
-    @InputImport(name="nextHopGateway")
+    @Import(name="nextHopGateway")
       private final @Nullable Output<String> nextHopGateway;
 
     public Output<String> getNextHopGateway() {
@@ -101,7 +101,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      *   a public (non-RFC 1918) IP CIDR range.
      * 
      */
-    @InputImport(name="nextHopIlb")
+    @Import(name="nextHopIlb")
       private final @Nullable Output<String> nextHopIlb;
 
     public Output<String> getNextHopIlb() {
@@ -117,7 +117,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * * Just the instance name, with the zone in `next_hop_instance_zone`.
      * 
      */
-    @InputImport(name="nextHopInstance")
+    @Import(name="nextHopInstance")
       private final @Nullable Output<String> nextHopInstance;
 
     public Output<String> getNextHopInstance() {
@@ -131,7 +131,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * a URL.
      * 
      */
-    @InputImport(name="nextHopInstanceZone")
+    @Import(name="nextHopInstanceZone")
       private final @Nullable Output<String> nextHopInstanceZone;
 
     public Output<String> getNextHopInstanceZone() {
@@ -142,7 +142,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * Network IP address of an instance that should handle matching packets.
      * 
      */
-    @InputImport(name="nextHopIp")
+    @Import(name="nextHopIp")
       private final @Nullable Output<String> nextHopIp;
 
     public Output<String> getNextHopIp() {
@@ -153,7 +153,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * URL to a VpnTunnel that should handle matching packets.
      * 
      */
-    @InputImport(name="nextHopVpnTunnel")
+    @Import(name="nextHopVpnTunnel")
       private final @Nullable Output<String> nextHopVpnTunnel;
 
     public Output<String> getNextHopVpnTunnel() {
@@ -168,7 +168,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * Default value is 1000. Valid range is 0 through 65535.
      * 
      */
-    @InputImport(name="priority")
+    @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -180,7 +180,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -191,7 +191,7 @@ public final class RouteArgs extends io.pulumi.resources.ResourceArgs {
      * A list of instance tags to which this route applies.
      * 
      */
-    @InputImport(name="tags")
+    @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {

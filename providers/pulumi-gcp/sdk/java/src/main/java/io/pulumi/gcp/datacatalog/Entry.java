@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datacatalog.EntryArgs;
@@ -48,7 +48,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * https://cloud.google.com/bigquery/docs/partitioned-tables#partitioning_versus_sharding.
      * 
      */
-    @OutputExport(name="bigqueryDateShardedSpecs", type=List.class, parameters={EntryBigqueryDateShardedSpec.class})
+    @Export(name="bigqueryDateShardedSpecs", type=List.class, parameters={EntryBigqueryDateShardedSpec.class})
     private Output<List<EntryBigqueryDateShardedSpec>> bigqueryDateShardedSpecs;
 
     /**
@@ -63,7 +63,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Specification that applies to a BigQuery table. This is only valid on entries of type TABLE.
      * 
      */
-    @OutputExport(name="bigqueryTableSpecs", type=List.class, parameters={EntryBigqueryTableSpec.class})
+    @Export(name="bigqueryTableSpecs", type=List.class, parameters={EntryBigqueryTableSpec.class})
     private Output<List<EntryBigqueryTableSpec>> bigqueryTableSpecs;
 
     /**
@@ -77,7 +77,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Entry description, which can consist of several sentences or paragraphs that describe entry contents.
      * 
      */
-    @OutputExport(name="description", type=String.class, parameters={})
+    @Export(name="description", type=String.class, parameters={})
     private Output</* @Nullable */ String> description;
 
     /**
@@ -92,7 +92,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * for example, "Analytics Data - Jan 2011".
      * 
      */
-    @OutputExport(name="displayName", type=String.class, parameters={})
+    @Export(name="displayName", type=String.class, parameters={})
     private Output</* @Nullable */ String> displayName;
 
     /**
@@ -107,7 +107,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * The name of the entry group this entry is in.
      * 
      */
-    @OutputExport(name="entryGroup", type=String.class, parameters={})
+    @Export(name="entryGroup", type=String.class, parameters={})
     private Output<String> entryGroup;
 
     /**
@@ -121,7 +121,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * The id of the entry to create.
      * 
      */
-    @OutputExport(name="entryId", type=String.class, parameters={})
+    @Export(name="entryId", type=String.class, parameters={})
     private Output<String> entryId;
 
     /**
@@ -136,7 +136,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Structure is documented below.
      * 
      */
-    @OutputExport(name="gcsFilesetSpec", type=EntryGcsFilesetSpec.class, parameters={})
+    @Export(name="gcsFilesetSpec", type=EntryGcsFilesetSpec.class, parameters={})
     private Output</* @Nullable */ EntryGcsFilesetSpec> gcsFilesetSpec;
 
     /**
@@ -151,7 +151,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * This field indicates the entry's source system that Data Catalog integrates with, such as BigQuery or Pub/Sub.
      * 
      */
-    @OutputExport(name="integratedSystem", type=String.class, parameters={})
+    @Export(name="integratedSystem", type=String.class, parameters={})
     private Output<String> integratedSystem;
 
     /**
@@ -170,7 +170,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * this field is optional and defaults to an empty string.
      * 
      */
-    @OutputExport(name="linkedResource", type=String.class, parameters={})
+    @Export(name="linkedResource", type=String.class, parameters={})
     private Output<String> linkedResource;
 
     /**
@@ -191,7 +191,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * child resources may not actually be stored in the location in this name.
      * 
      */
-    @OutputExport(name="name", type=String.class, parameters={})
+    @Export(name="name", type=String.class, parameters={})
     private Output<String> name;
 
     /**
@@ -210,7 +210,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * for what fields this schema can contain.
      * 
      */
-    @OutputExport(name="schema", type=String.class, parameters={})
+    @Export(name="schema", type=String.class, parameters={})
     private Output</* @Nullable */ String> schema;
 
     /**
@@ -229,7 +229,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * Possible values are `FILESET`.
      * 
      */
-    @OutputExport(name="type", type=String.class, parameters={})
+    @Export(name="type", type=String.class, parameters={})
     private Output</* @Nullable */ String> type;
 
     /**
@@ -247,7 +247,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
      * 
      */
-    @OutputExport(name="userSpecifiedSystem", type=String.class, parameters={})
+    @Export(name="userSpecifiedSystem", type=String.class, parameters={})
     private Output</* @Nullable */ String> userSpecifiedSystem;
 
     /**
@@ -267,7 +267,7 @@ public class Entry extends io.pulumi.resources.CustomResource {
      * numbers, and underscores; are case insensitive; must be at least 1 character and at most 64 characters long.
      * 
      */
-    @OutputExport(name="userSpecifiedType", type=String.class, parameters={})
+    @Export(name="userSpecifiedType", type=String.class, parameters={})
     private Output</* @Nullable */ String> userSpecifiedType;
 
     /**

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.deploymentmanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.deploymentmanager.inputs.DeploymentTargetConfigArgs;
 import io.pulumi.gcp.deploymentmanager.inputs.DeploymentTargetImportArgs;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class DeploymentTargetArgs extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="config", required=true)
+    @Import(name="config", required=true)
       private final Output<DeploymentTargetConfigArgs> config;
 
     public Output<DeploymentTargetConfigArgs> getConfig() {
@@ -35,7 +35,7 @@ public final class DeploymentTargetArgs extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="imports")
+    @Import(name="imports")
       private final @Nullable Output<List<DeploymentTargetImportArgs>> imports;
 
     public Output<List<DeploymentTargetImportArgs>> getImports() {

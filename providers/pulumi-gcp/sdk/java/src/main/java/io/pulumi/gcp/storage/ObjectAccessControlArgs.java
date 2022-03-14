@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * The name of the bucket.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -36,7 +36,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * * allAuthenticatedUsers
      * 
      */
-    @InputImport(name="entity", required=true)
+    @Import(name="entity", required=true)
       private final Output<String> entity;
 
     public Output<String> getEntity() {
@@ -47,7 +47,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * The name of the object to apply the access control to.
      * 
      */
-    @InputImport(name="object", required=true)
+    @Import(name="object", required=true)
       private final Output<String> object;
 
     public Output<String> getObject() {
@@ -59,7 +59,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * Possible values are `OWNER` and `READER`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {

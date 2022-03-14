@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfig {
     /**
      * Optional. The version of software inside the cluster. It must be one of the supported (https://cloud.google.com/dataproc/docs/concepts/versioning/dataproc-versions#other_versions). If unspecified, it defaults to the latest Debian version.
@@ -25,11 +25,11 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfig {
      */
     private final @Nullable Map<String,String> properties;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private WorkflowTemplatePlacementManagedClusterConfigSoftwareConfig(
-        @OutputCustomType.Parameter("imageVersion") @Nullable String imageVersion,
-        @OutputCustomType.Parameter("optionalComponents") @Nullable List<String> optionalComponents,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties) {
+        @CustomType.Parameter("imageVersion") @Nullable String imageVersion,
+        @CustomType.Parameter("optionalComponents") @Nullable List<String> optionalComponents,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties) {
         this.imageVersion = imageVersion;
         this.optionalComponents = optionalComponents;
         this.properties = properties;

@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetClusterDnsConfig {
     private final String clusterDns;
     private final String clusterDnsDomain;
     private final String clusterDnsScope;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetClusterDnsConfig(
-        @OutputCustomType.Parameter("clusterDns") String clusterDns,
-        @OutputCustomType.Parameter("clusterDnsDomain") String clusterDnsDomain,
-        @OutputCustomType.Parameter("clusterDnsScope") String clusterDnsScope) {
+        @CustomType.Parameter("clusterDns") String clusterDns,
+        @CustomType.Parameter("clusterDnsDomain") String clusterDnsDomain,
+        @CustomType.Parameter("clusterDnsScope") String clusterDnsScope) {
         this.clusterDns = clusterDns;
         this.clusterDnsDomain = clusterDnsDomain;
         this.clusterDnsScope = clusterDnsScope;

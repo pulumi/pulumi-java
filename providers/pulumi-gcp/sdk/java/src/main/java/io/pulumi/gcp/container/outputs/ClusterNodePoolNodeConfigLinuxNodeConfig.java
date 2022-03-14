@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterNodePoolNodeConfigLinuxNodeConfig {
     /**
      * The Linux kernel parameters to be applied to the nodes
@@ -18,8 +18,8 @@ public final class ClusterNodePoolNodeConfigLinuxNodeConfig {
      */
     private final Map<String,String> sysctls;
 
-    @OutputCustomType.Constructor
-    private ClusterNodePoolNodeConfigLinuxNodeConfig(@OutputCustomType.Parameter("sysctls") Map<String,String> sysctls) {
+    @CustomType.Constructor
+    private ClusterNodePoolNodeConfigLinuxNodeConfig(@CustomType.Parameter("sysctls") Map<String,String> sysctls) {
         this.sysctls = sysctls;
     }
 

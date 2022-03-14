@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.filestore.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class InstanceFileSharesNfsExportOption {
     /**
      * Either READ_ONLY, for allowing only read requests on the exported directory,
@@ -51,13 +51,13 @@ public final class InstanceFileSharesNfsExportOption {
      */
     private final @Nullable String squashMode;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private InstanceFileSharesNfsExportOption(
-        @OutputCustomType.Parameter("accessMode") @Nullable String accessMode,
-        @OutputCustomType.Parameter("anonGid") @Nullable Integer anonGid,
-        @OutputCustomType.Parameter("anonUid") @Nullable Integer anonUid,
-        @OutputCustomType.Parameter("ipRanges") @Nullable List<String> ipRanges,
-        @OutputCustomType.Parameter("squashMode") @Nullable String squashMode) {
+        @CustomType.Parameter("accessMode") @Nullable String accessMode,
+        @CustomType.Parameter("anonGid") @Nullable Integer anonGid,
+        @CustomType.Parameter("anonUid") @Nullable Integer anonUid,
+        @CustomType.Parameter("ipRanges") @Nullable List<String> ipRanges,
+        @CustomType.Parameter("squashMode") @Nullable String squashMode) {
         this.accessMode = accessMode;
         this.anonGid = anonGid;
         this.anonUid = anonUid;

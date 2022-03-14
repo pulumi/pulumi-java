@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FeatureMembershipConfigmanagementConfigSyncGit {
     private final @Nullable String gcpServiceAccountEmail;
     /**
@@ -48,16 +48,16 @@ public final class FeatureMembershipConfigmanagementConfigSyncGit {
      */
     private final @Nullable String syncWaitSecs;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FeatureMembershipConfigmanagementConfigSyncGit(
-        @OutputCustomType.Parameter("gcpServiceAccountEmail") @Nullable String gcpServiceAccountEmail,
-        @OutputCustomType.Parameter("httpsProxy") @Nullable String httpsProxy,
-        @OutputCustomType.Parameter("policyDir") @Nullable String policyDir,
-        @OutputCustomType.Parameter("secretType") @Nullable String secretType,
-        @OutputCustomType.Parameter("syncBranch") @Nullable String syncBranch,
-        @OutputCustomType.Parameter("syncRepo") @Nullable String syncRepo,
-        @OutputCustomType.Parameter("syncRev") @Nullable String syncRev,
-        @OutputCustomType.Parameter("syncWaitSecs") @Nullable String syncWaitSecs) {
+        @CustomType.Parameter("gcpServiceAccountEmail") @Nullable String gcpServiceAccountEmail,
+        @CustomType.Parameter("httpsProxy") @Nullable String httpsProxy,
+        @CustomType.Parameter("policyDir") @Nullable String policyDir,
+        @CustomType.Parameter("secretType") @Nullable String secretType,
+        @CustomType.Parameter("syncBranch") @Nullable String syncBranch,
+        @CustomType.Parameter("syncRepo") @Nullable String syncRepo,
+        @CustomType.Parameter("syncRev") @Nullable String syncRev,
+        @CustomType.Parameter("syncWaitSecs") @Nullable String syncWaitSecs) {
         this.gcpServiceAccountEmail = gcpServiceAccountEmail;
         this.httpsProxy = httpsProxy;
         this.policyDir = policyDir;

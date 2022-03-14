@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentInstanceFilterExclusionLabelArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentInstanceFilterInclusionLabelArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentInstanceFilterInventoryArgs;
@@ -22,7 +22,7 @@ public final class OsPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
      * Target all VMs in the project. If true, no other criteria is permitted.
      * 
      */
-    @InputImport(name="all")
+    @Import(name="all")
       private final @Nullable Output<Boolean> all;
 
     public Output<Boolean> getAll() {
@@ -33,7 +33,7 @@ public final class OsPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
      * List of label sets used for VM exclusion. If the list has more than one label set, the VM is excluded if any of the label sets are applicable for the VM.
      * 
      */
-    @InputImport(name="exclusionLabels")
+    @Import(name="exclusionLabels")
       private final @Nullable Output<List<OsPolicyAssignmentInstanceFilterExclusionLabelArgs>> exclusionLabels;
 
     public Output<List<OsPolicyAssignmentInstanceFilterExclusionLabelArgs>> getExclusionLabels() {
@@ -44,7 +44,7 @@ public final class OsPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
      * List of label sets used for VM inclusion. If the list has more than one `LabelSet`, the VM is included if any of the label sets are applicable for the VM.
      * 
      */
-    @InputImport(name="inclusionLabels")
+    @Import(name="inclusionLabels")
       private final @Nullable Output<List<OsPolicyAssignmentInstanceFilterInclusionLabelArgs>> inclusionLabels;
 
     public Output<List<OsPolicyAssignmentInstanceFilterInclusionLabelArgs>> getInclusionLabels() {
@@ -55,7 +55,7 @@ public final class OsPolicyAssignmentInstanceFilterArgs extends io.pulumi.resour
      * List of inventories to select VMs. A VM is selected if its inventory data matches at least one of the following inventories.
      * 
      */
-    @InputImport(name="inventories")
+    @Import(name="inventories")
       private final @Nullable Output<List<OsPolicyAssignmentInstanceFilterInventoryArgs>> inventories;
 
     public Output<List<OsPolicyAssignmentInstanceFilterInventoryArgs>> getInventories() {

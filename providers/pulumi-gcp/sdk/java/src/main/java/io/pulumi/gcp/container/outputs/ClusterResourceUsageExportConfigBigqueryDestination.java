@@ -3,16 +3,16 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ClusterResourceUsageExportConfigBigqueryDestination {
     private final String datasetId;
 
-    @OutputCustomType.Constructor
-    private ClusterResourceUsageExportConfigBigqueryDestination(@OutputCustomType.Parameter("datasetId") String datasetId) {
+    @CustomType.Constructor
+    private ClusterResourceUsageExportConfigBigqueryDestination(@CustomType.Parameter("datasetId") String datasetId) {
         this.datasetId = datasetId;
     }
 

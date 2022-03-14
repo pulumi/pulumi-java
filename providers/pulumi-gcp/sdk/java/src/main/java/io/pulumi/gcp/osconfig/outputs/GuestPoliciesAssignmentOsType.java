@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GuestPoliciesAssignmentOsType {
     /**
      * Targets VM instances with OS Inventory enabled and having the following OS architecture.
@@ -27,11 +27,11 @@ public final class GuestPoliciesAssignmentOsType {
      */
     private final @Nullable String osVersion;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GuestPoliciesAssignmentOsType(
-        @OutputCustomType.Parameter("osArchitecture") @Nullable String osArchitecture,
-        @OutputCustomType.Parameter("osShortName") @Nullable String osShortName,
-        @OutputCustomType.Parameter("osVersion") @Nullable String osVersion) {
+        @CustomType.Parameter("osArchitecture") @Nullable String osArchitecture,
+        @CustomType.Parameter("osShortName") @Nullable String osShortName,
+        @CustomType.Parameter("osVersion") @Nullable String osVersion) {
         this.osArchitecture = osArchitecture;
         this.osShortName = osShortName;
         this.osVersion = osVersion;

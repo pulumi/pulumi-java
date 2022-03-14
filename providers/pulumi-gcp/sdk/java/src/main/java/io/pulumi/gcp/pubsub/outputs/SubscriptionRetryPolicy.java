@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SubscriptionRetryPolicy {
     /**
      * The maximum delay between consecutive deliveries of a given message. Value should be between 0 and 600 seconds. Defaults to 600 seconds.
@@ -24,10 +24,10 @@ public final class SubscriptionRetryPolicy {
      */
     private final @Nullable String minimumBackoff;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SubscriptionRetryPolicy(
-        @OutputCustomType.Parameter("maximumBackoff") @Nullable String maximumBackoff,
-        @OutputCustomType.Parameter("minimumBackoff") @Nullable String minimumBackoff) {
+        @CustomType.Parameter("maximumBackoff") @Nullable String maximumBackoff,
+        @CustomType.Parameter("minimumBackoff") @Nullable String minimumBackoff) {
         this.maximumBackoff = maximumBackoff;
         this.minimumBackoff = minimumBackoff;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iam.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class WorkloadIdentityPoolProviderOidcGetArgs extends io.pulumi.res
      * For example:
      * 
      */
-    @InputImport(name="allowedAudiences")
+    @Import(name="allowedAudiences")
       private final @Nullable Output<List<String>> allowedAudiences;
 
     public Output<List<String>> getAllowedAudiences() {
@@ -36,7 +36,7 @@ public final class WorkloadIdentityPoolProviderOidcGetArgs extends io.pulumi.res
      * The OIDC issuer URL.
      * 
      */
-    @InputImport(name="issuerUri", required=true)
+    @Import(name="issuerUri", required=true)
       private final Output<String> issuerUri;
 
     public Output<String> getIssuerUri() {

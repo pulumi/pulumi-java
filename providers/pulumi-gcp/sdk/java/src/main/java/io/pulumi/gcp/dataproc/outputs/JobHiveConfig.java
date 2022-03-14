@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class JobHiveConfig {
     /**
      * Whether to continue executing queries if a query fails. The default value is false. Setting to true can be useful when executing independent parallel queries. Defaults to false.
@@ -47,14 +47,14 @@ public final class JobHiveConfig {
      */
     private final @Nullable Map<String,String> scriptVariables;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private JobHiveConfig(
-        @OutputCustomType.Parameter("continueOnFailure") @Nullable Boolean continueOnFailure,
-        @OutputCustomType.Parameter("jarFileUris") @Nullable List<String> jarFileUris,
-        @OutputCustomType.Parameter("properties") @Nullable Map<String,String> properties,
-        @OutputCustomType.Parameter("queryFileUri") @Nullable String queryFileUri,
-        @OutputCustomType.Parameter("queryLists") @Nullable List<String> queryLists,
-        @OutputCustomType.Parameter("scriptVariables") @Nullable Map<String,String> scriptVariables) {
+        @CustomType.Parameter("continueOnFailure") @Nullable Boolean continueOnFailure,
+        @CustomType.Parameter("jarFileUris") @Nullable List<String> jarFileUris,
+        @CustomType.Parameter("properties") @Nullable Map<String,String> properties,
+        @CustomType.Parameter("queryFileUri") @Nullable String queryFileUri,
+        @CustomType.Parameter("queryLists") @Nullable List<String> queryLists,
+        @CustomType.Parameter("scriptVariables") @Nullable Map<String,String> scriptVariables) {
         this.continueOnFailure = continueOnFailure;
         this.jarFileUris = jarFileUris;
         this.properties = properties;

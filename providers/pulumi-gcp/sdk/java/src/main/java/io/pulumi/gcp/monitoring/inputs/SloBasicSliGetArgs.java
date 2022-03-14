@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.monitoring.inputs.SloBasicSliAvailabilityGetArgs;
 import io.pulumi.gcp.monitoring.inputs.SloBasicSliLatencyGetArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class SloBasicSliGetArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="availability")
+    @Import(name="availability")
       private final @Nullable Output<SloBasicSliAvailabilityGetArgs> availability;
 
     public Output<SloBasicSliAvailabilityGetArgs> getAvailability() {
@@ -34,7 +34,7 @@ public final class SloBasicSliGetArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="latency")
+    @Import(name="latency")
       private final @Nullable Output<SloBasicSliLatencyGetArgs> latency;
 
     public Output<SloBasicSliLatencyGetArgs> getLatency() {
@@ -50,7 +50,7 @@ public final class SloBasicSliGetArgs extends io.pulumi.resources.ResourceArgs {
      * field will result in an error.
      * 
      */
-    @InputImport(name="locations")
+    @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
     public Output<List<String>> getLocations() {
@@ -66,7 +66,7 @@ public final class SloBasicSliGetArgs extends io.pulumi.resources.ResourceArgs {
      * error.
      * 
      */
-    @InputImport(name="methods")
+    @Import(name="methods")
       private final @Nullable Output<List<String>> methods;
 
     public Output<List<String>> getMethods() {
@@ -82,7 +82,7 @@ public final class SloBasicSliGetArgs extends io.pulumi.resources.ResourceArgs {
      * field will result in an error.
      * 
      */
-    @InputImport(name="versions")
+    @Import(name="versions")
       private final @Nullable Output<List<String>> versions;
 
     public Output<List<String>> getVersions() {

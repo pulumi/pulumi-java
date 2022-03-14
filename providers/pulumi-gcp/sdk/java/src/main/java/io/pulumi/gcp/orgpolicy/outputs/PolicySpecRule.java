@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.orgpolicy.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.orgpolicy.outputs.PolicySpecRuleCondition;
 import io.pulumi.gcp.orgpolicy.outputs.PolicySpecRuleValues;
 import java.lang.String;
@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicySpecRule {
     /**
      * Setting this to true means that all values are allowed. This field can be set only in Policies for list constraints.
@@ -39,13 +39,13 @@ public final class PolicySpecRule {
      */
     private final @Nullable PolicySpecRuleValues values;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicySpecRule(
-        @OutputCustomType.Parameter("allowAll") @Nullable String allowAll,
-        @OutputCustomType.Parameter("condition") @Nullable PolicySpecRuleCondition condition,
-        @OutputCustomType.Parameter("denyAll") @Nullable String denyAll,
-        @OutputCustomType.Parameter("enforce") @Nullable String enforce,
-        @OutputCustomType.Parameter("values") @Nullable PolicySpecRuleValues values) {
+        @CustomType.Parameter("allowAll") @Nullable String allowAll,
+        @CustomType.Parameter("condition") @Nullable PolicySpecRuleCondition condition,
+        @CustomType.Parameter("denyAll") @Nullable String denyAll,
+        @CustomType.Parameter("enforce") @Nullable String enforce,
+        @CustomType.Parameter("values") @Nullable PolicySpecRuleValues values) {
         this.allowAll = allowAll;
         this.condition = condition;
         this.denyAll = denyAll;

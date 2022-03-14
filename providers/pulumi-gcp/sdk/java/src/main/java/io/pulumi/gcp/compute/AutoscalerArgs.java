@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.AutoscalerAutoscalingPolicyArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AutoscalerArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="autoscalingPolicy", required=true)
+    @Import(name="autoscalingPolicy", required=true)
       private final Output<AutoscalerAutoscalingPolicyArgs> autoscalingPolicy;
 
     public Output<AutoscalerAutoscalingPolicyArgs> getAutoscalingPolicy() {
@@ -35,7 +35,7 @@ public final class AutoscalerArgs extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -46,7 +46,7 @@ public final class AutoscalerArgs extends io.pulumi.resources.ResourceArgs {
      * The identifier for this object. Format specified above.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -58,7 +58,7 @@ public final class AutoscalerArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -71,7 +71,7 @@ public final class AutoscalerArgs extends io.pulumi.resources.ResourceArgs {
      * be a positive float value. If not defined, the default is 0.8.
      * 
      */
-    @InputImport(name="target", required=true)
+    @Import(name="target", required=true)
       private final Output<String> target;
 
     public Output<String> getTarget() {
@@ -82,7 +82,7 @@ public final class AutoscalerArgs extends io.pulumi.resources.ResourceArgs {
      * URL of the zone where the instance group resides.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

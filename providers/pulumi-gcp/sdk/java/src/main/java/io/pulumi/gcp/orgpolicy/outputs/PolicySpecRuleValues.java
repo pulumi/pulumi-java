@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.orgpolicy.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PolicySpecRuleValues {
     /**
      * List of values allowed at this resource.
@@ -22,10 +22,10 @@ public final class PolicySpecRuleValues {
      */
     private final @Nullable List<String> deniedValues;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PolicySpecRuleValues(
-        @OutputCustomType.Parameter("allowedValues") @Nullable List<String> allowedValues,
-        @OutputCustomType.Parameter("deniedValues") @Nullable List<String> deniedValues) {
+        @CustomType.Parameter("allowedValues") @Nullable List<String> allowedValues,
+        @CustomType.Parameter("deniedValues") @Nullable List<String> deniedValues) {
         this.allowedValues = allowedValues;
         this.deniedValues = deniedValues;
     }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dns;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.dns.inputs.PolicyAlternativeNameServerConfigArgs;
 import io.pulumi.gcp.dns.inputs.PolicyNetworkArgs;
 import java.lang.Boolean;
@@ -25,7 +25,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="alternativeNameServerConfig")
+    @Import(name="alternativeNameServerConfig")
       private final @Nullable Output<PolicyAlternativeNameServerConfigArgs> alternativeNameServerConfig;
 
     public Output<PolicyAlternativeNameServerConfigArgs> getAlternativeNameServerConfig() {
@@ -36,7 +36,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * A textual description field. Defaults to 'Managed by Pulumi'.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -50,7 +50,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * that are bound to this policy.
      * 
      */
-    @InputImport(name="enableInboundForwarding")
+    @Import(name="enableInboundForwarding")
       private final @Nullable Output<Boolean> enableInboundForwarding;
 
     public Output<Boolean> getEnableInboundForwarding() {
@@ -62,7 +62,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Defaults to no logging if not set.
      * 
      */
-    @InputImport(name="enableLogging")
+    @Import(name="enableLogging")
       private final @Nullable Output<Boolean> enableLogging;
 
     public Output<Boolean> getEnableLogging() {
@@ -73,7 +73,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * User assigned name for this policy.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -85,7 +85,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="networks")
+    @Import(name="networks")
       private final @Nullable Output<List<PolicyNetworkArgs>> networks;
 
     public Output<List<PolicyNetworkArgs>> getNetworks() {
@@ -97,7 +97,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {

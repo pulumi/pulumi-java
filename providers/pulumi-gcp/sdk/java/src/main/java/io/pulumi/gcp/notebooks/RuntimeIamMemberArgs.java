@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.notebooks.inputs.RuntimeIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class RuntimeIamMemberArgs extends io.pulumi.resources.ResourceArgs
 
     public static final RuntimeIamMemberArgs Empty = new RuntimeIamMemberArgs();
 
-    @InputImport(name="condition")
+    @Import(name="condition")
       private final @Nullable Output<RuntimeIamMemberConditionArgs> condition;
 
     public Output<RuntimeIamMemberConditionArgs> getCondition() {
@@ -26,14 +26,14 @@ public final class RuntimeIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * A reference to the zone where the machine resides. Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
         return this.location == null ? Output.empty() : this.location;
     }
 
-    @InputImport(name="member", required=true)
+    @Import(name="member", required=true)
       private final Output<String> member;
 
     public Output<String> getMember() {
@@ -45,7 +45,7 @@ public final class RuntimeIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * If it is not provided, the project will be parsed from the identifier of the parent resource. If no project is provided in the parent identifier and no project is specified, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -58,7 +58,7 @@ public final class RuntimeIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * `[projects|organizations]/{parent-name}/roles/{role-name}`.
      * 
      */
-    @InputImport(name="role", required=true)
+    @Import(name="role", required=true)
       private final Output<String> role;
 
     public Output<String> getRole() {
@@ -69,7 +69,7 @@ public final class RuntimeIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * Used to find the parent resource to bind the IAM policy to
      * 
      */
-    @InputImport(name="runtimeName", required=true)
+    @Import(name="runtimeName", required=true)
       private final Output<String> runtimeName;
 
     public Output<String> getRuntimeName() {

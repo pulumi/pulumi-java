@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs;
 import java.lang.Double;
@@ -21,7 +21,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdArgs extends io.pulu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="basicSliPerformance")
+    @Import(name="basicSliPerformance")
       private final @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs> basicSliPerformance;
 
     public Output<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceArgs> getBasicSliPerformance() {
@@ -33,7 +33,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdArgs extends io.pulu
      * Structure is documented below.
      * 
      */
-    @InputImport(name="performance")
+    @Import(name="performance")
       private final @Nullable Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs> performance;
 
     public Output<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceArgs> getPerformance() {
@@ -46,7 +46,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdArgs extends io.pulu
      * this service that return in no more than threshold.
      * 
      */
-    @InputImport(name="threshold")
+    @Import(name="threshold")
       private final @Nullable Output<Double> threshold;
 
     public Output<Double> getThreshold() {

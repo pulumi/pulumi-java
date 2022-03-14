@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.redis.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 
@@ -12,35 +12,35 @@ public final class GetInstanceServerCaCert extends io.pulumi.resources.InvokeArg
 
     public static final GetInstanceServerCaCert Empty = new GetInstanceServerCaCert();
 
-    @InputImport(name="cert", required=true)
+    @Import(name="cert", required=true)
       private final String cert;
 
     public String getCert() {
         return this.cert;
     }
 
-    @InputImport(name="createTime", required=true)
+    @Import(name="createTime", required=true)
       private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
     }
 
-    @InputImport(name="expireTime", required=true)
+    @Import(name="expireTime", required=true)
       private final String expireTime;
 
     public String getExpireTime() {
         return this.expireTime;
     }
 
-    @InputImport(name="serialNumber", required=true)
+    @Import(name="serialNumber", required=true)
       private final String serialNumber;
 
     public String getSerialNumber() {
         return this.serialNumber;
     }
 
-    @InputImport(name="sha1Fingerprint", required=true)
+    @Import(name="sha1Fingerprint", required=true)
       private final String sha1Fingerprint;
 
     public String getSha1Fingerprint() {

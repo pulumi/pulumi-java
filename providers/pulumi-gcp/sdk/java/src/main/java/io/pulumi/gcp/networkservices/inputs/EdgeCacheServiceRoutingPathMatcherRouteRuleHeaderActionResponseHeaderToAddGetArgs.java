@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
      * Response headers are only sent to the client, and do not have an effect on the cache serving the response.
      * 
      */
-    @InputImport(name="headerName", required=true)
+    @Import(name="headerName", required=true)
       private final Output<String> headerName;
 
     public Output<String> getHeaderName() {
@@ -31,7 +31,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
      * The value of the header to add.
      * 
      */
-    @InputImport(name="headerValue", required=true)
+    @Import(name="headerValue", required=true)
       private final Output<String> headerValue;
 
     public Output<String> getHeaderValue() {
@@ -42,7 +42,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
      * Whether to replace all existing headers with the same name.
      * 
      */
-    @InputImport(name="replace")
+    @Import(name="replace")
       private final @Nullable Output<Boolean> replace;
 
     public Output<Boolean> getReplace() {

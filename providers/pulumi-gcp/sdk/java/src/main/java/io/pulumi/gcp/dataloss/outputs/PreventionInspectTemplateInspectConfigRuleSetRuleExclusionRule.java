@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionary;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypes;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex;
@@ -12,7 +12,7 @@ import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule {
     /**
      * Dictionary which defines the rule.
@@ -39,12 +39,12 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      */
     private final @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex regex;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule(
-        @OutputCustomType.Parameter("dictionary") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionary dictionary,
-        @OutputCustomType.Parameter("excludeInfoTypes") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypes excludeInfoTypes,
-        @OutputCustomType.Parameter("matchingType") String matchingType,
-        @OutputCustomType.Parameter("regex") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex regex) {
+        @CustomType.Parameter("dictionary") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionary dictionary,
+        @CustomType.Parameter("excludeInfoTypes") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypes excludeInfoTypes,
+        @CustomType.Parameter("matchingType") String matchingType,
+        @CustomType.Parameter("regex") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex regex) {
         this.dictionary = dictionary;
         this.excludeInfoTypes = excludeInfoTypes;
         this.matchingType = matchingType;

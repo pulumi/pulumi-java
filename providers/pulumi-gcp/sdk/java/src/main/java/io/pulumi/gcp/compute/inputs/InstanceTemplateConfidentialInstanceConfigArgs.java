@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class InstanceTemplateConfidentialInstanceConfigArgs extends io.pul
      * Defines whether the instance should have confidential compute enabled. `on_host_maintenance` has to be set to TERMINATE or this will fail to create the VM.
      * 
      */
-    @InputImport(name="enableConfidentialCompute", required=true)
+    @Import(name="enableConfidentialCompute", required=true)
       private final Output<Boolean> enableConfidentialCompute;
 
     public Output<Boolean> getEnableConfidentialCompute() {

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gameservices.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.gameservices.inputs.GameServerConfigFleetConfigGetArgs;
 import io.pulumi.gcp.gameservices.inputs.GameServerConfigScalingConfigGetArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
      * A unique id for the deployment config.
      * 
      */
-    @InputImport(name="configId")
+    @Import(name="configId")
       private final @Nullable Output<String> configId;
 
     public Output<String> getConfigId() {
@@ -33,7 +33,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
      * A unique id for the deployment.
      * 
      */
-    @InputImport(name="deploymentId")
+    @Import(name="deploymentId")
       private final @Nullable Output<String> deploymentId;
 
     public Output<String> getDeploymentId() {
@@ -44,7 +44,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
      * The description of the game server config.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -57,7 +57,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="fleetConfigs")
+    @Import(name="fleetConfigs")
       private final @Nullable Output<List<GameServerConfigFleetConfigGetArgs>> fleetConfigs;
 
     public Output<List<GameServerConfigFleetConfigGetArgs>> getFleetConfigs() {
@@ -68,7 +68,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
      * Set of labels to group by.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -79,7 +79,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
      * Location of the Deployment.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -90,7 +90,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
      * The name of the ScalingConfig
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -102,7 +102,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -114,7 +114,7 @@ public final class GameServerConfigState extends io.pulumi.resources.ResourceArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="scalingConfigs")
+    @Import(name="scalingConfigs")
       private final @Nullable Output<List<GameServerConfigScalingConfigGetArgs>> scalingConfigs;
 
     public Output<List<GameServerConfigScalingConfigGetArgs>> getScalingConfigs() {

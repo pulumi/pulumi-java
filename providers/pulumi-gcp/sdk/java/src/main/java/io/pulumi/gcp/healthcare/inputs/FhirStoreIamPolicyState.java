@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +18,7 @@ public final class FhirStoreIamPolicyState extends io.pulumi.resources.ResourceA
      * (Computed) The etag of the FHIR store's IAM policy.
      * 
      */
-    @InputImport(name="etag")
+    @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
@@ -32,7 +32,7 @@ public final class FhirStoreIamPolicyState extends io.pulumi.resources.ResourceA
      * project setting will be used as a fallback.
      * 
      */
-    @InputImport(name="fhirStoreId")
+    @Import(name="fhirStoreId")
       private final @Nullable Output<String> fhirStoreId;
 
     public Output<String> getFhirStoreId() {
@@ -44,7 +44,7 @@ public final class FhirStoreIamPolicyState extends io.pulumi.resources.ResourceA
      * a `gcp.organizations.getIAMPolicy` data source.
      * 
      */
-    @InputImport(name="policyData")
+    @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
     public Output<String> getPolicyData() {

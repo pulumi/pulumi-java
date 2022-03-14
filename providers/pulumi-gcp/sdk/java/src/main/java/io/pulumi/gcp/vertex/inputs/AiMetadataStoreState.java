@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.vertex.inputs.AiMetadataStoreEncryptionSpecGetArgs;
 import io.pulumi.gcp.vertex.inputs.AiMetadataStoreStateGetArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
      * nine fractional digits.
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -33,7 +33,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
      * Description of the MetadataStore.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
      * Structure is documented below.
      * 
      */
-    @InputImport(name="encryptionSpec")
+    @Import(name="encryptionSpec")
       private final @Nullable Output<AiMetadataStoreEncryptionSpecGetArgs> encryptionSpec;
 
     public Output<AiMetadataStoreEncryptionSpecGetArgs> getEncryptionSpec() {
@@ -56,7 +56,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
      * The name of the MetadataStore. This value may be up to 60 characters, and valid characters are [a-z0-9_]. The first character cannot be a number.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -68,7 +68,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -79,7 +79,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
      * The region of the Metadata Store. eg us-central1
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -90,7 +90,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
      * State information of the MetadataStore.
      * 
      */
-    @InputImport(name="states")
+    @Import(name="states")
       private final @Nullable Output<List<AiMetadataStoreStateGetArgs>> states;
 
     public Output<List<AiMetadataStoreStateGetArgs>> getStates() {
@@ -102,7 +102,7 @@ public final class AiMetadataStoreState extends io.pulumi.resources.ResourceArgs
      * to nine fractional digits.
      * 
      */
-    @InputImport(name="updateTime")
+    @Import(name="updateTime")
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {

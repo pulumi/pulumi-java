@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ClusterNodePoolNodeConfigKubeletConfig {
     /**
      * If true, enables CPU CFS quota enforcement for
@@ -34,11 +34,11 @@ public final class ClusterNodePoolNodeConfigKubeletConfig {
      */
     private final String cpuManagerPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ClusterNodePoolNodeConfigKubeletConfig(
-        @OutputCustomType.Parameter("cpuCfsQuota") @Nullable Boolean cpuCfsQuota,
-        @OutputCustomType.Parameter("cpuCfsQuotaPeriod") @Nullable String cpuCfsQuotaPeriod,
-        @OutputCustomType.Parameter("cpuManagerPolicy") String cpuManagerPolicy) {
+        @CustomType.Parameter("cpuCfsQuota") @Nullable Boolean cpuCfsQuota,
+        @CustomType.Parameter("cpuCfsQuotaPeriod") @Nullable String cpuCfsQuotaPeriod,
+        @CustomType.Parameter("cpuManagerPolicy") String cpuManagerPolicy) {
         this.cpuCfsQuota = cpuCfsQuota;
         this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
         this.cpuManagerPolicy = cpuManagerPolicy;

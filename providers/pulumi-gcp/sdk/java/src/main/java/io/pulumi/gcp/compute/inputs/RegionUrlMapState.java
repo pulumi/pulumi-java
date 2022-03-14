@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapDefaultUrlRedirectGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapHostRuleGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherGetArgs;
@@ -24,7 +24,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @InputImport(name="creationTimestamp")
+    @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
@@ -37,7 +37,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
      * the URL's path portion.
      * 
      */
-    @InputImport(name="defaultService")
+    @Import(name="defaultService")
       private final @Nullable Output<String> defaultService;
 
     public Output<String> getDefaultService() {
@@ -51,7 +51,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="defaultUrlRedirect")
+    @Import(name="defaultUrlRedirect")
       private final @Nullable Output<RegionUrlMapDefaultUrlRedirectGetArgs> defaultUrlRedirect;
 
     public Output<RegionUrlMapDefaultUrlRedirectGetArgs> getDefaultUrlRedirect() {
@@ -62,7 +62,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
      * Description of this test case.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -73,7 +73,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
      * Fingerprint of this resource. This field is used internally during updates of this resource.
      * 
      */
-    @InputImport(name="fingerprint")
+    @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
     public Output<String> getFingerprint() {
@@ -85,7 +85,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="hostRules")
+    @Import(name="hostRules")
       private final @Nullable Output<List<RegionUrlMapHostRuleGetArgs>> hostRules;
 
     public Output<List<RegionUrlMapHostRuleGetArgs>> getHostRules() {
@@ -96,7 +96,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
      * The unique identifier for the resource.
      * 
      */
-    @InputImport(name="mapId")
+    @Import(name="mapId")
       private final @Nullable Output<Integer> mapId;
 
     public Output<Integer> getMapId() {
@@ -108,7 +108,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
      * request, in the absence of which the request match fails.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -120,7 +120,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
      * the URL if the hostRule matches the URL's host portion.
      * 
      */
-    @InputImport(name="pathMatchers")
+    @Import(name="pathMatchers")
       private final @Nullable Output<List<RegionUrlMapPathMatcherGetArgs>> pathMatchers;
 
     public Output<List<RegionUrlMapPathMatcherGetArgs>> getPathMatchers() {
@@ -132,7 +132,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -144,7 +144,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider region is used.
      * 
      */
-    @InputImport(name="region")
+    @Import(name="region")
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
@@ -155,7 +155,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
      * The URI of the created resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -168,7 +168,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="tests")
+    @Import(name="tests")
       private final @Nullable Output<List<RegionUrlMapTestGetArgs>> tests;
 
     public Output<List<RegionUrlMapTestGetArgs>> getTests() {

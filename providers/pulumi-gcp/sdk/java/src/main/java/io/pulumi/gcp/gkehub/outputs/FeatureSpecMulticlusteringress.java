@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class FeatureSpecMulticlusteringress {
     /**
      * Fully-qualified Membership name which hosts the MultiClusterIngress CRD. Example: `projects/foo-proj/locations/global/memberships/bar`
@@ -15,8 +15,8 @@ public final class FeatureSpecMulticlusteringress {
      */
     private final String configMembership;
 
-    @OutputCustomType.Constructor
-    private FeatureSpecMulticlusteringress(@OutputCustomType.Parameter("configMembership") String configMembership) {
+    @CustomType.Constructor
+    private FeatureSpecMulticlusteringress(@CustomType.Parameter("configMembership") String configMembership) {
         this.configMembership = configMembership;
     }
 

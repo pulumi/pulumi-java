@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.billing.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BudgetAmountSpecifiedAmount {
     /**
      * The 3-letter currency code defined in ISO 4217.
@@ -35,11 +35,11 @@ public final class BudgetAmountSpecifiedAmount {
      */
     private final @Nullable String units;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BudgetAmountSpecifiedAmount(
-        @OutputCustomType.Parameter("currencyCode") @Nullable String currencyCode,
-        @OutputCustomType.Parameter("nanos") @Nullable Integer nanos,
-        @OutputCustomType.Parameter("units") @Nullable String units) {
+        @CustomType.Parameter("currencyCode") @Nullable String currencyCode,
+        @CustomType.Parameter("nanos") @Nullable Integer nanos,
+        @CustomType.Parameter("units") @Nullable String units) {
         this.currencyCode = currencyCode;
         this.nanos = nanos;
         this.units = units;

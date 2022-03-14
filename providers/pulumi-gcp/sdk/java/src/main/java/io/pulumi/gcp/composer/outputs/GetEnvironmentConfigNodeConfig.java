@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.composer.outputs.GetEnvironmentConfigNodeConfigIpAllocationPolicy;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -11,7 +11,7 @@ import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetEnvironmentConfigNodeConfig {
     private final Integer diskSizeGb;
     private final Boolean enableIpMasqAgent;
@@ -25,19 +25,19 @@ public final class GetEnvironmentConfigNodeConfig {
     private final List<String> tags;
     private final String zone;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetEnvironmentConfigNodeConfig(
-        @OutputCustomType.Parameter("diskSizeGb") Integer diskSizeGb,
-        @OutputCustomType.Parameter("enableIpMasqAgent") Boolean enableIpMasqAgent,
-        @OutputCustomType.Parameter("ipAllocationPolicies") List<GetEnvironmentConfigNodeConfigIpAllocationPolicy> ipAllocationPolicies,
-        @OutputCustomType.Parameter("machineType") String machineType,
-        @OutputCustomType.Parameter("maxPodsPerNode") Integer maxPodsPerNode,
-        @OutputCustomType.Parameter("network") String network,
-        @OutputCustomType.Parameter("oauthScopes") List<String> oauthScopes,
-        @OutputCustomType.Parameter("serviceAccount") String serviceAccount,
-        @OutputCustomType.Parameter("subnetwork") String subnetwork,
-        @OutputCustomType.Parameter("tags") List<String> tags,
-        @OutputCustomType.Parameter("zone") String zone) {
+        @CustomType.Parameter("diskSizeGb") Integer diskSizeGb,
+        @CustomType.Parameter("enableIpMasqAgent") Boolean enableIpMasqAgent,
+        @CustomType.Parameter("ipAllocationPolicies") List<GetEnvironmentConfigNodeConfigIpAllocationPolicy> ipAllocationPolicies,
+        @CustomType.Parameter("machineType") String machineType,
+        @CustomType.Parameter("maxPodsPerNode") Integer maxPodsPerNode,
+        @CustomType.Parameter("network") String network,
+        @CustomType.Parameter("oauthScopes") List<String> oauthScopes,
+        @CustomType.Parameter("serviceAccount") String serviceAccount,
+        @CustomType.Parameter("subnetwork") String subnetwork,
+        @CustomType.Parameter("tags") List<String> tags,
+        @CustomType.Parameter("zone") String zone) {
         this.diskSizeGb = diskSizeGb;
         this.enableIpMasqAgent = enableIpMasqAgent;
         this.ipAllocationPolicies = ipAllocationPolicies;

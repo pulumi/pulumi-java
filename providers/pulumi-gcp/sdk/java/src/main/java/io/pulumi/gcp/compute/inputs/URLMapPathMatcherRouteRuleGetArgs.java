@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherRouteRuleHeaderActionGetArgs;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherRouteRuleMatchRuleGetArgs;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherRouteRuleRouteActionGetArgs;
@@ -28,7 +28,7 @@ public final class URLMapPathMatcherRouteRuleGetArgs extends io.pulumi.resources
      * Structure is documented below.
      * 
      */
-    @InputImport(name="headerAction")
+    @Import(name="headerAction")
       private final @Nullable Output<URLMapPathMatcherRouteRuleHeaderActionGetArgs> headerAction;
 
     public Output<URLMapPathMatcherRouteRuleHeaderActionGetArgs> getHeaderAction() {
@@ -40,7 +40,7 @@ public final class URLMapPathMatcherRouteRuleGetArgs extends io.pulumi.resources
      * Structure is documented below.
      * 
      */
-    @InputImport(name="matchRules")
+    @Import(name="matchRules")
       private final @Nullable Output<List<URLMapPathMatcherRouteRuleMatchRuleGetArgs>> matchRules;
 
     public Output<List<URLMapPathMatcherRouteRuleMatchRuleGetArgs>> getMatchRules() {
@@ -63,7 +63,7 @@ public final class URLMapPathMatcherRouteRuleGetArgs extends io.pulumi.resources
      * future without any impact on existing rules.
      * 
      */
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Output<Integer> priority;
 
     public Output<Integer> getPriority() {
@@ -80,7 +80,7 @@ public final class URLMapPathMatcherRouteRuleGetArgs extends io.pulumi.resources
      * Structure is documented below.
      * 
      */
-    @InputImport(name="routeAction")
+    @Import(name="routeAction")
       private final @Nullable Output<URLMapPathMatcherRouteRuleRouteActionGetArgs> routeAction;
 
     public Output<URLMapPathMatcherRouteRuleRouteActionGetArgs> getRouteAction() {
@@ -91,7 +91,7 @@ public final class URLMapPathMatcherRouteRuleGetArgs extends io.pulumi.resources
      * The backend service or backend bucket link that should be matched by this test.
      * 
      */
-    @InputImport(name="service")
+    @Import(name="service")
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {
@@ -105,7 +105,7 @@ public final class URLMapPathMatcherRouteRuleGetArgs extends io.pulumi.resources
      * Structure is documented below.
      * 
      */
-    @InputImport(name="urlRedirect")
+    @Import(name="urlRedirect")
       private final @Nullable Output<URLMapPathMatcherRouteRuleUrlRedirectGetArgs> urlRedirect;
 
     public Output<URLMapPathMatcherRouteRuleUrlRedirectGetArgs> getUrlRedirect() {

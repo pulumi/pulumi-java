@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ServiceTemplateSpecContainerEnvValueFromArgs extends io.pulum
      * Structure is documented below.
      * 
      */
-    @InputImport(name="secretKeyRef", required=true)
+    @Import(name="secretKeyRef", required=true)
       private final Output<ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs> secretKeyRef;
 
     public Output<ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs> getSecretKeyRef() {

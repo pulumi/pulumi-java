@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ProjectSinkBigqueryOptionsGetArgs extends io.pulumi.resources
      * has to be used instead. In both cases, tables are sharded based on UTC timezone.
      * 
      */
-    @InputImport(name="usePartitionedTables", required=true)
+    @Import(name="usePartitionedTables", required=true)
       private final Output<Boolean> usePartitionedTables;
 
     public Output<Boolean> getUsePartitionedTables() {

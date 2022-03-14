@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.notebooks.inputs.RuntimeAccessConfigGetArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeMetricGetArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeSoftwareConfigGetArgs;
@@ -24,7 +24,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="accessConfig")
+    @Import(name="accessConfig")
       private final @Nullable Output<RuntimeAccessConfigGetArgs> accessConfig;
 
     public Output<RuntimeAccessConfigGetArgs> getAccessConfig() {
@@ -36,7 +36,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * 'https://cloud.google.com/vertex-ai/docs/workbench/ reference/rest/v1/projects.locations.runtimes#healthstate'.
      * 
      */
-    @InputImport(name="healthState")
+    @Import(name="healthState")
       private final @Nullable Output<String> healthState;
 
     public Output<String> getHealthState() {
@@ -47,7 +47,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * A reference to the zone where the machine resides.
      * 
      */
-    @InputImport(name="location")
+    @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
@@ -58,7 +58,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * Contains Runtime daemon metrics such as Service status and JupyterLab status
      * 
      */
-    @InputImport(name="metrics")
+    @Import(name="metrics")
       private final @Nullable Output<List<RuntimeMetricGetArgs>> metrics;
 
     public Output<List<RuntimeMetricGetArgs>> getMetrics() {
@@ -69,7 +69,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * The name specified for the Notebook instance.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -81,7 +81,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -93,7 +93,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="softwareConfig")
+    @Import(name="softwareConfig")
       private final @Nullable Output<RuntimeSoftwareConfigGetArgs> softwareConfig;
 
     public Output<RuntimeSoftwareConfigGetArgs> getSoftwareConfig() {
@@ -104,7 +104,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * The state of this runtime.
      * 
      */
-    @InputImport(name="state")
+    @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
@@ -116,7 +116,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="virtualMachine")
+    @Import(name="virtualMachine")
       private final @Nullable Output<RuntimeVirtualMachineGetArgs> virtualMachine;
 
     public Output<RuntimeVirtualMachineGetArgs> getVirtualMachine() {

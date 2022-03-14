@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class BucketWebsite {
     /**
      * Behaves as the bucket's directory index where
@@ -24,10 +24,10 @@ public final class BucketWebsite {
      */
     private final @Nullable String notFoundPage;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private BucketWebsite(
-        @OutputCustomType.Parameter("mainPageSuffix") @Nullable String mainPageSuffix,
-        @OutputCustomType.Parameter("notFoundPage") @Nullable String notFoundPage) {
+        @CustomType.Parameter("mainPageSuffix") @Nullable String mainPageSuffix,
+        @CustomType.Parameter("notFoundPage") @Nullable String notFoundPage) {
         this.mainPageSuffix = mainPageSuffix;
         this.notFoundPage = notFoundPage;
     }

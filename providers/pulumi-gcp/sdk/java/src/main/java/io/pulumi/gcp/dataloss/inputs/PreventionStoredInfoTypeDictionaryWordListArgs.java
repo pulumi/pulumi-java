@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class PreventionStoredInfoTypeDictionaryWordListArgs extends io.pul
      * phrase and every phrase must contain at least 2 characters that are letters or digits.
      * 
      */
-    @InputImport(name="words", required=true)
+    @Import(name="words", required=true)
       private final Output<List<String>> words;
 
     public Output<List<String>> getWords() {

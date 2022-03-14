@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkmanagement.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.networkmanagement.inputs.ConnectivityTestDestinationGetArgs;
 import io.pulumi.gcp.networkmanagement.inputs.ConnectivityTestSourceGetArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
      * Maximum of 512 characters.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -48,7 +48,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="destination")
+    @Import(name="destination")
       private final @Nullable Output<ConnectivityTestDestinationGetArgs> destination;
 
     public Output<ConnectivityTestDestinationGetArgs> getDestination() {
@@ -59,7 +59,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
      * Resource labels to represent user-provided metadata.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -70,7 +70,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
      * Unique name for the connectivity test.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -82,7 +82,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -93,7 +93,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
      * IP Protocol of the test. When not provided, "TCP" is assumed.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {
@@ -106,7 +106,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
      * boundaries.
      * 
      */
-    @InputImport(name="relatedProjects")
+    @Import(name="relatedProjects")
       private final @Nullable Output<List<String>> relatedProjects;
 
     public Output<List<String>> getRelatedProjects() {
@@ -135,7 +135,7 @@ public final class ConnectivityTestState extends io.pulumi.resources.ResourceArg
      * Structure is documented below.
      * 
      */
-    @InputImport(name="source")
+    @Import(name="source")
       private final @Nullable Output<ConnectivityTestSourceGetArgs> source;
 
     public Output<ConnectivityTestSourceGetArgs> getSource() {

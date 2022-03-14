@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionWeightedBackendServiceHeaderActionArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceArgs extends io
      * The full or partial URL to the BackendService resource being mirrored to.
      * 
      */
-    @InputImport(name="backendService")
+    @Import(name="backendService")
       private final @Nullable Output<String> backendService;
 
     public Output<String> getBackendService() {
@@ -35,7 +35,7 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceArgs extends io
      * Structure is documented below.
      * 
      */
-    @InputImport(name="headerAction")
+    @Import(name="headerAction")
       private final @Nullable Output<URLMapDefaultRouteActionWeightedBackendServiceHeaderActionArgs> headerAction;
 
     public Output<URLMapDefaultRouteActionWeightedBackendServiceHeaderActionArgs> getHeaderAction() {
@@ -51,7 +51,7 @@ public final class URLMapDefaultRouteActionWeightedBackendServiceArgs extends io
      * The value must be between 0 and 1000
      * 
      */
-    @InputImport(name="weight")
+    @Import(name="weight")
       private final @Nullable Output<Integer> weight;
 
     public Output<Integer> getWeight() {

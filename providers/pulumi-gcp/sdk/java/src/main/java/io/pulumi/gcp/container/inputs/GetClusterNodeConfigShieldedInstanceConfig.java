@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -12,14 +12,14 @@ public final class GetClusterNodeConfigShieldedInstanceConfig extends io.pulumi.
 
     public static final GetClusterNodeConfigShieldedInstanceConfig Empty = new GetClusterNodeConfigShieldedInstanceConfig();
 
-    @InputImport(name="enableIntegrityMonitoring", required=true)
+    @Import(name="enableIntegrityMonitoring", required=true)
       private final Boolean enableIntegrityMonitoring;
 
     public Boolean getEnableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring;
     }
 
-    @InputImport(name="enableSecureBoot", required=true)
+    @Import(name="enableSecureBoot", required=true)
       private final Boolean enableSecureBoot;
 
     public Boolean getEnableSecureBoot() {

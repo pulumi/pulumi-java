@@ -3,24 +3,24 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class NodePoolNodeConfigKubeletConfig {
     private final @Nullable Boolean cpuCfsQuota;
     private final @Nullable String cpuCfsQuotaPeriod;
     private final String cpuManagerPolicy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private NodePoolNodeConfigKubeletConfig(
-        @OutputCustomType.Parameter("cpuCfsQuota") @Nullable Boolean cpuCfsQuota,
-        @OutputCustomType.Parameter("cpuCfsQuotaPeriod") @Nullable String cpuCfsQuotaPeriod,
-        @OutputCustomType.Parameter("cpuManagerPolicy") String cpuManagerPolicy) {
+        @CustomType.Parameter("cpuCfsQuota") @Nullable Boolean cpuCfsQuota,
+        @CustomType.Parameter("cpuCfsQuotaPeriod") @Nullable String cpuCfsQuotaPeriod,
+        @CustomType.Parameter("cpuManagerPolicy") String cpuManagerPolicy) {
         this.cpuCfsQuota = cpuCfsQuota;
         this.cpuCfsQuotaPeriod = cpuCfsQuotaPeriod;
         this.cpuManagerPolicy = cpuManagerPolicy;

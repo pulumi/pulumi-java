@@ -3,19 +3,19 @@
 
 package io.pulumi.gcp.kms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetKMSCryptoKeyVersionTemplate {
     private final String algorithm;
     private final String protectionLevel;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKMSCryptoKeyVersionTemplate(
-        @OutputCustomType.Parameter("algorithm") String algorithm,
-        @OutputCustomType.Parameter("protectionLevel") String protectionLevel) {
+        @CustomType.Parameter("algorithm") String algorithm,
+        @CustomType.Parameter("protectionLevel") String protectionLevel) {
         this.algorithm = algorithm;
         this.protectionLevel = protectionLevel;
     }

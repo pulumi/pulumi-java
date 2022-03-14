@@ -3,13 +3,13 @@
 
 package io.pulumi.gcp.kms.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class GetKMSKeyRingResult {
     /**
      * The provider-assigned unique ID for this managed resource.
@@ -20,12 +20,12 @@ public final class GetKMSKeyRingResult {
     private final String name;
     private final @Nullable String project;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetKMSKeyRingResult(
-        @OutputCustomType.Parameter("id") String id,
-        @OutputCustomType.Parameter("location") String location,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("project") @Nullable String project) {
+        @CustomType.Parameter("id") String id,
+        @CustomType.Parameter("location") String location,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("project") @Nullable String project) {
         this.id = id;
         this.location = location;
         this.name = name;

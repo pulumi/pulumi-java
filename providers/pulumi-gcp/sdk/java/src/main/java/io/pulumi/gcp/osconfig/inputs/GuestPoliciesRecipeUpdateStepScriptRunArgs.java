@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class GuestPoliciesRecipeUpdateStepScriptRunArgs extends io.pulumi.
      * Return codes that indicate that the software installed or updated successfully. Behaviour defaults to [0]
      * 
      */
-    @InputImport(name="allowedExitCodes")
+    @Import(name="allowedExitCodes")
       private final @Nullable Output<List<Integer>> allowedExitCodes;
 
     public Output<List<Integer>> getAllowedExitCodes() {
@@ -33,7 +33,7 @@ public final class GuestPoliciesRecipeUpdateStepScriptRunArgs extends io.pulumi.
      * Possible values are `SHELL` and `POWERSHELL`.
      * 
      */
-    @InputImport(name="interpreter")
+    @Import(name="interpreter")
       private final @Nullable Output<String> interpreter;
 
     public Output<String> getInterpreter() {
@@ -44,7 +44,7 @@ public final class GuestPoliciesRecipeUpdateStepScriptRunArgs extends io.pulumi.
      * The shell script to be executed.
      * 
      */
-    @InputImport(name="script", required=true)
+    @Import(name="script", required=true)
       private final Output<String> script;
 
     public Output<String> getScript() {

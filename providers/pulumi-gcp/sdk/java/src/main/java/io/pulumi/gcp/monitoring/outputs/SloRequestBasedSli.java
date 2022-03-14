@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.monitoring.outputs.SloRequestBasedSliDistributionCut;
 import io.pulumi.gcp.monitoring.outputs.SloRequestBasedSliGoodTotalRatio;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class SloRequestBasedSli {
     /**
      * Used when good_service is defined by a count of values aggregated in a
@@ -33,10 +33,10 @@ public final class SloRequestBasedSli {
      */
     private final @Nullable SloRequestBasedSliGoodTotalRatio goodTotalRatio;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private SloRequestBasedSli(
-        @OutputCustomType.Parameter("distributionCut") @Nullable SloRequestBasedSliDistributionCut distributionCut,
-        @OutputCustomType.Parameter("goodTotalRatio") @Nullable SloRequestBasedSliGoodTotalRatio goodTotalRatio) {
+        @CustomType.Parameter("distributionCut") @Nullable SloRequestBasedSliDistributionCut distributionCut,
+        @CustomType.Parameter("goodTotalRatio") @Nullable SloRequestBasedSliGoodTotalRatio goodTotalRatio) {
         this.distributionCut = distributionCut;
         this.goodTotalRatio = goodTotalRatio;
     }

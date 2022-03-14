@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class FlexibleAppVersionEndpointsApiService {
     /**
      * Endpoints service configuration ID as specified by the Service Management API. For example "2016-09-19r1".
@@ -40,12 +40,12 @@ public final class FlexibleAppVersionEndpointsApiService {
      */
     private final @Nullable String rolloutStrategy;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private FlexibleAppVersionEndpointsApiService(
-        @OutputCustomType.Parameter("configId") @Nullable String configId,
-        @OutputCustomType.Parameter("disableTraceSampling") @Nullable Boolean disableTraceSampling,
-        @OutputCustomType.Parameter("name") String name,
-        @OutputCustomType.Parameter("rolloutStrategy") @Nullable String rolloutStrategy) {
+        @CustomType.Parameter("configId") @Nullable String configId,
+        @CustomType.Parameter("disableTraceSampling") @Nullable Boolean disableTraceSampling,
+        @CustomType.Parameter("name") String name,
+        @CustomType.Parameter("rolloutStrategy") @Nullable String rolloutStrategy) {
         this.configId = configId;
         this.disableTraceSampling = disableTraceSampling;
         this.name = name;

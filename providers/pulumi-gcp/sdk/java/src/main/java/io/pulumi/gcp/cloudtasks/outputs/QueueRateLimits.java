@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.cloudtasks.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class QueueRateLimits {
     /**
      * - 
@@ -37,11 +37,11 @@ public final class QueueRateLimits {
      */
     private final @Nullable Double maxDispatchesPerSecond;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private QueueRateLimits(
-        @OutputCustomType.Parameter("maxBurstSize") @Nullable Integer maxBurstSize,
-        @OutputCustomType.Parameter("maxConcurrentDispatches") @Nullable Integer maxConcurrentDispatches,
-        @OutputCustomType.Parameter("maxDispatchesPerSecond") @Nullable Double maxDispatchesPerSecond) {
+        @CustomType.Parameter("maxBurstSize") @Nullable Integer maxBurstSize,
+        @CustomType.Parameter("maxConcurrentDispatches") @Nullable Integer maxConcurrentDispatches,
+        @CustomType.Parameter("maxDispatchesPerSecond") @Nullable Double maxDispatchesPerSecond) {
         this.maxBurstSize = maxBurstSize;
         this.maxConcurrentDispatches = maxConcurrentDispatches;
         this.maxDispatchesPerSecond = maxDispatchesPerSecond;

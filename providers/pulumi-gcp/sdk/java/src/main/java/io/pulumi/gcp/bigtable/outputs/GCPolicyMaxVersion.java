@@ -3,11 +3,11 @@
 
 package io.pulumi.gcp.bigtable.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GCPolicyMaxVersion {
     /**
      * Number of version before applying the GC policy.
@@ -15,8 +15,8 @@ public final class GCPolicyMaxVersion {
      */
     private final Integer number;
 
-    @OutputCustomType.Constructor
-    private GCPolicyMaxVersion(@OutputCustomType.Parameter("number") Integer number) {
+    @CustomType.Constructor
+    private GCPolicyMaxVersion(@CustomType.Parameter("number") Integer number) {
         this.number = number;
     }
 

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.SnapshotSnapshotEncryptionKeyGetArgs;
 import io.pulumi.gcp.compute.inputs.SnapshotSourceDiskEncryptionKeyGetArgs;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @InputImport(name="creationTimestamp")
+    @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
@@ -34,7 +34,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -45,7 +45,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * Size of the snapshot, specified in GB.
      * 
      */
-    @InputImport(name="diskSizeGb")
+    @Import(name="diskSizeGb")
       private final @Nullable Output<Integer> diskSizeGb;
 
     public Output<Integer> getDiskSizeGb() {
@@ -56,7 +56,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * The fingerprint used for optimistic locking of this resource. Used internally during updates.
      * 
      */
-    @InputImport(name="labelFingerprint")
+    @Import(name="labelFingerprint")
       private final @Nullable Output<String> labelFingerprint;
 
     public Output<String> getLabelFingerprint() {
@@ -67,7 +67,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * Labels to apply to this Snapshot.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -80,7 +80,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * encryption key.
      * 
      */
-    @InputImport(name="licenses")
+    @Import(name="licenses")
       private final @Nullable Output<List<String>> licenses;
 
     public Output<List<String>> getLicenses() {
@@ -97,7 +97,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * character, which cannot be a dash.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -109,7 +109,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -120,7 +120,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * The URI of the created resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -133,7 +133,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="snapshotEncryptionKey")
+    @Import(name="snapshotEncryptionKey")
       private final @Nullable Output<SnapshotSnapshotEncryptionKeyGetArgs> snapshotEncryptionKey;
 
     public Output<SnapshotSnapshotEncryptionKeyGetArgs> getSnapshotEncryptionKey() {
@@ -144,7 +144,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * The unique identifier for the resource.
      * 
      */
-    @InputImport(name="snapshotId")
+    @Import(name="snapshotId")
       private final @Nullable Output<Integer> snapshotId;
 
     public Output<Integer> getSnapshotId() {
@@ -155,7 +155,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * A reference to the disk used to create this snapshot.
      * 
      */
-    @InputImport(name="sourceDisk")
+    @Import(name="sourceDisk")
       private final @Nullable Output<String> sourceDisk;
 
     public Output<String> getSourceDisk() {
@@ -169,7 +169,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * Structure is documented below.
      * 
      */
-    @InputImport(name="sourceDiskEncryptionKey")
+    @Import(name="sourceDiskEncryptionKey")
       private final @Nullable Output<SnapshotSourceDiskEncryptionKeyGetArgs> sourceDiskEncryptionKey;
 
     public Output<SnapshotSourceDiskEncryptionKeyGetArgs> getSourceDiskEncryptionKey() {
@@ -181,7 +181,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * creation/deletion.
      * 
      */
-    @InputImport(name="storageBytes")
+    @Import(name="storageBytes")
       private final @Nullable Output<Integer> storageBytes;
 
     public Output<Integer> getStorageBytes() {
@@ -192,7 +192,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * Cloud Storage bucket storage location of the snapshot (regional or multi-regional).
      * 
      */
-    @InputImport(name="storageLocations")
+    @Import(name="storageLocations")
       private final @Nullable Output<List<String>> storageLocations;
 
     public Output<List<String>> getStorageLocations() {
@@ -203,7 +203,7 @@ public final class SnapshotState extends io.pulumi.resources.ResourceArgs {
      * A reference to the zone where the disk is hosted.
      * 
      */
-    @InputImport(name="zone")
+    @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {

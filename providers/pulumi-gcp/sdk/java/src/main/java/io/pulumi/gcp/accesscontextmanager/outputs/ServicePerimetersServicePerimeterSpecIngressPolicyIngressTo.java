@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeterSpecIngressPolicyIngressToOperation;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class ServicePerimetersServicePerimeterSpecIngressPolicyIngressTo {
     /**
      * A list of `ApiOperations` that this egress rule applies to. A request matches
@@ -29,10 +29,10 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyIngressTo {
      */
     private final @Nullable List<String> resources;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ServicePerimetersServicePerimeterSpecIngressPolicyIngressTo(
-        @OutputCustomType.Parameter("operations") @Nullable List<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToOperation> operations,
-        @OutputCustomType.Parameter("resources") @Nullable List<String> resources) {
+        @CustomType.Parameter("operations") @Nullable List<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToOperation> operations,
+        @CustomType.Parameter("resources") @Nullable List<String> resources) {
         this.operations = operations;
         this.resources = resources;
     }

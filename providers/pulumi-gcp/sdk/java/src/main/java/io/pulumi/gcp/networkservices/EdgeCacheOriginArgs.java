@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheOriginTimeoutArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
      * A human-readable description of the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -36,7 +36,7 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
      * A reference to a Topic resource.
      * 
      */
-    @InputImport(name="failoverOrigin")
+    @Import(name="failoverOrigin")
       private final @Nullable Output<String> failoverOrigin;
 
     public Output<String> getFailoverOrigin() {
@@ -47,7 +47,7 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
      * Set of label tags associated with the EdgeCache resource.
      * 
      */
-    @InputImport(name="labels")
+    @Import(name="labels")
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
@@ -65,7 +65,7 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
      * Defaults to 1. Must be a value greater than 0 and less than 4.
      * 
      */
-    @InputImport(name="maxAttempts")
+    @Import(name="maxAttempts")
       private final @Nullable Output<Integer> maxAttempts;
 
     public Output<Integer> getMaxAttempts() {
@@ -78,7 +78,7 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
      * and all following characters must be a dash, underscore, letter or digit.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -92,7 +92,7 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
      * If a Cloud Storage bucket is provided, it must be in the canonical "gs://bucketname" format. Other forms, such as "storage.googleapis.com", will be rejected.
      * 
      */
-    @InputImport(name="originAddress", required=true)
+    @Import(name="originAddress", required=true)
       private final Output<String> originAddress;
 
     public Output<String> getOriginAddress() {
@@ -104,7 +104,7 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
      * Defaults to port 443 for HTTP2 and HTTPS protocols, and port 80 for HTTP.
      * 
      */
-    @InputImport(name="port")
+    @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
@@ -116,7 +116,7 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -129,7 +129,7 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
      * Possible values are `HTTP2`, `HTTPS`, and `HTTP`.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {
@@ -152,7 +152,7 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
      *   Each value may be one of `CONNECT_FAILURE`, `HTTP_5XX`, `GATEWAY_ERROR`, `RETRIABLE_4XX`, and `NOT_FOUND`.
      * 
      */
-    @InputImport(name="retryConditions")
+    @Import(name="retryConditions")
       private final @Nullable Output<List<String>> retryConditions;
 
     public Output<List<String>> getRetryConditions() {
@@ -164,7 +164,7 @@ public final class EdgeCacheOriginArgs extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="timeout")
+    @Import(name="timeout")
       private final @Nullable Output<EdgeCacheOriginTimeoutArgs> timeout;
 
     public Output<EdgeCacheOriginTimeoutArgs> getTimeout() {

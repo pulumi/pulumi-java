@@ -4,7 +4,7 @@
 package io.pulumi.gcp.resourcemanager.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class LienState extends io.pulumi.resources.ResourceArgs {
      * Time of creation
      * 
      */
-    @InputImport(name="createTime")
+    @Import(name="createTime")
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
@@ -30,7 +30,7 @@ public final class LienState extends io.pulumi.resources.ResourceArgs {
      * A system-generated unique identifier for this Lien.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -43,7 +43,7 @@ public final class LienState extends io.pulumi.resources.ResourceArgs {
      * 200 characters.
      * 
      */
-    @InputImport(name="origin")
+    @Import(name="origin")
       private final @Nullable Output<String> origin;
 
     public Output<String> getOrigin() {
@@ -57,7 +57,7 @@ public final class LienState extends io.pulumi.resources.ResourceArgs {
      * prefix (e.g. "projects/my-project-name").
      * 
      */
-    @InputImport(name="parent")
+    @Import(name="parent")
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
@@ -69,7 +69,7 @@ public final class LienState extends io.pulumi.resources.ResourceArgs {
      * on a resource. Maximum length of 200 characters.
      * 
      */
-    @InputImport(name="reason")
+    @Import(name="reason")
       private final @Nullable Output<String> reason;
 
     public Output<String> getReason() {
@@ -84,7 +84,7 @@ public final class LienState extends io.pulumi.resources.ResourceArgs {
      * e.g. ['resourcemanager.projects.delete']
      * 
      */
-    @InputImport(name="restrictions")
+    @Import(name="restrictions")
       private final @Nullable Output<List<String>> restrictions;
 
     public Output<List<String>> getRestrictions() {

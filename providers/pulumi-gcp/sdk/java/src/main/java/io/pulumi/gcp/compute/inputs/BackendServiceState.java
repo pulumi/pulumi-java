@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.compute.inputs.BackendServiceBackendGetArgs;
 import io.pulumi.gcp.compute.inputs.BackendServiceCdnPolicyGetArgs;
 import io.pulumi.gcp.compute.inputs.BackendServiceCircuitBreakersGetArgs;
@@ -33,7 +33,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * When the load balancing scheme is INTERNAL, this field is not used.
      * 
      */
-    @InputImport(name="affinityCookieTtlSec")
+    @Import(name="affinityCookieTtlSec")
       private final @Nullable Output<Integer> affinityCookieTtlSec;
 
     public Output<Integer> getAffinityCookieTtlSec() {
@@ -45,7 +45,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="backends")
+    @Import(name="backends")
       private final @Nullable Output<List<BackendServiceBackendGetArgs>> backends;
 
     public Output<List<BackendServiceBackendGetArgs>> getBackends() {
@@ -57,7 +57,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="cdnPolicy")
+    @Import(name="cdnPolicy")
       private final @Nullable Output<BackendServiceCdnPolicyGetArgs> cdnPolicy;
 
     public Output<BackendServiceCdnPolicyGetArgs> getCdnPolicy() {
@@ -70,7 +70,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="circuitBreakers")
+    @Import(name="circuitBreakers")
       private final @Nullable Output<BackendServiceCircuitBreakersGetArgs> circuitBreakers;
 
     public Output<BackendServiceCircuitBreakersGetArgs> getCircuitBreakers() {
@@ -82,7 +82,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * connections, but still work to finish started).
      * 
      */
-    @InputImport(name="connectionDrainingTimeoutSec")
+    @Import(name="connectionDrainingTimeoutSec")
       private final @Nullable Output<Integer> connectionDrainingTimeoutSec;
 
     public Output<Integer> getConnectionDrainingTimeoutSec() {
@@ -101,7 +101,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="consistentHash")
+    @Import(name="consistentHash")
       private final @Nullable Output<BackendServiceConsistentHashGetArgs> consistentHash;
 
     public Output<BackendServiceConsistentHashGetArgs> getConsistentHash() {
@@ -112,7 +112,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * Creation timestamp in RFC3339 text format.
      * 
      */
-    @InputImport(name="creationTimestamp")
+    @Import(name="creationTimestamp")
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
@@ -124,7 +124,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * requests.
      * 
      */
-    @InputImport(name="customRequestHeaders")
+    @Import(name="customRequestHeaders")
       private final @Nullable Output<List<String>> customRequestHeaders;
 
     public Output<List<String>> getCustomRequestHeaders() {
@@ -136,7 +136,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * responses.
      * 
      */
-    @InputImport(name="customResponseHeaders")
+    @Import(name="customResponseHeaders")
       private final @Nullable Output<List<String>> customResponseHeaders;
 
     public Output<List<String>> getCustomResponseHeaders() {
@@ -148,7 +148,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * Provide this property when you create the resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -159,7 +159,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * If true, enable Cloud CDN for this BackendService.
      * 
      */
-    @InputImport(name="enableCdn")
+    @Import(name="enableCdn")
       private final @Nullable Output<Boolean> enableCdn;
 
     public Output<Boolean> getEnableCdn() {
@@ -170,7 +170,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * Fingerprint of this resource. A hash of the contents stored in this object. This field is used in optimistic locking.
      * 
      */
-    @InputImport(name="fingerprint")
+    @Import(name="fingerprint")
       private final @Nullable Output<String> fingerprint;
 
     public Output<String> getFingerprint() {
@@ -186,7 +186,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * For internal load balancing, a URL to a HealthCheck resource must be specified instead.
      * 
      */
-    @InputImport(name="healthChecks")
+    @Import(name="healthChecks")
       private final @Nullable Output<String> healthChecks;
 
     public Output<String> getHealthChecks() {
@@ -198,7 +198,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="iap")
+    @Import(name="iap")
       private final @Nullable Output<BackendServiceIapGetArgs> iap;
 
     public Output<BackendServiceIapGetArgs> getIap() {
@@ -214,7 +214,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * Possible values are `EXTERNAL`, `INTERNAL_SELF_MANAGED`, and `EXTERNAL_MANAGED`.
      * 
      */
-    @InputImport(name="loadBalancingScheme")
+    @Import(name="loadBalancingScheme")
       private final @Nullable Output<String> loadBalancingScheme;
 
     public Output<String> getLoadBalancingScheme() {
@@ -244,7 +244,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      *   Maglev, refer to https://ai.google/research/pubs/pub44824
      * 
      */
-    @InputImport(name="localityLbPolicy")
+    @Import(name="localityLbPolicy")
       private final @Nullable Output<String> localityLbPolicy;
 
     public Output<String> getLocalityLbPolicy() {
@@ -257,7 +257,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="logConfig")
+    @Import(name="logConfig")
       private final @Nullable Output<BackendServiceLogConfigGetArgs> logConfig;
 
     public Output<BackendServiceLogConfigGetArgs> getLogConfig() {
@@ -268,7 +268,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * Name of the cookie.
      * 
      */
-    @InputImport(name="name")
+    @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
@@ -282,7 +282,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="outlierDetection")
+    @Import(name="outlierDetection")
       private final @Nullable Output<BackendServiceOutlierDetectionGetArgs> outlierDetection;
 
     public Output<BackendServiceOutlierDetectionGetArgs> getOutlierDetection() {
@@ -295,7 +295,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * scheme is EXTERNAL.
      * 
      */
-    @InputImport(name="portName")
+    @Import(name="portName")
       private final @Nullable Output<String> portName;
 
     public Output<String> getPortName() {
@@ -307,7 +307,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -321,7 +321,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * Possible values are `HTTP`, `HTTPS`, `HTTP2`, `TCP`, `SSL`, and `GRPC`.
      * 
      */
-    @InputImport(name="protocol")
+    @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {
@@ -332,7 +332,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * The security policy associated with this backend service.
      * 
      */
-    @InputImport(name="securityPolicy")
+    @Import(name="securityPolicy")
       private final @Nullable Output<String> securityPolicy;
 
     public Output<String> getSecurityPolicy() {
@@ -347,7 +347,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * Structure is documented below.
      * 
      */
-    @InputImport(name="securitySettings")
+    @Import(name="securitySettings")
       private final @Nullable Output<BackendServiceSecuritySettingsGetArgs> securitySettings;
 
     public Output<BackendServiceSecuritySettingsGetArgs> getSecuritySettings() {
@@ -358,7 +358,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * The URI of the created resource.
      * 
      */
-    @InputImport(name="selfLink")
+    @Import(name="selfLink")
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
@@ -371,7 +371,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * Possible values are `NONE`, `CLIENT_IP`, `CLIENT_IP_PORT_PROTO`, `CLIENT_IP_PROTO`, `GENERATED_COOKIE`, `HEADER_FIELD`, and `HTTP_COOKIE`.
      * 
      */
-    @InputImport(name="sessionAffinity")
+    @Import(name="sessionAffinity")
       private final @Nullable Output<String> sessionAffinity;
 
     public Output<String> getSessionAffinity() {
@@ -383,7 +383,7 @@ public final class BackendServiceState extends io.pulumi.resources.ResourceArgs 
      * failed request. Default is 30 seconds. Valid range is [1, 86400].
      * 
      */
-    @InputImport(name="timeoutSec")
+    @Import(name="timeoutSec")
       private final @Nullable Output<Integer> timeoutSec;
 
     public Output<Integer> getTimeoutSec() {

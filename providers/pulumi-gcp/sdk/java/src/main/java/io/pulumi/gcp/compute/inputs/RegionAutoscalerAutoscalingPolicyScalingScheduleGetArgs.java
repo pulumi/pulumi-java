@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs exten
      * An optional description of this resource.
      * 
      */
-    @InputImport(name="description")
+    @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
@@ -31,7 +31,7 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs exten
      * A boolean value that specifies if a scaling schedule can influence autoscaler recommendations. If set to true, then a scaling schedule has no effect.
      * 
      */
-    @InputImport(name="disabled")
+    @Import(name="disabled")
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
@@ -42,7 +42,7 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs exten
      * The duration of time intervals (in seconds) for which this scaling schedule will be running. The minimum allowed value is 300.
      * 
      */
-    @InputImport(name="durationSec", required=true)
+    @Import(name="durationSec", required=true)
       private final Output<Integer> durationSec;
 
     public Output<Integer> getDurationSec() {
@@ -53,7 +53,7 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs exten
      * Minimum number of VM instances that autoscaler will recommend in time intervals starting according to schedule.
      * 
      */
-    @InputImport(name="minRequiredReplicas", required=true)
+    @Import(name="minRequiredReplicas", required=true)
       private final Output<Integer> minRequiredReplicas;
 
     public Output<Integer> getMinRequiredReplicas() {
@@ -64,7 +64,7 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs exten
      * The identifier for this object. Format specified above.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final Output<String> name;
 
     public Output<String> getName() {
@@ -75,7 +75,7 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs exten
      * The start timestamps of time intervals when this scaling schedule should provide a scaling signal. This field uses the extended cron format (with an optional year field).
      * 
      */
-    @InputImport(name="schedule", required=true)
+    @Import(name="schedule", required=true)
       private final Output<String> schedule;
 
     public Output<String> getSchedule() {
@@ -86,7 +86,7 @@ public final class RegionAutoscalerAutoscalingPolicyScalingScheduleGetArgs exten
      * The time zone to be used when interpreting the schedule. The value of this field must be a time zone name from the tz database: http://en.wikipedia.org/wiki/Tz_database.
      * 
      */
-    @InputImport(name="timeZone")
+    @Import(name="timeZone")
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {

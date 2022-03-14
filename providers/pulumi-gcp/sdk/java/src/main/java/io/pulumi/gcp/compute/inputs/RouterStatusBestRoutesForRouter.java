@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -14,14 +14,14 @@ public final class RouterStatusBestRoutesForRouter extends io.pulumi.resources.I
 
     public static final RouterStatusBestRoutesForRouter Empty = new RouterStatusBestRoutesForRouter();
 
-    @InputImport(name="description", required=true)
+    @Import(name="description", required=true)
       private final String description;
 
     public String getDescription() {
         return this.description;
     }
 
-    @InputImport(name="destRange", required=true)
+    @Import(name="destRange", required=true)
       private final String destRange;
 
     public String getDestRange() {
@@ -32,7 +32,7 @@ public final class RouterStatusBestRoutesForRouter extends io.pulumi.resources.I
      * The name of the router.
      * 
      */
-    @InputImport(name="name", required=true)
+    @Import(name="name", required=true)
       private final String name;
 
     public String getName() {
@@ -44,63 +44,63 @@ public final class RouterStatusBestRoutesForRouter extends io.pulumi.resources.I
      * network of this subnetwork.
      * 
      */
-    @InputImport(name="network", required=true)
+    @Import(name="network", required=true)
       private final String network;
 
     public String getNetwork() {
         return this.network;
     }
 
-    @InputImport(name="nextHopGateway", required=true)
+    @Import(name="nextHopGateway", required=true)
       private final String nextHopGateway;
 
     public String getNextHopGateway() {
         return this.nextHopGateway;
     }
 
-    @InputImport(name="nextHopIlb", required=true)
+    @Import(name="nextHopIlb", required=true)
       private final String nextHopIlb;
 
     public String getNextHopIlb() {
         return this.nextHopIlb;
     }
 
-    @InputImport(name="nextHopInstance", required=true)
+    @Import(name="nextHopInstance", required=true)
       private final String nextHopInstance;
 
     public String getNextHopInstance() {
         return this.nextHopInstance;
     }
 
-    @InputImport(name="nextHopInstanceZone", required=true)
+    @Import(name="nextHopInstanceZone", required=true)
       private final String nextHopInstanceZone;
 
     public String getNextHopInstanceZone() {
         return this.nextHopInstanceZone;
     }
 
-    @InputImport(name="nextHopIp", required=true)
+    @Import(name="nextHopIp", required=true)
       private final String nextHopIp;
 
     public String getNextHopIp() {
         return this.nextHopIp;
     }
 
-    @InputImport(name="nextHopNetwork", required=true)
+    @Import(name="nextHopNetwork", required=true)
       private final String nextHopNetwork;
 
     public String getNextHopNetwork() {
         return this.nextHopNetwork;
     }
 
-    @InputImport(name="nextHopVpnTunnel", required=true)
+    @Import(name="nextHopVpnTunnel", required=true)
       private final String nextHopVpnTunnel;
 
     public String getNextHopVpnTunnel() {
         return this.nextHopVpnTunnel;
     }
 
-    @InputImport(name="priority", required=true)
+    @Import(name="priority", required=true)
       private final Integer priority;
 
     public Integer getPriority() {
@@ -112,21 +112,21 @@ public final class RouterStatusBestRoutesForRouter extends io.pulumi.resources.I
      * belongs. If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project", required=true)
+    @Import(name="project", required=true)
       private final String project;
 
     public String getProject() {
         return this.project;
     }
 
-    @InputImport(name="selfLink", required=true)
+    @Import(name="selfLink", required=true)
       private final String selfLink;
 
     public String getSelfLink() {
         return this.selfLink;
     }
 
-    @InputImport(name="tags", required=true)
+    @Import(name="tags", required=true)
       private final List<String> tags;
 
     public List<String> getTags() {

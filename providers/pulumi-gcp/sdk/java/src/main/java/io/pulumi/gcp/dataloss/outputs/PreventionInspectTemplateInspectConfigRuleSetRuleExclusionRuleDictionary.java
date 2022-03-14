@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePath;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordList;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
-@OutputCustomType
+@CustomType
 public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionary {
     /**
      * Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
@@ -25,10 +25,10 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
      */
     private final @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordList wordList;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionary(
-        @OutputCustomType.Parameter("cloudStoragePath") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePath cloudStoragePath,
-        @OutputCustomType.Parameter("wordList") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordList wordList) {
+        @CustomType.Parameter("cloudStoragePath") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryCloudStoragePath cloudStoragePath,
+        @CustomType.Parameter("wordList") @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionaryWordList wordList) {
         this.cloudStoragePath = cloudStoragePath;
         this.wordList = wordList;
     }

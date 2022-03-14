@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGe
      * represented with a 0 seconds field and a positive nanos field. Must be from 0 to 999,999,999 inclusive.
      * 
      */
-    @InputImport(name="nanos")
+    @Import(name="nanos")
       private final @Nullable Output<Integer> nanos;
 
     public Output<Integer> getNanos() {
@@ -32,7 +32,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGe
      * Note: these bounds are computed from: 60 sec/min * 60 min/hr * 24 hr/day * 365.25 days/year * 10000 years
      * 
      */
-    @InputImport(name="seconds")
+    @Import(name="seconds")
       private final @Nullable Output<String> seconds;
 
     public Output<String> getSeconds() {

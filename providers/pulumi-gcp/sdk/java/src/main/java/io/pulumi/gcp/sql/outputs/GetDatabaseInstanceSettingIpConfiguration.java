@@ -3,14 +3,14 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.sql.outputs.GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetDatabaseInstanceSettingIpConfiguration {
     private final String allocatedIpRange;
     private final List<GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork> authorizedNetworks;
@@ -18,13 +18,13 @@ public final class GetDatabaseInstanceSettingIpConfiguration {
     private final String privateNetwork;
     private final Boolean requireSsl;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetDatabaseInstanceSettingIpConfiguration(
-        @OutputCustomType.Parameter("allocatedIpRange") String allocatedIpRange,
-        @OutputCustomType.Parameter("authorizedNetworks") List<GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork> authorizedNetworks,
-        @OutputCustomType.Parameter("ipv4Enabled") Boolean ipv4Enabled,
-        @OutputCustomType.Parameter("privateNetwork") String privateNetwork,
-        @OutputCustomType.Parameter("requireSsl") Boolean requireSsl) {
+        @CustomType.Parameter("allocatedIpRange") String allocatedIpRange,
+        @CustomType.Parameter("authorizedNetworks") List<GetDatabaseInstanceSettingIpConfigurationAuthorizedNetwork> authorizedNetworks,
+        @CustomType.Parameter("ipv4Enabled") Boolean ipv4Enabled,
+        @CustomType.Parameter("privateNetwork") String privateNetwork,
+        @CustomType.Parameter("requireSsl") Boolean requireSsl) {
         this.allocatedIpRange = allocatedIpRange;
         this.authorizedNetworks = authorizedNetworks;
         this.ipv4Enabled = ipv4Enabled;

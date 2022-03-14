@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeUpdateStepDpkgInstallationGetArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeUpdateStepFileCopyGetArgs;
@@ -25,7 +25,7 @@ public final class GuestPoliciesRecipeUpdateStepGetArgs extends io.pulumi.resour
      * Structure is documented below.
      * 
      */
-    @InputImport(name="archiveExtraction")
+    @Import(name="archiveExtraction")
       private final @Nullable Output<GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs> archiveExtraction;
 
     public Output<GuestPoliciesRecipeUpdateStepArchiveExtractionGetArgs> getArchiveExtraction() {
@@ -37,7 +37,7 @@ public final class GuestPoliciesRecipeUpdateStepGetArgs extends io.pulumi.resour
      * Structure is documented below.
      * 
      */
-    @InputImport(name="dpkgInstallation")
+    @Import(name="dpkgInstallation")
       private final @Nullable Output<GuestPoliciesRecipeUpdateStepDpkgInstallationGetArgs> dpkgInstallation;
 
     public Output<GuestPoliciesRecipeUpdateStepDpkgInstallationGetArgs> getDpkgInstallation() {
@@ -49,7 +49,7 @@ public final class GuestPoliciesRecipeUpdateStepGetArgs extends io.pulumi.resour
      * Structure is documented below.
      * 
      */
-    @InputImport(name="fileCopy")
+    @Import(name="fileCopy")
       private final @Nullable Output<GuestPoliciesRecipeUpdateStepFileCopyGetArgs> fileCopy;
 
     public Output<GuestPoliciesRecipeUpdateStepFileCopyGetArgs> getFileCopy() {
@@ -61,7 +61,7 @@ public final class GuestPoliciesRecipeUpdateStepGetArgs extends io.pulumi.resour
      * Structure is documented below.
      * 
      */
-    @InputImport(name="fileExec")
+    @Import(name="fileExec")
       private final @Nullable Output<GuestPoliciesRecipeUpdateStepFileExecGetArgs> fileExec;
 
     public Output<GuestPoliciesRecipeUpdateStepFileExecGetArgs> getFileExec() {
@@ -73,7 +73,7 @@ public final class GuestPoliciesRecipeUpdateStepGetArgs extends io.pulumi.resour
      * Structure is documented below.
      * 
      */
-    @InputImport(name="msiInstallation")
+    @Import(name="msiInstallation")
       private final @Nullable Output<GuestPoliciesRecipeUpdateStepMsiInstallationGetArgs> msiInstallation;
 
     public Output<GuestPoliciesRecipeUpdateStepMsiInstallationGetArgs> getMsiInstallation() {
@@ -85,7 +85,7 @@ public final class GuestPoliciesRecipeUpdateStepGetArgs extends io.pulumi.resour
      * Structure is documented below.
      * 
      */
-    @InputImport(name="rpmInstallation")
+    @Import(name="rpmInstallation")
       private final @Nullable Output<GuestPoliciesRecipeUpdateStepRpmInstallationGetArgs> rpmInstallation;
 
     public Output<GuestPoliciesRecipeUpdateStepRpmInstallationGetArgs> getRpmInstallation() {
@@ -97,7 +97,7 @@ public final class GuestPoliciesRecipeUpdateStepGetArgs extends io.pulumi.resour
      * Structure is documented below.
      * 
      */
-    @InputImport(name="scriptRun")
+    @Import(name="scriptRun")
       private final @Nullable Output<GuestPoliciesRecipeUpdateStepScriptRunGetArgs> scriptRun;
 
     public Output<GuestPoliciesRecipeUpdateStepScriptRunGetArgs> getScriptRun() {

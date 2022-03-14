@@ -3,12 +3,12 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule {
     /**
      * The number of hours between snapshots.
@@ -21,10 +21,10 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule {
      */
     private final String startTime;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private ResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule(
-        @OutputCustomType.Parameter("hoursInCycle") Integer hoursInCycle,
-        @OutputCustomType.Parameter("startTime") String startTime) {
+        @CustomType.Parameter("hoursInCycle") Integer hoursInCycle,
+        @CustomType.Parameter("startTime") String startTime) {
         this.hoursInCycle = hoursInCycle;
         this.startTime = startTime;
     }

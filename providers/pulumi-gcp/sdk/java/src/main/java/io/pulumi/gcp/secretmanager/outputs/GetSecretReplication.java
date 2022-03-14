@@ -3,21 +3,21 @@
 
 package io.pulumi.gcp.secretmanager.outputs;
 
-import io.pulumi.core.annotations.OutputCustomType;
+import io.pulumi.core.annotations.CustomType;
 import io.pulumi.gcp.secretmanager.outputs.GetSecretReplicationUserManaged;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
 
-@OutputCustomType
+@CustomType
 public final class GetSecretReplication {
     private final Boolean automatic;
     private final List<GetSecretReplicationUserManaged> userManageds;
 
-    @OutputCustomType.Constructor
+    @CustomType.Constructor
     private GetSecretReplication(
-        @OutputCustomType.Parameter("automatic") Boolean automatic,
-        @OutputCustomType.Parameter("userManageds") List<GetSecretReplicationUserManaged> userManageds) {
+        @CustomType.Parameter("automatic") Boolean automatic,
+        @CustomType.Parameter("userManageds") List<GetSecretReplicationUserManaged> userManageds) {
         this.automatic = automatic;
         this.userManageds = userManageds;
     }

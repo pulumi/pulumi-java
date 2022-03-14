@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DefaultObjectACLArgs extends io.pulumi.resources.ResourceArgs
      * The name of the bucket it applies to.
      * 
      */
-    @InputImport(name="bucket", required=true)
+    @Import(name="bucket", required=true)
       private final Output<String> bucket;
 
     public Output<String> getBucket() {
@@ -32,7 +32,7 @@ public final class DefaultObjectACLArgs extends io.pulumi.resources.ResourceArgs
      * Omitting the field is the same as providing an empty list.
      * 
      */
-    @InputImport(name="roleEntities")
+    @Import(name="roleEntities")
       private final @Nullable Output<List<String>> roleEntities;
 
     public Output<List<String>> getRoleEntities() {

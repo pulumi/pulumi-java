@@ -4,7 +4,7 @@
 package io.pulumi.gcp.identityplatform;
 
 import io.pulumi.core.Output;
-import io.pulumi.core.annotations.InputImport;
+import io.pulumi.core.annotations.Import;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TenantDefaultSupportedIdpConfigArgs extends io.pulumi.resourc
      * OAuth client ID
      * 
      */
-    @InputImport(name="clientId", required=true)
+    @Import(name="clientId", required=true)
       private final Output<String> clientId;
 
     public Output<String> getClientId() {
@@ -30,7 +30,7 @@ public final class TenantDefaultSupportedIdpConfigArgs extends io.pulumi.resourc
      * OAuth client secret
      * 
      */
-    @InputImport(name="clientSecret", required=true)
+    @Import(name="clientSecret", required=true)
       private final Output<String> clientSecret;
 
     public Output<String> getClientSecret() {
@@ -41,7 +41,7 @@ public final class TenantDefaultSupportedIdpConfigArgs extends io.pulumi.resourc
      * If this IDP allows the user to sign in
      * 
      */
-    @InputImport(name="enabled")
+    @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
@@ -62,7 +62,7 @@ public final class TenantDefaultSupportedIdpConfigArgs extends io.pulumi.resourc
      * * `yahoo.com`
      * 
      */
-    @InputImport(name="idpId", required=true)
+    @Import(name="idpId", required=true)
       private final Output<String> idpId;
 
     public Output<String> getIdpId() {
@@ -74,7 +74,7 @@ public final class TenantDefaultSupportedIdpConfigArgs extends io.pulumi.resourc
      * If it is not provided, the provider project is used.
      * 
      */
-    @InputImport(name="project")
+    @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
@@ -85,7 +85,7 @@ public final class TenantDefaultSupportedIdpConfigArgs extends io.pulumi.resourc
      * The name of the tenant where this DefaultSupportedIdpConfig resource exists
      * 
      */
-    @InputImport(name="tenant", required=true)
+    @Import(name="tenant", required=true)
       private final Output<String> tenant;
 
     public Output<String> getTenant() {
