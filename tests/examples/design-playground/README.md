@@ -217,12 +217,20 @@ We should definitely consider:
   - Either<A,B> + extend that for N=3,4,5?
   - Use any existing libraries or stdlib types that do that?
   - Just use Object?
+  - Generate nominal types for these?
 
 It would be interesting to find how CDK deals with these.
 
+
 ## Function Calls
 
-TODO elaborate.
+Before:
+
+    io.pulumi.aws.ec2.GetAmi.invokeAsync(...)
+
+After:
+
+    ec2.getAmi(...)
 
 
 ## Deployment APIs
@@ -237,7 +245,12 @@ can we reduce the number of classes.
 
 ## Stack API
 
-TODO
+Currently MyStack is a class extending Stack, and constructors need to
+set `@`-annotated output properties. This follows C# closely.
+
+We could consider Go-style desgin instead (or alongside?) where a
+certain `Context` object is passed into a lambda and outptus are
+defined against this object.
 
 
 ## Resoure and Invoke Options
@@ -248,6 +261,7 @@ https://github.com/pulumi/pulumi-java/issues/226
 
 
 Are there builders for Resource options?
+
 
 ## Naming
 
