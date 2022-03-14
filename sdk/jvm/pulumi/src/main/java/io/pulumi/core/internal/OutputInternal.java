@@ -17,7 +17,7 @@ import java.util.function.Function;
 
 @InternalUse
 @ParametersAreNonnullByDefault
-public final class OutputDefault<T> implements Output<T>, Copyable<Output<T>> {
+public final class OutputInternal<T> implements Output<T>, Copyable<Output<T>> {
 
     @InternalUse
     public static final Output<Tuples.Tuple0> TupleZeroOut = Output.of(Tuples.Tuple0.Empty);
@@ -25,27 +25,27 @@ public final class OutputDefault<T> implements Output<T>, Copyable<Output<T>> {
     private final CompletableFuture<OutputData<T>> dataFuture;
 
     @InternalUse
-    public OutputDefault(@Nullable T value) {
+    public OutputInternal(@Nullable T value) {
         this(value, false);
     }
 
     @InternalUse
-    public OutputDefault(@Nullable T value, boolean isSecret) {
+    public OutputInternal(@Nullable T value, boolean isSecret) {
         this(CompletableFuture.completedFuture(value), isSecret);
     }
 
     @InternalUse
-    public OutputDefault(CompletableFuture<T> value, boolean isSecret) {
+    public OutputInternal(CompletableFuture<T> value, boolean isSecret) {
         this(OutputData.ofAsync(Objects.requireNonNull(value), isSecret));
     }
 
     @InternalUse
-    public OutputDefault(OutputData<T> dataFuture) {
+    public OutputInternal(OutputData<T> dataFuture) {
         this(CompletableFuture.completedFuture(Objects.requireNonNull(dataFuture)));
     }
 
     @InternalUse
-    public OutputDefault(CompletableFuture<OutputData<T>> dataFuture) {
+    public OutputInternal(CompletableFuture<OutputData<T>> dataFuture) {
         this.dataFuture = Objects.requireNonNull(dataFuture);
 
         var deployment = DeploymentInternal.getInstanceOptional();
@@ -55,14 +55,14 @@ public final class OutputDefault<T> implements Output<T>, Copyable<Output<T>> {
     }
 
     @InternalUse
-    public OutputDefault(Set<Resource> resources, T value) {
+    public OutputInternal(Set<Resource> resources, T value) {
         this(CompletableFuture.completedFuture(
                 OutputData.of(ImmutableSet.copyOf(resources), value)));
     }
 
     @Override
     public <U> Output<U> apply(Function<T, Output<U>> func) {
-        return new OutputDefault<>(OutputData.apply(
+        return new OutputInternal<>(OutputData.apply(
                 dataFuture,
                 func.andThen(o -> Internal.of(o).getDataAsync())
         ));
@@ -70,7 +70,7 @@ public final class OutputDefault<T> implements Output<T>, Copyable<Output<T>> {
 
     public Output<T> copy() {
         // we do not copy the OutputData, because it should be immutable
-        return new OutputDefault<>(this.dataFuture.copy()); // TODO: is the copy deep enough
+        return new OutputInternal<>(this.dataFuture.copy()); // TODO: is the copy deep enough
     }
 
     public Output<T> asPlaintext() { // TODO: this look very unsafe to be exposed, what are the use cases? do we need this?
@@ -83,7 +83,7 @@ public final class OutputDefault<T> implements Output<T>, Copyable<Output<T>> {
 
     @InternalUse
     public Output<T> withIsSecret(CompletableFuture<Boolean> isSecretFuture) {
-        return new OutputDefault<>(
+        return new OutputInternal<>(
                 isSecretFuture.thenCompose(
                         secret -> this.dataFuture.thenApply(
                                 d -> d.withIsSecret(secret)
@@ -139,10 +139,10 @@ public final class OutputDefault<T> implements Output<T>, Copyable<Output<T>> {
 
     // Static section -----
 
-    static <T> OutputDefault<T> cast(Output<T> output) {
+    static <T> OutputInternal<T> cast(Output<T> output) {
         Objects.requireNonNull(output);
-        if (output instanceof OutputDefault) {
-            return (OutputDefault<T>) output;
+        if (output instanceof OutputInternal) {
+            return (OutputInternal<T>) output;
         } else {
             throw new IllegalArgumentException(String.format(
                     "Expected a 'OutputInternal<T>' instance, got: %s",

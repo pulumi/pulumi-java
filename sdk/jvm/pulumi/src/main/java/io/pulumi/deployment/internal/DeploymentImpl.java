@@ -427,7 +427,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         public <T> Output<T> invoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
-            return new OutputDefault<>(rawInvoke(token, targetType, args, options));
+            return new OutputInternal<>(rawInvoke(token, targetType, args, options));
         }
 
         private <T> CompletableFuture<OutputData<T>> rawInvoke(String token, TypeShape<T> targetType, InvokeArgs args, InvokeOptions options) {
@@ -624,7 +624,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         void call(String token, CallArgs args, @Nullable Resource self, CallOptions options) {
-            new OutputDefault<>(callRawAsync(token, args, self, options).thenApply(unused -> null));
+            new OutputInternal<>(callRawAsync(token, args, self, options).thenApply(unused -> null));
         }
 
         <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args) {
@@ -636,7 +636,7 @@ public class DeploymentImpl extends DeploymentInstanceHolder implements Deployme
         }
 
         <T> Output<T> call(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self, CallOptions options) {
-            return new OutputDefault<>(callAsync(token, targetType, args, self, options));
+            return new OutputInternal<>(callAsync(token, targetType, args, self, options));
         }
 
         private <T> CompletableFuture<OutputData<T>> callAsync(String token, TypeShape<T> targetType, CallArgs args, @Nullable Resource self, CallOptions options) {

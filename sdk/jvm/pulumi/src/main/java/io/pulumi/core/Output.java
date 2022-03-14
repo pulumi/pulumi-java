@@ -21,7 +21,7 @@ import java.util.stream.Stream;
 import static com.google.common.collect.ImmutableList.toImmutableList;
 import static com.google.common.collect.ImmutableMap.toImmutableMap;
 import static io.pulumi.core.internal.OutputData.allHelperAsync;
-import static io.pulumi.core.internal.OutputDefault.TupleZeroOut;
+import static io.pulumi.core.internal.OutputInternal.TupleZeroOut;
 
 public interface Output<T> extends Copyable<Output<T>> {
 
@@ -110,19 +110,19 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     static <T> Output<T> of(T value) {
-        return new OutputDefault<>(value);
+        return new OutputInternal<>(value);
     }
 
     static <T> Output<T> of(CompletableFuture<T> value) {
-        return new OutputDefault<>(value, false);
+        return new OutputInternal<>(value, false);
     }
 
     static <T> Output<T> ofSecret(T value) {
-        return new OutputDefault<>(value, true);
+        return new OutputInternal<>(value, true);
     }
 
     static <T> Output<T> empty() {
-        return new OutputDefault<>(OutputData.empty());
+        return new OutputInternal<>(OutputData.empty());
     }
 
     static <T, O extends Output<T>> Output<T> ofNullable(@Nullable O value) {
@@ -169,7 +169,7 @@ public interface Output<T> extends Copyable<Output<T>> {
     }
 
     private static <T> Output<List<T>> all(List<Output<T>> outputs) {
-        return new OutputDefault<>(
+        return new OutputInternal<>(
                 allHelperAsync(outputs
                         .stream()
                         .map(output -> Internal.of(output).getDataAsync())
@@ -194,7 +194,7 @@ public interface Output<T> extends Copyable<Output<T>> {
                 .map(OutputData::copyInputOutputData)
                 .collect(Collectors.toList());
 
-        return new OutputDefault<>(
+        return new OutputInternal<>(
                 allHelperAsync(data)
                         .thenApply(objs -> objs.apply(
                                 v -> v == null ? null : String.format(formattableString, v.toArray())))
@@ -225,7 +225,7 @@ public interface Output<T> extends Copyable<Output<T>> {
      * @see #ofLeft(Object)
      */
     static <L, R> Output<Either<L, R>> ofLeft(Output<L> value) {
-        return new OutputDefault<>(Internal.of(value).getDataAsync()
+        return new OutputInternal<>(Internal.of(value).getDataAsync()
                 .thenApply(ioData -> ioData.apply(Either::<L, R>ofLeft)));
     }
 
@@ -233,7 +233,7 @@ public interface Output<T> extends Copyable<Output<T>> {
      * @see #ofLeft(Object)
      */
     static <L, R> Output<Either<L, R>> ofRight(Output<R> value) {
-        return new OutputDefault<>(Internal.of(value).getDataAsync()
+        return new OutputInternal<>(Internal.of(value).getDataAsync()
                 .thenApply(ioData -> ioData.apply(Either::ofRight)));
     }
 
@@ -257,7 +257,7 @@ public interface Output<T> extends Copyable<Output<T>> {
      * @see #ofJson(JsonElement)
      */
     static Output<JsonElement> ofJson(Output<JsonElement> json) {
-        return new OutputDefault<>(Internal.of(json).getDataAsync());
+        return new OutputInternal<>(Internal.of(json).getDataAsync());
     }
 
     /**
@@ -488,7 +488,7 @@ public interface Output<T> extends Copyable<Output<T>> {
         }
 
         public Output<List<E>> build() {
-            return new OutputDefault<>(builder.build(dataBuilder -> dataBuilder.build(ImmutableList.Builder::build)));
+            return new OutputInternal<>(builder.build(dataBuilder -> dataBuilder.build(ImmutableList.Builder::build)));
         }
     }
 
@@ -707,7 +707,7 @@ public interface Output<T> extends Copyable<Output<T>> {
         }
 
         public Output<Map<String, V>> build() {
-            return new OutputDefault<>(builder.build(dataBuilder -> dataBuilder.build(ImmutableMap.Builder::build)));
+            return new OutputInternal<>(builder.build(dataBuilder -> dataBuilder.build(ImmutableMap.Builder::build)));
         }
     }
 
@@ -784,6 +784,6 @@ public interface Output<T> extends Copyable<Output<T>> {
             Output<T1> item1, Output<T2> item2, Output<T3> item3, Output<T4> item4,
             Output<T5> item5, Output<T6> item6, Output<T7> item7, Output<T8> item8
     ) {
-        return new OutputDefault<>(OutputData.tuple(item1, item2, item3, item4, item5, item6, item7, item8));
+        return new OutputInternal<>(OutputData.tuple(item1, item2, item3, item4, item5, item6, item7, item8));
     }
 }

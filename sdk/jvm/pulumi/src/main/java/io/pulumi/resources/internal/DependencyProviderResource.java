@@ -3,7 +3,7 @@ package io.pulumi.resources.internal;
 import com.google.common.collect.ImmutableSet;
 import io.pulumi.core.Tuples;
 import io.pulumi.core.Tuples.Tuple2;
-import io.pulumi.core.internal.OutputDefault;
+import io.pulumi.core.internal.OutputInternal;
 import io.pulumi.resources.ProviderResource;
 import io.pulumi.resources.Resource;
 import io.pulumi.resources.ResourceArgs;
@@ -20,8 +20,8 @@ public final class DependencyProviderResource extends ProviderResource {
         var urnAndId = parseReference(reference);
 
         ImmutableSet<Resource> resources = ImmutableSet.of(this);
-        this.setUrn(new OutputDefault<>(resources, urnAndId.t1));
-        this.setId(new OutputDefault<>(resources, urnAndId.t2));
+        this.setUrn(new OutputInternal<>(resources, urnAndId.t1));
+        this.setId(new OutputInternal<>(resources, urnAndId.t2));
     }
 
     private static String parsePackage(String reference) {

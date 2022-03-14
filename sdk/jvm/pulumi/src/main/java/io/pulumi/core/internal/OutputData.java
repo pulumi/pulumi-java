@@ -260,7 +260,7 @@ public final class OutputData<T> implements Copyable<OutputData<T>> {
             return CompletableFuture.completedFuture(OutputData.empty());
         }
         //noinspection unchecked,rawtypes,rawtypes
-        return ((OutputDefault<Object>) obj).getDataAsync().copy();
+        return ((OutputInternal<Object>) obj).getDataAsync().copy();
     }
 
     public static <T1, T2, T3, T4, T5, T6, T7, T8> CompletableFuture<OutputData<Tuple8<T1, T2, T3, T4, T5, T6, T7, T8>>> tuple(

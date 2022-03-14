@@ -6,7 +6,7 @@ import io.pulumi.core.Tuples.Tuple2;
 import io.pulumi.core.Tuples.Tuple3;
 import io.pulumi.core.internal.Internal;
 import io.pulumi.core.internal.OutputData;
-import io.pulumi.core.internal.OutputDefault;
+import io.pulumi.core.internal.OutputInternal;
 
 public class OutputTests {
 
@@ -37,11 +37,11 @@ public class OutputTests {
     }
 
     public static <T> Output<T> unknown() {
-        return new OutputDefault<>(OutputData.ofNullable(ImmutableSet.of(), null, false, false));
+        return new OutputInternal<>(OutputData.ofNullable(ImmutableSet.of(), null, false, false));
     }
 
     public static <T> Output<T> unknownSecret() {
-        return new OutputDefault<>(OutputData.ofNullable(ImmutableSet.of(), null, false, true));
+        return new OutputInternal<>(OutputData.ofNullable(ImmutableSet.of(), null, false, true));
     }
 
 }
