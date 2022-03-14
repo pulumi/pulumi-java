@@ -460,7 +460,7 @@ jobs:
             pulumi stack rm dev --yes;
             pulumi stack init dev;
             for plugin in `cat ./app/build.gradle | grep implementation | awk '{ print $2 }' | sed "s/'//g"`; do
-               eval "$(echo $plugin | sed 's/:/ /g' | awk '{ print "pulumi plugin install resource " $2 " v" $3 }')";
+               eval "$(echo $plugin | sed 's/:/ /g' | awk '{ print "pulumi plugin install resource " $2 " v" $3 }')" || true
             done;
             pulumi preview"
       - name: Integration tests
